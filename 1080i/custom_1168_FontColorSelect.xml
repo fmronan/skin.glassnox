@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<window id="1168" type="dialog">
+    <defaultcontrol>10</defaultcontrol>
+    
+    <zorder>0</zorder>
+ <!--
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font_music,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font_videolibrary,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(font_PVR,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(font_pictures,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(font_featured,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(font_settings,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(font_addons,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(font_programs,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(font_musicplaylist,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(font_videoplaylist,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(font_mainmenu,$INFO[Skin.String(font_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(font_weather,$INFO[Skin.String(font_color)])</onunload>    
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font2_music,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font2_videolibrary,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(font2_PVR,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(font2_pictures,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(font2_featured,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(font2_settings,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(font2_addons,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(font2_programs,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(font2_musicplaylist,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(font2_videoplaylist,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(font2_mainmenu,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(font2_weather,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(font3_music,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(font3_videolibrary,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(font3_PVR,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(font3_pictures,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(font3_featured,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(font3_settings,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(font3_addons,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(font3_programs,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(font3_musicplaylist,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(font3_videoplaylist,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(font3_mainmenu,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(font3_weather,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(font4_mainmenu,$INFO[Skin.String(font4_color)])</onunload>    
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(font5_mainmenu,$INFO[Skin.String(font5_color)])</onunload>    
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(fontgrey_music,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(fontgrey_videolibrary,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(fontgrey_PVR,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(fontgrey_pictures,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(fontgrey_featured,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(fontgrey_settings,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(fontgrey_addons,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(fontgrey_programs,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(fontgrey_musicplaylist,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(fontgrey_videoplaylist,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(fontgrey_mainmenu,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(fontgrey_weather,$INFO[Skin.String(fontgrey_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(fontgrey2_music,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(fontgrey2_videolibrary,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(fontgrey2_PVR,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(fontgrey2_pictures,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(fontgrey2_featured,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(fontgrey2_settings,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(fontgrey2_addons,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(fontgrey2_programs,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(fontgrey2_musicplaylist,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(fontgrey2_videoplaylist,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(fontgrey2_mainmenu,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(fontgrey2_weather,$INFO[Skin.String(fontgrey2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(fontgrey3_music,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(fontgrey3_videolibrary,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(fontgrey3_PVR,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(fontgrey3_pictures,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(fontgrey3_featured,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(fontgrey3_settings,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(fontgrey3_addons,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(fontgrey3_programs,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(fontgrey3_musicplaylist,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(fontgrey3_videoplaylist,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(fontgrey3_mainmenu,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(fontgrey3_weather,$INFO[Skin.String(fontgrey3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)">Skin.SetString(fontblack_music,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)">Skin.SetString(fontblack_videolibrary,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(PVR)">Skin.SetString(fontblack_PVR,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(pictures)">Skin.SetString(fontblack_pictures,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(1115)">Skin.SetString(fontblack_featured,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(skinsettings)">Skin.SetString(fontblack_settings,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(addonbrowser)">Skin.SetString(fontblack_addons,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)">Skin.SetString(fontblack_programs,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(musicplaylist)">Skin.SetString(fontblack_musicplaylist,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(videoplaylist)">Skin.SetString(fontblack_videoplaylist,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(home) | Window.IsActive(1130)">Skin.SetString(fontblack_mainmenu,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))|Window.IsActive(weather)">Skin.SetString(fontblack_weather,$INFO[Skin.String(fontblack_color)])</onunload>-->
+    <onunload>ClearProperty(skincolor,1124)</onunload>
+    <coordinates>
+        <system>1</system>
+        <posx>-400</posx>
+        <posy>0</posy>
+    </coordinates>
+    <include>Animation_DialogPopup</include>
+    <controls>
+        <control type="group">
+            <posx>579</posx>
+            <posy>50</posy>
+            <width>1064</width>
+            <control type="image">
+                <posx>-4</posx>
+                <posy>-24</posy>
+                <width>1576</width>
+                <height>792</height>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <include>PanelGlowFade</include>
+                <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                <include>Animation_VisibleChange400</include>
+                <texture border="22">dialogs/scan_backg_shadow.png</texture>
+            </control>
+            <control type="image">
+                <posx>-4</posx>
+                <posy>-24</posy>
+                <width>1576</width>
+                <height>792</height>
+                <texture border="22">dialogs/scan_backg.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+            </control>
+            <include>Dialogs_Settings</include>
+            <control type="grouplist">
+                <posx>138</posx>
+                <posy>0</posy>
+                
+                <onback>Dialog.Close(1128)</onback>
+                <control type="button" id="10">
+                    <include>ColorChooserButton</include>
+                    <label>font4_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVar4]]$INFO[Skin.String(font4_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font4_color),SetStringInRealTime=true)</onclick>
+					<visible>Window.IsActive(home) | Window.IsActive(1130)</visible>
+                </control>
+                <control type="button" id="11">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font4_color,$INFO[Skin.String(font4_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+					<visible>Window.IsActive(home) | Window.IsActive(1130)</visible>
+                </control>
+                <control type="button" id="12">
+                    <include>ColorChooserButton</include>
+                    <label>font5_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVar5]]$INFO[Skin.String(font5_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font5_color),SetStringInRealTime=true)</onclick>
+					<visible>Window.IsActive(home) | Window.IsActive(1130)</visible>
+                </control>
+                <control type="button" id="13">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font5_color,$INFO[Skin.String(font5_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+					<visible>Window.IsActive(home) | Window.IsActive(1130)</visible>
+                </control>
+                <control type="button" id="14">
+                    <include>ColorChooserButton</include>
+                    <label>font3_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[Skin.String(font3_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font3_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="15">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font3_color,$INFO[Skin.String(font3_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="16">
+                    <include>ColorChooserButton</include>
+                    <label>font2_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[Skin.String(font2_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font2_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="17">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font2_color,$INFO[Skin.String(font2_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="18">
+                    <include>ColorChooserButton</include>
+                    <label>font_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVar]]$INFO[Skin.String(font_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="19">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(font_color,$INFO[Skin.String(font_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="radiobutton" id="20">
+                    <label>$LOCALIZE[31088]</label>
+                    <onup>19</onup>
+                    <ondown>19</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick condition="IsEmpty(Window(home).Property(colorallareas))">SetProperty(colorallareas,1,home)</onclick>
+                    <onclick condition="!IsEmpty(Window(home).Property(colorallareas))">ClearProperty(colorallareas,home)</onclick>
+                    <selected>!IsEmpty(Window(home).Property(colorallareas))</selected>
+                    <visible>Window.IsActive(home) | Window.IsActive(1130)</visible>
+                </control>
+                
+            </control>
+            <control type="grouplist">
+                <posx>838</posx>
+                <posy>0</posy>
+                
+                <onback>Dialog.Close(1128)</onback>
+                <control type="button" id="30">
+                    <include>ColorChooserButton</include>
+                    <label>fontgrey_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVarGrey]]$INFO[Skin.String(fontgrey_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontgrey_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="31">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontgrey_color,$INFO[Skin.String(fontgrey_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="32">
+                    <include>ColorChooserButton</include>
+                    <label>fontgrey2_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVarGrey2]]$INFO[Skin.String(fontgrey2_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontgrey2_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="33">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontgrey2_color,$INFO[Skin.String(fontgrey2_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="34">
+                    <include>ColorChooserButton</include>
+                    <label>fontgrey3_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVarGrey3]]$INFO[Skin.String(fontgrey3_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontgrey3_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="35">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontgrey3_color,$INFO[Skin.String(fontgrey3_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="36">
+                    <include>ColorChooserButton</include>
+                    <label>fontblack_color</label>
+					<label2>[COLOR $VAR[HomeMenuTextFocusVarBlack]]$INFO[Skin.String(fontblack_color)][/COLOR]</label2>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontblack_color),SetStringInRealTime=true)</onclick>
+                </control>
+                <control type="button" id="37">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31090]</label>
+					<onclick>RunScript(script.color.picker,Skin.SetString(fontblack_color,$INFO[Skin.String(fontblack_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                </control>
+               
+                </control>
+                
+        </control>
+    </controls>
+</window>

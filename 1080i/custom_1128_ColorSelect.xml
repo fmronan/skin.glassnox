@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1128" type="dialog">
+    <defaultcontrol>10</defaultcontrol>
+    <include condition="!Substring(Skin.CurrentTheme,whit)">ColorConfigDefaultTheme</include>
+    <include condition="Substring(Skin.CurrentTheme,whit)">ColorConfigWhiteTheme</include>
+    <onunload condition="Window.IsActive(home) | Window.IsActive(1115)">ActivateWindow(skinsettings)</onunload>
+    <zorder>1</zorder>
+    <onunload condition="Window.IsActive(1115)">Dialog.Close(1115)</onunload>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    <include>Animation_DialogPopup</include>
+    <controls>
+        <control type="group">
+            <posx>579</posx>
+            <posy>50</posy>
+            <width>764</width>
+            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(1138) | Window.IsActive(1127)">Conditional</animation>
+            <control type="group">
+                <animation effect="zoom" end="100,110" center="960,0" time="0" condition="Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(weather) | Window.IsActive(PVR)">Conditional</animation>
+                <control type="image">
+                    <posx>-4</posx>
+                    <posy>-24</posy>
+                    <width>776</width>
+                    <height>580</height>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <include>PanelGlowFade</include>
+                    <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                    <include>Animation_VisibleChange400</include>
+                    <texture border="22">dialogs/scan_backg_shadow.png</texture>
+                </control>
+                <control type="image">
+                    <posx>-4</posx>
+                    <posy>-24</posy>
+                    <width>776</width>
+                    <height>580</height>
+                    <texture border="22">dialogs/scan_backg.png</texture>
+                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+                </control>
+            </control>
+            <include>Dialogs_Settings</include>
+            <control type="grouplist">
+                <posx>138</posx>
+                <onback>Dialog.Close(1128)</onback>
+                <control type="button" id="1602">
+                    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    <height>45</height>
+                    <width>603</width>
+                    <texturenofocus>settings/listselect_nf3.png</texturenofocus>
+                    <alttexturenofocus>settings/listselect_nf3.png</alttexturenofocus>
+                    <textcolor>$VAR[FontColorVar]</textcolor>
+                    <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
+                    <disabledcolor>$VAR[FontColorVar]</disabledcolor>
+                    <textoffsetx>15</textoffsetx>
+                    <textoffsety>0</textoffsety>
+                    <font>Font_Bold15_Caps</font>
+                    <include>Animation_CommonFade</include>
+                    <label>$LOCALIZE[31176]</label>
+                    <enable>no</enable>
+                </control>
+                <control type="button" id="10">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31181]</label>
+                    <label2>[COLOR $VAR[FontColorVar]]$VAR[GlowModeLabelVar][/COLOR]</label2>
+                    <onclick condition="Skin.HasSetting(DisableGlowbar) + !Skin.HasSetting(ExtendedGlowMode)">Skin.Reset(DisableGlowbar)</onclick>
+                    <onclick condition="!Skin.HasSetting(DisableGlowbar)">Skin.SetBool(ExtendedGlowMode)</onclick>
+                    <onclick condition="Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)">Skin.SetBool(DisableGlowbar)</onclick>
+                    <onclick condition="Skin.HasSetting(ExtendedGlowMode) + Skin.HasSetting(DisableGlowbar)">Skin.Reset(ExtendedGlowMode)</onclick>
+                </control>
+                <control type="radiobutton" id="11">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31177]</label>
+                    <onclick>Skin.ToggleSetting(randomcolor)</onclick>
+                    <selected>Skin.HasSetting(randomcolor)</selected>
+                </control>
+                <control type="radiobutton" id="12">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31182] $LOCALIZE[31083]</label>
+                    <onclick>Skin.ToggleSetting(colortext)</onclick>
+                    <selected>Skin.HasSetting(colortext)</selected>
+                </control>
+                <control type="radiobutton" id="13">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31182] $LOCALIZE[31084]</label>
+                    <onclick>Skin.ToggleSetting(colordialogs)</onclick>
+                    <selected>Skin.HasSetting(colordialogs)</selected>
+                </control>
+                <control type="button" id="15">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31178]</label>
+                    <onclick>SetProperty(colordialog,panel_color,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+                    <enable>!Skin.HasSetting(randomcolor)</enable>
+                </control>
+                <control type="button" id="16">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31178]</label>
+                    <onclick>SetProperty(colordialog,diffuse_color,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+                    <enable>!Skin.HasSetting(randomcolor)</enable>
+                </control>
+                <control type="button" id="17">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31192]</label>
+                    <onclick>SetProperty(colordialog,font_color,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+                </control>
+                <control type="button" id="19">
+                    <include>ColorChooserButton</include>
+                    <label>$LOCALIZE[31708]</label>
+                    <onclick>ActivateWindow(1127)</onclick>
+                    <visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(weather) | Window.IsActive(PVR)</visible>
+                </control>
+            </control>
+            <control type="image">
+                <posx>670</posx>
+                <posy>350</posy>
+                <width>50</width>
+                <height>50</height>
+                <texture>common/white.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>670</posx>
+                <posy>410</posy>
+                <width>50</width>
+                <height>50</height>
+                <texture>common/white.png</texture>
+                <colordiffuse>$VAR[AreaColorVar]</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>670</posx>
+                <posy>470</posy>
+                <width>50</width>
+                <height>50</height>
+                <texture>common/white.png</texture>
+                <colordiffuse>$VAR[FontColorVar]</colordiffuse>
+            </control>
+        </control>
+    </controls>
+</window>

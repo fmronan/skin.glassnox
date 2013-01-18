@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1138">
+    <defaultcontrol always="true">10</defaultcontrol>
+    <zorder>1</zorder>
+    <onload condition="!Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
+    <onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
+    <onload condition="!Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
+    <onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,white_font_,home)</onload>
+    <onload condition="!Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorTarget,panel_,home)</onload>
+    <onload condition="Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorTarget,panel_white_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),default_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,default_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),default_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Cleardefault_,home)</onload>
+	<onload condition="StringCompare(Window(1124).Property(colordialog),480_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,480_,home)</onload>
+	<onload condition="StringCompare(Window(1124).Property(colordialog),480_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clear480_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),540_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,540_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),540_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clear540_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),576_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,576_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),576_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clear576_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),720_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,720_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),720_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clear720_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),1080_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,1080_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),1080_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clear1080_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),bluray_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,bluray_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),bluray_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearbluray_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),3d_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,3d_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),3d_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clear3d_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),dv_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,dv_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),dv_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Cleardv_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),dvd_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,dvd_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),dvd_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Cleardvd_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),h264_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,h264_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),h264_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearh264_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),hddvd_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,hddvd_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),hddvd_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearhddvd_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mkv_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,mkv_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mkv_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearmkv_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mov_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,mov_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mov_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearmov_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mp4_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,mp4_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mp4_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearmp4_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mpeg_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,mpeg_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),mpeg_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearmpeg_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),Qt_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Qt_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),Qt_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,ClearQt_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),TVseries_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,TVseries_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),TVseries_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,ClearTVseries_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),Music_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Music_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),Music_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,ClearMusic_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),wmv_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,wmv_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),wmv_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearwmv_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),xvid_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,xvid_,home)</onload>
+    <onload condition="StringCompare(Window(1124).Property(colordialog),xvid_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Clearxvid_,home)</onload>
+    
+	<onunload condition="StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorOrigin,$INFO[Skin.String(panel_color)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorOrigin,$INFO[Skin.String(diffuse_color)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorOrigin,$INFO[Skin.String(font_color)],home)</onunload>
+    
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)">SetProperty(ColorOrigin,$INFO[Skin.String(ItemToEdit.IconColor)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),ItemToEdit.Color)">SetProperty(ColorOrigin,$INFO[Skin.String(ItemToEdit.Color)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),default_case)">SetProperty(ColorOrigin,$INFO[Skin.String(default_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),480_case)">SetProperty(ColorOrigin,$INFO[Skin.String(480_case)],home)</onunload>
+	<onunload condition="StringCompare(Window(1124).Property(colordialog),540_case)">SetProperty(ColorOrigin,$INFO[Skin.String(540_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),576_case)">SetProperty(ColorOrigin,$INFO[Skin.String(576_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),720_case)">SetProperty(ColorOrigin,$INFO[Skin.String(720_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),1080_case)">SetProperty(ColorOrigin,$INFO[Skin.String(1080_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),bluray_case)">SetProperty(ColorOrigin,$INFO[Skin.String(bluray_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),3d_case)">SetProperty(ColorOrigin,$INFO[Skin.String(3d_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),dv_case)">SetProperty(ColorOrigin,$INFO[Skin.String(dv_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),dvd_case)">SetProperty(ColorOrigin,$INFO[Skin.String(dvd_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),h264_case)">SetProperty(ColorOrigin,$INFO[Skin.String(h264_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),hddvd_case)">SetProperty(ColorOrigin,$INFO[Skin.String(hddvd_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),mkv_case)">SetProperty(ColorOrigin,$INFO[Skin.String(mkv_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),mov_case)">SetProperty(ColorOrigin,$INFO[Skin.String(mov_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),mp4_case)">SetProperty(ColorOrigin,$INFO[Skin.String(mp4_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),mpeg_case)">SetProperty(ColorOrigin,$INFO[Skin.String(mpeg_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),Qt_case)">SetProperty(ColorOrigin,$INFO[Skin.String(Qt_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),TVseries_case)">SetProperty(ColorOrigin,$INFO[Skin.String(TVseries_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),Music_case)">SetProperty(ColorOrigin,$INFO[Skin.String(Music_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),wmv_case)">SetProperty(ColorOrigin,$INFO[Skin.String(wmv_case)],home)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(colordialog),xvid_case)">SetProperty(ColorOrigin,$INFO[Skin.String(xvid_case)],home)</onunload>
+    
+    
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_music,$INFO[Skin.String(fontblack_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_music,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_videolibrary,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_videolibrary,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_PVR,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_PVR,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_pictures,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_pictures,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_featured,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_featured,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_settings,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_settings,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_addons,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_addons,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_programs,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_programs,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_musicplaylist,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_musicplaylist,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_videoplaylist,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_videoplaylist,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_mainmenu,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_mainmenu,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(fontblack_weather,$INFO[Skin.String(fontblack_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_fontblack_weather,$INFO[Skin.String(fontblack_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_music,$INFO[Skin.String(font2_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_music,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_videolibrary,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_videolibrary,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_PVR,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_PVR,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_pictures,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_pictures,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_featured,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_featured,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_settings,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_settings,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_addons,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_addons,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_programs,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_programs,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_musicplaylist,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_musicplaylist,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_videoplaylist,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_videoplaylist,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_mainmenu,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_mainmenu,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font2_weather,$INFO[Skin.String(font2_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font2_weather,$INFO[Skin.String(font2_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_music,$INFO[Skin.String(font3_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_music,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_videolibrary,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_videolibrary,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_PVR,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_PVR,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_pictures,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_pictures,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_featured,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_featured,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_settings,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_settings,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_addons,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_addons,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_programs,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_programs,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_musicplaylist,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_musicplaylist,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_videoplaylist,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_videoplaylist,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_mainmenu,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_mainmenu,$INFO[Skin.String(font3_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font3_weather,$INFO[Skin.String(font3_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font3_weather,$INFO[Skin.String(font3_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_music,$INFO[Skin.String(font4_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_music,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_videolibrary,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_videolibrary,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_PVR,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_PVR,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_pictures,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_pictures,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_featured,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_featured,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_settings,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_settings,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_addons,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_addons,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_programs,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_programs,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_musicplaylist,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_musicplaylist,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_videoplaylist,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_videoplaylist,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_mainmenu,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_mainmenu,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font4_weather,$INFO[Skin.String(font4_color)])</onunload>
+	<onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font4_weather,$INFO[Skin.String(font4_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+[Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(white_font5_mainmenu,$INFO[Skin.String(font5_color)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas))+![Skin.HasTheme(White)|Skin.HasTheme(GlassWhite)] + StringCompare(Window(1124).Property(colordialog),font_color)+!IsEmpty(Window(home).Property(coloralllabel))">Skin.SetString(font5_mainmenu,$INFO[Skin.String(font5_color)])</onunload>
+    
+    
+    <onunload>Skin.SetString($INFO[Window(home).Property(ColorTarget)]colorcase,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]music,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videolibrary,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(PVR)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]PVR,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(pictures)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]pictures,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(1115)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]featured,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(skinsettings)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]settings,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(addonbrowser)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]addons,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]programs,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(musicplaylist)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]musicplaylist,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(videoplaylist)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videoplaylist,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]mainmenu,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(weather)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]weather,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+    <onunload>ClearProperty(colorallareas,home)</onunload>
+    <onunload>ClearProperty(background,1124)</onunload>
+    <onunload>ClearProperty(colordialog,1124)</onunload>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    <controls>
+        <control type="group">
+            <posx>500</posx>
+            <posy>300</posy>
+            <control type="image">
+                <posx>-4</posx>
+                <posy>-24</posy>
+                <width>776</width>
+                <height>450</height>
+                <colordiffuse>$VAR[SecondeTimeColorVar]</colordiffuse>
+                <include>PanelGlowFade</include>
+                <include>Animation_VisibleChange400</include>
+                <texture border="22">dialogs/scan_backg_shadow.png</texture>
+            </control>
+            <control type="image">
+                <posx>-4</posx>
+                <posy>-24</posy>
+                <width>776</width>
+                <height>450</height>
+                <texture border="22">dialogs/scan_backg.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+            </control>
+            <include>Dialogs_Settings</include>
+            <control type="panel" id="10">
+                <posx>142</posx>
+                <posy>4</posy>
+                <width>600</width>
+                <height>300</height>
+                <orientation>vertical</orientation>
+                <scrolltime>200</scrolltime>
+                <onback>Dialog.Close(1138)</onback>
+                <ondown>11</ondown>
+                <onup>11</onup>
+                <itemlayout height="75" width="75">
+                    <control type="image">
+                        <width>70</width>
+                        <height>70</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="75" width="75">
+                    <control type="image">
+                        <width>70</width>
+                        <height>70</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="image">
+                        <width>70</width>
+                        <height>70</height>
+                        <texture>views/addonwall_select.png</texture>
+                        <include>Animation_VisibleChange200</include>
+                        <colordiffuse>black</colordiffuse>
+                        <bordersize>1.7</bordersize>
+                        <visible>Control.HasFocus(10)</visible>
+                    </control>
+                </focusedlayout>
+                <content>
+                     <item>
+                        <label>Ocean</label>
+                        <icon>common/ocean.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF0089c5)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00a1dd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF50fff8)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB69f5ee)</onclick>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff005999)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99005999)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44005999)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,2269f5ee)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF69f5ee)</onclick>
+                    </item>
+                    <item>
+                        <label>Neon</label>
+                        <icon>common/neon.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF009dc8)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00b6dc)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF31e0ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB03F2FF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff3366ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,993366ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,443366ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,2203F2FF)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF03F2FF)</onclick>
+                    </item>
+                    <item>
+                        <label>Waterspout</label>
+                        <icon>common/waterspout.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF00b9ce)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00d5e0)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF76fff9)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBA4F4F9)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff00ccff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,9900ccff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,4400ccff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,2200ccff)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFA4F4F9)</onclick>
+                    </item>
+                    <item>
+                        <label>Light blue</label>
+                        <icon>common/lightblue.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF0055c4)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF0062db)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,BB0087ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,FF3aa0ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff3355ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,993355ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,443355ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,223355ff)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF0087ff)</onclick>
+                    </item>
+                    <item>
+                        <label>Blue</label>
+                        <icon>common/blue.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF0089c5)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00a1dd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF2a79ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB00BFFF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff0055ee)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,990055ee)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,440055ee)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,220055ee)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF00BFFF)</onclick>
+                    </item>
+                    <item>
+                        <label>Darkblue</label>
+                        <icon>common/darkblue.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF0000b6)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF0000da)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,BB0000FF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,FF4649ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff0044cc)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,990044cc)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,440044cc)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,220044cc)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF0000FF)</onclick>
+                    </item>
+                    <item>
+                        <label>Pale green</label>
+                        <icon>common/palegreen.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF00c28d)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00d89a)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF26ffa0)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBB8FBB8)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff33cc66)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,9933cc66)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,4433cc66)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,2233cc66)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],ffB8FBB8)</onclick>
+                    </item>
+                    <item>
+                        <label>Green</label>
+                        <icon>common/green.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF00c760)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00da66)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF1fff43)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB04B431)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBB8FBB8)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff336655)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99336655)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44336655)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22336655)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF04B431)</onclick>
+                    </item>
+                    <item>
+                        <label>Light green</label>
+                        <icon>common/lightgreen.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF00c760)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00da66)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF43ff41)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB6cf884)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff339966)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99339966)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44339966)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22339966)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF6cf884)</onclick>
+                    </item>
+                    <item>
+                        <label>Neon green</label>
+                        <icon>common/neongreen.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font_color,FF39FF14)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF00c400)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF00d600)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF94ff40)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB39FF14)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff338844)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99338844)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44338844)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22338844)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF39FF14)</onclick>
+                    </item>
+                    <item>
+                        <label>Lime</label>
+                        <icon>common/lime.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font_color,FFc5fa05)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFbdca00)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFcfe200)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFf1ff43)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBc5fa05)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffcc7755)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99cc7755)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44cc7755)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22cc7755)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFc5fa05)</onclick>
+                    </item>
+                    <item>
+                        <label>Yellow</label>
+                        <icon>common/yellow.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFffc100)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFffd300)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFfffe3d)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBF3F781)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffccaa00)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99ccaa00)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44ccaa00)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22ccaa00)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFF3F781)</onclick>
+                    </item>
+                    <item>
+                        <label>Khaki</label>
+                        <icon>common/khaki.png</icon>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFfffe65)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFfffd83)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFffe8487)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBf0e68c)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffcc6622)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99cc6622)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44cc6622)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22cc6622)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],fff0e68c)</onclick>
+                    </item>
+                    <item>
+                        <label>Gold</label>
+                        <icon>common/gold.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFe89600)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFf2b200)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFffe847)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBFFD700)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffcc5533)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99cc5533)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44cc5533)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22cc5533)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFFFD700)</onclick>
+                    </item>
+                    <item>
+                        <label>Goldenrod</label>
+                        <icon>common/goldenrod.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFcf5800)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFda6600)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFffc440)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBDAA520)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffcc3344)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99cc3344)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44cc3344)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22cc3344)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],ffDAA520)</onclick>
+                    </item>
+                    <item>
+                        <label>Orange</label>
+                        <icon>common/orange.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFc83300)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFdf4100)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFff8b4a)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBFFA500)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffff3322)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99ff3322)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44ff3322)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22ff3322)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFFFA500)</onclick>
+                    </item>
+                    <item>
+                        <label>Red-Orange</label>
+                        <icon>common/red-orange.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFc50003)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFdb1103)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFff6c47)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBFF4500)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffff1155)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99ff1155)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44ff1155)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22ff1155)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFFF4500)</onclick>
+                    </item>
+                    <item>
+                        <label>Red</label>
+                        <icon>common/red.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFb80002)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFde0004)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFff444d)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBB20000)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff662200)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99662200)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44662200)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22662200)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFB20000)</onclick>
+                    </item>
+                    <item>
+                        <label>Purple</label>
+                        <icon>common/purple.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFfffe65)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FF954aff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFffe847)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB9370D8)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ff663377)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99663377)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44663377)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22663377)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF9370D8)</onclick>
+                    </item>
+                    <item>
+                        <label>Fuchsia</label>
+                        <icon>common/fuchsia.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFc100bd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFff27aa)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFff51ff)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBFF00FF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffff0099)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99ff0099)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44ff0099)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22ff0099)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFFF00FF)</onclick>
+                    </item>
+                    <item>
+                        <label>Pink</label>
+                        <icon>common/pink.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFff00a1)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFfff00cc)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFff55dd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBfa98e0)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,ffff00dd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99ff00dd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44ff00dd)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,22ff00dd)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFffc0cb)</onclick>
+                    </item>
+                    <item>
+                        <label>black</label>
+                        <icon>common/black.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF060606)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,FFFF111111)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FF222222)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BB444444)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,FF444444)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99000000)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44000000)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,FFF0F0F0)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FF000000)</onclick>
+                    </item>
+                    <item>
+                        <label>Default</label>
+                        <icon>common/white.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FFe5e5e5)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,abFFFFFF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFdfdfdf)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,48FFFFFF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,FFa4a4a4)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,88FFFFFF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,33FFFFFF)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,FF000000)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFFFFFFF)</onclick>
+                        <visible>StringCompare(Window(1124).Property(colordialog),font_color)</visible>
+                    </item>
+                    <item>
+                        <label>Silver</label>
+                        <icon>common/silver.png</icon>
+						<onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font2_color,FF60605f)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font3_color,ff898989)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font4_color,FFcbcbcbf)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(font5_color,BBC9C0BB)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey_color,FF888888)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey2_color,99888888)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontgrey3_color,44888888)</onclick>
+                        <onclick condition="StringCompare(Window(1124).Property(colordialog),font_color)">Skin.SetString(fontblack_color,FF888888)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(colordialog)],FFC9C0BB)</onclick>
+                    </item>
+                    <item>
+                        <label>31630</label>
+                        <icon>common/color.png</icon>
+                        <onclick condition="System.HasAddon(script.color.picker)">RunScript(script.color.picker,Skin.SetString($INFO[Window(1124).Property(colordialog)]),SetStringInRealTime=true)</onclick>
+                        <onclick condition="!System.HasAddon(script.color.picker)">Notification($LOCALIZE[31900],$LOCALIZE[31910])</onclick>
+                        <visible>!StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)+!StringCompare(Window(1124).Property(colordialog),ItemToEdit.Color)</visible>
+                    </item>
+                   <item>
+                       <label>31630</label>
+                        <icon>common/color.png</icon>
+                        <onclick condition="System.HasAddon(script.color.picker)">RunScript(script.color.picker,Skin.SetString(ItemToEdit.Color),SetStringInRealTime=true)</onclick>
+                        <onclick condition="!System.HasAddon(script.color.picker)">Notification($LOCALIZE[31900],$LOCALIZE[31910])</onclick>
+                        <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.Color)</visible>
+                    </item>
+                    <item>
+                       <label>31630</label>
+                        <icon>common/color.png</icon>
+                        <onclick condition="System.HasAddon(script.color.picker)">RunScript(script.color.picker,Skin.SetString(ItemToEdit.IconColor),SetStringInRealTime=true)</onclick>
+                        <onclick condition="!System.HasAddon(script.color.picker)">Notification($LOCALIZE[31900],$LOCALIZE[31910])</onclick>
+                        <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)</visible>
+                    </item>
+                   <!-- <item>
+                        <label>42227</label>
+                        <icon>close.png</icon>
+                        <onclick>Skin.SetString(ItemToEdit.Color,FFFFFFFF)</onclick>
+                        <onclick>Skin.Reset(ItemToEdit.Color)</onclick>
+                        <visible>StringCompare(Window(1124).Property(background),menuitem)|StringCompare(Window(1124).Property(background),IconsColor)</visible>
+                    </item>-->
+                </content>
+            </control>
+            <control type="group" id="11">
+                <posx>137</posx>
+                <posy>290</posy>
+                <control type="button" id="13">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>18</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(panel_color,$INFO[Skin.String(panel_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),panel_color)</visible>
+                </control>
+                <control type="button" id="14">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>18</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),diffuse_color)</visible>
+                </control>
+                <control type="button" id="15">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>18</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(font_color,$INFO[Skin.String(font_color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),font_color)</visible>
+                </control>
+                <control type="button" id="16">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>19</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(ItemToEdit.Color,$INFO[Skin.String(ItemToEdit.Color)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.Color)</visible>
+                </control>
+                <control type="button" id="17">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>21</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(ItemToEdit.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)</visible>
+                </control>
+                 <control type="button" id="18">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(480_case,$INFO[Skin.String(480_case)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),480_case)</visible>
+                </control>
+                <control type="button" id="18">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(540_case,$INFO[Skin.String(540_case)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),540_case)</visible>
+                </control>
+                <control type="button" id="18">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(576_case,$INFO[Skin.String(576_case)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),576_case)</visible>
+                </control>
+                <control type="button" id="18">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(720_case,$INFO[Skin.String(720_case)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),720_case)</visible>
+                </control>
+                <control type="button" id="18">
+                    <label>$LOCALIZE[31090]</label>
+                    <onup>10</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick>RunScript(script.color.picker,Skin.SetString(1080_case,$INFO[Skin.String(1080_case)]),Transparency&amp;SetStringInRealTime=true)</onclick>
+                    <visible>StringCompare(Window(1124).Property(colordialog),1080_case)</visible>
+                </control>
+                
+            </control>
+           <control type="group">
+                <posx>137</posx>
+                <posy>340</posy>
+                <control type="radiobutton" id="18">
+                    <label>$LOCALIZE[31088]</label>
+                    <onup>11</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick condition="IsEmpty(Window(home).Property(colorallareas))">SetProperty(colorallareas,1,home)</onclick>
+                    <onclick condition="!IsEmpty(Window(home).Property(colorallareas))">ClearProperty(colorallareas,home)</onclick>
+                    <selected>!IsEmpty(Window(home).Property(colorallareas))</selected>
+                    <visible>!StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)+!StringCompare(Window(1124).Property(colordialog),ItemToEdit.Color)</visible>
+                </control>
+                <control type="radiobutton" id="19">
+                    <label>All menus</label>
+                    <onup>16</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick condition="IsEmpty(Window(home).Property(colorallitem))">SetProperty(colorallitem,1,home)</onclick>
+                    <onclick condition="!IsEmpty(Window(home).Property(colorallitem))">ClearProperty(colorallitem,home)</onclick>
+                    <selected>!IsEmpty(Window(home).Property(colorallitem))</selected>
+                    <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.Color)</visible>
+                </control>
+                <control type="radiobutton" id="20">
+                    <label>All Label</label>
+					<posy>50</posy>
+                    <onup>11</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick condition="IsEmpty(Window(home).Property(colorallitem))">SetProperty(coloralllabel,1,home)</onclick>
+                    <onclick condition="!IsEmpty(Window(home).Property(colorallitem))">ClearProperty(coloralllabel,home)</onclick>
+                    <selected>!IsEmpty(Window(home).Property(coloralllabel))</selected>
+                    <visible>StringCompare(Window(1124).Property(colordialog),font_color)</visible>
+                </control>
+                <control type="radiobutton" id="21">
+                    <label>All menus</label>
+                    <onup>17</onup>
+                    <ondown>10</ondown>
+                    <include>ColorChooserButton</include>
+                    <onclick condition="IsEmpty(Window(home).Property(colorallicon))">SetProperty(colorallicon,1,home)</onclick>
+                    <onclick condition="!IsEmpty(Window(home).Property(colorallicon))">ClearProperty(colorallicon,home)</onclick>
+                    <selected>!IsEmpty(Window(home).Property(colorallicon))</selected>
+                    <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)</visible>
+                </control>
+                
+            </control>
+        </control>
+        <control type="group">
+            <control type="label">
+                <visible>!Control.HasFocus(11)</visible>
+                <posx>620</posx>
+                <posy>525</posy>
+                <align>center</align>
+                <include>Dialogs_Label3</include>
+                <label>$INFO[Container(10).ListItem.Label]</label>
+            </control>
+        </control>
+    </controls>
+</window>

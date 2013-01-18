@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+<!--Script by Frost,YiarkYiark and MikeBZH44-->
+<include name="InitOrNotCustomView1001">
+<onload>Skin.SetString(ReinstallCustomView,1)</onload>
+</include>
+</includes>

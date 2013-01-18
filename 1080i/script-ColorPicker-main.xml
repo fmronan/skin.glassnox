@@ -1,0 +1,826 @@
+<window id="3000">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<control type="group">
+			<description>Properties</description>
+			<visible>false</visible>
+			<control type="list" id="50">
+				<description>Container for keep property</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1</width>
+				<height>1</height>
+				<viewtype label="Properties">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<itemlayout height="1" width="1" />
+				<focusedlayout height="1" width="1" />
+			</control>
+			<control type="label" id="150">
+				<description>Current Picker Color</description>
+				<!-- don't use $INFO[Container(50)...] in <colordiffuse> on browse.xml open xbmc crash -->
+				<!-- but with $INFO[Control.GetLabel(150)] is OK !!!!-->
+				<label>$INFO[Container(50).Property(CurrentPickerColor)]</label>
+			</control>
+			<control type="label" id="151">
+				<description>Current Focus Color</description>
+				<!-- don't use $INFO[Container(50)...] in <colordiffuse> on browse.xml open xbmc crash -->
+				<!-- but with $INFO[Control.GetLabel(151)] is OK !!!!-->
+				<label fallback="white">$INFO[Container(50).Property(CurrentFocusColor)]</label>
+			</control>
+			<control type="label" id="152">
+				<description>Previous Picker Color</description>
+				<!-- don't use $INFO[Container(50)...] in <colordiffuse> on browse.xml open xbmc crash -->
+				<!-- but with $INFO[Control.GetLabel(150)] is OK !!!!-->
+				<label>$INFO[Container(50).Property(PreviousPickerColor)]</label>
+			</control>
+			<control type="label" id="300">
+				<description>clone of control image color picker</description>
+				<!-- use clone, because from python control.getPosition() -->
+				<!-- not return real position, if control is in group the position of group is forgotten -->
+				<posx>543</posx>
+				<posy>138</posy>
+				<width>1194</width>
+				<height>669</height>
+				<label>-</label>
+			</control>
+		</control>
+
+		<control type="group">
+			<description>See content on container 9000</description>
+			<visible>false</visible>
+			<control type="button" id="24"><description>Palettes button</description></control>
+			<control type="button" id="25"><description>Custom palettes button</description></control>
+			<control type="button" id="22"><description>OK button</description></control>
+			<control type="button" id="23"><description>Cancel button or PreviousMenu</description></control>
+		</control>
+
+		<control type="group">
+			<visible>!Window.IsVisible(FileBrowser)</visible>
+			<posx>135</posx>
+			<posy>45</posy>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="image">
+				<posx>8</posx>
+				<posy>8</posy>
+				<width>1631</width>
+				<height>944</height>
+				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
+				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<include>Animation_VisibleChange400</include>
+            <texture>settings/settings_panelback_shadow.png</texture>
+			</control>
+			<control type="image">
+				<posx>7</posx>
+				<posy>7</posy>
+				<width>1635</width>
+				<height>945</height>
+				<texture border="15">settings/settings_panelback.png</texture>
+				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			</control>
+			<!--<control type="button">
+				<description>Close Window button</description>
+				<posx>980</posx>
+				<posy>11</posy>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>picker-DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>picker-DialogCloseButton.png</texturenofocus>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>-->
+			<control type="image">
+				<description>LOGO</description>
+				<posx>45</posx>
+				<posy>22</posy>
+				<width>330</width>
+				<height>150</height>
+				<aspectratio>scale</aspectratio>
+				<texture>xbmc-logo.png</texture>
+				<colordiffuse>$INFO[Control.GetLabel(151)]</colordiffuse>
+			</control>
+
+			<control type="group" id="1000">
+				<description>group 1000 is used for navigation only</description>
+				<control type="list" id="9000">
+					<description>button menu</description>
+					<posx>15</posx>
+					<posy>135</posy>
+					<width>390</width>
+					<height>480</height>
+					<onleft>9003</onleft>
+					<onright>140</onright>
+					<onup>9002</onup>
+					<ondown>9001</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+					<itemlayout height="120" width="390">
+						<!--<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>390</width>
+							<height>121</height>
+							<texture border="5">listselect_fo.png</texture>
+						</control>-->
+						<control type="label">
+							<posx>375</posx>
+							<posy>22</posy>
+							<width>570</width>
+							<height>37</height>
+							<font>font24_title</font>
+							<textcolor>grey3</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" end="0,13" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>375</posx>
+							<posy>63</posy>
+							<width>1305</width>
+							<height>37</height>
+							<font>font13caps</font>
+							<textcolor>grey2</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="120" width="390">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>390</width>
+							<height>121</height>
+							<texture border="5">picker/MenuItemFO.png</texture>
+							<animation effect="fade" start="100" end="30" time="100" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>375</posx>
+							<posy>22</posy>
+							<width>570</width>
+							<height>37</height>
+							<font>font24_title</font>
+							<textcolor>white</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="slide" end="0,19" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>375</posx>
+							<posy>63</posy>
+							<width>1305</width>
+							<height>37</height>
+							<font>font13caps</font>
+							<textcolor>grey2</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<label>Palettes</label>
+							<label2>Change Palette</label2>
+							<onclick>SendClick(24)</onclick>
+						</item>
+						<item id="2">
+							<label>Custom Palettes</label>
+							<label2>Browse Image</label2>
+							<onclick>SendClick(25)</onclick>
+						</item>
+						<item id="3">
+							<label>Cancel</label>
+							<label2>-</label2>
+							<onclick>PreviousMenu</onclick>
+						</item>
+						<item id="4">
+							<label>OK</label>
+							<label2>-</label2>
+							<onclick>SendClick(22)</onclick>
+							<visible>!IsEmpty(Control.GetLabel(150))</visible>
+						</item>
+						<item id="5">
+							<label>5</label>
+							<label2>-</label2>
+							<onclick>PreviousMenu</onclick>
+							<onclick>Addon.OpenSettings(script.color.picker)</onclick>
+						</item>
+					</content>
+				</control>
+				<control type="label">
+					<description>label separator</description>
+					<posx>15</posx>
+					<posy>630</posy>
+					<width>390</width>
+					<height>52</height>
+					<font>font12caps</font>
+					<label>Saved Colors</label>
+					<textcolor>blue</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="panel" id="9001">
+					<description>container saved colors</description>
+					<posx>30</posx>
+					<posy>682</posy>
+					<width>360</width>
+					<height>180</height>
+					<onleft>9003</onleft>
+					<onright>140</onright>
+					<onup>9000</onup>
+					<ondown>9002</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+					<itemlayout height="45" width="45">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordersize>7</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="45" width="45">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>45</width>
+							<height>45</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordersize>7</bordersize>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="grouplist" id="9002">
+					<description>group</description>
+					<posx>30</posx>
+					<posy>870</posy>
+					<width>129</width>
+					<height>64</height>
+					<onleft>9003</onleft>
+					<onright>140</onright>
+					<onup>9001</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="20">
+						<description>save color button</description>
+						<width>64</width>
+						<height>64</height>
+						<label>-</label>
+						<font>-</font>
+						<texturefocus>views/multiplex_arrow.png</texturefocus>
+						<texturenofocus>views/multiplex_arrowfocus.png</texturenofocus>
+					</control>
+					<control type="button" id="21">
+						<description>screen color button</description>
+						<width>64</width>
+						<height>64</height>
+						<label>-</label>
+						<font>-</font>
+						<texturefocus>picker/screen-color-fo.png</texturefocus>
+						<texturenofocus>picker/screen-color.png</texturenofocus>
+					</control>
+				</control>
+			</control>
+
+			<control type="label">
+				<description>current position of mouse if onfocus(301)</description>
+				<posx>390</posx>
+				<posy>900</posy>
+				<width>375</width>
+				<height>30</height>
+				<font>font12</font>
+				<textcolor>grey3</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(50).property(MouseCoords)]</label>
+			</control>
+
+			<control type="image">
+				<posx>604</posx>
+				<posy>22</posy>
+				<width>1809</width>
+				<height>112</height>
+				<texture border="5">picker/black-back2.png</texture>
+			</control>
+			<control type="image">
+				<posx>604</posx>
+				<posy>22</posy>
+				<width>1809</width>
+				<height>157</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>picker/GlassTitleBar.png</texture>
+			</control>
+			<!-- <include>script.color.picker.header</include> -->
+			<control type="label" id="10000">
+				<description>Current Focus Color</description>
+				<label fallback="FFEB9E17">$INFO[Skin.String(MyPrettyColor)]</label>
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>675</posx>
+				<posy>45</posy>
+				<width>1650</width>
+				<height>67</height>
+				<font>font16caps</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[system.addontitle(script.color.picker)]</label>
+				<!--<textcolor>$VAR[script.color.picker.MyPrettyColor]</textcolor>-->
+				<textcolor>$INFO[Control.GetLabel(10000)]</textcolor>
+				<shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+			</control>
+			<control type="image">
+				<posx>607</posx>
+				<posy>135</posy>
+				<width>1800</width>
+				<height>1012</height>
+				<texture border="5">picker/button-nofocus.png</texture>
+			</control>
+
+			<control type="image">
+				<description>horizontal rule image</description>
+				<posx>408</posx>
+				<posy>75</posy>
+				<width>597</width>
+				<height>30</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>picker/osd_slider_bg_2.png</texture>
+			</control>
+			<control type="image">
+				<description>horizontal rule image</description>
+				<posx>1005</posx>
+				<posy>75</posy>
+				<width>597</width>
+				<height>30</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>picker/osd_slider_bg_2.png</texture>
+			</control>
+			<control type="image">
+				<description>vertical rule image</description>
+				<posx>1587</posx>
+				<posy>93</posy>
+				<width>37</width>
+				<height>669</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>picker/osd_slider_bg_2v.png</texture>
+			</control>
+			<control type="image">
+				<description>Colors/Pixels image</description>
+				<posx>408</posx>
+				<posy>93</posy>
+				<width>1194</width>
+				<height>669</height>
+				<!-- Warning: use stretch for match pixel with PIL Imaging -->
+				<aspectratio>stretch</aspectratio>
+				<fadetime>600</fadetime>
+				<texture background="true">$INFO[Container(50).Property(ImageColor)]</texture>
+			</control>
+
+			<control type="image">
+				<posx>408</posx>
+				<posy>93</posy>
+				<width>900</width>
+				<height>510</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>picker/GlassOverlay.png</texture>
+				<colordiffuse>AAFFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>408</posx>
+				<posy>765</posy>
+				<width>1206</width>
+				<height>177</height>
+				<texture border="5">picker/black-back2.png</texture>
+			</control>
+
+			<control type="grouplist" id="140">
+				<description>group</description>
+				<posx>450</posx>
+				<posy>780</posy>
+				<width>375</width>
+				<height>150</height>
+				<onleft>1000</onleft>
+				<onright>9003</onright>
+				<onup>140</onup>
+				<ondown>140</ondown>
+				<itemgap>0</itemgap>
+				<control type="edit" id="141">
+					<description>Current Picker Color in HEX format</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>375</width>
+					<height>49</height>
+					<textoffsetx>15</textoffsetx>
+					<textwidth>345</textwidth>
+					<aligny>center</aligny>
+					<font>font13</font>
+					<texturefocus border="5">picker/button-focus.png</texturefocus>
+					<texturenofocus border="5">picker/button-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<label>#</label>
+					<label2>$INFO[Container(50).Property(CurrentPickerColor)]</label2>
+				</control>
+				<control type="button" id="142">
+					<description>open gradient for ajust Current Picker Color</description>
+					<posx>0</posx>
+					<posy>49</posy>
+					<width>375</width>
+					<height>49</height>
+					<label>$INFO[Control.GetLabel(150)]</label>
+					<font>-</font>
+					<texturefocus border="5">picker/button-focus.png</texturefocus>
+					<texturenofocus border="5">picker/button-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<enable>!IsEmpty(Control.GetLabel(150))</enable>
+				</control>
+				<control type="button" id="143">
+					<description>Set Current Picker Color from Previous Picker Color</description>
+					<posx>0</posx>
+					<posy>99</posy>
+					<width>375</width>
+					<height>49</height>
+					<label>$INFO[Control.GetLabel(152)]</label>
+					<font>-</font>
+					<texturefocus border="5">picker/button-focus.png</texturefocus>
+					<texturenofocus border="5">picker/button-nofocus.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
+					<enable>!IsEmpty(Control.GetLabel(152))</enable>
+				</control>
+			</control>
+			<control type="group">
+				<posx>450</posx>
+				<posy>780</posy>
+				<control type="image">
+					<description>Info Current Picker Color image</description>
+					<posx>0</posx>
+					<posy>49</posy>
+					<width>375</width>
+					<height>49</height>
+					<bordersize>5</bordersize>
+					<texture>epg-genres/0.png.png</texture>
+					<colordiffuse>$INFO[Control.GetLabel(150)]</colordiffuse>
+				</control>
+				<control type="image">
+					<description>Info Previous Picker Color image</description>
+					<posx>0</posx>
+					<posy>99</posy>
+					<width>375</width>
+					<height>49</height>
+					<bordersize>5</bordersize>
+					<texture>epg-genres/0.png.png</texture>
+					<colordiffuse>$INFO[Control.GetLabel(152)]</colordiffuse>
+				</control>
+			</control>
+
+			<control type="grouplist" id="9003">
+				<description>4-slider group</description>
+				<posx>450</posx>
+				<posy>780</posy>
+				<width>1110</width>
+				<height>150</height>
+				<onleft>140</onleft>
+				<onright>140</onright>
+				<onup>140</onup>
+				<ondown>140</ondown>
+				<itemgap>7</itemgap>
+				<control type="group" id="100">
+					<description>Red</description>
+					<width>1110</width>
+					<height>27</height>
+					<control type="label">
+						<posx>472</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>Red:</label>
+					</control>
+					<control type="label">
+						<description>Red - Info of real float percent</description>
+						<posx>585</posx>
+						<posy>0</posy>
+						<width>112</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey3</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label fallback="0%">$INFO[Container(50).Property(red_percent)]</label>
+					</control>
+					<control type="slider" id="101">
+						<description>Red - Slider</description>
+						<posx>600</posx>
+						<posy>0</posy>
+						<width>510</width>
+						<height>27</height>
+						<aligny>center</aligny>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<texturesliderbar>picker/osd_slider_bg_2.png</texturesliderbar>
+						<textureslidernib>picker/osd_slider_nib2NF.png</textureslidernib>
+						<textureslidernibfocus>picker/osd_slider_nib2.png</textureslidernibfocus>
+						<colordiffuse>red</colordiffuse>
+						<onup>140</onup>
+						<ondown>110</ondown>
+						<onleft>11</onleft>
+						<onright>11</onright>
+					</control>
+				</control>
+				<control type="group" id="110">
+					<description>Green</description>
+					<width>1110</width>
+					<height>27</height>
+					<control type="label">
+						<posx>472</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>Green:</label>
+					</control>
+					<control type="label">
+						<description>Green - Info of real float percent</description>
+						<posx>585</posx>
+						<posy>0</posy>
+						<width>112</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey3</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label fallback="0%">$INFO[Container(50).Property(green_percent)]</label>
+					</control>
+					<control type="slider" id="111">
+						<description>Green - Slider</description>
+						<posx>600</posx>
+						<posy>0</posy>
+						<width>510</width>
+						<height>27</height>
+						<aligny>center</aligny>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<texturesliderbar>picker/osd_slider_bg_2.png</texturesliderbar>
+						<textureslidernib>picker/osd_slider_nib2NF.png</textureslidernib>
+						<textureslidernibfocus>picker/osd_slider_nib2.png</textureslidernibfocus>
+						<onup>100</onup>
+						<ondown>120</ondown>
+						<onleft>11</onleft>
+						<onright>11</onright>
+						<colordiffuse>green</colordiffuse>
+					</control>
+				</control>
+				<control type="group" id="120">
+					<description>Blue</description>
+					<width>1110</width>
+					<height>27</height>
+					<control type="label">
+						<posx>472</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>Blue:</label>
+					</control>
+					<control type="label">
+						<description>Blue - Info of real float percent</description>
+						<posx>585</posx>
+						<posy>0</posy>
+						<width>112</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey3</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label fallback="0%">$INFO[Container(50).Property(blue_percent)]</label>
+					</control>
+					<control type="slider" id="121">
+						<description>Blue - Slider</description>
+						<posx>600</posx>
+						<posy>0</posy>
+						<width>510</width>
+						<height>27</height>
+						<aligny>center</aligny>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<texturesliderbar>picker/osd_slider_bg_2.png</texturesliderbar>
+						<textureslidernib>picker/osd_slider_nib2NF.png</textureslidernib>
+						<textureslidernibfocus>picker/osd_slider_nib2.png</textureslidernibfocus>
+						<onup>110</onup>
+						<ondown>130</ondown>
+						<onleft>11</onleft>
+						<onright>11</onright>
+						<colordiffuse>blue</colordiffuse>
+					</control>
+				</control>
+				<control type="group" id="130">
+					<description>Alpha/Trans/fade</description>
+					<width>1110</width>
+					<height>27</height>
+					<control type="label">
+						<posx>472</posx>
+						<posy>0</posy>
+						<width>150</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>Alpha:</label>
+					</control>
+					<control type="label">
+						<description>Alpha - Info of real float percent</description>
+						<posx>585</posx>
+						<posy>0</posy>
+						<width>112</width>
+						<height>27</height>
+						<font>font12</font>
+						<textcolor>grey3</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label fallback="0%">$INFO[Container(50).Property(alpha_percent)]</label>
+					</control>
+					<control type="slider" id="131">
+						<description>Alpha - Slider</description>
+						<posx>600</posx>
+						<posy>0</posy>
+						<width>510</width>
+						<height>27</height>
+						<aligny>center</aligny>
+						<texturefocus>-</texturefocus>
+						<texturenofocus>-</texturenofocus>
+						<texturesliderbar>picker/osd_slider_bg_2.png</texturesliderbar>
+						<textureslidernib>picker/osd_slider_nibNF.png</textureslidernib>
+						<textureslidernibfocus>picker/osd_slider_nib.png</textureslidernibfocus>
+						<onup>120</onup>
+						<ondown>140</ondown>
+						<onleft>11</onleft>
+						<onright>11</onright>
+					</control>
+				</control>
+			</control>
+		</control>
+
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="back" time="300" />
+				<effect type="fade" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<control type="group" id="304">
+				<description>rules posx group auto moving with mouse</description>
+				<visible>!Window.IsVisible(FileBrowser)</visible>
+				<posx>531</posx>
+				<posy>114</posy>
+				<width>24</width>
+				<control type="image">
+					<description>rule pos image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<aspectratio>keep</aspectratio>
+					<texture>picker/scroll-down-focus.png</texture>
+				</control>
+				<control type="image">
+					<description>line image</description>
+					<posx>9</posx>
+					<posy>24</posy>
+					<width>6</width>
+					<height>669</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>picker/separator_vertical.png</texture>
+					<colordiffuse>black</colordiffuse>
+				</control>
+			</control>
+			<control type="group" id="305">
+				<description>rules posy group auto moving with mouse</description>
+				<visible>!Window.IsVisible(FileBrowser)</visible>
+				<posx>1737</posx>
+				<posy>126</posy>
+				<height>24</height>
+				<control type="image">
+					<description>rule pos image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>24</width>
+					<height>24</height>
+					<aspectratio>keep</aspectratio>
+					<texture>picker/scroll-left-focus.png</texture>
+				</control>
+				<control type="image">
+					<description>line image</description>
+					<posx>-1194</posx>
+					<posy>9</posy>
+					<width>1194</width>
+					<height>6</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>picker/separator.png</texture>
+					<colordiffuse>black</colordiffuse>
+				</control>
+			</control>
+
+			<control type="group" id="303">
+				<description>Pipette group auto moving with mouse</description>
+				<visible>!Window.IsVisible(FileBrowser)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="image">
+					<description>Pipette image</description>
+					<posx>0</posx>
+					<posy>-75</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>picker/syringe.png</texture>
+				</control>
+				<control type="image">
+					<description>back image</description>
+					<posx>0</posx>
+					<posy>-75</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>picker/syringe-back.png</texture>
+					<colordiffuse>$INFO[Control.GetLabel(150)]</colordiffuse>
+					<visible>!IsEmpty(Control.GetLabel(150))</visible>
+				</control>
+				<control type="image">
+					<description>overlay image</description>
+					<posx>0</posx>
+					<posy>-75</posy>
+					<width>112</width>
+					<height>112</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>picker/syringe-overlay.png</texture>
+					<visible>IsEmpty(Control.GetLabel(150))</visible>
+				</control>
+			</control>
+
+			<control type="button" id="301">
+				<description>image click button (mouse auto get pos x,y)</description>
+				<!-- don't use this button in group, because from python control.getPosition() -->
+				<!-- not return real position, if control is in group the position of group is forgotten -->
+				<posx>543</posx>
+				<posy>138</posy>
+				<width>1194</width>
+				<height>669</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onleft>1000</onleft>
+				<onright>1000</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+			</control>
+
+			<control type="label" id="302">
+				<description>mouse coord x,y on screen (for dev not for end user)</description>
+				<!-- don't use this button in group, because from python control.getPosition() -->
+				<!-- not return real position, if control is in group the position of group is forgotten -->
+				<posx>362</posx>
+				<posy>92</posy>
+				<width>200</width>
+				<height>100</height>
+				<font>font30_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+				<textoffsety>-12</textoffsety>
+				<label>-</label>
+				<visible>StringCompare(Window.Property(debug),debug)</visible>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,981 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <backgroundcolor>backgroundcolor</backgroundcolor>
+    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+    <animation type="WindowOpen" reversible="false" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(settings)]">
+        <effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
+        <effect type="fade" end="100" time="300" />
+    </animation>
+    <animation type="WindowClose" reversible="false" condition="![Window.Next(SettingsCategory.xml) | Window.Next(1116) | Window.Next(settings)]">
+        <effect type="fade" start="100" end="0" time="300" />
+        <effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+    </animation>
+    <controls>
+        <include>CommonSettingsBackground</include>
+        <include>CommonMediaPlayingBackground</include>
+        <include condition="!Skin.HasSetting(disablefloor)">Furniture_SettingsFloor</include>
+        <control type="group">
+            <animation effect="zoom" end="91" center="960,360" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
+            <include>Furniture_SettingsBackPanel</include>
+            <control type="list" id="9000">
+                <posx>63</posx>
+                <posy>194</posy>
+                <width>750</width>
+                <height>768</height>
+                <onleft>ActivateWindow(1121)</onleft>
+                <onright>9010</onright>
+                <onup>9000</onup>
+                <ondown>9000</ondown>
+                <scrolltime tween="sine">300</scrolltime>
+                <itemlayout height="74" width="570">
+                    <control type="label">
+                        <posx>30</posx>
+                        <width>306</width>
+                        <height>74</height>
+                        <font>Font_Bold20</font>
+                        <textcolor>grey2</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="74" width="570">
+                    <control type="image">
+                        <width>324</width>
+                        <height>74</height>
+                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <animation effect="fade" start="100" end="50" time="50" condition="!Control.HasFocus(9000)">Conditional</animation>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>30</posx>
+                        <width>306</width>
+                        <height>74</height>
+                        <font>Font_Bold20</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <label>128</label>
+                        <onclick>-</onclick>
+                    </item>
+                    <item id="2">
+                        <label>31682</label>
+                        <onclick>-</onclick>
+                    </item>
+                    <item id="6">
+                        <label>31230</label>
+                        <onclick>-</onclick>
+                    </item>
+                    <item id="8">
+                        <label>31870</label>
+                        <onclick>-</onclick>
+                    </item>
+                    <item id="9">
+                        <label>470</label>
+                        <onclick>-</onclick>
+                    </item>
+                    <item id="10">
+                        <label>31641</label>
+                        <onclick>-</onclick>
+                    </item>
+					<item id="11">
+						<label>Reset Skin</label>
+						<label2>and Reload</label2>
+						<onclick>Skin.ResetSettings</onclick>
+						<onclick>ReloadSkin()</onclick>
+					</item>
+                </content>
+            </control>
+            <control type="label">
+                <posx>358</posx>
+                <posy>120</posy>
+                <width>1491</width>
+                <font>Font_ShowcaseMainLabel2</font>
+                <label>$LOCALIZE[20077] - $INFO[Container(9000).ListItem.Label] $INFO[Container(9000).ListItem.Label2]</label>
+                <align>center</align>
+                <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+                <visible>!Container(9000).Hasfocus(5)</visible>
+            </control>
+            <control type="group" id="9010">
+                <control type="grouplist" id="9001">
+                    <visible>Container(9000).Hasfocus(1)</visible>
+                    <posx>387</posx>
+                    <posy>195</posy>
+                    <width>1469</width>
+                    <height>732</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>60</onright>
+                    <onup>9001</onup>
+                    <ondown>9001</ondown>
+                    <control type="radiobutton" id="101">
+                        <label>20189</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+                        <selected>Skin.HasSetting(AutoScroll)</selected>
+                    </control>
+                    <control type="radiobutton" id="298">
+                        <label>31279</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(fstrailer)</onclick>
+                        <selected>Skin.HasSetting(fstrailer)</selected>
+                    </control>
+                    <control type="radiobutton" id="290">
+                        <label>31265</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(smallerdialogs)</onclick>
+                        <selected>Skin.HasSetting(smallerdialogs)</selected>
+                    </control>
+                    <control type="radiobutton" id="291">
+                        <label>31734</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(quicklistmenu)</onclick>
+                        <selected>Skin.HasSetting(quicklistmenu)</selected>
+                    </control>
+                    <control type="button" id="261">
+                        <label>$LOCALIZE[31186]:</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$VAR[KioskModeLabelVar][/COLOR]</label2>
+                        <include>Default_SettingButton</include>
+                        <onclick condition="!Skin.HasSetting(kioskmode) + !Skin.HasSetting(hideoptions)">Skin.SetBool(hideoptions)</onclick>
+                        <onclick condition="Skin.HasSetting(hideoptions)">Skin.SetBool(kioskmode)</onclick>
+                        <onclick condition="Skin.HasSetting(hideoptions)">Skin.Reset(hideoptions)</onclick>
+                        <onclick condition="Skin.HasSetting(kioskmode)">Skin.Reset(kioskmode)</onclick>
+                    </control>
+                    <control type="radiobutton" id="262">
+                        <label>31269</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(effect_bg)</onclick>
+                        <selected>Skin.HasSetting(effect_bg)</selected>
+                    </control>
+                    <control type="radiobutton" id="286">
+                        <label>31638</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(NextAiredInfo)</onclick>
+                        <selected>!Skin.HasSetting(NextAiredInfo)</selected>
+                    </control>
+                    <control type="radiobutton" id="287">
+                        <label>53013</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
+                        <selected>!Skin.HasSetting(UseCustomCases)</selected>
+                    </control>
+                    <control type="radiobutton" id="107">
+                        <label>21398</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+                        <selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+                    </control>
+                    <control type="button" id="108">
+                        <label>- $LOCALIZE[559]:</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(Startup_Playlist_Path)][/COLOR]</label2>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
+                        <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+                    </control>
+                </control>
+                <control type="grouplist" id="9002">
+                    <visible>Container(9000).Hasfocus(2)</visible>
+                    <posx>387</posx>
+                    <posy>195</posy>
+                    <width>1469</width>
+                    <height>722</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>60</onright>
+                    <onup>9002</onup>
+                    <ondown>9002</ondown>
+                    <control type="button" id="452">
+                        <label>$LOCALIZE[31643]</label>
+                        <include>Default_SettingButton</include>
+                        <onclick>ActivateWindow(home)</onclick>
+                        <onclick>ActivateWindow(1131)</onclick>
+                    </control>
+                    <control type="button" id="514">
+                        <include>Default_SettingButton</include>
+                        <label>$LOCALIZE[31600]</label>
+                        <onclick>ActivateWindow(1124)</onclick>
+                    </control>
+                    <control type="button" id="457">
+                        <label>31877</label>
+                        <include>Default_SettingButton</include>
+                        <onclick>ActivateWindow(1158)</onclick>
+                    </control>
+                    <control type="button" id="453">
+                        <label>$LOCALIZE[31610]</label>
+                        <include>Default_SettingButton</include>
+                        <onclick>ActivateWindow(home)</onclick>
+                        <onclick>ActivateWindow(1128)</onclick>
+                    </control>
+                    <control type="button" id="455">
+                        <label>$LOCALIZE[31961]</label>
+                        <include>Default_SettingButton</include>
+                        <onclick>SetProperty(FeaturedSetup,true,home)</onclick>
+                        <onclick>ActivateWindow(1147)</onclick>
+                    </control>
+                    <control type="button" id="454">
+                        <label>$LOCALIZE[31962]</label>
+                        <include>Default_SettingButton</include>
+                        <onclick>ActivateWindow(1128)</onclick>
+                    </control>
+                    <control type="button" id="516">
+                        <include>Default_SettingButton</include>
+                        <label>31675</label>
+                        <onclick>ActivateWindow(1116)</onclick>
+                    </control>
+                    <control type="button" id="517">
+                        <include>Default_SettingButton</include>
+                        <label>$LOCALIZE[31809]</label>
+                        <onclick>ActivateWindow(1117)</onclick>
+                    </control>
+                    <control type="button" id="518">
+                        <include>Default_SettingButton</include>
+                        <label>$LOCALIZE[31637]</label>
+                        <onclick>ActivateWindow(1118)</onclick>
+                    </control>
+                </control>
+                <control type="button" id="450">
+                        <description>Timepanel high</description>
+                        <label>31869</label>
+                        <posx>387</posx>
+                        <posy>195</posy>
+                        <width>734</width>
+                        <height>74</height>
+                        <font>Font_Reg20_Caps</font>
+						<onup>9009</onup>
+						<ondown>9004</ondown>
+						<onleft>9000</onleft>
+						<onright>451</onright>
+						<texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+						<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>70</textoffsetx>
+						<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search="Aeon Nox 3.5 Tutorial",return)</onclick>
+						<visible>Container(9000).Hasfocus(8)</visible>
+						</control>
+                    <control type="button" id="451">
+                        <description>Timepanel high</description>
+                        <label>Meet All Dependencies of GlassNox</label>
+                        <posx>1121</posx>
+						<posy>195</posy>
+                        <width>734</width>
+                        <height>74</height>
+                        <font>Font_Reg20_Caps</font>
+						<onup>9009</onup>
+						<ondown>9004</ondown>
+						<onleft>450</onleft>
+						<onright>9000</onright>
+						<texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+						<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>70</textoffsetx>
+						<onclick>RunScript(special://skin/scripts/dependencies.py)</onclick>
+                        <visible>Container(9000).Hasfocus(8)</visible>
+                    </control>
+               <control type="grouplist" id="9004">
+                    <visible>Container(9000).Hasfocus(8)</visible>
+                    <posx>387</posx>
+                    <posy>275</posy>
+                    <width>1469</width>
+                    <height>732</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onup>450</onup>
+                    <ondown>450</ondown>
+                    <onright>9009</onright>
+                    <control type="button" id="1610">
+                        <label>script.color.picker</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.color.picker)</onclick>
+                        <visible>!System.HasAddon(script.color.picker)</visible>
+                    </control>
+                    <control type="button" id="1611">
+                        <label>script.color.picker</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.color.picker)</onclick>
+                        <visible>System.HasAddon(script.color.picker)</visible>
+                    </control>
+                    <control type="button" id="1612">
+                        <label> help color picker</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.color.picker,http://forum.xbmc.org/showthread.php?tid=116132)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(script.color.picker)</visible>
+                    </control>
+                    <control type="button" id="1613">
+                        <label> help color picker</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.color.picker,http://passion-xbmc.org/developpement-python/color/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(script.color.picker)</visible>
+                    </control>
+                    <control type="button" id="1614">
+                        <label>service.skin.widgets</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.color.picker,https://github.com/XBMC-Addons/service.skin.widgets/downloads)</onclick>
+                        <visible>!System.HasAddon(service.skin.widgets)</visible>
+                    </control>
+                    <control type="button" id="1615">
+                        <label>service.skin.widgets</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
+                        <visible>System.HasAddon(service.skin.widgets)</visible>
+                    </control>
+                    <control type="button" id="1616">
+                        <label> help widgets</label>
+                        <label2>Ronie</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.watchlist,http://forum.xbmc.org/showthread.php?tid=142389)</onclick>
+                        <visible>System.HasAddon(script.watchlist)</visible>
+                    </control>
+                    <control type="button" id="1617">
+                        <label>script.tvtunes</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.tvtunes)</onclick>
+                        <visible>!System.HasAddon(script.tvtunes)</visible>
+                    </control>
+                    <control type="button" id="1618">
+                        <label>script.tvtunes</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.tvtunes)</onclick>
+                        <visible>System.HasAddon(script.tvtunes)</visible>
+                    </control>
+                    <control type="button" id="1619">
+                        <label> help tvtunes</label>
+                        <label2>ppic,Frost, Ronie</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.tvtunes,http://forum.xbmc.org/showthread.php?tid=83925)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(script.tvtunes)</visible>
+                    </control>
+                    <control type="button" id="1620">
+                        <label> support tvtunes</label>
+                        <label2>ppic,Frost, Ronie</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.tvtunes,http://passion-xbmc.org/add-ons-programme/tvtunes-addon/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(script.tvtunes)</visible>
+                    </control>
+                    <control type="button" id="1621">
+                        <label>script.widget.weatherworld</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.widget.weatherworld)</onclick>
+                        <visible>!System.HasAddon(script.widget.weatherworld)</visible>
+                    </control>
+                    <control type="button" id="1622">
+                        <label>script.widget.weatherworld</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.widget.weatherworld)</onclick>
+                        <visible>System.HasAddon(script.widget.weatherworld)</visible>
+                    </control>
+                    <control type="button" id="1623">
+                        <label> help weatherworld</label>
+                        <label2>Frost(aka Frost)</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.widget.weatherworld,http://passion-xbmc.org/glass/glass-nox-(xbmc-frodo)/)</onclick>
+                        <visible>System.HasAddon(script.widget.weatherworld)</visible>
+                    </control>
+                    <control type="button" id="1624">
+                        <label>script.metadata.actors</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.metadata.actors)</onclick>
+                        <visible>!System.HasAddon(script.metadata.actors)</visible>
+                    </control>
+                    <control type="button" id="1625">
+                        <label>script.metadata.actors</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.metadata.actors)</onclick>
+                        <visible>System.HasAddon(script.metadata.actors)</visible>
+                    </control>
+                    <control type="button" id="1626">
+                        <label> help actors</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.metadata.actors,http://forum.xbmc.org/showthread.php?tid=123578)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(script.metadata.actors)</visible>
+                    </control>
+                    <control type="button" id="1627">
+                        <label>support metadata actors</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.metadata.actors,http://passion-xbmc.org/add-ons-programme/(release)-metadata-actors-support-general/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(script.metadata.actors)</visible>
+                    </control>
+                    <control type="button" id="1632">
+                        <label>script.artistslideshow</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://mirrors.xbmc.org/addons/frodo/addons.xml,http://mirrors.xbmc.org/addons/frodo,script.artistslideshow)</onclick>
+                        <visible>!System.HasAddon(script.artistslideshow)</visible>
+                    </control>
+                    <control type="button" id="1633">
+                        <label>script.artistslideshow</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
+                        <visible>System.HasAddon(script.artistslideshow)</visible>
+                    </control>
+                    <control type="button" id="1634">
+                        <label>help artistslideshow</label>
+                        <label2>Ronie</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.artistslideshow,http://forum.xbmc.org/showthread.php?tid=102703)</onclick>
+                        <visible>System.HasAddon(script.artistslideshow)</visible>
+                    </control>
+                    <control type="button" id="1635">
+                        <label>script.tv.show.next.aired</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://mirrors.xbmc.org/addons/frodo/addons.xml,http://mirrors.xbmc.org/addons/frodo,script.tv.show.next.aired)</onclick>
+                        <visible>!System.HasAddon(script.tv.show.next.aired)</visible>
+                    </control>
+                    <control type="button" id="1636">
+                        <label>script.tv.show.next.aired</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
+                        <visible>System.HasAddon(script.tv.show.next.aired)</visible>
+                    </control>
+                    <control type="button" id="1637">
+                        <label>help Next aired</label>
+                        <label2>Ppic,Frost,Ronie</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.tv.show.next.aired,http://forum.xbmc.org/showthread.php?tid=79493&amp;highlight=next+aired)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(script.tv.show.next.aired)</visible>
+                    </control>
+                    <control type="button" id="1638">
+                        <label>support Next aired</label>
+                        <label2>Ppic,Frost,Ronie</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.tv.show.next.aired,http://passion-xbmc.org/developpement-python/(script)-betaseries-next-aired/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(script.tv.show.next.aired)</visible>
+                    </control>
+                    <control type="button" id="1639">
+                        <label>script.rss</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.rssclient,http://passion-xbmc.org/addons/Download.php,script.rssfeeds)</onclick>
+                        <visible>!System.HasAddon(script.rssclient)+!System.HasAddon(script.rssfeeds)</visible>
+                    </control>
+                    <control type="button" id="1640">
+                        <label>script.rssclient</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.rssclient)</onclick>
+                        <visible>System.HasAddon(script.rssclient)</visible>
+                    </control>
+                    
+                 </control>
+               <control type="grouplist" id="9009">
+                    <visible>Container(9000).Hasfocus(8)</visible>
+                    <posx>1121</posx>
+                    <posy>275</posy>
+                    <width>734</width>
+                    <height>732</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>61</pagecontrol>
+                    <onleft>9004</onleft>
+                    <onright>61</onright>
+                    <onup>451</onup>
+                    <ondown>451</ondown>
+                    <control type="button" id="1650">
+                        <label>weather.fanart.pda.style</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,weather.fanart.pda.style)</onclick>
+                        <visible>!System.HasAddon(weather.fanart.pda.style)</visible>
+                    </control>
+                    <control type="button" id="1651">
+                        <label>weather.fanart.pda.style</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(weather.fanart.pda.style)</onclick>
+                        <visible>System.HasAddon(weather.fanart.pda.style)</visible>
+                    </control>
+                     <control type="button" id="1652">
+                        <label>help Weather pda</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,weather.fanart.pda.style,http://forum.xbmc.org/showthread.php?tid=116128)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(weather.fanart.pda.style)</visible>
+                    </control>
+                    <control type="button" id="1653">
+                        <label>support Weather pda</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,weather.fanart.pda.style,http://passion-xbmc.org/skins-pour-xbmc/weather-fanart-pda-style/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(weather.fanart.pda.style)</visible>
+                    </control>
+                    <control type="button" id="1654">
+                        <label>plugin.image.mypicsdb</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,plugin.image.mypicsdb)</onclick>
+                        <visible>!System.HasAddon(plugin.image.mypicsdb)</visible>
+                    </control>
+                    <control type="button" id="1655">
+                        <label>plugin.image.mypicsdb</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(plugin.image.mypicsdb)</onclick>
+                        <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
+                    </control>
+                     <control type="button" id="1656">
+                        <label>help MyPicsDb</label>
+                        <label2>solexalex, Xycl, MikeBZH44</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,plugin.image.mypicsdb,http://forum.xbmc.org/showthread.php?tid=133905)</onclick>
+                        <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
+                    </control>
+                    <control type="button" id="1657">
+                        <label>script.ExtraMusicInfo</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.ExtraMusicInfo)</onclick>
+                        <visible>!System.HasAddon(script.ExtraMusicInfo)</visible>
+                    </control>
+                    <control type="button" id="1658">
+                        <label>script.ExtraMusicInfo</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.ExtraMusicInfo)</onclick>
+                        <visible>System.HasAddon(script.ExtraMusicInfo)</visible>
+                    </control>
+                    <control type="button" id="1665">
+                        <label>script.randomandlastitems</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://mirrors.xbmc.org/addons/frodo,script.randomandlastitems,http://mirrors.xbmc.org/addons/frodo,script.playlists)</onclick>
+                        <visible>!System.HasAddon(script.randomandlastitems)+!System.HasAddon(script.playlists)</visible>
+                    </control>
+                    <control type="button" id="1666">
+                        <label>script.randomandlastitems</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.randomandlastitems)</onclick>
+                        <visible>System.HasAddon(script.randomandlastitems)+System.HasAddon(script.playlists)</visible>
+                    </control>
+                    <control type="button" id="1667">
+                        <label>help randomandlastitems</label>
+                        <label2>MikeBzh44</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.randomandlastitems,http://forum.xbmc.org/showthread.php?tid=122448)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(script.randomandlastitems)</visible>
+                    </control>
+                    <control type="button" id="1668">
+                        <label>support randomandlastitems</label>
+                        <label2>MikeBzh44</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.randomandlastitems,http://passion-xbmc.org/developpement-python/randomandlastitems-ameliorations-possibles/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(script.randomandlastitems)</visible>
+                    </control>
+                  <control type="button" id="1669">
+                        <label>plugin.moviesets</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,plugin.moviesets)</onclick>
+                        <visible>!System.HasAddon(plugin.moviesets)</visible>
+                    </control>
+                    <control type="button" id="1670">
+                        <label>plugin.moviesets</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(plugin.moviesets)</onclick>
+                        <visible>System.HasAddon(plugin.moviesets)</visible>
+                    </control>
+                    <control type="button" id="1671">
+                        <label>help moviesets</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,plugin.moviesets,http://forum.xbmc.org/showthread.php?tid=89163)</onclick>
+                        <visible>!StringCompare(System.Language,French)+System.HasAddon(plugin.moviesets)</visible>
+                    </control>
+                    <control type="button" id="1672">
+                        <label>support moviesets</label>
+                        <label2>Frost</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,plugin.moviesets,http://passion-xbmc.org/add-ons-programme/(release)-moviesets-(saga)-show-info-saga-pour-skins-skinners/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(plugin.moviesets)</visible>
+                    </control>
+                    <control type="button" id="1673">
+                        <label>script.artwork.downloader</label>
+                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+						<onclick>RunScript(special://skin/scripts/dependencies.py,http://mirrors.xbmc.org/addons/frodo/addons.xml,http://mirrors.xbmc.org/addons/frodo,script.artwork.downloader)</onclick>
+                        <visible>!System.HasAddon(script.artwork.downloader)</visible>
+                    </control>
+                    <control type="button" id="1674">
+                        <label>script.artwork.downloader</label>
+                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Addon.OpenSettings(script.artwork.downloader)</onclick>
+                        <visible>System.HasAddon(script.artwork.downloader)</visible>
+                    </control>
+                    <control type="button" id="1675">
+                        <label>help artwork.downloader</label>
+                        <label2>Martjin</label2>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.artwork.downloader,http://wiki.xbmc.org/index.php?title=Add-on:Artwork_Downloader)</onclick>
+                        <visible>System.HasAddon(script.artwork.downloader)</visible>
+                    </control>
+                </control>
+                
+                <control type="button" id="463">
+                        <description>.zip custom views</description>
+                        <label>Installer une nouvelle vue .Zip</label>
+                        <posx>387</posx>
+						<posy>195</posy>
+                        <width>734</width>
+                        <height>74</height>
+                        <font>Font_Reg20_Caps</font>
+						<onup>9000</onup>
+						<ondown>9007</ondown>
+						<onleft>9000</onleft>
+						<onright>9000</onright>
+						<texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+						<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>70</textoffsetx>
+						<onclick>Skin.SetFile(NewView,.zip)</onclick>
+						<onclick>RunScript(special://skin/scripts/script.influence_view.installer/default.py,$INFO[Skin.String(NewView)])</onclick>
+                        <visible>Container(9000).Hasfocus(6)</visible>
+                    </control>   
+                <control type="grouplist" id="9007">
+                    <visible>Container(9000).Hasfocus(6)</visible>
+                    <posx>387</posx>
+                    <posy>295</posy>
+                    <width>734</width>
+                    <height>732</height>
+                    <itemgap>-2</itemgap>
+                    <pagecontrol>61</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>9008</onright>
+                    <onup>461</onup>
+                    <ondown>9007</ondown>
+                    <control type="button" id="479">
+                        <label>$LOCALIZE[157]$LOCALIZE[14022]</label>
+                        <disabledcolor>$VAR[HomeMenuTextFocusVar2]</disabledcolor>
+                        <font>Font_Bold20</font>
+                        <texturenofocus>settings/settings_separator.png</texturenofocus>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <enable>no</enable>
+                    </control>
+                    <control type="radiobutton" id="480">
+                        <label>$LOCALIZE[31028]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableShowCaseVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableShowCaseVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="481">
+                        <label>$LOCALIZE[31028] ($LOCALIZE[20360],$LOCALIZE[24001])</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableShowCaseSquareVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableShowCaseSquareVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="482">
+                        <label>$LOCALIZE[31150]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableLandscapeVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableLandscapeVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="483">
+                        <label>$LOCALIZE[31153]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableLowListVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableLowListVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="486">
+                        <label>$LOCALIZE[31234]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableWallVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableWallVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="489">
+                        <label>$LOCALIZE[31271]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisablePostersVL)</onclick>
+                        <selected>!Skin.HasSetting(DisablePostersVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="490">
+                        <label>$LOCALIZE[31233]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisablePanelVL)</onclick>
+                        <selected>!Skin.HasSetting(DisablePanelVL)</selected>
+                    </control>
+                    <include condition="Skin.HasSetting(ViewCustom1001_IsInstall)">ViewCustom1001_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1003_IsInstall)">ViewCustom1003_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1005_IsInstall)">ViewCustom1005_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1007_IsInstall)">ViewCustom1007_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1009_IsInstall)">ViewCustom1009_Init</include>
+                </control>
+                <control type="grouplist" id="9008">
+                    <visible>Container(9000).Hasfocus(6)</visible>
+                    <posx>1121</posx>
+                    <posy>295</posy>
+                    <width>734</width>
+                    <height>732</height>
+                    <itemgap>-2</itemgap>
+                    <pagecontrol>61</pagecontrol>
+                    <onleft>9007</onleft>
+                    <onright>61</onright>
+                    <onup>461</onup>
+                    <ondown>9008</ondown>
+                    <control type="button" id="579">
+                        <label></label>
+                        <disabledcolor>$VAR[HomeMenuTextFocusVar2]</disabledcolor>
+                        <font>Font_Bold20</font>
+                        <texturenofocus>settings/settings_separator.png</texturenofocus>
+                        <include>Default_SettingButtonShort</include>
+                        <enable>no</enable>
+                    </control>
+                    <control type="radiobutton" id="590">
+                        <label>$LOCALIZE[31283]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableInfoWallVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableInfoWallVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="591">
+                        <label>$LOCALIZE[31291]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableBigFanVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableBigFanVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="592">
+                        <label>$LOCALIZE[20359]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableEpisodeVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableEpisodeVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="594">
+                        <label>$LOCALIZE[31477]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableTriPanelVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableTriPanelVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="596">
+                        <label>$LOCALIZE[31235]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableShiftVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableShiftVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="595">
+                        <label>$LOCALIZE[31166]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableInfoPanelVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableInfoPanelVL)</selected>
+                    </control>
+                    <control type="radiobutton" id="588">
+                        <label>$LOCALIZE[31236]</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(DisableBannersVL)</onclick>
+                        <selected>!Skin.HasSetting(DisableBannersVL)</selected>
+                    </control>
+                    <include condition="Skin.HasSetting(ViewCustom1002_IsInstall)">ViewCustom1002_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1004_IsInstall)">ViewCustom1004_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1006_IsInstall)">ViewCustom1006_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1008_IsInstall)">ViewCustom1008_Init</include>
+                    <include condition="Skin.HasSetting(ViewCustom1010_IsInstall)">ViewCustom1010_Init</include>
+                </control>
+                <control type="grouplist" id="9005">
+                    <visible>Container(9000).Hasfocus(9)</visible>
+                    <posx>387</posx>
+                    <posy>160</posy>
+                    <width>1469</width>
+                    <height>900</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>60</onright>
+                    <onup>9001</onup>
+                    <ondown>9001</ondown>
+                    <control type="label">
+                        <label>GlassNox 2.0, Mod Aeon Nox 4.0</label>
+                        <width>1469</width>
+                        <height>74</height>
+                        <font>Font_MainClassic3</font>
+                        <textcolor>grey2</textcolor>
+                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+                        <radioposx>1300</radioposx>
+                        <aligny>bottom</aligny>
+                        <textoffsetx>70</textoffsetx>
+                    </control>                  
+                    <control type="label">
+                        <label>[B]CREDITS TO:[/B]</label>
+                        <width>1469</width>
+                        <height>54</height>
+                        <font>Font_Reg15</font>
+                        <textcolor>grey2</textcolor>
+                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+                        <radioposx>1300</radioposx>
+                        <textoffsetx>70</textoffsetx>
+                        <aligny>bottom</aligny>
+                    </control>
+                    <control type="label">
+                        <label>BigNoid &amp; Phil65 for Aeon Nox</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>[B]Kpitn[/B] for creating GlassNox textures[B] N.O.W.A.L.L.[/B] for creating Artwork</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>31737</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>31738</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>31739</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>[B]Frost, MikeBzh44, Ronie,[/B] for creating scripts</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>42340</label>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                    <control type="label">
+                        <label>31741</label>
+                        <height>148</height>
+                        <include>Default_SettingRadioButton</include>
+                    </control>
+                </control>
+                <control type="grouplist" id="9009">
+                    <visible>Container(9000).Hasfocus(10)</visible>
+                    <posx>387</posx>
+                    <posy>195</posy>
+                    <width>1469</width>
+                    <height>732</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>60</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>60</onright>
+                    <onup>9001</onup>
+                    <ondown>9001</ondown>
+                    <control type="button" id="459">
+                        <label>$LOCALIZE[31456]</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(CDWall_Folder_Path)][/COLOR]</label2>
+                        <include>Default_SettingButton</include>
+                        <onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
+                    </control>
+                    <control type="button" id="460">
+                        <label>$LOCALIZE[31455]</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(MovieWall_Folder_Path)][/COLOR]</label2>
+                        <include>Default_SettingButton</include>
+                        <onclick>Skin.SetPath(MovieWall_Folder_Path)</onclick>
+                    </control>
+                    <control type="button" id="303">
+                        <include>Default_SettingButton</include>
+                        <label>$LOCALIZE[31678]</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(WeatherFanartDir)][/COLOR]</label2>
+                        <onclick>Skin.Reset(WeatherFanartDir)</onclick>
+                        <onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+                    </control>
+                    <control type="button" id="306">
+                        <label>$LOCALIZE[31378]</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(ArtistsLogosPath)][/COLOR]</label2>
+                        <include>Default_SettingButton</include>
+                        <onclick>Skin.Reset(ArtistsLogosPath)</onclick>
+                        <onclick>Skin.SetPath(ArtistsLogosPath)</onclick>
+                    </control>
+                    <control type="button" id="10">
+                        <include>Default_SettingButton</include>
+                        <label>31459</label>
+                        <label2>[COLOR $VAR[FontColorVar]]$VAR[LibraryStructureVar][/COLOR]</label2>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),1) | IsEmpty(Skin.String(LibraryStructure))">Skin.SetString(LibraryStructure,2)</onclick>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),4)">Skin.SetString(LibraryStructure,1)</onclick>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),3)">Skin.SetString(LibraryStructure,4)</onclick>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),2)">Skin.SetString(LibraryStructure,3)</onclick>
+                        <onclick condition="Stringcompare(Skin.String(LibraryStructure),1)">Skin.SetString(LibraryStructure,2)</onclick>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Container(9000).Hasfocus(9)</visible>
+                <posx>620</posx>
+                <posy>890</posy>
+                <control type="image">
+                    <posy>30</posy>
+                    <width>400</width>
+                    <heigth>72</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>fanarttv.png</texture>
+                </control>
+                <control type="image">
+                    <posx>250</posx>
+                    <posy>30</posy>
+                    <width>400</width>
+                    <heigth>72</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>passion.png</texture>
+                </control>
+                <control type="image">
+                    <posx>520</posx>
+                    <width>400</width>
+                    <heigth>400</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>xbmc.png</texture>
+                </control>
+            </control>
+        </control>
+        <control type="group">
+                <visible>Container(9000).Hasfocus(11)</visible>
+                <posx>700</posx>
+                <posy>200</posy>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>30</posy>
+                    <width>750</width>
+                    <heigth>652</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>danger.png</texture>
+                    <visible>!Player.HasAudio</visible>
+                </control>
+                <control type="image">
+                    <posx>0</posx>
+                    <posy>30</posy>
+                    <width>750</width>
+                    <heigth>652</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>barberouge.png</texture>
+                    <visible>Player.HasAudio</visible>
+                </control>       
+            </control>
+        <control type="image">
+            <include>FullscreenDimensions</include>
+            <texture>common/bgcolor.png</texture>
+            <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+            <visible>Window.IsActive(1116)</visible>
+            <include>Animation_VisibleChange400</include>
+        </control>
+        <control type="group">
+            <include>Animation_HideBreadCrumbs</include>
+            <include>Breadcrumbs_BackBar</include>
+            <include>BreadcrumbsContent</include>
+            <include>Breadcrumbs_Furniture</include>
+        </control>
+        <include>Furniture_NowPlayingWidget</include>
+    </controls>
+</window>
