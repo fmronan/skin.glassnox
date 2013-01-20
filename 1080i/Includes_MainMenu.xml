@@ -1713,7 +1713,7 @@
                 <height>88</height>
                 <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
                 <colordiffuse>$VAR[ColorDiffuseIconColorVar]</colordiffuse>
-                <visible>!SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
+                <visible>SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
             </control>
             <control type="image">
                 <posx>252</posx>
@@ -1724,6 +1724,7 @@
                 <texture background="true">$INFO[ListItem.Property(BigIcon)]</texture>
                 <colordiffuse>$VAR[ColorDiffuseIconColorVar]</colordiffuse>
                 <visible>!SubString(ListItem.Property(BigIcon),/BigIcons/)</visible>
+                <aspectratio>keep</aspectratio>
             </control>
             <control type="label">
                 <posx>297</posx>

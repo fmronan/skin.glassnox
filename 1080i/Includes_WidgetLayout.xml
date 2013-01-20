@@ -101,7 +101,7 @@
 				<height>45</height>
 				<texture border="48,0,0,0" flipx="True">home/flux1.png</texture>
 				<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-				<visible>!Skin.HasSetting(totalshomehigh)+!Skin.HasSetting(glassnoxhome)</visible>
+				<visible>!Skin.HasSetting(glassnoxhome)+!Skin.HasSetting(timehomehigh)</visible>
 				<animation effect="slide" start="0,0" end="-250,0" time="300">WindowClose</animation>
 				<animation effect="slide" start="-2200,0" time="1000" tween="quadratic" >WindowOpen</animation>
 			</control>
@@ -1662,6 +1662,26 @@
                     </control>
                 </control>
                 <control type="image">
+                    <posx>-47</posx>
+                    <posy>-33</posy>
+                    <width>325</width>
+                    <height>440</height>
+                    <texture>thumbs/boxes/$INFO[Skin.String(LiveBGCase)]/back_$INFO[Container(8000).ListItem.Property(VideoResolution)]p.png</texture>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <visible>Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)</visible>
+                </control>
+                <control type="image">
+					<posx>9</posx>
+					<posy>65</posy>
+					<width>238</width>
+					<height>238</height>
+					<aspectratio>keep</aspectratio>
+					<animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="false" reversible="false" tween="cubic" easing="inout" condition="!IsEmpty(Container(8000).ListItem.Property(Discart))">Conditional</animation>
+					<texture background="true">$INFO[Container(8000).ListItem.Property(Discart)]</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Discart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
+				</control>
+                <control type="image">
                     <posx>-13</posx>
                     <posy>-18.5</posy>
                     <width>286</width>
@@ -1670,6 +1690,7 @@
                     <include>PanelGlowFade</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                    <include>widgetOpenCaseCoverflow</include>
                 </control>
                 <control type="image">
                     <width>260</width>
@@ -1678,18 +1699,20 @@
                     <texture diffuse="thumbs/movieposter_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[Container(8000).ListItem.Property(Poster)]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
                     <!-- MikeBZH44 Start -->
--                    <visible>![Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
--                    <!-- MikeBZH44 End -->
+                    <visible>![Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
+                    <include>widgetOpenCaseCoverflow</include>
+                    <!-- MikeBZH44 End -->
                 </control>
                 <!-- MikeBZH44 Start : Use different diffuse template -->
--                <control type="image">
--                    <width>260</width>
--                    <height>390</height>
--                    <fadetime>IconCrossfadeTime</fadetime>
--                    <texture diffuse="thumbs/thumb_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[Container(8000).ListItem.Property(Poster)]</texture>
--                    <aspectratio scalediffuse="false">stretch</aspectratio>
--                </control>
--                <!-- MikeBZH44 End -->
+                <control type="image">
+                    <width>260</width>
+                    <height>390</height>
+                    <fadetime>IconCrossfadeTime</fadetime>
+                    <texture diffuse="thumbs/thumb_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[Container(8000).ListItem.Property(Poster)]</texture>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <include>widgetOpenCaseCoverflow</include>
+                </control>
+                <!-- MikeBZH44 End -->
                 <control type="image">
                     <posx>-19.5</posx>
                     <posy>-19.5</posy>
@@ -1700,20 +1723,22 @@
                     <bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
                     <aspectratio scalediffuse="false">stretch</aspectratio>
                     <!-- MikeBZH44 Start -->
--                    <visible>![Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
--                    <!-- MikeBZH44 End -->
+                    <visible>![Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
+					<include>widgetOpenCaseCoverflow</include>
+                    <!-- MikeBZH44 End -->
                 </control>
-                <!-- MikeBZH44 Start : Add resolution case -->
--                <control type="image">
--                    <posx>-47</posx>
--                    <posy>-33</posy>
--                    <width>325</width>
--                    <height>440</height>
--                    <texture>thumbs/boxes/$INFO[Skin.String(LiveBGCase)]/$INFO[Container(8000).ListItem.Property(VideoResolution)]p.png</texture>
--                    <aspectratio scalediffuse="false">stretch</aspectratio>
--                    <visible>Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)</visible>
--                </control>
--                <!-- MikeBZH44 End -->
+                <!-- MikeBZH44 Start : Add resolution case -->                
+                <control type="image">
+                    <posx>-47</posx>
+                    <posy>-33</posy>
+                    <width>325</width>
+                    <height>440</height>
+                    <texture>thumbs/boxes/$INFO[Skin.String(LiveBGCase)]/$INFO[Container(8000).ListItem.Property(VideoResolution)]p.png</texture>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <visible>Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)</visible>
+					<include>widgetOpenCaseCoverflow</include>
+                </control>
+                <!-- MikeBZH44 End -->
             </control>
             <!--Focused Random/Latest Episodes-->
             <control type="group">
@@ -1762,7 +1787,6 @@
                         <posx>38</posx>
                         <width>800</width>
                         <height>38</height>
-                        
                         <posy>49</posy>
                         <textcolor>grey</textcolor>
                         <label>$INFO[Container(8000).ListItem.Property(EpisodeNumber)]</label>
@@ -2086,22 +2110,6 @@
                 <onfocus condition="Substring(Control.GetLabel(4321),babe)">SetFocus(22222)</onfocus>
                 <onfocus condition="!Substring(Control.GetLabel(4321),babe)">SetFocus(8020)</onfocus>
             </control>
-            <!--         <control type="button" id="5014">
-                <include>HiddenObject</include>
-                <onfocus condition="Substring(Control.GetLabel(4321),movie) | Substring(Control.GetLabel(4321),musicvideo) | Substring(Control.GetLabel(4321),actors)">$INFO[Container(5010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),tv)">$INFO[Container(5010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),rss)">PlayMedia($ESCINFO[Container(5010).ListItem.Property(Media)])</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),roms)">System.Exec($ESCINFO[Container(5010).ListItem.Property(Path)])</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),babe)">SetFocus(22222)</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),artist)">ActivateWindow(musiclibrary,$ESCINFO[Container(5010).ListItem.Property(Path)],return)</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),album)">Playlist.Clear</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),album)">$INFO[Container(5010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="!Substring(Control.GetLabel(4321),artist) + !Substring(Control.GetLabel(4321),addons)">$INFO[Container(5010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),addons)">RunAddon($INFO[Container(5010).ListItem.Property(Path)])</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),randompics)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4321),recentpics)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Added'&amp;limit=10)</onfocus>
-            </control>
- -->
             <control type="grouplist" id="8020">
                 <posx>-830</posx>
                 <posy>28</posy>
@@ -3375,6 +3383,28 @@
                         <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                     </control>
                 </control>
+              <control type="group">
+				  <animation effect="slide" end="0,15" time="500" easing="inout" tween="cubic" condition="[Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]">Conditional</animation>
+                <control type="image">
+                    <posx>-47</posx>
+                    <posy>-33</posy>
+                    <width>325</width>
+                    <height>440</height>
+                    <texture>thumbs/boxes/$INFO[Skin.String(LiveBGCase)]/back_$INFO[Container(7000).ListItem.Property(VideoResolution)]p.png</texture>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <visible>Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)</visible>
+                </control>
+                <control type="image">
+					<posx>9</posx>
+					<posy>65</posy>
+					<width>238</width>
+					<height>238</height>
+					<aspectratio>keep</aspectratio>
+					<animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="false" reversible="false" tween="cubic" easing="inout" condition="!IsEmpty(Container(7000).ListItem.Property(Discart))">Conditional</animation>
+					<texture background="true">$INFO[Container(7000).ListItem.Property(Discart)]</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
+				</control>
                 <control type="image">
                     <posx>-13</posx>
                     <posy>-18.5</posy>
@@ -3391,7 +3421,21 @@
                     <fadetime>IconCrossfadeTime</fadetime>
                     <texture diffuse="thumbs/movieposter_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[Container(7000).ListItem.Property(Poster)]</texture>
                     <aspectratio scalediffuse="false">scale</aspectratio>
+                    <!-- MikeBZH44 Start -->
+                    <visible>![Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
+                    <include>widgetOpenCaseCoverflow2</include>
+                    <!-- MikeBZH44 End -->
                 </control>
+                <!-- MikeBZH44 Start : Use different diffuse template -->
+                <control type="image">
+                    <width>260</width>
+                    <height>390</height>
+                    <fadetime>IconCrossfadeTime</fadetime>
+                    <texture diffuse="thumbs/thumb_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[Container(7000).ListItem.Property(Poster)]</texture>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <include>widgetOpenCaseCoverflow2</include>
+                </control>
+                <!-- MikeBZH44 End -->
                 <control type="image">
                     <posx>-19.5</posx>
                     <posy>-19.5</posy>
@@ -3401,8 +3445,25 @@
                     <texture diffuse="thumbs/movieposter_mask.png">thumbs/thumb_glass_noreflect.png</texture>
                     <bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
                     <aspectratio scalediffuse="false">stretch</aspectratio>
+                <!-- MikeBZH44 Start -->
+                    <visible>![Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]</visible>
+					<include>widgetOpenCaseCoverflow2</include>
+                    <!-- MikeBZH44 End -->
                 </control>
+                <!-- MikeBZH44 Start : Add resolution case -->                
+                <control type="image">
+                    <posx>-47</posx>
+                    <posy>-33</posy>
+                    <width>325</width>
+                    <height>440</height>
+                    <texture>thumbs/boxes/$INFO[Skin.String(LiveBGCase)]/$INFO[Container(7000).ListItem.Property(VideoResolution)]p.png</texture>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <visible>Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)</visible>
+					<include>widgetOpenCaseCoverflow2</include>
+                </control>
+                <!-- MikeBZH44 End -->
             </control>
+         </control>   
             <!--Focused Random/Latest Episodes-->
             <control type="group">
                 <visible>Control.HasFocus(7000)</visible>

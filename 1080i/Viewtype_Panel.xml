@@ -79,6 +79,18 @@
                     <texture background="true">$VAR[FanartFallbackToIcon]</texture>
                     <visible>!Player.HasVideo</visible>
                 </control>
+                <control type="multiimage">
+                    <posx>498</posx>
+                    <posy>87</posy>
+                    <width>1260</width>
+                    <height>708</height>
+                    <aspectratio>keep</aspectratio>
+                    <fadetime>600</fadetime>
+                    <imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
+					<visible>[Container.Content(movies) + Skin.HasSetting(extrafanartmovies)] | [Container.Content(tvshows) + Skin.HasSetting(extrafanartseries)] | [Container.Content(seasons) + Skin.HasSetting(extrafanartseasons)] | [Container.Content(episodes) + Skin.HasSetting(extrafanartepisodes)]</visible>
+					<visible>!SubString(ListItem.Label,*,left) + [Substring(Container.FolderPath,videodb://,left) | Substring(Container.FolderPath,special://profile/playlist,left)]</visible>
+                    <visible>!Player.HasVideo</visible>
+                </control>
                 <control type="textbox">
                     <posx>527</posx>
                     <posy>800</posy>

@@ -3984,6 +3984,18 @@
             <effect type="rotatey" delay="8000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
         </animation>
     </include>
+    <include name="widgetOpenCaseCoverflow">
+        <animation type="conditional" reversible="false" condition="!IsEmpty(Container(8000).ListItem.Property(Discart))+[Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]">
+            <effect type="rotatey" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
+            <effect type="rotatey" delay="8000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
+        </animation>
+    </include>
+    <include name="widgetOpenCaseCoverflow2">
+        <animation type="conditional" reversible="false" condition="!IsEmpty(Container(7000).ListItem.Property(Discart))+[Stringcompare(Skin.String(LiveBGCase),tvshows) | Stringcompare(Skin.String(LiveBGCase),movies)]">
+            <effect type="rotatey" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
+            <effect type="rotatey" delay="8000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
+        </animation>
+    </include>
     <include name="FeaturedPanel">
 		<control type="image">
 			<width>1332</width>
