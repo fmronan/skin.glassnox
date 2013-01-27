@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: GlassNox
 # Addon id: skin.Glass.nox
-# Addon version: 2.0.8
+# Addon version: 2.1.0
 # Addon Provider: Fmronan
 msgid ""
 msgstr ""
@@ -1508,42 +1508,6 @@ msgstr "Afficher les anniversaires des acteurs/artistes"
 msgctxt "#31699"
 msgid "Smaller main menu"
 msgstr "Menu principal plus petit"
-
-msgctxt "#31700"
-msgid "Panel"
-msgstr "Panneau"
-
-msgctxt "#31701"
-msgid "Music Visualisation Settings"
-msgstr "Paramètres de visualisation audio"
-
-msgctxt "#31702"
-msgid "Video OSD Settings"
-msgstr "Réglages de l'OSD vidéo"
-
-msgctxt "#31703"
-msgid "Channels"
-msgstr "Canaux"
-
-msgctxt "#31713"
-msgid "Items in playlist"
-msgstr "Articles dans la playliste"
-
-msgctxt "#31714"
-msgid "Current position"
-msgstr "Position actuelle"
-
-msgctxt "#31904"
-msgid "10 Day"
-msgstr "10 Jours"
-
-msgctxt "#31906"
-msgid "Visibility"
-msgstr "Visibilité"
-
-msgctxt "#31912"
-msgid "Conditions"
-msgstr "Conditions"
 
 msgctxt "#31929"
 msgid "Moon phase"
