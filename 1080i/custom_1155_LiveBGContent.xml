@@ -80,6 +80,8 @@
                 <onclick>Skin.SetImage(LiveBG)</onclick>
                 <onclick>Dialog.Close(1155)</onclick>
             </control>
+            <!-- MikeBZH44 Start -->
+            <!-- Setting to display clear case, clear case with resolution side logo, BD/DVD case -->
             <control type="button" id="7">
                 <posx>347</posx>
                 <posy>300</posy>
@@ -87,7 +89,7 @@
                 <height>60</height>
                 <font>Font_Reg19</font>
                 <textcolor>grey2</textcolor>
-                <focusedcolor>$VAR[HomeMenuTextFocusVar2]</focusedcolor>
+                <focusedcolor>white2</focusedcolor>
                 <label>Use resolution case rather than clear case :</label>
                 <label2>$VAR[LiveBGCaseLib]</label2>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>

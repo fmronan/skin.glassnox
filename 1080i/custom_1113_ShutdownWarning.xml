@@ -79,7 +79,8 @@
                 <align>center</align>
                 <textoffsetx>30</textoffsetx>
                 <textoffsety />
-                <onclick>Quit()</onclick>
+                <onclick>Dialog.Close(all,true)</onclick>
+                <onclick>Shutdown()</onclick>
                 <onup>11</onup>
                 <ondown>11</ondown>
                 <onleft>10</onleft>

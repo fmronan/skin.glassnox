@@ -2565,7 +2565,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.1.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.1.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.1.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.1.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.1.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.1.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.1.extrathumb)]</property>
@@ -2578,7 +2577,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.2.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.2.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.2.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.2.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.2.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.2.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.2.extrathumb)]</property>
@@ -2591,7 +2589,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.3.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.3.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.3.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.3.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.3.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.3.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.3.extrathumb)]</property>
@@ -2604,7 +2601,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.4.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.4.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.4.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.4.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.4.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.4.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.4.extrathumb)]</property>
@@ -2617,7 +2613,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.5.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.5.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.5.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.5.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.5.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.5.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.5.extrathumb)]</property>
@@ -2630,7 +2625,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.6.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.6.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.6.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.6.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.6.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.6.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.6.extrathumb)]</property>
@@ -2643,7 +2637,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.7.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.7.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.7.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.7.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.7.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.7.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.7.extrathumb)]</property>
@@ -2656,7 +2649,6 @@
             <icon>$INFO[Window(Home).Property(peopleborntoday.8.icon)]</icon>
             <label>$INFO[Window(Home).Property(peopleborntoday.8.Name)]</label>
             <label2>$INFO[Window(Home).Property(peopleborntoday.8.job)]</label2>
-            <property name="Path">RunScript(script.metadata.actors,$INFO[Window.Property(peopleborntoday.8.Name)])</property>
             <property name="Poster">$INFO[Window(Home).Property(peopleborntoday.8.icon)]</property>
             <property name="Plot">$INFO[Window(Home).Property(peopleborntoday.8.bio)]</property>
             <property name="extrathumb">$INFO[Window(Home).Property(peopleborntoday.8.extrathumb)]</property>
@@ -3960,8 +3952,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.1.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.1.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.1.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.1.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.1.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.1.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.1.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.1.Publisher)]</property>
@@ -3974,8 +3966,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.2.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.2.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.2.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.2.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.2.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.2.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.2.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.2.Publisher)]</property>
@@ -3988,8 +3980,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.3.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.3.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.3.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.3.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.3.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.3.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.3.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.3.Publisher)]</property>
@@ -4002,8 +3994,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.4.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.4.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.4.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.4.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.4.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.4.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.4.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.4.Publisher)]</property>
@@ -4016,8 +4008,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.5.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.5.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.5.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.5.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.5.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.5.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.5.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.5.Publisher)]</property>
@@ -4030,8 +4022,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.6.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.6.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.6.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.6.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.6.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.6.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.6.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.6.Publisher)]</property>
@@ -4044,8 +4036,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.7.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.7.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.7.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.7.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.7.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.7.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.7.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.7.Publisher)]</property>
@@ -4058,8 +4050,8 @@
             <label2>$INFO[Window(Home).Property(MostPlayedROM.8.Console)]</label2>
             <onclick>SetFocus(6014)</onclick>
             <thumb>$INFO[Window(Home).Property(MostPlayedROM.8.Thumb)]</thumb>
+            <property name="Id">$INFO[Window(Home).Property(MostPlayedROM.8.Id)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.8.Fanart)]</property>
-            <property name="Path">$ESCINFO[Window(Home).Property(MostPlayedROM.8.LaunchCommand)]</property>
             <property name="Plot">$INFO[Window(Home).Property(MostPlayedROM.8.Plot)]</property>
             <property name="Genre">$INFO[Window(Home).Property(MostPlayedROM.8.Genre)]</property>
             <property name="Publisher">$INFO[Window(Home).Property(MostPlayedROM.8.Publisher)]</property>
@@ -4620,7 +4612,7 @@
             <property name="NavItem">item1.png</property>
             <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.1.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
-            <onclick>-</onclick>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -4631,7 +4623,7 @@
             <property name="NavItem">item2.png</property>
             <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.2.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.2.Art(fanart))]</property>
-            <onclick>-</onclick>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -4642,7 +4634,7 @@
             <property name="NavItem">item3.png</property>
             <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.3.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.3.Art(fanart))]</property>
-            <onclick>-</onclick>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -4653,7 +4645,7 @@
             <property name="NavItem">item4.png</property>
             <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.4.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.4.Art(fanart))]</property>
-            <onclick>-</onclick>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
         <item>
@@ -4664,7 +4656,7 @@
             <property name="NavItem">item5.png</property>
             <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.5.Year)]</property>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.5.Art(fanart))]</property>
-            <onclick>-</onclick>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
         </item>
     </include>

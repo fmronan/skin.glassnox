@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1138">
     <defaultcontrol always="true">10</defaultcontrol>
-    <zorder>1</zorder>
+    <zorder>2</zorder>
     <onload condition="!Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
     <onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
     <onload condition="!Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
@@ -205,11 +205,13 @@
         <control type="group">
             <posx>500</posx>
             <posy>300</posy>
+            <include>Animation_DialogPopup</include>
+            <visible>!Window.IsActive(script-ColorPicker-main.xml)</visible>
             <control type="image">
                 <posx>-4</posx>
                 <posy>-24</posy>
                 <width>776</width>
-                <height>450</height>
+                <height>500</height>
                 <colordiffuse>$VAR[SecondeTimeColorVar]</colordiffuse>
                 <include>PanelGlowFade</include>
                 <include>Animation_VisibleChange400</include>
@@ -219,7 +221,7 @@
                 <posx>-4</posx>
                 <posy>-24</posy>
                 <width>776</width>
-                <height>450</height>
+                <height>500</height>
                 <texture border="22">dialogs/scan_backg.png</texture>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
@@ -695,7 +697,7 @@
                 <control type="radiobutton" id="18">
                     <label>$LOCALIZE[31088]</label>
                     <onup>11</onup>
-                    <ondown>10</ondown>
+                    <ondown>20</ondown>
                     <include>ColorChooserButton</include>
                     <onclick condition="IsEmpty(Window(home).Property(colorallareas))">SetProperty(colorallareas,1,home)</onclick>
                     <onclick condition="!IsEmpty(Window(home).Property(colorallareas))">ClearProperty(colorallareas,home)</onclick>
@@ -715,7 +717,7 @@
                 <control type="radiobutton" id="20">
                     <label>All Label</label>
 					<posy>50</posy>
-                    <onup>11</onup>
+                    <onup>18</onup>
                     <ondown>10</ondown>
                     <include>ColorChooserButton</include>
                     <onclick condition="IsEmpty(Window(home).Property(colorallitem))">SetProperty(coloralllabel,1,home)</onclick>
@@ -733,14 +735,13 @@
                     <selected>!IsEmpty(Window(home).Property(colorallicon))</selected>
                     <visible>StringCompare(Window(1124).Property(colordialog),ItemToEdit.IconColor)</visible>
                 </control>
-                
             </control>
         </control>
         <control type="group">
             <control type="label">
                 <visible>!Control.HasFocus(11)</visible>
                 <posx>620</posx>
-                <posy>525</posy>
+                <posy>545</posy>
                 <align>center</align>
                 <include>Dialogs_Label3</include>
                 <label>$INFO[Container(10).ListItem.Label]</label>

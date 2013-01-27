@@ -9,12 +9,12 @@
             <visible>[Substring(Control.GetLabel(4321),featured) | Substring(Control.GetLabel(4321),panel)] + !Window.IsActive(1120)</visible>
             <include>Animation_Widgets</include>
             <animation type="Conditional" condition="true">
-                <effect type="fade" start="100" end="90" time="500" tween="cubic" easing="inout" />
-                <effect type="zoom" start="100" end="97" center="960,540" time="300" tween="cubic" />
+                <effect type="fade" start="100" end="90" time="400" tween="cubic" easing="inout" />
+                <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
             </animation>
-            <animation effect="slide" end="0,-285" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,18" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
-            <animation effect="slide" end="0,-31" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
+            <animation effect="slide" end="0,-285" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,18" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu) + [[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,-31" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow) + !Skin.HasSetting(DisableRSS)">Conditional</animation>
             <control type="group">
                 <include>Animation_VisibleChange200</include>
                 <visible>Substring(Control.GetLabel(4321),default) | Substring(Control.GetLabel(4321),glass)</visible>
@@ -31,7 +31,7 @@
                     <width>1650</width>
                     <height>402</height>
                     <animation type="Conditional" condition="true">
-                        <effect type="fade" start="100" end="75" time="500" tween="cubic" easing="inout" />
+                        <effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
                     </animation>
                     <texture border="50">$VAR[PanelWidgetBackVar]</texture>
                 </control>
@@ -164,7 +164,7 @@
                                 <icon fallback="DefaultTVShows.png">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredtv)</visible>
                             </item>
                             <item>
@@ -173,7 +173,7 @@
                                 <icon fallback="DefaultTVShows.png">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredtv)</visible>
                             </item>
                             <item>
@@ -183,7 +183,7 @@
                                 <property name="Year">$INFO[Window(Home).Property(RandomMovie.1.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
                                 <property name="Logo">$INFO[Window(Home).Property(RandomMovie.1.Art(clearlogo))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredmovies)</visible>
                             </item>
                             <item>
@@ -193,7 +193,7 @@
                                 <property name="Year">$INFO[Window(Home).Property(RandomMovie.2.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</property>
                                 <property name="Logo">$INFO[Window(Home).Property(RandomMovie.2.Art(clearlogo))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredmovies)</visible>
                             </item>
                             <item>
@@ -203,7 +203,7 @@
                                 <label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RandomAlbum.1.Play)]</property>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
@@ -214,7 +214,7 @@
                                 <label2>$INFO[Window(Home).Property(RandomAlbum.2.Artist)]</label2>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RandomAlbum.2.Play)]</property>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
@@ -261,7 +261,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.1.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
                             <item>
@@ -271,7 +271,7 @@
                                 <property name="NavItem">item2.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.2.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
                             <item>
@@ -363,7 +363,7 @@
                                 <property name="Year">$INFO[Window(Home).Property(RecentMovie.1.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
                                 <property name="Logo">$INFO[Window(Home).Property(RecentMovie.1.Art(clearlogo))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredmovies)</visible>
                             </item>
                             <item>
@@ -373,7 +373,7 @@
                                 <property name="Year">$INFO[Window(Home).Property(RecentMovie.2.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
                                 <property name="Logo">$INFO[Window(Home).Property(RecentMovie.2.Art(clearlogo))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredmovies)</visible>
                             </item>
                             <item>
@@ -383,7 +383,7 @@
                                 <thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</thumb>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredtv)</visible>
                             </item>
                             <item>
@@ -393,7 +393,7 @@
                                 <thumb>$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</thumb>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4321),featuredtv)</visible>
                             </item>
                             <item>
@@ -403,7 +403,7 @@
                                 <label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Path)]</property>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
@@ -414,7 +414,7 @@
                                 <label2>$INFO[Window(Home).Property(RecentAlbum.2.Artist)]</label2>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RecentAlbum.2.Path)]</property>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
@@ -454,15 +454,15 @@
         <control type="group" id="6000">
             <posx>135</posx>
             <posy>-7</posy>
-            <animation effect="slide" end="0,35" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,25" time="400" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
             <width>1920</width>
             <height>825</height>
             <visible>[Substring(Control.GetLabel(4325),featured) | Substring(Control.GetLabel(4325),panel)] + !Window.IsActive(1120)</visible>
             <include>Animation_Widgets</include>
             <animation type="Conditional" condition="true">
-                <effect type="fade" start="100" end="90" time="500" tween="cubic" easing="inout" />
-                <effect type="zoom" start="100" end="97" center="960,540" time="300" tween="cubic" />
+                <effect type="fade" start="100" end="90" time="400" tween="cubic" easing="inout" />
+                <effect type="zoom" start="100" end="97" center="960,540" time="240" tween="cubic" />
             </animation>
             <control type="group">
                 <visible>Substring(Control.GetLabel(4325),default) | Substring(Control.GetLabel(4325),glass)</visible>
@@ -481,7 +481,7 @@
                     <height>402</height>
                     <texture border="50">$VAR[PanelWidget2BackVar]</texture>
                     <animation type="Conditional" condition="true">
-                        <effect type="fade" start="100" end="75" time="500" tween="cubic" easing="inout" />
+                        <effect type="fade" start="100" end="75" time="400" tween="cubic" easing="inout" />
                     </animation>
                 </control>
             </control>
@@ -613,7 +613,7 @@
                                 <icon fallback="DefaultTVShows.png">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredtv)</visible>
                             </item>
                             <item>
@@ -622,7 +622,7 @@
                                 <icon fallback="DefaultTVShows.png">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredtv)</visible>
                             </item>
                             <item>
@@ -631,7 +631,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RandomMovie.1.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredmovies)</visible>
                             </item>
                             <item>
@@ -640,7 +640,7 @@
                                 <property name="NavItem">item2.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RandomMovie.2.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredmovies)</visible>
                             </item>
                             <item>
@@ -650,7 +650,7 @@
                                 <label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RandomAlbum.1.Path)]</property>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
@@ -661,7 +661,7 @@
                                 <label2>$INFO[Window(Home).Property(RandomAlbum.2.Artist)]</label2>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RandomAlbum.2.Path)]</property>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
@@ -708,7 +708,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.1.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
                             <item>
@@ -718,7 +718,7 @@
                                 <property name="NavItem">item2.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RecommendedAlbum.2.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
                             <item>
@@ -807,7 +807,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RecentMovie.1.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredmovies)</visible>
                             </item>
                             <item>
@@ -816,7 +816,7 @@
                                 <property name="NavItem">item2.png</property>
                                 <property name="Year">$INFO[Window(Home).Property(RecentMovie.2.Year)]</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredmovies)</visible>
                             </item>
                             <item>
@@ -826,7 +826,7 @@
                                 <thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</thumb>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredtv)</visible>
                             </item>
                             <item>
@@ -836,7 +836,7 @@
                                 <thumb>$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</thumb>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <visible>Substring(Control.GetLabel(4325),featuredtv)</visible>
                             </item>
                             <item>
@@ -846,7 +846,7 @@
                                 <label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Path)]</property>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
@@ -857,7 +857,7 @@
                                 <label2>$INFO[Window(Home).Property(RecentAlbum.2.Artist)]</label2>
                                 <property name="NavItem">item2.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Art(fanart))]</property>
-                                <onclick>-</onclick>
+                                <onclick>noop</onclick>
                                 <property name="Path">$INFO[Window(Home).Property(RecentAlbum.2.Path)]</property>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
@@ -899,12 +899,12 @@
             <posy>678</posy>
             <visible>Substring(Control.GetLabel(4321),classic) + !Window.IsActive(1120)</visible>
             <include>Animation_Widgets</include>
-            <animation effect="slide" end="0,-270" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" time="200" end="0,-38" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow)">Conditional</animation>
+            <animation effect="slide" end="0,-270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" time="160" end="0,-38" condition="!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(rsshomelow)">Conditional</animation>
             <!--Unfocused widget-->
             <control type="group">
                 <visible>!Control.HasFocus(8000)</visible>
-                <animation effect="slide" start="450" end="0" time="300" delay="300" tween="quadratic">Visible</animation>
+                <animation effect="slide" start="450" end="0" time="240" delay="240" tween="quadratic">Visible</animation>
                 <control type="group">
                     <visible>Substring(Control.GetLabel(4321),default) | Substring(Control.GetLabel(4321),glass)</visible>
                     <include>Animation_VisibleChange200</include>
@@ -975,8 +975,8 @@
                         <posy>63</posy>
                         <width>345</width>
                         <height>240</height>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="50">Hidden</animation>
+                        <animation effect="fade" time="240">Visible</animation>
+                        <animation effect="fade" time="40">Hidden</animation>
                         <visible> Substring(Control.GetLabel(4321),recommendedaddons) | Substring(Control.GetLabel(4321),addons) | Substring(Control.GetLabel(4321),Icon) | Substring(Control.GetLabel(4321),albums) | Substring(Control.GetLabel(4321),actor) | Substring(Control.GetLabel(4321),pics) | Substring(Control.GetLabel(4321),artists) | Substring(Control.GetLabel(4321),roms)</visible>
                     </control>
                     <control type="image">
@@ -988,8 +988,8 @@
                         <posy>63</posy>
                         <width>345</width>
                         <height>194</height>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="50">Hidden</animation>
+                        <animation effect="fade" time="240">Visible</animation>
+                        <animation effect="fade" time="40">Hidden</animation>
                         <visible>Substring(Control.GetLabel(4321),tv) | Substring(Control.GetLabel(4321),rss)</visible>
                     </control>
                     <control type="image">
@@ -1001,8 +1001,8 @@
                         <posy>63</posy>
                         <width>345</width>
                         <height>194</height>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="50">Hidden</animation>
+                        <animation effect="fade" time="240">Visible</animation>
+                        <animation effect="fade" time="40">Hidden</animation>
                         <visible>Substring(Control.GetLabel(4321),movie) | Substring(Control.GetLabel(4321),musicvideo)</visible>
                     </control>
                 </control>
@@ -1026,7 +1026,7 @@
             </control>
             <!--Actual list-->
             <control type="group">
-                <animation effect="slide" end="-570,0" time="500" easing="inout" tween="cubic" condition="Control.HasFocus(8000)">Conditional</animation>
+                <animation effect="slide" end="-570,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(8000)">Conditional</animation>
                 <posx>513</posx>
                 <posy>-16</posy>
                 <control type="list" id="8000">
@@ -1041,21 +1041,21 @@
                     <content>
                         <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
                             <visible>Substring(Control.GetLabel(4321),recentmovies,left)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
                             <visible>Substring(Control.GetLabel(4321),randommovies,left)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RecentMusicVideo.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecentMusicVideo.1.Art(thumb))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentMusicVideo.1.Art(fanart))]</property>
                             <property name="Artist">$INFO[Window(Home).Property(RecentMusicVideo.1.Artist)]</property>
@@ -1063,7 +1063,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RandomMusicVideo.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RandomMusicVideo.1.Art(thumb))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomMusicVideo.1.Art(fanart))]</property>
                             <property name="Artist">$INFO[Window(Home).Property(RandomMusicVideo.1.Artist)]</property>
@@ -1071,7 +1071,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</property>
                             <visible>Substring(Control.GetLabel(4321),watchlistmovies)</visible>
@@ -1083,7 +1083,7 @@
                             <label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),randomalbums,left)</visible>
                         </item>
                         <item>
@@ -1092,7 +1092,7 @@
                             <label>$INFO[Window(Home).Property(RandomArtist.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RandomArtist.1.Genre)]</label2>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),randomartists)</visible>
                         </item>
                         <item>
@@ -1101,7 +1101,7 @@
                             <label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),recentalbums,left)</visible>
                         </item>
                         <item>
@@ -1111,21 +1111,21 @@
                             <thumb>$INFO[Window(Home).Property(RecommendedAlbum.1.Art(thumb))]</thumb>
                             <property name="NavItem">item1.png</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),watchlistalbums)</visible>
                         </item>
                         <item>
                             <icon>$INFO[Window(Home).Property(peopleborntoday.1.icon)]</icon>
                             <label>$INFO[Window(Home).Property(peopleborntoday.1.Name)]</label>
                             <property name="Fanart">$INFO[Window(Home).Property(peopleborntoday.1.Fanart)]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),actors)</visible>
                         </item>
                         <item>
                             <icon>$INFO[Window(Home).Property(RandomAddon.1.Art(thumb))]</icon>
                             <label>$INFO[Window(Home).Property(RandomAddon.1.Title)]</label>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomAddon.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),randomaddons)</visible>
                         </item>
                         <item>
@@ -1140,7 +1140,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentEpisode.1.ShowTitle)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
@@ -1149,7 +1149,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(RandomEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RandomEpisode.1.TVshowTitle)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RandomEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</property>
@@ -1158,7 +1158,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
@@ -1167,7 +1167,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(MyPicsDBRandom.1.Name)]</label>
                             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.1.Date)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
                             <property name="Path">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
@@ -1176,26 +1176,26 @@
                         <item>
                             <label>$INFO[Window(Home).Property(MyPicsDBLatest.1.Name)]</label>
                             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.1.Date)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</property>
                             <property name="Path">$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</property>
                             <visible>Substring(Control.GetLabel(4321),recentpics)</visible>
                         </item>
                         <item>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$INFO[Window(home).Property(RSS1.RSS.1.Title)]</label>
                             <icon>$INFO[Window(home).Property(RSS1.RSS.1.Image.1)]</icon>
                             <visible>Substring(Control.GetLabel(4321),rss1)</visible>
                         </item>
                         <item>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$INFO[Window(home).Property(RSS2.RSS.1.Title)]</label>
                             <icon>$INFO[Window(home).Property(RSS2.RSS.1.Image.1)]</icon>
                             <visible>Substring(Control.GetLabel(4321),rss2)</visible>
                         </item>
                         <item>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$INFO[Window(home).Property(RSS3.RSS.1.Title)]</label>
                             <icon>$INFO[Window(home).Property(RSS3.RSS.1.Image.1)]</icon>
                             <visible>Substring(Control.GetLabel(4321),rss3)</visible>
@@ -1221,7 +1221,7 @@
                          <item>
                             <label>$INFO[Window(Home).Property(MostPlayedROM.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(MostPlayedROM.1.Console)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(MostPlayedROM.1.Thumb)]</thumb>
                             <visible>Substring(Control.GetLabel(4321),mostplayedroms,left)</visible>
                         </item>
@@ -1229,7 +1229,7 @@
                             <thumb>$INFO[Window(Home).Property(NextAired.1.Art(poster))]</thumb>
                             <label>$INFO[Window(Home).Property(NextAired.1.Label)]</label>
                             <label2>$INFO[Window(Home).Property(NextAired.1.NextDate),, @ ]$INFO[Window(Home).Property(NextAired.1.ShortTime)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4321),nextaired)</visible>
                         </item>
                         <item>
@@ -1244,7 +1244,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist1.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist1.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist1.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist1.1.Rating)]</property>
@@ -1256,7 +1256,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist2.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist2.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist2.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist2.1.Rating)]</property>
@@ -1268,7 +1268,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist3.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist3.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist3.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist3.1.Rating)]</property>
@@ -1280,7 +1280,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist4.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist4.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist4.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist4.1.Rating)]</property>
@@ -1292,7 +1292,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist5.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist5.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist5.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist5.1.Rating)]</property>
@@ -1304,7 +1304,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist6.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist6.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist6.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist6.1.Rating)]</property>
@@ -1316,19 +1316,19 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(IconPanelItem1.Label)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Skin.String(IconPanelItem1.Icon)]</thumb>
                             <visible>Substring(Control.GetLabel(4321),Icon1)</visible>
                         </item>
                         <item>
                             <label>$INFO[Skin.String(IconPanelItem6.Label)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Skin.String(IconPanelItem6.Icon)]</thumb>
                             <visible>Substring(Control.GetLabel(4321),Icon2)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(home).Property(favourite.1.name)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(home).Property(favourite.1.thumb)]</thumb>
                             <visible>Substring(Control.GetLabel(4321),favourite)</visible>
                         </item>
@@ -1341,8 +1341,8 @@
         <control type="group" id="7998">
             <posx>1542</posx>
             <posy>13</posy>
-            <animation effect="slide" end="0,40" time="400" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
-            <animation effect="slide" end="0,25" time="400" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+            <animation effect="slide" end="0,40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
+            <animation effect="slide" end="0,25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
             <visible>Substring(Control.GetLabel(4325),classic) + !Window.IsActive(1120)</visible>
             <include>Animation_Widgets</include>
             <!--Unfocused widget-->
@@ -1417,8 +1417,8 @@
                         <posy>63</posy>
                         <width>345</width>
                         <height>240</height>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="50">Hidden</animation>
+                        <animation effect="fade" time="240">Visible</animation>
+                        <animation effect="fade" time="40">Hidden</animation>
                         <visible> Substring(Control.GetLabel(4325),recommendedaddons) | Substring(Control.GetLabel(4325),addons) | Substring(Control.GetLabel(4325),Icon) | Substring(Control.GetLabel(4325),albums) | Substring(Control.GetLabel(4325),artists) | Substring(Control.GetLabel(4325),actor) | Substring(Control.GetLabel(4325),pics) | Substring(Control.GetLabel(4325),roms)</visible>
                     </control>
                     <control type="image">
@@ -1430,8 +1430,8 @@
                         <posy>63</posy>
                         <width>345</width>
                         <height>194</height>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="50">Hidden</animation>
+                        <animation effect="fade" time="240">Visible</animation>
+                        <animation effect="fade" time="40">Hidden</animation>
                         <visible>Substring(Control.GetLabel(4325),tv) | Substring(Control.GetLabel(4325),rss)</visible>
                     </control>
                     <control type="image">
@@ -1443,8 +1443,8 @@
                         <posy>63</posy>
                         <width>345</width>
                         <height>194</height>
-                        <animation effect="fade" time="300">Visible</animation>
-                        <animation effect="fade" time="50">Hidden</animation>
+                        <animation effect="fade" time="240">Visible</animation>
+                        <animation effect="fade" time="40">Hidden</animation>
                         <visible>[Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),musicvideo)]</visible>
                         <!--  <visible>[Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),musicvideo)] + !StringCompare(Control.GetLabel(4322),widgetfanart)</visible> -->
                     </control>
@@ -1469,7 +1469,7 @@
             </control>
             <!--Actual list-->
             <control type="group">
-                <animation effect="slide" end="-570,0" time="500" easing="inout" tween="cubic" condition="Control.HasFocus(7000)">Conditional</animation>
+                <animation effect="slide" end="-570,0" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(7000)">Conditional</animation>
                 <posx>513</posx>
                 <posy>-16</posy>
                 <control type="list" id="7000">
@@ -1484,21 +1484,21 @@
                     <content>
                         <item>
                             <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
                             <visible>Substring(Control.GetLabel(4325),recentmovies,left)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
                             <visible>Substring(Control.GetLabel(4325),randommovies,left)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RecentMusicVideo.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecentMusicVideo.1.Art(thumb))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentMusicVideo.1.Art(fanart))]</property>
                             <property name="Artist">$INFO[Window(Home).Property(RecentMusicVideo.1.Artist)]</property>
@@ -1506,7 +1506,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RandomMusicVideo.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RandomMusicVideo.1.Art(thumb))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomMusicVideo.1.Art(fanart))]</property>
                             <property name="Artist">$INFO[Window(Home).Property(RandomMusicVideo.1.Artist)]</property>
@@ -1514,7 +1514,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</property>
                             <visible>Substring(Control.GetLabel(4325),watchlistmovies)</visible>
@@ -1526,7 +1526,7 @@
                             <label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),randomalbums)</visible>
                         </item>
                         <item>
@@ -1535,7 +1535,7 @@
                             <label>$INFO[Window(Home).Property(RandomArtist.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RandomArtist.1.Genre)]</label2>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),randomartists)</visible>
                         </item>
                         <item>
@@ -1544,7 +1544,7 @@
                             <label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),recentalbums)</visible>
                         </item>
                         <item>
@@ -1553,27 +1553,27 @@
                             <icon>$INFO[Window(Home).Property(RecommendedAlbum.1.Art(thumb))]</icon>
                             <property name="NavItem">item1.png</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),watchlistalbums)</visible>
                         </item>
                         <item>
                             <icon>$INFO[Window(Home).Property(peopleborntoday.1.icon)]</icon>
                             <label>$INFO[Window(Home).Property(peopleborntoday.1.Name)]</label>
                             <property name="Fanart">$INFO[Window(Home).Property(peopleborntoday.1.Fanart)]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),actors)</visible>
                         </item>
                         <item>
                             <icon>$INFO[Window(Home).Property(RandomAddon.1.Art(thumb))]</icon>
                             <label>$INFO[Window(Home).Property(RandomAddon.1.Title)]</label>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomAddon.1.Art(fanart))]</property>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),randomaddons)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentEpisode.1.ShowTitle)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
@@ -1582,7 +1582,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(RandomEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RandomEpisode.1.TVshowTitle)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RandomEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</property>
@@ -1600,7 +1600,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVShowTitle)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
@@ -1609,7 +1609,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(MyPicsDBRandom.1.Name)]</label>
                             <label2>$INFO[Window(Home).Property(MyPicsDBRandom.1.Date)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
                             <visible>Substring(Control.GetLabel(4325),randompics)</visible>
@@ -1617,25 +1617,25 @@
                         <item>
                             <label>$INFO[Window(Home).Property(MyPicsDBLatest.1.Name)]</label>
                             <label2>$INFO[Window(Home).Property(MyPicsDBLatest.1.Date)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</thumb>
                             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</property>
                             <visible>Substring(Control.GetLabel(4325),recentpics)</visible>
                         </item>
                         <item>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$INFO[Window(home).Property(RSS1.RSS.1.Title)]</label>
                             <icon>$INFO[Window(home).Property(RSS1.RSS.1.Image.1)]</icon>
                             <visible>Substring(Control.GetLabel(4325),rss1)</visible>
                         </item>
                         <item>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$INFO[Window(home).Property(RSS2.RSS.1.Title)]</label>
                             <icon>$INFO[Window(home).Property(RSS2.RSS.1.Image.1)]</icon>
                             <visible>Substring(Control.GetLabel(4325),rss2)</visible>
                         </item>
                         <item>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <label>$INFO[Window(home).Property(RSS3.RSS.1.Title)]</label>
                             <icon>$INFO[Window(home).Property(RSS3.RSS.1.Image.1)]</icon>
                             <visible>Substring(Control.GetLabel(4325),rss3)</visible>
@@ -1643,7 +1643,7 @@
                         <item>
                             <label>$INFO[Window(Home).Property(MostPlayedROM.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(MostPlayedROM.1.Console)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(Home).Property(MostPlayedROM.1.Thumb)]</thumb>
                             <visible>Substring(Control.GetLabel(4325),mostplayedroms,left)</visible>
                         </item>
@@ -1651,7 +1651,7 @@
                             <thumb>$INFO[Window(Home).Property(NextAired.1.Art(poster))]</thumb>
                             <label>$INFO[Window(Home).Property(NextAired.1.Label)]</label>
                             <label2>$INFO[Window(Home).Property(NextAired.1.NextDate),, @ ]$INFO[Window(Home).Property(NextAired.1.ShortTime)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),nextaired)</visible>
                         </item>
                         <item>
@@ -1666,7 +1666,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist7.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist7.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist7.1.Rating)]</property>
@@ -1678,7 +1678,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist8.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist8.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist8.1.Rating)]</property>
@@ -1690,7 +1690,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist9.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist9.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist9.1.Rating)]</property>
@@ -1702,7 +1702,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist10.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist10.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist10.1.Rating)]</property>
@@ -1714,7 +1714,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist11.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist11.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist11.1.Rating)]</property>
@@ -1726,7 +1726,7 @@
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(SmartPlaylist12.1.Title)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <property name="Poster">$INFO[Window(Home).Property(SmartPlaylist12.1.Art(poster))]</property>
                             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.1.Art(thumb))]</thumb>
                             <property name="Rating">$INFO[Window(Home).Property(SmartPlaylist12.1.Rating)]</property>
@@ -1738,19 +1738,19 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(IconPanelItem11.Label)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Skin.String(IconPanelItem11.Icon)]</thumb>
                             <visible>Substring(Control.GetLabel(4325),Icon1)</visible>
                         </item>
                         <item>
                             <label>$INFO[Skin.String(IconPanelItem16.Label)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Skin.String(IconPanelItem16.Icon)]</thumb>
                             <visible>Substring(Control.GetLabel(4325),Icon2)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(home).Property(favourite.1.name)]</label>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <thumb>$INFO[Window(home).Property(favourite.1.thumb)]</thumb>
                             <visible>Substring(Control.GetLabel(4325),favourite)</visible>
                         </item>
@@ -1796,8 +1796,8 @@
         <include condition="Skin.HasSetting(mainmenuicons)">FocusPosition4</include>
         <include condition="!Skin.HasSetting(mainmenuicons)">FocusPosition2</include>
         <orientation>horizontal</orientation>
-        <animation effect="slide" end="-302,0" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(biggergap)">Conditional</animation>
-        <animation effect="fade" start="100" end="30" time="200" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus">conditional</animation>
+        <animation effect="slide" end="-302,0" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(biggergap)">Conditional</animation>
+        <animation effect="fade" start="100" end="30" time="160" condition="Window.IsVisible(1113) | ControlGroup(9001).HasFocus">conditional</animation>
         <itemlayout height="225" width="519" condition="!Skin.HasSetting(biggergap) + !Skin.HasSetting(mainmenuicons)">
             <control type="label">
                 <posx>260</posx>
@@ -1902,6 +1902,7 @@
             </control>
         </itemlayout>
         <focusedlayout height="225" width="250" condition="Skin.HasSetting(mainmenuicons)">
+			<animation effect="zoom" start="80" end="100" center="296,108" delay="160" tween="back" time="240">Focus</animation>
             <control type="image">
                 <posx>252</posx>
                 <posy>64</posy>
@@ -1983,8 +1984,8 @@
                 <width>224</width>
                 <align>center</align>
                 <font>Font_Info_Caps</font>
-                <animation effect="zoom" center="112,25" start="100" end="130" time="200" tween="quadratic">Focus</animation>
-                <animation effect="zoom" center="112,25" start="130" end="100" time="200" tween="quadratic">Unfocus</animation>
+                <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
+                <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
@@ -1996,8 +1997,8 @@
                 <width>224</width>
                 <align>center</align>
                 <font>Font_Info_Caps</font>
-                <animation effect="zoom" center="112,25" start="100" end="130" time="200" tween="quadratic">Focus</animation>
-                <animation effect="zoom" center="112,25" start="130" end="100" time="200" tween="quadratic">Unfocus</animation>
+                <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
+                <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey</textcolor>
                 <visible>!Control.HasFocus(9010)</visible>

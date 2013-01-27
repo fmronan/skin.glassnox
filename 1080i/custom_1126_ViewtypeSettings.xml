@@ -12,7 +12,7 @@
     <controls>
         <control type="group">
             <animation type="Conditional" condition="Window.IsActive(1128) | Window.IsActive(1119) | Window.IsActive(1127)">
-                <effect type="slide" end="-600" time="400" easing="in" tween="cubic" />
+                <effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
             </animation>
             <control type="label" id="4421">
                 <label>$VAR[InfoPanelVar]</label>
@@ -27,6 +27,16 @@
                <posy>200</posy>
                <include>HiddenObject</include>
             </control>
+            <control type="label" id="4423">
+               <label>$VAR[MovieDiscArt]</label>
+               <posy>200</posy>
+               <include>HiddenObject</include>
+            </control>
+            <control type="label" id="4424">
+               <label>$VAR[MusicDiscArt]</label>
+               <posy>200</posy>
+               <include>HiddenObject</include>
+            </control>
             <!-- MikebZH44 End -->
             <control type="grouplist" id="450">
                 <width>1172</width>
@@ -35,13 +45,13 @@
                 <onup>450</onup>
                 <ondown>450</ondown>
                 <animation type="WindowOpen">
-                    <effect type="fade" delay="200" end="100" time="200" />
+                    <effect type="fade" delay="160" end="100" time="160" />
                 </animation>
                 <animation type="WindowClose">
-                    <effect type="slide" end="-420" time="400" tween="cubic" />
+                    <effect type="slide" end="-420" time="320" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="Control.HasFocus(9010)">
-                    <effect type="fade" start="100" end="0" time="100" />
+                    <effect type="fade" start="100" end="0" time="80" />
                 </animation>
                 <control type="button" id="1601">
                     <include>Objects_MediaMenuLabelAlt2</include>
@@ -141,13 +151,6 @@
                     <visible>Container.Content(movies) + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)</visible>
                 </control>
                 <!-- MikeBZH44 Start : Add 2 new options -->
-                <control type="radiobutton" id="1665">
-                    <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>Auto-open cases</label>
-                    <onclick>Skin.ToggleSetting(DVDAutoOpenCase)</onclick>
-                    <selected>Skin.HasSetting(DVDAutoOpenCase)</selected>
-                    <visible>Container.Content(movies) + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)</visible>
-                </control>
                 <control type="radiobutton" id="1666">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>No case for movieset</label>
@@ -506,13 +509,30 @@
                     <selected>Skin.HasSetting(showcasezoom)</selected>
                     <visible>Substring(Window(home).Property(actualViewtype),Showcase)</visible>
                 </control>
-                <control type="radiobutton" id="16839">
+                <!-- MikeBZH44 Start -->
+                <!-- Roll or Spin option for Movie DiscArt -->
+                <control type="button" id="16839">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>31812</label>
-                    <onclick>Skin.ToggleSetting(showcasecdart)</onclick>
-                    <selected>Skin.HasSetting(showcasecdart)</selected>
+                    <label>42212</label>
+                    <label2>[COLOR $VAR[FontColorVar]]$VAR[MovieDiscArtLib][/COLOR]</label2>
+                    <onclick condition="Stringcompare(Control.GetLabel(4423),none) | IsEmpty(Control.GetLabel(4423))">Skin.SetString(MovieDiscArt,roll)</onclick>
+                    <onclick condition="Stringcompare(Control.GetLabel(4423),spin)">Skin.SetString(MovieDiscArt,none)</onclick>
+                    <onclick condition="Stringcompare(Control.GetLabel(4423),roll)">Skin.SetString(MovieDiscArt,spin)</onclick>
+                    <onclick condition="Stringcompare(Control.GetLabel(4423),none)">Skin.SetString(MovieDiscArt,roll)</onclick>
                     <visible>Substring(Window(home).Property(actualViewtype),Showcase) + Container.Content(movies)</visible>
                 </control>
+                <!-- Roll or Spin option for Music DiscArt -->
+                <control type="button" id="16840">
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <label>42212</label>
+                    <label2>[COLOR $VAR[FontColorVar]]$VAR[MusicDiscArtLib][/COLOR]</label2>
+                    <onclick condition="Stringcompare(Control.GetLabel(4424),none) | IsEmpty(Control.GetLabel(4424))">Skin.SetString(MusicDiscArt,roll)</onclick>
+                    <onclick condition="Stringcompare(Control.GetLabel(4424),spin)">Skin.SetString(MusicDiscArt,none)</onclick>
+                    <onclick condition="Stringcompare(Control.GetLabel(4424),roll)">Skin.SetString(MusicDiscArt,spin)</onclick>
+                    <onclick condition="Stringcompare(Control.GetLabel(4424),none)">Skin.SetString(MusicDiscArt,roll)</onclick>
+                    <visible>Substring(Window(home).Property(actualViewtype),Showcase) + Container.Content(albums)</visible>
+                </control>
+                <!-- MikeBZH44 End -->
                 <control type="radiobutton" id="1683">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31169]</label>
@@ -635,11 +655,14 @@
                     <include condition="!Window.IsActive(script-Rom_Collection_Browser-main.xml)">ReloadWindowOnClick</include>
                     <visible>Substring(Window(home).Property(actualViewtype),Showcase) | Stringcompare(Window(home).Property(actualViewtype),Landscape)</visible>
                 </control>
-                <control type="radiobutton" id="1635">
+                <control type="button" id="1635">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31674]</label>
-                    <onclick>Skin.ToggleSetting(SwitchTriPanel)</onclick>
-                    <selected>Skin.HasSetting(SwitchTriPanel)</selected>
+                    <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(TriPanelPosition)][/COLOR]</label2>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelPosition),1) | IsEmpty(Skin.String(TriPanelPosition))">Skin.SetString(TriPanelPosition,2)</onclick>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelPosition),3)">Skin.SetString(TriPanelPosition,1)</onclick>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelPosition),2)">Skin.SetString(TriPanelPosition,3)</onclick>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelPosition),1)">Skin.SetString(TriPanelPosition,2)</onclick>
                     <visible>Substring(Window(home).Property(actualViewtype),TriPanel)</visible>
                 </control>
                 <control type="radiobutton" id="1640">

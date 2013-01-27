@@ -9,11 +9,11 @@
     <onload>SetProperty(CurrentPhaseLabel,$LOCALIZE[31893])</onload>
     <controls>
         <control type="multiimage">
-            <animation effect="zoom" start="110" end="130" center="auto" time="15000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-            <animation effect="slide" start="-15,-15" end="15,15" time="7500" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+            <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <imagepath background="true">$VAR[WeatherFanartVar]</imagepath>
-            <animation effect="fade" time="500" condition="!Window.Previous(1115)">WindowOpen</animation>
-            <animation effect="fade" time="200" condition="!Window.Next(1115)">WindowClose</animation>
+            <animation effect="fade" time="400" condition="!Window.Previous(1115)">WindowOpen</animation>
+            <animation effect="fade" time="160" condition="!Window.Next(1115)">WindowClose</animation>
         </control>
         <control type="group">
             <include>Animation_OpenClose_Furniture</include>
@@ -29,8 +29,8 @@
                 <width>1920</width>
                 <height>920</height>
                 <texture>common/bgcolor.png</texture>
-                <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
-                <animation effect="fade" end="100" time="550" delay="200">VisibleChange</animation>
+                <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+                <animation effect="fade" end="100" time="440" delay="160">VisibleChange</animation>
                 <visible>Skin.HasSetting(darkinfopane)</visible>
             </control>
             <control type="image">
@@ -59,12 +59,12 @@
         </control>
         <control type="group">
             <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="150" end="100" center="960,540" time="600" tween="cubic" />
-                <effect type="fade" end="100" time="100" />
+                <effect type="zoom" start="150" end="100" center="960,540" time="480" tween="cubic" />
+                <effect type="fade" end="100" time="80" />
             </animation>
             <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="300" />
-                <effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+                <effect type="fade" start="100" end="0" time="240" />
+                <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
             </animation>
             <control type="group">
                 <posy>-15</posy>
@@ -109,7 +109,7 @@
             <control type="group">
                 <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                 <animation type="VisibleChange">
-                    <effect type="fade" end="100" delay="400" time="200" />
+                    <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
                 <control type="group">
                     <control type="label">
@@ -456,7 +456,7 @@
                                 <item id="1">
                                     <label>$INFO[Window(weather).Property(Daily.1.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.1.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.1.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.1.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.1.HighTemperature)]</property>
@@ -470,7 +470,7 @@
                                 <item id="2">
                                     <label>$INFO[Window(weather).Property(Daily.2.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.2.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.2.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.2.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.2.HighTemperature)]</property>
@@ -484,7 +484,7 @@
                                 <item id="3">
                                     <label>$INFO[Window(weather).Property(Daily.3.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.3.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.3.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.3.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.3.HighTemperature)]</property>
@@ -498,7 +498,7 @@
                                 <item id="4">
                                     <label>$INFO[Window(weather).Property(Daily.4.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.4.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.4.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.4.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.4.HighTemperature)]</property>
@@ -512,7 +512,7 @@
                                 <item id="5">
                                     <label>$INFO[Window(weather).Property(Daily.5.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.5.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.5.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.5.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.5.HighTemperature)]</property>
@@ -526,7 +526,7 @@
                                 <item id="6">
                                     <label>$INFO[Window(weather).Property(Daily.6.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.6.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.6.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.6.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.6.HighTemperature)]</property>
@@ -540,7 +540,7 @@
                                 <item id="7">
                                     <label>$INFO[Window(weather).Property(Daily.7.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.7.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.7.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.7.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.7.HighTemperature)]</property>
@@ -554,7 +554,7 @@
                                 <item id="8">
                                     <label>$INFO[Window(weather).Property(Daily.8.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.8.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.8.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.8.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.8.HighTemperature)]</property>
@@ -568,7 +568,7 @@
                                 <item id="9">
                                     <label>$INFO[Window(weather).Property(Daily.9.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.9.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.9.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.9.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.9.HighTemperature)]</property>
@@ -582,7 +582,7 @@
                                 <item id="10">
                                     <label>$INFO[Window(weather).Property(Daily.10.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Daily.10.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Daily.10.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Daily.10.Outlook)]</property>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Daily.10.HighTemperature)]</property>
@@ -713,7 +713,7 @@
                                 <item id="1">
                                     <label>$INFO[Window(weather).Property(36Hour.1.Heading)]</label>
                                     <label2>$INFO[Window(weather).Property(36Hour.1.DaylightTitle)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(36Hour.1.OutlookIcon)]</icon>
                                     <property name="ChancePrecipitation">$INFO[Window(weather).Property(36Hour.1.ChancePrecipitation)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(36Hour.1.Temperature)]</property>
@@ -725,7 +725,7 @@
                                 <item id="2">
                                     <label>$INFO[Window(weather).Property(36Hour.2.Heading)]</label>
                                     <label2>$INFO[Window(weather).Property(36Hour.2.DaylightTitle)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(36Hour.2.OutlookIcon)]</icon>
                                     <property name="ChancePrecipitation">$INFO[Window(weather).Property(36Hour.2.ChancePrecipitation)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(36Hour.2.Temperature)]</property>
@@ -737,7 +737,7 @@
                                 <item id="3">
                                     <label>$INFO[Window(weather).Property(36Hour.3.Heading)]</label>
                                     <label2>$INFO[Window(weather).Property(36Hour.3.DaylightTitle)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(36Hour.3.OutlookIcon)]</icon>
                                     <property name="ChancePrecipitation">$INFO[Window(weather).Property(36Hour.3.ChancePrecipitation)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(36Hour.3.Temperature)]</property>
@@ -872,7 +872,7 @@
                                 <item id="1">
                                     <label>$INFO[Window(weather).Property(Weekend.1.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Weekend.1.Humidity)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Weekend.1.OutlookIcon)]</icon>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Weekend.1.HighTemperature)]</property>
                                     <property name="LowTemperature">$INFO[Window(weather).Property(Weekend.1.LowTemperature)]</property>
@@ -888,7 +888,7 @@
                                 <item id="2">
                                     <label>$INFO[Window(weather).Property(Weekend.2.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Weekend.2.Humidity)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Weekend.2.OutlookIcon)]</icon>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Weekend.2.HighTemperature)]</property>
                                     <property name="LowTemperature">$INFO[Window(weather).Property(Weekend.2.LowTemperature)]</property>
@@ -904,7 +904,7 @@
                                 <item id="3">
                                     <label>$INFO[Window(weather).Property(Weekend.3.LongDay)]</label>
                                     <label2>$INFO[Window(weather).Property(Weekend.3.Humidity)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Weekend.3.OutlookIcon)]</icon>
                                     <property name="HighTemperature">$INFO[Window(weather).Property(Weekend.3.HighTemperature)]</property>
                                     <property name="LowTemperature">$INFO[Window(weather).Property(Weekend.3.LowTemperature)]</property>
@@ -1073,7 +1073,7 @@
                                 <item id="1">
                                     <label>$INFO[Window(weather).Property(Hourly.1.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.1.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.1.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.1.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.1.Temperature)]</property>
@@ -1087,7 +1087,7 @@
                                 <item id="2">
                                     <label>$INFO[Window(weather).Property(Hourly.2.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.2.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.2.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.2.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.2.Temperature)]</property>
@@ -1101,7 +1101,7 @@
                                 <item id="3">
                                     <label>$INFO[Window(weather).Property(Hourly.3.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.3.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.3.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.3.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.3.Temperature)]</property>
@@ -1115,7 +1115,7 @@
                                 <item id="4">
                                     <label>$INFO[Window(weather).Property(Hourly.4.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.4.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.4.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.4.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.4.Temperature)]</property>
@@ -1129,7 +1129,7 @@
                                 <item id="5">
                                     <label>$INFO[Window(weather).Property(Hourly.5.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.5.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.5.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.5.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.5.Temperature)]</property>
@@ -1143,7 +1143,7 @@
                                 <item id="6">
                                     <label>$INFO[Window(weather).Property(Hourly.6.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.6.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.6.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.6.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.6.Temperature)]</property>
@@ -1157,7 +1157,7 @@
                                 <item id="7">
                                     <label>$INFO[Window(weather).Property(Hourly.7.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.7.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.7.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.7.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.7.Temperature)]</property>
@@ -1171,7 +1171,7 @@
                                 <item id="8">
                                     <label>$INFO[Window(weather).Property(Hourly.8.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.8.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.8.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.8.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.8.Temperature)]</property>
@@ -1185,7 +1185,7 @@
                                 <item id="9">
                                     <label>$INFO[Window(weather).Property(Hourly.9.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.9.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.9.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.9.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.9.Temperature)]</property>
@@ -1199,7 +1199,7 @@
                                 <item id="10">
                                     <label>$INFO[Window(weather).Property(Hourly.10.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.10.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.10.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.10.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.10.Temperature)]</property>
@@ -1213,7 +1213,7 @@
                                 <item id="11">
                                     <label>$INFO[Window(weather).Property(Hourly.11.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.11.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.11.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.11.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.11.Temperature)]</property>
@@ -1227,7 +1227,7 @@
                                 <item id="12">
                                     <label>$INFO[Window(weather).Property(Hourly.12.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.12.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.12.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.12.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.12.Temperature)]</property>
@@ -1241,7 +1241,7 @@
                                 <item id="13">
                                     <label>$INFO[Window(weather).Property(Hourly.13.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.13.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.13.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.13.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.13.Temperature)]</property>
@@ -1255,7 +1255,7 @@
                                 <item id="14">
                                     <label>$INFO[Window(weather).Property(Hourly.14.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.14.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.14.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.14.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.14.Temperature)]</property>
@@ -1269,7 +1269,7 @@
                                 <item id="15">
                                     <label>$INFO[Window(weather).Property(Hourly.15.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.15.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.15.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.15.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.15.Temperature)]</property>
@@ -1283,7 +1283,7 @@
                                 <item id="16">
                                     <label>$INFO[Window(weather).Property(Hourly.16.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.16.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.16.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.16.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.16.Temperature)]</property>
@@ -1297,7 +1297,7 @@
                                 <item id="17">
                                     <label>$INFO[Window(weather).Property(Hourly.17.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.17.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.17.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.17.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.17.Temperature)]</property>
@@ -1311,7 +1311,7 @@
                                 <item id="18">
                                     <label>$INFO[Window(weather).Property(Hourly.18.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.18.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.18.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.18.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.18.Temperature)]</property>
@@ -1325,7 +1325,7 @@
                                 <item id="19">
                                     <label>$INFO[Window(weather).Property(Hourly.19.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.19.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.19.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.19.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.19.Temperature)]</property>
@@ -1339,7 +1339,7 @@
                                 <item id="20">
                                     <label>$INFO[Window(weather).Property(Hourly.20.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.20.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.20.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.20.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.20.Temperature)]</property>
@@ -1353,7 +1353,7 @@
                                 <item id="21">
                                     <label>$INFO[Window(weather).Property(Hourly.21.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.21.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.21.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.21.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.21.Temperature)]</property>
@@ -1367,7 +1367,7 @@
                                 <item id="22">
                                     <label>$INFO[Window(weather).Property(Hourly.22.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.22.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.22.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.22.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.22.Temperature)]</property>
@@ -1381,7 +1381,7 @@
                                 <item id="23">
                                     <label>$INFO[Window(weather).Property(Hourly.23.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.23.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.23.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.23.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.23.Temperature)]</property>
@@ -1395,7 +1395,7 @@
                                 <item id="24">
                                     <label>$INFO[Window(weather).Property(Hourly.24.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.24.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.24.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.24.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.24.Temperature)]</property>
@@ -1409,7 +1409,7 @@
                                 <item id="25">
                                     <label>$INFO[Window(weather).Property(Hourly.25.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.25.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.25.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.25.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.25.Temperature)]</property>
@@ -1423,7 +1423,7 @@
                                 <item id="26">
                                     <label>$INFO[Window(weather).Property(Hourly.26.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.26.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.26.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.26.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.26.Temperature)]</property>
@@ -1437,7 +1437,7 @@
                                 <item id="27">
                                     <label>$INFO[Window(weather).Property(Hourly.27.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.27.LongDate)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.27.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.27.Outlook)]</property>
                                     <property name="Temperature">$INFO[Window(weather).Property(Hourly.27.Temperature)]</property>
@@ -1534,7 +1534,7 @@
                                     <item>
                                         <label>31875</label>
                                         <icon></icon>
-                                        <onclick>-</onclick>
+                                        <onclick>noop</onclick>
                                         <visible>IsEmpty(Window.Property(Video.1.Title)) + IsEmpty(Window.Property(Video.2.Title)) + IsEmpty(Window.Property(Video.3.Title)) + IsEmpty(Window.Property(MapList.1.MapLabel.1)) + IsEmpty(Window.Property(MapList.1.MapLabel.2)) + IsEmpty(Window.Property(MapList.1.MapLabel.3))</visible>
                                     </item>
                                     <item>
@@ -1828,7 +1828,7 @@
                                 <fadetime>0</fadetime>
                                 <randomize>false</randomize>
                                 <loop>yes</loop>
-                                <animation effect="zoom" end="-892,0,1920,1080" time="800" tween="cubic" condition="!IsEmpty(Window(weather).Property(FSMap))">Conditional</animation>
+                                <animation effect="zoom" end="-892,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(weather).Property(FSMap))">Conditional</animation>
                                 <aspectratio>keep</aspectratio>
                             </control>
                             <control type="button" id="5">
@@ -1910,70 +1910,70 @@
                                 <item id="1">
                                     <label>$INFO[Window(weather).Property(Hourly.1.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.1.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.1.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.1.Outlook)]</property>
                                 </item>
                                 <item id="2">
                                     <label>$INFO[Window(weather).Property(Hourly.2.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.2.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.2.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.2.Outlook)]</property>
                                 </item>
                                 <item id="3">
                                     <label>$INFO[Window(weather).Property(Hourly.3.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.3.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.3.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.3.Outlook)]</property>
                                 </item>
                                 <item id="4">
                                     <label>$INFO[Window(weather).Property(Hourly.4.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.4.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.4.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.4.Outlook)]</property>
                                 </item>
                                 <item id="5">
                                     <label>$INFO[Window(weather).Property(Hourly.5.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.5.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.5.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.5.Outlook)]</property>
                                 </item>
                                 <item id="6">
                                     <label>$INFO[Window(weather).Property(Hourly.6.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.6.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.6.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.6.Outlook)]</property>
                                 </item>
                                 <item id="7">
                                     <label>$INFO[Window(weather).Property(Hourly.7.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.7.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.7.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.7.Outlook)]</property>
                                 </item>
                                 <item id="8">
                                     <label>$INFO[Window(weather).Property(Hourly.8.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.8.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.8.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.8.Outlook)]</property>
                                 </item>
                                 <item id="9">
                                     <label>$INFO[Window(weather).Property(Hourly.9.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.9.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.9.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.9.Outlook)]</property>
                                 </item>
                                 <item id="10">
                                     <label>$INFO[Window(weather).Property(Hourly.10.Time)]</label>
                                     <label2>$INFO[Window(weather).Property(Hourly.10.Temperature)]</label2>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <icon>$INFO[Window(weather).Property(Hourly.10.OutlookIcon)]</icon>
                                     <property name="Outlook">$INFO[Window(weather).Property(Hourly.10.Outlook)]</property>
                                 </item>
@@ -1994,13 +1994,13 @@
                     <wrapmultiline>false</wrapmultiline>
                     <scrollspeed>30</scrollspeed>
                     <visible>Window.Property(Alerts.IsFetched)</visible>
-                    <animation effect="slide" end="0,429" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
+                    <animation effect="slide" end="0,429" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
                 </control>
             </control>
             <control type="group">
                 <visible>!Skin.HasSetting(ExtendedWeatherInfo)</visible>
                 <animation type="VisibleChange">
-                    <effect type="fade" end="100" delay="400" time="200" />
+                    <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
                 <control type="image">
                     <posx>126</posx>
@@ -2314,7 +2314,7 @@
                         <item id="1">
                             <label>$INFO[Window(weather).Property(Day0.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day0.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day0.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2322,7 +2322,7 @@
                         <item id="2">
                             <label>$INFO[Window(weather).Property(Day1.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day1.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day1.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2330,7 +2330,7 @@
                         <item id="3">
                             <label>$INFO[Window(weather).Property(Day2.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day2.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day2.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2338,7 +2338,7 @@
                         <item id="4">
                             <label>$INFO[Window(weather).Property(Day3.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day3.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day3.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2346,7 +2346,7 @@
                         <item id="5">
                             <label>$INFO[Window(weather).Property(Day4.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day4.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day4.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day4.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day4.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2355,7 +2355,7 @@
                         <item id="6">
                             <label>$INFO[Window(weather).Property(Day5.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day5.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day5.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day5.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day5.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2364,7 +2364,7 @@
                         <item id="7">
                             <label>$INFO[Window(weather).Property(Day6.Title)]</label>
                             <label2>$INFO[Window(weather).Property(Day6.Outlook)]</label2>
-                            <onclick>-</onclick>
+                            <onclick>noop</onclick>
                             <icon>$INFO[Window(weather).Property(Day6.OutlookIcon)]</icon>
                             <property name="HighTemp">$INFO[Window(weather).Property(Day6.HighTemp)] $INFO[System.TemperatureUnits]</property>
                             <property name="LowTemp">$INFO[Window(weather).Property(Day6.LowTemp)] $INFO[System.TemperatureUnits]</property>
@@ -2384,19 +2384,19 @@
         <!---MEDIA MENU-->
         <control type="group" id="9000">
             <animation type="Conditional" condition="Window.IsActive(1128) | Window.IsActive(1127)">
-                <effect type="slide" end="-600" time="400" easing="in" tween="cubic" />
+                <effect type="slide" end="-600" time="320" easing="in" tween="cubic" />
             </animation>
             <include>Media_Menu_Furniture</include>
             <control type="group">
                 <animation type="Conditional" condition="Window.IsActive(1121) | Window.IsActive(1126)">
-                    <effect type="fade" start="100" end="0" time="500" />
+                    <effect type="fade" start="100" end="0" time="400" />
                 </animation>
                 <animation type="Conditional" condition="Window.IsActive(1126)">
-                    <effect type="zoom" end="150,100" time="400" easing="in" tween="cubic" />
+                    <effect type="zoom" end="150,100" time="320" easing="in" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="Window.IsActive(1121)">
-                    <effect type="zoom" end="66,100" time="400" easing="in" tween="cubic" />
-                    <effect type="slide" end="-49" time="400" easing="in" tween="cubic" />
+                    <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
+                    <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
                 </animation>
                 <include>Animation_MediaMenuSlide2</include>
                 <control type="grouplist" id="9003">
@@ -2478,7 +2478,7 @@
                         <onclick>ClearProperty(Weather.CurrentView)</onclick>
                         <selected>IsEmpty(Window.Property(Weather.CurrentView))</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="400" time="200" />
+                            <effect type="fade" end="100" delay="320" time="160" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2488,7 +2488,7 @@
                         <onclick>SetProperty(Weather.CurrentView,36hour)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),36hour)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="400" time="200" />
+                            <effect type="fade" end="100" delay="320" time="160" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2498,7 +2498,7 @@
                         <onclick>SetProperty(Weather.CurrentView,weekend)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),weekend)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="400" time="200" />
+                            <effect type="fade" end="100" delay="320" time="160" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2508,7 +2508,7 @@
                         <onclick>SetProperty(Weather.CurrentView,hourly)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),hourly)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="400" time="200" />
+                            <effect type="fade" end="100" delay="320" time="160" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                     </control>
@@ -2518,7 +2518,7 @@
                         <onclick>SetProperty(Weather.CurrentView,videos)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),videos)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="400" time="200" />
+                            <effect type="fade" end="100" delay="320" time="160" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                         <visible>![IsEmpty(Window.Property(Video.1.Title)) + IsEmpty(Window.Property(Video.2.Title)) + IsEmpty(Window.Property(Video.3.Title)) + IsEmpty(Window.Property(MapList.1.MapLabel.1)) + IsEmpty(Window.Property(MapList.1.MapLabel.2)) + IsEmpty(Window.Property(MapList.1.MapLabel.3))]</visible>
@@ -2529,7 +2529,7 @@
                         <onclick>SetProperty(Weather.CurrentView,maps)</onclick>
                         <selected>SubString(Window.Property(Weather.CurrentView),maps)</selected>
                         <animation type="VisibleChange">
-                            <effect type="fade" end="100" delay="400" time="200" />
+                            <effect type="fade" end="100" delay="320" time="160" />
                         </animation>
                         <visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
                         <visible>SubString(Weather.Plugin,weather.wunderground)</visible>

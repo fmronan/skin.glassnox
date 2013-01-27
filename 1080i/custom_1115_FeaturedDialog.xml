@@ -36,20 +36,20 @@
             <orientation>horizontal</orientation>
             <itemgap>-1060</itemgap>
             <animation type="WindowOpen" reversible="false">
-                <effect type="zoom" start="150" end="100" center="960,540" time="1200" tween="cubic" />
-                <effect type="fade" end="100" time="1200" />
+                <effect type="zoom" start="150" end="100" center="960,540" time="960" tween="cubic" />
+                <effect type="fade" end="100" time="960" />
             </animation>
             <animation type="WindowClose" reversible="false">
-                <effect type="fade" start="100" end="0" time="300" />
-                <effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+                <effect type="fade" start="100" end="0" time="240" />
+                <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
             </animation>
             <!-- Search -->
             <control type="group" id="3000">
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="![ControlGroup(3000).HasFocus | Control.HasFocus(3012)]">
-                    <effect type="fade" start="100" end="95" time="500" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="95" time="400" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="3012">
                     <include>HiddenObject</include>
@@ -159,22 +159,22 @@
                 <onfocus>AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onfocus>
                 <onfocus>AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onfocus>
                 <animation type="Conditional" condition="SubString(Window(1115).Property(InfoDialog),50)" reversible="false">
-                    <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
-                    <effect type="slide" end="0,-45" time="550" />
-                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="550" />
-                    <effect type="fade" start="100" end="0" time="0" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="0" time="550" delay="550" tween="cubic" />
+                    <effect type="rotatey" center="960" end="-90" time="440" tween="cubic" easing="in" />
+                    <effect type="slide" end="0,-45" time="440" />
+                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="440" />
+                    <effect type="fade" start="100" end="0" time="0" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="0" time="440" delay="440" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="!SubString(Window(1115).Property(InfoDialog),50)" reversible="false">
-                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="550" />
-                    <effect type="fade" end="100" time="400" delay="550" />
-                    <effect type="rotatey" center="960" start="-90" end="0" time="550" delay="550" tween="cubic" />
-                    <effect type="slide" start="0,-45" end="0,0" delay="550" time="550" />
+                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="440" />
+                    <effect type="fade" end="100" time="320" delay="440" />
+                    <effect type="rotatey" center="960" start="-90" end="0" time="440" delay="440" tween="cubic" />
+                    <effect type="slide" start="0,-45" end="0,0" delay="440" time="440" />
                 </animation>
                 <animation type="Conditional" condition="![ControlGroup(5000).HasFocus | Control.HasFocus(5012) | SubString(Window(1115).Property(InfoDialog),50)]">
-                    <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="5012">
                     <include>HiddenObject</include>
@@ -221,7 +221,7 @@
                                 <control type="image">
                                     <width>894</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultTVShows.png</texture>
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.Property(Fanart)</info>
@@ -231,14 +231,14 @@
                                     <width>894</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="894" height="550">
                                 <control type="image">
                                     <width>894</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultTVShows.png</texture>
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.Property(Fanart)</info>
@@ -248,7 +248,7 @@
                                     <width>894</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -267,7 +267,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.1.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="2">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.poster))]</icon>
@@ -284,7 +284,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.2.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.2.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.2.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="3">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.poster))]</icon>
@@ -301,7 +301,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.3.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.3.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.3.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="4">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.poster))]</icon>
@@ -318,7 +318,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.4.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.4.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.4.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="5">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.poster))]</icon>
@@ -335,7 +335,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.5.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.5.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.5.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="6">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.poster))]</icon>
@@ -352,7 +352,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.6.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.6.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.6.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="7">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.poster))]</icon>
@@ -369,7 +369,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.7.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.7.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.7.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="8">
                                     <icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.poster))]</icon>
@@ -386,7 +386,7 @@
                                     <property name="Episode">$INFO[Window(Home).Property(RecommendedEpisode.8.Episode)]</property>
                                     <property name="Season">$INFO[Window(Home).Property(RecommendedEpisode.8.Season)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedEpisode.8.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                             </content>
                         </control>
@@ -434,7 +434,7 @@
                                 <control type="image">
                                     <width>366</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultVideo.png</texture>
                                     <aspectratio>scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -444,14 +444,14 @@
                                     <width>366</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="366" height="550">
                                 <control type="image">
                                     <width>366</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultVideo.png</texture>
                                     <aspectratio>scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -461,7 +461,7 @@
                                     <width>366</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -480,7 +480,7 @@
                                     <property name="Trailer">$INFO[Window(Home).Property(RecommendedMovie.1.Trailer)]</property>
                                     <property name="Runtime">$INFO[Window(Home).Property(RecommendedMovie.1.Runtime)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedMovie.1.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="2">
                                     <icon>$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</icon>
@@ -497,7 +497,7 @@
                                     <property name="Trailer">$INFO[Window(Home).Property(RecommendedMovie.2.Trailer)]</property>
                                     <property name="Runtime">$INFO[Window(Home).Property(RecommendedMovie.2.Runtime)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedMovie.2.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="3">
                                     <icon>$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</icon>
@@ -514,7 +514,7 @@
                                     <property name="Trailer">$INFO[Window(Home).Property(RecommendedMovie.3.Trailer)]</property>
                                     <property name="Runtime">$INFO[Window(Home).Property(RecommendedMovie.3.Runtime)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedMovie.3.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="4">
                                     <icon>$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</icon>
@@ -531,7 +531,7 @@
                                     <property name="Trailer">$INFO[Window(Home).Property(RecommendedMovie.4.Trailer)]</property>
                                     <property name="Runtime">$INFO[Window(Home).Property(RecommendedMovie.4.Runtime)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedMovie.4.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="5">
                                     <icon>$INFO[Window(Home).Property(RecommendedMovie.5.Art(poster))]</icon>
@@ -548,7 +548,7 @@
                                     <property name="Trailer">$INFO[Window(Home).Property(RecommendedMovie.5.Trailer)]</property>
                                     <property name="Runtime">$INFO[Window(Home).Property(RecommendedMovie.5.Runtime)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RecommendedMovie.5.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                             </content>
                         </control>
@@ -603,22 +603,22 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="SubString(Window(1115).Property(InfoDialog),60)" reversible="false">
-                    <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
-                    <effect type="slide" end="0,-45" time="550" />
-                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="550" />
-                    <effect type="fade" start="100" end="0" time="0" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="0" time="550" delay="550" tween="cubic" />
+                    <effect type="rotatey" center="960" end="-90" time="440" tween="cubic" easing="in" />
+                    <effect type="slide" end="0,-45" time="440" />
+                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="440" />
+                    <effect type="fade" start="100" end="0" time="0" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="0" time="440" delay="440" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="!SubString(Window(1115).Property(InfoDialog),60)" reversible="false">
-                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="550" />
-                    <effect type="fade" end="100" time="400" delay="550" />
-                    <effect type="rotatey" center="960" start="-90" end="0" time="550" delay="550" tween="cubic" />
-                    <effect type="slide" start="0,-45" end="0,0" delay="550" time="550" />
+                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="440" />
+                    <effect type="fade" end="100" time="320" delay="440" />
+                    <effect type="rotatey" center="960" start="-90" end="0" time="440" delay="440" tween="cubic" />
+                    <effect type="slide" start="0,-45" end="0,0" delay="440" time="440" />
                 </animation>
                 <animation type="Conditional" condition="![ControlGroup(6000).HasFocus | Control.HasFocus(6012) | SubString(Window(1115).Property(InfoDialog),60)]">
-                    <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="6012">
                     <include>HiddenObject</include>
@@ -665,7 +665,7 @@
                                 <control type="image">
                                     <width>894</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultTVShows.png</texture>
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.ActualIcon</info>
@@ -675,14 +675,14 @@
                                     <width>894</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="894" height="550">
                                 <control type="image">
                                     <width>894</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultTVShows.png</texture>
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.ActualIcon</info>
@@ -692,7 +692,7 @@
                                     <width>894</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -708,7 +708,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.1.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.1.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="2">
                                     <label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
@@ -722,7 +722,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.2.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.2.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="3">
                                     <label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
@@ -736,7 +736,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.3.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.3.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="4">
                                     <label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
@@ -750,7 +750,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.4.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.4.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="5">
                                     <label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
@@ -764,7 +764,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.5.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.5.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="6">
                                     <label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
@@ -778,7 +778,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.6.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.6.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="7">
                                     <label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
@@ -792,7 +792,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.7.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.7.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="8">
                                     <label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
@@ -806,7 +806,7 @@
                                     <property name="RunningTime">$INFO[Window(Home).Property(RecentMovie.8.Runtime)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RecentMovie.8.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                             </content>
                         </control>
@@ -853,7 +853,7 @@
                                 <control type="image">
                                     <width>366</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultVideo.png</texture>
                                     <aspectratio>scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -863,14 +863,14 @@
                                     <width>366</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="366" height="550">
                                 <control type="image">
                                     <width>366</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultVideo.png</texture>
                                     <aspectratio>scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -880,7 +880,7 @@
                                     <width>366</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -897,7 +897,7 @@
                                     <property name="RootPath">$INFO[Window(Home).Property(RandomMovie.1.Path)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RandomMovie.1.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="2">
                                     <label>$INFO[Window(Home).Property(RandomMovie.2.Title)]</label>
@@ -912,7 +912,7 @@
                                     <property name="RootPath">$INFO[Window(Home).Property(RandomMovie.2.Path)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RandomMovie.2.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="3">
                                     <label>$INFO[Window(Home).Property(RandomMovie.3.Title)]</label>
@@ -927,7 +927,7 @@
                                     <property name="RootPath">$INFO[Window(Home).Property(RandomMovie.3.Path)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RandomMovie.3.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="4">
                                     <label>$INFO[Window(Home).Property(RandomMovie.4.Title)]</label>
@@ -942,7 +942,7 @@
                                     <property name="RootPath">$INFO[Window(Home).Property(RandomMovie.4.Path)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.4.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RandomMovie.4.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="5">
                                     <label>$INFO[Window(Home).Property(RandomMovie.5.Title)]</label>
@@ -957,7 +957,7 @@
                                     <property name="RootPath">$INFO[Window(Home).Property(RandomMovie.5.Path)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.5.Art(fanart))]</property>
                                     <property name="Trailer">$INFO[Window(Home).Property(RandomMovie.5.Trailer)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                             </content>
                         </control>
@@ -1012,22 +1012,22 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="SubString(Window(1115).Property(InfoDialog),70)" reversible="false">
-                    <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
-                    <effect type="slide" end="0,-45" time="550" />
-                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="550" />
-                    <effect type="fade" start="100" end="0" time="0" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="0" time="550" delay="550" tween="cubic" />
+                    <effect type="rotatey" center="960" end="-90" time="440" tween="cubic" easing="in" />
+                    <effect type="slide" end="0,-45" time="440" />
+                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="440" />
+                    <effect type="fade" start="100" end="0" time="0" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="0" time="440" delay="440" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="!SubString(Window(1115).Property(InfoDialog),70)" reversible="false">
-                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="550" />
-                    <effect type="fade" end="100" time="400" delay="550" />
-                    <effect type="rotatey" center="960" start="-90" end="0" time="550" delay="550" tween="cubic" />
-                    <effect type="slide" start="0,-45" end="0,0" delay="550" time="550" />
+                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="440" />
+                    <effect type="fade" end="100" time="320" delay="440" />
+                    <effect type="rotatey" center="960" start="-90" end="0" time="440" delay="440" tween="cubic" />
+                    <effect type="slide" start="0,-45" end="0,0" delay="440" time="440" />
                 </animation>
                 <animation type="Conditional" condition="![ControlGroup(7000).HasFocus | Control.HasFocus(7012) | SubString(Window(1115).Property(InfoDialog),70)]">
-                    <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="7012">
                     <include>HiddenObject</include>
@@ -1074,7 +1074,7 @@
                                 <control type="image">
                                     <width>894</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultTVShows.png</texture>
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.ActualIcon</info>
@@ -1084,14 +1084,14 @@
                                     <width>894</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="894" height="550">
                                 <control type="image">
                                     <width>894</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true">DefaultTVShows.png</texture>
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.ActualIcon</info>
@@ -1101,7 +1101,7 @@
                                     <width>894</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -1116,7 +1116,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.1.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="2">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.2.Title)]</label>
@@ -1129,7 +1129,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.2.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.2.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="3">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.3.Title)]</label>
@@ -1142,7 +1142,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.3.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.3.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="4">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.4.Title)]</label>
@@ -1155,7 +1155,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.4.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.4.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="5">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.5.Title)]</label>
@@ -1168,7 +1168,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.5.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.5.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="6">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.6.Title)]</label>
@@ -1181,7 +1181,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.6.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.6.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="7">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.7.Title)]</label>
@@ -1194,7 +1194,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.7.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.7.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="8">
                                     <label>$INFO[Window(Home).Property(RecentEpisode.8.Title)]</label>
@@ -1207,7 +1207,7 @@
                                     <property name="Rating">$INFO[Window(Home).Property(RecentEpisode.8.Rating)]</property>
                                     <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.8.EpisodeNo)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                             </content>
                         </control>
@@ -1490,22 +1490,22 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="SubString(Window(1115).Property(InfoDialog),80)" reversible="false">
-                    <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
-                    <effect type="slide" end="0,-45" time="550" />
-                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="550" />
-                    <effect type="fade" start="100" end="0" time="0" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="0" time="550" delay="550" tween="cubic" />
+                    <effect type="rotatey" center="960" end="-90" time="440" tween="cubic" easing="in" />
+                    <effect type="slide" end="0,-45" time="440" />
+                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="440" />
+                    <effect type="fade" start="100" end="0" time="0" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="0" time="440" delay="440" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="!SubString(Window(1115).Property(InfoDialog),80)" reversible="false">
-                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="550" />
-                    <effect type="fade" end="100" time="400" delay="550" />
-                    <effect type="rotatey" center="960" start="-90" end="0" time="550" delay="550" tween="cubic" />
-                    <effect type="slide" start="0,-45" end="0,0" delay="550" time="550" />
+                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="440" />
+                    <effect type="fade" end="100" time="320" delay="440" />
+                    <effect type="rotatey" center="960" start="-90" end="0" time="440" delay="440" tween="cubic" />
+                    <effect type="slide" start="0,-45" end="0,0" delay="440" time="440" />
                 </animation>
                 <animation type="Conditional" condition="![ControlGroup(8000).HasFocus | Control.HasFocus(8012) | SubString(Window(1115).Property(InfoDialog),80)]">
-                    <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="1160,412" />
+                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="1160,412" />
                 </animation>
                 <control type="button" id="8012">
                     <include>HiddenObject</include>
@@ -1551,7 +1551,7 @@
                                 <control type="image">
                                     <width>550</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true" />
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -1561,14 +1561,14 @@
                                     <width>550</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="550" height="550">
                                 <control type="image">
                                     <width>550</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true" />
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -1578,7 +1578,7 @@
                                     <width>550</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -1593,7 +1593,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.1.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.1.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.1.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="2">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1606,7 +1606,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.2.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.2.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.2.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="3">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1619,7 +1619,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.3.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.3.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.3.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="4">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1632,7 +1632,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.4.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.4.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.4.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="5">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1645,7 +1645,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.5.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.5.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.5.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="6">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1658,7 +1658,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.6.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.6.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.6.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="7">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1671,7 +1671,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.7.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.7.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.7.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                                 <item id="8">
                                     <icon>DefaultMusicAlbum.png</icon>
@@ -1684,7 +1684,7 @@
                                     <property name="Year">$INFO[Window(Home).Property(RandomAlbum.8.Year)]</property>
                                     <property name="Album_Description">$INFO[Window(Home).Property(RandomAlbum.8.Album_Description)]</property>
                                     <property name="Path">$INFO[Window(Home).Property(RandomAlbum.8.Play)]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                 </item>
                             </content>
                         </control>
@@ -1964,22 +1964,22 @@
                 <width>2325</width>
                 <height>825</height>
                 <animation type="Conditional" condition="SubString(Window(1115).Property(InfoDialog),90)" reversible="false">
-                    <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
-                    <effect type="slide" end="0,-45" time="550" />
-                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="550" />
-                    <effect type="fade" start="100" end="0" time="0" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="0" time="550" delay="550" tween="cubic" />
+                    <effect type="rotatey" center="960" end="-90" time="440" tween="cubic" easing="in" />
+                    <effect type="slide" end="0,-45" time="440" />
+                    <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="440" />
+                    <effect type="fade" start="100" end="0" time="0" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="0" time="440" delay="440" tween="cubic" />
                 </animation>
                 <animation type="Conditional" condition="!SubString(Window(1115).Property(InfoDialog),90)" reversible="false">
-                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="550" />
-                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="550" />
-                    <effect type="fade" end="100" time="400" delay="550" />
-                    <effect type="rotatey" center="960" start="-90" end="0" time="550" delay="550" tween="cubic" />
-                    <effect type="slide" start="0,-45" end="0,0" delay="550" time="550" />
+                    <effect type="rotatey" center="960" end="90" time="0" tween="cubic" easing="in" delay="440" />
+                    <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="440" />
+                    <effect type="fade" end="100" time="320" delay="440" />
+                    <effect type="rotatey" center="960" start="-90" end="0" time="440" delay="440" tween="cubic" />
+                    <effect type="slide" start="0,-45" end="0,0" delay="440" time="440" />
                 </animation>
                 <animation type="Conditional" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9012) | SubString(Window(1115).Property(InfoDialog),90)]">
-                    <effect type="fade" start="100" end="80" time="500" tween="cubic" easing="inout" />
-                    <effect type="zoom" start="100" end="70" time="500" tween="cubic" easing="inout" center="auto" />
+                    <effect type="fade" start="100" end="80" time="400" tween="cubic" easing="inout" />
+                    <effect type="zoom" start="100" end="70" time="400" tween="cubic" easing="inout" center="auto" />
                 </animation>
                 <control type="button" id="9012">
                     <include>HiddenObject</include>
@@ -2026,7 +2026,7 @@
                                 <control type="image">
                                     <width>550</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true" />
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -2036,14 +2036,14 @@
                                     <width>550</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                                 </control>
                             </itemlayout>
                             <focusedlayout width="550" height="550">
                                 <control type="image">
                                     <width>550</width>
                                     <height>550</height>
-                                    <animation effect="fade" time="600">Focus</animation>
+                                    <animation effect="fade" time="480">Focus</animation>
                                     <texture background="true" />
                                     <aspectratio align="center">scale</aspectratio>
                                     <info>ListItem.Icon</info>
@@ -2053,7 +2053,7 @@
                                     <width>550</width>
                                     <height>40</height>
                                     <texture>common/bgcolor.png</texture>
-                                    <animation effect="fade" end="80" start="100" time="50" condition="true">Conditional</animation>
+                                    <animation effect="fade" end="80" start="100" time="40" condition="true">Conditional</animation>
                                 </control>
                             </focusedlayout>
                             <content>
@@ -2065,7 +2065,7 @@
                                     <property name="NavItem">item1.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.1.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.1.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.1.LibraryPath)]</property>
                                 </item>
                                 <item id="2">
@@ -2076,7 +2076,7 @@
                                     <property name="NavItem">item2.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.2.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.2.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.2.LibraryPath)]</property>
                                 </item>
                                 <item id="3">
@@ -2087,7 +2087,7 @@
                                     <property name="NavItem">item3.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.3.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.3.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.3.LibraryPath)]</property>
                                 </item>
                                 <item id="4">
@@ -2098,7 +2098,7 @@
                                     <property name="NavItem">item4.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.4.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.4.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.4.LibraryPath)]</property>
                                 </item>
                                 <item id="5">
@@ -2109,7 +2109,7 @@
                                     <property name="NavItem">item5.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.5.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.5.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.5.LibraryPath)]</property>
                                 </item>
                                 <item id="6">
@@ -2120,7 +2120,7 @@
                                     <property name="NavItem">item6.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.6.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.6.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.6.LibraryPath)]</property>
                                 </item>
                                 <item id="7">
@@ -2131,7 +2131,7 @@
                                     <property name="NavItem">item7.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.7.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.7.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.7.LibraryPath)]</property>
                                 </item>
                                 <item id="8">
@@ -2142,7 +2142,7 @@
                                     <property name="NavItem">item8.png</property>
                                     <property name="Artist_Description">$INFO[Window(Home).Property(RandomArtist.8.Artist_Description)]</property>
                                     <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.8.Art(fanart))]</property>
-                                    <onclick>-</onclick>
+                                    <onclick>noop</onclick>
                                     <property name="Path">$INFO[Window(Home).Property(RandomArtist.8.LibraryPath)]</property>
                                 </item>
                             </content>
@@ -2441,18 +2441,18 @@
             <animation effect="slide" end="0,300" time="0" condition="Window.IsActive(1147)">Conditional</animation>
             <posy>105</posy>
             <animation type="Conditional" condition="!IsEmpty(Window(1115).Property(InfoDialog))" reversible="false">
-                <effect type="rotatey" center="960" end="-90" time="550" tween="cubic" easing="in" />
-                <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="550" />
-                <effect type="fade" end="100" time="0" delay="550" />
-                <effect type="rotatey" center="960" start="90" end="0" time="550" delay="550" tween="cubic" />
-                <effect type="slide" start="0,-45" end="0,0" delay="550" time="550" />
+                <effect type="rotatey" center="960" end="-90" time="440" tween="cubic" easing="in" />
+                <effect type="rotatey" center="960" start="-90" end="90" time="0" delay="440" />
+                <effect type="fade" end="100" time="0" delay="440" />
+                <effect type="rotatey" center="960" start="90" end="0" time="440" delay="440" tween="cubic" />
+                <effect type="slide" start="0,-45" end="0,0" delay="440" time="440" />
             </animation>
             <animation type="Conditional" condition="IsEmpty(Window(1115).Property(InfoDialog))" reversible="false">
-                <effect type="rotatey" center="960" end="90" time="550" tween="cubic" easing="in" />
-                <effect type="slide" end="0,-45" time="550" />
-                <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="550" />
-                <effect type="fade" start="100" end="0" time="0" delay="550" />
-                <effect type="rotatey" center="960" start="-90" end="0" time="0" delay="550" tween="cubic" />
+                <effect type="rotatey" center="960" end="90" time="440" tween="cubic" easing="in" />
+                <effect type="slide" end="0,-45" time="440" />
+                <effect type="rotatey" center="960" start="90" end="-90" time="0" delay="440" />
+                <effect type="fade" start="100" end="0" time="0" delay="440" />
+                <effect type="rotatey" center="960" start="-90" end="0" time="0" delay="440" tween="cubic" />
             </animation>
             <include>FeaturedPanel</include>
             <control type="image">
@@ -2643,38 +2643,38 @@
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[137]</label>
-                        <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(3000).HasFocus">Conditional</animation>
-                        <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(3012)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[31163]</label>
-                        <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(5000).HasFocus">Conditional</animation>
-                        <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(5000).HasFocus">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(5012)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(5000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[31502]</label>
-                        <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(6000).HasFocus">Conditional</animation>
-                        <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(6000).HasFocus">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(6012)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(6000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[31503]</label>
-                        <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(7000).HasFocus">Conditional</animation>
-                        <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(7000).HasFocus">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(7012)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(7000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[132]</label>
-                        <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(8000).HasFocus">Conditional</animation>
-                        <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(8000).HasFocus">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(8012)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(8000).HasFocus">Conditional</animation>
                     </control>
                     <control type="label">
                         <include>FeaturedTopLabel</include>
                         <label>$LOCALIZE[31501]</label>
-                        <animation effect="fade" start="100" end="50" time="300" tween="cubic" easing="inout" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-                        <animation effect="zoom" start="100" end="120" time="300" center="auto" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="240" tween="cubic" easing="inout" condition="!Control.HasFocus(9012)">Conditional</animation>
+                        <animation effect="zoom" start="100" end="120" time="240" center="auto" tween="cubic" easing="inout" condition="ControlGroup(9000).HasFocus">Conditional</animation>
                     </control>
                 </control>
             </control>

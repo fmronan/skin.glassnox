@@ -4,19 +4,19 @@
     <backgroundcolor>backgroundcolor</backgroundcolor>
     <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
     <animation type="WindowOpen" reversible="false" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(settings)]">
-        <effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" />
-        <effect type="fade" end="100" time="300" />
+        <effect type="zoom" start="150" end="100" center="960,540" time="240" tween="cubic" />
+        <effect type="fade" end="100" time="240" />
     </animation>
     <animation type="WindowClose" reversible="false" condition="![Window.Next(SettingsCategory.xml) | Window.Next(1116) | Window.Next(settings)]">
-        <effect type="fade" start="100" end="0" time="300" />
-        <effect type="zoom" start="100" end="130" center="960,540" time="300" tween="cubic" easing="in" />
+        <effect type="fade" start="100" end="0" time="240" />
+        <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
     </animation>
     <controls>
         <include>CommonSettingsBackground</include>
         <include>CommonMediaPlayingBackground</include>
         <include condition="!Skin.HasSetting(disablefloor)">Furniture_SettingsFloor</include>
         <control type="group">
-            <animation effect="zoom" end="91" center="960,360" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
+            <animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
             <include>Furniture_SettingsBackPanel</include>
             <control type="list" id="9000">
                 <posx>63</posx>
@@ -33,7 +33,7 @@
                         <posx>30</posx>
                         <width>306</width>
                         <height>74</height>
-                        <font>Font_Bold20</font>
+                        <font>Font_Bold20_Caps</font>
                         <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -43,41 +43,46 @@
                         <width>324</width>
                         <height>74</height>
                         <texture>views/tripanel/listselect_fo.png</texture>
-                        <animation effect="fade" start="100" end="50" time="50" condition="!Control.HasFocus(9000)">Conditional</animation>
+                        <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     </control>
                     <control type="label">
                         <posx>30</posx>
                         <width>306</width>
                         <height>74</height>
-                        <font>Font_Bold20</font>
+                        <font>Font_Bold20_Caps</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
                 <content>
                     <item id="1">
                         <label>128</label>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                     </item>
                     <item id="2">
                         <label>31682</label>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                     </item>
                     <item id="6">
                         <label>31230</label>
+                        <onclick>noop</onclick>
+                    </item>
+                    <item id="7">
+                        <label>31482</label>
                         <onclick>-</onclick>
+                        <visible>!Skin.HasSetting(UseCustomCases)</visible>
                     </item>
                     <item id="8">
                         <label>31870</label>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                     </item>
                     <item id="9">
                         <label>470</label>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                     </item>
                     <item id="10">
                         <label>31641</label>
-                        <onclick>-</onclick>
+                        <onclick>noop</onclick>
                     </item>
 					<item id="11">
 						<label>Reset Skin</label>
@@ -155,12 +160,12 @@
                         <onclick>Skin.ToggleSetting(NextAiredInfo)</onclick>
                         <selected>!Skin.HasSetting(NextAiredInfo)</selected>
                     </control>
-                  <!--  <control type="radiobutton" id="287">
+                    <control type="radiobutton" id="287">
                         <label>53013</label>
                         <include>Default_SettingRadioButton</include>
                         <onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
                         <selected>!Skin.HasSetting(UseCustomCases)</selected>
-                    </control>-->
+                    </control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>
@@ -175,12 +180,805 @@
                         <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
                     </control>
                 </control>
+                <control type="grouplist" id="9011">
+                    <visible>Container(9000).Hasfocus(7)</visible>
+                    <posx>387</posx>
+                    <posy>195</posy>
+                    <width>809</width>
+                    <height>732</height>
+                    <itemgap>-1</itemgap>
+                    <pagecontrol>-</pagecontrol>
+                    <onleft>9000</onleft>
+                    <onright>9006</onright>
+                    <onup>9011</onup>
+                    <ondown>9011</ondown>
+                    <control type="radiobutton" id="401">
+                        <label>clearcase</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(ClearBdOption)</onclick>
+                        <selected>Skin.HasSetting(ClearBdOption)</selected>
+                    </control>
+                    <control type="radiobutton" id="402">
+                        <label>extention</label>
+                        <include>Default_SettingRadioButtonShort</include>
+                        <onclick>Skin.ToggleSetting(ExtentionOpt)</onclick>
+                        <selected>Skin.HasSetting(ExtentionOpt)</selected>
+                    </control>
+				</control>	
+                <control type="grouplist" id="9006">
+                    <visible>Container(9000).Hasfocus(7)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					<posx>1058</posx>
+					<posy>210</posy>
+					<width>1262</width>
+					<height>1050</height>
+					<onup>9011</onup>
+					<ondown>9000</ondown>
+					<control type="wraplist" id="403">
+					<posx>0</posx>
+					<posy>180</posy>
+					<height>750</height>
+					<width>650</width>
+					<onup>-</onup>
+					<ondown>-</ondown>
+					<onleft>403</onleft>
+					<onright>403</onright>
+					<viewtype>list</viewtype>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="back" easing="out">500</scrolltime>
+					<movement>2</movement>
+					<focusposition>0</focusposition>
+					<!--<visible allowhiddenfocus="true">![ControlGroup(150).HasFocus | ControlGroup(165).HasFocus]</visible>-->
+				  <itemlayout width="650" height="750">
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[DefaultCustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(1)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[480CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(2)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[540CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(3)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[576CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(4)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[720CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(5)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[1080CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(6)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[blurayCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(7)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[3dCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(8)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[dvCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(9)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[dvdCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(10)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[h264CustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(11)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[hddvdCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(12)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[mkvCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(13)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[movCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(14)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[mp4CustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(15)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[mpegCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(16)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[QtCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(17)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[TVseriesCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(18)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[MusicCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(19)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[wmvCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(20)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[xvidCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(21)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+							<posx>140</posx>
+							<posy>116</posy>
+							<width>399</width>
+							<height>600</height>
+							<texture background="true" diffuse="thumbs/thumb_mask.png">DefaultVideoBigPoster.png</texture>
+						</control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[DefaultCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(1)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[480CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(2)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[540CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(3)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[576CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(4)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[720CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(5)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[1080CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(6)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[blurayCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(7)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[3dCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(8)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[dvCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(9)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[dvdCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(10)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[h264CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(11)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[hddvdCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(12)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mkvCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(13)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[movCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(14)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mp4CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(15)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mpegCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(16)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[QtCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(17)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[TVseriesCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(18)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[MusicCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(19)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[wmvCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(20)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[xvidCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(21)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					  <posx>392</posx>
+					<posy>-3</posy>
+					<width>45</width>
+					<height>45</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				  </control>
+				  </itemlayout>
+				  <focusedlayout width="650" height="750">
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[DefaultCustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(1)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[480CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(2)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[540CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(3)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[576CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(4)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[720CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(5)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[1080CustomColor]</colordiffuse>
+						<visible>Container(403).HasFocus(6)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[blurayCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(7)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[3dCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(8)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[dvCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(9)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[dvdCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(10)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[h264CustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(11)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[hddvdCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(12)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[mkvCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(13)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[movCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(14)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[mp4CustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(15)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[mpegCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(16)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[QtCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(17)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[TVseriesCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(18)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[MusicCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(19)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[wmvCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(20)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					  <control type="image">
+						<include>CaseSelectorDimensions</include>
+						<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/back_white.png</texture>
+						<colordiffuse>$VAR[xvidCustomColor]</colordiffuse>
+						<visible>Skin.HasSetting(ExtentionOpt)+Container(403).HasFocus(21)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+					  </control>
+					<control type="image">
+							<posx>140</posx>
+							<posy>116</posy>
+							<width>399</width>
+							<height>600</height>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<texture background="true" diffuse="thumbs/thumb_mask.png">DefaultVideoBigPoster.png</texture>
+						</control>
+				 <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[DefaultCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(1)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[480CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(2)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[540CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(3)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[576CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(4)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[720CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(5)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[1080CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(6)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[blurayCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(7)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[3dCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(8)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[dvCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(9)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[dvdCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(10)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[h264CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(11)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[hddvdCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(12)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mkvCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(13)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[movCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(14)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mp4CustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(15)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mpegCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(16)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[QtCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(17)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[TVseriesCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(18)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[MusicCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(19)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[wmvCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(20)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[xvidCustomColor]</colordiffuse>
+					<visible>Container(403).HasFocus(21)| Window.IsActive(1138)| Window.IsActive(111)</visible>
+				  </control>
+				  <control type="label">
+					<posx>322</posx>
+					<posy>-3</posy>
+					<width>205</width>
+					<height>45</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_ShowcaseMainLabel2</font>
+					<label background="true">$INFO[ListItem.Label]</label>
+				  </control>
+				  <control type="image">
+					 <posx>392</posx>
+					<posy>-3</posy>
+					<width>45</width>
+					<height>45</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+				  </control>
+				  </focusedlayout>
+				  <content>
+				 <item id="1">
+					<label>Default</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,default_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+				  </item>
+				  <item id="2">
+					<label>480p</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,480_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>!Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="3">
+					<label>540p</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,540_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>!Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="4">
+					<label>576p</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,576_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>!Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="5">
+					<label>720p</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,720_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>!Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="6">
+					<label>1080i</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,1080_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>!Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="7">
+					<label>Bluray</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,bluray_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="8">
+					<label>3D</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,3d_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="9">
+					<label>DV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,dv_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="10">
+					<label>DVD</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,dvd_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="11">
+					<label>H264</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,h264_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="12">
+					<label>Hd dvd</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,hddvd_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="13">
+					<label>MKV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mkv_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="14">
+					<label>MOV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mov_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="15">
+					<label>Mp4</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mp4_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="16">
+					<label>Mpeg</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mpeg_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="17">
+					<label>Qt</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,Qt_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="18">
+					<label>Tv Shows</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,TVseries_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="19">
+					<label>Music</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,Music_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="20">
+					<label>WMV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,wmv_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				  <item id="21">
+					<label>XVID</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,xvid_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<!--<onclick>Skin.SetString(custom_case,case_480)</onclick>
+					<onclick>Skin.SetString(custom_codec,codec_480)</onclick>-->
+					<visible>Skin.HasSetting(ExtentionOpt)</visible>
+				  </item>
+				</content>
+			</control>
+		</control>
                 <control type="grouplist" id="9002">
                     <visible>Container(9000).Hasfocus(2)</visible>
                     <posx>387</posx>
                     <posy>195</posy>
                     <width>1469</width>
-                    <height>722</height>
+                    <height>732</height>
                     <itemgap>-1</itemgap>
                     <pagecontrol>60</pagecontrol>
                     <onleft>9000</onleft>
@@ -197,6 +995,13 @@
                         <include>Default_SettingButton</include>
                         <label>$LOCALIZE[31600]</label>
                         <onclick>ActivateWindow(1124)</onclick>
+                    </control>
+                    <control type="button" id="526">
+                        <include>Default_SettingButton</include>
+                        <label>$LOCALIZE[31010]</label>
+                        <onclick>SetProperty(ReturnToHome,true,home)</onclick>
+                        <onclick>ActivateWindow(home)</onclick>
+                        <onclick>ActivateWindow(1120)</onclick>
                     </control>
                     <control type="button" id="457">
                         <label>31877</label>
@@ -966,7 +1771,7 @@
         <control type="image">
             <include>FullscreenDimensions</include>
             <texture>common/bgcolor.png</texture>
-            <animation effect="fade" start="100" end="80" time="50" condition="true">Conditional</animation>
+            <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
             <visible>Window.IsActive(1116)</visible>
             <include>Animation_VisibleChange400</include>
         </control>
