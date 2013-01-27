@@ -972,6 +972,7 @@
     <include name="AutoConfig">
 		<onload>Skin.ResetSettings</onload>
 		<onload>Skin.ToggleSetting(TopBarToolTip)</onload>
+		<onload>Skin.ToggleSetting(UseCustomCases)</onload>
 		<onload>Skin.SetString(panel_white_programs,9cb20000)</onload>
         <onload>Skin.SetString(panel_white_music,9cb20000)</onload>
         <onload>Skin.SetString(panel_white_videolibrary,9cb20000)</onload>
