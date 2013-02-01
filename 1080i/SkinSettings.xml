@@ -67,11 +67,11 @@
                         <label>31230</label>
                         <onclick>noop</onclick>
                     </item>
-                    <item id="7">
+                  <!--  <item id="7">
                         <label>31482</label>
                         <onclick>-</onclick>
                         <visible>!Skin.HasSetting(UseCustomCases)</visible>
-                    </item>
+                    </item>-->
                     <item id="8">
                         <label>31870</label>
                         <onclick>noop</onclick>
@@ -160,12 +160,12 @@
                         <onclick>Skin.ToggleSetting(NextAiredInfo)</onclick>
                         <selected>!Skin.HasSetting(NextAiredInfo)</selected>
                     </control>
-                    <control type="radiobutton" id="287">
+                   <!-- <control type="radiobutton" id="287">
                         <label>53013</label>
                         <include>Default_SettingRadioButton</include>
                         <onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
                         <selected>!Skin.HasSetting(UseCustomCases)</selected>
-                    </control>
+                    </control>-->
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>
