@@ -221,22 +221,22 @@
                         <onclick>ActivateWindow(1134)</onclick>
                     </control>
                     <control type="button" id="27">
-                        <include>Objects_CustomizerSettingsButton</include>
-                        <label>31703</label>
-                        <onclick>ActivateWindow(1161)</onclick>
-                    </control>
-                    <control type="button" id="270">
-                        <include>Objects_CustomizerSettingsButton</include>
-                        <label>31704</label>
-                        <onclick>ActivateWindow(1150)</onclick>
-                    </control>
-                    <control type="button" id="28">
 						<include>Objects_CustomizerSettingsButton</include>
-						<label>42206</label>
+						<label>53015</label>
 						<onclick>SetProperty(colordialog,ItemToEdit.Color,1124)</onclick>
 						<onclick>ActivateWindow(1138)</onclick>
 					</control>
                     <control type="button" id="28">
+                        <include>Objects_CustomizerSettingsButton</include>
+                        <label>31703</label>
+                        <onclick>ActivateWindow(1161)</onclick>
+                    </control>
+                    <control type="button" id="280">
+                        <include>Objects_CustomizerSettingsButton</include>
+                        <label>31704</label>
+                        <onclick>ActivateWindow(1150)</onclick>
+                    </control>                    
+                    <control type="button" id="29">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31807</label>
                         <onclick>SetProperty(IconTarget,Icon,1124)</onclick>
@@ -244,16 +244,16 @@
                     </control>
                     <control type="button" id="30">
 						<include>Objects_CustomizerSettingsButton</include>
-						<label>42206</label>
+						<label>53016</label>
 						<onclick>SetProperty(colordialog,ItemToEdit.IconColor,1124)</onclick>
 						<onclick>ActivateWindow(1138)</onclick>
 					</control>
-                    <control type="button" id="30">
+                    <control type="button" id="31">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31808</label>
                         <onclick>ActivateWindow(1151)</onclick>
                     </control>
-                    <control type="button" id="31">
+                    <control type="button" id="32">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>$LOCALIZE[31027]</label>
                         <onclick>Skin.Reset(ItemToEdit.Type)</onclick>
@@ -265,6 +265,8 @@
                         <onclick>Skin.Reset(ItemToEdit.Widget2)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Widget2Title)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Icon)</onclick>
+                        <onclick>Skin.Reset(ItemToEdit.Color)</onclick>
+                        <onclick>Skin.Reset(ItemToEdit.IconColor)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Disable)</onclick>
                         <onclick>Skin.SetString(ItemToEdit.InfoLine,none)</onclick>
                         <onclick>Skin.SetString(ItemToEdit.SubMenu,none)</onclick>

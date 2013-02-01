@@ -1616,6 +1616,7 @@
     </variable>
     <variable name="ShowcaseCase-7Var">
         <value condition="SubString(Container(501).ListItem(-7).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-7).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-7).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-7).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-7).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-7).FileExtension].png</value>
@@ -1623,6 +1624,7 @@
     </variable>
     <variable name="ShowcaseCase-6Var">
         <value condition="SubString(Container(501).ListItem(-6).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-6).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-6).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-6).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-6).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-6).FileExtension].png</value>
@@ -1630,6 +1632,7 @@
     </variable>
     <variable name="ShowcaseCase-5Var">
         <value condition="SubString(Container(501).ListItem(-5).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-5).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-5).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-5).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-5).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-5).FileExtension].png</value>
@@ -1637,6 +1640,7 @@
     </variable>
     <variable name="ShowcaseCase-4Var">
         <value condition="SubString(Container(501).ListItem(-4).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-4).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-4).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-4).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-4).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-4).FileExtension].png</value>
@@ -1644,6 +1648,7 @@
     </variable>
     <variable name="ShowcaseCase-3Var">
         <value condition="SubString(Container(501).ListItem(-3).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-3).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-3).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-3).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-3).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-3).FileExtension].png</value>
@@ -1651,6 +1656,7 @@
     </variable>
     <variable name="ShowcaseCase-2Var">
         <value condition="SubString(Container(501).ListItem(-2).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-2).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-2).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-2).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-2).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-2).FileExtension].png</value>
@@ -1658,6 +1664,7 @@
     </variable>
     <variable name="ShowcaseCase-1Var">
         <value condition="SubString(Container(501).ListItem(-1).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(-1).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-1).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-1).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(-1).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-1).FileExtension].png</value>
@@ -1665,6 +1672,7 @@
     </variable>
     <variable name="ShowcaseCase0Var">
         <value condition="SubString(Container(501).ListItem(0).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(0).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(0).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(0).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(0).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(0).FileExtension].png</value>
@@ -1672,6 +1680,7 @@
     </variable>
     <variable name="ShowcaseCase1Var">
         <value condition="SubString(Container(501).ListItem(1).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(1).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(1).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(1).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(1).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(1).FileExtension].png</value>
@@ -1679,6 +1688,7 @@
     </variable>
     <variable name="ShowcaseCase2Var">
         <value condition="SubString(Container(501).ListItem(2).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(2).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(2).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(2).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(2).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(2).FileExtension].png</value>
@@ -1686,6 +1696,7 @@
     </variable>
     <variable name="ShowcaseCase3Var">
         <value condition="SubString(Container(501).ListItem(3).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(3).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(3).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(3).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(3).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(3).FileExtension].png</value>
@@ -1693,6 +1704,7 @@
     </variable>
     <variable name="ShowcaseCase4Var">
         <value condition="SubString(Container(501).ListItem(4).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(4).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(4).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(4).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(4).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(4).FileExtension].png</value>
@@ -1700,6 +1712,7 @@
     </variable>
     <variable name="ShowcaseCase5Var">
         <value condition="SubString(Container(501).ListItem(5).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(5).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(5).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(5).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(5).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(5).FileExtension].png</value>
@@ -1707,6 +1720,7 @@
     </variable>
     <variable name="ShowcaseCase6Var">
         <value condition="SubString(Container(501).ListItem(6).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(6).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(6).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(6).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(6).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(6).FileExtension].png</value>
@@ -1714,6 +1728,7 @@
     </variable>
     <variable name="ShowcaseCase7Var">
         <value condition="SubString(Container(501).ListItem(7).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(7).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(7).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(7).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(7).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(7).FileExtension].png</value>
@@ -1721,6 +1736,7 @@
     </variable>
     <variable name="ShowcaseCase8Var">
         <value condition="SubString(Container(501).ListItem(8).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(8).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(8).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(8).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(8).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(8).FileExtension].png</value>
@@ -1728,6 +1744,7 @@
     </variable>
     <variable name="ShowcaseCase9Var">
         <value condition="SubString(Container(501).ListItem(9).Filename,.3D.)">3d.png</value>
+        <value condition="SubString(Container(501).ListItem(9).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.dvd.)">576p.png</value>
         <value condition="!IsEmpty(Container(501).ListItem(9).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(9).FileExtension].png</value>
@@ -1737,6 +1754,7 @@
 		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
 		<value condition="!Skin.HasSetting(UseCustomCases)">whitecase.png</value>
         <value condition="SubString(ListItem.Filename,.3D.)">3d.png</value>
+        <value condition="SubString(ListItem.Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(ListItem.Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(ListItem.Filename,.dvd.))">576p.png</value>
 		<value condition="!IsEmpty(ListItem.FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[ListItem.FileExtension].png</value>

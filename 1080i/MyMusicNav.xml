@@ -97,14 +97,16 @@
                 </control>
                 <control type="button" id="7000">
                     <include>HiddenObject</include>
+                    <onfocus>SetProperty(ControlOpenCase,True,Home)</onfocus>
+                    <onfocus>AlarmClock(CleanOpenCase,ClearProperty(ControlOpenCase,Home),00:05,silent)</onfocus>
                     <onfocus condition="Substring(Control.GetFocus(4421),infopanelon)">SetFocus(9000)</onfocus>
-                    <onup>9000</onup>
-                    <onleft condition="Control.IsVisible(509)">Control.Move(509,-1)</onleft>
-                    <onright condition="Control.IsVisible(509)">Control.Move(509,1)</onright>
-                    <onleft>50</onleft>
-                    <onright>50</onright>
-                    <ondown>50</ondown>
-                    <onback>50</onback>
+                    <onup condition="IsEmpty(Window(home).Property(ControlOpenCase))">9000</onup>
+                    <onleft condition="Control.IsVisible(509)+IsEmpty(Window(home).Property(ControlOpenCase))">Control.Move(509,-1)</onleft>
+                    <onright condition="Control.IsVisible(509)+IsEmpty(Window(home).Property(ControlOpenCase))">Control.Move(509,1)</onright>
+                    <onleft condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onleft>
+                    <onright condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onright>
+                    <ondown condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</ondown>
+                    <onback condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onback>
                     <onclick condition="Container.Content(artists) | Container.Content(albums)">SetFocus(50)</onclick>
                     <onclick condition="Container.Content(artists) | Container.Content(albums)">Select</onclick>
                     <onclick>PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>

@@ -160,12 +160,12 @@
                         <onclick>Skin.ToggleSetting(NextAiredInfo)</onclick>
                         <selected>!Skin.HasSetting(NextAiredInfo)</selected>
                     </control>
-                  <!-- <control type="radiobutton" id="287">
+                    <control type="radiobutton" id="287">
                         <label>53013</label>
                         <include>Default_SettingRadioButton</include>
                         <onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
                         <selected>!Skin.HasSetting(UseCustomCases)</selected>
-                    </control>-->
+                    </control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>

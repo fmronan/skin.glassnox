@@ -93,7 +93,7 @@
                         <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
                         <onclick>Dialog.Close(1137)</onclick>
                         <onclick condition="![Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),movies)]">ActivateWindow(1146)</onclick>
-                        <onclick condition="Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),movies)">ActivateWindow(1148)</onclick>
+                        <onclick condition="Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),movies)">ActivateWindow(1188)</onclick>
                     </control>
                     <control type="button" id="12">
                         <width>175</width>

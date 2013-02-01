@@ -431,7 +431,7 @@
             <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
         </control>
         <control type="group">
-            <visible>Stringcompare(Skin.String(MusicDiscArt),roll)</visible>
+            <visible>!Stringcompare(Skin.String(MusicDiscArt),none)</visible>
             <include>Animation_VisibleChange400</include>
             <animation type="WindowClose" reversible="false">
                 <effect type="fade" start="100" end="0" time="240" />
@@ -445,9 +445,13 @@
                 <fadetime>3700</fadetime>
                 <aspectratio align="bottom">keep</aspectratio>
                 <texture background="true">$VAR[cdARTVar]</texture>
-                <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7679)" reversible="true">
-                    <effect type="slide" start="0,0" end="-1400,0" delay="15500" time="1840" tween="cubic" easing="inout" />
-                    <effect type="rotate" start="0" center="2710,832" end="720" delay="15200" time="1840" tween="cubic" easing="inout" />
+                <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7679)+Control.HasFocus(7000)" reversible="true">
+                    <effect type="slide" start="0,0" end="-1400,0" delay="6500" time="1840" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,832" end="720" delay="6200" time="1840" tween="cubic" easing="inout" />
+                </animation>
+                <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7679)+!Control.HasFocus(7000)" reversible="true">
+                    <effect type="slide" start="0,0" end="-1400,0" delay="1200" time="1840" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,832" end="720" delay="1000" time="1840" tween="cubic" easing="inout" />
                 </animation>
             </control>
             <control type="image">
@@ -459,9 +463,13 @@
                 <colordiffuse>22FFFFFF</colordiffuse>
                 <aspectratio align="top">keep</aspectratio>
                 <texture background="true" flipy="true">$VAR[cdARTVar]</texture>
-                <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7679)" reversible="true">
-                    <effect type="slide" start="0,0" end="-1400,0" delay="15500" time="1840" tween="cubic" easing="inout" />
-                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="15200" time="1840" tween="cubic" easing="inout" />
+                <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7679)+Control.HasFocus(7000)" reversible="true">
+                    <effect type="slide" start="0,0" end="-1400,0" delay="6500" time="1840" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="6200" time="1840" tween="cubic" easing="inout" />
+                </animation>
+                <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7679)+!Control.HasFocus(7000)" reversible="true">
+                    <effect type="slide" start="0,0" end="-1400,0" delay="1200" time="1840" tween="cubic" easing="inout" />
+                    <effect type="rotate" start="0" center="2710,1112" end="-720" delay="1000" time="1840" tween="cubic" easing="inout" />
                 </animation>
             </control>
         </control> 
@@ -882,18 +890,11 @@
             <aspectratio align="bottom">keep</aspectratio>
             <texture background="true" fallback="common/cdart/default.png">$VAR[cdARTVar]</texture>
             <visible>Control.IsVisible(509)</visible>
-            <visible>Stringcompare(Skin.String(MusicDiscArt),roll)</visible>
-            <animation type="Conditional" condition="Control.IsVisible(1970)+Control.IsVisible(7679)" reversible="false">
+            <visible>!Stringcompare(Skin.String(CDCase),none)+Stringcompare(Skin.String(MusicDiscArt),roll)</visible>
+            <animation type="Conditional" condition="Control.IsVisible(1970)+Control.IsVisible(7679)+Control.HasFocus(7000)" reversible="false">
                <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="auto" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="auto" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
-               <effect type="slide" start="0,0" end="150,0" delay="6500" time="4300" tween="cubic" easing="inout"/>
-               <effect type="slide" start="0,0" end="150,25" delay="11000" time="2300" tween="cubic" easing="inout"/>
-               <effect type="slide" start="0,0" end="0,-15" delay="12200" time="100" tween="cubic" easing="inout"/>
-               <effect type="slide" start="0,0" end="0,15" delay="12100" time="100" tween="cubic" easing="inout"/>
-               <effect type="rotate" start="0" center="auto" end="-360" delay="11500" time="2500" tween="cubic" easing="inout"/>
-			   <effect type="slide" start="0,0" end="1000,0" delay="13500" time="2300" tween="cubic" easing="inout"/>
-               <effect type="rotate" start="0" center="auto" end="-720" delay="13500" time="2300" tween="cubic" easing="inout"/>
             </animation>
         </control>
         <!-- Spining CDArt -->
@@ -905,21 +906,21 @@
             <aspectratio align="bottom">keep</aspectratio>
             <texture background="true" fallback="common/cdart/default.png">$VAR[cdARTVar]</texture>
             <visible>Control.IsVisible(509) + !Stringcompare(Skin.String(CDCase),none)</visible>
-            <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7679)" reversible="false">
+            <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7679)+Control.HasFocus(7000)" reversible="false">
                 <effect type="rotate" start="0" center="auto" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
-            <visible>Stringcompare(Skin.String(MusicDiscArt),spin)</visible>
+            <visible>!Stringcompare(Skin.String(CDCase),none)+Stringcompare(Skin.String(MusicDiscArt),spin)</visible>
           </control> 
     </include>
     <!-- Open case when infopanel is displayed -->
     <include name="ShowcaseCDOpenCase">
-        <animation type="Conditional" condition="Control.IsVisible(7679)" reversible="false">
+        <animation type="Conditional" condition="!Stringcompare(Skin.String(CDCase),none)+Control.IsVisible(1970) +Control.IsVisible(7679)+Control.HasFocus(7000)+[Stringcompare(Skin.String(MusicDiscArt),spin) | Stringcompare(Skin.String(MusicDiscArt),roll)] " reversible="false">
             <effect type="rotatey" delay="0" center="0" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
             <effect type="rotatey" delay="5300" center="0" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
         </animation>
-        <animation type="WindowOpen" condition="Control.IsVisible(7679)" reversible="false">
+        <animation type="WindowOpen" condition="!Stringcompare(Skin.String(CDCase),none)+Control.IsVisible(1970) +Control.IsVisible(7679)+Control.HasFocus(7000)+[Stringcompare(Skin.String(MusicDiscArt),spin) | Stringcompare(Skin.String(MusicDiscArt),roll)] " reversible="false">
             <effect type="rotatey" delay="0" center="0" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
-            <effect type="rotatey" delay="5300" center="0" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
+            <effect type="rotatey" delay="5300" center="0" start="0" end="-75" time="500" tween="quadratic" easing="out"/>
         </animation>
         -->
     </include>

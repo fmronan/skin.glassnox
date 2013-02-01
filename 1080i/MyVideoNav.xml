@@ -116,21 +116,23 @@
             <control type="group">
                 <control type="button" id="7000">
                     <include>HiddenObject</include>
+                    <onfocus>SetProperty(ControlOpenCase,True,Home)</onfocus>
+                    <onfocus>AlarmClock(CleanOpenCase,ClearProperty(ControlOpenCase,Home),00:05,silent)</onfocus>
                     <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) | Control.IsVisible(508)] + [Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(508)]">SetFocus(9000)</onfocus>
                     <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(503)]">SetFocus(9000)</onfocus>
-                    <onup>SetFocus(9000)</onup>
-                    <onleft condition="Control.IsVisible(501)">Control.Move(501,-1)</onleft>
+                    <onup condition="IsEmpty(Window(home).Property(ControlOpenCase))">SetFocus(9000)</onup>
+                    <onleft condition="Control.IsVisible(501)+IsEmpty(Window(home).Property(ControlOpenCase))">Control.Move(501,-1)</onleft>
                     <onleft condition="Control.IsVisible(504)">Control.Move(504,-1)</onleft>
                     <onleft condition="Control.IsVisible(503)">Control.Move(503,-1)</onleft>
                     <onleft condition="Control.IsVisible(508)">Control.Move(508,-1)</onleft>
-                    <onright condition="Control.IsVisible(501)">Control.Move(501,1)</onright>
+                    <onright condition="Control.IsVisible(501)+IsEmpty(Window(home).Property(ControlOpenCase))">Control.Move(501,1)</onright>
                     <onright condition="Control.IsVisible(504)">Control.Move(504,1)</onright>
                     <onright condition="Control.IsVisible(503)">Control.Move(503,1)</onright>
                     <onright condition="Control.IsVisible(508)">Control.Move(508,1)</onright>
-                    <onleft>50</onleft>
-                    <onright>50</onright>
-                    <ondown>50</ondown>
-                    <onback>50</onback>
+                    <onleft condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onleft>
+                    <onright condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onright>
+                    <ondown condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</ondown>
+                    <onback condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onback>
                     <onclick condition="!IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
                     <onclick condition="IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>

@@ -87,6 +87,7 @@
             <control type="image">
                 <width>794</width>
                 <height>87</height>
+                <posy>1</posy>
                 <texture flipy="true" flipx="true">$VAR[TimePanelImageVar]</texture>
                 <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
                 <visible>Skin.HasSetting(glassnoxhome)</visible>

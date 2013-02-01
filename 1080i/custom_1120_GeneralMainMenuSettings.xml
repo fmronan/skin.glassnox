@@ -20,6 +20,7 @@
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <include>PanelGlowFade</include>
             <include>Animation_VisibleChange400</include>
+            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="image">
             <posx>356</posx>
@@ -28,6 +29,7 @@
             <height>700</height>
             <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             <texture>osd/osd_settings_back.png</texture>
+            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="image">
             <posx>375</posx>
@@ -35,6 +37,7 @@
             <width>1172</width>
             <height>60</height>
             <texture>osd/osd_settings_buttonnf.png</texture>
+            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="label">
             <posx>630</posx>
@@ -46,8 +49,10 @@
             <textoffsety>10</textoffsety>
             <textcolor>$VAR[TitleColorVar]</textcolor>
             <label>$LOCALIZE[31176]</label>
+            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="grouplist" id="20">
+			<visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
             <posx>375</posx>
             <posy>292</posy>
             <width>1172</width>

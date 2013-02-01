@@ -61,7 +61,7 @@
                 <control type="button" id="1672">
                     <!-- Toggle Fanart -->
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42308</label>
+                    <label>31708</label>
                     <onclick condition="Container.Content(movies)">SetProperty(BackgroundArea,MoviesBackground,home)</onclick>
                     <onclick condition="Container.Content(tvshows)">SetProperty(BackgroundArea,TVShowsBackground,home)</onclick>
                     <onclick condition="Container.Content(seasons)">SetProperty(BackgroundArea,SeasonBackground,home)</onclick>
@@ -92,7 +92,7 @@
                 </control>
                 <control type="button" id="1615">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42309</label>
+                    <label>31709</label>
                     <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(InfopanelDelay)] seconds[/COLOR]</label2>
                     <onclick>ActivateWindow(1114)</onclick>
                     <enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
@@ -113,7 +113,7 @@
                 </control>
                 <control type="button" id="1697">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>$LOCALIZE[41159]:</label>
+                    <label>$LOCALIZE[31959]:</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[TVLandscapeThumbSettingsVar][/COLOR]</label2>
                     <onclick>Skin.ToggleSetting(TVLandscapeThumb)</onclick>
                     <visible>[Stringcompare(Window(home).Property(actualViewtype),Landscape) | Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Banners)] + [[Container.Content(tvshows) + ![Skin.HasSetting(tvposterinfopane) | Skin.HasSetting(tvthumbsinfopane)]] | Container.Content(seasons)]</visible>
@@ -494,13 +494,6 @@
                     <onclick condition="Stringcompare(Control.GetLabel(4422),none)">Skin.SetString(CDCase,clear)</onclick>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseSquare) + Container.Content(albums)</visible>
                 </control>
-                <control type="radiobutton" id="1670">
-                    <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>Auto-open cases</label>
-                    <onclick>Skin.ToggleSetting(CDAutoOpenCase)</onclick>
-                    <selected>Skin.HasSetting(CDAutoOpenCase)</selected>
-                    <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseSquare) + Container.Content(albums)</visible>
-                </control>
                 <!-- MikeBZH44 End -->
                 <control type="radiobutton" id="1651">
                     <include>Objects_MediaMenuButtonAlt2</include>
@@ -513,7 +506,7 @@
                 <!-- Roll or Spin option for Movie DiscArt -->
                 <control type="button" id="16839">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42212</label>
+                    <label>31377</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[MovieDiscArtLib][/COLOR]</label2>
                     <onclick condition="Stringcompare(Control.GetLabel(4423),none) | IsEmpty(Control.GetLabel(4423))">Skin.SetString(MovieDiscArt,roll)</onclick>
                     <onclick condition="Stringcompare(Control.GetLabel(4423),spin)">Skin.SetString(MovieDiscArt,none)</onclick>
@@ -524,7 +517,7 @@
                 <!-- Roll or Spin option for Music DiscArt -->
                 <control type="button" id="16840">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42212</label>
+                    <label>31377</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[MusicDiscArtLib][/COLOR]</label2>
                     <onclick condition="Stringcompare(Control.GetLabel(4424),none) | IsEmpty(Control.GetLabel(4424))">Skin.SetString(MusicDiscArt,roll)</onclick>
                     <onclick condition="Stringcompare(Control.GetLabel(4424),spin)">Skin.SetString(MusicDiscArt,none)</onclick>
@@ -602,6 +595,13 @@
                     <onclick>Skin.ToggleSetting(slimlist)</onclick>
                     <selected>Skin.HasSetting(slimlist)</selected>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),List)</visible>
+                </control>
+                <control type="radiobutton" id="1663">
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <label>$LOCALIZE[31812]</label>
+                    <onclick>Skin.ToggleSetting(listcdart)</onclick>
+                    <selected>Skin.HasSetting(listcdart)</selected>
+                    <visible>Stringcompare(Window(home).Property(actualViewtype),List) + Container.Content(movies)</visible>
                 </control>
                 <!--Wall Options-->
                 <control type="button" id="1652">
