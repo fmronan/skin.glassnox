@@ -124,13 +124,13 @@
                     <enable>no</enable>
                 </control>
                 <!--Showcase/DVDCase options-->
-                <control type="radiobutton" id="1626">
+               <!-- <control type="radiobutton" id="1626">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31168]</label>
                     <onclick>Skin.ToggleSetting(noflow)</onclick>
                     <selected>Skin.HasSetting(noflow)</selected>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-                </control>
+                </control>-->
                 <control type="radiobutton" id="1627">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31168]</label>
