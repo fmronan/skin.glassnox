@@ -156,7 +156,7 @@
                         <focusedcolor>$VAR[HomeMenuTextFocusVar3]</focusedcolor>
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
-                        <onclick>Skin.SetString(LiveBGWidgetCase,tvshows)</onclick>
+                        <onclick>Skin.SetString(LiveBGWidgetCase,movies)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
@@ -170,7 +170,7 @@
                         <focusedcolor>$VAR[HomeMenuTextFocusVar3]</focusedcolor>
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
-                        <onclick>Skin.SetString(LiveBGWidgetCase,movies)</onclick>
+                        <onclick>Skin.SetString(LiveBGWidgetCase,tvshows)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
@@ -198,7 +198,7 @@
                         <focusedcolor>$VAR[HomeMenuTextFocusVar3]</focusedcolor>
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
-                        <onclick>Skin.SetString(LiveBGWidget2Case,tvshows)</onclick>
+                        <onclick>Skin.SetString(LiveBGWidget2Case,movies)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
@@ -212,7 +212,7 @@
                         <focusedcolor>$VAR[HomeMenuTextFocusVar3]</focusedcolor>
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
-                        <onclick>Skin.SetString(LiveBGWidget2Case,movies)</onclick>
+                        <onclick>Skin.SetString(LiveBGWidget2Case,tvshows)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>

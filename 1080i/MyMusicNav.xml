@@ -97,8 +97,8 @@
                 </control>
                 <control type="button" id="7000">
                     <include>HiddenObject</include>
-                    <onfocus>SetProperty(ControlOpenCase,True,Home)</onfocus>
-                    <onfocus>AlarmClock(CleanOpenCase,ClearProperty(ControlOpenCase,Home),00:05,silent)</onfocus>
+                    <onfocus condition="!Stringcompare(Skin.String(CDCase),none)+!Stringcompare(Skin.String(MusicDiscArt),none)">SetProperty(ControlOpenCase,True,Home)</onfocus>
+                    <onfocus condition="!Stringcompare(Skin.String(CDCase),none)+!Stringcompare(Skin.String(MusicDiscArt),none)">AlarmClock(CleanOpenCase,ClearProperty(ControlOpenCase,Home),00:05,silent)</onfocus>
                     <onfocus condition="Substring(Control.GetFocus(4421),infopanelon)">SetFocus(9000)</onfocus>
                     <onup condition="IsEmpty(Window(home).Property(ControlOpenCase))">9000</onup>
                     <onleft condition="Control.IsVisible(509)+IsEmpty(Window(home).Property(ControlOpenCase))">Control.Move(509,-1)</onleft>
