@@ -116,8 +116,8 @@
             <control type="group">
                 <control type="button" id="7000">
                     <include>HiddenObject</include>
-                    <onfocus>SetProperty(ControlOpenCase,True,Home)</onfocus>
-                    <onfocus>AlarmClock(CleanOpenCase,ClearProperty(ControlOpenCase,Home),00:05,silent)</onfocus>
+                    <onfocus condition="Control.IsVisible(501)+ Container.Content(movies)+Skin.HasSetting(usecases)+!Stringcompare(Skin.String(MovieDiscArt),none)">SetProperty(ControlOpenCase,True,Home)</onfocus>
+                    <onfocus condition="Control.IsVisible(501)+ Container.Content(movies)+Skin.HasSetting(usecases)+!Stringcompare(Skin.String(MovieDiscArt),none)">AlarmClock(CleanOpenCase,ClearProperty(ControlOpenCase,Home),00:05,silent)</onfocus>
                     <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) | Control.IsVisible(508)] + [Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(508)]">SetFocus(9000)</onfocus>
                     <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(503)]">SetFocus(9000)</onfocus>
                     <onup condition="IsEmpty(Window(home).Property(ControlOpenCase))">SetFocus(9000)</onup>
