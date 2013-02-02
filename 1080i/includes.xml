@@ -991,33 +991,32 @@
     <include name="AutoConfig">
 		<onload>Skin.ResetSettings</onload>
 		<onload>Skin.ToggleSetting(TopBarToolTip)</onload>
-		<onload>Skin.ToggleSetting(UseCustomCases)</onload>
-		<onload>Skin.SetString(panel_white_programs,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_music,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_videolibrary,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_PVR,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_pictures,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_featured,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_addons,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_musicplaylist,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_videoplaylist,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_mainmenu,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_weather,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_color,9cb20000)</onload>
-        <onload>Skin.SetString(panel_white_settings,9cb20000)</onload>
-        <onload>Skin.SetString(diffuse_white_programs,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_music,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_videolibrary,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_PVR,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_pictures,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_featured,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_addons,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_musicplaylist,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_videoplaylist,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_mainmenu,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_weather,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_color,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_white_settings,bfdaa520)</onload>
+		<onload>Skin.SetString(panel_white_programs,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_music,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_videolibrary,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_PVR,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_pictures,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_featured,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_addons,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_musicplaylist,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_videoplaylist,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_mainmenu,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_weather,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_color,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_white_settings,FF03F2FF)</onload>
+        <onload>Skin.SetString(diffuse_white_programs,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_music,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_videolibrary,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_PVR,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_pictures,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_featured,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_addons,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_musicplaylist,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_videoplaylist,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_mainmenu,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_weather,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_color,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_white_settings,FFA4F4F9)</onload>
         <onload>Skin.SetString(font_white_programs,FF6db9e5)</onload>
         <onload>Skin.SetString(font_white_music,FF6db9e5)</onload>
         <onload>Skin.SetString(font_white_videolibrary,FF6db9e5)</onload>
@@ -1032,34 +1031,34 @@
         <onload>Skin.SetString(font_white_color,FF6db9e5)</onload>
         <onload>Skin.SetString(font_white_settings,FF6db9e5)</onload>
 		<onload>Skin.SetBool(glasshome)</onload>
-		<onload>Skin.SetString(panel_programs,9cb20000)</onload>
-        <onload>Skin.SetString(panel_music,9cb20000)</onload>
-        <onload>Skin.SetString(panel_videolibrary,9cb20000)</onload>
-        <onload>Skin.SetString(panel_PVR,9cb20000)</onload>
-        <onload>Skin.SetString(panel_pictures,9cb20000)</onload>
-        <onload>Skin.SetString(panel_featured,9cb20000)</onload>
-        <onload>Skin.SetString(panel_addons,9cb20000)</onload>
-        <onload>Skin.SetString(panel_musicplaylist,9cb20000)</onload>
-        <onload>Skin.SetString(panel_videoplaylist,9cb20000)</onload>
-        <onload>Skin.SetString(panel_mainmenu,9cb20000)</onload>
-        <onload>Skin.SetString(panel_weather,9cb20000)</onload>
-        <onload>Skin.SetString(panel_color,9cb20000)</onload>
-        <onload>Skin.SetString(panel_settings,9cb20000)</onload>
+		<onload>Skin.SetString(panel_programs,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_music,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_videolibrary,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_PVR,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_pictures,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_featured,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_addons,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_musicplaylist,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_videoplaylist,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_mainmenu,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_weather,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_color,FF03F2FF)</onload>
+        <onload>Skin.SetString(panel_settings,FF03F2FF)</onload>
 		<onload>Skin.SetBool(colorpanels)</onload>
-        <onload>Skin.SetString(diffuse_programs,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_music,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_videolibrary,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_PVR,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_pictures,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_featured,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_addons,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_musicplaylist,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_videoplaylist,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_mainmenu,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_weather,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_color,bfdaa520)</onload>
-        <onload>Skin.SetString(diffuse_settings,bfdaa520)</onload>
-        <onload>Skin.SetString(font_color,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_programs,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_music,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_videolibrary,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_PVR,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_pictures,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_featured,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_addons,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_musicplaylist,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_videoplaylist,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_mainmenu,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_weather,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_color,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_settings,FFA4F4F9)</onload>
+        <onload>Skin.SetString(font_color,FFA4F4F9)</onload>
         <onload>Skin.SetString(font_videolibrary,FF6db9e5)</onload>
         <onload>Skin.SetString(font_music,FF6db9e5)</onload>
         <onload>Skin.SetString(font_programs,FF6db9e5)</onload>

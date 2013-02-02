@@ -73,7 +73,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(CDCaseWidget,clear)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),albums)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -87,7 +87,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(CDCaseWidget,cd)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),albums)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -101,7 +101,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.Reset(CDCaseWidget)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),albums)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -115,7 +115,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(CDCaseWidget2,clear)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),albums)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -129,7 +129,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(CDCaseWidget2,cd)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),albums)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -143,7 +143,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.Reset(CDCaseWidget2)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),albums)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -157,7 +157,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidgetCase,tvshows)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -171,7 +171,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidgetCase,movies)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -185,7 +185,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidgetCase,clear)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -199,7 +199,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidget2Case,tvshows)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -213,7 +213,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidget2Case,movies)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
@@ -227,7 +227,7 @@
                         <align>center</align>
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidget2Case,clear)</onclick>
-                        <onclick>Dialog.Close(1148)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
