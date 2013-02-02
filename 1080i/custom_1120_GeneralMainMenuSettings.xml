@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1120">
     <defaultcontrol always="true">20</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
     <coordinates>
         <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
     </coordinates>
-    <include>Animation_DialogPopup</include>
+    
     <onunload condition="!IsEmpty(Window(home).Property(ReturnToHome))">ActivateWindow(skinsettings)</onunload>
     <onunload>ClearProperty(ReturnToHome,home)</onunload>
     <controls>
+	<control type="group">
+		<include>Animation_DialogPopup</include>
+		<visible>!Window.IsActive(1132)+!Window.IsActive(1151)+!Window.IsActive(1148)+!Window.IsVisible(DialogAddonSettings.xml)</visible>
         <control type="image">
             <posx>356</posx>
             <posy>180</posy>
@@ -20,7 +24,6 @@
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <include>PanelGlowFade</include>
             <include>Animation_VisibleChange400</include>
-            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="image">
             <posx>356</posx>
@@ -29,7 +32,6 @@
             <height>700</height>
             <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             <texture>osd/osd_settings_back.png</texture>
-            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="image">
             <posx>375</posx>
@@ -37,7 +39,6 @@
             <width>1172</width>
             <height>60</height>
             <texture>osd/osd_settings_buttonnf.png</texture>
-            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="label">
             <posx>630</posx>
@@ -49,10 +50,8 @@
             <textoffsety>10</textoffsety>
             <textcolor>$VAR[TitleColorVar]</textcolor>
             <label>$LOCALIZE[31176]</label>
-            <visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
         </control>
         <control type="grouplist" id="20">
-			<visible>!Window.IsActive(1132)|!Window.IsActive(1151)</visible>
             <posx>375</posx>
             <posy>292</posy>
             <width>1172</width>
@@ -62,6 +61,7 @@
             <onleft>450</onleft>
             <onright>450</onright>
             <orientation>vertical</orientation>
+            <include>Animation_VisibleChange200</include>
             <control type="radiobutton" id="308">
                 <include>Objects_CommonSettingsButton</include>
                 <label>$LOCALIZE[31375]</label>
@@ -91,14 +91,12 @@
                 <label>$LOCALIZE[31613]</label>
                 <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(CustomFocusOffset)][/COLOR]</label2>
                 <include>Objects_CommonSettingsButton</include>
-                <!--                 <onclick>ActivateWindow(1129)</onclick>-->
                 <onclick>SetProperty(StartupFocus,1,home)</onclick>
                 <onclick>ActivateWindow(1151)</onclick>
             </control>
             <control type="button" id="315">
                 <label>31644</label>
                 <include>Objects_CommonSettingsButton</include>
-                <!--                 <onclick>ActivateWindow(1129)</onclick>-->
                 <onclick>ActivateWindow(1132)</onclick>
             </control>
             <control type="button" id="318">
@@ -113,5 +111,6 @@
                 <onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
             </control>
         </control>
+       </control>
     </controls>
 </window>
