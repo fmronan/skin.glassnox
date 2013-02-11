@@ -76,7 +76,7 @@
                         <include condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">cdartlibrary</include>
                         <include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
                         <include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio>keep</aspectratio>
                     </control>
                     <control type="group">
                         <animation effect="fade" time="600">VisibleChange</animation>
@@ -119,7 +119,6 @@
                             <posy>-270</posy>
                             <width>1405</width>
                             <height>38</height>
-                            <aligny>-</aligny>
                             <scroll>true</scroll>
                             <font>Font_Reg38</font>
                             <label>$INFO[ListItem.Tracknumber,,: ][COLOR FF777777]$INFO[ListItem.Title][/COLOR]</label>
@@ -131,7 +130,6 @@
                             <posy>-210</posy>
                             <width>1405</width>
                             <height>38</height>
-                            <aligny>-</aligny>
                             <scroll>true</scroll>
                             <font>Font_Reg38</font>
                             <label>$INFO[ListItem.Artist]$INFO[ListItem.Album, • ]</label>

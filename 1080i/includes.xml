@@ -598,7 +598,7 @@
         <imagepath>cerberus</imagepath>
         <timeperimage>20</timeperimage>
         <fadetime>0</fadetime>
-        <loop>yes</loop>
+       
         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
         <randomize>false</randomize>
     </include>
@@ -2394,11 +2394,6 @@
                 <textcolor>grey2</textcolor>
                 <font>Font_Reg15</font>
                 <align>center</align>
-                <altlabel>$LOCALIZE[31272]: [COLOR $VAR[FontColorVar]$LOCALIZE[31271][/COLOR]</altlabel>
-                <usealttexture>!IsEmpty(Window(home).Property(quicknavsetup))</usealttexture>
-                <alttexturefocus border="8">views/tripanel/listselect_fo.png</alttexturefocus>
-                <alttexturenofocus border="8">-</alttexturenofocus>
-                <label>$LOCALIZE[31095]</label>
                 <onleft>3</onleft>
                 <onright>3</onright>
                 <onup>SetFocus(800,20)</onup>
@@ -3566,7 +3561,6 @@
                 <control type="image" id="715">
                     <include>ClassicOSDButton</include>
                     <texture>$VAR[MusicOSDRepeatClassicButtonVar]</texture>
-                    <enable>no</enable>
                 </control>
                 <control type="togglebutton" id="714">
                     <include>ClassicOSDButton</include>
@@ -3850,7 +3844,6 @@
                 <width>100</width>
                 <height>100</height>
                 <texture>$VAR[MusicOSDRepeatButtonVar]</texture>
-                <enable>no</enable>
                 <colordiffuse>white</colordiffuse>
             </control>
             <control type="togglebutton">
@@ -3914,7 +3907,6 @@
                 <height>100</height>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texture>$VAR[MusicOSDRepeatButtonVar2]</texture>
-                <enable>no</enable>
             </control>
             <control type="togglebutton" id="705">
                 <width>100</width>

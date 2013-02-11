@@ -63,7 +63,6 @@
                             <textcolor>grey2</textcolor>
 							<selectedcolor>$VAR[SpotColorVar]</selectedcolor>
 							<label>$LOCALIZE[31155]</label>
-                     <visible>Container(550).ListItem.is$VAR[SpotColorVar]</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="870">
@@ -108,7 +107,6 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$LOCALIZE[31155]</label>
-                     <visible>Container(550).ListItem.is$VAR[SpotColorVar]</visible>
 						</control>
 					</focusedlayout>
 				</control>

@@ -1827,7 +1827,7 @@
                                 <pauseatend>1000</pauseatend>
                                 <fadetime>0</fadetime>
                                 <randomize>false</randomize>
-                                <loop>yes</loop>
+                               
                                 <animation effect="zoom" end="-892,0,1920,1080" time="640" tween="cubic" condition="!IsEmpty(Window(weather).Property(FSMap))">Conditional</animation>
                                 <aspectratio>keep</aspectratio>
                             </control>
@@ -2416,7 +2416,6 @@
                         <height>45</height>
                         <width>400</width>
                         <texturenofocus>settings/listselect_nf.png</texturenofocus>
-                        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
                         <label>$LOCALIZE[128]</label>
@@ -2465,7 +2464,6 @@
                         <height>45</height>
                         <width>400</width>
                         <texturenofocus>settings/listselect_nf.png</texturenofocus>
-                        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
                         <label>$LOCALIZE[10508]</label>
@@ -2541,7 +2539,6 @@
                         <height>45</height>
                         <width>400</width>
                         <texturenofocus>settings/listselect_nf.png</texturenofocus>
-                        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
                         <label>$LOCALIZE[31185]</label>

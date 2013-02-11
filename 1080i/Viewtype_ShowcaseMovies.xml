@@ -663,7 +663,7 @@
                 <animation effect="fade" end="100" time="120" delay="1600">WindowOpen</animation>
             </control>
             <control type="group">
-                <visible>!Stringcompare(Skin.String(MovieDiscArt),none)</visible>
+                <visible>[!Stringcompare(Skin.String(MovieDiscArt),none)+Skin.HasSetting(showcasecdart)]|Skin.HasSetting(showcasecdart)</visible>
                 <include>Animation_VisibleChange400</include>
                 <animation type="WindowClose" reversible="false">
                     <effect type="fade" start="100" end="0" time="240" />
@@ -675,7 +675,7 @@
                     <width>280</width>
                     <height>280</height>
                     <fadetime>4000</fadetime>
-                    <aspectratio align="bottom">keep</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Container(501).ListItem.Art(discart)]</texture>
                     <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)+Skin.HasSetting(usecases)" reversible="true">
                         <effect type="slide" start="0,0" end="-1600,0" delay="6500" time="1120" tween="quadratic" easing="out" />
@@ -693,7 +693,7 @@
                     <height>280</height>
                     <fadetime>4000</fadetime>
                     <colordiffuse>22FFFFFF</colordiffuse>
-                    <aspectratio align="top">keep</aspectratio>
+                    <aspectratio>keep</aspectratio>
                     <texture background="true" flipy="true">$INFO[Container(501).ListItem.Art(discart)]</texture>
                     <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)+Skin.HasSetting(usecases)" reversible="true">
                         <effect type="slide" start="0,0" end="-1600,0" delay="6500" time="1120" tween="quadratic" easing="out" />

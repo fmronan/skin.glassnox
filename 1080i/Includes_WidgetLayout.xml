@@ -215,7 +215,6 @@
                     <width>55</width>
                     <height>55</height>
                     <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
-                    <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                 </control>
             </control>
         </control>
@@ -567,7 +566,7 @@
                         <aligny>top</aligny>
                         <include>cdart</include>
                         <visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio>keep</aspectratio>
                     </control>
                     <control type="image">
                         <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
@@ -579,7 +578,7 @@
                         <aligny>top</aligny>
                         <include>vinylart</include>
                         <visible>Skin.HasSetting(vinylart)</visible>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio>keep</aspectratio>
                     </control>
                     <control type="image">
                         <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
@@ -591,7 +590,7 @@
                         <aligny>top</aligny>
                         <include>blurayart</include>
                         <visible>Skin.HasSetting(blurayart)</visible>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio>keep</aspectratio>
                     </control>
                 </control>
                 <control type="image">
@@ -998,8 +997,8 @@
     </include>
     <include name="Weather_Widget">
         <control type="group">
-            <visible>Substring(Control.GetLabel(4321),weather) + Weather.IsFetched</visible>
             <posy>660</posy>
+            <visible>Substring(Control.GetLabel(4321),weather) + Weather.IsFetched</visible>
             <animation effect="slide" end="0,-250" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(lowermainmenu)">Conditional</animation>
             <include>Animation_Widgets</include>
             <visible>!IsEmpty(Weather.Plugin)</visible>
@@ -1012,41 +1011,38 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <label>31374</label>
                         <align>center</align>
+                        <label>31374</label>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Current.Condition)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
-                        
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Current.Condition)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Current.ConditionIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Current.ConditionIcon)</info>
                     </control>
                     <control type="label">
                         <posy>225</posy>
-                        <height>30</height>
                         <width>284</width>
-                        <font>Font_Bold35</font>
+                        <height>30</height>
                         <align>center</align>
-                        <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-                        
-                        <visible>!IsEmpty(Window(weather).Property(Current.Temperature))</visible>
                         <label>$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits]</label>
+                        <font>Font_Bold35</font>
+                        <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
+                        <visible>!IsEmpty(Window(weather).Property(Current.Temperature))</visible>
                     </control>
                 </control>
             </control>
@@ -1058,73 +1054,67 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day0.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-                        
+                        <info>Window(weather).Property(Day0.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day0.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
-                        
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day0.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day0.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day0.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
+                        <label>$INFO[Window(weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day0.HighTemp))</visible>
-                        <label>$INFO[Window(weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits]</label>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>52</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>52</height>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>52</height>
                         <width>142</width>
+                        <height>52</height>
                         <label>$INFO[Window(weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day0.LowTemp))</visible>
                     </control>
                 </control>
@@ -1137,73 +1127,67 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day1.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-                        
+                        <info>Window(weather).Property(Day1.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day1.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
-                        
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day1.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day1.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day1.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
+                        <label>$INFO[Window(weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day1.HighTemp))</visible>
-                        <label>$INFO[Window(weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits]</label>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>45</height>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
+                        <height>45</height>
                         <label>$INFO[Window(weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day1.LowTemp))</visible>
                     </control>
                 </control>
@@ -1216,73 +1200,67 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day2.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-                        
+                        <info>Window(weather).Property(Day2.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day2.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
-                        
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day2.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day2.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day2.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
+                        <label>$INFO[Window(weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day2.HighTemp))</visible>
-                        <label>$INFO[Window(weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits]</label>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>45</height>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
+                        <height>45</height>
                         <label>$INFO[Window(weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day2.LowTemp))</visible>
                     </control>
                 </control>
@@ -1295,73 +1273,67 @@
                         <posy>310</posy>
                         <width>284</width>
                         <height>52</height>
-                        <font>Font_Bold20</font>
-                        <info>Window(weather).Property(Day3.Title)</info>
                         <align>center</align>
+                        <font>Font_Bold20</font>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-                        
+                        <info>Window(weather).Property(Day3.Title)</info>
                     </control>
                     <control type="label">
                         <posx>38</posx>
                         <posy>45</posy>
                         <width>210</width>
                         <height>30</height>
-                        <info>Window(weather).Property(Day3.Outlook)</info>
-                        <font>Font_Info</font>
-                        <scroll>true</scroll>
                         <align>center</align>
-                        
+                        <font>Font_Info</font>
+                        <info>Window(weather).Property(Day3.Outlook)</info>
+                        <scroll>true</scroll>
                     </control>
                     <control type="image">
                         <posx>82</posx>
                         <posy>90</posy>
-                        <height>120</height>
                         <width>120</width>
-                        <info>Window(weather).Property(Day3.OutlookIcon)</info>
+                        <height>120</height>
                         <aspectratio align="center">keep</aspectratio>
+                        <info>Window(weather).Property(Day3.OutlookIcon)</info>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>30</height>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>221</posy>
-                        <height>30</height>
                         <width>142</width>
+                        <height>30</height>
+                        <label>$INFO[Window(weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>red</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day3.HighTemp))</visible>
-                        <label>$INFO[Window(weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits]</label>
                     </control>
                     <control type="label">
                         <posx>140</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <height>45</height>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
+                        <font>Font_Reg19</font>
                         <textcolor>grey2</textcolor>
-                        
                     </control>
                     <control type="label">
                         <posx>150</posx>
                         <posy>255</posy>
-                        <height>45</height>
                         <width>142</width>
+                        <height>45</height>
                         <label>$INFO[Window(weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</label>
                         <font>Font_Reg19</font>
                         <textcolor>blue</textcolor>
-                        
                         <visible>!IsEmpty(Window(weather).Property(Day3.LowTemp))</visible>
                     </control>
                 </control>
@@ -2252,6 +2224,8 @@
                         <include condition="Substring(Skin.String(widgetlist),rss5classic)">RSS5WidgetContent</include>
                         <include condition="Substring(Skin.String(widgetlist),rss6classic)">RSS6WidgetContent1124</include>
                         <include condition="Substring(Skin.String(widgetlist),rss6classic)">RSS6WidgetContent</include>
+                        <include condition="Substring(Skin.String(widgetlist),rssnewsclassic)">NewsWidgetContent1124</include>
+                        <include condition="Substring(Skin.String(widgetlist),rssnewsclassic)">NewsWidgetContent</include>
                         <include condition="Substring(Skin.String(widgetlist),nextairedtvclassic)">NextAiredWidgetContent1124</include>
                         <include condition="Substring(Skin.String(widgetlist),nextairedtvclassic)">NextAiredWidgetContent</include>
                         <include condition="Substring(Skin.String(widgetlist),Icon1classic)">IconPanel1Items</include>
@@ -4121,6 +4095,14 @@
                         <include condition="Substring(Skin.String(widget2list),rss2classic)">RSS2Widget2Content</include>
                         <include condition="Substring(Skin.String(widget2list),rss3classic)">RSS3Widget2Content1124</include>
                         <include condition="Substring(Skin.String(widget2list),rss3classic)">RSS3Widget2Content</include>
+                        <include condition="Substring(Skin.String(widget2list),rss4classic)">RSS4Widget2Content1124</include>
+                        <include condition="Substring(Skin.String(widget2list),rss4classic)">RSS4Widget2Content</include>
+                        <include condition="Substring(Skin.String(widget2list),rss5classic)">RSS5Widget2Content1124</include>
+                        <include condition="Substring(Skin.String(widget2list),rss5classic)">RSS5Widget2Content</include>
+                        <include condition="Substring(Skin.String(widget2list),rss6classic)">RSS6Widget2Content1124</include>
+                        <include condition="Substring(Skin.String(widget2list),rss6classic)">RSS6Widget2Content</include>
+                        <include condition="Substring(Skin.String(widget2list),rssnewsclassic)">NewsWidget2Content1124</include>
+                        <include condition="Substring(Skin.String(widget2list),rssnewsclassic)">NewsWidget2Content1124</include>
                         <include condition="Substring(Skin.String(widget2list),nextairedtvclassic)">NextAiredWidget2Content1124</include>
                         <include condition="Substring(Skin.String(widget2list),nextairedtvclassic)">NextAiredWidget2Content</include>
                         <include condition="Substring(Skin.String(widget2list),Icon1classic)">IconPanel1Items2</include>
@@ -5615,6 +5597,8 @@
                     <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss5panel) + !Window.IsActive(1124)">RSS5WidgetContent</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss6panel)]">RSS6WidgetContent1124</include>
                     <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss6panel) + !Window.IsActive(1124)">RSS6WidgetContent</include>
+                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rssnewspanel)]">NewsWidgetContent1124</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rssnewspanel) + !Window.IsActive(1124)">NewsWidgetContent</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon1panel)">IconPanel1Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon2panel)">IconPanel2Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),favouriteIconpanel)">FavouritesItems</include>
@@ -6022,6 +6006,8 @@
                     <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss5panel)">RSS5Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss6panel)]">RSS6Widget2Content1124</include>
                     <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss6panel)">RSS6Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rssnewspanel)]">NewsWidget2Content1124</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rssnewspanel)">NewsWidget2Content</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),Icon1panel)">IconPanel1Items2</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),Icon2panel)">IconPanel2Items2</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),favouriteIconpanel)">FavouritesItems2</include>
@@ -6606,7 +6592,6 @@
                     <pauseatend>1000</pauseatend>
                     <fadetime>0</fadetime>
                     <randomize>false</randomize>
-                    <loop>yes</loop>
                     <aspectratio>keep</aspectratio>
                     <aligny>center</aligny>
                 </control>
@@ -6859,7 +6844,7 @@
         </control>
     </include>
     <!-- CD Case -->
-    <include name="LiveCDCaseWidgetsbackground">
+    <include name="LiveCDCasesbackground">
         <control type="group">
             <animation effect="fade" time="480">VisibleChange</animation>
             <include>Animation_WindowFade250</include>
@@ -6877,7 +6862,7 @@
                         <width>302</width>
                         <height>302</height>
                         <fadetime>600</fadetime>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget1Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase1Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -6885,13 +6870,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -6904,7 +6889,7 @@
                         <width>302</width>
                         <height>302</height>
                         <fadetime>600</fadetime>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget2Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase2Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -6912,13 +6897,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -6931,7 +6916,7 @@
                         <posy>17</posy>
                         <width>302</width>
                         <height>302</height>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget3Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase3Var]</texture>
                         <fadetime>600</fadetime>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
@@ -6940,13 +6925,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -6960,7 +6945,7 @@
                         <width>302</width>
                         <height>302</height>
                         <fadetime>600</fadetime>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget4Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase4Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -6968,13 +6953,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -6987,7 +6972,7 @@
                         <posy>17</posy>
                         <width>302</width>
                         <height>302</height>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget5Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase5Var]</texture>
                         <fadetime>600</fadetime>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
@@ -6996,13 +6981,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -7016,7 +7001,7 @@
                         <width>302</width>
                         <height>302</height>
                         <fadetime>600</fadetime>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget6Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase6Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -7024,13 +7009,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -7044,7 +7029,7 @@
                         <width>302</width>
                         <height>302</height>
                         <fadetime>600</fadetime>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget7Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase7Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -7052,13 +7037,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -7072,7 +7057,7 @@
                         <width>302</width>
                         <fadetime>600</fadetime>
                         <height>302</height>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget8Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase8Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -7080,13 +7065,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -7100,7 +7085,7 @@
                         <width>302</width>
                         <height>302</height>
                         <fadetime>600</fadetime>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget9Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase9Var]</texture>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
                     <control type="image">
@@ -7108,13 +7093,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
                 <control type="group">
@@ -7127,7 +7112,7 @@
                         <posy>17</posy>
                         <width>302</width>
                         <height>302</height>
-                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCaseWidget10Var]</texture>
+                        <texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[CDCase10Var]</texture>
                         <fadetime>600</fadetime>
                         <aspectratio scalediffuse="false">scale</aspectratio>
                     </control>
@@ -7136,13 +7121,13 @@
                         <height>342</height>
                         <bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
                         <texture background="true">thumbs/boxes/cd_glass.png</texture>
-                        <visible>!Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>!Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                     <control type="image">
                         <width>375</width>
                         <height>342</height>
                         <texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-                        <visible>Skin.HasSetting(LiveBGCDCaseWidget)</visible>
+                        <visible>Skin.HasSetting(LiveBGCDCase)</visible>
                     </control>
                 </control>
             </control>
@@ -7744,7 +7729,7 @@
             <height>30</height>
             <font>Font_Reg19</font>
             <align>center</align>
-            <label>$VAR[Widget1SubTitleVar]</label>
+            <label>$VAR[WidgetSubTitleVar]</label>
             <textoffsetx>15</textoffsetx>
         </control>
     </include>
@@ -7783,7 +7768,7 @@
             <height>30</height>
             <font>Font_Reg19</font>
             <align>center</align>
-            <label>$VAR[Widget1SubTitleVar]</label>
+            <label>$VAR[WidgetSubTitleVar]</label>
             <textoffsetx>15</textoffsetx>
         </control>
     </include>

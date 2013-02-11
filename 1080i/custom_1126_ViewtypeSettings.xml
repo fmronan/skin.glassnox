@@ -123,6 +123,7 @@
                     <label>$LOCALIZE[31185]</label>
                     <enable>no</enable>
                 </control>
+                <include>Include_CustomView_Cust</include>
                 <!--Showcase/DVDCase options-->
                <!-- <control type="radiobutton" id="1626">
                     <include>Objects_MediaMenuButtonAlt2</include>
@@ -164,7 +165,7 @@
                     <label>$LOCALIZE[31170]</label>
                     <onclick>Skin.ToggleSetting(nohighlist)</onclick>
                     <include>ReloadWindowOnClick</include>
-                    <onclick>SetFocus(9003)</onclick>
+                    <onclick>SetFocus(9000)</onclick>
                     <selected>Skin.HasSetting(nohighlist)</selected>
                     <visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
                 </control>
@@ -525,6 +526,20 @@
                     <visible>Substring(Window(home).Property(actualViewtype),Showcase) + Container.Content(albums)</visible>
                 </control>
                 <!-- MikeBZH44 End -->
+                <control type="radiobutton" id="16841">
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <label>31812</label>
+                    <onclick>Skin.ToggleSetting(showcasecdart)</onclick>
+                    <selected>Skin.HasSetting(showcasecdart)</selected>
+                    <visible>Substring(Window(home).Property(actualViewtype),Showcase) + Container.Content(movies)</visible>
+                </control>
+                <control type="radiobutton" id="16842">
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <label>31812</label>
+                    <onclick>Skin.ToggleSetting(showcasecdartmusic)</onclick>
+                    <selected>Skin.HasSetting(showcasecdartmusic)</selected>
+                    <visible>Substring(Window(home).Property(actualViewtype),Showcase) + Container.Content(albums)</visible>
+                </control>
                 <control type="radiobutton" id="1683">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31169]</label>
@@ -736,6 +751,13 @@
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <onclick>Skin.ToggleSetting(TopBarToolTip)</onclick>
                     <selected>Skin.HasSetting(TopBarToolTip)</selected>
+                </control>
+                <control type="radiobutton" id="288">
+                    <label>$LOCALIZE[24021] Floor</label>
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <onclick>Skin.ToggleSetting(disablemoviefloor)</onclick>
+                    <include>ReloadWindowOnClick</include>
+                    <selected>Skin.HasSetting(disablemoviefloor)</selected>
                 </control>
                 <control type="button" id="1664">
                     <include>Objects_MediaMenuButtonAlt2</include>

@@ -117,11 +117,6 @@
                     <label>$LOCALIZE[24021] Floor</label>
                     <include>Objects_CommonSettingsButton</include>
                     <onclick>Skin.ToggleSetting(disablefloor)</onclick>
-                   <!-- <onclick>Skin.Reset(ClassicTopBar)</onclick>
-                    <onclick>Skin.Reset(GlobalNowPlaying)</onclick>
-                    <onclick>Skin.Reset(GlobalRSS)</onclick>
-                    <onclick>Skin.Reset(breadcrumbslabel)</onclick>
-                    <onclick>Skin.Reset(breadcrumbsweather)</onclick>-->
                     <selected>Skin.HasSetting(disablefloor)</selected>
                 </control>
                 <control type="radiobutton" id="466">

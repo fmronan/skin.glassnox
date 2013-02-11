@@ -49,7 +49,6 @@
                     <height>45</height>
                     <width>603</width>
                     <texturenofocus>settings/listselect_nf3.png</texturenofocus>
-                    <alttexturenofocus>settings/listselect_nf3.png</alttexturenofocus>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                     <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
                     <disabledcolor>$VAR[FontColorVar]</disabledcolor>
@@ -87,12 +86,13 @@
                     <onclick>Skin.ToggleSetting(colordialogs)</onclick>
                     <selected>Skin.HasSetting(colordialogs)</selected>
                 </control>
+
                 <control type="button" id="14">
                     <include>ColorChooserButton</include>
                     <label>More $LOCALIZE[31192]</label>
                     <onclick>SetProperty(colordialog,font_color,1124)</onclick>
                     <onclick>ActivateWindow(1168)</onclick>
-                </control>
+				</control>
                 <control type="button" id="15">
                     <include>ColorChooserButton</include>
                     <label>$LOCALIZE[31178]</label>

@@ -104,10 +104,17 @@
             <onfocus>AlarmClock(Widget2Move,Control.Move(7000,1),00:07,silent,loop)</onfocus>
             <onfocus>SetFocus(9000)</onfocus>
         </control>
-        <control type="button" id="9011">
+       <!-- <control type="button" id="9011">
             <include>HiddenObject</include>
             <onfocus condition="Control.IsVisible(2020)">SetFocus(2020)</onfocus>
             <onfocus condition="!Control.IsVisible(2020)">SetFocus(9000)</onfocus>
+        </control>-->
+        <control type="button" id="9011">
+            <include>HiddenObject</include>
+            <onfocus condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">SetFocus(4444)</onfocus>
+            <onfocus condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4444)">SetFocus(9000)</onfocus>
+            <onfocus condition="Skin.HasSetting(lowermainmenu)">SetFocus(9000)</onfocus>
+            <onfocus condition="IsEmpty(Container(9010).ListItem.Property(Widget))">ActivateWindow(1159)</onfocus>
         </control>
         <include>MainMenuCommonContent</include>
         <!-- Fanart -->
@@ -175,11 +182,6 @@
             <include>Animation_VisibleChange400</include>
             <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + !Control.IsVisible(8995)]</visible>
             <visible>![!IsEmpty(Window(home).Property(DisableWidgets)) + Player.HasVideo + Skin.HasSetting(ShowBackgroundVideo)]</visible>
-            <control type="image">
-                <include>FullscreenDimensions</include>
-                <colordiffuse>$INFO[Skin.String(BackgroundDarkness)]</colordiffuse>
-                <texture>common/bgcolor.png</texture>
-            </control>
             <control type="image">
                 <posy>-150</posy>
                 <width>1920</width>
@@ -449,7 +451,6 @@
                 <textcolor>grey2</textcolor>
                 <align>center</align>
                 <label>$LOCALIZE[31864]</label>
-                <fontcolor>white</fontcolor>
                 <wrapmultiline>true</wrapmultiline>
             </control>
         </control>
@@ -480,7 +481,7 @@
                     <pauseatend>1000</pauseatend>
                     <fadetime>0</fadetime>
                     <randomize>false</randomize>
-                    <loop>yes</loop>
+                   
                     <aspectratio>keep</aspectratio>
                     <aligny>center</aligny>
                 </control>

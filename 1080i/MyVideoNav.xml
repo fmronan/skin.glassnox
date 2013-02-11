@@ -61,7 +61,6 @@
         </control>
         <control type="button" id="5999">
             <include>HiddenObject</include>
-            <texture>-</texture>
             <visible>!Control.HasFocus(109)</visible>
             <visible>[Skin.HasSetting(darkinfopane) | !Skin.HasSetting(DisableGlowbar)] +  [Control.IsVisible(7550) | Control.IsVisible(510) | Control.IsVisible(50) | Control.IsVisible(518) | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | Control.IsVisible(52) | Control.IsVisible(550)]</visible>
         </control>
@@ -78,7 +77,7 @@
         </control>
         <include>Furniture_Glow</include>
         <include>ShowcaseInfoPaneMovies</include>
-        <include>Furniture_Showcase</include>
+        <include condition="!Skin.HasSetting(disablefloor)|!Skin.HasSetting(disablemoviefloor)">Furniture_Showcase</include>
         <include condition="!Skin.HasSetting(DisableInfoWallVL) | !Skin.HasSetting(DisableWallVL)">WallPanel</include>
         <control type="group">
             <animation effect="slide" end="0,1045" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>

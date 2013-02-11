@@ -120,7 +120,7 @@
                         <include condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">cdartlibrary</include>
                         <include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
                         <include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio>keep</aspectratio>
                     </control>
                     <control type="group">
                         <visible>Container.Content(albums)</visible>
@@ -206,7 +206,6 @@
                         <posy>-210</posy>
                         <width>1405</width>
                         <height>38</height>
-                        <aligny>-</aligny>
                         <scroll>true</scroll>
                         <font>Font_Reg38</font>
                         <label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Album][/COLOR]$INFO[ListItem.Year, [,] ]</label>
@@ -218,7 +217,6 @@
                         <posy>-270</posy>
                         <width>1405</width>
                         <height>38</height>
-                        <aligny>-</aligny>
                         <scroll>true</scroll>
                         <font>Font_Reg38</font>
                         <visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
@@ -234,7 +232,6 @@
                         <posy>-270</posy>
                         <width>1405</width>
                         <height>38</height>
-                        <aligny>-</aligny>
                         <scroll>true</scroll>
                         <visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                         <font>Font_Reg38</font>
@@ -246,7 +243,6 @@
                         <posy>-210</posy>
                         <width>1405</width>
                         <height>38</height>
-                        <aligny>-</aligny>
                         <scroll>true</scroll>
                         <font>Font_Reg38</font>
                         <label>$INFO[ListItem.Property(Artist_Genre)]</label>

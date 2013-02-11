@@ -15,7 +15,7 @@ import xbmcgui
 from xbmcaddon import Addon
 
 # addon constants
-__addonID__   = "skin.glassnox" # get addon id
+__addonID__   = "skin.glassnox.svn" # get addon id
 __settings__  = Addon( __addonID__ ) # get Addon object
 __localize__    = __settings__.getLocalizedString
 

@@ -136,7 +136,6 @@
                         <aspectratio>scale</aspectratio>
                         <fadetime>400</fadetime>
                         <texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
-                        <bordertexure border="7">thumbs/thumbshadow.png</bordertexure>
                         <bordersize>7</bordersize>
                     </control>
                     <control type="multiimage">
@@ -471,7 +470,7 @@
                         <posy>8</posy>
                         <width>412</width>
                         <height>412</height>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio>keep</aspectratio>
                         <fadetime>IconCrossfadeTime2</fadetime>
                         <include condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">cdartlibrary</include>
                         <include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>

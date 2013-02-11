@@ -297,6 +297,12 @@
                             <onclick>ActivateWindow(1146)</onclick>
                         </item>
                         <item>
+                            <label>News</label>
+                            <onclick>SetProperty(CustomYesNoDialog,rssnews,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,News)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                        </item>
+                        <item>
                             <label>31183</label>
                             <onclick>SetProperty(CustomYesNoDialog,wundergroundpanel,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Weather Wunderground)</onclick>

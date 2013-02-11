@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <addon
   id="skin.glassnox"
-  version="2.0.4"
+  version="2.0.5"
   name="glassnox"
   provider-name="fmronan,MikeBzh,Kpitn (passion-xbmc.org)">
   <requires>
@@ -9,7 +9,7 @@
     <!-- Addons obligatoires -->
     
     <import addon="script.color.picker"             version="1.0.5"/>
-    <import addon="script.gui.GlassNoxViewsInstaller" version="1.0.5"/>
+    <import addon="script.gui.GlassNoxViewsInstaller" version="1.0.6"/>
 	<import addon="script.glassnox.extras.downloader" version="0.0.6"/>
 	<import addon="plugin.video.xbmc.tele.fr" version="1.2.1"/>
 	<import addon="plugin.video.xbmc.tv.inter" version="1.0.1"/>
