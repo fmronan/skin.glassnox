@@ -2097,3 +2097,11 @@ msgstr "Choisir la couleur des fonds"
 msgctxt "#53016"
 msgid "Choose icon color"
 msgstr "Choisir la couleur des icones"
+
+msgctxt "#53017"
+msgid "installed"
+msgstr "installée"
+
+msgctxt "#53018"
+msgid "Views"
+msgstr "Vues"

@@ -34,6 +34,7 @@
     <include file="Includes_Widget2.xml" />
     <include file="Includes_CustomizerWindow.xml" />
     <include file="Viewtype_FullscreenPanel.xml" />
+    <include file="Includes_NextAired.xml" />
     <!-- Custom Views -->
 	<include file="View_Custom1001.xml" />
 	<include file="View_Custom1002.xml" />
@@ -203,9 +204,9 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>60</height>
         <width>400</width>
-        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+        <texturenofocus border="1">settings/listselect_nf.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
+        <alttexturenofocus border="1">settings/listselect_nf.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
@@ -221,9 +222,9 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>95</height>
         <width>500</width>
-        <texturenofocus>settings/listselect_nf2.png</texturenofocus>
+        <texturenofocus border="1">settings/listselect_nf2.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus>settings/listselect_nf2.png</alttexturenofocus>
+        <alttexturenofocus border="1">settings/listselect_nf2.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
@@ -257,8 +258,8 @@
         <height>60</height>
         <width>470</width>
         <texturenofocus>settings/listselect_nf.png</texturenofocus>
-        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
+        <texturefocus border="1">views/tripanel/listselect_fo.png</texturefocus>
+        <alttexturenofocus border="1">settings/listselect_nf.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
@@ -275,9 +276,9 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>60</height>
         <width>470</width>
-        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+        <texturenofocus border="1">settings/listselect_nf.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
+        <alttexturenofocus border="1">settings/listselect_nf.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>white6</focusedcolor>
@@ -291,9 +292,9 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>45</height>
         <width>470</width>
-        <texturenofocus>settings/listselect_nf3.png</texturenofocus>
+        <texturenofocus border="1">settings/listselect_nf3.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus>settings/listselect_nf3.png</alttexturenofocus>
+        <alttexturenofocus border="1">settings/listselect_nf3.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>$VAR[FontColorVar]</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
@@ -725,205 +726,6 @@
     <include name="Aspectratio_Scale">
         <aspectratio align="center">scale</aspectratio>
     </include>
-    <include name="TVGuideWeekdayButtonbackground">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>434</width>
-        <height>84</height>
-        <align>left</align>
-        <font>Font-Condensed-S34</font>
-        <textcolor>white</textcolor>
-        <disabledcolor>grey2</disabledcolor>
-        <shadowcolor>22000000</shadowcolor>
-        <textoffsetx>30</textoffsetx>
-        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <texturenofocus>views/tripanel/listselect_fo.png</texturenofocus>
-        <alttexturefocus>-</alttexturefocus>
-        <alttexturenofocus>-</alttexturenofocus>
-    </include>
-    <include name="TVGuideWeekdayButton">
-        <posx>0</posx>
-        <posy>0</posy>
-        <width>434</width>
-        <height>84</height>
-        <align>left</align>
-        <font>Font-Condensed-S34</font>
-        <textcolor>white</textcolor>
-        <disabledcolor>grey2</disabledcolor>
-        <shadowcolor>22000000</shadowcolor>
-        <textoffsetx>30</textoffsetx>
-        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-        <texturefocus>-</texturefocus>
-        <texturenofocus>-</texturenofocus>
-        <alttexturefocus>-</alttexturefocus>
-        <alttexturenofocus>-</alttexturenofocus>
-    </include>
-    <include name="NextAiredItemLayout">
-        <control type="group">
-            <control type="image">
-                <posx>13</posx>
-                <posy>20</posy>
-                <width>405</width>
-                <height>237</height>
-                <aspectratio aligny="top">keep</aspectratio>
-                <texture background="true">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-            </control>
-            <control type="group">
-                <posy>-30</posy>
-                <control type="image">
-                    <posx>10</posx>
-                    <posy>290</posy>
-                    <width>411</width>
-                    <height>247</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Property(Art(Fanart))]</texture>
-                    <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                    <bordersize>7</bordersize>
-                </control>
-                <control type="image">
-                    <posx>10</posx>
-                    <posy>290</posy>
-                    <width>411</width>
-                    <height>247</height>
-                    <aspectratio align="center">keep</aspectratio>
-                    <texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
-                    <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                    <bordersize>7</bordersize>
-                    <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
-                </control>
-                <control type="image">
-                    <posx>17</posx>
-                    <posy>492</posy>
-                    <width>397</width>
-                    <height>34</height>
-                    <colordiffuse>99FFFFFF</colordiffuse>
-                    <texture>common/bgcolor.png</texture>
-                </control>
-                <control type="image">
-                    <posx>370</posx>
-                    <posy>486</posy>
-                    <width>45</width>
-                    <height>45</height>
-                    <texture>tvguide/$INFO[ListItem.Property(StatusID)].png</texture>
-                </control>
-                <control type="image">
-                    <posx>20</posx>
-                    <posy>491</posy>
-                    <width>35</width>
-                    <height>35</height>
-                    <texture>tvguide/clock.png</texture>
-                </control>
-                <control type="label">
-                    <posx>215</posx>
-                    <posy>468</posy>
-                    <width>370</width>
-                    <height>80</height>
-                    <align>center</align>
-                    <font>Font_Reg17</font>
-                    <label>[COLOR white2]$INFO[ListItem.Property(ShortTime)][/COLOR][COLOR grey] ($INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]])[/COLOR]</label>
-                    <textcolor>$VAR[TitleColorVar]</textcolor>
-                </control>
-            </control>
-            <control type="label">
-                <posx>22</posx>
-                <posy>200</posy>
-                <width>370</width>
-                <height>30</height>
-                <font>Font_Bold22</font>
-                <label>S$INFO[ListItem.Property(NextSeasonNumber)]E$INFO[ListItem.Property(NextEpisodeNumber)]</label>
-                <textcolor>$VAR[TitleColorVar]</textcolor>
-            </control>
-            <control type="label">
-                <posx>22</posx>
-                <posy>229</posy>
-                <width>415</width>
-                <height>30</height>
-                <label>$INFO[ListItem.Property(NextTitle)]</label>
-                <scroll>true</scroll>
-            </control>
-            <control type="label">
-                <posx>22</posx>
-                <posy>538</posy>
-                <width>415</width>
-                <height>80</height>
-                <label>$LOCALIZE[31189]:[CR][COLOR white2]S$INFO[ListItem.Property(LatestSeasonNumber)]E$INFO[ListItem.Property(LatestEpisodeNumber)][COLOR grey] ($LOCALIZE[31322]: $INFO[ListItem.Property(LatestDate)])[/COLOR]:[CR] $INFO[ListItem.Property(LatestTitle)][/COLOR]</label>
-                <textcolor>$VAR[TitleColorVar]</textcolor>
-            </control>
-            <control type="label">
-                <posx>22</posx>
-                <posy>618</posy>
-                <width>415</width>
-                <height>80</height>
-                <label></label>
-                <textcolor>$VAR[TitleColorVar]</textcolor>
-            </control>
-            <control type="label">
-                <posx>22</posx>
-                <posy>638</posy>
-                <width>415</width>
-                <height>80</height>
-                <label>$LOCALIZE[515]: [CR][COLOR white2]$INFO[ListItem.Property(Genre)][/COLOR]</label>
-                <textcolor>$VAR[TitleColorVar]</textcolor>
-            </control>
-            <control type="label">
-                <posx>22</posx>
-                <posy>722</posy>
-                <width>170</width>
-                <height>80</height>
-                <label>$LOCALIZE[31005]:[CR][COLOR white2]$INFO[ListItem.Property(Premiered)][/COLOR]</label>
-                <textcolor>$VAR[TitleColorVar]</textcolor>
-            </control>
-            <control type="image">
-                <posx>0</posx>
-                <posy>822</posy>
-                <width>135</width>
-                <height>90</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>floor</colordiffuse>
-                <texture fallback="flags/studios/default-studio.png">$INFO[ListItem.Property(Network),flags/studios/,.png]</texture>
-            </control>
-            <control type="image">
-                <posx>240</posx>
-                <posy>710</posy>
-                <width>185</width>
-                <height>240</height>
-                <aspectratio>keep</aspectratio>
-                <colordiffuse>floor</colordiffuse>
-                <fadetime>IconCrossfadeTime2</fadetime>
-                <animation effect="fade" time="200">VisibleChange</animation>
-                <texture>$INFO[ListItem.Property(Art(characterart))]</texture>
-            </control>
-            <control type="image">
-                <posx>435</posx>
-                <posy>100</posy>
-                <width>1</width>
-                <height>789</height>
-                <texture>dialogs/weatherline.png</texture>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-            </control>
-        </control>
-    </include>
-    <include name="NextAiredFocusedLayout">
-        <control type="image">
-            <width>435</width>
-            <height>955</height>
-            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-            <texture>views/tripanel/listselect_fo.png</texture>
-        </control>
-        <include>NextAiredItemLayout</include>
-    </include>
-    <include name="NextAiredListVars">
-        <itemgap>0</itemgap>
-        <posx>495</posx>
-        <posy>61</posy>
-        <width>1305</width>
-        <height>978</height>
-        <orientation>horizontal</orientation>
-        <scrolltime>0</scrolltime>
-        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout">Hidden</animation>
-        <animation effect="fade" start="0" end="100" time="240" tween="sine" easing="inout">Visible</animation>
-    </include>
     <include name="Objects_CommonSettingsButton">
         <width>1172</width>
         <height>60</height>
@@ -1270,9 +1072,9 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>60</height>
         <width>603</width>
-        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+        <texturenofocus border="1">settings/listselect_nf.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
+        <alttexturenofocus border="1">settings/listselect_nf.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>

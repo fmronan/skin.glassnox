@@ -2285,3 +2285,11 @@ msgstr ""
 msgctxt "#53016"
 msgid "Choose icon color"
 msgstr ""
+
+msgctxt "#53017"
+msgid "installed"
+msgstr ""
+
+msgctxt "#53018"
+msgid "Views"
+msgstr ""

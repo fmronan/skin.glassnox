@@ -113,6 +113,8 @@ if ( __name__ == "__main__" ):
             if ViewOK:
                 #xbmcgui.Dialog().ok(  "View %s installed and save in userdata" % (v), "XBMC requires restart!" )
                 xbmcgui.Dialog().ok(  xbmc.getLocalizedString(53011) %v, xbmc.getLocalizedString(53012) )
+		xbmc.executebuiltin( "Action(Close)")
+		xbmc.executebuiltin( "ReloadSkin()")
             else:
                 #xbmcgui.Dialog().ok(  "Error","No more custom view available." )
                 xbmcgui.Dialog().ok(  xbmc.getLocalizedString(257),xbmc.getLocalizedString(31154) )

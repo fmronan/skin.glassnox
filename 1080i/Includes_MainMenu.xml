@@ -913,7 +913,7 @@
             <visible>Substring(Control.GetLabel(4327),shutdown) + IsEmpty(Skin.String(ShutdownSub6.Disable)) + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon</visible>
         </item>
 		<item>
-            <label fallback="20126">$INFO[Skin.String(ShutdownSub7.Label)]</label>
+            <label fallback="13009">$INFO[Skin.String(ShutdownSub7.Label)]</label>
             <thumb>$INFO[Skin.String(ShutdownSub7.MultiFanart)]</thumb>
             <property name="Widget">$INFO[Skin.String(ShutdownSub7.Widget)]</property>
             <property name="WidgetTitle">$INFO[Skin.String(ShutdownSub7.WidgetTitle)]</property>
