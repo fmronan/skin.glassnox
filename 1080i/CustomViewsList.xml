@@ -83,6 +83,7 @@
                             <aligny>center</aligny>
                             <textcolor>grey2</textcolor>
 							<label>$LOCALIZE[53017]</label>
+							<visible>Container(550).ListItem.IsSelected</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60" width="1100">
@@ -126,6 +127,7 @@
 							<textcolor>white2</textcolor>
 							<aligny>center</aligny>
 							<label>$LOCALIZE[53017]</label>
+							<visible>Container(550).ListItem.IsSelected</visible>
 						</control>
 					</focusedlayout>
 				</control>
