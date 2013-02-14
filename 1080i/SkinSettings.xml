@@ -1455,7 +1455,6 @@
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<textcolor>grey2</textcolor>
 						<textoffsetx>70</textoffsetx>
-						<onclick>Skin.SetFile(NewView,.zip)</onclick>
 						<onclick>RunScript(script.gui.GlassNoxViewsInstaller)</onclick>
                         <visible>Container(9000).Hasfocus(6)</visible>
                     </control>

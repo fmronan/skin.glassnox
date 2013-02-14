@@ -400,7 +400,7 @@
                     <control type="image">
                         <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
                         <posx>525</posx>
-                        <posy>-148</posy>
+                        <posy>-188</posy>
                         <width>900</width>
                         <height>4</height>
                         <texture>views/list_divider.png</texture>
@@ -408,7 +408,7 @@
                     <control type="image">
                         <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
                         <posx>525</posx>
-                        <posy>-63</posy>
+                        <posy>-83</posy>
                         <width>900</width>
                         <height>4</height>
                         <texture>views/list_divider.png</texture>
@@ -560,7 +560,7 @@
                 </control>
                 <control type="grouplist">
                     <posx>610</posx>
-                    <posy>76</posy>
+                    <posy>71</posy>
                     <width>1920</width>
                     <animation effect="fade" start="100" end="0" time="240" condition="Window.IsVisible(musicosd)">Conditional</animation>
                     <height>150</height>
@@ -570,23 +570,11 @@
                         <width min="10" max="1250">auto</width>
                         <height>75</height>
                         <font>Font_MainClassic</font>
-                        <label>$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration]</label>
+                        <label>$VAR[PlayerTimeLabelVar]</label>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                         <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                         <align>right</align>
                         <aligny>bottom</aligny>
-                        <visible>Player.HasDuration</visible>
-                    </control>
-                    <control type="label">
-                        <width min="10" max="1250">auto</width>
-                        <height>75</height>
-                        <font>Font_MainClassic</font>
-                        <label>$INFO[MusicPlayer.Time,, / ]∞</label>
-                        <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
-                        <align>right</align>
-                        <aligny>bottom</aligny>
-                        <visible>!Player.HasDuration</visible>
                     </control>
                 </control>
                 <control type="label">
