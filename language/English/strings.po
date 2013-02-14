@@ -2293,3 +2293,7 @@ msgstr ""
 msgctxt "#53018"
 msgid "Views"
 msgstr ""
+
+msgctxt "#53019"
+msgid "Add new view"
+msgstr ""

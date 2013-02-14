@@ -2105,3 +2105,7 @@ msgstr "installée"
 msgctxt "#53018"
 msgid "Views"
 msgstr "Vues"
+
+msgctxt "#53019"
+msgid "Add new view"
+msgstr "Installer une nouvelle vue"
