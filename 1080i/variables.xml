@@ -1111,6 +1111,7 @@
         <value condition="Stringcompare(Control.GetLabel(4326),weather)">[COLOR grey]$INFO[Window(Weather).Property(Location)] • $LOCALIZE[402]: [/COLOR]$INFO[Window(weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits][COLOR grey] • $LOCALIZE[406]:[/COLOR] $INFO[Window(weather).Property(Current.Humidity)]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),programs)">[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]:[/COLOR] $INFO[Window(Home).Property(RandomAddon.Count)] [COLOR grey]  •  $LOCALIZE[1036]:[/COLOR] $INFO[Window(home).Property(favourite.count)]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),favourites)">[COLOR grey]$LOCALIZE[31509]:[/COLOR] $INFO[Window(Home).Property(favourite.count)]</value>
+        <value condition="Stringcompare(Control.GetLabel(4326),nextaired)">[COLOR grey]$LOCALIZE[31329]:[/COLOR] $INFO[Window(Home).Property(NextAired.Total)][COLOR grey]  •  $LOCALIZE[33006]:[/COLOR] $INFO[Window(Home).Property(NextAired.TodayTotal)]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),system)">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309][/COLOR] ]$INFO[System.CPUUsage,[COLOR grey] • $LOCALIZE[13271][/COLOR] ]</value>
         <value condition="Substring(Control.GetLabel(4326),custom,left)">$VAR[CustomLibraryStatsVar]</value>
         <value condition="Window.IsActive(1131)">$LOCALIZE[31683]</value>
@@ -1166,6 +1167,7 @@
         <value condition="Stringcompare(Control.GetLabel(4326),weather)">[COLOR grey]$LOCALIZE[402]: [/COLOR]$INFO[Window(weather).Property(Current.FeelsLike)] $INFO[System.TemperatureUnits][COLOR grey] • $LOCALIZE[406]:[/COLOR] $INFO[Window(weather).Property(Current.Humidity)]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),programs)">[COLOR grey]$LOCALIZE[20161] $LOCALIZE[24001]:[/COLOR] $INFO[Window(Home).Property(RandomAddon.Count)] [COLOR grey]  •  $LOCALIZE[1036]:[/COLOR] $INFO[Window(home).Property(favourite.count)]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),favourites)">[COLOR grey]$LOCALIZE[20161] $LOCALIZE[31509]:[/COLOR] $INFO[Window(Home).Property(favourite.count)]</value>
+        <value condition="Stringcompare(Control.GetLabel(4326),nextaired)">[COLOR grey]$LOCALIZE[31329]:[/COLOR] $INFO[Window(Home).Property(NextAired.Total)][COLOR grey]  •  $LOCALIZE[33006]:[/COLOR] $INFO[Window(Home).Property(NextAired.TodayTotal)]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),system)">$INFO[System.memory(used.percent),[COLOR grey]$LOCALIZE[31309][/COLOR] ]$INFO[System.CPUUsage,[COLOR grey] • $LOCALIZE[13271][/COLOR] ]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),PVR) + PVR.IsRecording">$LOCALIZE[19158] $INFO[PVR.NowRecordingDateTime, [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] - ] • [B][COLOR=FF48D1CC]$INFO[PVR.NowRecordingTitle][/COLOR][/B] [B][COLOR=white]($INFO[PVR.NowRecordingChannel, ])[/COLOR][/B]</value>
         <value condition="Stringcompare(Control.GetLabel(4326),PVR) + PVR.HasNonRecordingTimer">$LOCALIZE[19157] $INFO[PVR.NextRecordingDateTime, [B][COLOR=white], [/COLOR][/B]$LOCALIZE[19126] - ] • $INFO[PVR.NextRecordingTitle, [B][COLOR=white],[/COLOR][/B]]$INFO[PVR.NextRecordingChannel, - [B][COLOR=white],[/COLOR][/B]]</value>
@@ -1407,10 +1409,6 @@
         <value condition="!Skin.HasSetting(NoMusicLibraryFanart) + !IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
         <value condition="IsEmpty(Skin.String(MusicBackground))">special://skin/backgrounds/music/</value>
         <value>$INFO[Skin.String(MusicBackground)]</value>
-    </variable>
-    <variable name="PlayerTimeLabelVar">
-        <value condition="Player.HasDuration">$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration]</value>
-        <value>$INFO[MusicPlayer.Time,, / ]∞</value>
     </variable>
     <variable name="SettingsFanartVar">
         <value condition="IsEmpty(Skin.String(SettingsBackground))">special://skin/backgrounds/system/</value>
@@ -2667,7 +2665,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.5.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.5.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.5.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_01-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/$INFO[System.Date(yyyy)]/$INFO[System.Date(mm)]/babe_$INFO[System.Date(mm)]-$INFO[System.Date(dd)]-$INFO[System.Date(yyyy)].jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent5]</value>
     </variable>
     <variable name="NoCase2Var">
@@ -2677,7 +2675,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.9.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.9.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.9.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_02-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/01/babe_01-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent9]</value>
     </variable>
     <variable name="NoCase3Var">
@@ -2687,7 +2685,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.8.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.8.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.8.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_03-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/02/babe_02-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent8]</value>
     </variable>
     <variable name="NoCase4Var">
@@ -2697,7 +2695,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.7.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.7.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.7.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_04-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/03/babe_03-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent7]</value>
     </variable>
     <variable name="NoCase5Var">
@@ -2707,7 +2705,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.4.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.4.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.4.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_05-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/04/babe_04-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent4]</value>
     </variable>
     <variable name="NoCase6Var">
@@ -2717,7 +2715,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.6.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.6.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.6.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_06-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/05/babe_05-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent6]</value>
     </variable>
     <variable name="NoCase7Var">
@@ -2727,7 +2725,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.10.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.10.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.10.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_07-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/06/babe_06-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent10]</value>
     </variable>
     <variable name="NoCase8Var">
@@ -2737,7 +2735,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.3.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.3.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.3.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_08-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/07/babe_07-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent3]</value>
     </variable>
     <variable name="NoCase9Var">
@@ -2747,7 +2745,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.2.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.2.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.2.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_09-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/08/babe_08-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent2]</value>
     </variable>
     <variable name="NoCase10Var">
@@ -2757,7 +2755,7 @@
         <value condition="StringCompare(Control.GetLabel(4322),nocaserandomtv)">$INFO[Window(home).Property(RandomEpisode.1.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocaselatesttv)">$INFO[Window(home).Property(RecentEpisode.1.Art(thumb))]</value>
         <value condition="StringCompare(Control.GetLabel(4322),nocasewatchlisttv)">$INFO[Window(home).Property(RecommendedEpisode.1.Art(thumb))]</value>
-        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/images/babe_10-$INFO[System.Date(dd)]-2012.jpg</value>
+        <value condition="StringCompare(Control.GetLabel(4322),nocasedailybabes)">http://dailybabenews.com/wp-content/uploads/2012/09/babe_09-$INFO[System.Date(dd)]-2012.jpg</value>
         <value condition="Substring(Control.GetLabel(4322),nocasecustom)">$VAR[CustomLiveContent1]</value>
     </variable>
     <variable name="CustomLiveContent1">
