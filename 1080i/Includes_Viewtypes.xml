@@ -759,6 +759,23 @@
                     <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
             </control>
+<!-- BEGIN Extra Fanart by ShadowTek -->
+            <control type="multiimage">
+                <posx>909</posx>
+                <posy>69</posy>
+                <width>798</width>
+                <height>454</height>
+                <aspectratio>stretch</aspectratio>
+                <fadetime>FanartCrossfadeTime</fadetime>
+                <include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
+                <include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
+                <timeperimage>3000</timeperimage>
+                <texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[FanartTextureVar]</texture>
+                <imagepath background="true">$INFO[ListItem.Path]\extrafanart</imagepath>
+                <visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+                <include>Animation_VisibleChange200</include>
+             </control>
+<!-- END Extra Fanart by ShadowTek -->
             <control type="group">
                 <visible>StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
                 <posx>158</posx>

@@ -901,12 +901,12 @@
         <value>$INFO[ListItem.Plot]</value>
     </variable>
     <variable name="FanartTextureVar">
-        <value condition="Container.Content(movies) + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/fallback_movies.jpg</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(episodes) + !Skin.HasSetting(LandscapeThumb)]] + IsEmpty(ListItem.Art(fanart))">special://skin/backgrounds/fallback_tvshows.jpg</value>
+        <value condition="Container.Content(movies) + IsEmpty(ListItem.Art(extrafanart))">special://skin/backgrounds/fallback_movies.jpg</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(episodes) + !Skin.HasSetting(LandscapeThumb)]] + IsEmpty(ListItem.Art(extrafanart))">special://skin/backgrounds/fallback_tvshows.jpg</value>
         <value condition="Container.Content(episodes) + Skin.HasSetting(LandscapeThumb) + IsEmpty(ListItem.Thumb)">special://skin/backgrounds/fallback_tvshows.jpg</value>
         <value condition="Container.Content(episodes) + Skin.HasSetting(LandscapeThumb)">$INFO[ListItem.Thumb]</value>
         <value condition="[[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(TVLandscapeThumb)]">$INFO[ListItem.Path,,landscape.jpg]</value>
-        <value>$INFO[ListItem.Art(fanart)]</value>
+        <value>$INFO[ListItem.Art(extrafanart)]</value>
     </variable>
     <variable name="PosterPanelDetail3Var">
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[345]:</value>
