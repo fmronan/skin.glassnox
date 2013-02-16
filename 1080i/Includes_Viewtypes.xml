@@ -395,7 +395,7 @@
 					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
 					<posx>502</posx>
-					<posy>-40</posy>
+					<posy>-39</posy>
 					<width>935</width>
 					<height>620</height>
 					<aspectratio>stretch</aspectratio>
@@ -437,11 +437,11 @@
 					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
 					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>42</posx>
-					<posy>-75</posy>
-					<width>350</width>
-					<height>550</height>
-					<aspectratio>stretch</aspectratio>
+					<posx>24</posx>
+					<posy>-37</posy>
+					<width>374</width>
+					<height>520</height>
+					<aspectratio>keep</aspectratio>
 					<texture>wall/panneau4.png</texture>
 					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>					
 				</control>
@@ -618,11 +618,11 @@
 					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
 					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>1520</posx>
-					<posy>-95</posy>
-					<width>400</width>
-					<height>650</height>
-					<aspectratio>stretch</aspectratio>
+					<posx>1560</posx>
+					<posy>-37</posy>
+					<width>358</width>
+					<height>570</height>
+					<aspectratio>keep</aspectratio>
 					<texture>wall/panneau3.png</texture>
 					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
 				</control>
@@ -644,9 +644,9 @@
 					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
 					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
 					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<animation effect="rotate" time="0" delay="0" start="0" end="15.6" condition="true">Conditional</animation>
-						<posx>1409</posx>
-                        <posy>750</posy>
+					<animation effect="rotate" time="0" delay="0" start="0" end="15.38" condition="true">Conditional</animation>
+						<posx>1410</posx>
+                        <posy>744</posy>
                         <width>328</width>
                         <height>181</height>
                         <aspectratio>keep</aspectratio>
