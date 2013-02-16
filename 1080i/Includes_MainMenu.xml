@@ -1201,7 +1201,7 @@
                 <property name="Widget2Title">$INFO[Skin.String(ShutdownHomeItem.Widget2Title)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownHomeItem.Disable)]</property>
                 <property name="BigIcon" fallback="special://skin/extras/BigIcons/Power.png">$INFO[Skin.String(ShutdownHomeItem.Icon)]</property>
-                <property name="InfoLine" fallback="none">$INFO[Skin.String(ShutdownHomeItem.InfoLine)]</property>
+                <property name="InfoLine" fallback="shutdown">$INFO[Skin.String(ShutdownHomeItem.InfoLine)]</property>
 				<property name="SubMenu" fallback="shutdown">$INFO[Skin.String(ShutdownHomeItem.SubMenu)]</property>
                 <property name="Type" fallback="custom">$INFO[Skin.String(ShutdownHomeItem.Type)]</property>
                 <property name="Path" fallback="ActivateWindow(1113)">$INFO[Skin.String(ShutdownHomeItem.Path)]</property>
@@ -1953,6 +1953,7 @@
                     <include condition="Substring(Skin.String(backgroundlist),randompics)">RandomPicturesBackgrounds</include>
                     <include condition="Substring(Skin.String(backgroundlist),mostplayedroms)">MostPlayedRomsBackgrounds</include>
                     <include condition="Substring(Skin.String(backgroundlist),dailybabe)">DailyBabeBackgrounds</include>
+                    <include condition="Substring(Skin.String(backgroundlist),thebigpicture) + System.HasAddon(service.skin.widgets_bigpictures)">TheBigPictureBackgrounds</include>
                 </content>
             </control>
             <control type="label" id="4325">
@@ -2736,6 +2737,34 @@
             <visible>Substring(Control.GetLabel(4322),dailybabe)</visible>
         </item>
     </include>
+    <include name="TheBigPictureBackgrounds">
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.3.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
+        </item>
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.4.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
+        </item>
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.5.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
+        </item>
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.6.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
+        </item>
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.7.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
+        </item>
+  
+    </include>
     <include name="MostPlayedRomsBackgrounds">
         <item>
             <onclick>noop</onclick>
@@ -2770,194 +2799,194 @@
     </include>
     <include name="1124Backgrounds">
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recentmovies)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentMovie.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recentmovies)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentMovie.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randommovies)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomMovie.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randommovies)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomMovie.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recenttv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recenttv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randomtv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomEpisode.2.Art(tvshow.fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randomtv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomEpisode.2.Art(tvshow.fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recentalbums)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentAlbum.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recentalbums)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentAlbum.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randomalbums)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomAlbum.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randomalbums)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomAlbum.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentMusicVideo.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recentmusicvideos)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecentMusicVideo.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),recentmusicvideos)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecentMusicVideo.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomMusicVideo.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randommusicvideos)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomMusicVideo.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randommusicvideos)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randomartists)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomArtist.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RandomArtist.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Stringcompare(Control.GetLabel(4322),randomartists)</visible>
             <visible>!IsEmpty(Window(Home).Property(RandomArtist.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist1.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist1.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist2.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist2.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist3.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist3.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist4.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist4.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist5.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist5.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(SmartPlaylist6.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist6.2.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmovies)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Art(fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedMovie.2.Art(fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlistmovies)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.2.Art(fanart)))</visible>
         </item>
@@ -2974,56 +3003,66 @@
             <visible>Substring(Control.GetLabel(4322),watchlistalbums)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),watchlisttv)</visible>
             <visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart)))</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),randompics)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),randompics)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),recentpics)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBLatest.2.Path)]</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),recentpics)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">http://dailybabenews.com/wp-content/uploads/$INFO[System.Date(yyyy)]/$INFO[System.Date(mm)]/babe_$INFO[System.Date(mm)]-$INFO[System.Date(dd)]-$INFO[System.Date(yyyy)].jpg</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),dailybabe)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">http://dailybabenews.com/wp-content/uploads/2012/01/babe_01-$INFO[System.Date(dd)]-2012.jpg</property>
+            <onclick>noop</onclick>
             <visible>Substring(Control.GetLabel(4322),dailybabe)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.1.Fanart)]</property>
-            <visible>Stringcompare(Control.GetLabel(4322),mostplayedroms)</visible>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),mostplayedroms)</visible>
         </item>
         <item>
-            <onclick>noop</onclick>
             <property name="Fanart">$INFO[Window(Home).Property(MostPlayedROM.2.Fanart)]</property>
-            <visible>Stringcompare(Control.GetLabel(4322),mostplayedroms)</visible>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),mostplayedroms)</visible>
+        </item>
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.0.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
+        </item>
+        <item>
+            <property name="Fanart">$INFO[Window(home).Property(bigpictures.photo.1.pic)]</property>
+            <onclick>noop</onclick>
+            <visible>Substring(Control.GetLabel(4322),thebigpicture)</visible>
         </item>
     </include>
     <include name="FocusPosition4">

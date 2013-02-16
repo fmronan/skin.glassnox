@@ -24,15 +24,16 @@
                 <effect type="fade" start="100" end="0" time="320" />
                 <effect type="zoom" end="180,100" time="320" tween="cubic" />
             </animation>
-            <itemlayout width="450" height="260">
+            <itemlayout width="300" height="175">
                 <control type="image">
-                    <width>279</width>
-                    <height>189</height>
+					<posx>45</posx>
+                    <width>185</width>
+                    <height>124</height>
                     <info>ListItem.ActualIcon</info>
                 </control>
                 <control type="label">
                     <posx>140</posx>
-                    <posy>180</posy>
+                    <posy>130</posy>
                     <width>279</width>
                     <height>30</height>
                     <align>center</align>
@@ -41,15 +42,16 @@
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
-            <focusedlayout width="450" height="260">
+            <focusedlayout width="300" height="175">
                 <control type="image">
-                    <width>279</width>
-                    <height>189</height>
+					<posx>45</posx>
+                    <width>185</width>
+                    <height>124</height>
                     <info>ListItem.Thumb</info>
                 </control>
                 <control type="label">
                     <posx>140</posx>
-                    <posy>180</posy>
+                    <posy>130</posy>
                     <width>279</width>
                     <height>30</height>
                     <align>center</align>
@@ -82,6 +84,12 @@
                     <icon>views/fourthumbs.png</icon>
                     <thumb>views/fourthumbs_focus.png</thumb>
                     <onclick>Skin.SetString(InfoPanel$INFO[Window(home).Property(Area)]$INFO[Window(home).Property(actualViewtype)],fourthumbs)</onclick>
+                </item>
+                <item id="4">
+                    <label>$LOCALIZE[31287].2</label>
+                    <icon>views/fourthumbs.png</icon>
+                    <thumb>views/fourthumbs_focus.png</thumb>
+                    <onclick>Skin.SetString(InfoPanel$INFO[Window(home).Property(Area)]$INFO[Window(home).Property(actualViewtype)],chaine)</onclick>
                 </item>
             </content>
         </control>

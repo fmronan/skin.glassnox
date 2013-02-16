@@ -5583,6 +5583,7 @@
                     <include condition="System.HasAddon(script.randomandlastitems) + [Window.IsActive(1124) | SubString(Skin.String(widgetlist),5custompanel)]">Custom5Widget</include>
                     <include condition="System.HasAddon(script.randomandlastitems) + [Window.IsActive(1124) | SubString(Skin.String(widgetlist),6custompanel)]">Custom6Widget</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),babe)">DailyBabesContent</include>
+                    <include condition="[Window.IsActive(1124) | Substring(Skin.String(widgetlist),thebigpicture)] + System.HasAddon(service.skin.widgets_bigpictures)">TheBigPictureContent</include>
                     <include condition="Library.HasContent(tvshows) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),nextairedtvpanel)]">NextAiredWidgetContent1124</include>
                     <include condition="Library.HasContent(tvshows) + Substring(Skin.String(widgetlist),nextairedtvpanel) + !Window.IsActive(1124)">NextAiredWidgetContent</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss1panel)]">RSS1WidgetContent1124</include>
@@ -5992,20 +5993,21 @@
                     <include condition="System.HasAddon(script.randomandlastitems) + [Window.IsActive(1124) | SubString(Skin.String(widget2list),11custompanel)]">Custom5Widget2</include>
                     <include condition="System.HasAddon(script.randomandlastitems) + [Window.IsActive(1124) | SubString(Skin.String(widget2list),12custompanel)]">Custom6Widget2</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),babe)">DailyBabesContent2</include>
+                    <include condition="[Window.IsActive(1124) | Substring(Skin.String(widget2list),thebigpicture)] + System.HasAddon(service.skin.widgets_bigpictures)">TheBigPictureContent2</include>
                     <include condition="Library.HasContent(tvshows) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),nextairedtvpanel)]">NextAiredWidget2Content1124</include>
                     <include condition="Library.HasContent(tvshows) + Substring(Skin.String(widget2list),nextairedtvpanel) + !Window.IsActive(1124)">NextAiredWidget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss1panel)]">RSS1Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss1panel)">RSS1Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss1panel)+ !Window.IsActive(1124)">RSS1Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss2panel)]">RSS2Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss2panel)">RSS2Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss2panel)+ !Window.IsActive(1124)">RSS2Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss3panel)]">RSS3Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss3panel)">RSS3Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss3panel)+ !Window.IsActive(1124)">RSS3Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss4panel)]">RSS4Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss4panel)">RSS4Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss4panel)+ !Window.IsActive(1124)">RSS4Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss5panel)]">RSS5Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss5panel)">RSS5Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss5panel)+ !Window.IsActive(1124)">RSS5Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss6panel)]">RSS6Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss6panel)">RSS6Widget2Content</include>
+                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss6panel)+ !Window.IsActive(1124)">RSS6Widget2Content</include>
                     <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rssnewspanel)]">NewsWidget2Content1124</include>
                     <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rssnewspanel)">NewsWidget2Content</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),Icon1panel)">IconPanel1Items2</include>
@@ -7454,22 +7456,22 @@
             <animation effect="zoom" center="100,150" start="95" end="100" time="480" tween="back" reversible="false">Focus</animation>
             <control type="image">
                 <posx>11</posx>
-                <posy>32</posy>
+                <posy>40</posy>
                 <width>193</width>
                 <height>290</height>
-                <fadetime>IconCrossfadeTime</fadetime>
-                <texture diffuse="thumbs/movieposter_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Property(Poster)]</texture>
                 <aspectratio scalediffuse="false">scale</aspectratio>
+                <texture diffuse="thumbs/movieposter_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Property(Poster)]</texture>
+                <fadetime>IconCrossfadeTime</fadetime>
             </control>
             <control type="image">
                 <posx>-8.5</posx>
-                <posy>12.5</posy>
+                <posy>20.5</posy>
                 <width>232</width>
                 <height>328</height>
+                <aspectratio scalediffuse="false">stretch</aspectratio>
                 <texture background="true" diffuse="thumbs/movieposter_mask.png">thumbs/thumb_glass_noreflect.png</texture>
                 <bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
                 <bordersize>19.5</bordersize>
-                <aspectratio scalediffuse="false">stretch</aspectratio>
             </control>
         </control>
         <control type="label">
@@ -7477,9 +7479,9 @@
             <posy>25</posy>
             <width>340</width>
             <height>50</height>
-            <font>Font_MainClassic4</font>
-            <label>$INFO[ListItem.Label]</label>
             <textoffsetx>15</textoffsetx>
+            <label>$INFO[ListItem.Label]</label>
+            <font>Font_MainClassic4</font>
         </control>
         <control type="progress">
             <posx>15</posx>
@@ -7498,37 +7500,70 @@
             <posy>77</posy>
             <width>340</width>
             <height>30</height>
+            <textoffsetx>15</textoffsetx>
+            <label>$INFO[ListItem.Property(Year),, • ]</label>
             <font>Font_Reg19</font>
             <textcolor>grey2</textcolor>
-            <label>$INFO[ListItem.Property(Year),, • ]</label>
             <visible>!IsEmpty(ListItem.Property(Rating))</visible>
-            <textoffsetx>15</textoffsetx>
         </control>
         <control type="label">
             <posx>202</posx>
             <posy>77</posy>
             <width>340</width>
             <height>30</height>
+            <textoffsetx>15</textoffsetx>
+            <label>$INFO[ListItem.Property(Year)]</label>
             <font>Font_Reg19</font>
             <textcolor>grey2</textcolor>
-            <label>$INFO[ListItem.Property(Year)]</label>
             <visible>IsEmpty(ListItem.Property(Rating))</visible>
+        </control>
+        <control type="label">
+            <posx>202</posx>
+            <posy>107</posy>
+            <width>340</width>
+            <height>30</height>
             <textoffsetx>15</textoffsetx>
+            <label>$INFO[ListItem.Property(Director)]</label>
+            <font>Font_Reg19</font>
+            <textcolor>grey2</textcolor>
+            <visible>!IsEmpty(ListItem.Property(Director))</visible>
+        </control>
+        <control type="label">
+            <posx>202</posx>
+            <posy>140</posy>
+            <width>340</width>
+            <height>30</height>
+            <textoffsetx>15</textoffsetx>
+            <label>$INFO[ListItem.Property(RunningTime),, $LOCALIZE[12391]]</label>
+            <font>Font_Reg19</font>
+            <textcolor>grey2</textcolor>
+            <visible>!IsEmpty(ListItem.Property(RunningTime))</visible>
+        </control>
+        <control type="label">
+            <posx>202</posx>
+            <posy>170</posy>
+            <width>340</width>
+            <height>30</height>
+            <textoffsetx>15</textoffsetx>
+            <label>$INFO[ListItem.Property(Studio)]</label>
+            <font>Font_Reg19</font>
+            <textcolor>grey2</textcolor>
+            <visible>!IsEmpty(ListItem.Property(Studio))</visible>
         </control>
         <control type="image">
             <posx>298</posx>
             <posy>78</posy>
             <width>150</width>
             <height>30</height>
-            <colordiffuse>grey</colordiffuse>
             <texture>$INFO[ListItem.Property(Rating),stars/,.png]</texture>
+            <colordiffuse>grey</colordiffuse>
             <include>Animation_HomeWidget</include>
         </control>
         <control type="textbox">
             <posx>215</posx>
-            <posy>112</posy>
+            <posy>205</posy>
             <width>300</width>
-            <height>205</height>
+            <height>140</height>
             <label>$INFO[ListItem.Property(Plot)]</label>
             <font>Font_Reg17</font>
             <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>

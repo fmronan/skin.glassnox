@@ -513,16 +513,16 @@
                 <include>HiddenObject</include>
                 <onleft>Control.Move(5010,-1)</onleft>
                 <onright>Control.Move(5010,1)</onright>
-                <onup>Control.Move(5010,1)</onup>
-                <ondown>Control.Move(5010,-1)</ondown>
+                <onup>SetFocus(5010)</onup>
+                <ondown>SetFocus(5010)</ondown>
                 <onback>SetFocus(5010)</onback>
             </control>
             <control type="button" id="22223">
                 <include>HiddenObject</include>
                 <onleft>Control.Move(6010,-1)</onleft>
                 <onright>Control.Move(6010,1)</onright>
-                <onup>Control.Move(6010,1)</onup>
-                <ondown>Control.Move(6010,-1)</ondown>
+                <onup>SetFocus(5010)</onup>
+                <ondown>SetFocus(5010)</ondown>
                 <onback>SetFocus(6010)</onback>
             </control>
         </control>

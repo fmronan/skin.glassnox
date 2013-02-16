@@ -376,9 +376,291 @@
         <onclick>ReplaceWindow(1141)</onclick>
     </include>
     <include name="ShowcaseInfoPaneMovies">
+		<control type="group" id="7550">
+            <visible>Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
+            <visible>Control.IsVisible(9900)</visible>
+            <visible>StringCompare(Control.GetLabel(4420),chaine)</visible>
+            <visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
+            <animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
+            <animation effect="fade" time="200">WindowOpen</animation>
+            <animation effect="slide" end="0,-1000" time="240" easing="in" tween="cubic">WindowClose</animation>
+            <animation effect="zoom" end="113" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel)">Conditional</animation>
+            <posy>39</posy>
+            <width>1920</width>
+            <height>750</height>
+            <control type="group">
+                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
+                 <control type="image">
+					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<posx>502</posx>
+					<posy>-40</posy>
+					<width>935</width>
+					<height>620</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>wall/panneau.png</texture>
+					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+
+				</control>
+				<control type="image">
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<posx>165</posx>
+					<posy>180</posy>
+					<width>1600</width>
+					<height>280</height>
+					<texture background="true">$VAR[TVShowLogoVar]</texture>
+					<fadetime>300</fadetime>
+					<animation effect="fade" start="100" end="17" time="40" condition="true">Conditional</animation>
+					<aspectratio>keep</aspectratio>
+					<include>Animation_VisibleChange400</include>
+				</control>
+				<control type="textbox">
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<posx>580</posx>
+                    <posy>256</posy>
+                    <width>802</width>
+                    <height>230</height>
+                    <label>$VAR[FanartPanelPlotVar]</label>
+                    <textcolor>white6</textcolor>             
+                    <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+                    <aligny>top</aligny>
+                </control>
+            </control>
+            <control type="group">
+                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
+                 <control type="image">
+					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<posx>42</posx>
+					<posy>-75</posy>
+					<width>350</width>
+					<height>550</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>wall/panneau4.png</texture>
+					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>					
+				</control>
+				<control type="image">
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+						<posx>56</posx>
+                        <posy>10</posy>
+                        <width>326</width>
+                        <height>181</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>400</fadetime>
+                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+                        <bordersize>7</bordersize>
+                    </control>
+				<control type="image">
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<animation effect="rotate" time="0" delay="0" start="0" end="-9.32" condition="true">Conditional</animation>
+						<posx>107</posx>
+                        <posy>220</posy>
+                        <width>326</width>
+                        <height>181</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>400</fadetime>
+                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+                        <bordersize>7</bordersize>
+                    </control>
+			</control>
+            <control type="group">
+                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
+                 <control type="image">
+					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<posx>635</posx>
+					<posy>-175</posy>
+					<width>680</width>
+					<height>420</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>wall/panneau.png</texture>
+					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				</control>
+			<control type="group">
+				<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+				<posx>650</posx>
+				<posy>10</posy>
+				<control type="label">
+                    <posy>-4</posy>
+                    <height>20</height>
+                    <width>420</width>
+                    <aligny>top</aligny>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <label>$VAR[FanartPanelDetail1Var]</label>
+                </control>	
+				<control type="label">
+                    <posy>30</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <aligny>top</aligny>
+                    <scroll>true</scroll>
+                    <label fallback="31006">$VAR[FanartPanelValue1Var]</label>
+                </control>
+                <control type="label">
+                    <posx>352</posx>
+                    <posy>-4</posy>
+                    <height>20</height>
+                    <aligny>top</aligny>
+                    <width>420</width>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <label>$VAR[FanartPanelDetail2Var]</label>
+                </control>
+                <control type="label">
+                    <posx>352</posx>
+                    <posy>30</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <aligny>top</aligny>
+                    <scroll>true</scroll>
+                    <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
+                </control>
+                <control type="label">
+                    <posy>67</posy>
+                    <height>20</height>
+                    <width>420</width>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <label>$VAR[FanartPanelDetail3Var]</label>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posy>101</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <scroll>true</scroll>
+                    <label fallback="31006">$VAR[FanartPanelValue3Var]</label>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posx>352</posx>
+                    <posy>67</posy>
+                    <height>20</height>
+                    <width>420</width>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <label>$VAR[FanartPanelDetail4Var]</label>
+                    <aligny>top</aligny>
+                </control>
+                <control type="fadelabel">
+                    <posx>352</posx>
+                    <posy>101</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <scrollspeed>200</scrollspeed>
+                    <pauseatend>3000</pauseatend>
+                    <label>$INFO[ListItem.RatingAndVotes]</label>
+                    <label>$LOCALIZE[13409] #$INFO[ListItem.Top250]</label>
+                    <visible>!IsEmpty(ListItem.Top250)</visible>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posx>352</posx>
+                    <posy>101</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <scroll>true</scroll>
+                    <label fallback="31006">$VAR[FanartPanelValue4Var]</label>
+                    <visible>IsEmpty(ListItem.Top250)</visible>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posy>138</posy>
+                    <height>20</height>
+                    <width>420</width>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <label>$VAR[FanartPanelDetail5Var]</label>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posy>174</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <scroll>true</scroll>
+                    <label fallback="31006">$VAR[FanartPanelValue5Var]</label>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posx>352</posx>
+                    <posy>138</posy>
+                    <height>20</height>
+                    <width>420</width>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <label>$VAR[FanartPanelDetail6Var]</label>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <posx>352</posx>
+                    <posy>174</posy>
+                    <height>20</height>
+                    <width>300</width>
+                    <scroll>true</scroll>
+                    <label fallback="31006">$VAR[FanartPanelValue6Var]</label>
+                    <aligny>top</aligny>
+                </control>
+			</control>
+			</control>
+			<control type="group">
+                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
+                 <control type="image">
+					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<posx>1520</posx>
+					<posy>-95</posy>
+					<width>400</width>
+					<height>650</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>wall/panneau3.png</texture>
+					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				</control>
+				<control type="image">
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+						<posx>1555</posx>
+                        <posy>15</posy>
+                        <width>326</width>
+                        <height>181</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>400</fadetime>
+                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+                        <bordersize>7</bordersize>
+                    </control>
+				<control type="image">
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
+					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
+					<animation effect="rotate" time="0" delay="0" start="0" end="15.6" condition="true">Conditional</animation>
+						<posx>1409</posx>
+                        <posy>750</posy>
+                        <width>328</width>
+                        <height>181</height>
+                        <aspectratio>keep</aspectratio>
+                        <fadetime>400</fadetime>
+                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
+                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
+                        <bordersize>7</bordersize>
+                    </control>
+				</control>
+            </control>
         <control type="group" id="7550">
             <visible>Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
             <visible>Control.IsVisible(9900)</visible>
+            <visible>!StringCompare(Control.GetLabel(4420),chaine)</visible>
             <visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
             <animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
             <animation effect="slide" end="0,45" time="320" easing="inout" tween="cubic" condition="Control.IsVisible(503) | Control.IsVisible(508)">Conditional</animation>
