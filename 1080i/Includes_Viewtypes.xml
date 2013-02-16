@@ -770,8 +770,7 @@
                 <include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
                 <include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
                 <timeperimage>3000</timeperimage>
-                <texture background="true" fallback="special://skin/backgrounds/videos/videos.jpg">$VAR[FanartTextureVar]</texture>
-                <imagepath background="true">$INFO[ListItem.Path]\extrafanart</imagepath>
+                <imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
                 <visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
                 <include>Animation_VisibleChange200</include>
              </control>
