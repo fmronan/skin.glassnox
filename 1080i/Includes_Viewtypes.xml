@@ -772,7 +772,7 @@
                 <timeperimage>3000</timeperimage>
                 <imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
                 <visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
-                <include>Animation_VisibleChange200</include>
+                <animation effect="zoom" end="108" center="1800,270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503)">Conditional</animation>
              </control>
 <!-- END Extra Fanart by ShadowTek -->
             <control type="group">

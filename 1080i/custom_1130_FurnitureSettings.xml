@@ -41,7 +41,7 @@
                 <posy>232</posy>
                 <width>1172</width>
                 <height>60</height>
-                <texture>osd/osd_settings_buttonnf.png</texture>
+                <texture border="1">osd/osd_settings_buttonnf.png</texture>
             </control>
             <control type="label">
                 <posx>420</posx>
@@ -50,6 +50,7 @@
                 <height>60</height>
                 <font>Font_Bold19</font>
                 <label>$LOCALIZE[31687]</label>
+                <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="grouplist" id="450">
                 <posx>375</posx>

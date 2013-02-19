@@ -45,7 +45,7 @@
             <posy>232</posy>
             <width>1172</width>
             <height>60</height>
-            <texture>osd/osd_settings_buttonnf.png</texture>
+            <texture border="1">osd/osd_settings_buttonnf.png</texture>
         </control>
         <control type="label">
             <posx>420</posx>
@@ -54,6 +54,7 @@
             <height>60</height>
             <font>Font_Bold19</font>
             <label>$LOCALIZE[20012]</label>
+            <textcolor>$VAR[TitleColorVar]</textcolor>
             <visible>!Stringcompare(Window(home).Property(Type),Music)</visible>
         </control>
         <control type="label">
@@ -63,6 +64,7 @@
             <height>60</height>
             <font>Font_Bold19</font>
             <label>$LOCALIZE[20011]</label>
+            <textcolor>$VAR[TitleColorVar]</textcolor>
             <visible>Stringcompare(Window(home).Property(Type),Music)</visible>
         </control>
         <control type="list" id="450">
@@ -80,7 +82,7 @@
                 <control type="image">
                     <width>1172</width>
                     <height>60</height>
-                    <texture>osd/osd_settings_buttonnf.png</texture>
+                    <texture border="1">osd/osd_settings_buttonnf.png</texture>
                 </control>
                 <control type="label">
                     <posx>45</posx>

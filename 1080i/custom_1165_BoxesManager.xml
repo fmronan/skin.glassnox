@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1165">
+    <defaultcontrol always="true">4</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <coordinates>
+        <system>1</system>
+        <posx>0</posx>
+        <posy>0</posy>
+    </coordinates>
+    
+
+    <controls>
+		<control type="button" id="4421">
+            <onfocus>ActivateWindow(1169)</onfocus>
+            <include>HiddenObject</include>
+        </control>
+	<control type="group">
+		<include>Animation_DialogPopup</include>
+        <control type="image">
+            <posx>706</posx>
+            <posy>100</posy>
+            <width>700</width>
+            <height>850</height>
+            <texture>osd/osd_settings_back_glow.png</texture>
+            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+            <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+            <include>PanelGlowFade</include>
+            <include>Animation_VisibleChange400</include>
+        </control>
+        <control type="image">
+            <posx>706</posx>
+            <posy>100</posy>
+            <width>700</width>
+            <height>850</height>
+            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+            <texture>osd/osd_settings_back.png</texture>
+        </control>
+        <control type="image">
+            <posx>706</posx>
+            <posy>152</posy>
+            <width>700</width>
+            <height>60</height>
+            <texture border="1">osd/osd_settings_buttonnf.png</texture>
+        </control>
+        <control type="label">
+            <posx>630</posx>
+            <posy>115</posy>
+            <width>572</width>
+            <height>60</height>
+            <font>Font_Bold20</font>
+            <align>center</align>
+            <textoffsety>10</textoffsety>
+            <textcolor>$VAR[TitleColorVar]</textcolor>
+            <label>$INFO[Container(20).ListItem.Label]</label>
+        </control>
+        <control type="grouplist" id="4">
+			<posx>758</posx>
+			<posy>150</posy>
+			<onup>ActivateWindow(1169)</onup>
+			<ondown>ActivateWindow(1169)</ondown>
+					<control type="wraplist" id="20">
+					<height>750</height>
+					<width>650</width>
+					<onleft>403</onleft>
+					<onright>403</onright>
+					<viewtype>list</viewtype>
+					<orientation>horizontal</orientation>
+					<scrolltime tween="back" easing="out">500</scrolltime>
+					<movement>2</movement>
+					<focusposition>0</focusposition>
+					<!--<visible allowhiddenfocus="true">![ControlGroup(150).HasFocus | ControlGroup(165).HasFocus]</visible>-->
+				  <itemlayout width="650" height="750">
+					  
+				  
+				  </itemlayout>
+				  <focusedlayout width="650" height="750">
+					  <control type="image">
+							<posx>140</posx>
+							<posy>116</posy>
+							<width>399</width>
+							<height>600</height>
+							<texture background="true" diffuse="thumbs/thumb_mask.png">CustomDefaultVideoBigPoster.png</texture>
+						</control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[DefaultCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(1)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[480CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(2)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[540CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(3)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[576CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(4)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[720CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(5)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[1080CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(6)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[blurayCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(7)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[3dCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(8)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[dvCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(9)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[dvdCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(10)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[h264CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(11)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[hddvdCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(12)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mkvCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(13)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[movCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(14)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mp4CustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(15)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[mpegCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(16)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[QtCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(17)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[TVseriesCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(18)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[MusicCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(19)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[wmvCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(20)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[xvidCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(21)</visible>
+				  </control>
+				  <control type="image">
+					  <posx>267</posx>
+					  <posy>62</posy>
+					<width>143</width>
+					<height>64.4</height>->
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+				  </focusedlayout>
+				  <content>
+				 <item id="1">
+					<label>Default</label>
+					<icon>$VAR[value_defaultcodec]</icon>
+					<onclick>SetProperty(colordialog,default_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+				  </item>
+				  <item id="2">
+					<label>480p</label>
+					<icon>$VAR[value_480codec]</icon>
+					<onclick>SetProperty(colordialog,480_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>!IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="3">
+					<label>540p</label>
+					<icon>$VAR[value_540codec]</icon>
+					<onclick>SetProperty(colordialog,540_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>!IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="4">
+					<label>576p</label>
+					<icon>$VAR[value_576codec]</icon>
+					<onclick>SetProperty(colordialog,576_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>!IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="5">
+					<label>720p</label>
+					<icon>$VAR[value_720codec]</icon>
+					<onclick>SetProperty(colordialog,720_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>!IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="6">
+					<label>1080i</label>
+					<icon>$VAR[value_1080codec]</icon>
+					<onclick>SetProperty(colordialog,1080_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>!IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="7">
+					<label>Bluray</label>
+					<icon>$VAR[value_bluraycodec]</icon>
+					<onclick>SetProperty(colordialog,bluray_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+				  </item>
+				  <item id="8">
+					<label>3D</label>
+					<icon>$VAR[value_3dcodec]</icon>
+					<onclick>SetProperty(colordialog,3d_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+				  </item>
+				  <item id="9">
+					<label>DV</label>
+					<icon>$VAR[value_dvdcodec]</icon>
+					<onclick>SetProperty(colordialog,dv_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+				  </item>
+				  <item id="10">
+					<label>DVD</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,dvd_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+				  </item>
+				  <item id="11">
+					<label>H264</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,h264_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="12">
+					<label>Hd dvd</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,hddvd_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="13">
+					<label>MKV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mkv_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="14">
+					<label>MOV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mov_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="15">
+					<label>Mp4</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mp4_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="16">
+					<label>Mpeg</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,mpeg_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="17">
+					<label>Qt</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,Qt_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="18">
+					<label>Tv Shows</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,TVseries_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="19">
+					<label>Music</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,Music_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="20">
+					<label>WMV</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,wmv_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="21">
+					<label>XVID</label>
+					<icon>$VAR[value_codecdefault]</icon>
+					<onclick>SetProperty(colordialog,xvid_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  
+				</content>
+			</control>
+		</control>
+       </control>
+    </controls>
+</window>

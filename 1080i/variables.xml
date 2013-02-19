@@ -3271,6 +3271,42 @@
 		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(Clearxvid_colorcase)]</value>
 		<value>$INFO[Skin.String(xvid_colorcase)]</value>
     </variable>
+    <variable name="value_480codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(480Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(480_codeccase)]</value>
+    </variable>
+    <variable name="value_defaultcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(defaultClear_codeccase)]</value>
+		<value>$INFO[Skin.String(default_codeccase)]</value>
+    </variable>
+    <variable name="value_540codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(540Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(540_codeccase)]</value>
+    </variable>
+    <variable name="value_576codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(576Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(576_codeccase)]</value>
+    </variable>
+    <variable name="value_720codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(720Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(720_codeccase)]</value>
+    </variable>
+    <variable name="value_1080codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(1080Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(1080_codeccase)]</value>
+    </variable>
+    <variable name="value_bluraycodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(blurayClear_codeccase)]</value>
+		<value>$INFO[Skin.String(bluray_codeccase)]</value>
+    </variable>
+    <variable name="value_3dcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(3dClear_codeccase)]</value>
+		<value>$INFO[Skin.String(3d_codeccase)]</value>
+    </variable>
+    <variable name="value_dvdcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(dvdClear_codeccase)]</value>
+		<value>$INFO[Skin.String(dvd_codeccase)]</value>
+    </variable>
     <variable name="showcasemovieslogo">
 		<value condition="Skin.HasSetting(ShowcaseMoviesclearart)+Skin.HasSetting(movielogosfloor)">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!Skin.HasSetting(ShowcaseMoviesclearart)+Skin.HasSetting(movielogosfloor)">$INFO[ListItem.Art(clearlogo)]</value>

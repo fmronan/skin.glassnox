@@ -3,24 +3,24 @@
     <defaultcontrol always="true">20</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <coordinates>
-        <system>1</system>
         <posx>240</posx>
         <posy>82</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
         <control type="image">
             <width>1440</width>
             <height>915</height>
+            <texture>settings/settings_panelback_shadow.png</texture>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-            <texture>settings/settings_panelback_shadow.png</texture>
         </control>
         <control type="image">
             <width>1440</width>
             <height>915</height>
-            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             <texture>settings/settings_panelback.png</texture>
+            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
         </control>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="160" condition="Window.IsVisible(DialogPeripheralSettings.xml)">Conditional</animation>
@@ -28,14 +28,11 @@
                 <posx>300</posx>
                 <posy>45</posy>
                 <width>1050</width>
-                <posx>108</posx>
-                <posy>105</posy>
-                <width>1469</width>
                 <height>74</height>
-                <textcolor>FFbec0c2</textcolor>
-                <font>Font_ShowcaseMainLabel2</font>
-                <label>$LOCALIZE[35000]</label>
                 <align>center</align>
+                <label>$LOCALIZE[35000]</label>
+                <font>Font_ShowcaseMainLabel2</font>
+                <textcolor>FFbec0c2</textcolor>
             </control>
             <control type="group">
                 <control type="scrollbar" id="60">
@@ -50,7 +47,7 @@
                 <control type="list" id="20">
                     <posx>274</posx>
                     <posy>120</posy>
-                    <width>1065</width>
+                    <width>1144</width>
                     <height>420</height>
                     <onup>20</onup>
                     <ondown>20</ondown>
@@ -58,30 +55,30 @@
                     <onright>9000</onright>
                     <pagecontrol>60</pagecontrol>
                     <scrolltime>200</scrolltime>
-                    <itemlayout height="60" width="1065">
+                    <itemlayout height="60" width="1144">
                         <control type="image">
-                            <width>1065</width>
+                            <width>1144</width>
                             <height>60</height>
                             <texture>settings/settings_radiobuttonoff.png</texture>
                         </control>
                         <control type="label">
                             <posx>15</posx>
-                            <width>1065</width>
+                            <width>1144</width>
                             <height>60</height>
                             <font>Font_Info</font>
                             <textcolor>grey2</textcolor>
                             <info>ListItem.Label</info>
                         </control>
                     </itemlayout>
-                    <focusedlayout height="60" width="1065">
+                    <focusedlayout height="60" width="1144">
                         <control type="image">
-                            <width>1065</width>
+                            <width>1144</width>
                             <height>60</height>
                             <texture>settings/settings_radiobuttonoff.png</texture>
                             <visible>!Control.HasFocus(20)</visible>
                         </control>
                         <control type="image">
-                            <width>1065</width>
+                            <width>1144</width>
                             <height>60</height>
                             <texture>views/tripanel/listselect_fo.png</texture>
                             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
@@ -89,7 +86,7 @@
                         </control>
                         <control type="label">
                             <posx>15</posx>
-                            <width>1065</width>
+                            <width>1144</width>
                             <height>60</height>
                             <font>Font_Info</font>
                             <info>ListItem.Label</info>
@@ -97,22 +94,22 @@
                     </focusedlayout>
                 </control>
                 <control type="image">
-                    <posx>274</posx>
+                    <posx>305</posx>
                     <posy>540</posy>
                     <width>1065</width>
                     <height>1</height>
-                    <texture>home/nowplaying/nowplayline.png</texture>
+                    <texture>views/lowlistpanel_line.png</texture>
                 </control>
                 <control type="label">
-                    <posx>1340</posx>
-                    <posy>555</posy>
+                    <posx>1350</posx>
+                    <posy>550</posy>
                     <width>630</width>
                     <height>30</height>
+                    <align>right</align>
+                    <label>$INFO[Container(20).NumItems,, $LOCALIZE[31025]]$INFO[Container(20).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(20).NumPages,/,)]</label>
                     <font>Font_Reg14</font>
                     <textcolor>grey</textcolor>
                     <scroll>false</scroll>
-                    <align>right</align>
-                    <label>$INFO[Container(20).NumItems,, $LOCALIZE[31025]]$INFO[Container(20).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(20).NumPages,/,)]</label>
                 </control>
             </control>
             <control type="group" id="9002">
@@ -125,14 +122,14 @@
                         <posy>30</posy>
                         <width>252</width>
                         <height>30</height>
-                        <label>$LOCALIZE[35502]:</label>
                         <align>right</align>
+                        <label>$LOCALIZE[35502]:</label>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
-                        <posx>28</posx>
+                        <posx>18</posx>
                         <posy>30</posy>
-                        <width>750</width>
+                        <width>850</width>
                         <height>30</height>
                         <label fallback="13205">$INFO[Container(20).ListItem.Label]</label>
                         <scroll>true</scroll>
@@ -141,14 +138,14 @@
                         <posy>68</posy>
                         <width>252</width>
                         <height>30</height>
-                        <label>$LOCALIZE[35500]:</label>
                         <align>right</align>
+                        <label>$LOCALIZE[35500]:</label>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
-                        <posx>28</posx>
+                        <posx>18</posx>
                         <posy>68</posy>
-                        <width>750</width>
+                        <width>850</width>
                         <height>30</height>
                         <label fallback="13205">$INFO[Container(20).ListItem.Property(Bus)] - $INFO[Container(20).ListItem.Property(Location)]</label>
                         <scroll>true</scroll>
@@ -157,14 +154,14 @@
                         <posy>105</posy>
                         <width>252</width>
                         <height>30</height>
-                        <label>$LOCALIZE[35501]:</label>
                         <align>right</align>
+                        <label>$LOCALIZE[35501]:</label>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
-                        <posx>28</posx>
+                        <posx>18</posx>
                         <posy>105</posy>
-                        <width>750</width>
+                        <width>850</width>
                         <height>30</height>
                         <label fallback="13205">$INFO[Container(20).ListItem.Property(Class)]</label>
                         <scroll>true</scroll>
@@ -173,14 +170,14 @@
                         <posy>142</posy>
                         <width>252</width>
                         <height>30</height>
-                        <label>$LOCALIZE[35503]:</label>
                         <align>right</align>
+                        <label>$LOCALIZE[35503]:</label>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
-                        <posx>28</posx>
+                        <posx>18</posx>
                         <posy>142</posy>
-                        <width>750</width>
+                        <width>850</width>
                         <height>30</height>
                         <label fallback="13205">$INFO[Container(20).ListItem.Property(Vendor)]</label>
                         <scroll>true</scroll>
@@ -189,14 +186,14 @@
                         <posy>180</posy>
                         <width>252</width>
                         <height>30</height>
-                        <label>$LOCALIZE[35504]:</label>
                         <align>right</align>
+                        <label>$LOCALIZE[35504]:</label>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
-                        <posx>28</posx>
+                        <posx>18</posx>
                         <posy>180</posy>
-                        <width>750</width>
+                        <width>850</width>
                         <height>30</height>
                         <label fallback="13205">$INFO[Container(20).ListItem.Property(Product)]</label>
                         <scroll>true</scroll>
@@ -204,46 +201,44 @@
                 </control>
             </control>
             <control type="group" id="9000">
-                <posy>525</posy>
+                <posy>25</posy>
                 <control type="button" id="10">
                     <posx>22</posx>
-                    <posy>210</posy>
+                    <posy>39</posy>
                     <width>252</width>
                     <height>96</height>
+                    <textoffsetx>40</textoffsetx>
+                    <textoffsety>18</textoffsety>
                     <align>center</align>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <texturenofocus border="8">-</texturenofocus>
                     <label>186</label>
+                    <font>Font_Bold22</font>
                     <onleft>20</onleft>
                     <onright>20</onright>
                     <onup>11</onup>
                     <ondown>11</ondown>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                    <texturenofocus border="8">-</texturenofocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Bold22</font>
-                    <focusedcolor>FF262728</focusedcolor>
-                    <textoffsety>18</textoffsety>
-                    <textoffsetx>40</textoffsetx>
+                    <focusedcolor>white</focusedcolor>
                 </control>
                 <control type="button" id="11">
                     <posx>22</posx>
                     <posy>124</posy>
                     <width>252</width>
                     <height>96</height>
+                    <textoffsetx>40</textoffsetx>
+                    <textoffsety>18</textoffsety>
                     <align>center</align>
+                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                    <texturenofocus>-</texturenofocus>
                     <label>5</label>
+                    <font>Font_Bold22</font>
                     <onleft>20</onleft>
                     <onright>20</onright>
                     <onup>10</onup>
                     <ondown>10</ondown>
-                    <width>324</width>
-                    <height>87</height>
-                    <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <texturenofocus>-</texturenofocus>
-                    <font>Font_Bold22</font>
-                    <focusedcolor>FF262728</focusedcolor>
-                    <textoffsety>18</textoffsety>
-                    <textoffsetx>40</textoffsetx>
+                    <focusedcolor>white</focusedcolor>
                 </control>
             </control>
         </control>

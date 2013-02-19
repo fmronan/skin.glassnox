@@ -2,9 +2,9 @@
 <window>
     <allowoverlay>no</allowoverlay>
     <coordinates>
-        <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
+        <system>1</system>
     </coordinates>
     <include>Animation_DialogPopup2</include>
     <controls>
@@ -27,52 +27,53 @@
                     <posx>300</posx>
                     <posy>180</posy>
                     <width>1322</width>
-                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                     <height>722</height>
                     <texture>osd/osd_settings_back.png</texture>
+                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <control type="image">
                     <posx>375</posx>
                     <posy>232</posy>
                     <width>1172</width>
                     <height>60</height>
-                    <texture>osd/osd_settings_buttonnf.png</texture>
+                    <texture border="1">osd/osd_settings_buttonnf.png</texture>
                 </control>
                 <control type="label">
                     <posx>420</posx>
                     <posy>225</posy>
                     <width>600</width>
                     <height>60</height>
-                    <font>Font_Bold19</font>
                     <label>XBMC Subtitles</label>
+                    <font>Font_Bold19</font>
+                    <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="label">
                     <posx>1514</posx>
                     <posy>842</posy>
                     <width>315</width>
                     <height>60</height>
-                    <font>Font_Reg14</font>
-                    <aligny>top</aligny>
                     <align>right</align>
-                    <textcolor>grey2</textcolor>
+                    <aligny>top</aligny>
                     <label>$INFO[Container(120).NumItems,, $LOCALIZE[31025]]$INFO[Container(120).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(120).NumPages,/,)]</label>
+                    <font>Font_Reg14</font>
+                    <textcolor>grey2</textcolor>
                 </control>
                 <control type="label" id="100">
-                    <posx>420</posx>
+                    <posx>390</posx>
                     <posy>842</posy>
-                    <width>900</width>
+                    <width>930</width>
                     <height>60</height>
+                    <aligny>top</aligny>
                     <font>Font_Reg14</font>
                     <textcolor>grey2</textcolor>
-                    <aligny>top</aligny>
                 </control>
                 <control type="image">
                     <posx>1544</posx>
                     <posy>844</posy>
                     <width>30</width>
                     <height>30</height>
+                    <texture>arrowright.png</texture>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <texture>common/arrowright.png</texture>
                     <animation effect="rotate" end="180" center="auto" delay="40" time="320" condition="Control.HasFocus(150)">Conditional</animation>
                 </control>
                 <!-- ** Required ** Do not change <id>or<type>-->
@@ -86,23 +87,23 @@
                     </control>
                     <control type="group" id="111">
                         <control type="grouplist">
-                            <posy>225</posy>
+                            <posy>230</posy>
                             <width>1920</width>
-                            <height>60</height>
+                            <height>48</height>
                             <align>center</align>
                             <orientation>horizontal</orientation>
                             <itemgap>5</itemgap>
                             <control type="image">
-                                <width>60</width>
-                                <height>60</height>
+                                <width>48</width>
+                                <height>48</height>
                                 <texture>subtitles/default_icon_info.png</texture>
                             </control>
                             <control type="label">
                                 <width min="10" max="393">auto</width>
-                                <height>60</height>
+                                <height>48</height>
+                                <label>$LOCALIZE[SCRIPT655]</label>
                                 <font>Font_Reg20</font>
                                 <textcolor>white</textcolor>
-                                <label>$LOCALIZE[SCRIPT655]</label>
                                 <wrapmultiline>true</wrapmultiline>
                             </control>
                         </control>
@@ -124,21 +125,21 @@
                         <control type="image">
                             <width>1200</width>
                             <height>60</height>
-                            <texture>osd/osd_settings_buttonnf.png</texture>
+                            <texture border="1">osd/osd_settings_buttonnf.png</texture>
                         </control>
                         <control type="image">
-                            <posx>30</posx>
-                            <posy>16</posy>
-                            <width>39</width>
-                            <height>26</height>
-                            <texture>$INFO[Listitem.Thumb,subtitles/]</texture>
+                            <posx>16</posx>
+                            <posy>12</posy>
+                            <width>53</width>
+                            <height>36</height>
+                            <texture>$INFO[ListItem.Thumb,subtitles/,/flag.png]</texture>
                         </control>
                         <control type="label">
                             <posx>75</posx>
                             <width>105</width>
                             <height>54</height>
-                            <textcolor>grey2</textcolor>
                             <font>Font_Reg19</font>
+                            <textcolor>grey2</textcolor>
                             <info>ListItem.Label</info>
                         </control>
                         <control type="image">
@@ -178,8 +179,8 @@
                         <control type="image">
                             <width>1200</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         </control>
                         <control type="label">
                             <posx>75</posx>
@@ -189,11 +190,11 @@
                             <info>ListItem.Label</info>
                         </control>
                         <control type="image">
-                            <posx>30</posx>
-                            <posy>16</posy>
-                            <width>39</width>
-                            <height>26</height>
-                            <texture>$INFO[Listitem.Thumb,subtitles/]</texture>
+                            <posx>16</posx>
+                            <posy>12</posy>
+                            <width>53</width>
+                            <height>36</height>
+                            <texture>$INFO[ListItem.Thumb,subtitles/,/flag.png]</texture>
                         </control>
                         <control type="image">
                             <posx>195</posx>
@@ -243,20 +244,20 @@
                 <control type="image">
                     <posx>1582</posx>
                     <posy>180</posy>
-                    <height>60</height>
                     <width>348</width>
-                    <texture>osd/osd_settings_buttonnf.png</texture>
+                    <height>60</height>
+                    <texture border="1">osd/osd_settings_buttonnf.png</texture>
                 </control>
                 <control type="label">
                     <posx>1538</posx>
                     <posy>550</posy>
                     <width>441</width>
                     <height>30</height>
+                    <align>center</align>
                     <label>$LOCALIZE[SCRIPT760]</label>
                     <font>Font_Bold18</font>
-                    <align>center</align>
-                    <textcolor>grey2</textcolor>
                     <shadowcolor>AA000000</shadowcolor>
+                    <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
                 <control type="list" id="150">
                     <posx>1582</posx>
@@ -271,25 +272,25 @@
                     <itemlayout width="375" height="60">
                         <control type="image">
                             <posy>1</posy>
-                            <height>60</height>
                             <width>348</width>
-                            <texture>osd/osd_settings_buttonnf.png</texture>
+                            <height>60</height>
+                            <texture border="1">osd/osd_settings_buttonnf.png</texture>
                         </control>
                         <control type="label">
                             <width>348</width>
                             <height>60</height>
+                            <textoffsetx>15</textoffsetx>
                             <font>Font_Reg17</font>
                             <textcolor>grey2</textcolor>
-                            <textoffsetx>15</textoffsetx>
                             <info>ListItem.Label</info>
                             <visible>!ListItem.property(man)</visible>
                         </control>
                         <control type="label">
                             <width>348</width>
                             <height>60</height>
-                            <font>font10</font>
-                            <textcolor>grey2</textcolor>
                             <textoffsetx>15</textoffsetx>
+                            <font>Font_Reg17</font>
+                            <textcolor>grey2</textcolor>
                             <info>ListItem.Label</info>
                             <visible>ListItem.property(man)</visible>
                         </control>
@@ -297,30 +298,30 @@
                     <focusedlayout width="375" height="60">
                         <control type="image">
                             <posy>1</posy>
-                            <height>60</height>
                             <width>348</width>
-                            <texture>osd/osd_settings_buttonnf.png</texture>
+                            <height>60</height>
+                            <texture border="1">osd/osd_settings_buttonnf.png</texture>
                         </control>
                         <control type="image">
                             <width>348</width>
                             <height>60</height>
-                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <texture>views/tripanel/listselect_fo.png</texture>
+                            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             <visible>Control.HasFocus(150)</visible>
                         </control>
                         <control type="label">
                             <width>348</width>
                             <height>60</height>
-                            <font>Font_Reg17</font>
                             <textoffsetx>15</textoffsetx>
+                            <font>Font_Reg17</font>
                             <info>ListItem.Label</info>
                             <visible>!ListItem.property(man)</visible>
                         </control>
                         <control type="label">
                             <width>348</width>
                             <height>60</height>
-                            <font>font10</font>
                             <textoffsetx>15</textoffsetx>
+                            <font>Font_Reg17</font>
                             <info>ListItem.Label</info>
                             <visible>ListItem.property(man)</visible>
                         </control>
@@ -328,15 +329,12 @@
                 </control>
             </control>
             <control type="scrollbar" id="121">
-                <include>Animation_VerticalScrollBar</include>
                 <posx>300</posx>
                 <posy>285</posy>
                 <width>46</width>
                 <height>540</height>
-                <posx>354</posx>
-                <posy>285</posy>
-                <width>46</width>
                 <height>540</height>
+                <include>Animation_VerticalScrollBar</include>
                 <onleft>150</onleft>
                 <onright>120</onright>
                 <ondown>121</ondown>

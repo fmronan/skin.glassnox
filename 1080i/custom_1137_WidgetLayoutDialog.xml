@@ -42,7 +42,7 @@
                     <posx>15</posx>
                     <width>750</width>
                     <height>60</height>
-                    <texture>osd/osd_settings_buttonnf.png</texture>
+                    <texture border="1">osd/osd_settings_buttonnf.png</texture>
                 </control>
                 <control type="label" id="4">
                     <posy>88</posy>
@@ -71,7 +71,7 @@
                         <focusedcolor>$VAR[HomeMenuTextFocusVar3]</focusedcolor>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),movie) | Substring(Window(1124).Property(CustomYesNoDialog),musicvideo)">SetProperty(WidgetType,panelcoverposter,1124)</onfocus>
-                        <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),babe) | Substring(Window(1124).Property(CustomYesNoDialog),actors) | Substring(Window(1124).Property(CustomYesNoDialog),Icon) | Substring(Window(1124).Property(CustomYesNoDialog),addons) | Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),artists)">SetProperty(WidgetType,panelcoversquare,1124)</onfocus>
+                        <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),babe) | Substring(Window(1124).Property(CustomYesNoDialog),pics) | Substring(Window(1124).Property(CustomYesNoDialog),actors) | Substring(Window(1124).Property(CustomYesNoDialog),Icon) | Substring(Window(1124).Property(CustomYesNoDialog),addons) | Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),artists)">SetProperty(WidgetType,panelcoversquare,1124)</onfocus>
                         <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),tv) | Substring(Window(1124).Property(CustomYesNoDialog),babes) | Substring(Window(1124).Property(CustomYesNoDialog),rss)">SetProperty(WidgetType,panelcoverepisode,1124)</onfocus>
                         <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),roms)">SetProperty(WidgetType,panel,1124)</onfocus>
                         <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
@@ -106,7 +106,7 @@
                         <textoffsetx>15</textoffsetx>
                         <!-- widget style -->
                         <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),movie) | Substring(Window(1124).Property(CustomYesNoDialog),musicvideo)">SetProperty(WidgetType,panel2poster,1124)</onfocus>
-                        <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),babe) | Substring(Window(1124).Property(CustomYesNoDialog),actors) | Substring(Window(1124).Property(CustomYesNoDialog),addons) | Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),artists)">SetProperty(WidgetType,panel2square,1124)</onfocus>
+                        <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),babe) | Substring(Window(1124).Property(CustomYesNoDialog),actors) | Substring(Window(1124).Property(CustomYesNoDialog),addons) | Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),artists)| Substring(Window(1124).Property(CustomYesNoDialog),pics)">SetProperty(WidgetType,panel2square,1124)</onfocus>
                         <onfocus condition="Substring(Window(1124).Property(CustomYesNoDialog),tv) | Substring(Window(1124).Property(CustomYesNoDialog),babes) | Substring(Window(1124).Property(CustomYesNoDialog),rss)">SetProperty(WidgetType,panel2episode,1124)</onfocus>
                         <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
                         <onclick>Dialog.Close(1137)</onclick>

@@ -70,11 +70,11 @@ if ( __name__ == "__main__" ):
         newaddon = download( testurl )
         print "resultat de newaddon " + newaddon
         
-        # Check if special://masterprofile/GlassViews exists and create it if not
-        dir = os.path.join(xbmc.translatePath('special://masterprofile/'),'GlassViews')
+        # Check if special://masterprofile/GlassoxViews exists and create it if not
+        dir = os.path.join(xbmc.translatePath('special://masterprofile/'),'GlassoxViews')
         if not os.path.exists(dir):
             os.makedirs(dir)
-            dir = os.path.join(xbmc.translatePath('special://masterprofile/'),'GlassViews','720p')
+            dir = os.path.join(xbmc.translatePath('special://masterprofile/'),'GlassoxViews','720p')
             os.makedirs(dir)
 
         if newaddon:
@@ -91,7 +91,7 @@ if ( __name__ == "__main__" ):
                     fp, ok = install( testurl )
                     SrcView=open(xbmc.translatePath('special://skin/720p/View_Custom.xml'),'r')
                     NewView=open(xbmc.translatePath('special://skin/1080i/View_Custom%s.xml' % (v)),'w')
-                    SaveView=open(xbmc.translatePath('special://masterprofile/GlassViews/View_Custom%s.xml' % (v)),'w')
+                    SaveView=open(xbmc.translatePath('special://masterprofile/GlassoxViews/View_Custom%s.xml' % (v)),'w')
                     f=SrcView.readlines()
                     SrcView.close
                     for l in f:
@@ -106,8 +106,8 @@ if ( __name__ == "__main__" ):
                     try: os.remove(xbmc.translatePath('special://skin/720p/View_Custom.xml'))
                     except: print "erreur os.remove(%s)" % xbmc.translatePath('special://skin/720p/View_Custom.xml')
                     break    
-                    try: os.remove(xbmc.translatePath('special://masterprofile/GlassViews/720p/View_Custom.xml'))
-                    except: print "erreur os.remove(%s)" % xbmc.translatePath('special://masterprofile/GlassViews/720p/View_Custom.xml')
+                    try: os.remove(xbmc.translatePath('special://masterprofile/GlassoxViews/720p/View_Custom.xml'))
+                    except: print "erreur os.remove(%s)" % xbmc.translatePath('special://masterprofile/GlassoxViews/720p/View_Custom.xml')
                     break        
             
             if ViewOK:
