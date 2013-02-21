@@ -1027,10 +1027,10 @@
         <onload>Skin.SetString(mpeg_codeccase,special://skin/extras/iconscases/BD/Gt.png)</onload>
 		<onload>Skin.SetString(QtClear_codeccase,special://skin/extras/iconscases/Clear/Qt.png)</onload>
         <onload>Skin.SetString(Qt_codeccase,special://skin/extras/iconscases/BD/quicktime.png)</onload>
-        <onload>Skin.SetString(TvSeriesClear_codeccase,special://skin/extras/iconscases/Clear/tv.png)</onload>
-        <onload>Skin.SetString(TvSeries_codeccase,special://skin/extras/iconscases/BD/tv.png)</onload>
-        <onload>Skin.SetString(MusicClear_codeccase,special://skin/extras/iconscases/Clear/music.png)</onload>
-        <onload>Skin.SetString(Music_codeccase,special://skin/extras/iconscases/BD/music.png)</onload>
+        <onload>Skin.SetString(TVseriesClear_codeccase,special://skin/extras/iconscases/Clear/tv.png)</onload>
+        <onload>Skin.SetString(TVseries_codeccase,special://skin/extras/iconscases/BD/tv.png)</onload>
+        <onload>Skin.SetString(MusicVideoClear_codeccase,special://skin/extras/iconscases/Clear/music.png)</onload>
+        <onload>Skin.SetString(MusicVideo_codeccase,special://skin/extras/iconscases/BD/music.png)</onload>
         <onload>Skin.SetString(wmvClear_codeccase,special://skin/extras/iconscases/Clear/wmv.png)</onload>
         <onload>Skin.SetString(wmv_codeccase,special://skin/extras/iconscases/BD/wmv2.png)</onload>
         <onload>Skin.SetString(xvidClear_codeccase,special://skin/extras/iconscases/Clear/xvid.png)</onload>

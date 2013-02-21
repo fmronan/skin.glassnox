@@ -764,6 +764,18 @@
                     <label>31298</label>
                     <onclick>ActivateWindow(1128)</onclick>
                 </control>
+                <control type="radiobutton" id="1665">
+					<label>53013</label>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
+					<onclick>ActivateWindow(1170)</onclick>
+					<selected>Skin.HasSetting(UseCustomCases)</selected>
+				</control>
+				<control type="button" id="1666">
+					<label>Boitier</label>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<onclick>ActivateWindow(1167)</onclick>
+				</control>
             </control>
         </control>
     </controls>

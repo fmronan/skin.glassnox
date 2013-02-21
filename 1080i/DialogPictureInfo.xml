@@ -11,15 +11,6 @@
         <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
     </animation>
     <controls>
-        <control type="image">
-            <include>FullscreenDimensions</include>
-            <aspectratio>scale</aspectratio>
-            <texture background="true">common/black.png</texture>
-        </control>
-        <control type="image">
-            <texture background="true">$INFO[ListItem.FilenameAndPath]</texture>
-            <include>CommonFanartVarsSingle</include>
-        </control>
         <control type="group">
             <animation effect="slide" start="0" end="0,540" time="0" reversible="false" condition="!IntegerGreaterThan(Container(5).NumItems,4)">Conditional</animation>
             <animation effect="slide" start="0" end="0,180" time="0" reversible="false" condition="IntegerGreaterThan(Container(5).NumItems,4) + !IntegerGreaterThan(Container(5).NumItems,12)">Conditional</animation>
@@ -33,18 +24,18 @@
                 <posy>204</posy>
                 <width>1923</width>
                 <height>980</height>
-                <colordiffuse>grey2</colordiffuse>
                 <texture>home/nowplaying_shadow.png</texture>
+                <colordiffuse>grey2</colordiffuse>
             </control>
             <control type="panel" id="5">
                 <posy>660</posy>
                 <width>1920</width>
                 <height>420</height>
+                <aligny>bottom</aligny>
                 <onleft>5000</onleft>
                 <onright>61</onright>
                 <onup>5</onup>
                 <ondown>5</ondown>
-                <aligny>bottom</aligny>
                 <pagecontrol>61</pagecontrol>
                 <scrolltime tween="quadratic">300</scrolltime>
                 <orientation>vertical</orientation>
@@ -58,21 +49,21 @@
                         <posx>10</posx>
                         <width>640</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
                         <textoffsetx>15</textoffsetx>
-                        <textcolor>grey2</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                         <label>$INFO[ListItem.Label]</label>
+                        <font>Font_Reg19</font>
+                        <shadowcolor>black</shadowcolor>
+                        <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
                         <posx>640</posx>
                         <width>750</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
-                        <align>right</align>
                         <textoffsetx>15</textoffsetx>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+                        <align>right</align>
                         <label>$INFO[ListItem.Label2]</label>
+                        <font>Font_Reg19</font>
+                        <shadowcolor>black</shadowcolor>
                     </control>
                 </itemlayout>
                 <focusedlayout height="60" width="640">
@@ -87,21 +78,21 @@
                             <posx>10</posx>
                             <width>640</width>
                             <height>60</height>
-                            <font>Font_Reg19</font>
                             <textoffsetx>15</textoffsetx>
-                            <textcolor>grey2</textcolor>
-                            <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                             <label>$INFO[ListItem.Label]</label>
+                            <font>Font_Reg19</font>
+                            <shadowcolor>black</shadowcolor>
+                            <textcolor>grey2</textcolor>
                         </control>
                         <control type="label">
                             <posx>640</posx>
                             <width>640</width>
                             <height>60</height>
-                            <font>Font_Reg19</font>
-                            <align>right</align>
                             <textoffsetx>15</textoffsetx>
-                            <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+                            <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
+                            <font>Font_Reg19</font>
+                            <shadowcolor>black</shadowcolor>
                         </control>
                     </control>
                     <control type="group">
@@ -116,20 +107,20 @@
                             <posx>10</posx>
                             <width>640</width>
                             <height>60</height>
-                            <font>Font_Reg19</font>
                             <textoffsetx>15</textoffsetx>
-                            <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                             <label>$INFO[ListItem.Label]</label>
+                            <font>Font_Reg19</font>
+                            <shadowcolor>black</shadowcolor>
                         </control>
                         <control type="label">
                             <posx>640</posx>
                             <width>640</width>
                             <height>60</height>
-                            <font>Font_Reg19</font>
-                            <align>right</align>
                             <textoffsetx>15</textoffsetx>
-                            <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+                            <align>right</align>
                             <label>$INFO[ListItem.Label2]</label>
+                            <font>Font_Reg19</font>
+                            <shadowcolor>black</shadowcolor>
                         </control>
                     </control>
                 </focusedlayout>

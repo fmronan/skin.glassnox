@@ -448,6 +448,9 @@ msgid "Virgin Music"
 msgstr ""
 
 #empty strings from id 31122 to 31126
+msgctxt "#31129"
+msgid "Video Stream"
+msgstr ""
 
 msgctxt "#31127"
 msgid "Lyrics add-on"
@@ -874,6 +877,9 @@ msgid "Set area color"
 msgstr ""
 
 #empty strings from id 31299 to 31306
+msgctxt "#31299"
+msgid "Data Provider"
+msgstr ""
 
 msgctxt "#31307"
 msgid "Hide fanart"

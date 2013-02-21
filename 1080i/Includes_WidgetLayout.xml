@@ -3046,7 +3046,6 @@
                         </control>
                     </control>
                     <control type="group">
-                        <visible>System.GetBool(videolibrary.showunwatchedplots)</visible>
                         <control type="textbox" id="5060">
                             <posx>482</posx>
                             <posy>-70</posy>
@@ -4111,21 +4110,6 @@
                     </content>
                 </control>
             </control>
-            <!--             <control type="button" id="6014">
-                <include>HiddenObject</include>
-                <onfocus condition="Substring(Control.GetLabel(4325),movie) | Substring(Control.GetLabel(4325),musicvideo) | Substring(Control.GetLabel(4325),actors)">$INFO[Container(6010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),tv)">$INFO[Container(6010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),rss)">PlayMedia($ESCINFO[Container(6010).ListItem.Property(Media)])</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),roms)">System.Exec($ESCINFO[Container(6010).ListItem.Property(Path)])</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),babe)">SetFocus(22222)</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),artist)">ActivateWindow(musiclibrary,$ESCINFO[Container(6010).ListItem.Property(Path)],return)</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),album)">Playlist.Clear</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),album)">$INFO[Container(6010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="!Substring(Control.GetLabel(4325),artist) + !Substring(Control.GetLabel(4325),addons)">$INFO[Container(6010).ListItem.Property(Path)]</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),addons)">RunAddon($INFO[Container(6010).ListItem.Property(Path)])</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),randompics)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onfocus>
-                <onfocus condition="Substring(Control.GetLabel(4325),recentpics)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Added'&amp;limit=10)</onfocus>
-            </control> -->
             <control type="button" id="6014">
                 <include>HiddenObject</include>
                 <onfocus condition="Substring(Control.GetLabel(4325),babe)">SetFocus(22222)</onfocus>
@@ -4949,7 +4933,6 @@
                         </control>
                     </control>
                     <control type="group">
-                        <visible>System.GetBool(videolibrary.showunwatchedplots)</visible>
                         <control type="textbox" id="5060">
                             <posx>482</posx>
                             <posy>-70</posy>

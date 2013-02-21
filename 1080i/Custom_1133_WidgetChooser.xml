@@ -249,7 +249,7 @@
                         </item>
                         <item>
                             <label>31815</label>
-                            <onclick>RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Added'&amp;limit=10)</onclick>
+                            <onclick>RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Shooted'&amp;limit=10)</onclick>
                             <onclick>SetProperty(CustomYesNoDialog,recentpics,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31815])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>

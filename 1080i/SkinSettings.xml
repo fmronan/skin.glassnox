@@ -67,11 +67,6 @@
                         <label>31230</label>
                         <onclick>noop</onclick>
                     </item>
-                  <!--  <item id="7">
-                        <label>31482</label>
-                        <onclick>-</onclick>
-                        <visible>!Skin.HasSetting(UseCustomCases)</visible>
-                    </item>-->
                     <item id="8">
                         <label>31870</label>
                         <onclick>noop</onclick>
@@ -160,17 +155,6 @@
                         <onclick>Skin.ToggleSetting(NextAiredInfo)</onclick>
                         <selected>!Skin.HasSetting(NextAiredInfo)</selected>
                     </control>
-                   <!-- <control type="radiobutton" id="287">
-                        <label>53013</label>
-                        <include>Default_SettingRadioButton</include>
-                        <onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
-                        <selected>!Skin.HasSetting(UseCustomCases)</selected>
-                    </control>-->
-                    <control type="button" id="106">
-                        <label>Boitier</label>
-                        <include>Default_SettingRadioButton</include>
-                        <onclick>ActivateWindow(1167)</onclick>
-                    </control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>
@@ -184,33 +168,7 @@
                         <onclick>Skin.SetFile(Startup_Playlist_Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
                         <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
                     </control>
-                </control>
-                <control type="grouplist" id="9011">
-                    <visible>Container(9000).Hasfocus(7)</visible>
-                    <posx>387</posx>
-                    <posy>195</posy>
-                    <width>809</width>
-                    <height>732</height>
-                    <itemgap>-1</itemgap>
-                    <pagecontrol>-</pagecontrol>
-                    <onleft>9000</onleft>
-                    <onright>9006</onright>
-                    <onup>9011</onup>
-                    <ondown>9011</ondown>
-                    <control type="radiobutton" id="401">
-                        <label>clearcase</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(ClearBdOption)</onclick>
-                        <selected>Skin.HasSetting(ClearBdOption)</selected>
-                    </control>
-                    <control type="radiobutton" id="402">
-                        <label>extention</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(ExtentionOpt)</onclick>
-                        <selected>Skin.HasSetting(ExtentionOpt)</selected>
-                    </control>
-				</control>	
-                
+                </control> 
                 <control type="grouplist" id="9002">
                     <visible>Container(9000).Hasfocus(2)</visible>
                     <posx>387</posx>

@@ -398,30 +398,30 @@
                 <control type="group">
                     <posy>70</posy>
                     <control type="image">
-                        <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
                         <posx>525</posx>
-                        <posy>-188</posy>
+                        <posy>-151</posy>
                         <width>900</width>
                         <height>4</height>
                         <texture>views/list_divider.png</texture>
+                        <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
                     </control>
                     <control type="image">
-                        <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
                         <posx>525</posx>
-                        <posy>-83</posy>
+                        <posy>-68</posy>
                         <width>900</width>
                         <height>4</height>
                         <texture>views/list_divider.png</texture>
+                        <animation effect="slide" start="1950" end="0" time="560" tween="cubic" delay="880">WindowOpen</animation>
                     </control>
                     <control type="label">
                         <posx>650</posx>
-                        <posy>-156</posy>
+                        <posy>-129</posy>
                         <width>1425</width>
                         <height>36</height>
-                        <font>Font_MainClassic2</font>
                         <label>[COLOR grey]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [,] ]</label>
+                        <font>Font_MainClassic2</font>
+                        <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[TitleColorVar]</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                         <scroll>true</scroll>
                         <include>Animation_VisibleChange400</include>
                         <visible>!Skin.HasSetting(CDArtinVis)</visible>
@@ -429,13 +429,13 @@
                     </control>
                     <control type="label">
                         <posx>650</posx>
-                        <posy>-156</posy>
+                        <posy>-129</posy>
                         <width>1230</width>
                         <height>36</height>
-                        <font>Font_MainClassic2</font>
                         <label>[COLOR grey]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [,] ]</label>
+                        <font>Font_MainClassic2</font>
+                        <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[TitleColorVar]</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                         <scroll>true</scroll>
                         <include>Animation_VisibleChange400</include>
                         <visible>Skin.HasSetting(CDArtinVis)</visible>
@@ -443,44 +443,44 @@
                     </control>
                     <control type="label">
                         <posx>645</posx>
-                        <posy>-60</posy>
+                        <posy>-52</posy>
                         <width>1410</width>
                         <height>45</height>
+                        <label>$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[MusicPlayer.Title][/COLOR]</label>
                         <font>Font_MainClassic3</font>
+                        <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[TitleColorVar]</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                         <scroll>true</scroll>
                         <include>Animation_VisibleChange400</include>
                         <visible>!Skin.HasSetting(CDArtinVis)</visible>
-                        <label>$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[MusicPlayer.Title][/COLOR]</label>
                         <animation effect="slide" end="-158" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(CDArtinVis)">Conditional</animation>
                     </control>
                     <control type="label">
                         <posx>645</posx>
-                        <posy>-60</posy>
+                        <posy>-52</posy>
                         <width>1230</width>
                         <height>45</height>
+                        <label>$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[MusicPlayer.Title][/COLOR]</label>
                         <font>Font_MainClassic3</font>
+                        <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[TitleColorVar]</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                         <scroll>true</scroll>
                         <include>Animation_VisibleChange400</include>
                         <visible>Skin.HasSetting(CDArtinVis)</visible>
-                        <label>$INFO[MusicPlayer.TrackNumber,,: ][COLOR=grey]$INFO[MusicPlayer.Title][/COLOR]</label>
                         <animation effect="slide" end="-158" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(CDArtinVis)">Conditional</animation>
                     </control>
                     <control type="label">
-                        <animation effect="slide" end="-140" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(CDArtinVis)">Conditional</animation>
                         <posx>628</posx>
-                        <posy>-270</posy>
+                        <posy>-227</posy>
                         <width>1275</width>
                         <height>38</height>
-                        <scroll>true</scroll>
-                        <font>Font_MainClassic</font>
-                        <visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                         <label>$INFO[MusicPlayer.Artist]</label>
-                        <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
-                        <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
+                        <font>Font_MainClassic</font>
+                        <shadowcolor>black</shadowcolor>
+                        <textcolor>white3</textcolor>
+                        <animation effect="slide" end="-140" time="400" tween="cubic" easing="in" condition="!Skin.HasSetting(CDArtinVis)">Conditional</animation>
+                        <scroll>true</scroll>
+                        <visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                     </control>
                 </control>
                 <control type="group">

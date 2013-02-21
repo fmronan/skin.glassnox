@@ -10,10 +10,6 @@
     
 
     <controls>
-		<control type="button" id="4421">
-            <onfocus>ActivateWindow(1169)</onfocus>
-            <include>HiddenObject</include>
-        </control>
 	<control type="group">
 		<include>Animation_DialogPopup</include>
         <control type="image">
@@ -56,7 +52,9 @@
         <control type="grouplist" id="4">
 			<posx>758</posx>
 			<posy>150</posy>
+			<onup>SetProperty(IconTarget,$INFO[Container(20).ListItem.Label2],1124)</onup>
 			<onup>ActivateWindow(1169)</onup>
+			<ondown>SetProperty(IconTarget,$INFO[Container(20).ListItem.Label2],1124)</ondown>
 			<ondown>ActivateWindow(1169)</ondown>
 					<control type="wraplist" id="20">
 					<height>750</height>
@@ -218,12 +216,14 @@
 				  <content>
 				 <item id="1">
 					<label>Default</label>
+					<label2>default_codeccase</label2>
 					<icon>$VAR[value_defaultcodec]</icon>
 					<onclick>SetProperty(colordialog,default_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
-				  <item id="2">
+				  <item id="3">
 					<label>480p</label>
+					<label2>480_codeccase</label2>
 					<icon>$VAR[value_480codec]</icon>
 					<onclick>SetProperty(colordialog,480_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -231,6 +231,7 @@
 				  </item>
 				  <item id="3">
 					<label>540p</label>
+					<label2>540_codeccase</label2>
 					<icon>$VAR[value_540codec]</icon>
 					<onclick>SetProperty(colordialog,540_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -238,6 +239,7 @@
 				  </item>
 				  <item id="4">
 					<label>576p</label>
+					<label2>576_codeccase</label2>
 					<icon>$VAR[value_576codec]</icon>
 					<onclick>SetProperty(colordialog,576_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -245,6 +247,7 @@
 				  </item>
 				  <item id="5">
 					<label>720p</label>
+					<label2>720_codeccase</label2>
 					<icon>$VAR[value_720codec]</icon>
 					<onclick>SetProperty(colordialog,720_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -252,6 +255,7 @@
 				  </item>
 				  <item id="6">
 					<label>1080i</label>
+					<label2>1080_codeccase</label2>
 					<icon>$VAR[value_1080codec]</icon>
 					<onclick>SetProperty(colordialog,1080_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -259,30 +263,35 @@
 				  </item>
 				  <item id="7">
 					<label>Bluray</label>
+					<label2>bluray_codeccase</label2>
 					<icon>$VAR[value_bluraycodec]</icon>
 					<onclick>SetProperty(colordialog,bluray_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
 				  <item id="8">
 					<label>3D</label>
+					<label2>3d_codeccase</label2>
 					<icon>$VAR[value_3dcodec]</icon>
 					<onclick>SetProperty(colordialog,3d_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
 				  <item id="9">
 					<label>DV</label>
+					<label2>dv_codeccase</label2>
 					<icon>$VAR[value_dvdcodec]</icon>
 					<onclick>SetProperty(colordialog,dv_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
 				  <item id="10">
 					<label>DVD</label>
+					<label2>dvd_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,dvd_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
 				  <item id="11">
 					<label>H264</label>
+					<label2>h264_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,h264_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -290,6 +299,7 @@
 				  </item>
 				  <item id="12">
 					<label>Hd dvd</label>
+					<label2>hddvd_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,hddvd_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -297,6 +307,7 @@
 				  </item>
 				  <item id="13">
 					<label>MKV</label>
+					<label2>mkv_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,mkv_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -304,6 +315,7 @@
 				  </item>
 				  <item id="14">
 					<label>MOV</label>
+					<label2>mov_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,mov_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -311,6 +323,7 @@
 				  </item>
 				  <item id="15">
 					<label>Mp4</label>
+					<label2>mp4_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,mp4_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -318,6 +331,7 @@
 				  </item>
 				  <item id="16">
 					<label>Mpeg</label>
+					<label2>mpeg_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,mpeg_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -325,6 +339,7 @@
 				  </item>
 				  <item id="17">
 					<label>Qt</label>
+					<label2>Qt_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,Qt_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -332,6 +347,7 @@
 				  </item>
 				  <item id="18">
 					<label>Tv Shows</label>
+					<label2>TVseries_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,TVseries_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -339,6 +355,7 @@
 				  </item>
 				  <item id="19">
 					<label>Music</label>
+					<label2>MusicVideo_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,Music_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -346,6 +363,7 @@
 				  </item>
 				  <item id="20">
 					<label>WMV</label>
+					<label2>wmv_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,wmv_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
@@ -353,6 +371,7 @@
 				  </item>
 				  <item id="21">
 					<label>XVID</label>
+					<label2>xvid_codeccase</label2>
 					<icon>$VAR[value_codecdefault]</icon>
 					<onclick>SetProperty(colordialog,xvid_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
