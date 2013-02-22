@@ -3180,17 +3180,6 @@
                             <textoffsetx>15</textoffsetx>
                         </control>
                     </control>
-                    <control type="label">
-                        <posx>700</posx>
-                        <posy>145</posy>
-                        <width>1221</width>
-                        <height>80</height>
-                        <font>Font_Reg19</font>
-                        <textcolor>grey2</textcolor>
-                        <label>$INFO[Container(5010).ListItem.Property(Fanart)]</label>
-                        <textoffsetx>15</textoffsetx>
-                        <visible>Substring(Control.GetLabel(4321),pics)</visible>
-                    </control>
                     <control type="grouplist">
                         <orientation>horizontal</orientation>
                         <itemgap>30</itemgap>
@@ -5066,17 +5055,6 @@
                             <label>$INFO[Container(6010).ListItem.Label2]</label>
                             <textoffsetx>15</textoffsetx>
                         </control>
-                    </control>
-                    <control type="label">
-                        <posx>700</posx>
-                        <posy>145</posy>
-                        <width>1221</width>
-                        <height>80</height>
-                        <font>Font_Reg19</font>
-                        <textcolor>grey2</textcolor>
-                        <label>$INFO[Container(6010).ListItem.Property(Fanart)]</label>
-                        <textoffsetx>15</textoffsetx>
-                        <visible>Substring(Control.GetLabel(4325),pics)</visible>
                     </control>
                     <control type="grouplist">
                         <orientation>horizontal</orientation>

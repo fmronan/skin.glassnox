@@ -3874,7 +3874,7 @@
             <onclick>SetFocus(5014)</onclick>
             <thumb>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</thumb>
             <property name="Path">XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&amp;limit=50&amp;method='Random'&amp;current=1)</property>
-            <property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
+			<property name="Fanart">$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</property>
             <property name="Folder">$INFO[Window(Home).Property(MyPicsDBRandom.1.Folder)]</property>
             <visible>Substring(Control.GetLabel(4321),randompics,left)</visible>
         </item>
