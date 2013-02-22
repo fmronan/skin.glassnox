@@ -1821,7 +1821,15 @@
         <value condition="SubString(ListItem.VideoResolution,576)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(576_colorcase)]</value>
         <value condition="SubString(ListItem.VideoResolution,720)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(720_colorcase)]</value>
         <value condition="SubString(ListItem.VideoResolution,1080)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(1080_colorcase)]</value>
-		<!--<value condition="!IsEmpty(ListItem.FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String($INFO[ListItem.FileExtension]_colorcase)]</value>-->
+       <!-- <value condition="[SubString(ListItem.filename,PDTV) | SubString(ListItem.filename,sdtv) | SubString(ListItem.filename,sd tv)]">sdtv</value>
+        <value condition="[SubString(ListItem.Filename,hdtv) | SubString(ListItem.Filename,hd tv)]">hdtv</value>
+        <value condition="[SubString(ListItem.Filename,hddvd) | SubString(ListItem.Filename,hd-dvd)]">hddvd</value>
+        <value condition="[SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)] + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,3DBD)]">bluray3d</value>
+        <value condition="[SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)]">bluray</value>
+        <value condition="SubString(ListItem.Filename,dvb)">dvb</value>
+        <value condition="SubString(ListItem.Filename,web-dl)">web-dl</value>
+        <value condition="SubString(ListItem.Filename,dvd) | StringCompare(ListItem.FileExtension,iso) | StringCompare(ListItem.FileExtension,ifo)">dvd</value>-->
+		<value condition="StringCompare(ListItem.FileExtension,mkv)+Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(mkv_colorcase)]</value>
         <value>$INFO[Skin.String(default_colorcase)]</value>
     </variable>
     <variable name="MusicShowcaseItem-6Var">

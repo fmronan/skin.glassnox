@@ -53,6 +53,18 @@
             <onfocus>ActivateWindow(1122)</onfocus>
             <onfocus>SetFocus(9000)</onfocus>
         </control>
+        <control type="button" id="9007">
+            <include>HiddenObject</include>
+            <onfocus>Skin.Setstring(ItemToEdit.Color,$INFO[Container(9010).ListItem.Property(Color)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.Label,$INFO[Container(9010).ListItem.Label])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.MultiFanart,$INFO[Container(9010).ListItem.Icon])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.Widget,$INFO[Container(9010).ListItem.Property(Widget)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.WidgetTitle,$INFO[Container(9010).ListItem.Property(WidgetTitle)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.Type,$INFO[Container(9010).ListItem.Property(Type)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.Path,$INFO[Container(9010).ListItem.Property(Path)])</onfocus>
+            <onfocus>ActivateWindow(1136)</onfocus>
+            <onfocus>SetFocus(9010)</onfocus>
+        </control>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="0" condition="true">conditional</animation>
             <include>InvisibleIncludeLabels</include>

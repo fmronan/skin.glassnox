@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="MusicVizBG">
+        <aspectratio align="center" aligny="top">scale</aspectratio>
+        <fadetime>1000</fadetime>
         <include>FullscreenDimensions</include>
         <include>Animation_WindowFade250</include>
         <include>Animation_VisibleChange400</include>
-        <aspectratio align="center" aligny="top">scale</aspectratio>
         <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
         <animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
         <timeperimage>10000</timeperimage>
-        <fadetime>1000</fadetime>
     </include>
     <include name="cdwall-musicvisualisation">
         <control type="group" id="2355">
@@ -18,8 +18,8 @@
         <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
         <animation effect="rotatex" start="" end="15" time="0" condition="true">Conditional</animation> -->
             <visible>[Window.IsActive(visualisation) + StringCompare(Skin.String(MusicViz.MultiFanart),cd-wall)] | [Player.HasAudio + [Window.IsActive(home) | Window.IsActive(1158)] + Skin.HasSetting(homecdwall)] | Stringcompare(Control.GetLabel(4322),cdwall)</visible>
-            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="[![Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animation_bg)] | [[Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animatedbghome)]">Conditional</animation>
+            <animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="[![Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animation_bg)] | [[Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animatedbghome)]">Conditional</animation>
             <include>Animation_WindowFade250</include>
             <include>Animation_VisibleChange400</include>
             <control type="group">
@@ -259,16 +259,16 @@
             <control type="image">
                 <posx>52</posx>
                 <posy>22</posy>
-                <include>FullscreenDimensions</include>
                 <texture background="true">cdwall-grid.png</texture>
+                <include>FullscreenDimensions</include>
             </control>
         </control>
     </include>
     <include name="CDWallThumbs">
-        <fadetime>500</fadetime>
         <width>225</width>
         <height>225</height>
         <imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
+        <fadetime>500</fadetime>
     </include>
     <include name="MovieWall">
         <control type="group" id="2355">
@@ -277,9 +277,9 @@
             <!--         <animation effect="zoom" start="110" end="130" center="auto" time="15000" pulse="true" condition="true">Conditional</animation>
         <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
         <animation effect="rotatex" start="" end="15" time="0" condition="true">Conditional</animation> -->
-            <visible>Stringcompare(Control.GetLabel(4322),moviewall)</visible>
-            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
-            <animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+            <visible>SubString(Control.GetLabel(4322),moviewall)</visible>
+            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="[![Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animation_bg)] | [[Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animatedbghome)]">Conditional</animation>
+            <animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="[![Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animation_bg)] | [[Window.IsActive(home) | Window.IsActive(1124)] + Skin.HasSetting(animatedbghome)]">Conditional</animation>
             <include>Animation_WindowFade250</include>
             <include>Animation_VisibleChange400</include>
             <control type="group">
@@ -479,9 +479,9 @@
         </control>
     </include>
     <include name="MovieWallThumbs">
-        <fadetime>500</fadetime>
         <width>225</width>
         <height>337</height>
-        <imagepath background="true">$INFO[Skin.String(MovieWall_Folder_Path)]</imagepath>
+        <imagepath background="true">$VAR[MovieWallPathVar]</imagepath>
+        <fadetime>500</fadetime>
     </include>
 </includes>

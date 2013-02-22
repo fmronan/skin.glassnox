@@ -221,7 +221,7 @@
 					<onclick>SetProperty(colordialog,default_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
-				  <item id="3">
+				  <item id="2">
 					<label>480p</label>
 					<label2>480_codeccase</label2>
 					<icon>$VAR[value_480codec]</icon>

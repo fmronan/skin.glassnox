@@ -505,7 +505,6 @@
                         </control>
                     </control>
                     <control type="group">
-                        <control type="group">
                             <control type="label">
                                 <posx>1830</posx>
                                 <posy>1015</posy>
@@ -527,7 +526,6 @@
                                 <textcolor>$VAR[FlagDiffuseVar]</textcolor>
                                 <label>$VAR[InfoWallBottomLabel2Var]</label>
                             </control>
-                        </control>
                         <control type="textbox">
                             <posx>1260</posx>
                             <posy>260</posy>

@@ -2012,91 +2012,12 @@
                 <visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
             </control>
         </focusedlayout>
-        <content>
-           <!--Pictures-->
-			<item>
-                <label fallback="24001">$INFO[Skin.String(PicturesSub1.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub1.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub1.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub1.Disable)]</property>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="42291">$INFO[Skin.String(PicturesSub2.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub2.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub2.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub2.Disable)]</property>
-                <visible>system.HasAddon(plugin.image.mypicsdb)</visible>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="42292">$INFO[Skin.String(PicturesSub3.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub3.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub3.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub3.Disable)]</property>
-                <visible>system.HasAddon(plugin.image.mypicsdb)</visible>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="42290">$INFO[Skin.String(PicturesSub4.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub4.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub4.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub4.Disable)]</property>
-                <visible>system.HasAddon(plugin.image.mypicsdb)</visible>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="53004">$INFO[Skin.String(PicturesSub5.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub5.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub5.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub5.Disable)]</property>
-                <visible>system.HasAddon(plugin.image.mypicsdb)</visible>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="53005">$INFO[Skin.String(PicturesSub6.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub6,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub6.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub6.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub6.Disable)]</property>
-                <visible>system.HasAddon(plugin.image.mypicsdb)</visible>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="53006">$INFO[Skin.String(PicturesSub7.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub7,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub7.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub7.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub7.Disable)]</property>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>
-			<item>
-                <label fallback="53007">$INFO[Skin.String(PicturesSub8.Label)]</label>
-                <onclick>SetProperty(MenuItem,PicturesSub8,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesSub8.MultiFanart)]</icon>
-                <property name="Widget">$INFO[Skin.String(PicturesSub8.Widget)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(PicturesSub8.Disable)]</property>
-                <visible>system.HasAddon(plugin.image.mypicsdb)</visible>
-                <visible>Substring(Control.GetLabel(4327),pictures)</visible>
-            </item>         
+        <content>   
             <!--Videos-->
             <item>
                 <label fallback="136">$INFO[Skin.String(VideosSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub1.Disable)]</property>
@@ -2105,7 +2026,7 @@
 			<item>
                 <label fallback="31502">$INFO[Skin.String(VideosSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub2.Disable)]</property>
@@ -2115,7 +2036,7 @@
 			<item>
                 <label fallback="31503">$INFO[Skin.String(VideosSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub3.Disable)]</property>
@@ -2125,7 +2046,7 @@
 			<item>
                 <label fallback="20389">$INFO[Skin.String(VideosSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub4.Disable)]</property>
@@ -2135,7 +2056,7 @@
 			<item>
                 <label fallback="744">$INFO[Skin.String(VideosSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub5.Disable)]</property>
@@ -2144,7 +2065,7 @@
 			<item>
                 <label fallback="31507">$INFO[Skin.String(VideosSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub6,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub6.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub6.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub6.Disable)]</property>
@@ -2154,7 +2075,7 @@
             <item>
                 <label fallback="133">$INFO[Skin.String(MusicSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub1.Disable)]</property>
@@ -2164,7 +2085,7 @@
 			<item>
                 <label fallback="132">$INFO[Skin.String(MusicSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub2.Disable)]</property>
@@ -2174,7 +2095,7 @@
 			<item>
                 <label fallback="134">$INFO[Skin.String(MusicSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub3.Disable)]</property>
@@ -2184,7 +2105,7 @@
 			<item>
                 <label fallback="744">$INFO[Skin.String(MusicSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub4.Disable)]</property>
@@ -2193,7 +2114,7 @@
             <item>
                 <label fallback="14022">$INFO[Skin.String(MusicSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub5.Disable)]</property>
@@ -2202,7 +2123,7 @@
             <item>
                 <label fallback="24001">$INFO[Skin.String(MusicSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub7,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub7.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub7.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub7.Disable)]</property>
@@ -2212,7 +2133,7 @@
             <item>
                 <label fallback="31040">$INFO[Skin.String(MusicSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub8,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub8.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub8.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub8.Disable)]</property>
@@ -2221,7 +2142,7 @@
             <item>
                 <label fallback="31334">$INFO[Skin.String(MusicSub9.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub9,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub9.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub9.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub9.Disable)]</property>
@@ -2230,7 +2151,7 @@
             <item>
                 <label fallback="31333">$INFO[Skin.String(MusicSub10.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub10,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub10.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub10.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub10.Disable)]</property>
@@ -2240,7 +2161,7 @@
             <item>
                 <label fallback="31731">$INFO[Skin.String(SystemSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub1.Disable)]</property>
@@ -2249,7 +2170,7 @@
 			<item>
                 <label fallback="7">$INFO[Skin.String(SystemSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub2.Disable)]</property>
@@ -2258,7 +2179,7 @@
             <item>
                 <label fallback="Skin">$INFO[Skin.String(SystemSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub7,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub7.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub7.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub7.Disable)]</property>
@@ -2267,7 +2188,7 @@
             <item>
                 <label fallback="13200">$INFO[Skin.String(SystemSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub3.Disable)]</property>
@@ -2276,7 +2197,7 @@
 			<item>
                 <label fallback="130">$INFO[Skin.String(SystemSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub4.Disable)]</property>
@@ -2285,7 +2206,7 @@
             <item>
                 <label fallback="24001">$INFO[Skin.String(SystemSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub5.Disable)]</property>
@@ -2294,7 +2215,7 @@
             <item>
                 <label fallback="31732">$INFO[Skin.String(SystemSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub6,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub6.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub6.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub6.Disable)]</property>
@@ -2303,7 +2224,7 @@
             <item>
                 <label fallback="Views">$INFO[Skin.String(SystemSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub8,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub8.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub8.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub8.Disable)]</property>
@@ -2314,7 +2235,7 @@
             <item>
                 <label fallback="CUSTOM 46">$INFO[Skin.String(CustomSub0_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub10_1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub10_1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub10_1.Disable)]</property>
@@ -2323,7 +2244,7 @@
             <item>
                 <label fallback="CUSTOM 47">$INFO[Skin.String(CustomSub0_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_2.Disable)]</property>
@@ -2332,7 +2253,7 @@
             <item>
                 <label fallback="CUSTOM 48">$INFO[Skin.String(CustomSub0_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_3.Disable)]</property>
@@ -2341,7 +2262,7 @@
             <item>
                 <label fallback="CUSTOM 49">$INFO[Skin.String(CustomSub0_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_4.Disable)]</property>
@@ -2350,7 +2271,7 @@
             <item>
                 <label fallback="CUSTOM 50">$INFO[Skin.String(CustomSub0_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_5.Disable)]</property>
@@ -2360,7 +2281,7 @@
             <item>
                 <label fallback="CUSTOM 31">$INFO[Skin.String(CustomSub7_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub7_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub7_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub7_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub7_1.Disable)]</property>
@@ -2369,7 +2290,7 @@
             <item>
                 <label fallback="CUSTOM 32">$INFO[Skin.String(CustomSub7_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub7_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub7_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub7_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub7_2.Disable)]</property>
@@ -2378,7 +2299,7 @@
             <item>
                 <label fallback="CUSTOM 33">$INFO[Skin.String(CustomSub7_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub7_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub7_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub7_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub7_3.Disable)]</property>
@@ -2387,7 +2308,7 @@
             <item>
                 <label fallback="CUSTOM 34">$INFO[Skin.String(CustomSub7_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub7_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub7_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub7_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub7_4.Disable)]</property>
@@ -2396,7 +2317,7 @@
             <item>
                 <label fallback="CUSTOM 35">$INFO[Skin.String(CustomSub7_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub7_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub7_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub7_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub7_5.Disable)]</property>
@@ -2407,7 +2328,7 @@
                 <label fallback="31284">$INFO[Skin.String(MoviesSub1.Label)]</label>
                 <onclick condition="!System.HasAddon(script.cinema.experience)">Notification($LOCALIZE[42000],$LOCALIZE[42005])</onclick>
                 <onclick>SetProperty(MenuItem,MoviesSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub1.Disable)]</property>
@@ -2417,7 +2338,7 @@
                 <label fallback="31162">$INFO[Skin.String(MoviesSub2.Label)]</label>
                 <onclick condition="!IsEmpty(Skin.String(MoviesSub2))">Skin.SetAddon(HomeMenuSubMoviesTrailer,xbmc.addon.video)</onclick>
                 <onclick>SetProperty(MenuItem,MoviesSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub2.Disable)]</property>
@@ -2426,7 +2347,7 @@
             <item>
                 <label fallback="31334">$INFO[Skin.String(MoviesSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub3.Disable)]</property>
@@ -2435,7 +2356,7 @@
             <item>
                 <label fallback="369">$INFO[Skin.String(MoviesSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub4.Disable)]</property>
@@ -2444,7 +2365,7 @@
             <item>
                 <label fallback="135">$INFO[Skin.String(MoviesSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub5.Disable)]</property>
@@ -2453,7 +2374,7 @@
             <item>
                 <label fallback="652">$INFO[Skin.String(MoviesSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub6,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub6.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub6.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub6.Disable)]</property>
@@ -2462,7 +2383,7 @@
             <item>
                 <label fallback="344">$INFO[Skin.String(MoviesSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub7,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub7.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub7.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub7.Disable)]</property>
@@ -2471,7 +2392,7 @@
             <item>
                 <label fallback="20348">$INFO[Skin.String(MoviesSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub8,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub8.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub8.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub8.Disable)]</property>
@@ -2480,7 +2401,7 @@
             <item>
 				<label fallback="24069">$INFO[Skin.String(MoviesSub9.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSu9,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub9.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub9.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub9.Disable)]</property>
@@ -2489,7 +2410,7 @@
             <item>
                 <label fallback="31845">$INFO[Skin.String(MoviesSub11.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub11,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub11.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub11.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub11.Disable)]</property>
@@ -2499,7 +2420,7 @@
                 <label fallback="590">$INFO[Skin.String(MoviesSub10.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub10,home)</onclick>
                 <onclick condition="!System.HasAddon(script.randommovie)">Notification($LOCALIZE[42000],$LOCALIZE[42006]</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub10.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub10.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub10.Disable)]</property>
@@ -2508,7 +2429,7 @@
             <item>
                 <label fallback="CUSTOM 41">$INFO[Skin.String(CustomSub9_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub9_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub9_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub9_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub9_1.Disable)]</property>
@@ -2517,7 +2438,7 @@
             <item>
                 <label fallback="CUSTOM 42">$INFO[Skin.String(CustomSub9_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub9_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub9_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub9_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub9_2.Disable)]</property>
@@ -2526,7 +2447,7 @@
             <item>
                 <label fallback="CUSTOM 43">$INFO[Skin.String(CustomSub9_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub9_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub9_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub9_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub9_3.Disable)]</property>
@@ -2535,7 +2456,7 @@
             <item>
                 <label fallback="CUSTOM 44">$INFO[Skin.String(CustomSub9_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub9_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub9_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub9_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub9_4.Disable)]</property>
@@ -2544,7 +2465,7 @@
             <item>
                 <label fallback="CUSTOM 45">$INFO[Skin.String(CustomSub9_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub9_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub9_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub9_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub9_5.Disable)]</property>
@@ -2554,7 +2475,7 @@
             <item>
                 <label fallback="CUSTOM 36">$INFO[Skin.String(CustomSub8_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub8_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub8_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub8_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub8_1.Disable)]</property>
@@ -2563,7 +2484,7 @@
             <item>
                 <label fallback="CUSTOM 37">$INFO[Skin.String(CustomSub8_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub8_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub8_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub8_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub8_2.Disable)]</property>
@@ -2572,7 +2493,7 @@
             <item>
                 <label fallback="CUSTOM 38">$INFO[Skin.String(CustomSub8_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub8_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub8_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub8_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub8_3.Disable)]</property>
@@ -2581,7 +2502,7 @@
             <item>
                 <label fallback="CUSTOM 39">$INFO[Skin.String(CustomSub8_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub8_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub8_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub8_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub8_4.Disable)]</property>
@@ -2590,7 +2511,7 @@
             <item>
                 <label fallback="CUSTOM 40">$INFO[Skin.String(CustomSub8_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub8_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub8_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub8_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub8_5.Disable)]</property>
@@ -2599,7 +2520,7 @@
             <item>
                 <label fallback="369">$INFO[Skin.String(TVShowsSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub1.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub1.Disable)]</property>
@@ -2608,7 +2529,7 @@
             <item>
                 <label fallback="135">$INFO[Skin.String(TVShowsSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub3.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub3.Disable)]</property>
@@ -2617,7 +2538,7 @@
             <item>
                 <label fallback="31334">$INFO[Skin.String(TVShowsSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub4.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub4.Disable)]</property>
@@ -2626,7 +2547,7 @@
             <item>
                 <label fallback="575">$INFO[Skin.String(TVShowsSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub8,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub8.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub8.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub8.Disable)]</property>
@@ -2635,7 +2556,7 @@
             <item>
                 <label fallback="652">$INFO[Skin.String(TVShowsSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub5.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub5.Disable)]</property>
@@ -2644,7 +2565,7 @@
             <item>
                 <label fallback="344">$INFO[Skin.String(TVShowsSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub6,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub6.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub6.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub6.Disable)]</property>
@@ -2653,7 +2574,7 @@
             <item>
                 <label fallback="31243">$INFO[Skin.String(TVShowsSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,TVShowsSub7,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub7.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub7.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub7.Disable)]</property>
@@ -2663,7 +2584,7 @@
             <item>
                 <label fallback="20144">$INFO[Skin.String(ShutdownSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,ShutdownSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub1.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub1.Disable)]</property>
@@ -2672,7 +2593,7 @@
 			<item>
                 <label fallback="13013">$INFO[Skin.String(ShutdownSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,ShutdownSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub2.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub2.Disable)]</property>
@@ -2681,7 +2602,7 @@
             <item>
                 <label fallback="13010">$INFO[Skin.String(ShutdownSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,ShutdownSub5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub5.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub5.Disable)]</property>
@@ -2690,7 +2611,7 @@
 			<item>
                 <label fallback="20126">$INFO[Skin.String(ShutdownSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,ShutdownSub6,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub6.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub6.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub6.Disable)]</property>
@@ -2699,7 +2620,7 @@
 			<item>
                 <label fallback="13009">$INFO[Skin.String(ShutdownSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,ShutdownSub7,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub7.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub7.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub7.Disable)]</property>
@@ -2709,7 +2630,7 @@
             <item>
                 <label fallback="13016">$INFO[Skin.String(ShutdownSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,ShutdownSub8,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub8.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub8.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub8.Disable)]</property>
@@ -2718,7 +2639,7 @@
             <item>
                 <label fallback="19023">$INFO[Skin.String(LiveTVSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,LiveTVSub1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub1.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub1.Disable)]</property>
@@ -2727,7 +2648,7 @@
 			<item>
                 <label fallback="19024">$INFO[Skin.String(LiveTVSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,LiveTVSub2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub2.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub2.Disable)]</property>
@@ -2736,7 +2657,7 @@
             <item>
                 <label fallback="19163">$INFO[Skin.String(LiveTVSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,LiveTVSub3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub3.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub3.Disable)]</property>
@@ -2745,7 +2666,7 @@
             <item>
                 <label fallback="19040">$INFO[Skin.String(LiveTVSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,LiveTVSub4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub4.Widget)]</property>
                 <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub4.Disable)]</property>
@@ -2755,7 +2676,7 @@
             <item>
                 <label fallback="CUSTOM 1">$INFO[Skin.String(CustomSub1_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub1_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub1_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub1_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub1_1.Disable)]</property>
@@ -2764,7 +2685,7 @@
             <item>
                 <label fallback="CUSTOM 2">$INFO[Skin.String(CustomSub1_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub1_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub1_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub1_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub1_2.Disable)]</property>
@@ -2773,7 +2694,7 @@
             <item>
                 <label fallback="CUSTOM 3">$INFO[Skin.String(CustomSub1_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub1_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub1_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub1_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub1_3.Disable)]</property>
@@ -2782,7 +2703,7 @@
             <item>
                 <label fallback="CUSTOM 4">$INFO[Skin.String(CustomSub1_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub1_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub1_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub1_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub1_4.Disable)]</property>
@@ -2791,7 +2712,7 @@
             <item>
                 <label fallback="CUSTOM 5">$INFO[Skin.String(CustomSub1_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub1_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub1_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub1_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub1_5.Disable)]</property>
@@ -2800,7 +2721,7 @@
             <item>
                 <label fallback="CUSTOM 6">$INFO[Skin.String(CustomSub2_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub2_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub2_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub2_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub2_1.Disable)]</property>
@@ -2809,7 +2730,7 @@
             <item>
                 <label fallback="CUSTOM 7">$INFO[Skin.String(CustomSub2_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub2_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub2_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub2_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub2_2.Disable)]</property>
@@ -2818,7 +2739,7 @@
             <item>
                 <label fallback="CUSTOM 8">$INFO[Skin.String(CustomSub2_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub2_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub2_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub2_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub2_3.Disable)]</property>
@@ -2827,7 +2748,7 @@
             <item>
                 <label fallback="CUSTOM 9">$INFO[Skin.String(CustomSub2_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub2_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub2_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub2_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub2_4.Disable)]</property>
@@ -2836,7 +2757,7 @@
             <item>
                 <label fallback="CUSTOM 10">$INFO[Skin.String(CustomSub2_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub2_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub2_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub2_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub2_5.Disable)]</property>
@@ -2845,7 +2766,7 @@
             <item>
                 <label fallback="CUSTOM 11">$INFO[Skin.String(CustomSub3_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub3_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub3_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub3_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub3_1.Disable)]</property>
@@ -2854,7 +2775,7 @@
             <item>
                 <label fallback="CUSTOM 12">$INFO[Skin.String(CustomSub3_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub3_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub3_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub3_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub3_2.Disable)]</property>
@@ -2863,7 +2784,7 @@
             <item>
                 <label fallback="CUSTOM 13">$INFO[Skin.String(CustomSub3_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub3_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub3_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub3_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub3_3.Disable)]</property>
@@ -2872,7 +2793,7 @@
             <item>
                 <label fallback="CUSTOM 14">$INFO[Skin.String(CustomSub3_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub3_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub3_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub3_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub3_4.Disable)]</property>
@@ -2881,7 +2802,7 @@
             <item>
                 <label fallback="CUSTOM 15">$INFO[Skin.String(CustomSub3_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub3_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub3_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub3_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub3_5.Disable)]</property>
@@ -2890,7 +2811,7 @@
             <item>
                 <label fallback="CUSTOM 16">$INFO[Skin.String(CustomSub4_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub4_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub4_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub4_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub4_1.Disable)]</property>
@@ -2899,7 +2820,7 @@
             <item>
                 <label fallback="CUSTOM 17">$INFO[Skin.String(CustomSub4_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub4_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub4_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub4_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub4_2.Disable)]</property>
@@ -2908,7 +2829,7 @@
             <item>
                 <label fallback="CUSTOM 18">$INFO[Skin.String(CustomSub4_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub4_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub4_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub4_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub4_3.Disable)]</property>
@@ -2917,7 +2838,7 @@
             <item>
                 <label fallback="CUSTOM 19">$INFO[Skin.String(CustomSub4_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub4_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub4_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub4_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub4_4.Disable)]</property>
@@ -2926,7 +2847,7 @@
             <item>
                 <label fallback="CUSTOM 20">$INFO[Skin.String(CustomSub4_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub4_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub4_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub4_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub4_5.Disable)]</property>
@@ -2935,7 +2856,7 @@
             <item>
                 <label fallback="CUSTOM 21">$INFO[Skin.String(CustomSub5_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub5_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub5_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub5_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub5_1.Disable)]</property>
@@ -2944,7 +2865,7 @@
             <item>
                 <label fallback="CUSTOM 22">$INFO[Skin.String(CustomSub5_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub5_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub5_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub5_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub5_2.Disable)]</property>
@@ -2953,7 +2874,7 @@
             <item>
                 <label fallback="CUSTOM 23">$INFO[Skin.String(CustomSub5_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub5_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub5_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub5_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub5_3.Disable)]</property>
@@ -2962,7 +2883,7 @@
             <item>
                 <label fallback="CUSTOM 24">$INFO[Skin.String(CustomSub5_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub5_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub5_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub5_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub5_4.Disable)]</property>
@@ -2971,7 +2892,7 @@
             <item>
                 <label fallback="CUSTOM 25">$INFO[Skin.String(CustomSub5_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub5_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub5_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub5_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub5_5.Disable)]</property>
@@ -2980,7 +2901,7 @@
             <item>
                 <label fallback="CUSTOM 26">$INFO[Skin.String(CustomSub6_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub6_1,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub6_1.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub6_1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub6_1.Disable)]</property>
@@ -2989,7 +2910,7 @@
             <item>
                 <label fallback="CUSTOM 27">$INFO[Skin.String(CustomSub6_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub6_2,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub6_2.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub6_2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub6_2.Disable)]</property>
@@ -2998,7 +2919,7 @@
             <item>
                 <label fallback="CUSTOM 28">$INFO[Skin.String(CustomSub6_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub6_3,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub6_3.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub6_3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub6_3.Disable)]</property>
@@ -3007,7 +2928,7 @@
             <item>
                 <label fallback="CUSTOM 29">$INFO[Skin.String(CustomSub6_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub6_4,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub6_4.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub6_4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub6_4.Disable)]</property>
@@ -3016,7 +2937,7 @@
             <item>
                 <label fallback="CUSTOM 30">$INFO[Skin.String(CustomSub6_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub6_5,home)</onclick>
-                <onclick>ActivateWindow(1136)</onclick>
+                <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(CustomSub6_5.Widget)]</property>
                 <icon>$INFO[Skin.String(CustomSub6_5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub6_5.Disable)]</property>
