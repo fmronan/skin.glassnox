@@ -22,9 +22,9 @@
             <include>HiddenObject</include>
             <onclick condition="IsEmpty(Window(Home).Property(ActorFanartZoom))">SetProperty(ActorFanartZoom,True,Home)</onclick>
             <onclick condition="!IsEmpty(Window(Home).Property(ActorFanartZoom))">ClearProperty(ActorFanartZoom,Home)</onclick>
-            <onleft>9000</onleft>
-            <onright>9000</onright>
-            <onup>9000</onup>
+            <onleft>150</onleft>
+            <onright>150</onright>
+            <onup>150</onup>
             <ondown>9000</ondown>
         </control>
         <control type="group">

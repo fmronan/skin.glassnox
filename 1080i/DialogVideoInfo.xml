@@ -173,6 +173,7 @@
                     <aspectratio aligny="center" align="left">keep</aspectratio>
                     <texture background="true">$INFO[ListItem.Country,flags/language/,.png]</texture>
                     <fadetime>200</fadetime>
+                    <colordiffuse>AAFFFFFF</colordiffuse>
                     <visible>!IsEmpty(ListItem.Country)</visible>
                     <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                 </control> 
@@ -608,7 +609,8 @@
                     </control>
                     <control type="image" id="900014">
                         <width>100</width>
-                        <height>70</height>
+                        <height>85</height>
+                        <animation effect="slide" end="0,-7" condition="true">Conditional</animation>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoResolution,flags/info/,.png]</texture>
@@ -620,11 +622,11 @@
                     </control>
                     <control type="image" id="900015">
                         <width>132</width>
-                        <height>90</height>
+                        <height>83</height>
+                        <animation effect="slide" end="0,-7" condition="true">Conditional</animation>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-                        <animation effect="slide" end="0,-10" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900015))</visible>
                     </control>
                     <control type="image">
@@ -983,9 +985,9 @@
                 <width>1050</width>
                 <scroll>true</scroll>
                 <haspath>true</haspath>
-                <font>Font_Info</font>
+                <font>Font_Reg12</font>
                 <label>$INFO[ListItem.FileNameAndPath]</label>
-                <textcolor>grey</textcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar5]</textcolor>
             </control>
             <control type="image">
                 <posx>709</posx>
