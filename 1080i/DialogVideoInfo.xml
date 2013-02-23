@@ -885,7 +885,7 @@
                 <control type="button" id="10">
                     <label>$LOCALIZE[13511]</label>
                     <include>DialogVideoInfoButton</include>
-                    <visible>!Skin.HasSetting(kioskmode) + substring(Container.FolderPath,movieset)</visible>
+                    <visible>!Skin.HasSetting(kioskmode) + !IsEmpty(ListItem.Property(IsSet))</visible>
                 </control>
                 <control type="button" id="21">
                     <label>$LOCALIZE[31467]</label>
