@@ -35,7 +35,6 @@
     <onload condition="!IsEmpty(Skin.String(SmartPlaylist11.Call))">$INFO[Skin.String(SmartPlaylist11.Call)]</onload>
     <onload condition="!IsEmpty(Skin.String(SmartPlaylist12.Call))">$INFO[Skin.String(SmartPlaylist12.Call)]</onload>
     <onload condition="System.HasAddon(script.xbmc.intro.movie)">RunScript(script.xbmc.intro.movie)</onload>
-    <onunload>CancelAlarm(GotToHome,true)</onunload>
     <onunload>Skin.SetString(widgetlist,$INFO[Control.GetLabel(11111)] $INFO[Control.GetLabel(21111)] $INFO[Control.GetLabel(31111)])</onunload>
     <onunload>Skin.SetString(widget2list,$INFO[Control.GetLabel(11112)])</onunload>
     <onunload>Skin.SetString(backgroundlist,$INFO[Control.GetLabel(11113)] $INFO[Control.GetLabel(21113)] $INFO[Control.GetLabel(31113)])</onunload>
