@@ -882,6 +882,11 @@
                     <include>DialogVideoInfoButton</include>
                     <visible>!Skin.HasSetting(kioskmode) + !substring(Container.FolderPath,plugin://)</visible>
                 </control>
+                <control type="button" id="10">
+                    <label>$LOCALIZE[13511]</label>
+                    <include>DialogVideoInfoButton</include>
+                    <visible>!Skin.HasSetting(kioskmode) + substring(Container.FolderPath,movieset)</visible>
+                </control>
                 <control type="button" id="21">
                     <label>$LOCALIZE[31467]</label>
                     <include>DialogVideoInfoButton</include>
