@@ -122,6 +122,7 @@
                     <label>20410</label>
                     <onclick>PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
                     <visible>!IsEmpty(ListItem.Trailer)</visible>
+                    <onclick>Dialog.Close(all,true)</onclick>
                     <include>DialogVideoInfoButton</include>
                 </control>
                 <control type="button" id="22">
