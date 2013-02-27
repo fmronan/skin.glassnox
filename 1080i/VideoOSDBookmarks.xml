@@ -141,7 +141,7 @@
                     <width>345</width>
                     <height>225</height>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <texture border="5">views/addonwall_select.png</texture>
+                    <texture border="6">views/addonwall_select.png</texture>
                 </control>
                 <control type="label">
                     <posx>168</posx>

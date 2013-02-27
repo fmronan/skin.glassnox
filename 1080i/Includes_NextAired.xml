@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="TVGuideWeekdayButtonbackground">
+    <include name="TVGuideWeekdayButtonbackground">
         <posx>0</posx>
         <posy>0</posy>
         <width>434</width>
         <height>84</height>
-        <align>left</align>
-        <font>Font-Condensed-S34</font>
-        <textcolor>white</textcolor>
-        <disabledcolor>grey2</disabledcolor>
-        <shadowcolor>22000000</shadowcolor>
         <textoffsetx>30</textoffsetx>
-        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+        <align>left</align>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
         <texturenofocus>views/tripanel/listselect_fo.png</texturenofocus>
         <alttexturefocus>-</alttexturefocus>
         <alttexturenofocus>-</alttexturenofocus>
+        <font>Font-Condensed-S34</font>
+        <shadowcolor>22000000</shadowcolor>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey2</disabledcolor>
+        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
     </include>
     <include name="TVGuideWeekdayButton">
         <posx>0</posx>
         <posy>0</posy>
         <width>434</width>
         <height>84</height>
-        <align>left</align>
-        <font>Font-Condensed-S34</font>
-        <textcolor>white</textcolor>
-        <disabledcolor>grey2</disabledcolor>
-        <shadowcolor>22000000</shadowcolor>
         <textoffsetx>30</textoffsetx>
-        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+        <align>left</align>
         <texturefocus>-</texturefocus>
         <texturenofocus>-</texturenofocus>
         <alttexturefocus>-</alttexturefocus>
         <alttexturenofocus>-</alttexturenofocus>
+        <font>Font-Condensed-S34</font>
+        <shadowcolor>22000000</shadowcolor>
+        <textcolor>white</textcolor>
+        <disabledcolor>grey2</disabledcolor>
+        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
     </include>
     <include name="NextAiredItemLayout">
         <control type="group">
@@ -72,8 +72,8 @@
                     <posy>492</posy>
                     <width>397</width>
                     <height>34</height>
-                    <colordiffuse>99FFFFFF</colordiffuse>
                     <texture>common/bgcolor.png</texture>
+                    <colordiffuse>99FFFFFF</colordiffuse>
                 </control>
                 <control type="image">
                     <posx>370</posx>
@@ -95,8 +95,8 @@
                     <width>370</width>
                     <height>80</height>
                     <align>center</align>
+                    <label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(ShortTime)][/COLOR][COLOR grey] ($INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]])[/COLOR]</label>
                     <font>Font_Reg17</font>
-                    <label>[COLOR white2]$INFO[ListItem.Property(ShortTime)][/COLOR][COLOR grey] ($INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]])[/COLOR]</label>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
             </control>
@@ -105,8 +105,8 @@
                 <posy>200</posy>
                 <width>370</width>
                 <height>30</height>
-                <font>Font_Bold22</font>
                 <label>S$INFO[ListItem.Property(NextSeasonNumber)]E$INFO[ListItem.Property(NextEpisodeNumber)]</label>
+                <font>Font_Bold22</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="label">
@@ -122,15 +122,15 @@
                 <posy>538</posy>
                 <width>415</width>
                 <height>80</height>
-                <label>$LOCALIZE[31189]:[CR][COLOR white2]S$INFO[ListItem.Property(LatestSeasonNumber)]E$INFO[ListItem.Property(LatestEpisodeNumber)][COLOR grey] ($LOCALIZE[31322]: $INFO[ListItem.Property(LatestDate)])[/COLOR]:[CR] $INFO[ListItem.Property(LatestTitle)][/COLOR]</label>
+                <label>$LOCALIZE[31189]:[CR][COLOR $VAR[HomeMenuTextFocusVar2]]S$INFO[ListItem.Property(LatestSeasonNumber)]E$INFO[ListItem.Property(LatestEpisodeNumber)][COLOR grey] ($LOCALIZE[31322]: $INFO[ListItem.Property(LatestDate)])[/COLOR]:[CR] $INFO[ListItem.Property(LatestTitle)][/COLOR]</label>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="label">
+                <label></label>
                 <posx>22</posx>
                 <posy>618</posy>
                 <width>415</width>
                 <height>80</height>
-                <label></label>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="label">
@@ -138,7 +138,7 @@
                 <posy>638</posy>
                 <width>415</width>
                 <height>80</height>
-                <label>$LOCALIZE[515]: [CR][COLOR white2]$INFO[ListItem.Property(Genre)][/COLOR]</label>
+                <label>$LOCALIZE[515]: [CR][COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(Genre)][/COLOR]</label>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="label">
@@ -146,7 +146,7 @@
                 <posy>722</posy>
                 <width>170</width>
                 <height>80</height>
-                <label>$LOCALIZE[31005]:[CR][COLOR white2]$INFO[ListItem.Property(Premiered)][/COLOR]</label>
+                <label>$LOCALIZE[31005]:[CR][COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(Premiered)][/COLOR]</label>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="image">
@@ -155,8 +155,8 @@
                 <width>135</width>
                 <height>90</height>
                 <aspectratio>keep</aspectratio>
-                <colordiffuse>floor</colordiffuse>
                 <texture fallback="flags/studios/default-studio.png">$INFO[ListItem.Property(Network),flags/studios/,.png]</texture>
+                <colordiffuse>floor</colordiffuse>
             </control>
             <control type="image">
                 <posx>240</posx>
@@ -164,10 +164,10 @@
                 <width>185</width>
                 <height>240</height>
                 <aspectratio>keep</aspectratio>
-                <colordiffuse>floor</colordiffuse>
-                <fadetime>IconCrossfadeTime2</fadetime>
-                <animation effect="fade" time="200">VisibleChange</animation>
                 <texture>$INFO[ListItem.Property(Art(characterart))]</texture>
+                <fadetime>IconCrossfadeTime2</fadetime>
+                <colordiffuse>floor</colordiffuse>
+                <animation effect="fade" time="200">VisibleChange</animation>
             </control>
             <control type="image">
                 <posx>435</posx>
@@ -183,17 +183,17 @@
         <control type="image">
             <width>435</width>
             <height>955</height>
-            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <texture>views/tripanel/listselect_fo.png</texture>
+            <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         </control>
         <include>NextAiredItemLayout</include>
     </include>
     <include name="NextAiredListVars">
-        <itemgap>0</itemgap>
         <posx>495</posx>
         <posy>61</posy>
         <width>1305</width>
         <height>978</height>
+        <itemgap>0</itemgap>
         <orientation>horizontal</orientation>
         <scrolltime>0</scrolltime>
         <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout">Hidden</animation>
@@ -288,7 +288,6 @@
                     <height>1012</height>
                     <texture>wall/wall_bg_reflection.png</texture>
                 </control>
-                <include condition="Skin.HasSetting(effect_bg)">BG_Effect_NextAired_Panel</include>
                 <control type="label">
                     <posx>132</posx>
                     <posy>100</posy>
@@ -863,7 +862,7 @@
                         <texture background="true">$INFO[Container(200).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001)</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(200).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -871,7 +870,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(200).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(200).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -1038,7 +1037,7 @@
                         <texture background="true">$INFO[Container(201).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001)</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(201).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -1046,7 +1045,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(201).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(201).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -1213,7 +1212,7 @@
                         <texture background="true">$INFO[Container(202).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001)</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(202).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -1221,7 +1220,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(202).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(202).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -1388,7 +1387,7 @@
                         <texture background="true">$INFO[Container(203).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001)</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(203).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -1396,7 +1395,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(203).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(203).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -1563,7 +1562,7 @@
                         <texture background="true">$INFO[Container(204).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001)</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(204).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -1571,7 +1570,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(204).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(204).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -1738,7 +1737,7 @@
                         <texture background="true">$INFO[Container(205).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001)</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(205).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -1746,7 +1745,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(205).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(205).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -1913,7 +1912,7 @@
                         <texture background="true">$INFO[Container(206).ListItem.Property(Art(fanart))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
-                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(200).ListItem.Property(Art(landscape)))</visible>
+                        <visible>!Control.IsVisible(2001) | IsEmpty(Container(206).ListItem.Property(Art(landscape)))</visible>
                     </control>
                     <control type="image" id="2001">
                         <posx>123</posx>
@@ -1921,7 +1920,7 @@
                         <width>405</width>
                         <height>237</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <texture background="true">$INFO[Container(206).ListItem.Property(Path),,landscape.jpg]</texture>
+                        <texture background="true">$INFO[Container(206).ListItem.Property(Art(landscape))]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                         <visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
@@ -2083,7 +2082,7 @@
                 <posy>-15</posy>
                 <include>Furniture_SettingsBackPanel2</include>
                 <control type="group" id="9001">
-                    <control type="list" id="200">
+                   <control type="list" id="200">
                         <include>NextAiredListVars</include>
                         <onup>SetFocus(206,0)</onup>
                         <onup>206</onup>
@@ -2091,7 +2090,7 @@
                         <ondown>201</ondown>
                         <onleft>9000</onleft>
                         <onright>200</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(200)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(200)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2001)]</visible>
                         <itemlayout height="862" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2107,7 +2106,7 @@
                         <ondown>202</ondown>
                         <onleft>9000</onleft>
                         <onright>201</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(201)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(201)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2002)]</visible>
                         <itemlayout height="162" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2123,7 +2122,7 @@
                         <ondown>203</ondown>
                         <onleft>9000</onleft>
                         <onright>202</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(202)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(202)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2003)]</visible>
                         <itemlayout height="162" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2139,7 +2138,7 @@
                         <ondown>204</ondown>
                         <onleft>9000</onleft>
                         <onright>203</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(203)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(203)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2004)]</visible>
                         <itemlayout height="162" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2155,7 +2154,7 @@
                         <ondown>205</ondown>
                         <onleft>9000</onleft>
                         <onright>204</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(204)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(204)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2005)]</visible>
                         <itemlayout height="162" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2171,7 +2170,7 @@
                         <ondown>206</ondown>
                         <onleft>9000</onleft>
                         <onright>205</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(205)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(205)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2006)]</visible>
                         <itemlayout height="162" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2187,7 +2186,7 @@
                         <ondown>200</ondown>
                         <onleft>9000</onleft>
                         <onright>206</onright>
-                        <visible allowhiddenfocus="true">ControlGroup(9001).HasFocus(206)</visible>
+                        <visible allowhiddenfocus="true">[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(206)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2007)]</visible>
                         <itemlayout height="162" width="435">
                             <include>NextAiredItemLayout</include>
                         </itemlayout>
@@ -2206,14 +2205,14 @@
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.1.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(200)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(200)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2001)]]">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
                     </control>
                     <control type="button">
                         <label>[B]$VAR[TVDayLabelTue][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.2.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(201)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(201)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2002)]]">Conditional</animation>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(201).NumItems,0)</enable>
                     </control>
@@ -2221,7 +2220,7 @@
                         <label>[B]$VAR[TVDayLabelWed][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.3.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(202)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(202)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2003)]]">Conditional</animation>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(202).NumItems,0)</enable>
                     </control>
@@ -2229,7 +2228,7 @@
                         <label>[B]$VAR[TVDayLabelThu][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.4.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(203)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(203)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2004)]]">Conditional</animation>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(203).NumItems,0)</enable>
                     </control>
@@ -2237,7 +2236,7 @@
                         <label>[B]$VAR[TVDayLabelFri][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.5.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(204)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(204)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2005)]]">Conditional</animation>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(204).NumItems,0)</enable>
                     </control>
@@ -2245,7 +2244,7 @@
                         <label>[B]$VAR[TVDayLabelSat][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.6.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(205)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(205)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2006)]]">Conditional</animation>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(205).NumItems,0)</enable>
                     </control>
@@ -2253,17 +2252,17 @@
                         <label>[B]$VAR[TVDayLabelSun][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.7.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButtonbackground</include>
-                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(206)">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(206)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2007)]]">Conditional</animation>
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(206).NumItems,0)</enable>
                     </control>
                 </control>
-                <control type="grouplist">
+                <control type="grouplist" id="2000">
                     <description>Weekday labels</description>
                     <posx>62</posx>
                     <posy>200</posy>
                     <itemgap>0</itemgap>
-                    <control type="button">
+                    <control type="button" id="2001">
                         <label>[B]$VAR[TVDayLabelMon][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.1.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>
@@ -2271,7 +2270,7 @@
                         <animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(200)">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
                     </control>
-                    <control type="button">
+                    <control type="button" id="2002">
                         <label>[B]$VAR[TVDayLabelTue][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.2.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>
@@ -2279,7 +2278,7 @@
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(201).NumItems,0)</enable>
                     </control>
-                    <control type="button">
+                    <control type="button" id="2003">
                         <label>[B]$VAR[TVDayLabelWed][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.3.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>
@@ -2287,7 +2286,7 @@
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(202).NumItems,0)</enable>
                     </control>
-                    <control type="button">
+                    <control type="button" id="2004">
                         <label>[B]$VAR[TVDayLabelThu][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.4.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>
@@ -2295,7 +2294,7 @@
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(203).NumItems,0)</enable>
                     </control>
-                    <control type="button">
+                    <control type="button" id="2005">
                         <label>[B]$VAR[TVDayLabelFri][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.5.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>
@@ -2303,7 +2302,7 @@
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(204).NumItems,0)</enable>
                     </control>
-                    <control type="button">
+                    <control type="button" id="2006">
                         <label>[B]$VAR[TVDayLabelSat][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.6.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>
@@ -2311,7 +2310,7 @@
                         <animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
                         <enable>IntegerGreaterThan(Container(205).NumItems,0)</enable>
                     </control>
-                    <control type="button">
+                    <control type="button" id="2007">
                         <label>[B]$VAR[TVDayLabelSun][/B]</label>
                         <label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.7.Date)][/COLOR]</label2>
                         <include>TVGuideWeekdayButton</include>

@@ -380,7 +380,7 @@
                         <height>65</height>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.AudioChannels,flags/info/channels/,.png]</texture>
+                        <texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
                         <aspectratio>keep</aspectratio>
                         <animation effect="slide" end="0,3" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900017))</visible>
@@ -394,7 +394,7 @@
                         <height>70</height>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.VideoResolution,flags/info/,.png]</texture>
+                        <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
                         <visible>!IsEmpty(Control.GetLabel(900014))</visible>
                     </control>
                     <control type="image">
@@ -432,7 +432,7 @@
                         <height>70</height>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>flags/info/cc.png</texture>
+                        <texture>flags/cc.png</texture>
                         <visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
                     </control>
                 </control>
@@ -502,7 +502,7 @@
                 <width>550</width>
                 <height>314</height>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <texture border="5">views/addonwall_select.png</texture>
+                <texture border="6">views/addonwall_select.png</texture>
                 <include>Animation_VisibleChange200</include>
                 <visible>Control.HasFocus(5055)</visible>
             </control>

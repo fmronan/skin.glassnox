@@ -462,7 +462,7 @@
                                     <height>430</height>
                                     <aspectratio>keep</aspectratio>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                                    <bordertexture border="5">views/addonwall_select.png</bordertexture>
+                                    <bordertexture border="6">views/addonwall_select.png</bordertexture>
                                     <bordersize>5</bordersize>
                                     <texture background="true">$INFO[ListItem.Icon]</texture>
                                     <visible>Control.HasFocus(250)</visible>

@@ -138,7 +138,7 @@
                                 <height>268</height>
                                 <aspectratio scalediffuse="false">stretch</aspectratio>
                                 <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
-                                <texture border="5">views/addonwall_select.png</texture>
+                                <texture border="6">views/addonwall_select.png</texture>
                             </control>
                             <control type="image">
                                 <width>189</width>
@@ -281,7 +281,7 @@
                                     <width>285</width>
                                     <height>161</height>
                                     <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
-                                    <texture border="5">views/addonwall_select.png</texture>
+                                    <texture border="6">views/addonwall_select.png</texture>
                                 </control>
                                 <control type="image">
                                     <posy>116</posy>
@@ -313,7 +313,7 @@
                                 <width>285</width>
                                 <height>161</height>
                                 <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
-                                <texture border="5">views/addonwall_select.png</texture>
+                                <texture border="6">views/addonwall_select.png</texture>
                                 <include>Animation_VisibleChange200</include>
                                 <visible>Container.Content(tvshows)</visible>
                             </control>
@@ -367,7 +367,7 @@
                                 <height>112</height>
                                 <aspectratio align="center">stretch</aspectratio>
                                 <colordiffuse>$VAR{FocusTextureColorVar]</colordiffuse>
-                                <texture border="5">views/addonwall_select.png</texture>
+                                <texture border="6">views/addonwall_select.png</texture>
                             </control>
                             <control type="image">
                                 <posx>11</posx>

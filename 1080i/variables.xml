@@ -694,6 +694,14 @@
         <value condition="substring(ListItem.AudioCodec,ac3,left) + Stringcompare(ListItem.AudioChannels,2)">dolbypro</value>
         <value>$INFO[ListItem.AudioCodec]</value>
     </variable>
+    <variable name="VideoInfoNextEpisodeVar">
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextSeasonNumber),S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E]$INFO[Window(Home).Property(NextAired.NextTitle),:  ]$INFO[Window(Home).Property(NextAired.NextDate), (,)]</value>    
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label))">$INFO[Window(Home).Property(NextAired.LatestSeasonNumber),S]$INFO[Window(Home).Property(NextAired.LatestEpisodeNumber),E]$INFO[Window(Home).Property(NextAired.LatestTitle),:  ]$INFO[Window(Home).Property(NextAired.LatestDate), (,)]</value>
+    </variable>
+    <variable name="VideoInfoNextEpisodeLabelVar">
+        <value condition="!IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$LOCALIZE[209]</value>    
+        <value>$LOCALIZE[210]</value>
+    </variable>
     <variable name="NextEpisodeVar">
         <value condition="!IsEmpty(Window(Home).Property(NextAired.Label)) + !IsEmpty(Window(Home).Property(NextAired.NextDate))">$INFO[Window(Home).Property(NextAired.NextDate)]</value>
         <value>$LOCALIZE[312581]</value>

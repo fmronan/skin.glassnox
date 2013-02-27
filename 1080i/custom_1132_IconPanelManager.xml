@@ -154,7 +154,7 @@
                     <width>250</width>
                     <height>250</height>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <texture border="5">views/addonwall_select.png</texture>
+                    <texture border="6">views/addonwall_select.png</texture>
                     <include>Animation_VisibleChange200</include>
                     <visible>Control.HasFocus(5019)</visible>
                 </control>
