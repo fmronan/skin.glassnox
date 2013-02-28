@@ -370,16 +370,32 @@
                         <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
                     </control>
                     <control type="image">
-                        <posx>1425</posx>
-                        <posy>987</posy>
-                        <width>330</width>
-                        <height>90</height>
-                        <aspectratio scalediffuse="true">keep</aspectratio>
-                        <fadetime>400</fadetime>
-                        <visible>![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]</visible>
-                        <texture diffuse="thumbs/banner_mask.png" background="true">$VAR[BannerVar]</texture>
-                        <visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
-                    </control>
+                            <posx>1500</posx>
+                            <posy>977</posy>
+                            <width>120</width>
+                            <height>100</height>
+                            <aspectratio scalediffuse="true">keep</aspectratio>
+                            <texture background="true">tvguide/$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
+                            <fadetime>400</fadetime>
+                        </control>
+                        <control type="label">
+                            <posx>1625</posx>
+                            <posy>966</posy>
+                            <width>330</width>
+                            <height>90</height>
+                            <align>left</align>
+                            <font>Font_Bold16</font>
+                            <label>Last: $VAR[LastEpisodeVar]</label>
+                        </control>
+                        <control type="label">
+                            <posx>1625</posx>
+                            <posy>995</posy>
+                            <width>330</width>
+                            <height>90</height>
+                            <align>left</align>
+                            <font>Font_Bold16</font>
+                            <label>Next: $VAR[NextEpisodeVar]</label>
+                        </control>
                 </control>
                 <control type="group">
                     <visible>!Control.HasFocus(7002) + Control.IsVisible(9900)</visible>

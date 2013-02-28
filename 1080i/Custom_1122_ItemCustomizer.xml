@@ -23,7 +23,6 @@
     <onunload condition="!IsEmpty(Window(home).Property(colorallitem))">Skin.SetString(FullscreenHomeItem.Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallitem))">Skin.SetString(FavouritesHomeItem.Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallitem))">Skin.SetString(WeatherHomeItem.Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
-    <onunload condition="!IsEmpty(Window(home).Property(colorallitem))">Skin.SetString(ComicsHomeItem.Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallitem))">Skin.SetString(MusicVideosHomeItem.Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallitem))">Skin.SetString(PlayDiscHomeItem.Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload> 
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(CustomHomeItem1.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
@@ -47,7 +46,6 @@
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(FullscreenHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(FavouritesHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(WeatherHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
-    <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(ComicsHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(MusicVideosHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(PlayDiscHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>    
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Type,$INFO[Skin.String(ItemToEdit.Type)])</onunload>
@@ -66,6 +64,8 @@
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].SubMenu,$INFO[Skin.String(ItemToEdit.SubMenu)])</onunload>
     <onunload>ClearProperty(colorallicon,home)</onunload>
     <onunload>ClearProperty(colorallitem,home)</onunload>
+    <onunload>Skin.Reset(ItemToEdit.IconColor)</onunload>
+    <onunload>Skin.Reset(ItemToEdit.Color)</onunload>
     <onunload condition="IsEmpty(Window(1124).Property(ResetItem))">ClearProperty(MenuItem,home)</onunload>
     <onunload condition="Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))">Control.Move(9000,12)</onunload>
     <onunload condition="Skin.HasSetting(mainmenuicons) | !IsEmpty(Window(1124).Property(ResetItem))">AlarmClock(Test3,Dialog.Close(1156),00:01,silent)</onunload>

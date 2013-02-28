@@ -92,7 +92,8 @@
                         <onfocus>SetProperty(WidgetType,classic,1124)</onfocus>
                         <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
                         <onclick>Dialog.Close(1137)</onclick>
-                        <onclick>ActivateWindow(1146)</onclick>
+                        <onclick condition="![Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),movies)]">ActivateWindow(1146)</onclick>
+                        <onclick condition="Substring(Window(1124).Property(CustomYesNoDialog),albums) | Substring(Window(1124).Property(CustomYesNoDialog),movies)">ActivateWindow(1188)</onclick>
                         <visible>!Substring(Window(1124).Property(CustomYesNoDialog),bigpicture)</visible>
                     </control>
                     <control type="button" id="12">

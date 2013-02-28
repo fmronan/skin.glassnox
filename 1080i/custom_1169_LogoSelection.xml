@@ -274,12 +274,6 @@
                         <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/microsoft.png)</onclick>
                     </item>
                     <item>
-                        <label>mkv</label>
-                        <thumb>special://skin/extras/iconscases/BD/mkv.png</thumb>
-                        <onclick>Dialog.Close(1169)</onclick>
-                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/mkv.png)</onclick>
-                    </item>
-                    <item>
                         <label>mp4v</label>
                         <thumb>special://skin/extras/iconscases/BD/mp4v.png</thumb>
                         <onclick>Dialog.Close(1169)</onclick>
@@ -392,6 +386,78 @@
                         <thumb>special://skin/extras/iconscases/BD/wmapro.png</thumb>
                         <onclick>Dialog.Close(1169)</onclick>
                         <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmapro.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wmav2</label>
+                        <thumb>special://skin/extras/iconscases/BD/wmav2.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmav2.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wmv2</label>
+                        <thumb>special://skin/extras/iconscases/BD/wmv2.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmv2.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wmv3</label>
+                        <thumb>special://skin/extras/iconscases/BD/wmv3.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmv3.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wmva</label>
+                        <thumb>special://skin/extras/iconscases/BD/wmva.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmva.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wmvhd</label>
+                        <thumb>special://skin/extras/iconscases/BD/wmvhd.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmvhd.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wmvhd_info</label>
+                        <thumb>special://skin/extras/iconscases/BD/wmvhd_info.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wmvhd_info.png)</onclick>
+                    </item>
+                    <item>
+                        <label>wvc1</label>
+                        <thumb>special://skin/extras/iconscases/BD/wvc1.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/wvc1.png)</onclick>
+                    </item>
+                    <item>
+                        <label>x264</label>
+                        <thumb>special://skin/extras/iconscases/BD/x264.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/x264.png)</onclick>
+                    </item>
+                    <item>
+                        <label>xvid</label>
+                        <thumb>special://skin/extras/iconscases/BD/xvid.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/xvid.png)</onclick>
+                    </item>
+                    <item>
+                        <label>avi</label>
+                        <thumb>special://skin/extras/iconscases/BD/avi.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/avi.png)</onclick>
+                    </item>
+                    <item>
+                        <label>mov</label>
+                        <thumb>special://skin/extras/iconscases/BD/mov.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/mov.png)</onclick>
+                    </item>
+                    <item>
+                        <label>mkv</label>
+                        <thumb>special://skin/extras/iconscases/BD/mkv.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/mkv.png)</onclick>
                     </item>
                 </content>
             </control>
