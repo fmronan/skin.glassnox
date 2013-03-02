@@ -457,7 +457,8 @@
                         <label>$VAR[ListLabel3Var]</label>
                         <font>Font_Info</font>
                         <textcolor>grey2</textcolor>
-                        <animation effect="slide" end="30" time="0" condition="!IsEmpty(ListItem.DiscNumber)">Conditional</animation>
+                                                <animation effect="slide" end="26" time="0" condition="Container.Content(songs)">Conditional</animation>
+
                     </control>
                     <control type="label">
                         <posx>984</posx>
@@ -483,8 +484,10 @@
                         <posy>28</posy>
                         <width>45</width>
                         <height>45</height>
+                        <aspectratio>keep</aspectratio>
                         <texture>$VAR[WatchedIconVar]</texture>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <visible>!Container.Content(songs)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="100" condition="!Skin.HasSetting(slimlist) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]">
@@ -553,7 +556,9 @@
                         <align>center</align>
                         <label>$VAR[ListLabel3Var]</label>
                         <font>Font_Info</font>
-                        <animation effect="slide" end="30" time="0" condition="!IsEmpty(ListItem.DiscNumber)">Conditional</animation>
+                        
+                        <animation effect="slide" end="26" time="0" condition="Container.Content(songs)">Conditional</animation>
+
                     </control>
                     <control type="label">
                         <posx>984</posx>
@@ -578,7 +583,10 @@
                         <posy>28</posy>
                         <width>45</width>
                         <height>45</height>
+                        <aspectratio>keep</aspectratio>
                         <texture>$VAR[WatchedIconVar]</texture>
+                                                <visible>!Container.Content(songs)</visible>
+
                     </control>
                 </focusedlayout>
                 <itemlayout height="100" condition="!Skin.HasSetting(slimlist)">
@@ -621,6 +629,7 @@
                         <posy>28</posy>
                         <width>45</width>
                         <height>45</height>
+                        <aspectratio>keep</aspectratio>
                         <texture>$VAR[WatchedIconVar]</texture>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     </control>
@@ -679,6 +688,7 @@
                         <posy>28</posy>
                         <width>45</width>
                         <height>45</height>
+                        <aspectratio>keep</aspectratio>
                         <texture>$VAR[WatchedIconVar]</texture>
                         <colordiffuse>$VAR[HomeMenuTextFocusVar2]</colordiffuse>
                     </control>
@@ -714,25 +724,15 @@
                         <font>Font_Reg19</font>
                         <textcolor>grey3</textcolor>
                         <label>$VAR[ListLabel2Var]</label>
-                        <animation effect="slide" end="38" condition="!Window.IsActive(videolibrary) + !Container.Content(musicvideos)">Conditional</animation>
                     </control>
                     <control type="image">
                         <posx>1060</posx>
                         <posy>8</posy>
                         <width>45</width>
                         <height>45</height>
-                        <texture>$VAR[WatchedIconVar]</texture>
+                         <aspectratio>keep</aspectratio>
+                       <texture>$VAR[WatchedIconVar]</texture>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    </control>
-                    <control type="image">
-                        <posx>945</posx>
-                        <posy>8</posy>
-                        <width>45</width>
-                        <height>48</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.DiscNumber,flags/discnumber/,.png]</texture>
-                        <colordiffuse>white</colordiffuse>
-                        <visible>Container.Content(songs)</visible>
                     </control>
                     <control type="image">
                         <posx>60</posx>
@@ -773,24 +773,14 @@
                         <align>right</align>
                         <font>Font_Reg19</font>
                         <label>$VAR[ListLabel2Var]</label>
-                        <animation effect="slide" end="38" condition="!Window.IsActive(videolibrary) + !Container.Content(musicvideos)">Conditional</animation>
                     </control>
                     <control type="image">
                         <posx>1060</posx>
                         <posy>8</posy>
                         <width>45</width>
+                        <aspectratio>keep</aspectratio>
                         <height>45</height>
                         <texture>$VAR[WatchedIconVar]</texture>
-                    </control>
-                    <control type="image">
-                        <posx>945</posx>
-                        <posy>8</posy>
-                        <width>45</width>
-                        <height>48</height>
-                        <aspectratio>keep</aspectratio>
-                        <texture>$INFO[ListItem.DiscNumber,flags/discnumber/,.png]</texture>
-                        <colordiffuse>white</colordiffuse>
-                        <visible>Container.Content(songs)</visible>
                     </control>
                     <control type="image">
                         <posx>60</posx>

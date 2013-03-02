@@ -84,6 +84,9 @@
             <control type="group">
                 <!-- view id = 50 -->
                 <include>CommonRootView</include>
+                <!-- view id = 510 -->
+                <include condition="!Skin.HasSetting(DisablePostersVL)">PostersViewList</include>
+                <include condition="!Skin.HasSetting(DisablePostersVL) | !Skin.HasSetting(DisableTriPanelVL)">PostersView</include>
                 <!--view id = 52-->
                 <include condition="!Skin.HasSetting(DisableTriPanelVL)">TriPanel</include>
                 <!-- view id = 53 -->
@@ -98,8 +101,6 @@
                 <include condition="!Skin.HasSetting(DisableLandscapeVL)">MediaListView3</include>
                 <!-- view id = 511 -->
                 <include condition="!Skin.HasSetting(DisableLowListVL)">LowList</include>
-                <!-- view id = 510 -->
-                <include condition="!Skin.HasSetting(DisablePostersVL)">PostersView</include>
                 <!-- view id = 57-->
                 <include condition="!Skin.HasSetting(DisableShiftVL)">ShiftView</include>
                 <!-- view id = 509-->
@@ -132,8 +133,8 @@
                     <onright condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onright>
                     <ondown condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</ondown>
                     <onback condition="IsEmpty(Window(home).Property(ControlOpenCase))">50</onback>
-                    <onclick condition="!IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
-                    <onclick condition="IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
+                    <onclick condition="!IsEmpty(ListItem.Trailer)+!Control.IsVisible(501)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
+                    <onclick condition="IsEmpty(ListItem.Trailer)|Control.IsVisible(501)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">Select</onclick>
                     <visible>Control.IsVisible(9900) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>

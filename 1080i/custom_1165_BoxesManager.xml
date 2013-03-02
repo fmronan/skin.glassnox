@@ -206,6 +206,18 @@
 					<visible>Container(20).HasFocus(21)</visible>
 				  </control>
 				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[aviCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(22)</visible>
+				  </control>
+				  <control type="image">
+					<include>CaseSelectorDimensions</include>
+					<texture background="true">thumbs/boxes/$VAR[SettingCasePathVar]/whitecase.png</texture>
+					<colordiffuse>$VAR[isoCustomColor]</colordiffuse>
+					<visible>Container(20).HasFocus(23)</visible>
+				  </control>
+				  <control type="image">
 					  <posx>267</posx>
 					  <posy>62</posy>
 					<width>143</width>
@@ -278,21 +290,21 @@
 				  <item id="9">
 					<label>DV</label>
 					<label2>dv_codeccase</label2>
-					<icon>$VAR[value_dvdcodec]</icon>
+					<icon>$VAR[value_dvcodec]</icon>
 					<onclick>SetProperty(colordialog,dv_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
 				  <item id="10">
 					<label>DVD</label>
 					<label2>dvd_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_dvdcodec]</icon>
 					<onclick>SetProperty(colordialog,dvd_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 				  </item>
 				  <item id="11">
 					<label>H264</label>
 					<label2>h264_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_h264codec]</icon>
 					<onclick>SetProperty(colordialog,h264_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -300,15 +312,14 @@
 				  <item id="12">
 					<label>Hd dvd</label>
 					<label2>hddvd_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_hddvdcodec]</icon>
 					<onclick>SetProperty(colordialog,hddvd_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
-					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
 				  </item>
 				  <item id="13">
 					<label>MKV</label>
 					<label2>mkv_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_mkvcodec]</icon>
 					<onclick>SetProperty(colordialog,mkv_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -316,7 +327,7 @@
 				  <item id="14">
 					<label>MOV</label>
 					<label2>mov_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_movcodec]</icon>
 					<onclick>SetProperty(colordialog,mov_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -324,7 +335,7 @@
 				  <item id="15">
 					<label>Mp4</label>
 					<label2>mp4_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_mp4codec]</icon>
 					<onclick>SetProperty(colordialog,mp4_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -332,7 +343,7 @@
 				  <item id="16">
 					<label>Mpeg</label>
 					<label2>mpeg_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_mpegcodec]</icon>
 					<onclick>SetProperty(colordialog,mpeg_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -340,7 +351,7 @@
 				  <item id="17">
 					<label>Qt</label>
 					<label2>Qt_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_Qtcodec]</icon>
 					<onclick>SetProperty(colordialog,Qt_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -348,7 +359,7 @@
 				  <item id="18">
 					<label>Tv Shows</label>
 					<label2>TVseries_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_TVseriescodec]</icon>
 					<onclick>SetProperty(colordialog,TVseries_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -356,7 +367,7 @@
 				  <item id="19">
 					<label>Music</label>
 					<label2>MusicVideo_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_MusicVideocodec]</icon>
 					<onclick>SetProperty(colordialog,Music_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -364,7 +375,7 @@
 				  <item id="20">
 					<label>WMV</label>
 					<label2>wmv_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_wmvcodec]</icon>
 					<onclick>SetProperty(colordialog,wmv_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
@@ -372,12 +383,27 @@
 				  <item id="21">
 					<label>XVID</label>
 					<label2>xvid_codeccase</label2>
-					<icon>$VAR[value_codecdefault]</icon>
+					<icon>$VAR[value_xvidcodec]</icon>
 					<onclick>SetProperty(colordialog,xvid_case,1124)</onclick>
                     <onclick>ActivateWindow(1138)</onclick>
 					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
 				  </item>
-				  
+				  <item id="22">
+					<label>avi</label>
+					<label2>xvid_codeccase</label2>
+					<icon>$VAR[value_avicodec]</icon>
+					<onclick>SetProperty(colordialog,avi_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
+				  <item id="23">
+					<label>iso</label>
+					<label2>iso_codeccase</label2>
+					<icon>$VAR[value_isocodec]</icon>
+					<onclick>SetProperty(colordialog,iso_case,1124)</onclick>
+                    <onclick>ActivateWindow(1138)</onclick>
+					<visible>IsEmpty(Window(Home).Property(ExtentionOpt))</visible>
+				  </item>
 				</content>
 			</control>
 		</control>

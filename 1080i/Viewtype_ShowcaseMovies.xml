@@ -840,6 +840,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-7Var]</texture>
+            <colordiffuse>$VAR[ColorCase-7Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -899,6 +900,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-6Var]</texture>
+            <colordiffuse>$VAR[ColorCase-6Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -958,6 +960,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-5Var]</texture>
+            <colordiffuse>$VAR[ColorCase-5Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -1017,6 +1020,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-4Var]</texture>
+            <colordiffuse>$VAR[ColorCase-4Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -1076,6 +1080,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-3Var]</texture>
+            <colordiffuse>$VAR[ColorCase-3Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -1135,6 +1140,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-2Var]</texture>
+            <colordiffuse>$VAR[ColorCase-2Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -1194,6 +1200,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-1Var]</texture>
+            <colordiffuse>$VAR[ColorCase-1Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -1253,6 +1260,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase0Var]</texture>
+            <colordiffuse>$VAR[ColorCase0Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->
@@ -1312,6 +1320,7 @@
         <control type="image">
             <include>MovieShowcaseDVDCoverVars</include>
             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase1Var]</texture>
+            <colordiffuse>$VAR[ColorCase1Var]</colordiffuse>
             <!-- MikeBZH44 start : No case for movieset -->
             <visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://1/7/)]</visible>
             <!-- MikeBZH44 end -->

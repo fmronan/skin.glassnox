@@ -999,6 +999,8 @@
     </variable>
     <variable name="WatchedIconVar">
         <value condition="Container.Content(movies) + ListItem.IsFolder + !Stringcompare(ListItem.Label,..)">common/set.png</value>
+        <value condition="!Container.Content(songs) + [!IsEmpty(ListItem.Property(Album_Description)) | !IsEmpty(ListItem.Property(Artist_Description))]">common/INFO.png</value>
+        <value condition="Container.Content(songs)">$INFO[ListItem.DiscNumber,flags/discnumber/,.png]</value>
         <value condition="Container.ListItem.IsResumable">dialogs/circle/$INFO[ListItem.PercentPlayed].png</value>
         <value condition="!Stringcompare(ListItem.Label,..) + !StringCompare(ListItem.Overlay,OverlayWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem.Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem.Label)]] | [Container.Content(tvshows) + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem.TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem.TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem.Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem.Title)]]]">common/new.png</value>
         <value condition="!StringCompare(ListItem.Overlay,OverlayWatched.png) + !IsEmpty(ListItem.Top250)">common/imdb.png</value>
@@ -1650,162 +1652,173 @@
         <value>$LOCALIZE[106]</value>
     </variable>
     <variable name="ShowcaseCase-7Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-7).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-7).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-7).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-7).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-7).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-7).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-7).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase-6Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-6).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-6).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-6).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-6).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-6).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-6).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-6).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase-5Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-5).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-5).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-5).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-5).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-5).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-5).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-5).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase-4Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-4).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-4).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-4).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-4).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-4).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-4).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-4).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase-3Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-3).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-3).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-3).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-3).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-3).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-3).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-3).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase-2Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-2).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-2).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-2).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-2).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-2).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-2).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-2).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase-1Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(-1).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(-1).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(-1).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(-1).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(-1).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(-1).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(-1).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase0Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(0).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(0).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(0).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(0).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(0).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(0).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem.VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase1Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(1).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(1).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(1).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(1).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(1).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(1).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(1).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase2Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(2).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(2).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(2).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(2).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(2).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(2).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(2).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase3Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(3).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(3).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(3).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(3).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(3).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(3).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(3).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase4Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(4).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(4).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(4).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(4).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(4).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(4).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(4).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase5Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(5).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(5).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(5).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(5).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(5).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(5).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(5).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase6Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(6).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(6).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(6).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(6).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(6).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(6).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(6).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase7Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(7).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(7).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(7).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(7).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(7).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(7).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(7).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase8Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(8).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(8).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(8).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(8).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(8).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(8).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(8).VideoResolution]p.png</value>
     </variable>
     <variable name="ShowcaseCase9Var">
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(501)">whitecase.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.3D.)">3d.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.dvd.)">576p.png</value>
-        <value condition="!IsEmpty(Container(501).ListItem(9).FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Container(501).ListItem(9).FileExtension].png</value>
         <value>$INFO[Container(501).ListItem(9).VideoResolution]p.png</value>
     </variable>
     <variable name="GlobalLogoVar">
-		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Skin.String(TVserie_codeccase)]</value>-->
+		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Skin.String(TVserie_codeccase)]</value>
+		<value condition="SubString(ListItem.Filename,.hddvd.)">$INFO[Skin.String(hddvd_codeccase)]</value>
         <value condition="SubString(ListItem.Filename,.3D.)">$INFO[Skin.String(3d_codeccase)]</value>
         <value condition="SubString(ListItem.Filename,.bluray.)">$INFO[Skin.String(bluray_codeccase)]</value>
         <value condition="SubString(ListItem.Filename,.dvd.)">$INFO[Skin.String(dvd_codeccase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,480)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(480_codeccase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,540)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(540_codeccase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,576)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(576_codeccase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,720)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(720_codeccase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,1080)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(1080_codeccase)]</value>
-		<!--<value condition="!IsEmpty(ListItem.FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String($INFO[ListItem.FileExtension]_colorcase)]</value>-->
+        <value condition="SubString(ListItem.VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_codeccase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_codeccase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_codeccase)]</value>
         <value>$INFO[Skin.String(default_codeccase)]</value>
     </variable>
     <variable name="GlobalCaseVar">
 		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
-		<value condition="Skin.HasSetting(UseCustomCases)">whitecase.png</value>
+		<value condition="Skin.HasSetting(UseCustomCases)+Control.IsVisible(511)">whitecase.png</value>
         <value condition="SubString(ListItem.Filename,.3D.)">3d.png</value>
         <value condition="SubString(ListItem.Filename,.hdtv.)">hdtv.png</value>
         <value condition="SubString(ListItem.Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(ListItem.Filename,.dvd.)">576p.png</value>
-		<value condition="!IsEmpty(ListItem.FileExtension)+Skin.HasSetting(DvdResolutionCase)">$INFO[ListItem.FileExtension].png</value>
         <value>$INFO[ListItem.VideoResolution]p.png</value>
     </variable>
     <variable name="BackCaseVar">
@@ -1821,22 +1834,260 @@
 		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
 		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
         <value condition="SubString(ListItem.Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(ListItem.Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
         <value condition="SubString(ListItem.Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
         <value condition="SubString(ListItem.Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,480)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(480_colorcase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,540)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(540_colorcase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,576)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(576_colorcase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,720)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(720_colorcase)]</value>
-        <value condition="SubString(ListItem.VideoResolution,1080)+!Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(1080_colorcase)]</value>
-       <!-- <value condition="[SubString(ListItem.filename,PDTV) | SubString(ListItem.filename,sdtv) | SubString(ListItem.filename,sd tv)]">sdtv</value>
-        <value condition="[SubString(ListItem.Filename,hdtv) | SubString(ListItem.Filename,hd tv)]">hdtv</value>
-        <value condition="[SubString(ListItem.Filename,hddvd) | SubString(ListItem.Filename,hd-dvd)]">hddvd</value>
-        <value condition="[SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)] + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,3DBD)]">bluray3d</value>
-        <value condition="[SubString(ListItem.Filename,bluray) | SubString(ListItem.Filename,blu-ray) | SubString(ListItem.Filename,bdrip) | SubString(ListItem.Filename,brrip)]">bluray</value>
-        <value condition="SubString(ListItem.Filename,dvb)">dvb</value>
-        <value condition="SubString(ListItem.Filename,web-dl)">web-dl</value>
-        <value condition="SubString(ListItem.Filename,dvd) | StringCompare(ListItem.FileExtension,iso) | StringCompare(ListItem.FileExtension,ifo)">dvd</value>-->
-		<value condition="StringCompare(ListItem.FileExtension,mkv)+Skin.HasSetting(DvdResolutionCase)">$INFO[Skin.String(mkv_colorcase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-7Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-7).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-7).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-7).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-7).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-7).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-7).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-6Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-6).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-6).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-6).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-6).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-6).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-6).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-5Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-5).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-5).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-5).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-5).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-5).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-5).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-4Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-4).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-4).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-4).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-4).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-4).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-4).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-3Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-3).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-3).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-3).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-3).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-3).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-3).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-2Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-2).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-2).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-2).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-2).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-2).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-2).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase-1Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(-1).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(-1).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-1).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-1).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(-1).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(-1).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase0Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(0).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(0).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(0).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(0).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(0).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(0).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
+        <value>$INFO[Skin.String(default_colorcase)]</value>
+    </variable>
+    <variable name="ColorCase1Var">
+		<!--<value condition="Container.Content(tvshows) | Container.Content(seasons)">TVseries.png</value>-->
+		<value condition="!Skin.HasSetting(UseCustomCases)">FFFFFFFF</value>
+        <value condition="SubString(Container(501).ListItem(1).Filename,.3D.)">$INFO[Skin.String(3d_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).Filename,.hddvd.)">$INFO[Skin.String(hddvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).Filename,.bluray.)">$INFO[Skin.String(bluray_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).Filename,.dvd.)">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720_colorcase)]</value>
+        <value condition="SubString(Container(501).ListItem(1).VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(1).FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvd_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(1).FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dv_colorcase)]</value>
+        <value condition="StringCompare(Container(501).ListItem(1).FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mov_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(avi_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpeg_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QT_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(iso_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmv_colorcase)]</value>
+		<value condition="StringCompare(Container(501).ListItem(1).FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvid_colorcase)]</value>
         <value>$INFO[Skin.String(default_colorcase)]</value>
     </variable>
     <variable name="MusicShowcaseItem-6Var">
@@ -1939,6 +2190,7 @@
         <value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</value>
     </variable>
     <variable name="ListImage2Var">
+        <value condition="Container.Content(albums) | Container.Content(songs) + IsEmpty(ListItem.Starrating) + !Stringcompare(Listitem.Label,..)">stars/0.0.png</value>
         <value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.StarRating]</value>
         <value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)">$INFO[ListItem.Rating,stars/,.png]</value>
     </variable>
@@ -3320,6 +3572,14 @@
 		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(Clearxvid_colorcase)]</value>
 		<value>$INFO[Skin.String(xvid_colorcase)]</value>
     </variable>
+    <variable name="aviCustomColor">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(Clearavi_colorcase)]</value>
+		<value>$INFO[Skin.String(avi_colorcase)]</value>
+    </variable>
+    <variable name="isoCustomColor">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(Cleariso_colorcase)]</value>
+		<value>$INFO[Skin.String(iso_colorcase)]</value>
+    </variable>
     <variable name="value_defaultcodec">
 		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(defaultClear_codeccase)]</value>
 		<value>$INFO[Skin.String(default_codeccase)]</value>
@@ -3352,9 +3612,61 @@
 		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(3dClear_codeccase)]</value>
 		<value>$INFO[Skin.String(3d_codeccase)]</value>
     </variable>
+    <variable name="value_dvcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(dvClear_codeccase)]</value>
+		<value>$INFO[Skin.String(dv_codeccase)]</value>
+    </variable>
     <variable name="value_dvdcodec">
 		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(dvdClear_codeccase)]</value>
 		<value>$INFO[Skin.String(dvd_codeccase)]</value>
+    </variable>
+    <variable name="value_h264codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(h264Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(h264_codeccase)]</value>
+    </variable>
+    <variable name="value_hddvdcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(hddvdClear_codeccase)]</value>
+		<value>$INFO[Skin.String(hddvd_codeccase)]</value>
+    </variable>
+    <variable name="value_mkvcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(mkvClear_codeccase)]</value>
+		<value>$INFO[Skin.String(mkv_codeccase)]</value>
+    </variable>
+    <variable name="value_movcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(movClear_codeccase)]</value>
+		<value>$INFO[Skin.String(mov_codeccase)]</value>
+    </variable>
+    <variable name="value_mp4codec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(mp4Clear_codeccase)]</value>
+		<value>$INFO[Skin.String(mp4_codeccase)]</value>
+    </variable>
+    <variable name="value_mpegcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(mpegClear_codeccase)]</value>
+		<value>$INFO[Skin.String(mpeg_codeccase)]</value>
+    </variable>
+    <variable name="value_Qtcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(QtClear_codeccase)]</value>
+		<value>$INFO[Skin.String(Qt_codeccase)]</value>
+    </variable>
+    <variable name="value_TVseriescodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(TVseriesClear_codeccase)]</value>
+		<value>$INFO[Skin.String(TVseries_codeccase)]</value>
+    </variable>
+    <variable name="value_MusicVideocodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(MusicVideoClear_codeccase)]</value>
+		<value>$INFO[Skin.String(MusicVideo_codeccase)]</value>
+    </variable>
+    <variable name="value_wmvcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(wmvClear_codeccase)]</value>
+		<value>$INFO[Skin.String(wmv_codeccase)]</value>
+    </variable>
+    <variable name="value_mkvcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(mkvClear_codeccase)]</value>
+		<value>$INFO[Skin.String(mkv_codeccase)]</value>
+    </variable>
+    <variable name="value_xvidcodec">
+		<value condition="Skin.HasSetting(ClearBdOption)">$INFO[Skin.String(xvidClear_codeccase)]</value>
+		<value>$INFO[Skin.String(xvid_codeccase)]</value>
     </variable>
     <variable name="showcasemovieslogo">
 		<value condition="Skin.HasSetting(ShowcaseMoviesclearart)+Skin.HasSetting(movielogosfloor)">$INFO[ListItem.Art(clearart)]</value>

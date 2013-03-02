@@ -75,7 +75,7 @@
                     <focusedcolor>white3</focusedcolor>
                     <align>center</align>
                     <textoffsetx>15</textoffsetx>
-                    <onclick>Skin.ToggleSetting(DvdResolutionCase)</onclick> 
+                    <onclick>Skin.SetString(DvdResolutionCase,true)</onclick> 
                     <onclick>Dialog.Close(1170)</onclick>
                 </control>
             </control>

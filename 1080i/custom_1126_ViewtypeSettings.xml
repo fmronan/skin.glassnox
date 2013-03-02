@@ -333,21 +333,6 @@
                     <selected>Skin.HasSetting(addonwallaltbackground)</selected>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),AddonWall)</visible>
                 </control>
-                <!--Posters Options-->
-                <control type="radiobutton" id="1648">
-                    <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>$LOCALIZE[31694]:</label>
-                    <onclick>Skin.ToggleSetting(posterwrap)</onclick>
-                    <selected>!Skin.HasSetting(posterwrap)</selected>
-                    <visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),posters)</visible>
-                </control>
-                <control type="radiobutton" id="16443">
-                    <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42311</label>
-                    <onclick>Skin.ToggleSetting(posterviewinfopane)</onclick>
-                    <selected>Skin.HasSetting(posterviewinfopane)</selected>
-                    <visible>Stringcompare(Window(home).Property(actualViewtype),posters)</visible>
-                </control>
                 <!--Floor Label Options-->
                 <control type="button" id="1649">
                     <include>Objects_MediaMenuButtonAlt2</include>
@@ -773,11 +758,13 @@
 					<onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
 					<onclick condition="Skin.HasSetting(UseCustomCases)">ActivateWindow(1170)</onclick>
 					<selected>Skin.HasSetting(UseCustomCases)</selected>
+					<visible>Container.Content(movies)+Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
 				</control>
 				<control type="button" id="290">
 					<label>Boitier</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>ActivateWindow(1167)</onclick>
+					<visible>Container.Content(movies)+Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
 				</control>
             </control>
         </control>

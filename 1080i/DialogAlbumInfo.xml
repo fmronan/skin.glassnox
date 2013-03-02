@@ -203,7 +203,7 @@
                     <visible>Container.Content(albums)</visible>
                     <control type="label">
                         <posx>500</posx>
-                        <posy>-210</posy>
+                        <posy>-190</posy>
                         <width>1405</width>
                         <height>38</height>
                         <scroll>true</scroll>
@@ -214,11 +214,11 @@
                     </control>
                     <control type="label">
                         <posx>500</posx>
-                        <posy>-270</posy>
+                        <posy>-250</posy>
                         <width>1405</width>
                         <height>38</height>
                         <scroll>true</scroll>
-                        <font>Font_Reg38</font>
+                        <font>Font_MainClassic2</font>
                         <visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                         <label>$INFO[ListItem.Artist]</label>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>

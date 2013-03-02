@@ -56,8 +56,8 @@
                 <width>375</width>
                 <height>90</height>
                 <align>center</align>
-                <font>Font_Reg15_Caps</font>
                 <label>$INFO[ListItem.Episode,$LOCALIZE[20359] ]</label>
+                <font>Font_Reg15_Caps</font>
             </control>
         </control>
         <control type="image">
@@ -99,12 +99,12 @@
         </itemlayout>
         <focusedlayout width="600" height="450" condition="![[Skin.HasSetting(landscapeclearart) | Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)]] | [Container.Content(artists) + !Skin.HasSetting(landscapeonelogo)]">
             <control type="group">
+                <posx>57</posx>
                 <animation effect="zoom" center="auto" start="100" end="122" time="240" tween="quadratic" reversible="false">Focus</animation>
                 <animation type="UnFocus" condition="Control.HasFocus(503)">
                     <effect type="slide" end="-57" time="0" tween="quadratic" />
                     <effect type="zoom" center="auto" start="122" end="100" time="240" tween="quadratic" />
                 </animation>
-                <posx>57</posx>
                 <include>LandscapeThumbs</include>
             </control>
         </focusedlayout>
@@ -154,48 +154,66 @@
                     <posy>810</posy>
                     <width>635</width>
                     <height>245</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true" fallback="empty.png">$VAR[TVShowLogoVar]</texture>
                     <fadetime>200</fadetime>
                     <include>Animation_OpenCloseZoom_New</include>
-                    <texture background="true" fallback="empty.png">$VAR[TVShowLogoVar]</texture>
-                    <aspectratio>keep</aspectratio>
                     <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                     <animation effect="fade" delay="160" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8822),empty.png)">Conditional</animation>
                     <visible>Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)]</visible>
                     <visible>![Container.OnNext | Container.OnPrevious]</visible>
                 </control>
                 <control type="label">
-                    <animation effect="slide" end="0,-20" time="240" condition="Control.IsVisible(4050) | Control.HasFocus(61)">Conditional</animation>
                     <posx>510</posx>
                     <posy>1040</posy>
                     <width>900</width>
                     <align>center</align>
-                    <include>Animation_VisibleChange200</include>
+                    <label>$INFO[ListItem.Label]</label>
                     <font>Font_ShowcaseMainLabel2_Caps</font>
+                    <shadowcolor>floorshadow</shadowcolor>
+                    <textcolor>floor</textcolor>
+                    <animation effect="slide" end="0,-20" time="240" condition="Control.IsVisible(4050) | Control.HasFocus(61)">Conditional</animation>
+                    <include>Animation_VisibleChange200</include>
                     <scroll>true</scroll>
                     <scrollspeed>30</scrollspeed>
-                    <textcolor>floor</textcolor>
-                    <shadowcolor>floorshadow</shadowcolor>
-                    <label>$INFO[ListItem.Label]</label>
                     <visible>![[Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)]]</visible>
                     <visible>!Container.Content(episodes)</visible>
                 </control>
                 <control type="label">
-                    <animation effect="slide" end="0,-20" time="240" condition="Control.IsVisible(4050) | Control.HasFocus(61)">Conditional</animation>
                     <posx>510</posx>
                     <posy>1040</posy>
                     <width>900</width>
                     <align>center</align>
-                    <include>Animation_VisibleChange200</include>
+                    <label>$INFO[ListItem.Title]</label>
                     <font>Font_ShowcaseMainLabel2_Caps</font>
+                    <shadowcolor>floorshadow</shadowcolor>
+                    <textcolor>floor</textcolor>
+                    <animation effect="slide" end="0,-20" time="240" condition="Control.IsVisible(4050) | Control.HasFocus(61)">Conditional</animation>
+                    <include>Animation_VisibleChange200</include>
                     <scroll>true</scroll>
                     <scrollspeed>30</scrollspeed>
-                    <textcolor>floor</textcolor>
-                    <shadowcolor>floorshadow</shadowcolor>
-                    <label>$INFO[ListItem.Title]</label>
                     <visible>Container.Content(episodes)</visible>
                     <visible>![[Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + [Container.Content(tvshows) | Container.Content(movies)]]</visible>
                 </control>
-                <control type="image">
+                <control type="label">
+                    <posx>510</posx>
+                    <posy>1030</posy>
+                    <width>900</width>
+                    <align>center</align>
+                    <label>$VAR[LandscapeLogoLabelVar]</label>
+                    <font>Font_Bold20</font>
+                    <shadowcolor>black</shadowcolor>
+                    <include>Animation_VisibleChange200</include>
+                    <scroll>true</scroll>
+                    <scrollspeed>30</scrollspeed>
+                    <visible>Skin.HasSetting(landscapelogo) + [Container.Content(tvshows) | Container.Content(movies)] + !Control.HasFocus(61)</visible>
+                </control>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Control.IsVisible(503)</visible>
+            <animation effect="slide" tween="cubic" easing="inout" time="400" start="0,-200" end="0,0">VisibleChange</animation>
+                        <control type="image">
                     <posy>-130</posy>
                     <width>1920</width>
                     <height>220</height>
@@ -206,77 +224,28 @@
                     <include>Animation_VisibleChange200</include>
                 </control>
                 <control type="label">
-                    <posx>510</posx>
-                    <posy>1030</posy>
-                    <width>900</width>
-                    <align>center</align>
-                    <include>Animation_VisibleChange200</include>
-                    <font>Font_Bold20</font>
-                    <scroll>true</scroll>
-                    <scrollspeed>30</scrollspeed>
-                    <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
-                    <label>$VAR[LandscapeLogoLabelVar]</label>
-                    <visible>Skin.HasSetting(landscapelogo) + [Container.Content(tvshows) | Container.Content(movies)]  + !Control.HasFocus(61)</visible>
-                </control>
-                <control type="label">
                     <width>1920</width>
-                    <aligny>bottom</aligny>
                     <align>center</align>
+                    <aligny>bottom</aligny>
+                    <label>$VAR[LandscapeLogoLabelVar]</label>
+                    <font>Font_Bold19</font>
+                    <shadowcolor>black</shadowcolor>
                     <include>Animation_VisibleChange200</include>
                     <scroll>true</scroll>
                     <scrollspeed>30</scrollspeed>
-                    <font>Font_Bold19</font>
-                    <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
-                    <label>$VAR[LandscapeLogoLabelVar]</label>
-                    <visible>Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]  + !Control.HasFocus(61)</visible>
+                    <visible>Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)] + !Control.HasFocus(61)</visible>
                 </control>
-                <!-- BEGIN Next Aired -->
-    <control type="group">
-		<posy>20</posy>
-           <visible>!IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
-            <control type="image">
-                   <posx>580</posx>
-                   <posy>-30</posy>
-                   <width>750</width>
-                   <height>200</height>
-                    <aspectratio scalediffuse="false">stretch</aspectratio>
-                    <texture>Overlaynextaired.png</texture>
-            </control>
-               <control type="label">
-                   <posx>550</posx>
-                   <posy>20</posy>
-                   <width>800</width>
-                   <height>20</height>
-                   <aligny>center</aligny>
-                   <align>center</align>
-                   <label>$INFO[Window(Home).Property(NextAired.NextTitle)]</label>
-                   <font>Font_Bold19</font>
-                   <shadowcolor>black</shadowcolor>
-            </control>
-          <control type="label">
-                   <posx>550</posx>
-                   <posy>60</posy>
-                   <width>800</width>
-                   <height>20</height>
-                   <aligny>center</aligny>
-                   <align>center</align>
-                   <label>$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-                   <font>Font_Bold19</font>
-                   <shadowcolor>black</shadowcolor>
-               </control>
-    </control>
-<!-- END Next Aired -->
                 <control type="image">
                     <posx>200r</posx>
                     <posy>0</posy>
                     <width>200</width>
                     <height>200</height>
+                    <texture>$INFO[ListItem.Overlay,thumbs/]</texture>
                     <visible>[Skin.HasSetting(landscapeclearart) | Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]</visible>
                     <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(0).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(0).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(0).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(0).Title)]]]]</visible>
                     <include>Animation_VisibleChange200</include>
-                    <texture>$INFO[ListItem.Overlay,thumbs/]</texture>
                 </control>
-            </control>
+        
         </control>
     </include>
     <include name="LandscapeLogoLayout">
@@ -304,22 +273,22 @@
                 <posy>330</posy>
                 <width>470</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
-                <textcolor>white2</textcolor>
-                <shadowcolor>floorshadow</shadowcolor>
                 <label>$VAR[SecondLabelVar]</label>
+                <font>Font_Info_Caps</font>
+                <shadowcolor>floorshadow</shadowcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
             </control>
             <control type="label">
                 <posx>248</posx>
                 <posy>296</posy>
                 <width>470</width>
                 <align>center</align>
+                <label>$VAR[FirstLabelVar]</label>
                 <font>Font_MainClassic4</font>
+                <shadowcolor>floorshadow</shadowcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                 <scroll>true</scroll>
                 <scrollspeed>30</scrollspeed>
-                <textcolor>white2</textcolor>
-                <shadowcolor>floorshadow</shadowcolor>
-                <label>$VAR[FirstLabelVar]</label>
             </control>
         </control>
     </include>
@@ -348,22 +317,22 @@
                 <posy>330</posy>
                 <width>470</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
-                <textcolor>white2</textcolor>
-                <shadowcolor>floorshadow</shadowcolor>
                 <label>$VAR[SecondLabelVar]</label>
+                <font>Font_Info_Caps</font>
+                <shadowcolor>floorshadow</shadowcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
             </control>
             <control type="label">
                 <posx>248</posx>
                 <posy>296</posy>
                 <width>470</width>
                 <align>center</align>
+                <label>$VAR[FirstLabelVar]</label>
                 <font>Font_MainClassic4</font>
+                <shadowcolor>floorshadow</shadowcolor>
+                <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                 <scroll>true</scroll>
                 <scrollspeed>30</scrollspeed>
-                <textcolor>white2</textcolor>
-                <shadowcolor>floorshadow</shadowcolor>
-                <label>$VAR[FirstLabelVar]</label>
             </control>
         </control>
     </include>

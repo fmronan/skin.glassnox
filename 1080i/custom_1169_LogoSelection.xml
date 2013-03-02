@@ -268,6 +268,12 @@
                         <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/hdtv.png)</onclick>
                     </item>
                     <item>
+                        <label>hdtv2</label>
+                        <thumb>special://skin/extras/iconscases/BD/hdtv2.png</thumb>
+                        <onclick>Dialog.Close(1169)</onclick>
+                        <onclick>Skin.SetString($INFO[Window(1124).Property(IconTarget)],special://skin/extras/iconscases/BD/hdtv2.png)</onclick>
+                    </item>
+                    <item>
                         <label>microsoft</label>
                         <thumb>special://skin/extras/iconscases/BD/microsoft.png</thumb>
                         <onclick>Dialog.Close(1169)</onclick>
