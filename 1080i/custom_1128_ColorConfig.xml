@@ -86,13 +86,95 @@
                     <onclick>Skin.ToggleSetting(colordialogs)</onclick>
                     <selected>Skin.HasSetting(colordialogs)</selected>
                 </control>
-
-                <control type="button" id="14">
+				<control type="button" id="14">
+                    <include>ColorChooserButton</include>
+                    <label>Reset Color</label>
+					<onclick>Skin.SetString(panel_white_programs,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_music,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_videolibrary,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_PVR,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_pictures,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_featured,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_addons,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_musicplaylist,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_videoplaylist,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_mainmenu,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_weather,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_color,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(panel_white_settings,FF03F2FF)</onclick>
+					<onclick>Skin.SetString(diffuse_white_programs,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_music,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_videolibrary,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_PVR,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_pictures,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_featured,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_addons,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_musicplaylist,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_videoplaylist,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_mainmenu,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_weather,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_color,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(diffuse_white_settings,FFA4F4F9)</onclick>
+					<onclick>Skin.SetString(font_white_programs,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_music,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_videolibrary,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_PVR,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_pictures,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_featured,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_addons,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_musicplaylist,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_videoplaylist,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_mainmenu,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_weather,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_color,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_white_settings,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(panel_programs,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_music,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_videolibrary,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_PVR,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_pictures,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_featured,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_addons,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_musicplaylist,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_videoplaylist,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_mainmenu,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_weather,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_color,7d000000)</onclick>
+					<onclick>Skin.SetString(panel_settings,7d000000)</onclick>
+					<onclick>Skin.SetString(diffuse_programs,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_music,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_videolibrary,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_PVR,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_pictures,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_featured,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_addons,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_musicplaylist,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_videoplaylist,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_mainmenu,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_weather,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_color,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(diffuse_settings,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_color,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_videolibrary,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_music,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_programs,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_pictures,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_mainmenu,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_addons,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_musicplaylist,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_videoplaylist,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_weather,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_featured,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_settings,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(font_PVR,FF6db9e5)</onclick>
+					<onclick>Skin.SetString(BackgroundDarkness,80FFFFFF)</onclick>
+				</control>
+               <!-- <control type="button" id="14">
                     <include>ColorChooserButton</include>
                     <label>More $LOCALIZE[31192]</label>
                     <onclick>SetProperty(colordialog,font_color,1124)</onclick>
                     <onclick>ActivateWindow(1168)</onclick>
-				</control>
+				</control>-->
                 <control type="button" id="15">
                     <include>ColorChooserButton</include>
                     <label>$LOCALIZE[31178]</label>
