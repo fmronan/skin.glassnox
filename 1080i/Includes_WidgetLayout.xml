@@ -1657,27 +1657,75 @@
                     <visible>Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
                 </control>
                 <control type="image">
+					<posx>6</posx>
+					<posy>62</posy>
+					<width>245</width>
+					<height>245</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+                <control type="image">
 					<posx>9</posx>
 					<posy>65</posy>
 					<width>238</width>
 					<height>238</height>
 					<aspectratio>keep</aspectratio>
-					<animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="false" reversible="false" tween="cubic" easing="inout" condition="!IsEmpty(Container(8000).ListItem.Property(Discart))">Conditional</animation>
 					<texture background="true">$INFO[Container(8000).ListItem.Property(Discart)]</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Discart))</visible>
 					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
 				</control>
-                <control type="image">
-                    <posx>-13</posx>
-                    <posy>-18.5</posy>
-                    <width>286</width>
-                    <height>425</height>
-                    <texture>thumbs/thumb_glass_shadow.png</texture>
-                    <include>PanelGlowFade</include>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                    <include>widgetOpenCaseCoverflow</include>
-                </control>
+				<control type="image">
+					<posx>9</posx>
+					<posy>65</posy>
+					<width>238</width>
+					<height>238</height>
+					<texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>69</posx>
+					<posy>57</posy>
+					<width>102.8</width>
+					<height>102.8</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(8000).ListItem.Property(Logo)]</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(Logo)) + IsEmpty(Container(8000).ListItem.Property(clearart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>69</posx>
+					<posy>57</posy>
+					<width>102.8</width>
+					<height>102.8</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(8000).ListItem.Property(clearart)]</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(clearart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>17.5</posx>
+					<posy>181.5</posy>
+					<width>64.2</width>
+					<height>64.2</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(8000).ListItem.Property(Studio),flags/studios/,.png]</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(Studio))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>103.2</posx>
+					<posy>267.2</posy>
+					<width>51.4</width>
+					<height>20.5</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="rating0.png">$INFO[Container(8000).ListItem.Property(Rating),stars/,.png]</texture>
+					<texture>$INFO[Container(8000).ListItem.Property(Studio),flags/studios/,.png]</texture>
+					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(Studio))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
                 <control type="image">
                     <width>260</width>
                     <height>390</height>
@@ -2867,8 +2915,8 @@
                     <control type="image">
                         <posx>1455</posx>
                         <posy>-70</posy>
-                        <width>300</width>
-                        <height>300</height>
+                        <width>280</width>
+                        <height>280</height>
                         <aspectratio>keep</aspectratio>
                         <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
                             <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
@@ -2876,6 +2924,81 @@
                         </animation>
                         <texture background="true">$INFO[Container(5010).ListItem.Property(Discart)]</texture>
                         <visible>!IsEmpty(Container(5010).ListItem.Property(Discart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1452</posx>
+                        <posy>-73</posy>
+                        <width>286</width>
+                        <height>286</height>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1455</posx>
+                        <posy>-70</posy>
+                        <width>280</width>
+                        <height>280</height>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(5010).ListItem.Property(Fanart)]</texture>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1525</posx>
+                        <posy>-79</posy>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true">$INFO[Container(5010).ListItem.Property(Logo)]</texture>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Logo)) +  IsEmpty(Container(5010).ListItem.Property(Clearart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1525</posx>
+                        <posy>-79</posy>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true">$INFO[Container(5010).ListItem.Property(Clearart)]</texture>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) +  !IsEmpty(Container(5010).ListItem.Property(Clearart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1465</posx>
+                        <posy>66</posy>
+                        <width>75</width>
+                        <height>75</height>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture>$INFO[Container(5010).ListItem.Property(Studio),flags/studios/,.png]</texture>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Studio))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1565</posx>
+                        <posy>166</posy>
+                        <width>60</width>
+                        <height>24</height>
+                        <colordiffuse>white</colordiffuse>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture>$INFO[Container(5010).ListItem.Property(Rating),stars/,.png]</texture>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Rating))</visible>
                     </control>
                     <control type="image">
                         <posx>1355</posx>
@@ -3060,7 +3183,7 @@
                             <pagecontrol>5019</pagecontrol>
                             <label>$INFO[Container(5010).ListItem.Property(Plot)]</label>
                             <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                            <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !Substring(Control.GetLabel(4321),tv)</visible>
+                            <visible>IsEmpty(Container(5010).ListItem.Property(Discart))+IsEmpty(Container(5010).ListItem.Property(Fanart)) + !Substring(Control.GetLabel(4321),tv)</visible>
                         </control>
                         <control type="textbox" id="5060">
                             <posx>482</posx>
@@ -3073,7 +3196,7 @@
                             <textcolor>white6</textcolor>
                             <label>$INFO[Container(5010).ListItem.Property(Plot)]</label>
                             <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                            <visible>!IsEmpty(Container(5010).ListItem.Property(Discart))</visible>
+                            <visible>!IsEmpty(Container(5010).ListItem.Property(Discart))|!IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
                         </control>
                         <control type="textbox" id="5060">
                             <posx>482</posx>
@@ -3529,26 +3652,75 @@
                     <visible>Stringcompare(Skin.String(LiveBGWidget2Case),tvshows) | Stringcompare(Skin.String(LiveBGWidget2Case),movies)</visible>
                 </control>
                 <control type="image">
+					<posx>6</posx>
+					<posy>62</posy>
+					<width>245</width>
+					<height>245</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+                <control type="image">
 					<posx>9</posx>
 					<posy>65</posy>
 					<width>238</width>
 					<height>238</height>
 					<aspectratio>keep</aspectratio>
-					<animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="false" reversible="false" tween="cubic" easing="inout" condition="!IsEmpty(Container(7000).ListItem.Property(Discart))">Conditional</animation>
 					<texture background="true">$INFO[Container(7000).ListItem.Property(Discart)]</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidget2Case),tvshows) | Stringcompare(Skin.String(LiveBGWidget2Case),movies)]</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
 				</control>
-                <control type="image">
-                    <posx>-13</posx>
-                    <posy>-18.5</posy>
-                    <width>286</width>
-                    <height>425</height>
-                    <texture>thumbs/thumb_glass_shadow.png</texture>
-                    <include>PanelGlowFade</include>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-                </control>
+				<control type="image">
+					<posx>9</posx>
+					<posy>65</posy>
+					<width>238</width>
+					<height>238</height>
+					<texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(7000).ListItem.Property(Fanart)]</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>69</posx>
+					<posy>57</posy>
+					<width>102.8</width>
+					<height>102.8</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(7000).ListItem.Property(Logo)]</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Logo)) + IsEmpty(Container(7000).ListItem.Property(clearart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>69</posx>
+					<posy>57</posy>
+					<width>102.8</width>
+					<height>102.8</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(7000).ListItem.Property(clearart)]</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(clearart))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>17.5</posx>
+					<posy>181.5</posy>
+					<width>64.2</width>
+					<height>64.2</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(7000).ListItem.Property(Studio),flags/studios/,.png]</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Studio))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
+				<control type="image">
+					<posx>103.2</posx>
+					<posy>267.2</posy>
+					<width>51.4</width>
+					<height>20.5</height>
+					<aspectratio>keep</aspectratio>
+					<texture fallback="rating0.png">$INFO[Container(7000).ListItem.Property(Rating),stars/,.png]</texture>
+					<texture>$INFO[Container(7000).ListItem.Property(Studio),flags/studios/,.png]</texture>
+					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Studio))</visible>
+					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+				</control>
                 <control type="image">
                     <width>260</width>
                     <height>390</height>
@@ -4763,6 +4935,81 @@
                         <visible>!IsEmpty(Container(6010).ListItem.Property(Discart))</visible>
                     </control>
                     <control type="image">
+                        <posx>1452</posx>
+                        <posy>-73</posy>
+                        <width>286</width>
+                        <height>286</height>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1455</posx>
+                        <posy>-70</posy>
+                        <width>280</width>
+                        <height>280</height>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(6010).ListItem.Property(Fanart)]</texture>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1525</posx>
+                        <posy>-79</posy>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true">$INFO[Container(6010).ListItem.Property(Logo)]</texture>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Logo)) +  IsEmpty(Container(6010).ListItem.Property(Clearart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1525</posx>
+                        <posy>-79</posy>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture background="true">$INFO[Container(6010).ListItem.Property(Clearart)]</texture>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) +  !IsEmpty(Container(6010).ListItem.Property(Clearart))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1465</posx>
+                        <posy>66</posy>
+                        <width>75</width>
+                        <height>75</height>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture>$INFO[Container(6010).ListItem.Property(Studio),flags/studios/,.png]</texture>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Studio))</visible>
+                    </control>
+                    <control type="image">
+                        <posx>1565</posx>
+                        <posy>166</posy>
+                        <width>60</width>
+                        <height>24</height>
+                        <colordiffuse>white</colordiffuse>
+                        <animation type="Conditional" condition="!IsEmpty(Window(home).Property(PanelWidget2Info))" reversible="false">
+                            <effect type="slide" start="-1400,0" end="0,0" delay="880" time="1600" tween="cubic" />
+                            <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
+                        </animation>
+                        <texture>$INFO[Container(6010).ListItem.Property(Rating),stars/,.png]</texture>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Rating))</visible>
+                    </control>
+                    <control type="image">
                         <posx>1355</posx>
                         <posy>-70</posy>
                         <width>400</width>
@@ -4954,7 +5201,7 @@
                             <pagecontrol>6019</pagecontrol>
                             <label>$INFO[Container(6010).ListItem.Property(Plot)]</label>
                             <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                            <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !Substring(Control.GetLabel(4325),tv)</visible>
+                            <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + IsEmpty(Container(6010).ListItem.Property(Fanart)) + !Substring(Control.GetLabel(4325),tv)</visible>
                         </control>
                         <control type="textbox" id="6060">
                             <posx>482</posx>
@@ -4967,7 +5214,7 @@
                             <textcolor>white6</textcolor>
                             <label>$INFO[Container(6010).ListItem.Property(Plot)]</label>
                             <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                            <visible>!IsEmpty(Container(6010).ListItem.Property(Discart))</visible>
+                            <visible>!IsEmpty(Container(6010).ListItem.Property(Discart)) | !IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
                         </control>
                         <control type="textbox" id="6060">
                             <posx>482</posx>

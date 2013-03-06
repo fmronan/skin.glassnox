@@ -3297,13 +3297,13 @@
         </animation>
     </include>
     <include name="widgetOpenCaseCoverflow">
-        <animation type="conditional" reversible="false" condition="!IsEmpty(Container(8000).ListItem.Property(Discart))+[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]">
+        <animation type="conditional" reversible="false" condition="![Container(8000).OnPrevious|Container(8000).OnNext] + [!IsEmpty(Container(8000).ListItem.Property(Fanart))|!IsEmpty(Container(8000).ListItem.Property(Discart))]+[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]">
             <effect type="rotatey" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
-            <effect type="rotatey" delay="8000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
+           <effect type="rotatey" delay="8000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
         </animation>
     </include>
     <include name="widgetOpenCaseCoverflow2">
-        <animation type="conditional" reversible="false" condition="!IsEmpty(Container(7000).ListItem.Property(Discart))+[Stringcompare(Skin.String(LiveBGWidget2Case),tvshows) | Stringcompare(Skin.String(LiveBGWidget2Case),movies)]">
+        <animation type="conditional" reversible="false" condition="![Container(7000).OnPrevious|Container(7000).OnNext] + [!IsEmpty(Container(7000).ListItem.Property(Fanart))|!IsEmpty(Container(7000).ListItem.Property(Discart))]+[Stringcompare(Skin.String(LiveBGWidget2Case),tvshows) | Stringcompare(Skin.String(LiveBGWidget2Case),movies)]">
             <effect type="rotatey" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
             <effect type="rotatey" delay="8000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
         </animation>
