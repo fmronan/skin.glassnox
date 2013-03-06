@@ -1207,7 +1207,7 @@
                     <aspectratio>keep</aspectratio>
                     <colordiffuse>white2</colordiffuse>
                     <fadetime>IconCrossfadeTime2</fadetime>
-                    <texture fallback="flags/source/defaultsound.png">$INFO[Container(100).ListItem.Property(AudioCodec),flags/info/]$INFO[Container(100).ListItem.Property(AudioChannels),,.png]</texture>
+                    <texture fallback="flags/source/defaultsound.png">$INFO[Container(100).ListItem.Property(AudioCodec),flags/audio/]$INFO[Container(100).ListItem.Property(AudioChannels),,.png]</texture>
                 </control>
             </control>
             <control type="textbox">

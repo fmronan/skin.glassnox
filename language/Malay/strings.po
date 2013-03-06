@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Aeon Nox
 # Addon id: skin.aeon.nox
-# Addon Provider: Big_Noid & phil65
+# Addon Provider: Big_Noid|phil65
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
@@ -19,6 +19,10 @@ msgstr ""
 msgctxt "#31501"
 msgid "Music"
 msgstr "Musik"
+
+msgctxt "#31505"
+msgid "Programs"
+msgstr "Program"
 
 msgctxt "#31510"
 msgid "Weather"

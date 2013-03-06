@@ -46,6 +46,7 @@
 	<include file="View_Custom1008.xml" />
 	<include file="View_Custom1009.xml" />
 	<include file="View_Custom1010.xml" />
+	<include file="ReplaceFiles.xml" />
 	<constant name="AutoScrollTime">2000</constant>
     <include name="VideoBackground">
         <control type="group">
@@ -833,39 +834,39 @@
         <onload>Skin.SetString(font_white_color,FF6db9e5)</onload>
         <onload>Skin.SetString(font_white_settings,FF6db9e5)</onload>
 		<onload>Skin.SetBool(glasshome)</onload>
-		<onload>Skin.SetString(panel_programs,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_music,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_videolibrary,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_PVR,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_pictures,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_featured,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_addons,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_musicplaylist,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_videoplaylist,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_mainmenu,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_weather,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_color,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_settings,FF03F2FF)</onload>
+		<onload>Skin.SetString(panel_programs,7d000000)</onload>
+        <onload>Skin.SetString(panel_music,7d000000)</onload>
+        <onload>Skin.SetString(panel_videolibrary,7d000000)</onload>
+        <onload>Skin.SetString(panel_PVR,7d000000)</onload>
+        <onload>Skin.SetString(panel_pictures,7d000000)</onload>
+        <onload>Skin.SetString(panel_featured,7d000000)</onload>
+        <onload>Skin.SetString(panel_addons,7d000000)</onload>
+        <onload>Skin.SetString(panel_musicplaylist,7d000000)</onload>
+        <onload>Skin.SetString(panel_videoplaylist,7d000000)</onload>
+        <onload>Skin.SetString(panel_mainmenu,7d000000)</onload>
+        <onload>Skin.SetString(panel_weather,7d000000)</onload>
+        <onload>Skin.SetString(panel_color,7d000000)</onload>
+        <onload>Skin.SetString(panel_settings,7d000000)</onload>
 		<onload>Skin.SetBool(colorpanels)</onload>
-        <onload>Skin.SetString(diffuse_programs,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_music,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_videolibrary,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_PVR,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_pictures,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_featured,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_addons,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_musicplaylist,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_videoplaylist,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_mainmenu,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_weather,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_color,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_settings,FFA4F4F9)</onload>
-        <onload>Skin.SetString(font_color,FFA4F4F9)</onload>
+        <onload>Skin.SetString(diffuse_programs,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_music,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_videolibrary,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_PVR,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_pictures,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_featured,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_addons,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_musicplaylist,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_videoplaylist,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_mainmenu,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_weather,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_color,FF6db9e5)</onload>
+        <onload>Skin.SetString(diffuse_settings,FF6db9e5)</onload>
+        <onload>Skin.SetString(font_color,FF6db9e5)</onload>
         <onload>Skin.SetString(font_videolibrary,FF6db9e5)</onload>
         <onload>Skin.SetString(font_music,FF6db9e5)</onload>
         <onload>Skin.SetString(font_programs,FF6db9e5)</onload>
         <onload>Skin.SetString(font_pictures,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_mainmenu,FFffe8487)</onload>
+        <onload>Skin.SetString(font_mainmenu,FF6db9e5)</onload>
         <onload>Skin.SetString(font_addons,FF6db9e5)</onload>
         <onload>Skin.SetString(font_musicplaylist,FF6db9e5)</onload>
         <onload>Skin.SetString(font_videoplaylist,FF6db9e5)</onload>
@@ -877,8 +878,6 @@
         <onload>Skin.SetString(LibraryStructure,2)</onload>
         <onload>Skin.SetBool(alternativerss)</onload>
         <onload>Skin.SetBool(colordialogs)</onload>
-        <onload>Skin.SetBool(DisableGlowbar)</onload>
-        <onload>Skin.SetBool(ExtendedGlowMode)</onload>
         <onload>Skin.SetBool(colortext)</onload>
         <onload>Skin.SetBool(AutoScroll)</onload>
         <onload>Skin.SetBool(breadcrumbslabel)</onload>
@@ -3337,4 +3336,10 @@
             </control>
         </control>
     </include>
+    <include name="LoadCustomViews">
+		<views>50,52,53,57,500,501,503,550,508,509,510,511,512,514,516,518,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010</views>
+	</include>
+	<include name="LoadViews">
+		<views>50,52,53,57,500,501,503,550,508,509,510,511,512,514,516,518</views>
+	</include>
 </includes>

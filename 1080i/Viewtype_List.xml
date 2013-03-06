@@ -9,7 +9,7 @@
             <animation effect="slide" time="560" start="0,225" end="0,0" tween="cubic">VisibleChange</animation>
             <animation effect="slide" time="560" start="0,225" end="0,0" tween="cubic">WindowOpen</animation>
             <animation effect="slide" time="240" end="0,225" tween="cubic">WindowClose</animation>
-            <control type="image">
+           <control type="image">
                 <width>495</width>
                 <height>495</height>
                 <aspectratio aligny="bottom" align="center">keep</aspectratio>
@@ -42,20 +42,63 @@
             <visible>[Skin.HasSetting(roundedcovers) + !Container.Content(episodes)] | [Skin.HasSetting(listshowposter) + Container.Content(episodes)]</visible>
             <visible>[Container.Content(movies) |Container.Content(episodes) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons) | Container.Content(genres) | Container.Content(musicvideos) | [Window.IsActive(programs) + !Container.Content(addons)]]</visible>
             <control type="image">
+                <posx>-217</posx>
+                <posy>128</posy>
+                <width>510</width>
+                <height>510</height>
+                <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                <bordersize>7</bordersize>
+            </control>
+            <control type="image">
                 <posx>-211</posx>
                 <posy>135</posy>
                 <width>500</width>
                 <height>500</height>
-                <aspectratio align="right">keep</aspectratio>
-                <texture background="true">$VAR[cdArtVar]</texture>
+                <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
                 <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
-                <!--                             <animation effect="rotate" end="-360" center="auto" time="8000" delay="1000" loop="true" reversible="false" tween="cubic" easing="inout" condition="true">Conditional</animation>
- -->
-                <animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
                 <bordersize>7</bordersize>
-                <!--                             <visible>!Skin.HasSetting(infopanelcdart)</visible>
- -->
+            </control>
+            <control type="image">
+                <posx>-86</posx>
+                <posy>119</posy>
+                <width>214.25</width>
+                <height>214.25</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true">$VAR[DiscartLogo]</texture>
+                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>-183.3</posx>
+                <posy>377.7</posy>
+                <width>133.85</width>
+                <height>133.85</height>
+                <aspectratio>keep</aspectratio>
+                <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>-14.6</posx>
+                <posy>556.25</posy>
+                <width>107</width>
+                <height>42.8</height>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
+                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
             </control>
             <control type="image">
                 <posx>-39</posx>

@@ -17,7 +17,7 @@
             <visible>!Container.OnNext + !Container.OnPrevious + StringCompare(Control.GetLabel(4421),infopanelonauto)</visible>
             <include>DelayAnimations</include>
         </control>
-        <control type="image">
+      <!--  <control type="image">
             <include>FullscreenDimensions</include>
             <texture>diffuseoverlay.png</texture>
             <animation effect="fade" time="200">WindowOpen</animation>
@@ -35,7 +35,7 @@
             <animation effect="fade" end="100" time="440" delay="160">Visible</animation>
             <animation effect="fade" start="100" end="0" time="80">Hidden</animation>
             <visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)] | [Skin.HasSetting(no_infopane_panel) + Control.IsVisible(7550)]</visible>
-        </control>
+        </control>-->
         <include>Furniture_Showcase</include>
         <include>Furniture_Glow</include>
         <include>WallPanel</include>

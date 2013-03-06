@@ -128,13 +128,13 @@
                 </control>
                 <include>Include_CustomView_Cust</include>
                 <!--Showcase/DVDCase options-->
-               <!-- <control type="radiobutton" id="1626">
+                <control type="radiobutton" id="1626">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31168]</label>
                     <onclick>Skin.ToggleSetting(noflow)</onclick>
                     <selected>Skin.HasSetting(noflow)</selected>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-                </control>-->
+                </control>
                 <control type="radiobutton" id="1627">
                     <include>Objects_MediaMenuButtonAlt2</include>
                     <label>$LOCALIZE[31168]</label>
@@ -488,7 +488,14 @@
                     <label>31018</label>
                     <onclick>Skin.ToggleSetting(showcasezoom)</onclick>
                     <selected>Skin.HasSetting(showcasezoom)</selected>
-                    <visible>Substring(Window(home).Property(actualViewtype),Showcase)</visible>
+                    <visible>Stringcompare(Window(home).Property(actualViewtype),Showcase)</visible>
+                </control>
+                <control type="radiobutton" id="16520">
+                    <label>31018</label>
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <onclick>Skin.ToggleSetting(showcasesquarezoom)</onclick>
+                    <selected>Skin.HasSetting(showcasesquarezoom)</selected>
+                    <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseSquare)</visible>
                 </control>
                 <!-- MikeBZH44 Start -->
                 <!-- Roll or Spin option for Movie DiscArt -->
@@ -758,13 +765,13 @@
 					<onclick>Skin.ToggleSetting(UseCustomCases)</onclick>
 					<onclick condition="Skin.HasSetting(UseCustomCases)">ActivateWindow(1170)</onclick>
 					<selected>Skin.HasSetting(UseCustomCases)</selected>
-					<visible>Container.Content(movies)+Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
+					<visible>Container.Content(movies)+[Stringcompare(Window(home).Property(actualViewtype),LowList)|Substring(Window(home).Property(actualViewtype),Showcase)]</visible>
 				</control>
 				<control type="button" id="290">
 					<label>Boitier</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>ActivateWindow(1167)</onclick>
-					<visible>Container.Content(movies)+Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
+					<visible>Container.Content(movies)+[Stringcompare(Window(home).Property(actualViewtype),LowList)|Substring(Window(home).Property(actualViewtype),Showcase)]</visible>
 				</control>
             </control>
         </control>

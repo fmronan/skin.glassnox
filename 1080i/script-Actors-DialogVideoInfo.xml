@@ -28,31 +28,6 @@
             <ondown>9000</ondown>
         </control>
         <control type="group">
-            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
-            <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
-            <control type="image">
-                <width>729</width>
-                <height>1080</height>
-                <texture>info/movieinfogradient.png</texture>
-            </control>
-            <control type="image">
-                <width>729</width>
-                <height>1080</height>
-                <texture background="true">$INFO[ListItem.Icon]</texture>
-            </control>
-            <control type="image">
-                <animation effect="fade" time="320" delay="408">Visible</animation>
-                <animation effect="fade" time="80">Hidden</animation>
-                <posx>709</posx>
-                <width>40</width>
-                <height>1080</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                <texture>common/topbar_down.png</texture>
-                <include>TopbarPulseAnimationRight</include>
-                <visible>!Skin.HasSetting(DisableGlowbar)</visible>
-            </control>
-        </control>
-        <control type="group">
             <animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
             <animation effect="slide" end="1192,0" time="320" tween="quadratic">WindowClose</animation>
             <control type="image">
@@ -331,9 +306,9 @@
                 </control>
                 <control type="textbox">
                     <posx>4</posx>
-                    <posy>528</posy>
-                    <width>945</width>
-                    <height>340</height>
+                    <posy>580</posy>
+                    <width>746</width>
+                    <height>264</height>
                     <font>Font_Reg19</font>
                     <pagecontrol>60</pagecontrol>
                     <label fallback="31006">$INFO[ListItem.Plot]</label>
@@ -353,7 +328,7 @@
                         <height>70</height>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
                         <colordiffuse>FF7c7c7c</colordiffuse>
-                        <texture>$VAR[SourceFlagVar,flags/info/,.png]</texture>
+                        <texture>$VAR[SourceFlagVar,flags/source/,.png]</texture>
                         <visible>!IsEmpty(Control.GetLabel(900011))</visible>
                     </control>
                     <control type="image" id="900012">
@@ -375,7 +350,7 @@
                         <height>109</height>
                         <colordiffuse>FF7c7c7c</colordiffuse>
                         <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+                        <texture>$INFO[ListItem.AudioCodec,flags/audio/]$INFO[ListItem.AudioChannels,,.png]</texture>
                         <aspectratio>keep</aspectratio>
                         <animation effect="slide" end="0,-18" condition="true">Conditional</animation>
                         <visible>!IsEmpty(Control.GetLabel(900013))</visible>
@@ -383,20 +358,6 @@
                     <control type="image">
                         <include>Furniture_FlagUpright</include>
                         <visible>!IsEmpty(Control.GetLabel(900013))</visible>
-                    </control>
-                    <control type="image" id="900017">
-                        <width>70</width>
-                        <height>65</height>
-                        <colordiffuse>FF7c7c7c</colordiffuse>
-                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
-                        <aspectratio>keep</aspectratio>
-                        <animation effect="slide" end="0,3" condition="true">Conditional</animation>
-                        <visible>!IsEmpty(Control.GetLabel(900017))</visible>
-                    </control>
-                    <control type="image">
-                        <include>Furniture_FlagUpright</include>
-                        <visible>!IsEmpty(Control.GetLabel(900017))</visible>
                     </control>
                     <control type="image" id="900014">
                         <width>100</width>
@@ -504,6 +465,106 @@
                 <include>TopbarPulseAnimationLeft</include>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             </control>
+            <control type="group">
+				<posx>740</posx>
+            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
+            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic" condition="Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+            <animation effect="slide" end="-729,0" time="320" tween="quadratic" condition="!Window.IsVisible(script-Actors-DialogVideoInfo.xml)|!Window.IsVisible(script-Actors-DialogInfo.xml)">Conditional</animation>
+            <control type="image">
+                <posx>1597</posx>
+                <posy>657</posy>
+                <width>286</width>
+                <height>286</height>
+                <texture>common/cdart/disc_Border.png</texture>
+                <include>Animation_VisibleChange200</include>
+                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+				<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+				</animation>
+            </control>
+            <control type="image">
+                <posx>1600</posx>
+                <posy>660</posy>
+                <width>280</width>
+                <height>280</height>
+                <texture background="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
+                <include>Animation_VisibleChange200</include>
+				<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+				</animation>
+            </control>
+            <control type="image">
+                    <posx>1670</posx>
+                    <posy>645</posy>
+                    <width>120</width>
+                    <height>120</height>
+                    <aspectratio>keep</aspectratio>
+                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+                    <texture background="true">$VAR[DiscartLogo]</texture>
+					<include>Animation_VisibleChange200</include>
+                    <animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+				</animation>
+                </control>
+                <control type="image">
+                    <posx>1610</posx>
+                    <posy>800</posy>
+                    <width>75</width>
+                    <height>75</height>
+                    <aspectratio>keep</aspectratio>
+                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+                    <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+					<include>Animation_VisibleChange200</include>
+                    <animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+				</animation>
+                </control>
+				<control type="image">
+                    <posx>1710</posx>
+                    <posy>910</posy>
+                    <width>60</width>
+                    <height>24</height>
+                    <aspectratio>keep</aspectratio>
+                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+                    <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
+                    <colordiffuse>white</colordiffuse>
+					<include>Animation_VisibleChange200</include>
+                    <animation type="WindowOpen" reversible="false">
+					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+				</animation>
+                </control>
+			</control>
             <!-- Fanart -->
             <control type="image">
                 <posx>1067</posx>
@@ -526,5 +587,32 @@
                 <visible>!IsEmpty(ListItem.Art(fanart)) + [Control.HasFocus(20) | Control.HasFocus(5055)]</visible>
             </control>
         </control>
+                <control type="group">
+            <animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
+            <control type="image">
+                <width>729</width>
+                <height>1080</height>
+                <texture>info/movieinfogradient.png</texture>
+            </control>
+            
+            <control type="image">
+                <width>729</width>
+                <height>1080</height>
+                <texture background="true">$INFO[ListItem.Icon]</texture>
+            </control>
+            <control type="image">
+                <animation effect="fade" time="320" delay="408">Visible</animation>
+                <animation effect="fade" time="80">Hidden</animation>
+                <posx>709</posx>
+                <width>40</width>
+                <height>1080</height>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <texture>common/topbar_down.png</texture>
+                <include>TopbarPulseAnimationRight</include>
+                <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+            </control>
+        </control>
+
     </controls>
 </window>

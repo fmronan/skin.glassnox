@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Aeon Nox
 # Addon id: skin.aeon.nox
-# Addon Provider: Big_Noid & phil65
+# Addon Provider: Big_Noid|phil65
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
@@ -799,6 +799,10 @@ msgstr "Widget"
 msgctxt "#31298"
 msgid "Set area color"
 msgstr "Farbe für Skin-Bereich"
+
+msgctxt "#31299"
+msgid "Data provider"
+msgstr "Wetterdienst"
 
 msgctxt "#31307"
 msgid "Hide fanart"

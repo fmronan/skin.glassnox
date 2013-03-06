@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Aeon Nox
 # Addon id: skin.aeon.nox
-# Addon Provider: Big_Noid & phil65
+# Addon Provider: Big_Noid|phil65
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
@@ -15,6 +15,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fa_IR\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "#31009"
+msgid "Timer"
+msgstr "تایمر"
+
+msgctxt "#31015"
+msgid "Timer"
+msgstr "تایمر"
+
+msgctxt "#31017"
+msgid "Live TV"
+msgstr "تلویزیون زنده"
 
 msgctxt "#31021"
 msgid "Search XBMC for"
@@ -148,6 +160,18 @@ msgctxt "#31095"
 msgid "Rating"
 msgstr "رتبه بندی"
 
+msgctxt "#31113"
+msgid "Single Image"
+msgstr "تصویر تکی"
+
+msgctxt "#31114"
+msgid "Multi Image"
+msgstr "چند تصویره"
+
+msgctxt "#31221"
+msgid "Default"
+msgstr "پیش فرض"
+
 msgctxt "#31234"
 msgid "Wall"
 msgstr "دیوار"
@@ -156,6 +180,10 @@ msgctxt "#31271"
 msgid "Posters"
 msgstr "پوستر"
 
+msgctxt "#31309"
+msgid "Memory Used:"
+msgstr "میزان استفاده حافظه:"
+
 msgctxt "#31358"
 msgid "System info"
 msgstr "اطلاعات سیستم"
@@ -163,6 +191,10 @@ msgstr "اطلاعات سیستم"
 msgctxt "#31390"
 msgid "Skin default"
 msgstr "پیش فرض پوسته"
+
+msgctxt "#31429"
+msgid "On"
+msgstr "روشن"
 
 msgctxt "#31454"
 msgid "Banners"
@@ -179,6 +211,10 @@ msgstr "تصاویر"
 msgctxt "#31501"
 msgid "Music"
 msgstr "موسیقی"
+
+msgctxt "#31502"
+msgid "Movies"
+msgstr "فیلم ها"
 
 msgctxt "#31505"
 msgid "Programs"
@@ -207,6 +243,14 @@ msgstr "ویدیوی تمام صفحه"
 msgctxt "#31615"
 msgid "Audio visualization"
 msgstr "ویژوالیزیشن صدا"
+
+msgctxt "#31616"
+msgid "Low"
+msgstr "کم"
+
+msgctxt "#31617"
+msgid "High"
+msgstr "زیاد"
 
 msgctxt "#31852"
 msgid "Music Library"

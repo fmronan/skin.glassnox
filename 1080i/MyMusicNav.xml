@@ -29,7 +29,7 @@
                     <visible>Substring(Container.FolderPath,musicdb://,left)</visible>
                     <visible>[Skin.HasSetting(musicextrafanart) + !IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
                 </control>
-                <control type="image">
+           <!--     <control type="image">
                     <include>FullscreenDimensions</include>
                     <texture>diffuseoverlay.png</texture>
                     <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
@@ -50,7 +50,7 @@
                     <animation effect="fade" end="100" time="440" delay="160">Visible</animation>
                     <animation effect="fade" start="100" end="0" time="80">Hidden</animation>
                     <visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)]</visible>
-                </control>
+                </control>-->
                 <include>VideoBackground</include>
                 <include>Furniture_Glow</include>
             </control>
@@ -123,14 +123,16 @@
                 <posy>958</posy>
                 <width>300</width>
                 <height>105</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="empty.png">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Label]\logo.png</texture>
                 <fadetime>200</fadetime>
                 <include>Animation_OpenCloseZoom_New</include>
-                <texture background="true" fallback="empty.png">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Label]\logo.png</texture>
-                <aspectratio>keep</aspectratio>
                 <animation effect="slide" end="-50,0" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(smallshiftview) + Control.IsVisible(57)">Conditional</animation>
                 <animation effect="slide" end="-642,0" time="320" easing="inout" tween="circle" condition="Control.IsVisible(57)">Conditional</animation>
-                <animation effect="slide" end="590,-5" time="320" easing="inout" tween="circle" condition="Control.IsVisible(50)">Conditional</animation>
-                <animation effect="slide" end="680,-626" time="320" easing="inout" tween="circle" condition="Control.IsVisible(53)">Conditional</animation>
+                <animation effect="slide" end="590,-5" time="0" easing="inout" tween="circle" condition="Control.IsVisible(50)+ !Skin.HasSetting(roundedcovers)">Conditional</animation>
+                <animation effect="slide" end="590,-690" time="0" easing="inout" tween="circle" condition="Control.IsVisible(50) + Skin.HasSetting(roundedcovers)">Conditional</animation>
+                <animation effect="zoom" start="100" end="170" center="auto" time="320" tween="circle" condition="Control.IsVisible(50) + Skin.HasSetting(roundedcovers)">Conditional</animation>
+                <animation effect="slide" end="680,-626" time="0" easing="inout" tween="circle" condition="Control.IsVisible(53)">Conditional</animation>
                 <animation effect="zoom" start="100" end="140" center="auto" time="320" tween="circle" condition="Control.IsVisible(53)">Conditional</animation>
                 <animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
                 <animation effect="fade" delay="160" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8822),empty.png)">Conditional</animation>

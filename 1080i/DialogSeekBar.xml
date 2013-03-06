@@ -512,7 +512,7 @@
                     <posx>1770</posx>
                     <posy>12</posy>
                     <include>OSDFlagVars</include>
-                    <texture fallback="flags/audio/defaultsound.png">$INFO[VideoPlayer.AudioCodec,flags/info/]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
+                    <texture fallback="flags/audio/defaultsound.png">$INFO[VideoPlayer.AudioCodec,flags/audio/]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
                 </control>
             </control>
             <control type="group" id="4004">

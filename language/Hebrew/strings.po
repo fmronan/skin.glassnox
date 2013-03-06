@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Aeon Nox
 # Addon id: skin.aeon.nox
-# Addon Provider: Big_Noid & phil65
+# Addon Provider: Big_Noid|phil65
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
@@ -216,6 +216,10 @@ msgctxt "#31271"
 msgid "Posters"
 msgstr "פוסטר"
 
+msgctxt "#31299"
+msgid "Data provider"
+msgstr "ספק מידע"
+
 msgctxt "#31309"
 msgid "Memory Used:"
 msgstr "זכרון שנוצל:"
@@ -299,6 +303,10 @@ msgstr "מוסיקה"
 msgctxt "#31502"
 msgid "Movies"
 msgstr "סרטים"
+
+msgctxt "#31503"
+msgid "TV Shows"
+msgstr "תוכניות טלויזיה"
 
 msgctxt "#31504"
 msgid "Videos"
