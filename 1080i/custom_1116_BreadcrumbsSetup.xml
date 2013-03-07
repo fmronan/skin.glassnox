@@ -128,7 +128,7 @@
                     <selected>Skin.HasSetting(BreackFloor)</selected>
 					<visible>!Skin.HasSetting(disablefloor)</visible>	  	
                 </control>	  	
-               <control type="button" id="467">  	
+				<control type="button" id="467">  	
                    <label>13012</label>
                     <align>center</align>
                     <label>13012</label>
