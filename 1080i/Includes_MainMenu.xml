@@ -1350,6 +1350,7 @@
     <include name="MoviesMainMenu">
             <item id="10">
                 <label fallback="31502">$INFO[Skin.String(MovieHomeItem.Label)]</label>
+                <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],MovieHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MovieHomeItem.MultiFanart)]</icon>
@@ -1390,6 +1391,7 @@
     <include name="MusicVideosMainMenu">
             <item id="33">
                 <label fallback="20389">$INFO[Skin.String(MusicVideosHomeItem.Label)]</label>
+                <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],MusicVideosHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <icon fallback="special://skin/backgrounds/musicvideos/">$INFO[Skin.String(MusicVideosHomeItem.MultiFanart)]</icon>
