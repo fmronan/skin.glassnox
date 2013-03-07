@@ -1247,6 +1247,7 @@
         </control>
     </include>
     <include name="Neon_Floor">
+		<visible>!Skin.HasSetting(disablefloor)</visible>
         <control type="group">
             <visible>!Skin.HasSetting(DisableGlowbar) | [Skin.HasSetting(DisableGlowbar) + Skin.HasSetting(ExtendedGlowMode)]</visible>
             <control type="image">

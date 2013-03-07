@@ -417,6 +417,7 @@
     </include>
     <include name="Furniture_SettingsFloor">
         <control type="group">
+			<visible>!Skin.HasSetting(disablefloor)</visible>
             <include>Animation_OpenClose_Furniture</include>
             <control type="image">
                 <include>FullscreenDimensions</include>

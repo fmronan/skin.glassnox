@@ -14,7 +14,7 @@
     <controls>
         <include>CommonSettingsBackground</include>
         <include>CommonMediaPlayingBackground</include>
-        <include condition="!Skin.HasSetting(disablefloor)">Furniture_SettingsFloor</include>
+        <include>Furniture_SettingsFloor</include>
         <control type="group">
             <animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
             <include>Furniture_SettingsBackPanel</include>
