@@ -115,7 +115,21 @@
                     <selected>Skin.HasSetting(breadcrumbsweather)</selected>
                     <visible>!Skin.HasSetting(disabletopbar)</visible>
                 </control>
-                <control type="button" id="465">
+                <control type="radiobutton" id="465">	  	
+                    <label>$LOCALIZE[24021] Floor</label>	  	
+                    <include>Objects_CommonSettingsButton</include>	  	
+                    <onclick>Skin.ToggleSetting(disablefloor)</onclick>	  	
+                    <selected>Skin.HasSetting(disablefloor)</selected>	  	
+                </control>	  	
+                <control type="radiobutton" id="466">	  	
+                    <label>$LOCALIZE[53010]</label>	  	
+                    <include>Objects_CommonSettingsButton</include>	  	
+                    <onclick>Skin.ToggleSetting(BreackFloor)</onclick>	  	
+                    <selected>Skin.HasSetting(BreackFloor)</selected>
+					<visible>!Skin.HasSetting(disablefloor)</visible>	  	
+                </control>	  	
+               <control type="button" id="467">  	
+                   <label>13012</label>
                     <align>center</align>
                     <label>13012</label>
                     <include>Objects_CommonSettingsButton</include>
