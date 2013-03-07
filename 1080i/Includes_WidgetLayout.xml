@@ -3263,16 +3263,6 @@
                     <width>1596</width>
                     <height>500</height>
                     <visible>Substring(Control.GetLabel(4321),addons) | Substring(Control.GetLabel(4321),album) | Substring(Control.GetLabel(4321),artist) | Substring(Control.GetLabel(4321),pics) | Substring(Control.GetLabel(4321),rss)</visible>
-                    <control type="image">
-                        <posx>695</posx>
-                        <posy>5</posy>
-                        <width>1100</width>
-                        <height>690</height>
-                        <aspectratio>scale</aspectratio>
-                        <colordiffuse>44FFFFFF</colordiffuse>
-                        <texture background="true">$INFO[Container(5010).ListItem.Property(Fanart)]</texture>
-                        <visible>!IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
-                    </control>
                     <control type="image" id="5130">
                         <posx>1455</posx>
                         <posy>320</posy>
@@ -5281,16 +5271,6 @@
                     <width>1596</width>
                     <height>500</height>
                     <visible>Substring(Control.GetLabel(4325),addons) | Substring(Control.GetLabel(4325),album) | Substring(Control.GetLabel(4325),artist) | Substring(Control.GetLabel(4325),pics) | Substring(Control.GetLabel(4325),rss)</visible>
-                    <control type="image">
-                        <posx>695</posx>
-                        <posy>5</posy>
-                        <width>1100</width>
-                        <height>690</height>
-                        <aspectratio>scale</aspectratio>
-                        <colordiffuse>44FFFFFF</colordiffuse>
-                        <texture background="true">$INFO[Container(6010).ListItem.Property(Fanart)]</texture>
-                        <visible>!IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
-                    </control>
                     <control type="image" id="6130">
                         <posx>1455</posx>
                         <posy>320</posy>

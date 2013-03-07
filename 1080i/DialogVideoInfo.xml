@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
     <defaultcontrol always="true">5000</defaultcontrol>
-    <onload>AlarmClock(ActorIconMove,Control.Move(50,3),00:07,silent,loop)</onload>
+    <onload>AlarmClock(ActorIconMove,Control.Move(50,1),00:07,silent,loop)</onload>
     <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
     <onunload>CancelAlarm(ActorIconMove,true)</onunload>
     <onunload>ClearProperty(FanartZoom,movieinformation)</onunload>
