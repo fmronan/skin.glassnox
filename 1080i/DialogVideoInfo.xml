@@ -669,7 +669,7 @@
                     <control type="grouplist">
                         <orientation>vertical</orientation>
                         <usecontrolcoords>true</usecontrolcoords>
-                        <control type="grouplist">
+                        <control type="grouplist" id="11000">
                             <posy>1</posy>
                             <width>600</width>
                             <height>45</height>
@@ -680,7 +680,7 @@
                             <visible>!IsEmpty(Window.Property(AudioLanguage.1))</visible>
                             <control type="label">
                                 <width>110</width>
-                                <height>18</height>
+                                <height>40</height>
                                 <align>right</align>
                                 <label>$LOCALIZE[445]: </label>
                                 <font>Font_Reg10_Caps</font>
@@ -782,14 +782,14 @@
                             <orientation>horizontal</orientation>
                             <control type="label">
                                 <width>110</width>
-                                <height>18</height>
+                                <height>40</height>
                                 <align>right</align>
                                 <label>$LOCALIZE[287]: </label>
                                 <font>Font_Reg10_Caps</font>
                             </control>
                             <control type="label">
                                 <width min="20" max="100">auto</width>
-                                <height>18</height>
+                                <height>40</height>
                                 <align>left</align>
                                 <label>N / A </label>
                                 <textcolor>grey</textcolor>
@@ -997,68 +997,68 @@
                 </control>
             </control>
   <!-- BEGIN Cast -->
-  <control type="wraplist" id="50">
-    <viewtype label="">List Info</viewtype>
-     <posx>1005</posx>
-     <posy>366</posy>
-     <width>900</width>
-     <height>177</height>
-    <onup>149</onup>
-    <ondown>Skin.Reset(coverzoom)</ondown>
-    <ondown>SetFocus(19)</ondown>
-    <ondown>Skin.SetBool(artistzoom)</ondown>
-    <orientation>horizontal</orientation>
-    <scrolltime>350</scrolltime>
-    <focusposition>2</focusposition>
-    <movement>2</movement>
-  <itemlayout height="170" width="181">
-   <control type="image">
-    <posx>1</posx>
-    <posy>8</posy>
-    <width>120</width>
-    <height>160</height>
-    <aligny>center</aligny>
-    <align>center</align>
-    <aspectratio>stretch</aspectratio>
-    <texture background="true">$INFO[ListItem.Icon]</texture>
-  </control>
-  </itemlayout>
-  <focusedlayout height="170" width="181">
-<control type="image">
-    <posx>-18</posx>
-    <posy>-12</posy>
-    <width>158</width>
-    <height>198</height>
-    <aligny>center</aligny>
-    <align>center</align>
-    <aspectratio>stretch</aspectratio>
-    <texture>actor_glow.png</texture>
-    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-  </control>
-  <control type="image">
-    <posx>1</posx>
-    <posy>8</posy>
-    <width>120</width>
-    <height>160</height>
-    <aligny>center</aligny>
-    <align>center</align>
-    <aspectratio>stretch</aspectratio>
-    <texture background="true">$INFO[ListItem.Icon]</texture>
-  </control>
-  </focusedlayout>
-  </control>
-  <control type="label">
-    <posx>1010</posx>
-    <posy>565</posy>
-    <width>830</width>
-    <align>center</align>
-    <aligny>center</aligny>
-    <label>$INFO[Container(50).ListItem.Label]</label>
-    <font>Font_List</font>
-	<textcolor>white</textcolor>
-    <scroll>true</scroll>
-    <scrollout>false</scrollout>
-  </control>
+			  <control type="wraplist" id="50">
+				<viewtype label="">List Info</viewtype>
+				 <posx>1005</posx>
+				 <posy>366</posy>
+				 <width>900</width>
+				 <height>177</height>
+				<onup>149</onup>
+				<ondown>Skin.Reset(coverzoom)</ondown>
+				<ondown>SetFocus(19)</ondown>
+				<ondown>Skin.SetBool(artistzoom)</ondown>
+				<orientation>horizontal</orientation>
+				<scrolltime>350</scrolltime>
+				<focusposition>2</focusposition>
+				<movement>2</movement>
+			  <itemlayout height="170" width="181">
+			   <control type="image">
+				<posx>1</posx>
+				<posy>8</posy>
+				<width>120</width>
+				<height>160</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+			  </control>
+			  </itemlayout>
+			  <focusedlayout height="170" width="181">
+			<control type="image">
+			    <posx>-18</posx>
+			    <posy>-12</posy>
+			    <width>158</width>
+			    <height>198</height>
+			    <aligny>center</aligny>
+			    <align>center</align>
+			    <aspectratio>stretch</aspectratio>
+			    <texture>actor_glow.png</texture>
+			    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			  </control>
+			  <control type="image">
+				<posx>1</posx>
+				<posy>8</posy>
+				<width>120</width>
+				<height>160</height>
+				<aligny>center</aligny>
+				<align>center</align>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+			  </control>
+			  </focusedlayout>
+			  </control>
+			  <control type="label">
+				<posx>1010</posx>
+				<posy>565</posy>
+				<width>830</width>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container(50).ListItem.Label]</label>
+				<font>Font_List</font>
+				<textcolor>white</textcolor>
+				<scroll>true</scroll>
+				<scrollout>false</scrollout>
+			  </control>
   <!-- End Cast -->
 <!-- BEGIN Full Replace -->
             <control type="grouplist" id="5000">
@@ -1069,7 +1069,7 @@
                 <onleft>5000</onleft>
                 <onright>5000</onright>
                 <onup>50</onup>
-                <ondown>5055</ondown>
+                <ondown>11010</ondown>
                 <orientation>horizontal</orientation>
                 <scrolltime tween="quadratic">200</scrolltime>
                 <control type="button" id="8">
