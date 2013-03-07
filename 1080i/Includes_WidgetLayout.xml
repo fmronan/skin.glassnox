@@ -1664,7 +1664,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
                 <control type="image">
 					<posx>9</posx>
@@ -1683,7 +1683,7 @@
 					<height>238</height>
 					<texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>69</posx>
@@ -1693,7 +1693,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[Container(8000).ListItem.Property(Logo)]</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(Logo)) + IsEmpty(Container(8000).ListItem.Property(clearart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>69</posx>
@@ -1703,7 +1703,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[Container(8000).ListItem.Property(clearart)]</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(clearart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>17.5</posx>
@@ -1713,7 +1713,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[Container(8000).ListItem.Property(Studio),flags/studios/,.png]</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(Studio))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>103.2</posx>
@@ -1724,7 +1724,7 @@
 					<texture fallback="rating0.png">$INFO[Container(8000).ListItem.Property(Rating),stars/,.png]</texture>
 					<texture>$INFO[Container(8000).ListItem.Property(Studio),flags/studios/,.png]</texture>
 					<visible>!IsEmpty(Container(8000).ListItem.Property(Fanart)) + IsEmpty(Container(8000).ListItem.Property(Discart)) + !IsEmpty(Container(8000).ListItem.Property(Studio))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
                 <control type="image">
                     <width>260</width>
@@ -2935,7 +2935,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
-                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !Substring(Control.GetLabel(4321),tv</visible>
                     </control>
                     <control type="image">
                         <posx>1455</posx>
@@ -2947,7 +2947,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(5010).ListItem.Property(Fanart)]</texture>
-                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !Substring(Control.GetLabel(4321),tv</visible>
                     </control>
                     <control type="image">
                         <posx>1525</posx>
@@ -2960,7 +2960,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true">$INFO[Container(5010).ListItem.Property(Logo)]</texture>
-                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Logo)) +  IsEmpty(Container(5010).ListItem.Property(Clearart))</visible>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Logo)) +  IsEmpty(Container(5010).ListItem.Property(Clearart)) + !Substring(Control.GetLabel(4321),tv</visible>
                     </control>
                     <control type="image">
                         <posx>1525</posx>
@@ -2973,7 +2973,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true">$INFO[Container(5010).ListItem.Property(Clearart)]</texture>
-                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) +  !IsEmpty(Container(5010).ListItem.Property(Clearart))</visible>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) +  !IsEmpty(Container(5010).ListItem.Property(Clearart)) + !Substring(Control.GetLabel(4321),tv</visible>
                     </control>
                     <control type="image">
                         <posx>1465</posx>
@@ -2985,7 +2985,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture>$INFO[Container(5010).ListItem.Property(Studio),flags/studios/,.png]</texture>
-                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Studio))</visible>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Studio)) + !Substring(Control.GetLabel(4321),tv</visible>
                     </control>
                     <control type="image">
                         <posx>1565</posx>
@@ -2998,7 +2998,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture>$INFO[Container(5010).ListItem.Property(Rating),stars/,.png]</texture>
-                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Rating))</visible>
+                        <visible>IsEmpty(Container(5010).ListItem.Property(Discart)) + !IsEmpty(Container(5010).ListItem.Property(Fanart)) + !IsEmpty(Container(5010).ListItem.Property(Rating)) + !Substring(Control.GetLabel(4321),tv</visible>
                     </control>
                     <control type="image">
                         <posx>1355</posx>
@@ -3196,7 +3196,7 @@
                             <textcolor>white6</textcolor>
                             <label>$INFO[Container(5010).ListItem.Property(Plot)]</label>
                             <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                            <visible>!IsEmpty(Container(5010).ListItem.Property(Discart))|!IsEmpty(Container(5010).ListItem.Property(Fanart))</visible>
+                            <visible>!Substring(Control.GetLabel(4321),tv) + [!IsEmpty(Container(5010).ListItem.Property(Discart))|!IsEmpty(Container(5010).ListItem.Property(Fanart))]</visible>
                         </control>
                         <control type="textbox" id="5060">
                             <posx>482</posx>
@@ -3659,7 +3659,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
                 <control type="image">
 					<posx>9</posx>
@@ -3678,7 +3678,7 @@
 					<height>238</height>
 					<texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(7000).ListItem.Property(Fanart)]</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>69</posx>
@@ -3688,7 +3688,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[Container(7000).ListItem.Property(Logo)]</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Logo)) + IsEmpty(Container(7000).ListItem.Property(clearart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>69</posx>
@@ -3698,7 +3698,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[Container(7000).ListItem.Property(clearart)]</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(clearart))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>17.5</posx>
@@ -3708,7 +3708,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[Container(7000).ListItem.Property(Studio),flags/studios/,.png]</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Studio))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
 				<control type="image">
 					<posx>103.2</posx>
@@ -3719,7 +3719,7 @@
 					<texture fallback="rating0.png">$INFO[Container(7000).ListItem.Property(Rating),stars/,.png]</texture>
 					<texture>$INFO[Container(7000).ListItem.Property(Studio),flags/studios/,.png]</texture>
 					<visible>!IsEmpty(Container(7000).ListItem.Property(Fanart)) + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Studio))</visible>
-					<visible>[Stringcompare(Skin.String(LiveBGWidgetCase),tvshows) | Stringcompare(Skin.String(LiveBGWidgetCase),movies)]</visible>
+					<visible>Stringcompare(Skin.String(LiveBGWidgetCase),movies)</visible>
 				</control>
                 <control type="image">
                     <width>260</width>
@@ -4944,7 +4944,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
-                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) +!Substring(Control.GetLabel(4325),tv)</visible>
                     </control>
                     <control type="image">
                         <posx>1455</posx>
@@ -4956,7 +4956,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true" diffuse="common/cdart/disc_Mask.png">$INFO[Container(6010).ListItem.Property(Fanart)]</texture>
-                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart))+!Substring(Control.GetLabel(4325),tv)</visible>
                     </control>
                     <control type="image">
                         <posx>1525</posx>
@@ -4969,7 +4969,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true">$INFO[Container(6010).ListItem.Property(Logo)]</texture>
-                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Logo)) +  IsEmpty(Container(6010).ListItem.Property(Clearart))</visible>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Logo)) +  IsEmpty(Container(6010).ListItem.Property(Clearart))+!Substring(Control.GetLabel(4325),tv)</visible>
                     </control>
                     <control type="image">
                         <posx>1525</posx>
@@ -4982,7 +4982,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture background="true">$INFO[Container(6010).ListItem.Property(Clearart)]</texture>
-                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) +  !IsEmpty(Container(6010).ListItem.Property(Clearart))</visible>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) +  !IsEmpty(Container(6010).ListItem.Property(Clearart))+!Substring(Control.GetLabel(4325),tv)</visible>
                     </control>
                     <control type="image">
                         <posx>1465</posx>
@@ -4994,7 +4994,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture>$INFO[Container(6010).ListItem.Property(Studio),flags/studios/,.png]</texture>
-                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Studio))</visible>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Studio))+!Substring(Control.GetLabel(4325),tv)</visible>
                     </control>
                     <control type="image">
                         <posx>1565</posx>
@@ -5007,7 +5007,7 @@
                             <effect type="rotate" start="0" center="1595,70" end="-720" delay="880" time="1600" tween="cubic" />
                         </animation>
                         <texture>$INFO[Container(6010).ListItem.Property(Rating),stars/,.png]</texture>
-                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Rating))</visible>
+                        <visible>IsEmpty(Container(6010).ListItem.Property(Discart)) + !IsEmpty(Container(6010).ListItem.Property(Fanart)) + !IsEmpty(Container(6010).ListItem.Property(Rating))+!Substring(Control.GetLabel(4325),tv)</visible>
                     </control>
                     <control type="image">
                         <posx>1355</posx>
@@ -5214,7 +5214,7 @@
                             <textcolor>white6</textcolor>
                             <label>$INFO[Container(6010).ListItem.Property(Plot)]</label>
                             <autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                            <visible>!IsEmpty(Container(6010).ListItem.Property(Discart)) | !IsEmpty(Container(6010).ListItem.Property(Fanart))</visible>
+                            <visible>!Substring(Control.GetLabel(4325),tv) + [!IsEmpty(Container(6010).ListItem.Property(Discart)) | !IsEmpty(Container(6010).ListItem.Property(Fanart))]</visible>
                         </control>
                         <control type="textbox" id="6060">
                             <posx>482</posx>
