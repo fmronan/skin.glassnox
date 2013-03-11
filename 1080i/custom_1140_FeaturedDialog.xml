@@ -21,7 +21,6 @@
             <width>1808</width>
             <height>1080</height>
             <texture>osd/osd_settings_back_glow.png</texture>
-            <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <include>PanelGlowFade</include>
             <include>Animation_VisibleChange400</include>
@@ -32,7 +31,6 @@
             <width>1808</width>
             <height>1080</height>
             <texture>osd/osd_settings_back.png</texture>
-            <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
         </control>
         <control type="button" id="8002">
             <label></label>

@@ -497,14 +497,7 @@
                 <texture background="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
                 <include>Animation_VisibleChange200</include>
 				<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
-				<animation type="WindowOpen" reversible="false">
-					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
-					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
-				</animation>
-				<animation type="WindowClose" reversible="false">
-					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
-					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
-				</animation>
+
             </control>
             <control type="image">
                     <posx>1670</posx>

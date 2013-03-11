@@ -84,6 +84,10 @@ msgctxt "#31019"
 msgid "Channel4 News"
 msgstr "Nouvelles Channel4"
 
+msgctxt "#31020"
+msgid "Extras"
+msgstr "Bonus"
+
 msgctxt "#31021"
 msgid "Search XBMC for"
 msgstr "Recherche XBMC pour"
@@ -119,6 +123,10 @@ msgstr "Vitrine"
 msgctxt "#31029"
 msgid "Showcase2"
 msgstr "Vitrine2"
+
+msgctxt "#31030"
+msgid "Change info labels"
+msgstr "Editer les infos"
 
 msgctxt "#31032"
 msgid "Nothing"

@@ -223,9 +223,9 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>95</height>
         <width>450</width>
-        <texturenofocus border="1">settings/listselect_nf2.png</texturenofocus>
+        <texturenofocus>settings/listselect_nf2.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <alttexturenofocus border="1">settings/listselect_nf2.png</alttexturenofocus>
+        <alttexturenofocus>settings/listselect_nf2.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>

@@ -36,6 +36,22 @@
                 <visible>System.HasAddon(script.metadata.actors)</visible>
                 <visible>Container.Content(Actors) | Container.Content(Directors) | Container.Content(Artists)</visible>
             </control>
+            <control type="button" id="2066">
+                <width>462</width>
+                <height>58</height>
+                <textoffsety>12</textoffsety>
+                <align>center</align>
+                <texturefocus>dialogs/context_highlight.png</texturefocus>
+                <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
+                <label>31030</label>
+                <font>Font_Reg19</font>
+                <textcolor>context</textcolor>
+                <focusedcolor>white2</focusedcolor>
+                <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
+                <onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
+                <visible>System.HasAddon(script.libraryeditor) + !Stringcompare(ListItem.Label,..) + !SubString(ListItem.Path,videodb://1/7)</visible>
+                <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+            </control>
             <control type="button" id="2007">
                 <height>58</height>
                 <width>462</width>
