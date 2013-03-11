@@ -1570,6 +1570,15 @@
                             <onclick>noop</onclick>
                             <visible>Substring(Control.GetLabel(4325),randomaddons)</visible>
                         </item>
+                         <item>
+							<label>$INFO[Window(Home).Property(FeaturedAddon.1.Title)]</label>
+							<label2>-</label2>
+							<onclick>RunScript(special://skin/scripts/RunFeaturedAddon.py,$INFO[Window(Home).Property(FeaturedAddon.1.Path)])</onclick>
+							<thumb>$INFO[Window(Home).Property(FeaturedAddon.1.Thumb)]</thumb>
+							<property name="Description">$INFO[Window(Home).Property(FeaturedAddon.1.Description)]$INFO[Window(Home).Property(FeaturedAddon.1.Disclaimer),[CR][CR][COLOR=selected][B]Disclaimer[/B][/COLOR][CR]]</property>
+							<property name="Fanart">$INFO[Window(Home).Property(FeaturedAddon.1.Fanart)]</property>
+							<visible>Substring(Control.GetLabel(4325),recommendedaddons)</visible>
+						</item>
                         <item>
                             <label>$INFO[Window(Home).Property(RecentEpisode.1.Title)]</label>
                             <label2>$INFO[Window(Home).Property(RecentEpisode.1.ShowTitle)]</label2>
@@ -1577,7 +1586,7 @@
                             <thumb>$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</thumb>
                             <property name="EpisodeNumber">$INFO[Window(Home).Property(RecentEpisode.1.EpisodeNo)]</property>
                             <property name="Fanart">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</property>
-                            <visible>Substring(Control.GetLabel(4325),recenttv)</visible>
+                            <visible>Substring(Control.GetLabel(4325),recenttv,left)</visible>
                         </item>
                         <item>
                             <label>$INFO[Window(Home).Property(RandomEpisode.1.Title)]</label>
