@@ -4374,5 +4374,36 @@
         <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RandomAlbum.8.Artist)]/extrafanart/</value>
     </variable>
     
-    
+    <variable name="RecommendedWidgetAlbumExtra1">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.1.Title)] $INFO[Window(Home).Property(RecommendedAlbum.1.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra2">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.2.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.2.Title)] $INFO[Window(Home).Property(RecommendedAlbum.2.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.2.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra3">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.3.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.3.Title)] $INFO[Window(Home).Property(RecommendedAlbum.3.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.3.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra4">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.4.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.4.Title)] $INFO[Window(Home).Property(RecommendedAlbum.4.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.4.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra5">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.5.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.5.Title)] $INFO[Window(Home).Property(RecommendedAlbum.5.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.5.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra6">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.6.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.6.Title)] $INFO[Window(Home).Property(RecommendedAlbum.6.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.6.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra7">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.7.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.7.Title)] $INFO[Window(Home).Property(RecommendedAlbum.7.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.7.Artist)]/extrafanart/</value>
+    </variable>
+    <variable name="RecommendedWidgetAlbumExtra8">
+        <value condition="Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.8.Artist)] - $INFO[Window(Home).Property(RecommendedAlbum.8.Title)] $INFO[Window(Home).Property(RecommendedAlbum.8.Year)],(,)/extrafanart/</value>
+        <value>$INFO[Skin.String(ArtistsLogosPath)]$INFO[Window(Home).Property(RecommendedAlbum.8.Artist)]/extrafanart/</value>
+    </variable>
 </includes>
