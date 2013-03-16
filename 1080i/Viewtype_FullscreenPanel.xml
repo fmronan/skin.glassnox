@@ -188,7 +188,7 @@
                             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
                             <animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopanelcdart)">Conditional</animation>
                             <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-                        </control>
+                        </control><!--no-->
                         <control type="image">
                             <posx>100</posx>
                             <posy>16</posy>

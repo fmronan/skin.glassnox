@@ -901,9 +901,9 @@
                     <aligny>top</aligny>
                 </control>
                 <control type="textbox">
-                    <posy>226</posy>
+                    <posy>220</posy>
                     <width>652</width>
-                    <height>230</height>
+                    <height>249</height>
                     <label>$VAR[FanartPanelPlotVar]</label>
                     <textcolor>white6</textcolor>
                     <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>

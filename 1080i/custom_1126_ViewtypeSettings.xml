@@ -174,14 +174,21 @@
                 </control>
                 <control type="radiobutton" id="16307">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>$LOCALIZE[42212]</label>
+                    <label>$LOCALIZE[31812]</label>
                     <onclick>Skin.ToggleSetting(lowlistcdart)</onclick>
                     <selected>Skin.HasSetting(lowlistcdart)</selected>
                     <visible>Container.Content(movies) + Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
                 </control>
+                <control type="radiobutton" id="16308">
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <label>Cdart Maker</label>
+                    <onclick>Skin.ToggleSetting(lowlistmaker)</onclick>
+                    <selected>!Skin.HasSetting(lowlistmaker)</selected>
+                    <visible>Container.Content(movies) + [Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),InfoPanel) | Stringcompare(Window(home).Property(actualViewtype),List) |Stringcompare(Window(home).Property(actualViewtype),LowList) | Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
+                </control>
                 <control type="radiobutton" id="16300">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42210</label>
+                    <label>31810</label>
                     <onclick>Skin.ToggleSetting(lowlistclearart)</onclick>
                     <selected>Skin.HasSetting(lowlistclearart)</selected>
                     <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
@@ -575,7 +582,7 @@
                 </control>
                 <control type="button" id="16571">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>$LOCALIZE[41156]:</label>
+                    <label>$LOCALIZE[31956]:</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[InfoPanelTypeVar][/COLOR]</label2>
                     <onclick condition="!Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">Skin.SetBool(infopanelfanart)</onclick>
                     <onclick condition="Skin.HasSetting(infopanelfanart)">Skin.SetBool(infopanel2columns)</onclick>
@@ -592,7 +599,7 @@
                 </control>
                 <control type="radiobutton" id="16573">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42212</label>
+                    <label>31812</label>
                     <onclick>Skin.ToggleSetting(infopanelcdart)</onclick>
                     <selected>Skin.HasSetting(infopanelcdart)</selected>
                     <visible>Container.Content(movies)</visible>
@@ -662,7 +669,7 @@
                     <onclick>Skin.ToggleSetting(showcasewrap)</onclick>
                     <selected>!Skin.HasSetting(showcasewrap)</selected>
                     <include condition="!Window.IsActive(script-Rom_Collection_Browser-main.xml)">ReloadWindowOnClick</include>
-                    <visible>Substring(Window(home).Property(actualViewtype),Showcase) | Stringcompare(Window(home).Property(actualViewtype),Landscape)</visible>
+                    <visible>Stringcompare(Window(home).Property(actualViewtype),Showcase) | Stringcompare(Window(home).Property(actualViewtype),Landscape)</visible>
                 </control>
                 <control type="button" id="1635">
                     <include>Objects_MediaMenuButtonAlt2</include>
@@ -673,6 +680,16 @@
                     <onclick condition="Stringcompare(Skin.String(TriPanelPosition),2)">Skin.SetString(TriPanelPosition,3)</onclick>
                     <onclick condition="Stringcompare(Skin.String(TriPanelPosition),1)">Skin.SetString(TriPanelPosition,2)</onclick>
                     <visible>Substring(Window(home).Property(actualViewtype),TriPanel)</visible>
+                </control>
+                <control type="button" id="1638">
+                    <label>$LOCALIZE[31674]</label>
+                    <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(TriPanelSquarePosition)][/COLOR]</label2>
+                    <include>Objects_MediaMenuButtonAlt2</include>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelSquarePosition),1) | IsEmpty(Skin.String(TriPanelSquarePosition))">Skin.SetString(TriPanelSquarePosition,2)</onclick>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelSquarePosition),3)">Skin.SetString(TriPanelSquarePosition,1)</onclick>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelSquarePosition),2)">Skin.SetString(TriPanelSquarePosition,3)</onclick>
+                    <onclick condition="Stringcompare(Skin.String(TriPanelSquarePosition),1)">Skin.SetString(TriPanelSquarePosition,2)</onclick>
+                    <visible>Stringcompare(Window(home).Property(actualViewtype),TriPanelSquare)</visible>
                 </control>
                 <control type="radiobutton" id="1640">
                     <include>Objects_MediaMenuButtonAlt2</include>

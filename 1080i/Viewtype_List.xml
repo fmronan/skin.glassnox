@@ -41,16 +41,16 @@
             <include>Animation_ListSlideRight</include>
             <visible>[Skin.HasSetting(roundedcovers) + !Container.Content(episodes)] | [Skin.HasSetting(listshowposter) + Container.Content(episodes)]</visible>
             <visible>[Container.Content(movies) |Container.Content(episodes) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons) | Container.Content(genres) | Container.Content(musicvideos) | [Window.IsActive(programs) + !Container.Content(addons)]]</visible>
-            <control type="image">
-                <posx>-217</posx>
-                <posy>128</posy>
-                <width>510</width>
-                <height>510</height>
-                <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
-                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+			<control type="image">
+                <posx>-211</posx>
+                <posy>135</posy>
+                <width>500</width>
+                <height>500</height>
+                <aspectratio align="right">keep</aspectratio>
+                <texture background="true">$VAR[cdArtVar]</texture>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)+!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)</visible>
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
-                <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                <animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
                 <bordersize>7</bordersize>
             </control>
             <control type="image">
@@ -58,11 +58,13 @@
                 <posy>135</posy>
                 <width>500</width>
                 <height>500</height>
+                <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
-                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)+IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
                 <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
-                <bordersize>7</bordersize>
+                <bordersize>2</bordersize>
+				<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
             </control>
             <control type="image">
                 <posx>-86</posx>
@@ -72,7 +74,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture background="true">$VAR[DiscartLogo]</texture>
                 <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001) + !Skin.HasSetting(lowlistmaker)</visible>
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
                 <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
             </control>
@@ -84,7 +86,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
                 <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001) + !Skin.HasSetting(lowlistmaker)</visible>
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
                 <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
             </control>
@@ -96,7 +98,7 @@
                 <aspectratio>keep</aspectratio>
                 <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
                 <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001)</visible>
+                <visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://1/7/) + !Control.HasFocus(5001) + !Skin.HasSetting(lowlistmaker)</visible>
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
                 <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
             </control>
@@ -436,7 +438,7 @@
                 <onup>50</onup>
                 <ondown>50</ondown>
                 <onright>5001</onright>
-                <viewtype label="535">list</viewtype>
+                <viewtype label="535">BigWrap</viewtype>
                 <pagecontrol>62</pagecontrol>
                 <scrolltime tween="quadratic">200</scrolltime>
                 <itemlayout height="100" condition="!Skin.HasSetting(slimlist) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]">

@@ -683,12 +683,13 @@
                     <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
                 </animation>
                 <control type="image">
-                    <posx>2527</posx>
-                    <posy>701</posy>
-                    <width>286</width>
-                    <height>286</height>
+                    <posx>2530</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
                     <fadetime>4000</fadetime>
-                    <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+                    <aspectratio align="right">keep</aspectratio>
+					<texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
                     <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)+Skin.HasSetting(usecases)" reversible="true">
                         <effect type="slide" start="0,0" end="-1600,0" delay="6500" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="6200" time="1120" tween="quadratic" easing="out" />
@@ -697,7 +698,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>!IsEmpty(ListItem.Art(discart))</visible>
                 </control>
                 <control type="image">
                     <posx>2530</posx>
@@ -705,7 +706,10 @@
                     <width>280</width>
                     <height>280</height>
                     <fadetime>4000</fadetime>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
                     <texture background="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
+                    <bordersize>2</bordersize>
+					<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
                     <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)+Skin.HasSetting(usecases)" reversible="true">
                         <effect type="slide" start="0,0" end="-1600,0" delay="6500" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="6200" time="1120" tween="quadratic" easing="out" />
@@ -714,6 +718,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
                 <control type="image">
                     <posx>2600</posx>
@@ -731,7 +736,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
                 <control type="image">
                     <posx>2540</posx>
@@ -749,7 +754,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
 				<control type="image">
                     <posx>2640</posx>
@@ -768,16 +773,17 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,844" end="720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
-                <control type="image">
-                    <posx>2537</posx>
-                    <posy>981</posy>
-                    <width>286</width>
-                    <height>286</height>
+				<control type="image">
+                    <posx>2540</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
                     <fadetime>4000</fadetime>
-                    <colordiffuse>22FFFFFF</colordiffuse>
-                    <texture background="true" flipy="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
+					<colordiffuse>22FFFFFF</colordiffuse>
+					<aspectratio align="right">keep</aspectratio>
+					<texture background="true" flipy="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
                     <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)+Skin.HasSetting(usecases)" reversible="true">
                         <effect type="slide" start="0,0" end="-1600,0" delay="6500" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,1124" end="-720" delay="6200" time="1120" tween="quadratic" easing="out" />
@@ -786,7 +792,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,1124" end="-720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>!IsEmpty(ListItem.Art(discart))</visible>
                 </control>
                 <control type="image">
                     <posx>2540</posx>
@@ -795,7 +801,10 @@
                     <height>280</height>
                     <fadetime>4000</fadetime>
 					<colordiffuse>22FFFFFF</colordiffuse>
-                    <texture background="true" flipy="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true" flipy="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
+					<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+                    <bordersize>2</bordersize>
                     <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)+Skin.HasSetting(usecases)" reversible="true">
                         <effect type="slide" start="0,0" end="-1600,0" delay="6500" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,1124" end="-720" delay="6200" time="1120" tween="quadratic" easing="out" />
@@ -804,6 +813,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,1124" end="-720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
                 <control type="image">
                     <posx>2550</posx>
@@ -822,7 +832,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,1124" end="-720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
 				<control type="image">
                     <posx>2650</posx>
@@ -842,7 +852,7 @@
                         <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
                         <effect type="rotate" start="0" center="2670,1124" end="-720" delay="1000" time="1120" tween="quadratic" easing="out" />
                     </animation>
-                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(Container(501).ListItem.Art(discart))+ !IsEmpty(Container(501).ListItem.Art(fanart))+ !Skin.HasSetting(lowlistmaker)</visible>
                 </control>
             </control> 
         </control>
@@ -1952,20 +1962,19 @@
     <!-- Rolling discart -->
     <include name="MovieShowcaseDisc">
 		<control type="image">
-                    <posx>1137</posx>
-                    <posy>67</posy>
-                    <width>246</width>
-                    <height>246</height>
-                    <fadetime>4000</fadetime>
-                    <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
-                    <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-					   <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
-					   <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
-					   <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
-					</animation>
-                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-                    <visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases)</visible>
-                </control>
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
+            <visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) +[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
+        </control>
         <control type="image">
             <posx>1140</posx>
             <posy>70</posy>
@@ -1976,8 +1985,11 @@
                <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
+            <aspectratio scalediffuse="false">scale</aspectratio>
             <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
-            <visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases)</visible>
+            <bordersize>2</bordersize>
+			<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+            <visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
         </control>
         <control type="image">
 			<posx>1200</posx>
@@ -1993,7 +2005,7 @@
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases)</visible>
+			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker)</visible>
 		</control>
 		<control type="image">
 			<posx>1148.5</posx>
@@ -2009,7 +2021,7 @@
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases)</visible>
+			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker)</visible>
 		</control>
 		<control type="image">
 			<posx>1234.25</posx>
@@ -2026,22 +2038,21 @@
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases)</visible>
+			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker)</visible>
 		</control>
         <!-- Spinning disc art animation -->
-        <control type="image">
-                    <posx>23</posx>
-                    <posy>67</posy>
-                    <width>246</width>
-                    <height>246</height>
-                    <fadetime>4000</fadetime>
-                    <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
-                    <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-                <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
+		<control type="image">
+            <posx>26</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+            <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
-                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-                    <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)</visible>
-                </control>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
+            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)+[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
+        </control>
         <control type="image">
             <posx>26</posx>
             <posy>70</posy>
@@ -2050,8 +2061,11 @@
             <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
+            <aspectratio scalediffuse="false">scale</aspectratio>
             <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
-            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)</visible>
+            <bordersize>2</bordersize>
+			<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
         </control>
         <control type="image">
 			<posx>86</posx>
@@ -2065,7 +2079,7 @@
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)</visible>
+			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)</visible>
 		</control>
 		<control type="image">
 			<posx>34.5</posx>
@@ -2079,7 +2093,7 @@
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)</visible>
+			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)</visible>
 		</control>
 		<control type="image">
 			<posx>120.25</posx>
@@ -2094,7 +2108,7 @@
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)</visible>
+			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)</visible>
 		</control>
     </include>
     <!-- Open case -->

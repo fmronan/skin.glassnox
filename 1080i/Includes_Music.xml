@@ -1015,27 +1015,35 @@
     <include name="MusicVisPanelLayout">
         <control type="image">
             <posx>15</posx>
-            <posy>62</posy>
-            <width>370</width>
-            <height>60</height>
-            <texture border="1">osd/osd_settings_buttonnf.png</texture>
+            <posy>10</posy>
+            <width>180</width>
+            <height>230</height>
+            <texture border="4">osd/osd_settings_buttonnf.png</texture>
         </control>
         <control type="image">
             <posx>0</posx>
-            <width>400</width>
-            <height>120</height>
+            <posy>10</posy>
+            <width>235</width>
+            <height>235</height>
             <aspectratio>scale</aspectratio>
             <texture>$INFO[Listitem.Icon]</texture>
-            <colordiffuse>55FFFFFF</colordiffuse>
+            <colordiffuse>FFFFFFFF</colordiffuse>
         </control>
+		<control type="image">
+			<posy>190</posy>
+			<width>235</width>
+			<height>60</height>
+			<texture>common/bgcolor.png</texture>
+			<animation effect="fade" start="100" end="80" time="0" condition="true">Conditional</animation>
+		</control>
         <control type="textbox">
-            <posx>15</posx>
-            <posy>20</posy>
-            <width>370</width>
+            <posx>5</posx>
+            <posy>191</posy>
+            <width>230</width>
             <height>108</height>
-            <align>left</align>
-            <font>Font_Reg18</font>
-            <textcolor>grey2</textcolor>
+            <align>center</align>
+            <font>Font_Reg14_Caps</font>
+            <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
             <info>ListItem.Label</info>
         </control>
     </include>
@@ -1654,7 +1662,7 @@
                             <posx>379</posx>
                             <posy>-22</posy>
                             <width>800</width>
-                            <height>480</height>
+                            <height>490</height>
                             <onup>5012</onup>
                             <ondown>5012</ondown>
                             <onback>Dialog.Close(1154)</onback>
@@ -1665,18 +1673,28 @@
                             <focusposition>0</focusposition>
                             <scrolltime tween="cubic" easing="inout">400</scrolltime>
                             <preloaditems>2</preloaditems>
-                            <itemlayout height="120" width="400">
+                            <itemlayout height="240" width="266">
                                 <include>MusicVisPanelLayout</include>
-                            </itemlayout>
-                            <focusedlayout height="120" width="400">
                                 <control type="image">
-                                    <width>400</width>
-                                    <height>120</height>
-                                    <texture>views/tripanel/listselect_fo.png</texture>
+                                    <posy>10</posy>
+                                    <width>240</width>
+                                    <height>240</height>
+                                    <texture border="6">common/bgcolor.png</texture>
+                                    <visible>Control.HasFocus(5010)</visible>
+                                    <include>Animation_VisibleChange400</include>
+                                    <colordiffuse>55FFFFFF</colordiffuse>
+                                </control>
+                            </itemlayout>
+                            <focusedlayout height="240" width="266">
+                                <include>MusicVisPanelLayout</include>
+                                <control type="image">
+                                    <posy>10</posy>
+                                    <width>240</width>
+                                    <height>240</height>
+                                    <texture border="6">views/addonwall_select.png</texture>
                                     <visible>Control.HasFocus(5010)</visible>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
-                                <include>MusicVisPanelLayout</include>
                             </focusedlayout>
                             <content>
                                 <include>SimilarArtistsItems</include>
@@ -1765,7 +1783,7 @@
                             <posx>379</posx>
                             <posy>-22</posy>
                             <width>800</width>
-                            <height>480</height>
+                            <height>490</height>
                             <onup>6012</onup>
                             <ondown>6012</ondown>
                             <onback>Dialog.Close(1154)</onback>
@@ -1776,18 +1794,28 @@
                             <focusposition>0</focusposition>
                             <scrolltime tween="cubic" easing="inout">400</scrolltime>
                             <preloaditems>2</preloaditems>
-                            <itemlayout height="120" width="400">
+                            <itemlayout height="240" width="266">
                                 <include>MusicVisPanelLayout</include>
-                            </itemlayout>
-                            <focusedlayout height="120" width="400">
                                 <control type="image">
-                                    <width>400</width>
-                                    <height>120</height>
-                                    <texture>views/tripanel/listselect_fo.png</texture>
+                                    <posy>10</posy>
+                                    <width>240</width>
+                                    <height>240</height>
+                                    <texture border="6">common/bgcolor.png</texture>
+                                    <visible>Control.HasFocus(6010)</visible>
+                                    <include>Animation_VisibleChange400</include>
+                                    <colordiffuse>55FFFFFF</colordiffuse>
+                                </control>
+                            </itemlayout>
+                            <focusedlayout height="240" width="266">
+                                <include>MusicVisPanelLayout</include>
+                                <control type="image">
+                                    <posy>10</posy>
+                                    <width>240</width>
+                                    <height>240</height>
+                                    <texture border="6">views/addonwall_select.png</texture>
                                     <visible>Control.HasFocus(6010)</visible>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
-                                <include>MusicVisPanelLayout</include>
                             </focusedlayout>
                             <content>
                                 <include>DiscographyItems</include>
@@ -2001,33 +2029,33 @@
                             <scrolltime tween="cubic" easing="inout">400</scrolltime>
                             <preloaditems>2</preloaditems>
                             <itemlayout height="48" width="800">
-                                <control type="image">
-                                    <posx>15</posx>
-                                    <posy>0</posy>
-                                    <width>770</width>
-                                    <height>48</height>
-                                    <texture>osd/osd_settings_buttonnf.png</texture>
-                                </control>
-                                <control type="label">
-                                    <posx>35</posx>
-                                    <posy>0</posy>
-                                    <width>60</width>
-                                    <height>48</height>
-                                    <align>right</align>
-                                    <label>$INFO[ListItem.Property(Number)]</label>
-                                    <font>Font_Reg18</font>
-                                    <textcolor>$VAR[TitleColorVar]</textcolor>
-                                </control>
-                                <control type="label">
-                                    <posx>45</posx>
-                                    <posy>0</posy>
-                                    <width>765</width>
-                                    <height>48</height>
-                                    <align>left</align>
-                                    <label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(Artist)]: [/COLOR]$INFO[ListItem.Label]</label>
-                                    <font>Font_Reg18</font>
-                                    <textcolor>grey2</textcolor>
-                                </control>
+								<control type="image">
+									<posx>15</posx>
+									<posy>0</posy>
+									<width>770</width>
+									<height>48</height>
+									<texture border="3">osd/osd_settings_buttonnf.png</texture>
+								</control>
+								<control type="label">
+									<posx>35</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>48</height>
+									<align>right</align>
+									<label>$INFO[ListItem.Property(Number)]</label>
+									<font>Font_Reg18</font>
+									<textcolor>$VAR[TitleColorVar]</textcolor>
+								</control>
+								<control type="label">
+									<posx>45</posx>
+									<posy>0</posy>
+									<width>765</width>
+									<height>48</height>
+									<align>left</align>
+									<label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(Artist)]: [/COLOR]$INFO[ListItem.Label]</label>
+									<font>Font_Reg18</font>
+									<textcolor>grey2</textcolor>
+								</control>
                                 <!--                 <control type="label">
                     <posy>10</posy>
                     <posx>235</posx>
@@ -2044,7 +2072,7 @@
                                 <control type="image">
                                     <width>800</width>
                                     <height>48</height>
-                                    <texture>views/tripanel/listselect_fo.png</texture>
+                                    <texture border="8">views/tripanel/listselect_fo.png</texture>
                                     <visible>Control.HasFocus(8010)</visible>
                                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                                 </control>
@@ -2053,7 +2081,7 @@
                                     <posy>0</posy>
                                     <width>370</width>
                                     <height>48</height>
-                                    <texture>osd/osd_settings_buttonnf.png</texture>
+                                    <texture border="3">osd/osd_settings_buttonnf.png</texture>
                                 </control>
                                 <control type="label">
                                     <posx>35</posx>
@@ -2082,7 +2110,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(1).Artist]</property>
                                     <property name="Number">1:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(1).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(1)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(1).Title)</visible>
                                 </item>
                                 <item>
@@ -2090,8 +2118,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(2).Artist]</property>
                                     <property name="Number">2:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(2).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(2)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(2).Title)</visible>
                                 </item>
                                 <item>
@@ -2099,9 +2126,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(3).Artist]</property>
                                     <property name="Number">3:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(3).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(3)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(3).Title)</visible>
                                 </item>
                                 <item>
@@ -2109,10 +2134,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(4).Artist]</property>
                                     <property name="Number">4:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(4).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(4)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(4).Title)</visible>
                                 </item>
                                 <item>
@@ -2120,11 +2142,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(5).Artist]</property>
                                     <property name="Number">5:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(5).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(5)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(5).Title)</visible>
                                 </item>
                                 <item>
@@ -2132,12 +2150,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(6).Artist]</property>
                                     <property name="Number">6:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(6).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(6)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(6).Title)</visible>
                                 </item>
                                 <item>
@@ -2145,13 +2158,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(7).Artist]</property>
                                     <property name="Number">7:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(7).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(7)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(7).Title)</visible>
                                 </item>
                                 <item>
@@ -2159,14 +2166,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(8).Artist]</property>
                                     <property name="Number">8:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(8).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(8)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(8).Title)</visible>
                                 </item>
                                 <item>
@@ -2174,15 +2174,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(9).Artist]</property>
                                     <property name="Number">9:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(9).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(9)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(9).Title)</visible>
                                 </item>
                                 <item>
@@ -2190,16 +2182,7 @@
                                     <property name="Artist">$INFO[MusicPlayer.Offset(10).Artist]</property>
                                     <property name="Number">10:</property>
                                     <thumb>$INFO[MusicPlayer.Offset(10).Cover]</thumb>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
-                                    <onclick>PlayerControl(Next)</onclick>
+                                    <onclick>Playlist.PlayOffset(10)</onclick>
                                     <visible>!IsEmpty(MusicPlayer.Offset(10).Title)</visible>
                                 </item>
                             </content>

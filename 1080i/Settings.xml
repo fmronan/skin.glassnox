@@ -5,7 +5,14 @@
     <allowoverlay>no</allowoverlay>
     <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
     <controls>
-        <include>CommonSettingsBackground</include>
+       <!-- <include>CommonSettingsBackground</include>-->
+       <control type="image">
+            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+            <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+            <fadetime>600</fadetime>
+            <texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
+            <aspectratio align="center" aligny="top">scale</aspectratio>
+        </control>
         <include>CommonMediaPlayingBackground</include>
         <include>Furniture_SettingsFloor</include>
         <control type="group">
@@ -18,8 +25,8 @@
                 <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
             </animation>
             <animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-            <include>Furniture_SettingsBackPanel2</include>
-            <include>Furniture_SettingsInternalBackPanel</include>
+            <include>Furniture_SettingsBackPanel</include>
+           <!-- <include>Furniture_SettingsInternalBackPanel</include>-->
             <control type="list" id="9000">
                 <posx>63</posx>
                 <posy>190</posy>
@@ -41,7 +48,7 @@
                 </itemlayout>
                 <focusedlayout height="74" width="570">
                     <control type="image">
-                        <width>434</width>
+                        <width>324</width>
                         <height>74</height>
                         <texture>views/tripanel/listselect_fo.png</texture>
                         <animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
@@ -58,6 +65,7 @@
                 <content>
                     <item id="1">
                         <label>480</label>
+                        <onclick>SetProperty(BackgroundChoose,1,home)</onclick>
                         <onclick>ActivateWindow(AppearanceSettings)</onclick>
                         <icon>special://skin/backgrounds/appearance.jpg</icon>
                         <property name="description">$LOCALIZE[31400]</property>
@@ -65,6 +73,7 @@
                     <item id="2">
                         <label>157</label>
                         <onclick>ActivateWindow(VideosSettings)</onclick>
+                        <onclick>SetProperty(BackgroundChoose,2,home)</onclick>
                         <icon>special://skin/backgrounds/videos/videos.jpg</icon>
                         <property name="description">$LOCALIZE[31401]</property>
                     </item>
@@ -116,7 +125,7 @@
                         <label>13281</label>
                         <label2>31413</label2>
                         <onclick>ActivateWindow(systeminfo)</onclick>
-                        <icon>special://skin/backgrounds/system/systeminfo.jpg</icon>
+                        <icon>special://skin/backgrounds/systeminfo.jpg</icon>
                         <property name="description">$LOCALIZE[31409]</property>
                     </item>
                     <item id="9">
@@ -128,22 +137,38 @@
                 </content>
             </control>
             <control type="image">
-                <posx>498</posx>
-                <posy>87</posy>
-                <width>1260</width>
-                <height>708</height>
-                <fadetime>600</fadetime>
-                <texture background="true">$INFO[Container(9000).ListItem.Icon]</texture>
+                <posx>456</posx>
+                <posy>680</posy>
+                <width>1210</width>
+                <height>250</height>
+                <texture>osd/osd_settings_back_glow.png</texture>
+                <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                <include>PanelGlowFade</include>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>456</posx>
+                <posy>680</posy>
+                <width>1210</width>
+                <height>250</height>
+                <texture>osd/osd_settings_back.png</texture>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>475</posx>
+                <posy>707</posy>
+                <width>1172</width>
+                <height>60</height>
+                <texture border="1">osd/osd_settings_buttonnf.png</texture>
             </control>
             <control type="textbox">
                 <posx>555</posx>
-                <posy>810</posy>
-                <width>1200</width>
+                <posy>720</posy>
+                <width>1000</width>
                 <height>210</height>
                 <font>Font_Reg20</font>
                 <label>$INFO[Container(9000).ListItem.Property(description)]</label>
             </control>
-            <include>Furniture_SettingsInternalFrontPanel</include>
         </control>
         <control type="group">
             <include>Animation_HideBreadCrumbs</include>

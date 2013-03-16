@@ -314,7 +314,7 @@
                         <posx>1500</posx>
                         <posy>606</posy>
                         <width>405</width>
-                        <height>350</height>
+                        <height>367</height>
                         <label>$VAR[GlobalPlotVar]</label>
                         <font>Font_Reg19</font>
                         <textcolor>white6</textcolor>
@@ -540,9 +540,9 @@
                             <posx>1275</posx>
                             <posy>756</posy>
                             <width>633</width>
-                            <height>234</height>
+                            <height>237</height>
                             <label>$VAR[GlobalPlotVar]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg32</font>
                             <textcolor>white6</textcolor>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <visible>Skin.HasSetting(nohighlist)</visible>
@@ -619,39 +619,44 @@
 			</control>
 			</control>
             </control>
-           <control type="image">
-				<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-				<visible>Skin.HasSetting(lowlistcdart)</visible>
-				<posx>42.5</posx>
-                <posy>219.5</posy>
-                <animation effect="slide" tween="cubic" easing="in" time="320" start="-450" end="0">WindowOpen</animation>
-                <animation effect="slide" tween="cubic" easing="in" time="240" end="-450">WindowClose</animation>
-                <animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
-                <animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition=" Skin.HasSetting(usecaseslowlist)">Conditional</animation>
-                <animation effect="slide" end="-3,351" time="100" easing="inout" tween="cubic" condition="Control.HasFocus(7002)+ Skin.HasSetting(usecaseslowlist)">Conditional</animation> 
-                <width>389</width>
-                <height>389</height>
-                <animation effect="rotate" end="-360" center="237,412" time="6400" delay="800" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
-                <texture background="true" diffuse="common/cdart/disc_Mask.png">common/cdart/disc_Border.png</texture>
-            </control>
-            <control type="image">
-				<visible>Skin.HasSetting(lowlistcdart)</visible>
-                <visible>Container.Content(movies)</visible>
+			<control type="image">
                 <posx>47</posx>
                 <posy>225</posy>
+                <width>380</width>
+                <height>380</height>
+                <aspectratio align="right">keep</aspectratio>
+                <texture background="true">$VAR[cdArtVar]</texture>
                 <animation effect="slide" tween="cubic" easing="in" time="320" start="-450" end="0">WindowOpen</animation>
                 <animation effect="slide" tween="cubic" easing="in" time="240" end="-450">WindowClose</animation>
                 <animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
                 <animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition=" Skin.HasSetting(usecaseslowlist)">Conditional</animation>
                 <animation effect="slide" end="-3,351" time="100" easing="inout" tween="cubic" condition="Control.HasFocus(7002)+ Skin.HasSetting(usecaseslowlist)">Conditional</animation>
+                <animation effect="rotate" end="-360" center="237,412" time="6400" delay="800" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                <visible>Skin.HasSetting(lowlistcdart) +!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)</visible>
+                <visible>Container.Content(movies)</visible>
+                
+            </control>
+            <control type="image">
+				<visible>Skin.HasSetting(lowlistcdart) + !Skin.HasSetting(lowlistmaker)</visible>
+                <visible>Skin.HasSetting(lowlistcdart) +IsEmpty(ListItem.Art(discart))</visible>
+                <posx>47</posx>
+                <posy>225</posy>    
                 <width>380</width>
                 <height>380</height>
-                <animation effect="rotate" end="-360" center="237,412" time="6400" delay="800" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
+                <bordersize>2</bordersize>
+				<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+                <animation effect="slide" tween="cubic" easing="in" time="320" start="-450" end="0">WindowOpen</animation>
+                <animation effect="slide" tween="cubic" easing="in" time="240" end="-450">WindowClose</animation>
+                <animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
+                <animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition=" Skin.HasSetting(usecaseslowlist)">Conditional</animation>
+                <animation effect="slide" end="-3,351" time="100" easing="inout" tween="cubic" condition="Control.HasFocus(7002)+ Skin.HasSetting(usecaseslowlist)">Conditional</animation>
+                <animation effect="rotate" end="-360" center="237,412" time="6400" delay="800" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
             </control>
             <control type="image">
 				<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-				<visible>Skin.HasSetting(lowlistcdart)</visible>
+				<visible>Skin.HasSetting(lowlistcdart) + !Skin.HasSetting(lowlistmaker)</visible>
                 <visible>Container.Content(movies)</visible>
                 <posx>142</posx>
                 <posy>212.8</posy>
@@ -668,7 +673,7 @@
             </control>
             <control type="image">
 				<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-				<visible>Skin.HasSetting(lowlistcdart)</visible>
+				<visible>Skin.HasSetting(lowlistcdart) + !Skin.HasSetting(lowlistmaker)</visible>
                 <visible>Container.Content(movies)</visible>
                 <posx>60.45</posx>
                 <posy>409.5</posy>
@@ -685,7 +690,7 @@
             </control>
             <control type="image">
 				<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-				<visible>Skin.HasSetting(lowlistcdart)</visible>
+				<visible>Skin.HasSetting(lowlistcdart) + !Skin.HasSetting(lowlistmaker)</visible>
                 <visible>Container.Content(movies)</visible>
                 <posx>196.2</posx>
                 <posy>545.2</posy>

@@ -3,12 +3,15 @@
     <defaultcontrol always="true">5000</defaultcontrol>
     <onload>AlarmClock(ActorIconMove,Control.Move(50,1),00:07,silent,loop)</onload>
     <onload>AlarmClock(FlagAudioMove,Control.Move(59,1),00:07,silent,loop)</onload>
-    <onload condition="System.HasAddon(script.videolanguage) + [Container.Content(movies) | Container.Content(episodes)]">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
+    <onload condition="System.HasAddon(script.videolanguage)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
     <onload condition="System.HasAddon(script.dvdextras) + Container.Content(movies)">XBMC.RunScript(script.dvdextras,$INFO[ListItem.FilenameAndPath],start_theme)</onload>
 	<onunload condition="System.HasAddon(script.dvdextras) + Container.Content(movies)">XBMC.RunScript(script.dvdextras,stop_theme)</onunload>
     <onunload>CancelAlarm(ActorIconMove,true)</onunload>
     <onunload>CancelAlarm(FlagAudioMove,true)</onunload>
     <onunload>ClearProperty(FanartZoom,movieinformation)</onunload>
+    <onunload>ClearProperty(AudioCodec)</onunload>
+    <onunload>ClearProperty(AudioCodec1)</onunload>
+    <onunload>ClearProperty(AudioChannels)</onunload>
     <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
@@ -28,15 +31,7 @@
                 <width>1192</width>
                 <height>1080</height>
                 <aspectratio align="center">scale</aspectratio>
-                <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-            </control>
-            <control type="image">
-                <posx>729</posx>
-                <width>1192</width>
-                <height>1080</height>
-                <aspectratio align="center">scale</aspectratio>
-                <texture background="true">$INFO[ListItem.Art(season.fanart)]</texture>
-                <visible>!IsEmpty(ListItem.Art(season.fanart))</visible>
+                <texture background="true">$VAR[DialogVideoInfoFanartVar]</texture>
             </control>
             <control type="image">
                 <posx>729</posx>
@@ -47,23 +42,12 @@
             </control>
             <include condition="Skin.HasSetting(effect_bg)">BG_Effect_Home</include>
             <!-- Buttons -->
-            <control type="button" id="13">
-                <posx>991</posx>
-                <posy>284</posy>
-                <width>854</width>
-                <height>42</height>
-                <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                <texturenofocus>-</texturenofocus>
-                <label>-</label>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <ondown>50</ondown>
-                <visible>!IsEmpty(ListItem.Director)</visible>
-            </control>
             <control type="button" id="130">
                 <posx>991</posx>
-                <posy>284</posy>
+                <posy>234</posy>
                 <width>854</width>
                 <height>42</height>
+                <animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <label>-</label>
@@ -74,9 +58,10 @@
             </control>
             <control type="button" id="131">
                 <posx>991</posx>
-                <posy>325</posy>
+                <posy>275</posy>
                 <width>854</width>
                 <height>42</height>
+                <animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <texturenofocus>-</texturenofocus>
                 <label>-</label>
@@ -121,7 +106,7 @@
                     </control>
                 <control type="grouplist">
                     <posx>0</posx>
-                    <posy>-5</posy>
+                    <posy>-55</posy>
                         <animation effect="slide" start="0,0" end="90,0" time="0" condition="!IsEmpty(ListItem.Top250)">Conditional</animation>
                     <width>1018</width>
                     <height>200</height>
@@ -134,10 +119,21 @@
                         <label>$INFO[ListItem.Title]</label>
                         <font>Font_Reg38_Caps</font>
                         <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) + IsEmpty(ListItem.TagLine)] | Container.Content(tvshows)">Conditional</animation>
+                        <animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
                         <scroll>true</scroll>
                         <visible></visible>
                     </control>
+                    <control type="label">
+                        <width>840</width>
+                        <height>44</height>
+                        <label fallback="31006">$INFO[ListItem.Genre]</label>
+                        <animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) + IsEmpty(ListItem.TagLine)] | Container.Content(tvshows)">Conditional</animation>
+                        <font>Font_Reg25_Caps</font>
+                        <scroll>true</scroll>
+                        <visible>System.HasAddon(script.videolanguage) + [!IsEmpty(Window.Property(AudioLanguage.1)) | !IsEmpty(Window.Property(AudioLanguage.2)) | ¡IsEmpty(Window.Property(SubtitleLanguage.1)) | !IsEmpty(Window.Property(SubtitleLanguage.2))]</visible>
+                    </control>
                 <control type="grouplist">
+					<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
                     <posx>0</posx>
                     <posy>0</posy>
                     <width>1018</width>
@@ -146,7 +142,7 @@
                     <itemgap>0</itemgap>
                     <orientation>horizontal</orientation>
                     <usecontrolcoords>true</usecontrolcoords>
-                        <visible>!IsEmpty(ListItem.Tagline)</visible>
+                    <visible>!IsEmpty(ListItem.Tagline)</visible>
                 <control type="image" id="12020">
                     <posx>0</posx>
                     <posy>6</posy>
@@ -168,6 +164,7 @@
                     </control>
                     </control>
                     <control type="label">
+						<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
                         <width>1018</width>
                         <height>40</height>
                         <aligny>bottom</aligny>
@@ -178,6 +175,7 @@
                         <visible>Container.Content(musicvideos) + !IsEmpty(ListItem.Artist)</visible>
                     </control>
                     <control type="label">
+						<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
                         <width>1018</width>
                         <height>40</height>
                         <aligny>bottom</aligny>
@@ -365,6 +363,7 @@
                 </control>
                 <!-- Second Row -->
                 <control type="group">
+					<visible>!System.HasAddon(script.videolanguage)| [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))] </visible>
                     <posy>-2</posy>
                     <visible>Container.Content(movies) | Container.Content(MusicVideos)</visible>
                     <control type="label">
@@ -387,7 +386,8 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posy>-2</posy>
+					<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
+                    <posy>-48</posy>
                     <visible>Container.Content(episodes)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -409,7 +409,8 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posy>-4</posy>
+					<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
+                    <posy>-50</posy>
                     <visible>Container.Content(tvshows)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -431,7 +432,8 @@
                 </control>
                 <!-- Third Row -->
                 <control type="group">
-                    <posy>-4</posy>
+					<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
+                    <posy>-50</posy>
                     <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -453,7 +455,8 @@
                     </control>
                 </control>
                 <control type="group">
-                    <posy>-4</posy>
+					<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
+                    <posy>-50</posy>
                     <visible>Container.Content(tvshows)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -475,7 +478,8 @@
                 </control>
                 <!-- Fourth Row Left-->
                 <control type="group">
-                    <posy>-4</posy>
+					<animation effect="slide" end="0,50" condition="!System.HasAddon(script.videolanguage) | [IsEmpty(Window.Property(AudioLanguage.1)) + IsEmpty(Window.Property(AudioLanguage.2)) + IsEmpty(Window.Property(SubtitleLanguage.1)) + IsEmpty(Window.Property(SubtitleLanguage.2))]">Conditional</animation>
+                    <posy>-50</posy>
                     <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
                     <control type="label">
                         <posx>4</posx>
@@ -496,26 +500,175 @@
                     </control>
                 </control>
              <control type="group">
+				 <visible>!IsEmpty(Window.Property(AudioLanguage.1))| !IsEmpty(Window.Property(AudioLanguage.2))</visible>
                     <posy>-4</posy>
-                    <visible>Container.Content(tvshows)</visible>
                     <control type="label">
                         <posx>4</posx>
                         <posy>255</posy>
                         <width>300</width>
                         <height>44</height>
-                        <label>$LOCALIZE[515]:</label>
+                        <label>$LOCALIZE[445]:</label>
                         <font>Font_Reg32</font>
                         <textcolor>$VAR[FlagDiffuseVar]</textcolor>
                     </control>
-                    <control type="label">
-                        <posx>180</posx>
-                        <posy>255</posy>
-                        <width>750</width>
-                        <height>44</height>
-                        <label>$INFO[ListItem.Genre]</label>
-                        <font>Font_Reg32</font>
-                    </control>
+					<control type="grouplist">
+						
+                    <posx>180</posx>
+                    <posy>261</posy>
+                    <height>44</height>
+                    <width>115</width>
+                    <itemgap>4</itemgap>
+                    <orientation>horizontal</orientation> 
+					<include>AudioandCodecFlag</include>
+					</control>
+					<control type="grouplist">
+						<visible>!IsEmpty(Window.Property(AudioLanguage.2))</visible>
+                    <posx>180</posx>
+                    <posy>261</posy>
+                    <height>44</height>
+                    <width>230</width>
+                    <itemgap>4</itemgap>
+                    <orientation>horizontal</orientation> 
+					<include>AudioandCodecFlag</include>
+					</control>
+					<control type="grouplist">
+						<visible>!IsEmpty(Window.Property(AudioLanguage.3))</visible>
+                    <posx>180</posx>
+                    <posy>261</posy>
+                    <height>44</height>
+                    <width>345</width>
+                    <itemgap>4</itemgap>
+                    <orientation>horizontal</orientation> 
+					<include>AudioandCodecFlag</include>
+					</control>
+					<control type="grouplist">
+						<visible>!IsEmpty(Window.Property(AudioLanguage.4))</visible>
+                    <posx>180</posx>
+                    <posy>261</posy>
+                    <height>44</height>
+                    <width>460</width>
+                    <itemgap>4</itemgap>
+                    <orientation>horizontal</orientation> 
+					<include>AudioandCodecFlag</include>
+					</control>
                 </control>
+                <control type="group">
+					<visible>!IsEmpty(Window.Property(SubtitleLanguage.1)) | !IsEmpty(Window.Property(SubtitleLanguage.2))</visible>
+					<posx>700</posx>
+                    <posy>-4</posy>
+                    <control type="label">
+                        <posx>4</posx>
+                        <posy>255</posy>
+                        <width>300</width>
+                        <height>44</height>
+                        <label>$LOCALIZE[287]:</label>
+                        <font>Font_Reg32</font>
+                        <textcolor>$VAR[FlagDiffuseVar]</textcolor>
+                    </control>
+                    <control type="grouplist">
+						<posx>145</posx>
+						<posy>261</posy>
+						<height>44</height>
+						<width>230</width>
+						<itemgap>4</itemgap>
+						<orientation>horizontal</orientation>
+							<control type="image">
+								<posy>255</posy>
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.1),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
+                            </control>
+                            <control type="image">
+								<posy>255</posy>
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.2),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.2))</visible>
+                            </control>
+                            <control type="image">
+								<posy>255</posy>
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.3),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.3))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.4),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.4))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.5),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.5))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.6),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.6))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.7),flags/language/,.png]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.7))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.8),flags/language/,.png]</texture>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.8))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.9),flags/language/,.png]</texture>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.9))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.10),flags/language/,.png]</texture>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.10))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.11),flags/language/,.png]</texture>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.11))</visible>
+                            </control>
+                            <control type="image">
+                                <width>44</width>
+                                <height>44</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture>$INFO[Window.Property(SubtitleLanguage.12),flags/language/,.png]</texture>
+                                <visible>!IsEmpty(Window.Property(SubtitleLanguage.12))</visible>
+                            </control>
+					</control>
+				</control>
+                
     <!--             <control type="group">
                     <posy>-4</posy>
                     <visible>Container.Content(tvshows) + !Skin.HasSetting(DisableNextAiredInfo)</visible>
@@ -569,7 +722,7 @@
                 </control>
                 <control type="textbox">
                     <posx>4</posx>
-                    <posy>580</posy>
+                    <posy>590</posy>
                     <width>746</width>
                     <height>264</height>
                     <align>left</align>
@@ -577,7 +730,37 @@
                     <font>Font_Reg32</font>
                     <pagecontrol>60</pagecontrol>
                     <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+                    <visible>!Skin.HasSetting(lowlistmaker) | [!IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(lowlistmaker)] |!IsEmpty(ListItem.Art(characterart)) | !IsEmpty(ListItem.Art(tvshow.characterart)) </visible>
                     <visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+                </control>
+                <control type="textbox">
+                    <posx>4</posx>
+                    <posy>590</posy>
+                    <width>1016</width>
+                    <height>264</height>
+                    <align>left</align>
+                    <label fallback="31006">$INFO[ListItem.Plot]</label>
+                    <font>Font_Reg32</font>
+                    <pagecontrol>60</pagecontrol>
+                    <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+                    <visible>Skin.HasSetting(lowlistmaker)+ IsEmpty(ListItem.Art(discart))+ IsEmpty(ListItem.Art(characterart)) + IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+                    <visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
+                </control>
+				<control type="image">
+                    <posx>780</posx>
+                    <posy>536</posy>
+                    <width>315</width>
+                    <height>315</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Art(tvshow.characterart)]</texture>
+                </control>
+				<control type="image">
+                    <posx>780</posx>
+                    <posy>536</posy>
+                    <width>315</width>
+                    <height>315</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Art(characterart)]</texture>
                 </control>
                 <control type="grouplist">
 					<posx>-8</posx>
@@ -591,9 +774,9 @@
 						<width>82</width>
 						<height>40</height>
 						<aspectratio>scale</aspectratio>
-						<texture>$INFO[Container(59).ListItem(1).Icon]</texture>
+						<texture>$INFO[Container(59).ListItem.Icon]</texture>
 						<colordiffuse>grey2</colordiffuse>
-						<visible>!IsEmpty(Container(59).ListItem(1).Icon)</visible>
+						<visible>!IsEmpty(Container(59).ListItem.Icon)</visible>
 				   </control>
 				</control>
                 <control type="grouplist">
@@ -611,11 +794,24 @@
 						<aspectratio aligny="center" align="right">keep</aspectratio>
 						<texture>$INFO[Container(59).ListItem.Property(AudioCodec1)]</texture>
 						<colordiffuse>white</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(90013))</visible>
+						<visible>!IsEmpty(Control.GetLabel(90013)+![Stringcompare(ListItem.AudioCodec,Container(59).ListItem.Property(AudioCodec) + Stringcompare(ListItem.AudioChannels,Container(59).ListItem.Property(AudioChannels)]</visible>
 					</control>   
                     <control type="image">
                         <include>Furniture_FlagUpright</include>
 						<visible>Control.IsVisible(90013)</visible>
+                    </control>
+                    <control type="image" id="900013">
+                        <posy>-7</posy>
+                        <width>126</width>
+                        <height>82</height>
+                        <aspectratio aligny="center" align="center">keep</aspectratio>
+                        <texture>$VAR[AudioFlagVar,flags/audio/,.png]</texture>
+                        <colordiffuse>white</colordiffuse>
+                        <visible>!IsEmpty(Control.GetLabel(900013))</visible>
+                    </control>
+					<control type="image">
+                        <include>Furniture_FlagUpright</include>
+                        <visible>!IsEmpty(Control.GetLabel(900013))</visible>
                     </control>
                     <control type="image" id="900011">
                         <posy>-7</posy>
@@ -639,19 +835,6 @@
 					<control type="image">
                         <include>Furniture_FlagUpright</include>
                         <visible>!IsEmpty(Control.GetLabel(900012)) | !IsEmpty(Control.GetLabel(900011))</visible>
-                    </control>
-                    <control type="image" id="900013">
-                        <posy>-7</posy>
-                        <width>126</width>
-                        <height>82</height>
-                        <aspectratio aligny="center" align="center">keep</aspectratio>
-                        <texture>$VAR[AudioFlagVar,flags/audio/,.png]</texture>
-                        <colordiffuse>white</colordiffuse>
-                        <visible>!IsEmpty(Control.GetLabel(900013))</visible>
-                    </control>
-					<control type="image">
-                        <include>Furniture_FlagUpright</include>
-                        <visible>!IsEmpty(Control.GetLabel(900013))</visible>
                     </control>
                     <control type="image" id="900014">
                         <posy>-6</posy>
@@ -689,7 +872,7 @@
                         <visible>!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
                     </control>
                     <!-- Language flags -->
-                    <control type="grouplist">
+                 <!--   <control type="grouplist">
                         <orientation>vertical</orientation>
                         <usecontrolcoords>true</usecontrolcoords>
                         <control type="grouplist" id="11000">
@@ -859,10 +1042,10 @@
                                 <visible>!Stringcompare(Window.Property(AudioLanguage.11),Window.Property(AudioLanguage.12))</visible>
                                 <visible>!IsEmpty(Window.Property(AudioLanguage.12))</visible>
                             </control>
-                           </control>
+                           </control>-->
                            
                         <!-- Subtitle flags -->
-                        <control type="grouplist" id="12000">
+                   <!--     <control type="grouplist" id="12000">
                             <animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
                             <posy>-12</posy>
                             <width>600</width>
@@ -979,7 +1162,7 @@
                                 <visible>!IsEmpty(Window.Property(SubtitleLanguage.12))</visible>
                             </control>
                         </control>
-                    </control>
+-->
                 </control>
                 <control type="group">
                     <visible>Container.Content(tvshows)</visible>
@@ -1106,6 +1289,8 @@
 			  <item>
 					<label>AudioLanguage1</label>
 					<icon>$INFO[Window.Property(AudioLanguage.1),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.1)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.1)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.1),flags/audio/]$INFO[Window.Property(AudioChannels.1),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.1))</visible>
 					<onclick>noop</onclick>
@@ -1113,6 +1298,8 @@
 				<item>
 					<label>AudioLanguage2</label>
 					<icon>$INFO[Window.Property(AudioLanguage.2),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.2)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.2)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.2),flags/audio/]$INFO[Window.Property(AudioChannels.2),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.2))</visible>
 					<onclick>noop</onclick>
@@ -1120,6 +1307,8 @@
 				<item>
 					<label>AudioLanguage3</label>
 					<icon>$INFO[Window.Property(AudioLanguage.3),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.3)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.3)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.3),flags/audio/]$INFO[Window.Property(AudioChannels.3),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.3))</visible>
 					<onclick>noop</onclick>
@@ -1127,6 +1316,8 @@
 				<item>
 					<label>AudioLanguage4</label>
 					<icon>$INFO[Window.Property(AudioLanguage.4),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.4)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.4)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.4),flags/audio/]$INFO[Window.Property(AudioChannels.4),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.4))</visible>
 					<onclick>noop</onclick>
@@ -1134,6 +1325,8 @@
 				<item>
 					<label>AudioLanguage5</label>
 					<icon>$INFO[Window.Property(AudioLanguage.5),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.5)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.5)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.5),flags/audio/]$INFO[Window.Property(AudioChannels.5),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.5))</visible>
 					<onclick>noop</onclick>
@@ -1141,6 +1334,8 @@
 				<item>
 					<label>AudioLanguage6</label>
 					<icon>$INFO[Window.Property(AudioLanguage.6),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.6)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.6)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.6),flags/audio/]$INFO[Window.Property(AudioChannels.6),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.6))</visible>
 
@@ -1149,6 +1344,8 @@
 				<item>
 					<label>AudioLanguage7</label>
 					<icon>$INFO[Window.Property(AudioLanguage.7),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.7)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.7)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.7),flags/audio/]$INFO[Window.Property(AudioChannels.7),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.7))</visible>
 					<onclick>noop</onclick>
@@ -1156,6 +1353,8 @@
 				<item>
 					<label>AudioLanguage8</label>
 					<icon>$INFO[Window.Property(AudioLanguage.8),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.8)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.8)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.8),flags/audio/]$INFO[Window.Property(AudioChannels.8),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.8))</visible>
 					<onclick>noop</onclick>
@@ -1163,6 +1362,8 @@
 				<item>
 					<label>AudioLanguage9</label>
 					<icon>$INFO[Window.Property(AudioLanguage.9),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.9)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.9)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.9),flags/audio/]$INFO[Window.Property(AudioChannels.9),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.9))</visible>
 					<onclick>noop</onclick>
@@ -1170,6 +1371,8 @@
 				<item>
 					<label>AudioLanguage10</label>
 					<icon>$INFO[Window.Property(AudioLanguage.10),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.10)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.10)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.10),flags/audio/]$INFO[Window.Property(AudioChannels.10),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.10))</visible>
 					<onclick>noop</onclick>
@@ -1177,6 +1380,8 @@
 				<item>
 					<label>AudioLanguage11</label>
 					<icon>$INFO[Window.Property(AudioLanguage.11),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.11)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.11)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.11),flags/audio/]$INFO[Window.Property(AudioChannels.11),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.11))</visible>
 					<onclick>noop</onclick>
@@ -1184,6 +1389,8 @@
 				<item>
 					<label>AudioLanguage12</label>
 					<icon>$INFO[Window.Property(AudioLanguage.12),flags/language/,.png]</icon>
+					<property name="AudioCodec">$INFO[Window.Property(AudioCodec.12)]</property>
+					<property name="AudioChannels">$INFO[Window.Property(AudioChannels.12)]</property>
 					<property name="AudioCodec1">$INFO[Window.Property(AudioCodec.12),flags/audio/]$INFO[Window.Property(AudioChannels.12),,.png]</property>
 					<visible>!IsEmpty(Window.Property(AudioLanguage.12))</visible>
 					<onclick>noop</onclick>
@@ -1198,7 +1405,7 @@
 				 <posy>366</posy>
 				 <width>900</width>
 				 <height>177</height>
-				<onup>149</onup>
+				<onup>131</onup>
 				<ondown>Skin.Reset(coverzoom)</ondown>
 				<ondown>SetFocus(19)</ondown>
 				<ondown>Skin.SetBool(artistzoom)</ondown>
@@ -1228,7 +1435,7 @@
 			    <align>center</align>
 			    <aspectratio>stretch</aspectratio>
 			    <texture>actor_glow.png</texture>
-			    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			    <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			  </control>
 			  <control type="image">
 				<posx>1</posx>
@@ -1598,39 +1805,44 @@
                 <texture>info/movieinfogradient.png</texture>
             </control>
             <control type="image">
-                <posx>1597</posx>
-                <posy>657</posy>
-                <width>286</width>
-                <height>286</height>
-                <texture>common/cdart/disc_Border.png</texture>
+                <posx>1600</posx>
+                <posy>660</posy>
+                <width>280</width>
+                <height>280</height>
+                <aspectratio align="right">keep</aspectratio>
+                <texture background="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
                 <include>Animation_VisibleChange200</include>
-                <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
 				<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24) |Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)]</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
-					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1740,800" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
 				</animation>
 				<animation type="WindowClose" reversible="false">
 					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
-					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1740,800" end="-720" time="700" tween="quadratic" easing="out" />
 				</animation>
+				 <visible>!IsEmpty(ListItem.Art(discart))</visible>
             </control>
             <control type="image">
                 <posx>1600</posx>
                 <posy>660</posy>
                 <width>280</width>
                 <height>280</height>
+                <aspectratio scalediffuse="false">scale</aspectratio>
                 <texture background="true" diffuse="common/cdart/disc_Mask.png">$VAR[DiscartVar]</texture>
+                <bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+				<bordersize>2</bordersize>
                 <include>Animation_VisibleChange200</include>
 				<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24) |Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)]</visible>
 				<animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />
-					<effect type="rotate" start="0" center="1750,810" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1740,800" end="-720" delay="1200" time="1120" tween="quadratic" easing="out" />
 				</animation>
 				<animation type="WindowClose" reversible="false">
 					<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out" />
-					<effect type="rotate" start="0" center="1750,810" end="-720" time="700" tween="quadratic" easing="out" />
+					<effect type="rotate" start="0" center="1740,800" end="-720" time="700" tween="quadratic" easing="out" />
 				</animation>
+				 <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))+ !Skin.HasSetting(lowlistmaker)</visible>
             </control>
             <control type="image">
                     <posx>1670</posx>
@@ -1638,7 +1850,7 @@
                     <width>120</width>
                     <height>120</height>
                     <aspectratio>keep</aspectratio>
-                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))+ !Skin.HasSetting(lowlistmaker)</visible>
 					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24) |Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)]</visible>
                     <texture background="true">$VAR[DiscartLogo]</texture>
 					<include>Animation_VisibleChange200</include>
@@ -1657,7 +1869,7 @@
                     <width>75</width>
                     <height>75</height>
                     <aspectratio>keep</aspectratio>
-                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
 					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24) |Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)]</visible>
                     <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
 					<include>Animation_VisibleChange200</include>
@@ -1676,7 +1888,7 @@
                     <width>60</width>
                     <height>24</height>
                     <aspectratio>keep</aspectratio>
-                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
+                    <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
 					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24) |Window.IsVisible(script-Actors-DialogVideoInfo.xml)|Window.IsVisible(script-Actors-DialogInfo.xml)]</visible>
                     <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
                     <colordiffuse>white</colordiffuse>

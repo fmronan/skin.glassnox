@@ -737,7 +737,7 @@
         <radioposx>1020</radioposx>
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>
+        <texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
     </include>
     <include name="Objects_NowPlayingSettingsButton">
         <width>672</width>
@@ -748,7 +748,7 @@
         <radioposx>550</radioposx>
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>
+        <texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
     </include>
     <include name="Objects_CustomizerSettingsButton">
         <width>400</width>
@@ -760,7 +760,7 @@
         <radioposx>290</radioposx>
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-        <texturenofocus>osd/osd_settings_buttonnf.png</texturenofocus>
+        <texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
     </include>
     <include name="Objects_CustomizerInfoButton">
         <width>535</width>
@@ -844,7 +844,7 @@
         <onload>Skin.SetString(panel_addons,7d000000)</onload>
         <onload>Skin.SetString(panel_musicplaylist,7d000000)</onload>
         <onload>Skin.SetString(panel_videoplaylist,7d000000)</onload>
-        <onload>Skin.SetString(panel_mainmenu,7d000000)</onload>
+        <onload>Skin.SetString(panel_mainmenu,f2000000)</onload>
         <onload>Skin.SetString(panel_weather,7d000000)</onload>
         <onload>Skin.SetString(panel_color,7d000000)</onload>
         <onload>Skin.SetString(panel_settings,7d000000)</onload>
@@ -3342,5 +3342,175 @@
 	</include>
 	<include name="LoadViews">
 		<views>50,52,53,57,500,501,503,550,508,509,510,511,512,514,516,518</views>
+	</include>
+	<include name="AudioandCodecFlag">
+		<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem.Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control> 
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(1).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(1).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control> 
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(2).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(2).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(3).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(3).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(4).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(4).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(5).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(5).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(6).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(6).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(7).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(7).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(8).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(8).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(9).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(9).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(10).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(10).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
+					<control type="image">
+						<width>44</width>
+						<height>44</height>
+						<colordiffuse>grey</colordiffuse>
+						<texture>$INFO[Container(59).ListItem(11).Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+					<control type="image">
+						<width>63</width>
+						<height>41</height>
+						<aspectratio aligny="center" align="right">keep</aspectratio>
+						<texture>$INFO[Container(59).ListItem(11).Property(AudioCodec1)]</texture>
+						<colordiffuse>white</colordiffuse>
+					</control>
 	</include>
 </includes>
