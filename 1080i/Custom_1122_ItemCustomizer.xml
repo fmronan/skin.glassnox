@@ -51,15 +51,15 @@
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Type,$INFO[Skin.String(ItemToEdit.Type)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
-    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].MultiFanart,$INFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
-    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$INFO[Skin.String(ItemToEdit.Label)])</onunload>
-    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Path,$INFO[Skin.String(ItemToEdit.Path)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].MultiFanart,$ESCINFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$ESCINFO[Skin.String(ItemToEdit.Label)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Path,$ESCINFO[Skin.String(ItemToEdit.Path)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget,$INFO[Skin.String(ItemToEdit.Widget)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget2,$INFO[Skin.String(ItemToEdit.Widget2)])</onunload>
-    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].WidgetTitle,$INFO[Skin.String(ItemToEdit.WidgetTitle)])</onunload>
-    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget2Title,$INFO[Skin.String(ItemToEdit.Widget2Title)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].WidgetTitle,$ESCINFO[Skin.String(ItemToEdit.WidgetTitle)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget2Title,$ESCINFO[Skin.String(ItemToEdit.Widget2Title)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Disable,$INFO[Skin.String(ItemToEdit.Disable)])</onunload>
-    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Icon,$INFO[Skin.String(ItemToEdit.Icon)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Icon,$ESCINFO[Skin.String(ItemToEdit.Icon)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].InfoLine,$INFO[Skin.String(ItemToEdit.InfoLine)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].SubMenu,$INFO[Skin.String(ItemToEdit.SubMenu)])</onunload>
     <onunload>ClearProperty(colorallicon,home)</onunload>
@@ -201,7 +201,7 @@
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>$LOCALIZE[31679]</label>
                         <onclick>Skin.SetString(ItemToEdit.Label)</onclick>
-                        <onclick>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$INFO[Skin.String(ItemToEdit.Label)])</onclick>
+                        <onclick>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$ESCINFO[Skin.String(ItemToEdit.Label)])</onclick>
                     </control>
                     <control type="button" id="24">
                         <label>$LOCALIZE[31681]</label>

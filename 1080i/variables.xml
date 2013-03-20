@@ -953,12 +953,14 @@
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
     </variable>
     <variable name="FanartPanelDetail6Var">
+		<value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$LOCALIZE[20376]:</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[21875]:</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[20352]:</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31190]:</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[515]:</value>
     </variable>
     <variable name="FanartPanelValue6Var">
+		<value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$INFO[ListItem.OriginalTitle]</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
         <value condition="Container.Content(episodes) + !ListItem.Property(IsSpecial)">$INFO[ListItem.Season,$LOCALIZE[20373] ], $INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
         <value condition="Container.Content(episodes)">$LOCALIZE[20381],$INFO[ListItem.Episode, $LOCALIZE[20359] ]</value>
@@ -1018,11 +1020,13 @@
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Listitem.Genre]</value>
     </variable>
     <variable name="PosterPanelDetail6Var">
+		<value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$LOCALIZE[20376]:</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$LOCALIZE[21875]:</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$LOCALIZE[31189]:</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$LOCALIZE[20074]:</value>
     </variable>
     <variable name="PosterPanelValue6Var">
+		<value condition="!IsEmpty(ListItem.OriginalTitle) + !Stringcompare(ListItem.OriginalTitle,ListItem.Title)">$INFO[ListItem.OriginalTitle]</value>
         <value condition="IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.Country]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(NextAiredInfo)">$VAR[LastEpisodeVar]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Mpaa]</value>
@@ -1055,7 +1059,8 @@
     </variable>
     <variable name="WatchedIconVar">
         <value condition="Container.Content(movies) + ListItem.IsFolder + !Stringcompare(ListItem.Label,..)">common/set.png</value>
-        <value condition="!Container.Content(songs) + [!IsEmpty(ListItem.Property(Album_Description)) | !IsEmpty(ListItem.Property(Artist_Description))]">common/INFO.png</value>
+        <value condition="!Container.Content(songs) + !IsEmpty(ListItem.Property(Album_Description))">defaulticons/DefaultAddonAlbumInfo.png</value>
+        <value condition="!Container.Content(songs) + !IsEmpty(ListItem.Property(Artist_Description))]">defaulticons/DefaultAddonArtistInfo.png</value>
         <value condition="Container.Content(songs)">$INFO[ListItem.DiscNumber,flags/discnumber/,.png]</value>
         <value condition="Container.ListItem.IsResumable">dialogs/circle/$INFO[ListItem.PercentPlayed].png</value>
         <value condition="!Stringcompare(ListItem.Label,..) + Container.Content(tvshows) + [[Stringcompare(Window(Home).Property(RecommendedEpisode.1.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.2.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.3.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.4.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.5.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.6.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.7.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.8.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.9.TvShowTitle),ListItem.TvShowTitle)] |[Stringcompare(Window(Home).Property(RecommendedEpisode.10.TvShowTitle),ListItem.TvShowTitle)]]">common/inprogress.png</value>
@@ -2953,79 +2958,6 @@
         <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered,$LOCALIZE[20416] ]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
         <value condition="Container.Content(seasons)">$INFO[ListItem.Episode,, [LOWERCASE]$LOCALIZE[20360] [/LOWERCASE]]$INFO[ListItem.Property(WatchedEpisodes), (,]$INFO[ListItem.Property(TotalEpisodes),/,)]</value>
     </variable>
-    <!-- Featured Items -->
-    <variable name="FeaturedInfoDialogIconVar">
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5003)">$INFO[Container(5003).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6002)">$INFO[Container(6002).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6003)">$INFO[Container(6003).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7002)">$INFO[Container(7002).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7003)">$INFO[Container(7003).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8002)">$INFO[Container(8002).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8003)">$INFO[Container(8003).ListItem.Thumb]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9002)">$INFO[Container(9002).ListItem.Icon]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Icon]</value>
-    </variable>
-    <variable name="FeaturedInfoDialogLabel1Var">
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5003)">$INFO[Container(5003).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6002)">$INFO[Container(6002).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6003)">$INFO[Container(6003).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7002)">$INFO[Container(7002).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7003)">$INFO[Container(7003).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8002)">$INFO[Container(8002).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8003)">$INFO[Container(8003).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9002)">$INFO[Container(9002).ListItem.Label]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Label]</value>
-    </variable>
-    <variable name="FeaturedInfoDialogLabel2Var">
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5003)">$INFO[Container(5003).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6002)">$INFO[Container(6002).ListItem.Property(Year)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6003)">$INFO[Container(6003).ListItem.Property(Year)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7002)">$INFO[Container(7002).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7003)">$INFO[Container(7003).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8002)">$INFO[Container(8002).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8003)">$INFO[Container(8003).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9002)">$INFO[Container(9002).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Label2]</value>
-    </variable>
-    <variable name="FeaturedInfoDialogLabel3Var">
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Property(EpisodeNo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5003)">$INFO[Container(5003).ListItem.Property(Year)]$INFO[Container(5003).ListItem.Property(Runtime), • , $LOCALIZE[12391]]$INFO[Container(5003).ListItem.Property(Rating), • ]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6002)">$INFO[Container(6002).ListItem.Property(RunningTime),, $LOCALIZE[12391]]$INFO[Container(6002).ListItem.Property(Rating), • ]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6003)">$INFO[Container(6003).ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[Container(6003).ListItem.Property(Rating), • ]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7002)">$INFO[Container(7002).ListItem.Property(EpisodeNumber)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7003)">$INFO[Container(7003).ListItem.Property(EpisodeNumber)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8002)">$INFO[Container(8002).ListItem.Property(Year)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8003)">$INFO[Container(8003).ListItem.Property(Year)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9002)">$INFO[Container(9002).ListItem.Property(Genre)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Property(Year)]</value>
-    </variable>
-    <variable name="FeaturedInfoDialogPlotVar">
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Property(Plot)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5003)">$INFO[Container(5003).ListItem.Property(Plot)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6002)">$INFO[Container(6002).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6003)">$INFO[Container(6003).ListItem.Label2]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7002)">$INFO[Container(7002).ListItem.Property(Plot)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7003)">$INFO[Container(7003).ListItem.Property(Plot)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8002)">$INFO[Container(8002).ListItem.Property(Album_Description)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8003)">$INFO[Container(8003).ListItem.Property(Album_Description)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9002)">$INFO[Container(9002).ListItem.Property(Artist_Description)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Property(Path)]</value>
-    </variable>
-    <variable name="FeaturedInfoDialogLogoVar">
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5002)">$INFO[Container(5002).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),5003)">$INFO[Container(5003).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6002)">$INFO[Container(6002).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),6003)">$INFO[Container(6003).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7002)">$INFO[Container(7002).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),7003)">$INFO[Container(7003).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8002)">$INFO[Container(8002).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),8003)">$INFO[Container(8003).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9002)">$INFO[Container(9002).ListItem.Art(clearlogo)]</value>
-        <value condition="StringCompare(Window(1115).Property(InfoDialog),9003)">$INFO[Container(9003).ListItem.Art(clearlogo)]</value>
-    </variable>
     <!-- Global Search -->
     <variable name="GlobalSearchFanartVar">
         <value condition="Control.HasFocus(111)">$INFO[Container(111).ListItem.Art(fanart)]</value>
@@ -4271,6 +4203,10 @@
     <variable name="DiscartLogo">
 		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+    </variable>
+    <variable name="WidgetLogo">
+		<value condition="!IsEmpty(Container(7000).ListItem.Property(Clearart))">$INFO[Container(7000).ListItem.Property(Clearart)]</value>
+		<value condition="!IsEmpty(Container(7000).ListItem.Property(Logo))">$INFO[Container(7000).ListItem.Property(Logo)]</value>
     </variable>
     <variable name="VarCountryOverlay-7">
 		<value condition="StringCompare(System.Language,French)">$INFO[ListItem(-7).Overlay,thumbs/Overlay/fr/]</value>

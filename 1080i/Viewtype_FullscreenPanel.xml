@@ -17,7 +17,8 @@
             <control type="group">
                 <animation effect="zoom" start="96" end="85" center="960,435" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(infopanelbackground)">Conditional</animation>
                 <control type="panel" id="518">
-                    <visible>Container.Content(episodes)|Container.Content(tvshows)|Container.Content(artists)|Container.Content(albums)|Container.Content(addons)|Container.Content(movies)</visible>
+					<visible>![!IsEmpty(Skin.String((DisableInfoPanelVL)) + Window.IsActive(videos)]</visible>
+                    <visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(movies)</visible>
                     <posy>36</posy>
                     <width>1920</width>
                     <height>1038</height>

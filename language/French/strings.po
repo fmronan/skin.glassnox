@@ -86,7 +86,7 @@ msgstr "Nouvelles Channel4"
 
 msgctxt "#31020"
 msgid "Extras"
-msgstr "Bonus"
+msgstr "Extras"
 
 msgctxt "#31021"
 msgid "Search XBMC for"
@@ -123,10 +123,6 @@ msgstr "Vitrine"
 msgctxt "#31029"
 msgid "Showcase2"
 msgstr "Vitrine2"
-
-msgctxt "#31030"
-msgid "Change info labels"
-msgstr "Editer les infos"
 
 msgctxt "#31032"
 msgid "Nothing"
@@ -439,6 +435,10 @@ msgstr "Extensions paroles"
 msgctxt "#31128"
 msgid "Lyrics"
 msgstr "Paroles"
+
+msgctxt "#31129"
+msgid "Video Stream"
+msgstr "Flux vidéo"
 
 msgctxt "#31130"
 msgid "Subtitle add-on"
@@ -1889,8 +1889,8 @@ msgid "10 Day"
 msgstr "10 jours"
 
 msgctxt "#31897"
-msgid "Press UP for extended info"
-msgstr "Appuyer sur HAUT pour les info étendues"
+msgid "Press DOWN for extended info"
+msgstr "Appuyez sur BAS pour les infos étendues"
 
 msgctxt "#31898"
 msgid "Visibility"

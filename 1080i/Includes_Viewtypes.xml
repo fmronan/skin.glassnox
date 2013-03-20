@@ -14,7 +14,7 @@
                 <colordiffuse>$VAR[ExtendedColorDiffuseVar]</colordiffuse>
             </control>
             <control type="group" id="8860">
-                <visible>![Control.IsVisible(512) | Control.IsVisible(510)  | Control.IsVisible(550)]</visible>
+                <visible>![Control.IsVisible(512) | Control.IsVisible(510) | Control.IsVisible(550)]</visible>
                 <animation effect="slide" time="800" start="1200,0" end="0,0" tween="cubic">WindowOpen</animation>
                 <animation effect="slide" time="800" end="1200,0" tween="cubic">WindowClose</animation>
                 <control type="image">
@@ -34,15 +34,15 @@
                     <posy>874</posy>
                     <width>2490</width>
                     <height>226</height>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <texture>views/showcase_spot.png</texture>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <visible>Control.IsVisible(50)</visible>
                 </control>
                 <control type="image">
-                    <width>880</width>
-                    <height>206</height>
                     <posx>1040</posx>
                     <posy>874</posy>
+                    <width>880</width>
+                    <height>206</height>
                     <texture>views/list_spot.png</texture>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <animation effect="slide" time="160" end="190" tween="cubic" condition="Control.IsVisible(52) | Control.IsVisible(53)">Conditional</animation>
@@ -61,34 +61,22 @@
                     <height>1080</height>
                     <texture>views/showcase_vignette.png</texture>
                     <colordiffuse>vignette</colordiffuse>
-                    <animation effect="slide" end="-180" condition="Control.IsVisible(512)">Conditional</animation>
-                    <animation effect="slide" end="-105" condition="Control.IsVisible(500)">Conditional</animation>
-                    <animation type="Conditional" condition="Control.HasFocus(110)">
-                        <effect type="fade" start="100" end="0" time="320" easing="inout" tween="cubic" />
-                        <effect type="slide" end="-696,0" time="320" easing="inout" tween="cubic" />
-                    </animation>
                 </control>
                 <control type="image">
                     <posx>1224</posx>
                     <width>696</width>
                     <height>1080</height>
-                    <colordiffuse>vignette</colordiffuse>
                     <texture flipx="true">views/showcase_vignette.png</texture>
-                    <animation effect="slide" end="180" condition="Control.IsVisible(512)">Conditional</animation>
-                    <animation effect="slide" end="105" condition="Control.IsVisible(500)">Conditional</animation>
-                    <animation type="Conditional" condition="Control.HasFocus(110)">
-                        <effect type="fade" start="100" end="0" time="320" easing="inout" tween="cubic" />
-                        <effect type="slide" end="696,0" time="320" easing="inout" tween="cubic" />
-                    </animation>
+                    <colordiffuse>vignette</colordiffuse>
                 </control>
             </control>
             <control type="image">
-                <include>Animation_OpenClose_Furniture</include>
-                <visible>[Control.IsVisible(518) + !Skin.HasSetting(infopanelfanart)]| Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(500) | [Control.IsVisible(512) + !Skin.HasSetting(addonwallaltbackground)] | Control.IsVisible(500) | Control.IsVisible(550)| Control.IsVisible(508)</visible>
+                <posy>874</posy>
                 <width>1920</width>
                 <height>206</height>
-                <posy>874</posy>
                 <texture>views/panel_spot.png</texture>
+                <include>Animation_OpenClose_Furniture</include>
+                <visible>[Control.IsVisible(518) + !Skin.HasSetting(infopanelfanart)]| Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(500) | [Control.IsVisible(512) + !Skin.HasSetting(addonwallaltbackground)] | Control.IsVisible(500) | Control.IsVisible(550)| Control.IsVisible(508)</visible>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <animation effect="zoom" start="0,874,1920,206" end="0,874,2020,206" time="0" reversible="false" condition="Control.IsVisible(518)">Conditional</animation>
             </control>
@@ -96,20 +84,20 @@
         </control>
         <control type="image" id="8858">
             <posy>105</posy>
+            <texture>views/logo_back.png</texture>
             <visible>[Control.IsVisible(503) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)] + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + Skin.HasSetting(altfloor)]</visible>
             <include>Animation_CommonFade</include>
             <animation effect="slide" time="160" end="0,100" tween="cubic" condition="Skin.HasSetting(landscapeonelogo)">Conditional</animation>
             <include>FullscreenDimensions</include>
-            <texture>views/logo_back.png</texture>
             <animation effect="fade" start="100" end="80" time="40" condition="Substring(Skin.CurrentTheme,whit)">Conditional</animation>
             <colordiffuse>black</colordiffuse>
         </control>
     </include>
     <include name="PanelSpot">
         <control type="image">
+            <posy>874</posy>
             <width>1920</width>
             <height>206</height>
-            <posy>874</posy>
             <texture>views/panel_spot.png</texture>
             <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
         </control>
@@ -118,32 +106,31 @@
         <control type="group">
             <animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
             <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
-            <visible>[Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + !Container.Content(episodes)] | Control.IsVisible(509) | [Control.IsVisible(500) + !StringCompare(Container.FolderName,youtube)] | Control.IsVisible(508) | Control.IsVisible(501)</visible>
+            <visible>[Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + !Container.Content(episodes) + !Container.Content(seasons)] | Control.IsVisible(509) | [Control.IsVisible(500) + !StringCompare(Container.FolderName,youtube)] | Control.IsVisible(508) | Control.IsVisible(501)</visible>
             <include>Animation_WindowFade200</include>
             <visible>[Control.IsVisible(8822) + !Container.OnNext + !Container.OnPrevious + Stringcompare(Control.GetLabel(8822),empty.png)] | !Control.IsVisible(8822) | Container.Content(seasons) | Container.Content(albums)</visible>
+            <posx>410</posx>
             <control type="label">
-                <posx>510</posx>
                 <posy>1050</posy>
-                <width>900</width>
+                <width>1100</width>
                 <align>center</align>
+                <label>$VAR[SecondLabelVar]</label>
                 <font>Font_Info_Caps</font>
-                <textcolor>white</textcolor>
                 <shadowcolor>floorshadow</shadowcolor>
+                <textcolor>white</textcolor>
                 <visible>![Control.HasFocus(61) | Control.IsVisible(4050)]</visible>
                 <include>Animation_VisibleChange400</include>
-                <label>$VAR[SecondLabelVar]</label>
             </control>
             <control type="label">
-                <posx>510</posx>
                 <posy>1012</posy>
-                <width>900</width>
+                <width>1100</width>
                 <align>center</align>
+                <label>$VAR[FirstLabelVar]</label>
                 <font>Font_ShowcaseMainLabel2_Caps</font>
+                <shadowcolor>floorshadow</shadowcolor>
+                <textcolor>floor</textcolor>
                 <scroll>true</scroll>
                 <scrollspeed>30</scrollspeed>
-                <textcolor>floor</textcolor>
-                <shadowcolor>floorshadow</shadowcolor>
-                <label>$VAR[FirstLabelVar]</label>
             </control>
         </control>
     </include>
@@ -154,7 +141,7 @@
             <height>72</height>
             <texture>views/showcase_gradient.png</texture>
             <include>Animation_CommonFade</include>
-            <visible>[Control.IsVisible(8857) | Control.IsVisible(8860)] + ![Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(50) | Control.IsVisible(518) | Control.IsVisible(57) | Control.IsVisible(511) | Control.IsVisible(516) | Control.IsVisible(514) | Control.IsVisible(506)  | Control.IsVisible(550)]</visible>
+            <visible>[Control.IsVisible(8857) | Control.IsVisible(8860)] + ![Control.IsVisible(53) | Control.IsVisible(52) | Control.IsVisible(50) | Control.IsVisible(518) | Control.IsVisible(57) | Control.IsVisible(511) | Control.IsVisible(516) | Control.IsVisible(514) | Control.IsVisible(506) | Control.IsVisible(550)]</visible>
             <animation effect="slide" time="160" end="1440" tween="cubic" condition="Control.IsVisible(510)">Conditional</animation>
             <animation effect="slide" time="160" end="-750" tween="cubic" condition="Control.IsVisible(512)">Conditional</animation>
         </control>
@@ -173,10 +160,10 @@
             <onup>50</onup>
             <orientation>horizontal</orientation>
             <animation effect="zoom" start="70" end="100" center="auto" tween="back" time="320" condition="Control.HasFocus(61) | Control.IsVisible(4050)">Conditional</animation>
-			<texturesliderbar>-</texturesliderbar>
-			<texturesliderbarfocus>-</texturesliderbarfocus>
-			<textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
-			<textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
+            <texturesliderbar>-</texturesliderbar>
+            <texturesliderbarfocus>-</texturesliderbarfocus>
+            <textureslidernib>views/scrollbarnub-nofocus.png</textureslidernib>
+            <textureslidernibfocus>views/scrollbarnub-focus.png</textureslidernibfocus>
             <texturesliderbackground border="12,0,12,0">views/scrollbarbacklist2.png</texturesliderbackground>
             <ondown condition="!Control.IsVisible(500)">109</ondown>
             <ondown condition="Control.IsVisible(500)">50</ondown>
@@ -185,7 +172,7 @@
             <posy>924</posy>
             <width>1920</width>
             <height>224</height>
-            <texture>home/homemenu_gradient.png</texture>
+            <texture border="1">home/homemenu_gradient.png</texture>
             <visible>Control.IsVisible(57) | Control.IsVisible(550) | Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(53)</visible>
         </control>
         <control type="button" id="109">
@@ -198,6 +185,8 @@
             <onback>50</onback>
         </control>
         <control type="group">
+            <posx>20</posx>
+            <posy>-1020</posy>
             <visible>Control.HasFocus(109)</visible>
             <include>Animation_WindowFade200</include>
             <animation type="Visible">
@@ -208,45 +197,43 @@
                 <effect type="fade" start="100" end="0" time="240" />
                 <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
             </animation>
-            <posx>20</posx>
-            <posy>-1020</posy>
             <control type="image">
                 <width>130</width>
                 <height>80</height>
-                <include>PanelGlowFade</include>
                 <texture>dialogs/dialog_back_shadow.png</texture>
+                <include>PanelGlowFade</include>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             </control>
             <control type="image">
                 <width>130</width>
                 <height>80</height>
-                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                 <texture>dialogs/dialog_back.png</texture>
+                <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
             <control type="label">
                 <posx>15</posx>
                 <width>100</width>
                 <height>74</height>
-                <font>Font_Reg12</font>
-                <textcolor>grey2</textcolor>
                 <align>center</align>
                 <label>31888</label>
+                <font>Font_Reg12</font>
+                <textcolor>grey2</textcolor>
                 <wrapmultiline>true</wrapmultiline>
             </control>
         </control>
     </include>
     <include name="Furniture_Glow">
         <control type="image">
-            <visible>!Control.HasFocus(109)</visible>
-            <include>Animation_OpenClose_Furniture</include>
-            <include>Animation_VisibleChange400</include>
-            <visible>![Control.IsVisible(516) | Control.IsVisible(514) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(8858) | [Skin.HasSetting(addonwallaltbackground) + Control.IsVisible(512)]]</visible>
             <posy>-100</posy>
             <width>1920</width>
             <height>608</height>
             <texture flipy="true">views/showcase_glow.png</texture>
+            <visible>!Control.HasFocus(109)</visible>
+            <include>Animation_OpenClose_Furniture</include>
+            <include>Animation_VisibleChange400</include>
+            <visible>![Control.IsVisible(516) | Control.IsVisible(514) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(8858) | [Skin.HasSetting(addonwallaltbackground) + Control.IsVisible(512)]]</visible>
             <colordiffuse>$VAR[ExtendedColorDiffuseVar]</colordiffuse>
             <include>Animation_VisibleChange400</include>
             <visible>[Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)] + ![Control.IsVisible(518) + Skin.HasSetting(infopanelbackground)]</visible>
@@ -297,71 +284,71 @@
         </control>
     </include>
     <include name="OverlayVisibility-7">
-        <texture>$VAR[VarCountryOverlay-7]</texture>
+        <texture>$INFO[ListItem(-7).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-7).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-7).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-7).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-7).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-7).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility-6">
-        <texture>$VAR[VarCountryOverlay-6]</texture>
+        <texture>$INFO[ListItem(-6).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-6).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-6).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-6).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-6).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-6).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility-5">
-        <texture>$VAR[VarCountryOverlay-5]</texture>
+        <texture>$INFO[ListItem(-5).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-5).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-5).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-5).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-5).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-5).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility-4">
-        <texture>$VAR[VarCountryOverlay-4]</texture>
+        <texture>$INFO[ListItem(-4).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-4).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-4).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-4).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-4).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-4).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility-3">
-        <texture>$VAR[VarCountryOverlay-3]</texture>
+        <texture>$INFO[ListItem(-3).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-3).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-3).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-3).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-3).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-3).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility-2">
-        <texture>$VAR[VarCountryOverlay-2]</texture>
+        <texture>$INFO[ListItem(-2).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-2).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-2).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-2).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-2).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-2).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility-1">
-        <texture>$VAR[VarCountryOverlay-1]</texture>
+        <texture>$INFO[ListItem(-1).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-1).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(-1).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-1).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-1).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-1).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility0">
-        <texture>$VAR[VarCountryOverlay0]</texture>
+        <texture>$INFO[ListItem(0).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(0).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(0).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(0).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(0).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility1">
-        <texture>$VAR[VarCountryOverlay1]</texture>
+        <texture>$INFO[ListItem(1).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(1).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(1).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(1).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(1).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(1).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility2">
-        <texture>$VAR[VarCountryOverlay2]</texture>
+        <texture>$INFO[ListItem(2).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(2).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(2).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(2).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(2).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(2).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility3">
-        <texture>$VAR[VarCountryOverlay3]</texture>
+        <texture>$INFO[ListItem(3).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(3).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(3).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(3).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(3).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(3).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility4">
-        <texture>$VAR[VarCountryOverlay4]</texture>
+        <texture>$INFO[ListItem(4).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(4).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(4).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(4).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(4).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(4).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility5">
-        <texture>$VAR[VarCountryOverlay5]</texture>
+        <texture>$INFO[ListItem(5).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(5).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(5).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(5).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(5).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(5).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility6">
-        <texture>$VAR[VarCountryOverlay6]</texture>
+        <texture>$INFO[ListItem(6).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(6).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(6).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(6).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(6).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(6).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility7">
-        <texture>$VAR[VarCountryOverlay7]</texture>
+        <texture>$INFO[ListItem(7).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(7).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(7).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(7).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(7).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(7).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility8">
-        <texture>$VAR[VarCountryOverlay8]</texture>
+        <texture>$INFO[ListItem(8).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(8).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(8).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(8).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(8).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(8).Title)]]]]</visible>
     </include>
     <include name="OverlayVisibility9">
-        <texture>$VAR[VarCountryOverlay9]</texture>
+        <texture>$INFO[ListItem(9).Overlay,thumbs/]</texture>
         <visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(9).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus) + SubString(ListItem(9).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(9).Label)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(9).TvShowTitle)]] | [Container.Content(episodes) + [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(9).Title)]]]]</visible>
     </include>
     <include name="ReloadWindowOnClick">
@@ -372,296 +359,17 @@
         <onclick condition="Window.IsActive(videoplaylist)">SetProperty(activewindow,videoplaylist,home)</onclick>
         <onclick condition="Window.IsActive(videos)">SetProperty(activewindow,videos,home)</onclick>
         <onclick condition="Window.IsActive(programs)">SetProperty(activewindow,programs,home)</onclick>
-        <onclick>SetProperty(containerpath,$INFO[Container.FolderPath],home)</onclick>
+        <onclick>SetProperty(containerpath,$ESCINFO[Container.FolderPath],home)</onclick>
         <onclick>Dialog.Close(1126)</onclick>
         <onclick>ReplaceWindow(1141)</onclick>
     </include>
     <include name="ShowcaseInfoPaneMovies">
-		<control type="group" id="7550">
-            <visible>Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
-            <visible>Control.IsVisible(9900)</visible>
-            <visible>StringCompare(Control.GetLabel(4420),chaine)</visible>
-            <visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
-            <animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
-            <animation effect="fade" time="200">WindowOpen</animation>
-            <animation effect="slide" end="0,-1000" time="240" easing="in" tween="cubic">WindowClose</animation>
-            <animation effect="zoom" end="113" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel)">Conditional</animation>
+        <control type="group" id="7550">
             <posy>39</posy>
             <width>1920</width>
             <height>750</height>
-            <control type="group">
-                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
-                 <control type="image">
-					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>502</posx>
-					<posy>-39</posy>
-					<width>935</width>
-					<height>620</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>wall/panneau.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-
-				</control>
-				<control type="image">
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>165</posx>
-					<posy>180</posy>
-					<width>1600</width>
-					<height>280</height>
-					<texture background="true">$VAR[TVShowLogoVar]</texture>
-					<fadetime>300</fadetime>
-					<animation effect="fade" start="100" end="17" time="40" condition="true">Conditional</animation>
-					<aspectratio>keep</aspectratio>
-					<include>Animation_VisibleChange400</include>
-				</control>
-				<control type="textbox">
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>580</posx>
-                    <posy>256</posy>
-                    <width>802</width>
-                    <height>230</height>
-                    <label>$VAR[FanartPanelPlotVar]</label>
-                    <textcolor>white6</textcolor>             
-                    <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                    <aligny>top</aligny>
-                </control>
-            </control>
-            <control type="group">
-                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
-                 <control type="image">
-					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>24</posx>
-					<posy>-37</posy>
-					<width>374</width>
-					<height>520</height>
-					<aspectratio>keep</aspectratio>
-					<texture>wall/panneau4.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>					
-				</control>
-				<control type="image">
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-						<posx>56</posx>
-                        <posy>10</posy>
-                        <width>326</width>
-                        <height>181</height>
-                        <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
-                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
-                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                        <bordersize>7</bordersize>
-                    </control>
-				<control type="image">
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<animation effect="rotate" time="0" delay="0" start="0" end="-9.32" condition="true">Conditional</animation>
-						<posx>107</posx>
-                        <posy>220</posy>
-                        <width>326</width>
-                        <height>181</height>
-                        <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
-                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
-                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                        <bordersize>7</bordersize>
-                    </control>
-			</control>
-            <control type="group">
-                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
-                 <control type="image">
-					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>635</posx>
-					<posy>-175</posy>
-					<width>680</width>
-					<height>420</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>wall/panneau.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-				</control>
-			<control type="group">
-				<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-				<posx>650</posx>
-				<posy>10</posy>
-				<control type="label">
-                    <posy>-4</posy>
-                    <height>20</height>
-                    <width>420</width>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail1Var]</label>
-                </control>	
-				<control type="label">
-                    <posy>30</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <aligny>top</aligny>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue1Var]</label>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>-4</posy>
-                    <height>20</height>
-                    <aligny>top</aligny>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail2Var]</label>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>30</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <aligny>top</aligny>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
-                </control>
-                <control type="label">
-                    <posy>67</posy>
-                    <height>20</height>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail3Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posy>101</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue3Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>67</posy>
-                    <height>20</height>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail4Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="fadelabel">
-                    <posx>352</posx>
-                    <posy>101</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scrollspeed>200</scrollspeed>
-                    <pauseatend>3000</pauseatend>
-                    <label>$INFO[ListItem.RatingAndVotes]</label>
-                    <label>$LOCALIZE[13409] #$INFO[ListItem.Top250]</label>
-                    <visible>!IsEmpty(ListItem.Top250)</visible>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>101</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue4Var]</label>
-                    <visible>IsEmpty(ListItem.Top250)</visible>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posy>138</posy>
-                    <height>20</height>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail5Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posy>174</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue5Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>138</posy>
-                    <height>20</height>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail6Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>174</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue6Var]</label>
-                    <aligny>top</aligny>
-                </control>
-			</control>
-			</control>
-			<control type="group">
-                <visible>!Skin.HasSetting(no_infopane_panel)</visible>
-                 <control type="image">
-					 <animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<posx>1560</posx>
-					<posy>-37</posy>
-					<width>358</width>
-					<height>570</height>
-					<aspectratio>keep</aspectratio>
-					<texture>wall/panneau3.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-				</control>
-				<control type="image">
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-						<posx>1555</posx>
-                        <posy>15</posy>
-                        <width>326</width>
-                        <height>181</height>
-                        <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
-                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
-                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                        <bordersize>7</bordersize>
-                    </control>
-				<control type="image">
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">Visible</animation>
-					<animation effect="slide" start="0,-100" end="0,0" easing="out" tween="back" time="500" delay="900" reversible="false">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" easing="out" time="200" delay="200" reversible="false">WindowClose</animation>
-					<animation effect="rotate" time="0" delay="0" start="0" end="15.38" condition="true">Conditional</animation>
-						<posx>1410</posx>
-                        <posy>744</posy>
-                        <width>328</width>
-                        <height>181</height>
-                        <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
-                        <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
-                        <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-                        <bordersize>7</bordersize>
-                    </control>
-				</control>
-            </control>
-        <control type="group" id="7550">
             <visible>Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
             <visible>Control.IsVisible(9900)</visible>
-            <visible>!StringCompare(Control.GetLabel(4420),chaine)</visible>
             <visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
             <animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
             <animation effect="slide" end="0,45" time="320" easing="inout" tween="cubic" condition="Control.IsVisible(503) | Control.IsVisible(508)">Conditional</animation>
@@ -671,9 +379,6 @@
             <animation effect="slide" end="0,60" time="400" easing="in" tween="cubic" condition="[Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]">Conditional</animation>
             <animation effect="slide" end="0,65" time="400" easing="in" tween="cubic" condition="!Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503) + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)] + [Container.Content(tvshows) | Container.Content(movies)]">Conditional</animation>
             <animation effect="zoom" end="113" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel)">Conditional</animation>
-            <posy>39</posy>
-            <width>1920</width>
-            <height>750</height>
             <control type="group">
                 <visible>!Skin.HasSetting(no_infopane_panel)</visible>
                 <include>Animation_VisibleChange400</include>
@@ -681,10 +386,10 @@
                     <posx>112</posx>
                     <width>1695</width>
                     <height>1050</height>
+                    <texture>wall/wall_bg_glow.png</texture>
                     <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                     <include>PanelGlowFade</include>
-                    <texture>wall/wall_bg_glow.png</texture>
                 </control>
                 <control type="image">
                     <posx>112</posx>
@@ -695,22 +400,22 @@
                 </control>
             </control>
             <control type="image">
-                <posy>8</posy>
                 <posx>112</posx>
+                <posy>8</posy>
                 <width>1695</width>
                 <height>750</height>
-                <fadetime>400</fadetime>
                 <texture>$VAR[InfoPanelLayoutVar]</texture>
+                <fadetime>400</fadetime>
             </control>
             <control type="image">
                 <posx>165</posx>
                 <posy>100</posy>
                 <width>1600</width>
                 <height>280</height>
+                <aspectratio>keep</aspectratio>
                 <texture background="true">$VAR[TVShowLogoVar]</texture>
                 <fadetime>300</fadetime>
                 <animation effect="fade" start="100" end="17" time="40" condition="true">Conditional</animation>
-                <aspectratio>keep</aspectratio>
                 <visible>![[Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)] + Control.IsVisible(503) + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]]</visible>
                 <visible>!Control.isVisible(8822)</visible>
                 <animation type="Conditional" condition="Stringcompare(Control.GetLabel(4420),fanart) | Container.Content(seasons) | Container.Content(episodes)">
@@ -729,6 +434,14 @@
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>!StringCompare(ListItem.Overlay,OverlayWatched.png) | Container.ListItem.IsResumable</visible>
             </control>
+            <control type="image">
+                <posx>136</posx>
+                <posy>20</posy>
+                <width>32</width>
+                <height>32</height>
+                <texture background="true">$INFO[ListItem.Country,flags/language/,.png]</texture>
+                <colordiffuse>CCFFFFFF</colordiffuse>
+            </control>
             <control type="group">
                 <visible>Container.Content(movies) | [Container.Content(tvshows) + Control.isVisible(8858)]</visible>
                 <visible>!Skin.HasSetting(no_infopane_panel)</visible>
@@ -738,10 +451,10 @@
                     <posy>12</posy>
                     <width>1580</width>
                     <height>42</height>
-                    <scroll>true</scroll>
                     <align>center</align>
                     <label>$VAR[LandscapeLogoPanelLabelVar]</label>
                     <textcolor>grey2</textcolor>
+                    <scroll>true</scroll>
                 </control>
             </control>
             <control type="image">
@@ -750,8 +463,8 @@
                 <width>798</width>
                 <height>454</height>
                 <aspectratio align="center">scale</aspectratio>
-                <fadetime>FanartCrossfadeTime</fadetime>
                 <texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$VAR[FanartTextureVar]</texture>
+                <fadetime>FanartCrossfadeTime</fadetime>
                 <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                 <bordersize>7</bordersize>
                 <animation effect="zoom" end="108" center="1800,270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503)">Conditional</animation>
@@ -777,137 +490,112 @@
              </control>
 <!-- END Extra Fanart by ShadowTek -->
             <control type="group">
-                <visible>StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
                 <posx>158</posx>
-                <posy>63</posy>
+                <posy>74</posy>
+                <visible>StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
                 <animation effect="slide" end="472,0" time="0" easing="inout" tween="cubic" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
                 <animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
                 <animation type="VisibleChange">
                     <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
+                    <control type="grouplist">
+                        <orientation>vertical</orientation>
+                        <posy>-4</posy>
                 <control type="label">
-                    <posy>-4</posy>
-                    <height>20</height>
                     <width>420</width>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <height>22</height>
                     <label>$VAR[FanartPanelDetail1Var]</label>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
                 </control>
                 <control type="label">
-                    <posy>30</posy>
-                    <height>20</height>
                     <width>300</width>
-                    <aligny>top</aligny>
-                    <scroll>true</scroll>
+                    <height>47</height>
                     <label fallback="31006">$VAR[FanartPanelValue1Var]</label>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>-4</posy>
-                    <height>20</height>
-                    <aligny>top</aligny>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail2Var]</label>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>30</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <aligny>top</aligny>
                     <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
                 </control>
                 <control type="label">
-                    <posy>67</posy>
-                    <height>20</height>
                     <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <height>22</height>
                     <label>$VAR[FanartPanelDetail3Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posy>101</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue3Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>67</posy>
-                    <height>20</height>
-                    <width>420</width>
                     <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                </control>
+                <control type="label">
+                    <width>300</width>
+                    <height>47</height>
+                    <label fallback="31006">$VAR[FanartPanelValue3Var]</label>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <width>420</width>
+                    <height>22</height>
+                    <label>$VAR[FanartPanelDetail5Var]</label>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                </control>
+                <control type="label">
+                    <width>300</width>
+                    <height>47</height>
+                    <label fallback="31006">$VAR[FanartPanelValue5Var]</label>
+                    <scroll>true</scroll>
+                </control>
+                </control>
+                    <control type="grouplist">
+                        <orientation>vertical</orientation>
+                        <posy>-4</posy>
+                    <posx>352</posx>
+               <control type="label">
+                    <width>420</width>
+                    <height>22</height>
+                    <label>$VAR[FanartPanelDetail2Var]</label>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                </control>
+                <control type="label">
+                    <width>300</width>
+                    <height>47</height>
+                    <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <width>420</width>
+                    <height>22</height>
                     <label>$VAR[FanartPanelDetail4Var]</label>
-                    <aligny>top</aligny>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
                 </control>
                 <control type="fadelabel">
-                    <posx>352</posx>
-                    <posy>101</posy>
-                    <height>20</height>
                     <width>300</width>
+                    <height>47</height>
+                    <label>$LOCALIZE[13409] #$INFO[ListItem.Top250]</label>
+                    <label>$INFO[ListItem.RatingAndVotes]</label>
                     <scrollspeed>200</scrollspeed>
                     <pauseatend>3000</pauseatend>
-                    <label>$INFO[ListItem.RatingAndVotes]</label>
-                    <label>$LOCALIZE[13409] #$INFO[ListItem.Top250]</label>
                     <visible>!IsEmpty(ListItem.Top250)</visible>
-                    <aligny>top</aligny>
                 </control>
                 <control type="label">
-                    <posx>352</posx>
-                    <posy>101</posy>
-                    <height>20</height>
                     <width>300</width>
-                    <scroll>true</scroll>
+                    <height>47</height>
                     <label fallback="31006">$VAR[FanartPanelValue4Var]</label>
+                    <scroll>true</scroll>
                     <visible>IsEmpty(ListItem.Top250)</visible>
-                    <aligny>top</aligny>
                 </control>
                 <control type="label">
-                    <posy>138</posy>
-                    <height>20</height>
                     <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                    <label>$VAR[FanartPanelDetail5Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posy>174</posy>
-                    <height>20</height>
-                    <width>300</width>
-                    <scroll>true</scroll>
-                    <label fallback="31006">$VAR[FanartPanelValue5Var]</label>
-                    <aligny>top</aligny>
-                </control>
-                <control type="label">
-                    <posx>352</posx>
-                    <posy>138</posy>
-                    <height>20</height>
-                    <width>420</width>
-                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                    <height>22</height>
                     <label>$VAR[FanartPanelDetail6Var]</label>
-                    <aligny>top</aligny>
+                    <textcolor>$VAR[SubTitleColorVar]</textcolor>
                 </control>
                 <control type="label">
-                    <posx>352</posx>
-                    <posy>174</posy>
-                    <height>20</height>
                     <width>300</width>
-                    <scroll>true</scroll>
+                    <height>47</height>
                     <label fallback="31006">$VAR[FanartPanelValue6Var]</label>
-                    <aligny>top</aligny>
+                    <scroll>true</scroll>
+                </control>
                 </control>
                 <control type="textbox">
-                    <posy>220</posy>
+                    <posy>209</posy>
                     <width>652</width>
                     <height>249</height>
                     <label>$VAR[FanartPanelPlotVar]</label>
-                    <textcolor>white6</textcolor>
+                    <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                     <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-                    <aligny>top</aligny>
                 </control>
             </control>
             <control type="group">
@@ -920,9 +608,9 @@
                     <posy>63</posy>
                     <width>323</width>
                     <height>470</height>
-                    <fadetime>200</fadetime>
-                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[ListPosterVar]</texture>
                     <aspectratio scalediffuse="false" align="center">scale</aspectratio>
+                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[ListPosterVar]</texture>
+                    <fadetime>200</fadetime>
                     <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                     <bordersize>7</bordersize>
                     <visible>StringCompare(Control.GetLabel(4420),poster)</visible>
@@ -939,126 +627,123 @@
                 </control>
                 <control type="group">
                     <posx>158</posx>
-                    <posy>60</posy>
-                    <control type="label">
-                        <posy>-6</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <aligny>top</aligny>
-                        <label>$VAR[FanartPanelDetail1Var]</label>
-                    </control>
-                    <control type="label">
-                        <posy>28</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <scroll>true</scroll>
-                        <label fallback="31006">$VAR[FanartPanelValue1Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>64</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <label>$VAR[FanartPanelDetail2Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>98</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <scroll>true</scroll>
-                        <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>132</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <label>$VAR[PosterPanelDetail3Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>166</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <scroll>true</scroll>
-                        <label fallback="31006">$VAR[PosterPanelValue3Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>198</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <label>$VAR[FanartPanelDetail4Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="fadelabel">
-                        <posy>228</posy>
-                        <height>20</height>
-                        <width>422</width>
-                        <pauseatend>3000</pauseatend>
-                        <label fallback="31006">$VAR[PosterPanelValue4Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>264</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <label>$VAR[PosterPanelDetail5Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>298</posy>
-                        <height>20</height>
-                        <width>300</width>
-                        <scroll>true</scroll>
-                        <label fallback="31006">$VAR[PosterPanelValue5Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>330</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <label>$VAR[PosterPanelDetail6Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>364</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <scroll>true</scroll>
-                        <label fallback="31006">$VAR[PosterPanelValue6Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>400</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                        <label>$VAR[PosterPanelDetail7Var]</label>
-                        <aligny>top</aligny>
-                    </control>
-                    <control type="label">
-                        <posy>434</posy>
-                        <height>20</height>
-                        <width>420</width>
-                        <scroll>true</scroll>
-                        <label fallback="31452">$VAR[PosterPanelValue7Var]</label>
-                        <aligny>top</aligny>
-                    </control>
+                    <posy>71</posy>
+                    <control type="grouplist">
+                        <orientation>vertical</orientation>
+                            <posy>0</posy>
+                        <control type="label">
+                            <width>420</width>
+                            <height>22</height>
+                            <font>Font_Reg17</font>
+                            <label>$VAR[FanartPanelDetail1Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="label">
+                            <aligny>top</aligny>
+                            <width>420</width>
+                            <font>Font_Reg17</font>
+                            <height>44</height>
+                            <label fallback="31006">$VAR[FanartPanelValue1Var]</label>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <font>Font_Reg17</font>
+                            <height>22</height>
+                            <label>$VAR[FanartPanelDetail2Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>44</height>
+                            <font>Font_Reg17</font>
+                            <aligny>top</aligny>
+                            <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>22</height>
+                            <font>Font_Reg17</font>
+                            <label>$VAR[PosterPanelDetail3Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>44</height>
+                            <font>Font_Reg17</font>
+                            <aligny>top</aligny>
+                            <label fallback="31006">$VAR[PosterPanelValue3Var]</label>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>22</height>
+                            <font>Font_Reg17</font>
+                            <label>$VAR[FanartPanelDetail4Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="fadelabel">
+                            <width>422</width>
+                            <height>44</height>
+                            <font>Font_Reg17</font>
+                            <aligny>top</aligny>
+                            <label fallback="31006">$VAR[PosterPanelValue4Var]</label>
+                            <pauseatend>3000</pauseatend>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>22</height>
+                            <font>Font_Reg17</font>
+                            <label>$VAR[PosterPanelDetail5Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="label">
+                            <width>300</width>
+                            <height>44</height>
+                            <font>Font_Reg17</font>
+                            <aligny>top</aligny>
+                            <label fallback="31006">$VAR[PosterPanelValue5Var]</label>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>22</height>
+                            <font>Font_Reg17</font>
+                            <label>$VAR[PosterPanelDetail6Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>44</height>
+                            <font>Font_Reg17</font>
+                            <aligny>top</aligny>
+                            <label fallback="31006">$VAR[PosterPanelValue6Var]</label>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>22</height>
+                            <font>Font_Reg17</font>
+                            <label>$VAR[PosterPanelDetail7Var]</label>
+                            <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        </control>
+                        <control type="label">
+                            <width>420</width>
+                            <height>44</height>
+                            <aligny>top</aligny>
+                            <font>Font_Reg17</font>
+                            <label fallback="31452">$VAR[PosterPanelValue7Var]</label>
+                            <scroll>true</scroll>
+                        </control>
+                     </control>
                     <control type="textbox" id="5777">
                         <posx>480</posx>
-                        <posy>2</posy>
+                        <posy>-9</posy>
                         <width>657</width>
                         <height>393</height>
                         <label fallback="31006">$VAR[FanartPanelPlotVar]</label>
-                        <textcolor>white6</textcolor>
+                        <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                         <animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo">Conditional</animation>
                         <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         <visible>!Control.IsVisible(503)</visible>
@@ -1066,11 +751,11 @@
                     </control>
                     <control type="textbox">
                         <posx>486</posx>
-                        <posy>2</posy>
+                        <posy>-9</posy>
                         <width>657</width>
                         <height>460</height>
                         <label fallback="31006">$VAR[FanartPanelPlotVar]</label>
-                        <textcolor>white6</textcolor>
+                        <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                         <animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo">Conditional</animation>
                         <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         <visible>!Control.IsVisible(5777)</visible>
@@ -1090,8 +775,8 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb3.jpg]</texture>
+                        <fadetime>400</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1100,8 +785,8 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb4.jpg]</texture>
+                        <fadetime>400</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1117,8 +802,8 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb1.jpg]</texture>
+                        <fadetime>400</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1127,8 +812,8 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Path,,extrathumbs/thumb2.jpg]</texture>
+                        <fadetime>400</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1146,16 +831,16 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio align="center">keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture>$VAR[InfoPanelCharacterArtVar]</texture>
+                        <fadetime>400</fadetime>
                     </control>
                     <control type="image">
                         <posy>315</posy>
                         <width>391</width>
                         <height>220</height>
                         <aspectratio aligny="top">scale</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Art(fanart)]</texture>
+                        <fadetime>400</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1167,8 +852,8 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio aligny="top">keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Art(clearart)]</texture>
+                        <fadetime>400</fadetime>
                         <bordersize>7</bordersize>
                     </control>
                     <control type="image">
@@ -1176,8 +861,8 @@
                         <width>391</width>
                         <height>220</height>
                         <aspectratio aligny="top">keep</aspectratio>
-                        <fadetime>400</fadetime>
                         <texture fallback="fallback.png" background="true">$INFO[ListItem.Art(landscape)]</texture>
+                        <fadetime>400</fadetime>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1215,14 +900,14 @@
             <include>Animation_VisibleChange400</include>
             <control type="image">
                 <posy>22</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_left.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationLeft</include>
             </control>
             <control type="image">
                 <posy>22</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_right.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationRight</include>
             </control>
         </control>
@@ -1234,33 +919,32 @@
             <control type="image">
                 <width>40</width>
                 <height>1080</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texture>common/topbar_top.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>TopbarPulseAnimationLeft</include>
             </control>
             <control type="image">
                 <width>40</width>
                 <height>1080</height>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <texture>common/topbar_down.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <include>TopbarPulseAnimationRight</include>
             </control>
         </control>
     </include>
     <include name="Neon_Floor">
-		<visible>!Skin.HasSetting(disablefloor)</visible>
         <control type="group">
             <visible>!Skin.HasSetting(DisableGlowbar) | [Skin.HasSetting(DisableGlowbar) + Skin.HasSetting(ExtendedGlowMode)]</visible>
             <control type="image">
                 <posy>854</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_left.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationLeft</include>
             </control>
             <control type="image">
                 <posy>854</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_right.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationRight</include>
             </control>
         </control>
@@ -1270,14 +954,14 @@
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
             <control type="image">
                 <posy>735</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_left.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationLeft</include>
             </control>
             <control type="image">
                 <posy>735</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_right.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationRight</include>
             </control>
         </control>
@@ -1288,26 +972,26 @@
             <include>Animation_VisibleChange400</include>
             <control type="image">
                 <posy>494</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_left.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationLeft</include>
             </control>
             <control type="image">
                 <posy>494</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_right.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationRight</include>
             </control>
             <control type="image">
                 <posy>590</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_left.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationLeft</include>
             </control>
             <control type="image">
                 <posy>590</posy>
-                <include>Topbar</include>
                 <texture>common/topbar_right.png</texture>
+                <include>Topbar</include>
                 <include>TopbarPulseAnimationRight</include>
             </control>
         </control>

@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Aeon Nox
 # Addon id: skin.aeon.nox
-# Addon Provider: Big_Noid & phil65
+# Addon Provider: Big_Noid|phil65
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
@@ -126,10 +126,11 @@ msgctxt "#31029"
 msgid "Showcase2"
 msgstr ""
 
-#empty strings from id 31030 to 31031
 msgctxt "#31030"
 msgid "Change info labels"
 msgstr ""
+
+#empty string with id 31031
 
 msgctxt "#31032"
 msgid "Nothing"
@@ -453,9 +454,6 @@ msgid "Virgin Music"
 msgstr ""
 
 #empty strings from id 31122 to 31126
-msgctxt "#31129"
-msgid "Video Stream"
-msgstr ""
 
 msgctxt "#31127"
 msgid "Lyrics add-on"
@@ -465,7 +463,9 @@ msgctxt "#31128"
 msgid "Lyrics"
 msgstr ""
 
-#empty string with id 31129
+msgctxt "#31129"
+msgid "Video Stream"
+msgstr ""
 
 msgctxt "#31130"
 msgid "Subtitle add-on"
@@ -881,10 +881,11 @@ msgctxt "#31298"
 msgid "Set area color"
 msgstr ""
 
-#empty strings from id 31299 to 31306
 msgctxt "#31299"
-msgid "Data Provider"
+msgid "Data provider"
 msgstr ""
+
+#empty strings from id 31300 to 31306
 
 msgctxt "#31307"
 msgid "Hide fanart"
@@ -1541,7 +1542,9 @@ msgctxt "#31696"
 msgid "Alternative layout"
 msgstr ""
 
-#empty string with id 31697
+msgctxt "#31697"
+msgid "Choose cover type"
+msgstr ""
 
 msgctxt "#31698"
 msgid "Show list of actors/artists birthdays"
@@ -1559,7 +1562,9 @@ msgctxt "#31701"
 msgid "Supplied backgrounds"
 msgstr ""
 
-#empty string with id 31702
+msgctxt "#31702"
+msgid "Cover settings"
+msgstr ""
 
 msgctxt "#31703"
 msgid "Set InfoLine"
@@ -2308,3 +2313,4 @@ msgstr ""
 msgctxt "#53019"
 msgid "Add new view"
 msgstr ""
+

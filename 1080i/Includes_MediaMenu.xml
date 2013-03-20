@@ -372,7 +372,6 @@
                     <control type="button" id="3">
                         <include>Objects_MediaMenuButtonIcons</include>
                         <onleft>ClearProperty(viewtypeselect,home)</onleft>
-                        <onleft>ActivateWindow(1121)</onleft>
                         <label>103</label>
                         <visible>Control.IsEnabled(3)</visible>
                     </control>
@@ -382,23 +381,7 @@
                         <include>Objects_MediaMenuButtonIcons</include>
                         <visible>Control.IsEnabled(4)</visible>
                     </control>
-                    <control type="edit" id="19">
-                        <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-                        <label>587</label>
-                        <hinttext></hinttext>
-                        <visible>!Container.Content()</visible>
-                        <include>Objects_MediaMenuButtonIcons</include>
-                    </control>
-                    <control type="radiobutton" id="20">
-                        <visible>Container.CanFilterAdvanced</visible>
-                        <label>587</label>
-                        <hinttext></hinttext>
-                        <selected>Container.Filtered</selected>
-                        <onclick>SetFocus(50)</onclick>
-                        <onclick>Filter</onclick>
-                        <include>Objects_MediaMenuButtonIcons</include>
-                        <visible>!Container.Content()</visible>
-                    </control>
+                    <include condition="!Window.IsActive(videoplaylist) + !Window.IsActive(musicplaylist)">FilterButtons</include>
                     <include condition="Window.IsActive(videolibrary)">VideoLibraryAltButtons_Left</include>
                     <include condition="Window.IsActive(AddonBrowser)">AddonBrowserButtons</include>
                     <include condition="Window.IsActive(MusicLibrary)">MusicLibraryButtons_Left</include>
@@ -692,6 +675,24 @@
             <hitrect x="50" y="0" w="1870" h="10" />
             <onfocus>ActivateWindow(playercontrols)</onfocus>
         </control>
+    </include>
+    <include name="FilterButtons">
+		<control type="edit" id="19">
+			<label>587</label>
+			<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+			<hinttext></hinttext>
+			<visible>!Container.Content()</visible>
+			<include>Objects_MediaMenuButtonIcons</include>
+		</control>
+		<control type="radiobutton" id="20">
+			<label>587</label>
+			<visible>Container.CanFilterAdvanced</visible>
+			<selected>Container.Filtered</selected>
+			<onclick>SetFocus(50)</onclick>
+			<onclick>Filter</onclick>
+			<include>Objects_MediaMenuButtonIcons</include>
+			<visible>!Container.Content()</visible>
+		</control>
     </include>
     <include name="MediaMenuIcons">
         <width>80</width>

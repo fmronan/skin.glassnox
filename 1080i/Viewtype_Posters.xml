@@ -1645,6 +1645,7 @@
                 <viewtype label="31271">Wraplist of Posters</viewtype>
                 <pagecontrol>61</pagecontrol>
                 <focusposition>1</focusposition>
+                <visible>![!IsEmpty(Skin.String((DisablePostersVL)) + Window.IsActive(videos)]</visible>
                 <visible>!IsEmpty(Container.FolderPath) + !Container.Content(years)</visible>
                 <visible>!Container.Content(countries) + !Container.Content(addons) + [!Container.Content(episodes) | SubString(Container.FolderPath,videodb://5/)]</visible>
                 <itemlayout width="210" height="750"></itemlayout>

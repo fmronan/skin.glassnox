@@ -4,7 +4,7 @@
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>backgroundcolor</backgroundcolor>
     <views>50,51,52,501,57,512,500</views>
-    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
     <controls>
         <control type="multiimage">
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -17,25 +17,6 @@
             <visible>!Container.OnNext + !Container.OnPrevious + StringCompare(Control.GetLabel(4421),infopanelonauto)</visible>
             <include>DelayAnimations</include>
         </control>
-      <!--  <control type="image">
-            <include>FullscreenDimensions</include>
-            <texture>diffuseoverlay.png</texture>
-            <animation effect="fade" time="200">WindowOpen</animation>
-            <animation effect="fade" time="200">WindowClose</animation>
-            <animation effect="fade" end="100" time="320" delay="80">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="320">Hidden</animation>
-            <visible>!Control.IsVisible(5999) + !Control.HasFocus(109)</visible>
-            <visible>[Skin.HasSetting(darkinfopane) | !Skin.HasSetting(DisableGlowbar)] +  [Control.IsVisible(7550) | Control.IsVisible(510) | Control.IsVisible(50) | Control.IsVisible(518) | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | Control.IsVisible(52) | Control.IsVisible(550)]</visible>
-        </control>
-        <control type="image" id="5999">
-            <include>FullscreenDimensions</include>
-            <texture>diffuseoverlay.png</texture>
-            <animation effect="fade" time="200">WindowOpen</animation>
-            <animation effect="fade" time="200">WindowClose</animation>
-            <animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-            <animation effect="fade" start="100" end="0" time="80">Hidden</animation>
-            <visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)] | [Skin.HasSetting(no_infopane_panel) + Control.IsVisible(7550)]</visible>
-        </control>-->
         <include>Furniture_Showcase</include>
         <include>Furniture_Glow</include>
         <include>WallPanel</include>
@@ -56,11 +37,7 @@
                 <!-- view id = 512-->
                 <include condition="!Skin.HasSetting(DisableInfoWallVL)">AddonWall</include>
             </control>
-            <control type="group">
-                <visible>Control.IsVisible(550) | Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(501) | Control.IsVisible(500) | Control.IsVisible(512) | Control.IsVisible(516) | Control.IsVisible(514)</visible>
-                <animation effect="slide" end="705" time="0" easing="inout" tween="cubic" condition="Control.IsVisible(514)">Conditional</animation>
-                <include>FloorFlags</include>
-            </control>
+			<include>FloorFlags</include>
             <include>FloorLabels</include>
             <control type="button" id="7000">
                 <include>HiddenObject</include>

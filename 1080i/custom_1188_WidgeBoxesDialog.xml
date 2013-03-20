@@ -231,6 +231,31 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
+                    <control type="grouplist" id="5401">
+                    <posy>230</posy>
+                    <width>740</width>
+                    <height>200</height>
+                    <align>center</align>
+                    <onleft>5401</onleft>
+                    <onright>5401</onright>
+                    <ondown>18</ondown>
+                    <onup>5400</onup>
+                    <orientation>horizontal</orientation>
+                    <control type="button" id="22">
+                        <width>175</width>
+                        <height>45</height>
+                        <label>None</label>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <textcolor>grey2</textcolor>
+                        <focusedcolor>$VAR[HomeMenuTextFocusVar3]</focusedcolor>
+                        <align>center</align>
+                        <textoffsetx>15</textoffsetx>
+                        <onclick>Skin.SetString(LiveBGWidget2Case,clear)</onclick>
+                        <onclick>Dialog.Close(1188)</onclick>
+                        <onclick>ActivateWindow(1146)</onclick>
+                        <visible>SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
+                    </control>
+                    </control>
                 </control>
             </control>
         </control>

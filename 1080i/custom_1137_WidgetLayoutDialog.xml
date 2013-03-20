@@ -114,6 +114,21 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>!SubString(Window(1124).Property(CustomYesNoDialog),roms) + !Substring(Window(1124).Property(CustomYesNoDialog),Icon)</visible>
                     </control>
+                    <control type="button" id="13">
+                        <width>175</width>
+                        <height>45</height>
+                        <textoffsetx>15</textoffsetx>
+                        <align>center</align>
+                        <label>Shelf</label>
+                        <textcolor>grey2</textcolor>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <focusedcolor>white3</focusedcolor>
+                        <onfocus>SetProperty(WidgetType,classicshelf,1124)</onfocus>
+                        <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
+                        <onclick>Dialog.Close(1137)</onclick>
+                        <onclick>ActivateWindow(1188)</onclick>
+                        <visible>!Substring(Window(1124).Property(CustomYesNoDialog),bigpicture)+Substring(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                    </control>
                 </control>
                 <control type="grouplist" id="5401">
                     <posy>230</posy>
@@ -125,7 +140,7 @@
                     <ondown>18</ondown>
                     <onup>5400</onup>
                     <orientation>horizontal</orientation>
-                    <control type="button" id="13">
+                    <control type="button" id="14">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -141,7 +156,7 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
-                    <control type="button" id="14">
+                    <control type="button" id="15">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -157,7 +172,7 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
-                    <control type="button" id="17">
+                    <control type="button" id="16">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -173,7 +188,7 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
-                    <control type="button" id="171">
+                    <control type="button" id="17">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>

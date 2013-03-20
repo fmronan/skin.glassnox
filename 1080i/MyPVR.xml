@@ -3,7 +3,7 @@
     <defaultcontrol>32</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>backgroundcolor</backgroundcolor>
-    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
     <controls>
         <control type="multiimage">
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>

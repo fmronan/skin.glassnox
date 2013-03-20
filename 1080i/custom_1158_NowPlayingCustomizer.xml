@@ -136,7 +136,7 @@
                     <alttexturefocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturefocus>
                     <alttexturenofocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturenofocus>
                     <colordiffuse>grey2</colordiffuse>
-                    <onclick>PlayMedia($INFO[Window(Home).Property(LatestMovie.1.Path)],1)</onclick>
+                    <onclick>PlayMedia($ESCINFO[Window(Home).Property(LatestMovie.1.Path)],1)</onclick>
                     <ondown>20</ondown>
                     <onup>20</onup>
                     <onleft>440</onleft>

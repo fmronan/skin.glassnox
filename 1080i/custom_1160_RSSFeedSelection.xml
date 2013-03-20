@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1160">
     <defaultcontrol always="true">451</defaultcontrol>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget1)">Skin.SetString(CustomHomeFeedURL1,$INFO[Skin.String(RSSWidgetFeed)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget2)">Skin.SetString(CustomHomeFeedURL2,$INFO[Skin.String(RSSWidgetFeed)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget3)">Skin.SetString(CustomHomeFeedURL3,$INFO[Skin.String(RSSWidgetFeed)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget4)">Skin.SetString(CustomHomeFeedURL4,$INFO[Skin.String(RSSWidgetFeed)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget5)">Skin.SetString(CustomHomeFeedURL5,$INFO[Skin.String(RSSWidgetFeed)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget6)">Skin.SetString(CustomHomeFeedURL6,$INFO[Skin.String(RSSWidgetFeed)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget1)">Skin.SetString(CustomHomeFeedTitle1,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget2)">Skin.SetString(CustomHomeFeedTitle2,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget3)">Skin.SetString(CustomHomeFeedTitle3,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget4)">Skin.SetString(CustomHomeFeedTitle4,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget5)">Skin.SetString(CustomHomeFeedTitle5,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget6)">Skin.SetString(CustomHomeFeedTitle6,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$INFO[Skin.String(RSSWidgetTitle)])</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget1)">RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS1)</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget2)">RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS2)</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget3)">RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS3)</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget4)">RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS4)</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget5)">RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS5)</onunload>
-    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget6)">RunScript(script.rssclient,guiless,feed=$INFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS6)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget1)">Skin.SetString(CustomHomeFeedURL1,$ESCINFO[Skin.String(RSSWidgetFeed)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget2)">Skin.SetString(CustomHomeFeedURL2,$ESCINFO[Skin.String(RSSWidgetFeed)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget3)">Skin.SetString(CustomHomeFeedURL3,$ESCINFO[Skin.String(RSSWidgetFeed)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget4)">Skin.SetString(CustomHomeFeedURL4,$ESCINFO[Skin.String(RSSWidgetFeed)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget5)">Skin.SetString(CustomHomeFeedURL5,$ESCINFO[Skin.String(RSSWidgetFeed)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget6)">Skin.SetString(CustomHomeFeedURL6,$ESCINFO[Skin.String(RSSWidgetFeed)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget1)">Skin.SetString(CustomHomeFeedTitle1,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget2)">Skin.SetString(CustomHomeFeedTitle2,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget3)">Skin.SetString(CustomHomeFeedTitle3,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget4)">Skin.SetString(CustomHomeFeedTitle4,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget5)">Skin.SetString(CustomHomeFeedTitle5,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget6)">Skin.SetString(CustomHomeFeedTitle6,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(RSSWidgetTitle)])</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget1)">RunScript(script.rssclient,guiless,feed=$ESCINFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS1)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget2)">RunScript(script.rssclient,guiless,feed=$ESCINFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS2)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget3)">RunScript(script.rssclient,guiless,feed=$ESCINFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS3)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget4)">RunScript(script.rssclient,guiless,feed=$ESCINFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS4)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget5)">RunScript(script.rssclient,guiless,feed=$ESCINFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS5)</onunload>
+    <onunload condition="StringCompare(Window(1124).Property(RSSWidget),RSSWidget6)">RunScript(script.rssclient,guiless,feed=$ESCINFO[Skin.String(RSSWidgetFeed)],imagecaching=false,window=10000,limit=8,prefix=RSS6)</onunload>
     <onunload>Skin.Reset(RSSWidgetFeed)</onunload>
     <onunload condition="IsEmpty(Window(1124).Property(NoStyleSelect))">ActivateWindow(1137)</onunload>
     <onunload>ClearProperty(NoStyleSelect,1124)</onunload>
@@ -238,141 +238,141 @@
                     </item> -->
                     <item>
                         <label>$INFO[Window.Property(feeds.1.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.1.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.1.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.1.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.1.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.1.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.2.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.2.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.2.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.2.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.2.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.2.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.3.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.3.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.3.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.3.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.3.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.3.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.4.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.4.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.4.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.4.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.4.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.4.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.5.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.5.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.5.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.5.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.5.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.5.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.6.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.6.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.6.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.6.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.6.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.6.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.7.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.7.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.7.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.7.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.7.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.7.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.8.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.8.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.8.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.8.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.8.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.8.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.9.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.9.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.9.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.9.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.9.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.9.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.10.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.10.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.10.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.10.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.10.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.10.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.11.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.11.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.11.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.11.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.11.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.11.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.12.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.12.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.12.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.12.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.12.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.12.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.13.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.13.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.13.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.13.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.13.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.13.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.14.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.14.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.14.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.14.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.14.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.14.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.15.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.15.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.15.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.15.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.15.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.15.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.16.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.16.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.16.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.16.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.16.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.16.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.17.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.17.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.17.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.17.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.17.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.17.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.18.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.18.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.18.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.18.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.18.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.18.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.19.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.19.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.19.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.19.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.19.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.19.name))</visible>
                     </item>
                     <item>
                         <label>$INFO[Window.Property(feeds.20.name)]</label>
-                        <onclick>Skin.SetString(RSSWidgetFeed,$INFO[Window.Property(feeds.20.path)])</onclick>
-                        <onclick>Skin.SetString(RSSWidgetTitle,$INFO[Window.Property(feeds.20.name)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetFeed,$ESCINFO[Window.Property(feeds.20.path)])</onclick>
+                        <onclick>Skin.SetString(RSSWidgetTitle,$ESCINFO[Window.Property(feeds.20.name)])</onclick>
                         <onclick>Dialog.Close(1160)</onclick>
                         <visible>!IsEmpty(Window.Property(feeds.20.name))</visible>
                     </item>

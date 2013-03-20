@@ -2,7 +2,7 @@
 <window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <backgroundcolor>backgroundcolor</backgroundcolor>
-    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
     <animation type="WindowOpen" reversible="false" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(1117) | Window.Previous(1118)  | Window.Previous(1128)| Window.Previous(settings)]">
         <effect type="zoom" start="150" end="100" center="960,540" time="240" tween="cubic" />
         <effect type="fade" end="100" time="240" />
@@ -701,48 +701,6 @@
                         <include>Default_SettingRadioButtonShort</include>
                         <enable>no</enable>
                     </control>
-                    <control type="radiobutton" id="480">
-                        <label>$LOCALIZE[31028]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableShowCaseVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableShowCaseVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="481">
-                        <label>$LOCALIZE[31028] ($LOCALIZE[20360],$LOCALIZE[24001])</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableShowCaseSquareVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableShowCaseSquareVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="482">
-                        <label>$LOCALIZE[31150]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableLandscapeVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableLandscapeVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="483">
-                        <label>$LOCALIZE[31153]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableLowListVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableLowListVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="486">
-                        <label>$LOCALIZE[31234]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableWallVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableWallVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="489">
-                        <label>$LOCALIZE[31271]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisablePostersVL)</onclick>
-                        <selected>!Skin.HasSetting(DisablePostersVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="490">
-                        <label>$LOCALIZE[31233]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisablePanelVL)</onclick>
-                        <selected>!Skin.HasSetting(DisablePanelVL)</selected>
-                    </control>
                     <include condition="Skin.HasSetting(ViewCustom1001_IsInstall)">ViewCustom1001_Init</include>
                     <include condition="Skin.HasSetting(ViewCustom1003_IsInstall)">ViewCustom1003_Init</include>
                     <include condition="Skin.HasSetting(ViewCustom1005_IsInstall)">ViewCustom1005_Init</include>
@@ -768,48 +726,6 @@
                         <texturenofocus>settings/settings_separator.png</texturenofocus>
                         <include>Default_SettingButtonShort</include>
                         <enable>no</enable>
-                    </control>
-                    <control type="radiobutton" id="590">
-                        <label>$LOCALIZE[31283]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableInfoWallVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableInfoWallVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="591">
-                        <label>$LOCALIZE[31291]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableBigFanVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableBigFanVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="592">
-                        <label>$LOCALIZE[20359]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableEpisodeVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableEpisodeVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="594">
-                        <label>$LOCALIZE[31477]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableTriPanelVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableTriPanelVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="596">
-                        <label>$LOCALIZE[31235]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableShiftVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableShiftVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="595">
-                        <label>$LOCALIZE[31166]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableInfoPanelVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableInfoPanelVL)</selected>
-                    </control>
-                    <control type="radiobutton" id="588">
-                        <label>$LOCALIZE[31236]</label>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Skin.ToggleSetting(DisableBannersVL)</onclick>
-                        <selected>!Skin.HasSetting(DisableBannersVL)</selected>
                     </control>
                     <include condition="Skin.HasSetting(ViewCustom1002_IsInstall)">ViewCustom1002_Init</include>
                     <include condition="Skin.HasSetting(ViewCustom1004_IsInstall)">ViewCustom1004_Init</include>
@@ -852,7 +768,7 @@
                         <include>Default_SettingRadioButton</include>
                     </control>
                     <control type="label">
-                        <label>[B]Kpitn[/B] for creating GlassNox textures[B] N.O.W.A.L.L.[/B] for creating Artwork</label>
+                        <label>[B]Kpitn[/B], [B]BabaOrum[/B] for creating GlassNox textures[B] N.O.W.A.L.L.[/B] for creating Artwork</label>
                         <include>Default_SettingRadioButton</include>
                     </control>
                     <control type="label">

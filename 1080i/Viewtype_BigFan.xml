@@ -17,6 +17,7 @@
                 <focusposition>0</focusposition>
                 <orientation>horizontal</orientation>
                 <preloaditems>2</preloaditems>
+                <visible>![!IsEmpty(Skin.String((DisableBigFanVL)) + Window.IsActive(videos)]</visible>
                 <visible>Window.IsActive(videos) + [Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)]</visible>
                 <itemlayout height="1080" width="1920">
                     <control type="image">
@@ -93,7 +94,7 @@
             </control>
             <control type="image">
                 <posx>22</posx>
-                <posy>128r</posy>
+                <posy>148r</posy>
                 <width>40</width>
                 <height>40</height>
                 <texture flipx="true">arrowright.png</texture>
@@ -101,7 +102,7 @@
             </control>
             <control type="image">
                 <posx>74r</posx>
-                <posy>128r</posy>
+                <posy>148r</posy>
                 <width>40</width>
                 <height>40</height>
                 <texture>arrowright.png</texture>
@@ -164,19 +165,18 @@
                 <usecontrolcoords>true</usecontrolcoords>
                 <control type="label">
                     <width min="100" max="1400">auto</width>
-                    <height>38</height>
+                    <height>48</height>
                     <font>Font_ShowcaseMainLabel2_Caps</font>
                     <scroll>true</scroll>
                     <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
                 <control type="image">
-                    <posy>-4</posy>
+                    <posy>-2</posy>
                     <width>55</width>
                     <height>55</height>
                     <texture>$VAR[WatchedIconVar]</texture>
                     <fadetime>0</fadetime>
-                    <animation effect="slide" end="-65,0" time="0" condition="Container.ListItem.IsResumable">Conditional</animation>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
             </control>

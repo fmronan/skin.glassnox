@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 <!--fmronan and MikeBzh-->
-<include name="ReplaceFiles">
+<include name="ReinstallFiles">
 <onload>Skin.SetString(ReplaceFiles,1)</onload>
 </include>
 </includes>

@@ -4,7 +4,7 @@
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>backgroundcolor</backgroundcolor>
     <views>50,53,57,506,500,509,512</views>
-    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
     <controls>
         <control type="multiimage">
             <fadetime>FanartCrossfadeTime</fadetime>
