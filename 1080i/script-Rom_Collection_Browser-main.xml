@@ -2996,8 +2996,6 @@
                     </control>
                 </control>
                 <include>QuickNavLabel</include>
-                <!--                 <include>Media_Menu_NowPlaying</include>
- -->
             </control>
         </control>
         <!-- Messages -->

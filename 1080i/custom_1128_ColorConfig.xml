@@ -48,7 +48,7 @@
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                     <height>45</height>
                     <width>603</width>
-                    <texturenofocus>settings/listselect_nf3.png</texturenofocus>
+                    <texturenofocus border="3">settings/listselect_nf3.png</texturenofocus>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                     <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
                     <disabledcolor>$VAR[FontColorVar]</disabledcolor>

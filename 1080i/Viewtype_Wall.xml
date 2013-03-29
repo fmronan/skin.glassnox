@@ -317,7 +317,7 @@
             <posy>124</posy>
             <width>1665</width>
             <height>820</height>
-            <visible>![!IsEmpty(Skin.String((DisableWallVL)) + Window.IsActive(videos)]</visible>
+            <visible>![!IsEmpty(Skin.String(DisableWallVL)) + Window.IsActive(videos)]</visible>
             <visible>!IsEmpty(Container.FolderPath) | Window.IsActive(videoplaylist)</visible>
             <viewtype label="31234">icon</viewtype>
             <pagecontrol>61</pagecontrol>
@@ -347,7 +347,7 @@
             <posy>124</posy>
             <width>1665</width>
             <height>805</height>
-            <visible>![!IsEmpty(Skin.String((DisableWallVL)) + Window.IsActive(videos)]</visible>
+            <visible>![!IsEmpty(Skin.String(DisableWallVL)) + Window.IsActive(videos)]</visible>
             <visible>!IsEmpty(Container.FolderPath) | Window.IsActive(videoplaylist)</visible>
             <viewtype label="31234">icon</viewtype>
             <pagecontrol>72</pagecontrol>

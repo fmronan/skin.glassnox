@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
     <include name="contents501list">
-		<visible>![!IsEmpty(Skin.String((DisableShowcaseVL)) + Window.IsActive(videos)]</visible>
+		<visible>![!IsEmpty(Skin.String(DisableShowcaseVL)) + Window.IsActive(videos)]</visible>
         <visible>[!Container.Content(episodes) | SubString(Container.FolderPath,videodb://5/)] + !Container.Content(addons)</visible>
         <posx>-69</posx>
         <posy>540</posy>
@@ -669,7 +669,399 @@
             </control>
             <include condition="!Skin.HasSetting(showcasewrap)">scmfixed</include>
             <include condition="Skin.HasSetting(showcasewrap)">scmwrap</include>
-             </control>
+             <control type="button" id="1980">
+                <include>HiddenObject</include>
+                <visible>!Window.IsActive(DialogVideoInfo.xml) + !SubString(ListItem.Path,videodb://1/7)</visible>
+                <visible>!Container.OnNext + !Container.OnPrevious + !IsEmpty(Container.ListItem.Art(discart))</visible>
+                <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="1600">WindowOpen</animation>
+            </control>
+            <control type="button" id="1974">
+                <include>HiddenObject</include>
+                <visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
+                <visible>!Container.OnNext + !Container.OnPrevious</visible>
+                <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="1600">WindowOpen</animation>
+            </control>
+            <control type="button" id="1975">
+                <include>HiddenObject</include>
+                    <texture background="true" flipy="true">DefaultActor.png</texture>
+                <visible>!Container.OnNext + !Container.OnPrevious</visible>
+                <visible>Control.IsVisible(7550) +Control.HasFocus(7000)</visible>
+                <animation effect="fade" end="100" time="120" delay="1200">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="1200">WindowOpen</animation>
+            </control>
+            <control type="button" id="1973">
+                <include>HiddenObject</include>
+                <visible>Control.HasFocus(7000)</visible>
+                <animation effect="fade" end="100" time="120" delay="0">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="0">WindowOpen</animation>
+            </control>
+            <control type="button" id="1972">
+                <include>HiddenObject</include>
+                <visible>!Window.IsActive(DialogVideoInfo.xml) + !SubString(ListItem.Path,videodb://1/7)</visible>
+                <visible>!Container.OnNext + !Container.OnPrevious  + IsEmpty(Container.ListItem.Art(discart)) + !IsEmpty(Container.ListItem.Art(fanart)) + !Skin.HasSetting(lowlistmaker)</visible>
+                <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="1600">WindowOpen</animation>
+            </control>
+            <control type="button" id="1981">
+                <include>HiddenObject</include>
+                <visible>!Window.IsActive(DialogVideoInfo.xml) + SubString(ListItem.Path,videodb://1/7) + !Control.HasFocus(7000)</visible>
+                <visible>!Container.OnNext + !Container.OnPrevious   </visible>
+                <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="1600">WindowOpen</animation>
+            </control>
+            <control type="group">
+                <visible>[!Stringcompare(Skin.String(MovieDiscArt),none)+Skin.HasSetting(showcasecdart)]|Skin.HasSetting(showcasecdart)</visible>
+                <include>Animation_VisibleChange400</include>
+                <animation type="WindowClose" reversible="false">
+                    <effect type="fade" start="100" end="0" time="240" />
+                    <effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
+                </animation>
+                <control type="image">
+                    <posx>2530</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true">$INFO[Container.ListItem.Art(discart)]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1980) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+
+               <control type="image">
+                    <posx>2530</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
+					<bordersize>2</bordersize>
+					<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+                    <animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <posx>2530</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2530</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2630</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1300" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2770,844" end="720" delay="1300" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2630</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2770,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2730</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1400" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2870,844" end="720" delay="1400" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2730</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2870,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2830</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1500" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2970,844" end="720" delay="1500" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2830</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2970,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2930</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1600" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3070,844" end="720" delay="1600" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>2930</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3070,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>3030</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1700" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3170,844" end="720" delay="1700" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>3030</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3170,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>3130</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1800" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3270,844" end="720" delay="1800" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>3130</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3270,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>3230</posx>
+                    <posy>704</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1900" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3370,844" end="720" delay="1900" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
+                </control>
+                <control type="image">
+                    <posx>3230</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+                    <colordiffuse>d1FFFFFF</colordiffuse>
+					<texture background="true" diffuse="common/cdart/disc_Mask_Reflect2.png" flipy="true">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
+                    <animation type="Conditional" condition="Control.IsVisible(1981)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="3370,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                    <visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
+                </control>
+               <control type="image">
+                    <posx>2600</posx>
+                    <posy>695</posy>
+                    <width>120</width>
+                    <height>120</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+                    <fadetime>4000</fadetime>
+                    <animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+                  <control type="image">
+                    <posx>2540</posx>
+                    <posy>840</posy>
+                    <width>75</width>
+                    <height>75</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                    <fadetime>4000</fadetime>
+                    <animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+				<control type="image">
+                    <posx>2640</posx>
+                    <posy>940</posy>
+                    <width>60</width>
+                    <height>24</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
+                    <colordiffuse>white</colordiffuse>
+                    <fadetime>4000</fadetime>
+                    <animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <posx>2530</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<colordiffuse>22FFFFFF</colordiffuse>
+					<texture background="true" flipy="true">$INFO[Container.ListItem.Art(discart)]</texture>
+					<animation type="Conditional" condition="Control.IsVisible(1980) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+              <control type="image">
+                    <posx>2530</posx>
+                    <posy>984</posy>
+                    <width>280</width>
+                    <height>280</height>
+                    <fadetime>4000</fadetime>
+					<colordiffuse>22FFFFFF</colordiffuse>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<texture background="true" fallback="true" flipy="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
+					<bordersize>2</bordersize>
+					<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
+                    <animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+                <control type="image">
+                    <posx>2550</posx>
+                    <posy>1053</posy>
+                    <width>75</width>
+                    <height>75</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture flipy="true">$INFO[ListItem.Studio,flags/studios/,.png]</texture>
+                    <fadetime>400</fadetime>
+					<colordiffuse>22FFFFFF</colordiffuse>
+                    <animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+				<control type="image">
+                    <posx>2650</posx>
+                    <posy>1004</posy>
+                    <width>60</width>
+                    <height>24</height>
+                    <aspectratio>keep</aspectratio>
+					<colordiffuse>22FFFFFF</colordiffuse>
+                    <texture flipy="true" fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
+                    <colordiffuse>white</colordiffuse>
+                    <fadetime>400</fadetime>
+					<animation type="Conditional" condition="Control.IsVisible(1972) +!Control.IsVisible(1973)" reversible="true">
+                        <effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out" />
+                        <effect type="rotate" start="0" center="2670,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out" />
+                    </animation>
+                </control>
+            </control> 
+        </control>
     </include>
     <!-- MikeZBH44 Start remove <control> from <include> -->
     <include name="MovieShowcaseThumbReflectionDVD">
@@ -1780,30 +2172,252 @@
             <posy>70</posy>
             <width>240</width>
             <height>240</height>
-            <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+            <animation type="Conditional" condition="Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000) +Stringcompare(Skin.String(MovieDiscArt),roll)" reversible="false">
                <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
+            <animation type="Conditional" condition="Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000) +Stringcompare(Skin.String(MovieDiscArt),spin)" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,0" delay="0" time="0" tween="cubic" easing="inout"/>
+			  <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
+            </animation>
             <aspectratio align="right">keep</aspectratio>
-            <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
-            <visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) +[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
+            <texture background="true" fallback="true">$VAR[cdArtVar]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) +[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
         </control>
         <control type="image">
             <posx>1140</posx>
             <posy>70</posy>
             <width>240</width>
             <height>240</height>
-            <animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll) + Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,-50" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll) + Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,-70" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin) + Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,-50" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin) + Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,-70" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(discart))) + IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,20" delay="750" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(discart))) + !IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,-30" delay="750" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(discart))) + IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,20" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(discart))) + !IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,-30" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,55" delay="750" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,55" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
+            <visible> Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,50" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,110" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,50" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550)+Control.HasFocus(7000)+ !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,110" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974) + Control.IsVisible(7550)+Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart))) + IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,20" delay="1000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+           <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974) + Control.IsVisible(7550)+Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,-70" delay="1000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974) + Control.IsVisible(7550)+Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart))) + IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,20" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+           <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974) + Control.IsVisible(7550)+Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,-70" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) + IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,20" delay="1250" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) + !IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,-20" delay="1250" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) + IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,20" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(discart))) + !IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,-20" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,55" delay="1600" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,55" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,110" delay="1500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="720" delay="500" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="500" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(1974)+ Control.IsVisible(7550) + Control.HasFocus(7000) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="false">
+               <effect type="slide" start="0,0" end="-1062,110" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1236,166" end="-360" delay="3000" time="2300" tween="cubic" easing="inout"/>
+               <effect type="zoom" end="80" delay="0" time="0" tween="cubic" easing="inout"/>
+            </animation>
+            <aspectratio align="right">keep</aspectratio>
+            <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+        </control>
+        
+        <control type="image">
+            <posx>1140</posx>
+            <posy>70</posy>
+            <width>240</width>
+            <height>240</height>
+            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
                <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
+            </animation>
+            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,0" delay="0" time="0" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
             <aspectratio scalediffuse="false">scale</aspectratio>
             <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
             <bordersize>2</bordersize>
 			<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
-            <visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
+            <visible>Container.Content(movies)+Skin.HasSetting(usecases) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
         </control>
         <control type="image">
 			<posx>1200</posx>
@@ -1813,13 +2427,17 @@
 			<aspectratio>keep</aspectratio>
 			<texture background="true">$VAR[DiscartLogo]</texture>
 			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),roll)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
                <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
+            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),spin)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,0" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
+            </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker)</visible>
+			<visible>Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
 		</control>
 		<control type="image">
 			<posx>1148.5</posx>
@@ -1829,13 +2447,17 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
 			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),roll)+  Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
                <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
+            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),spin)+  Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,0" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
+            </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker)</visible>
+			<visible>Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
 		</control>
 		<control type="image">
 			<posx>1234.25</posx>
@@ -1846,25 +2468,29 @@
 			<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
 			<colordiffuse>white</colordiffuse>
 			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="Control.IsVisible(1970)+ Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),roll)+  Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
                <effect type="slide" start="0,0" end="-1110,0" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
                <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
             </animation>
+            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)]+ Stringcompare(Skin.String(MovieDiscArt),spin)+  Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+               <effect type="slide" start="0,0" end="-1110,0" delay="0" time="0" tween="cubic" easing="inout"/>
+               <effect type="rotate" start="0" center="1260,190" end="-360" delay="2500" time="2300" tween="cubic" easing="inout"/>
+            </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Stringcompare(Skin.String(MovieDiscArt),roll)+ Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker)</visible>
+			<visible>Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
 		</control>
         <!-- Spinning disc art animation -->
-		<control type="image">
+	<!--	<control type="image">
             <posx>26</posx>
             <posy>70</posy>
             <width>240</width>
             <height>240</height>
-            <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+            <animation type="Conditional" condition="Control.IsVisible(1974) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
             <aspectratio align="right">keep</aspectratio>
-            <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
+            <texture background="true" fallback="true">$VAR[cdArtVar]</texture>
             <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)+[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
         </control>
         <control type="image">
@@ -1872,14 +2498,14 @@
             <posy>70</posy>
             <width>240</width>
             <height>240</height>
-            <animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
             <aspectratio scalediffuse="false">scale</aspectratio>
             <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
             <bordersize>2</bordersize>
 			<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
-            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker)</visible>
+            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
         </control>
         <control type="image">
 			<posx>86</posx>
@@ -1889,11 +2515,11 @@
 			<aspectratio>keep</aspectratio>
 			<texture background="true">$VAR[DiscartLogo]</texture>
 			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)</visible>
+			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)+ !SubString(ListItem.Path,videodb://1/7)</visible>
 		</control>
 		<control type="image">
 			<posx>34.5</posx>
@@ -1903,11 +2529,11 @@
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
 			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)</visible>
+			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
 		</control>
 		<control type="image">
 			<posx>120.25</posx>
@@ -1918,22 +2544,22 @@
 			<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
 			<colordiffuse>white</colordiffuse>
 			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="Control.IsVisible(1970) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
+			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
             <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
             </animation>
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)</visible>
-		</control>
+			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
+		</control>-->
     </include>
     <!-- Open case -->
-    <include name="ShowcaseOpenCase">
-        <animation type="conditional" reversible="false" condition="Control.IsVisible(1970) + Control.IsVisible(7550) + Skin.HasSetting(usecases)+Control.HasFocus(7000) + Container.Content(movies)+ [Stringcompare(Skin.String(MovieDiscArt),spin) | Stringcompare(Skin.String(MovieDiscArt),roll)]">
+	<include name="ShowcaseOpenCase">
+        <animation type="conditional"  condition="Control.IsVisible(1975)   + Skin.HasSetting(usecases) + Container.Content(movies)+ [Stringcompare(Skin.String(MovieDiscArt),spin) | Stringcompare(Skin.String(MovieDiscArt),roll)]" reversible="false">
             <effect type="rotatey" center="-10" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
             <effect type="rotatey" delay="5300" center="-10" start="0" end="-75" time="500" tween="quadratic" easing="out"/>
         </animation>
     </include>
     <include name="ShowcaseOpenCaseWatched">
-        <animation type="conditional" reversible="false" condition="Control.IsVisible(1970) + Control.IsVisible(7550) + Skin.HasSetting(usecases)+Control.HasFocus(7000) + Container.Content(movies)+ [Stringcompare(Skin.String(MovieDiscArt),spin) | Stringcompare(Skin.String(MovieDiscArt),roll)]">
+        <animation type="conditional" reversible="false" condition="Control.IsVisible(1975)  + Skin.HasSetting(usecases)+ Container.Content(movies)+ [Stringcompare(Skin.String(MovieDiscArt),spin) | Stringcompare(Skin.String(MovieDiscArt),roll)]">
             <effect type="rotatey" center="-15" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
             <effect type="rotatey" delay="5300" center="-15" start="0" end="-75" time="500" tween="quadratic" easing="out"/>
         </animation>

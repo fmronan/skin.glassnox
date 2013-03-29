@@ -507,7 +507,7 @@
                     <aspectratio>keep</aspectratio>
                     <visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
 					<visible>![ControlGroup(5000).HasFocus(10) | ControlGroup(5000).HasFocus(12) | ControlGroup(5000).HasFocus(21) | ControlGroup(5000).HasFocus(22) | ControlGroup(5000).HasFocus(24)]</visible>
-                    <texture background="true">$VAR[DiscartLogo]</texture>
+                    <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 					<include>Animation_VisibleChange200</include>
                     <animation type="WindowOpen" reversible="false">
 					<effect type="slide" start="-1600,0" end="0" delay="1200" time="1120" tween="quadratic" easing="out" />

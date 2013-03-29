@@ -223,13 +223,13 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>95</height>
         <width>450</width>
-        <texturenofocus>settings/listselect_nf2.png</texturenofocus>
+        <texturenofocus border="3">settings/listselect_nf2.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
         <alttexturenofocus>settings/listselect_nf2.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
         <textcolor>grey2</textcolor>
         <focusedcolor>$VAR[HomeMenuTextFocusVar6]</focusedcolor>
-        <textoffsetx>96</textoffsetx>
+        <textoffsetx>82</textoffsetx>
         <textoffsety>28</textoffsety>
         <onleft>ClearProperty(viewtypeselect,home)</onleft>
         <onleft>ActivateWindow(1121)</onleft>
@@ -242,7 +242,7 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>60</height>
         <width>400</width>
-        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+        <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
         <alttexturenofocus>settings/listselect_nf.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
@@ -258,7 +258,7 @@
         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         <height>60</height>
         <width>470</width>
-        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+        <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
         <texturefocus border="1">views/tripanel/listselect_fo.png</texturefocus>
         <alttexturenofocus border="1">settings/listselect_nf.png</alttexturenofocus>
         <alttexturefocus>views/tripanel/listselect_fo.png</alttexturefocus>
@@ -793,47 +793,7 @@
         </control>
     </include>
     <include name="AutoConfig">
-		<onload>Skin.ResetSettings</onload>
 		<onload>Skin.ToggleSetting(TopBarToolTip)</onload>
-		<onload>Skin.SetString(panel_white_programs,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_music,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_videolibrary,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_PVR,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_pictures,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_featured,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_addons,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_musicplaylist,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_videoplaylist,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_mainmenu,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_weather,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_color,FF03F2FF)</onload>
-        <onload>Skin.SetString(panel_white_settings,FF03F2FF)</onload>
-        <onload>Skin.SetString(diffuse_white_programs,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_music,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_videolibrary,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_PVR,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_pictures,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_featured,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_addons,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_musicplaylist,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_videoplaylist,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_mainmenu,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_weather,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_color,FFA4F4F9)</onload>
-        <onload>Skin.SetString(diffuse_white_settings,FFA4F4F9)</onload>
-        <onload>Skin.SetString(font_white_programs,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_music,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_videolibrary,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_PVR,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_pictures,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_featured,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_addons,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_musicplaylist,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_videoplaylist,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_mainmenu,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_weather,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_color,FF6db9e5)</onload>
-        <onload>Skin.SetString(font_white_settings,FF6db9e5)</onload>
 		<onload>Skin.SetBool(glasshome)</onload>
 		<onload>Skin.SetString(panel_programs,7d000000)</onload>
         <onload>Skin.SetString(panel_music,7d000000)</onload>
@@ -902,9 +862,8 @@
         <onload>Skin.SetBool(MoreFullscreenInfo)</onload>
         <onload>Skin.SetBool(lowlist)</onload>
         <onload>Skin.SetBool(lowermainmenu)</onload>
-        <onload>Skin.SetBool(wallgenretv)</onload>
         <onload>Skin.SetBool(altbreadcrumbstexture)</onload>
-        <onload>Skin.SetString(InfopanelDelay,2)</onload>
+        <onload>Skin.SetString(InfopanelDelay,1)</onload>
         <onload>Skin.SetBool(GlobalNowPlaying)</onload>
         <onload>Skin.SetBool(altoverlayinfowall)</onload>
         <onload condition="!Library.HasContent(MusicVideos)">Skin.SetString(MusicVideosHomeItem.Disable,1)</onload>

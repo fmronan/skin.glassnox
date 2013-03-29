@@ -590,33 +590,33 @@
                         <visible>StringCompare(System.Language,French)+System.HasAddon(script.randomandlastitems)</visible>
                     </control>
                   <control type="button" id="1669">
-                        <label>plugin.moviesets</label>
+                        <label>script.extendedinfo</label>
                         <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
                         <include>Default_SettingRadioButtonShort</include>
-                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,plugin.moviesets)</onclick>
-                        <visible>!System.HasAddon(plugin.moviesets)</visible>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://mirrors.xbmc.org/addons/frodo/addons.xml,http://mirrors.xbmc.org/addons/frodo,script.extendedinfo)</onclick>
+                        <visible>!System.HasAddon(script.extendedinfo)</visible>
                     </control>
                     <control type="button" id="1670">
-                        <label>plugin.moviesets</label>
+                        <label>script.extendedinfo</label>
                         <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
                         <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Addon.OpenSettings(plugin.moviesets)</onclick>
-                        <visible>System.HasAddon(plugin.moviesets)</visible>
+                        <onclick>Addon.OpenSettings(script.extendedinfo)</onclick>
+                        <visible>System.HasAddon(script.extendedinfo)</visible>
                     </control>
                     <control type="button" id="1671">
-                        <label>help moviesets</label>
+                        <label>help extendedinfo</label>
                         <label2>Frost</label2>
                         <include>Default_SettingRadioButtonShort</include>
-                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,plugin.moviesets,http://forum.xbmc.org/showthread.php?tid=89163)</onclick>
-                        <visible>!StringCompare(System.Language,French)+System.HasAddon(plugin.moviesets)</visible>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.extendedinfo,http://forum.xbmc.org/showthread.php?tid=89163)</onclick>
+                        <visible>System.HasAddon(script.extendedinfo)</visible>
                     </control>
-                    <control type="button" id="1672">
+                 <!--   <control type="button" id="1672">
                         <label>support moviesets</label>
                         <label2>Frost</label2>
                         <include>Default_SettingRadioButtonShort</include>
-                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,plugin.moviesets,http://passion-xbmc.org/add-ons-programme/(release)-moviesets-(saga)-show-info-saga-pour-skins-skinners/)</onclick>
-                        <visible>StringCompare(System.Language,French)+System.HasAddon(plugin.moviesets)</visible>
-                    </control>
+                        <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.extendedinfo,http://passion-xbmc.org/add-ons-programme/(release)-moviesets-(saga)-show-info-saga-pour-skins-skinners/)</onclick>
+                        <visible>StringCompare(System.Language,French)+System.HasAddon(script.extendedinfo)</visible>
+                    </control>-->
                     <control type="button" id="1673">
                         <label>script.artwork.downloader</label>
                         <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>

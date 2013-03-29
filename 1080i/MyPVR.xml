@@ -3,12 +3,13 @@
     <defaultcontrol>32</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <backgroundcolor>backgroundcolor</backgroundcolor>
-    <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
+    <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+    <onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
     <controls>
         <control type="multiimage">
+            <imagepath background="true">$VAR[LiveTVFanartVar]</imagepath>
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-            <imagepath background="true">$VAR[LiveTVFanartVar]</imagepath>
         </control>
         <control type="group">
             <include>Animation_OpenClose_Furniture</include>
@@ -29,13 +30,13 @@
                 <posx>1224</posx>
                 <width>696</width>
                 <height>1080</height>
-                <colordiffuse>vignette</colordiffuse>
                 <texture flipx="true">views/showcase_vignette.png</texture>
+                <colordiffuse>vignette</colordiffuse>
             </control>
             <control type="image">
+                <posy>874</posy>
                 <width>1920</width>
                 <height>206</height>
-                <posy>874</posy>
                 <texture>views/panel_spot.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             </control>
@@ -74,8 +75,8 @@
                     <posy>38</posy>
                     <width>1830</width>
                     <height>1068</height>
-                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                     <texture>wall/wall_bg.png</texture>
+                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
                 </control>
                 <control type="image">
                     <posx>45</posx>
@@ -166,8 +167,8 @@
                     <posx>654r</posx>
                     <width>794</width>
                     <height>87</height>
-                    <animation effect="slide" end="145" time="320" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
                     <texture flipy="true">home/timepanel_mid.png</texture>
+                    <animation effect="slide" end="145" time="320" condition="!Skin.HasSetting(breadcrumbsweather)">Conditional</animation>
                     <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
                     <include>Animation_VisibleChange400</include>
                     <visible>Skin.HasSetting(ClassicTopBar)</visible>
@@ -187,37 +188,37 @@
                         <aligny>center</aligny>
                         <orientation>horizontal</orientation>
                         <control type="label">
-                            <height>38</height>
                             <width min="15" max="1920">auto</width>
+                            <height>38</height>
+                            <label>[COLOR $VAR[BreadCrumbsContentColorVar]]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  •[/COLOR]</label>
                             <font>Font_Reg17_Caps</font>
-                            <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
                             <shadowcolor>bcshadow</shadowcolor>
+                            <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
                             <scroll>false</scroll>
                             <visible>Skin.HasSetting(breadcrumbsweather)</visible>
                             <visible>Weather.IsFetched</visible>
                             <include>Animation_VisibleChange400</include>
-                            <label>[COLOR $VAR[BreadCrumbsContentColorVar]]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]  •[/COLOR]</label>
                         </control>
                         <control type="label">
-                            <height>38</height>
                             <width min="15" max="1920">auto</width>
-                            <font>Font_Reg17_Caps</font>
-                            <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
-                            <shadowcolor>bcshadow</shadowcolor>
-                            <scroll>false</scroll>
+                            <height>38</height>
                             <label>[COLOR $VAR[BreadCrumbsContentColorVar]] $INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  •  [/COLOR][COLOR=$VAR[TitleColorVar]]$INFO[System.Time][/COLOR]       </label>
+                            <font>Font_Reg17_Caps</font>
+                            <shadowcolor>bcshadow</shadowcolor>
+                            <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
+                            <scroll>false</scroll>
                         </control>
                     </control>
                 </control>
             </control>
             <include>Furniture_NowPlayingWidget</include>
             <control type="label" id="29">
-                <include>HiddenObject</include>
                 <font>-</font>
+                <include>HiddenObject</include>
             </control>
             <control type="label" id="30">
-                <include>HiddenObject</include>
                 <font>-</font>
+                <include>HiddenObject</include>
             </control>
             <include>BreadcrumbsContent</include>
         </control>
@@ -229,16 +230,6 @@
             </animation>
             <control type="group">
                 <include>Animation_MediaMenuSlide2</include>
-                <animation type="Conditional" condition="Window.IsActive(1121) | Window.IsActive(1119) | Window.IsActive(1126)">
-                    <effect type="fade" start="100" end="0" time="400" />
-                </animation>
-                <animation type="Conditional" condition="Window.IsActive(1126)">
-                    <effect type="zoom" end="150,100" time="320" easing="in" tween="cubic" />
-                </animation>
-                <animation type="Conditional" condition="Window.IsActive(1121) | Window.IsActive(1119)">
-                    <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
-                    <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
-                </animation>
                 <control type="grouplist" id="9003">
                     <width>400</width>
                     <height>1080</height>
@@ -248,98 +239,95 @@
                     <ondown>9003</ondown>
                     <onback>50</onback>
                     <control type="button" id="32">
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>19023</label>
+                        <include>Objects_MediaMenuButtonIcons</include>
                     </control>
                     <control type="button" id="33">
-                        <visible>!Skin.HasSetting(noradio)</visible>
                         <posy>38</posy>
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>19024</label>
+                        <visible>!Skin.HasSetting(noradio)</visible>
+                        <include>Objects_MediaMenuButtonIcons</include>
                     </control>
                     <control type="button" id="34">
                         <posy>112</posy>
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>19163</label>
+                        <include>Objects_MediaMenuButtonIcons</include>
                     </control>
                     <control type="button" id="31">
                         <posy>38</posy>
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>-</label>
+                        <include>Objects_MediaMenuButtonIcons</include>
                     </control>
                     <control type="button" id="35">
                         <posy>150</posy>
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>19040</label>
+                        <include>Objects_MediaMenuButtonIcons</include>
                     </control>
                     <control type="button" id="36">
                         <posy>188</posy>
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>137</label>
+                        <include>Objects_MediaMenuButtonIcons</include>
                     </control>
                     <control type="radiobutton" id="326">
                         <posy>188</posy>
+                        <label>31175</label>
                         <onclick>Skin.ToggleSetting(smalltvlist)</onclick>
                         <include>Objects_MediaMenuButtonIcons</include>
                         <selected>!Skin.HasSetting(smalltvlist)</selected>
-                        <label>31175</label>
                     </control>
                     <control type="button" id="1664">
-                        <include>Objects_MediaMenuButtonIcons</include>
                         <label>31876</label>
+                        <include>Objects_MediaMenuButtonIcons</include>
                         <onclick>SetFocus(50)</onclick>
                         <onclick>ActivateWindow(1128)</onclick>
                     </control>
                 </control>
-                <control type="group">
-                    <posy>-5</posy>
+                <control type="grouplist">
+                    <posy>15</posy>
+                    <orientation>vertical</orientation>
+                    <itemgap>20</itemgap>
+                    <visible>ControlGroup(9003).HasFocus</visible>
+                    <animation effect="fade" time="220">Visible</animation>
+                    <animation effect="fade" time="160" delay="1000">Hidden</animation>
                     <control type="image">
-                        <posy>15</posy>
+                        <texture>special://skin/extras/BigIcons/Television.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(32)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/Television.png</texture>
                     </control>
                     <control type="image">
-                        <posy>112</posy>
+                        <texture>special://skin/extras/BigIcons/Microphone.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(33)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/Microphone.png</texture>
                     </control>
                     <control type="image">
-                        <posy>207</posy>
+                        <texture>special://skin/extras/BigIcons/ButtonRecord.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(34)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/ButtonRecord.png</texture>
                     </control>
                     <control type="image">
-                        <posy>302</posy>
+                        <texture>special://skin/extras/BigIcons/ButtonEPG.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(31)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/ButtonEPG.png</texture>
                     </control>
                     <control type="image">
-                        <posy>397</posy>
+                        <texture>special://skin/extras/BigIcons/AlarmClock.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(35)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/AlarmClock.png</texture>
                     </control>
                     <control type="image">
-                        <posy>492</posy>
+                        <texture>special://skin/extras/BigIcons/Search.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(36)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/Search.png</texture>
                     </control>
                     <control type="image">
-                        <posy>587</posy>
+                        <texture>special://skin/extras/BigIcons/Formatbullets.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(326)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/Formatbullets.png</texture>
                     </control>
                     <control type="image">
-                        <posy>682</posy>
+                        <texture>special://skin/extras/BigIcons/Controlpanel.png</texture>
                         <animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(1664)">Conditional</animation>
                         <include>MediaMenuIcons</include>
-                        <texture>special://skin/extras/BigIcons/Controlpanel.png</texture>
                     </control>
                 </control>
             </control>

@@ -404,7 +404,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
                                 <onclick>noop</onclick>
-                                <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Path)]</property>
+                                <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Play)]</property>
                                 <visible>Substring(Control.GetLabel(4321),featuredmusic)</visible>
                             </item>
                             <item>
@@ -651,7 +651,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RandomAlbum.1.Art(fanart))]</property>
                                 <onclick>noop</onclick>
-                                <property name="Path">$INFO[Window(Home).Property(RandomAlbum.1.Path)]</property>
+                                <property name="Path">$INFO[Window(Home).Property(RandomAlbum.1.Play)]</property>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
                             <item>
@@ -847,7 +847,7 @@
                                 <property name="NavItem">item1.png</property>
                                 <property name="Fanart">$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</property>
                                 <onclick>noop</onclick>
-                                <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Path)]</property>
+                                <property name="Path">$INFO[Window(Home).Property(RecentAlbum.1.Play)]</property>
                                 <visible>Substring(Control.GetLabel(4325),featuredmusic)</visible>
                             </item>
                             <item>

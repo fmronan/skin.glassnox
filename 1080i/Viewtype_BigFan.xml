@@ -17,7 +17,7 @@
                 <focusposition>0</focusposition>
                 <orientation>horizontal</orientation>
                 <preloaditems>2</preloaditems>
-                <visible>![!IsEmpty(Skin.String((DisableBigFanVL)) + Window.IsActive(videos)]</visible>
+                <visible>![!IsEmpty(Skin.String(DisableBigFanVL)) + Window.IsActive(videos)]</visible>
                 <visible>Window.IsActive(videos) + [Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)]</visible>
                 <itemlayout height="1080" width="1920">
                     <control type="image">
@@ -177,7 +177,6 @@
                     <height>55</height>
                     <texture>$VAR[WatchedIconVar]</texture>
                     <fadetime>0</fadetime>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
             </control>
             <control type="label">
@@ -187,7 +186,7 @@
                 <height>52</height>
                 <scroll>true</scroll>
                 <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
-                <label>$INFO[ListItem.Genre]</label>
+                <label>$VAR[TriPanelValue2Var]</label>
                 <visible>!Container.Content(seasons)</visible>
             </control>
             <control type="label">

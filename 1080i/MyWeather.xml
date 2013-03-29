@@ -289,7 +289,6 @@
                     </control>
                 </control>
                 <control type="group" id="7510">
-                    <visible>!StringCompare(Window.Property(Weather.CurrentView),astronomy)</visible>
                     <control type="group">
                         <control type="list" id="7500">
                             <posx>960</posx>
@@ -1852,7 +1851,7 @@
                             <scrolltime>200</scrolltime>
                             <onup>7500</onup>
                             <ondown>7500</ondown>
-                            <visible>![SubString(Window.Property(Weather.CurrentView),hourly) | SubString(Window.Property(Weather.CurrentView),videos) | SubString(Window.Property(Weather.CurrentView),maps) | SubString(Window.Property(Weather.CurrentView),video) | SubString(Window.Property(Weather.CurrentView),astronomy)]</visible>
+                            <visible>![SubString(Window.Property(Weather.CurrentView),hourly) | SubString(Window.Property(Weather.CurrentView),videos) | SubString(Window.Property(Weather.CurrentView),maps) | SubString(Window.Property(Weather.CurrentView),video)]</visible>
                             <include>Animation_VisibleChange200</include>
                             <itemlayout width="210" height="195">
                                 <control type="label">
@@ -2179,7 +2178,6 @@
                 <control type="list" id="7510">
                     <posx>960</posx>
                     <posy>122</posy>
-                    <visible>!StringCompare(Window.Property(Weather.CurrentView),astronomy)</visible>
                     <width>840</width>
                     <height>786</height>
                     <orientation>vertical</orientation>
@@ -2388,16 +2386,6 @@
             </animation>
             <include>Media_Menu_Furniture</include>
             <control type="group">
-                <animation type="Conditional" condition="Window.IsActive(1121) | Window.IsActive(1126)">
-                    <effect type="fade" start="100" end="0" time="400" />
-                </animation>
-                <animation type="Conditional" condition="Window.IsActive(1126)">
-                    <effect type="zoom" end="150,100" time="320" easing="in" tween="cubic" />
-                </animation>
-                <animation type="Conditional" condition="Window.IsActive(1121)">
-                    <effect type="zoom" end="66,100" time="320" easing="in" tween="cubic" />
-                    <effect type="slide" end="-49" time="320" easing="in" tween="cubic" />
-                </animation>
                 <include>Animation_MediaMenuSlide2</include>
                 <control type="grouplist" id="9003">
                     <width>450</width>
@@ -2415,7 +2403,7 @@
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <height>45</height>
                         <width>400</width>
-                        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+                        <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
                         <label>$LOCALIZE[128]</label>
@@ -2431,8 +2419,8 @@
                         <height>60</height>
                         <width>398</width>
                         <onleft>ActivateWindow(1121)</onleft>
-                        <texturenofocus>settings/listselect_nf.png</texturenofocus>
-                        <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                        <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
+                        <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
                         <font>Font_Reg19</font>
                         <textoffsety>10</textoffsety>
                         <aligny>top</aligny>
@@ -2463,7 +2451,7 @@
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <height>45</height>
                         <width>400</width>
-                        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+                        <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
                         <label>$LOCALIZE[10508]</label>
@@ -2538,7 +2526,7 @@
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <height>45</height>
                         <width>400</width>
-                        <texturenofocus>settings/listselect_nf.png</texturenofocus>
+                        <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
                         <textoffsetx>15</textoffsetx>
                         <textoffsety>2</textoffsety>
                         <label>$LOCALIZE[31185]</label>

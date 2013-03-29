@@ -248,6 +248,12 @@
                             <onclick>ActivateWindow(1146)</onclick>
                         </item>
                         <item>
+                            <label>Background info system</label>
+                            <onclick>SetProperty(CustomYesNoDialog,systemclassicback,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[138])</onclick>
+                            <onclick>ActivateWindow(1146)</onclick>
+                        </item>
+                        <item>
                             <label>31815</label>
                             <onclick>RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Shooted'&amp;limit=10)</onclick>
                             <onclick>SetProperty(CustomYesNoDialog,recentpics,1124)</onclick>
@@ -277,11 +283,11 @@
                         </item>
                         <item>
                             <label>31818</label>
-                            <onclick>RunScript(script.ExtraMusicInfo,info=NearEvents)</onclick>
+                            <onclick>RunScript(script.extendedinfo,info=NearEvents)</onclick>
                             <onclick>SetProperty(CustomYesNoDialog,concertspanel,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31818])</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
-                            <visible>System.HasAddon(script.ExtraMusicInfo)</visible>
+                            <visible>System.HasAddon(script.extendedinfo)</visible>
                         </item>
                         <item>
                             <label>31819</label>
@@ -303,7 +309,7 @@
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
-                            <label>News</label>
+                            <label>31199</label>
                             <onclick>SetProperty(CustomYesNoDialog,rssnews,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,News)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
