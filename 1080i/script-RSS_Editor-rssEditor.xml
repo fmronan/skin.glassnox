@@ -29,7 +29,7 @@
             <posy>27</posy>
             <width>1140</width>
             <height>45</height>
-            <font>Font_Reg20</font>
+            <font>Font_Reg30w</font>
             <align>center</align>
             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
         </control>
@@ -39,7 +39,7 @@
             <width>1140</width>
             <height>45</height>
             <align>center</align>
-            <font>Font_Reg19</font>
+            <font>Font_Reg30_2</font>
             <textcolor>grey</textcolor>
             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
         </control>
@@ -65,7 +65,7 @@
                     <posx>15</posx>
                     <width>735</width>
                     <height>60</height>
-                    <font>Font_Reg18</font>
+                    <font>Font_Reg29</font>
                     <textcolor>grey2</textcolor>
                     <info>ListItem.Label</info>
                 </control>
@@ -89,7 +89,7 @@
                     <posx>15</posx>
                     <width>735</width>
                     <height>60</height>
-                    <font>Font_Reg18</font>
+                    <font>Font_Reg29</font>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
@@ -116,7 +116,7 @@
                 <textoffsety>12</textoffsety>
                 <width>225</width>
                 <height>44</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <onup>18</onup>
                 <onleft>60</onleft>
                 <onright>10</onright>
@@ -134,7 +134,7 @@
                 <textoffsety>12</textoffsety>
                 <width>225</width>
                 <height>44</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <onup>11</onup>
                 <onleft>60</onleft>
                 <onright>10</onright>
@@ -152,7 +152,7 @@
                 <textoffsety>12</textoffsety>
                 <width>225</width>
                 <height>44</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <onup>13</onup>
                 <onleft>60</onleft>
                 <onright>10</onright>
@@ -173,7 +173,7 @@
                 <textoffsety>12</textoffsety>
                 <width>225</width>
                 <height>44</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <onup>9000</onup>
                 <onleft>20</onleft>
                 <onright>19</onright>
@@ -192,7 +192,7 @@
                 <textoffsety>12</textoffsety>
                 <width>225</width>
                 <height>44</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <onup>9000</onup>
                 <onleft>18</onleft>
                 <onright>20</onright>

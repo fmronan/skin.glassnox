@@ -41,7 +41,7 @@
                         <posx>30</posx>
                         <width>389</width>
                         <height>74</height>
-                        <font>Font_Bold20_Caps</font>
+                        <font>Font_Bold34_Caps</font>
                         <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -58,7 +58,7 @@
                         <posx>30</posx>
                         <width>389</width>
                         <height>74</height>
-                        <font>Font_Bold20_Caps</font>
+                        <font>Font_Bold34_Caps</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
@@ -67,35 +67,35 @@
                         <label>480</label>
                         <onclick>SetProperty(BackgroundChoose,1,home)</onclick>
                         <onclick>ActivateWindow(AppearanceSettings)</onclick>
-                        <icon>special://skin/backgrounds/appearance.jpg</icon>
+                        <icon>special://skin/background/appearance.jpg</icon>
                         <property name="description">$LOCALIZE[31400]</property>
                     </item>
                     <item id="2">
                         <label>157</label>
                         <onclick>ActivateWindow(VideosSettings)</onclick>
                         <onclick>SetProperty(BackgroundChoose,2,home)</onclick>
-                        <icon>special://skin/backgrounds/videos/videos.jpg</icon>
+                        <icon>special://skin/background/videos/videos.jpg</icon>
                         <property name="description">$LOCALIZE[31401]</property>
                     </item>
                     <item id="3">
                         <label>2</label>
                         <onclick>ActivateWindow(MusicSettings)</onclick>
                         <onclick>SetProperty(BackgroundChoose,3,home)</onclick>
-                        <icon>special://skin/backgrounds/music/music.jpg</icon>
+                        <icon>special://skin/background/music/music.jpg</icon>
                         <property name="description">$LOCALIZE[31402]</property>
                     </item>
                     <item id="4">
                         <label>1</label>
                         <onclick>ActivateWindow(PicturesSettings)</onclick>
                         <onclick>SetProperty(BackgroundChoose,4,home)</onclick>
-                        <icon>special://skin/backgrounds/pictures/pictures.jpg</icon>
+                        <icon>special://skin/background/pictures/pictures.jpg</icon>
                         <property name="description">$LOCALIZE[31403]</property>
                     </item>
                     <item id="5">
                         <label>8</label>
                         <onclick>ActivateWindow(WeatherSettings)</onclick>
                         <onclick>SetProperty(BackgroundChoose,5,home)</onclick>
-                        <icon>special://skin/backgrounds/weather/weather.jpg</icon>
+                        <icon>special://skin/background/weather/weather.jpg</icon>
                         <property name="description">$LOCALIZE[31404]</property>
                     </item>
                     <item id="6">
@@ -103,21 +103,21 @@
                         <label2>31411</label2>
                         <onclick>ActivateWindow(AddonBrowser)</onclick>
                         <onclick>SetProperty(BackgroundChoose,6,home)</onclick>
-                        <icon>special://skin/backgrounds/programs/programs.jpg</icon>
+                        <icon>special://skin/background/programs/programs.jpg</icon>
                         <property name="description">$LOCALIZE[31408]</property>
                     </item>
                     <item id="7">
                         <label>14036</label>
                         <onclick>ActivateWindow(ServiceSettings)</onclick>
                         <onclick>SetProperty(BackgroundChoose,7,home)</onclick>
-                        <icon>special://skin/backgrounds/network.jpg</icon>
+                        <icon>special://skin/background/network.jpg</icon>
                         <property name="description">$LOCALIZE[31405]</property>
                     </item>
                     <item id="8">
                         <label>13000</label>
                         <onclick>ActivateWindow(SystemSettings)</onclick>
                         <onclick>SetProperty(BackgroundChoose,8,home)</onclick>
-                        <icon>special://skin/backgrounds/system/system.jpg</icon>
+                        <icon>special://skin/background/system/system.jpg</icon>
                         <property name="description">$LOCALIZE[31406]</property>
                     </item>
                     <item id="21">
@@ -125,7 +125,7 @@
                         <label2>31478</label2>
                         <onclick>SetProperty(BackgroundChoose,9,home)</onclick>
                         <onclick>ActivateWindow(PVRSettings)</onclick>
-                        <icon>special://skin/backgrounds/livetv/livetv.jpg</icon>
+                        <icon>special://skin/background/livetv/livetv.jpg</icon>
                         <property name="description">$LOCALIZE[31016]</property>
                     </item>
                     <item id="10">
@@ -133,13 +133,13 @@
                         <label2>31413</label2>
                         <onclick>SetProperty(BackgroundChoose,10,home)</onclick>
                         <onclick>ActivateWindow(systeminfo)</onclick>
-                        <icon>special://skin/backgrounds/systeminfo.jpg</icon>
+                        <icon>special://skin/background/systeminfo.jpg</icon>
                         <property name="description">$LOCALIZE[31409]</property>
                     </item>
                     <item id="9">
                         <label>166</label>
                         <onclick>ActivateWindow(skinsettings)</onclick>
-                        <icon>special://skin/backgrounds/skinsetting.jpg</icon>
+                        <icon>special://skin/background/skinsetting.jpg</icon>
                         <property name="description">$LOCALIZE[31407]</property>
                     </item>
                 </content>
@@ -174,7 +174,7 @@
                 <posy>720</posy>
                 <width>1000</width>
                 <height>210</height>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <label>$INFO[Container(9000).ListItem.Property(description)]</label>
             </control>
         </control>

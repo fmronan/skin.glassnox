@@ -15,7 +15,7 @@
             <posy>308</posy>
             <width>1920</width>
             <height>33</height>
-            <font>Font_Reg19</font>
+            <font>Font_Reg30_2</font>
             <align>center</align>
             <textcolor>$VAR[FontColorVar]</textcolor>
         </control>
@@ -23,7 +23,7 @@
             <posy>688</posy>
             <width>1920</width>
             <height>33</height>
-            <font>Font_Reg21</font>
+            <font>Font_Reg35</font>
             <align>center</align>
         </control>
         <control type="group">

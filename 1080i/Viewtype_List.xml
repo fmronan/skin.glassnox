@@ -224,7 +224,7 @@
                     <width min="0" max="1000">auto</width>
                     <height>40</height>
                     <label>$INFO[ListItem.RatingAndVotes,$LOCALIZE[31095]: [COLOR $VAR[HomeMenuTextFocusVar4]],[/COLOR]]$INFO[ListItem.Top250,$LOCALIZE[13409][COLOR $VAR[HomeMenuTextFocusVar4]],[/COLOR] # ]</label>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                 </control>
             </control>
@@ -237,7 +237,7 @@
                     <width min="0" max="1000">auto</width>
                     <height>40</height>
                     <label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <textcolor>$VAR[HomeMenuTextFocusVar4]</textcolor>
                 </control>
             </control>
@@ -247,7 +247,7 @@
                 <width>455</width>
                 <height>396</height>
                 <label fallback="31006">$VAR[InfoWallTextboxVar]</label>
-                <font>Font_Reg18</font>
+                <font>Font_Reg29</font>
                 <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                 <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
             </control>
@@ -437,7 +437,7 @@
                 <onup>50</onup>
                 <ondown>50</ondown>
                 <onright>5001</onright>
-                <viewtype label="535">List</viewtype>
+                <viewtype label="535">list</viewtype>
                 <pagecontrol>62</pagecontrol>
                 <scrolltime tween="quadratic">200</scrolltime>
                 <itemlayout height="100" condition="!Skin.HasSetting(slimlist) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]">
@@ -472,7 +472,7 @@
                         <height>98</height>
                         <align>center</align>
                         <label>$VAR[ListLabel5Var]</label>
-                        <font>Font_Bold35</font>
+                        <font>Font_Bold56</font>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
@@ -481,7 +481,7 @@
                         <width>720</width>
                         <height>48</height>
                         <label fallback="..">$VAR[ListLabel1Var]</label>
-                        <font>Font_Reg22</font>
+                        <font>Font_Reg38</font>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
@@ -510,8 +510,9 @@
                         <width>170</width>
                         <height>36</height>
                         <align>center</align>
-                        <label>$VAR[ListLabel4Var]</label>
+                        <label>$INFO[ListItem.Genre]</label>
                         <font>Font_Info</font>
+                        <visible>Window.IsActive(programs) + !Container.Content(addons)</visible>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="image">
@@ -546,7 +547,7 @@
                         <posy>-1</posy>
                         <width>1118</width>
                         <height>100</height>
-                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
                     </control>
@@ -557,7 +558,7 @@
                         <height>82</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$VAR[ListImage1Var]</texture>
-                        <colordiffuse>$VAR[HomeMenuTextFocusVar6]</colordiffuse>
+                        <colordiffuse>white6</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>925</posx>
@@ -575,7 +576,7 @@
                         <height>98</height>
                         <align>center</align>
                         <label>$VAR[ListLabel5Var]</label>
-                        <font>Font_Bold35</font>
+                        <font>Font_Bold56</font>
                     </control>
                     <control type="label">
                         <posx>158</posx>
@@ -583,7 +584,7 @@
                         <width>720</width>
                         <height>48</height>
                         <label fallback="..">$VAR[ListLabel1Var]</label>
-                        <font>Font_Reg22</font>
+                        <font>Font_Reg38</font>
                     </control>
                     <control type="label">
                         <posx>158</posx>
@@ -609,8 +610,9 @@
                         <width>170</width>
                         <height>36</height>
                         <align>center</align>
-                        <label>$VAR[ListLabel4Var]</label>
+                        <label>$INFO[ListItem.Genre]</label>
                         <font>Font_Info</font>
+                        <visible>Window.IsActive(programs) + !Container.Content(addons)</visible>
                     </control>
                     <control type="image">
                         <posx>900</posx>
@@ -619,7 +621,7 @@
                         <height>27</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$VAR[ListImage2Var]</texture>
-                        <colordiffuse>$VAR[HomeMenuTextFocusVar6]</colordiffuse>
+                        <colordiffuse>white6</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>1072</posx>
@@ -628,7 +630,7 @@
                         <height>45</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$VAR[WatchedIconVar]</texture>
-						<visible>!Container.Content(songs)</visible>
+                        <visible>!Container.Content(songs)</visible>
                     </control>
                 </focusedlayout>
                 <itemlayout height="100" condition="!Skin.HasSetting(slimlist)">
@@ -642,7 +644,7 @@
                         <posx>158</posx>
                         <width>720</width>
                         <height>98</height>
-                        <font>Font_Reg22</font>
+                        <font>Font_Reg38</font>
                         <textcolor>grey2</textcolor>
                         <info>ListItem.Label</info>
                         <visible>!IsEmpty(ListItem.Label2)</visible>
@@ -651,7 +653,7 @@
                         <posx>158</posx>
                         <width>900</width>
                         <height>98</height>
-                        <font>Font_Reg22</font>
+                        <font>Font_Reg38</font>
                         <textcolor>grey2</textcolor>
                         <info>ListItem.Label</info>
                         <visible>IsEmpty(ListItem.Label2)</visible>
@@ -696,7 +698,7 @@
                         <posy>-1</posy>
                         <width>1118</width>
                         <height>100</height>
-                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <texture border="8">views/tripanel/listselect_fo.png</texture>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
                     </control>
@@ -704,7 +706,7 @@
                         <posx>158</posx>
                         <width>720</width>
                         <height>98</height>
-                        <font>Font_Reg22</font>
+                        <font>Font_Reg38</font>
                         <info>ListItem.Label</info>
                         <visible>!IsEmpty(ListItem.Label2)</visible>
                     </control>
@@ -712,7 +714,7 @@
                         <posx>158</posx>
                         <width>900</width>
                         <height>98</height>
-                        <font>Font_Reg22</font>
+                        <font>Font_Reg38</font>
                         <info>ListItem.Label</info>
                         <visible>IsEmpty(ListItem.Label2)</visible>
                     </control>
@@ -732,7 +734,7 @@
                         <height>45</height>
                         <aspectratio>keep</aspectratio>
                         <texture>$VAR[WatchedIconVar]</texture>
-                        <colordiffuse>$VAR[HomeMenuTextFocusVar2]</colordiffuse>
+                        <colordiffuse>white2</colordiffuse>
                     </control>
                     <control type="image">
                         <posx>49</posx>
@@ -740,7 +742,7 @@
                         <width>90</width>
                         <height>90</height>
                         <texture>$VAR[SmallListIconVar,defaulticons/]</texture>
-                        <colordiffuse>$VAR[HomeMenuTextFocusVar2]</colordiffuse>
+                        <colordiffuse>white2</colordiffuse>
                     </control>
                 </focusedlayout>
                 <itemlayout height="61.5" condition="Skin.HasSetting(slimlist)">
@@ -754,8 +756,8 @@
                         <posx>143</posx>
                         <width>898</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
-                        <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
+                        <font>Font_Reg38</font>
+                        <textcolor>white3</textcolor>
                         <label>$VAR[SlimListLabel1Var]</label>
                     </control>
                     <control type="label">
@@ -763,21 +765,21 @@
                         <width>898</width>
                         <height>60</height>
                         <align>right</align>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>grey2</textcolor>
                         <label>$VAR[ListLabel2Var]</label>
                     </control>
                     <control type="label">
-						<posx>78</posx>
-						<width>100</width>
-						<height>60</height>
-						<align>center</align>
-						<label>$VAR[TriPanelListValue1Var]</label>
-						<font>Font_Reg19</font>
-						<textcolor>$VAR[SubTitleColorVar]</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
-					</control>
+                        <posx>78</posx>
+                        <width>100</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>$VAR[TriPanelListValue1Var]</label>
+                        <font>Font_Reg38</font>
+                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        <scroll>false</scroll>
+                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
+                    </control>
                     <control type="image">
                         <posx>1060</posx>
                         <posy>8</posy>
@@ -817,7 +819,7 @@
                         <posx>143</posx>
                         <width>898</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg38</font>
                         <label>$VAR[SlimListLabel1Var]</label>
                     </control>
                     <control type="label">
@@ -825,20 +827,20 @@
                         <width>898</width>
                         <height>60</height>
                         <align>right</align>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <label>$VAR[ListLabel2Var]</label>
                     </control>
                     <control type="label">
-						<posx>78</posx>
-						<width>100</width>
-						<height>60</height>
-						<align>center</align>
-						<label>$VAR[TriPanelListValue1Var]</label>
-						<font>Font_Reg19</font>
-						<textcolor>$VAR[SubTitleColorVar]</textcolor>
-						<scroll>false</scroll>
-						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
-					</control>
+                        <posx>78</posx>
+                        <width>100</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <label>$VAR[TriPanelListValue1Var]</label>
+                        <font>Font_Reg38</font>
+                        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+                        <scroll>false</scroll>
+                        <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
+                    </control>
                     <control type="image">
                         <posx>1060</posx>
                         <posy>8</posy>
@@ -853,7 +855,7 @@
                         <width>55</width>
                         <height>55</height>
                         <texture>$VAR[SmallListIconVar,defaulticons/]</texture>
-                        <colordiffuse>$VAR[HomeMenuTextFocusVar2]</colordiffuse>
+                        <colordiffuse>white2</colordiffuse>
                         <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
                     </control>
                 </focusedlayout>
@@ -875,7 +877,7 @@
                 <width>450</width>
                 <height>62</height>
                 <label>$VAR[ListBottomLabelVar]</label>
-                <font>Font_Reg15</font>
+                <font>Font_Reg26</font>
                 <textcolor>grey</textcolor>
             </control>
             <control type="label" id="161">
@@ -885,7 +887,7 @@
                 <height>62</height>
                 <align>center</align>
                 <label>$INFO[Container(50).CurrentPage,$LOCALIZE[31024] ]/$INFO[Container(50).NumPages]</label>
-                <font>Font_Reg15</font>
+                <font>Font_Reg26</font>
                 <textcolor>grey</textcolor>
                 <visible>Skin.HasSetting(ClassicTopBar)</visible>
             </control>

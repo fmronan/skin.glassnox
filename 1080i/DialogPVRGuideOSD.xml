@@ -22,7 +22,7 @@
             <control type="label">
                 <width>705</width>
                 <height>40</height>
-                <font>Font_Bold20_Caps</font>
+                <font>Font_Bold34_Caps</font>
                 <label>$LOCALIZE[19222] - $INFO[VideoPlayer.ChannelName]</label>
                 <textcolor>white</textcolor>
                 <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -32,7 +32,7 @@
                 <posy>40</posy>
                 <width>705</width>
                 <height>30</height>
-                <font>Font_Reg14</font>
+                <font>Font_Reg25</font>
                 <label>$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)] • $INFO[System.Time]</label>
                 <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                 <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -71,7 +71,7 @@
                     <width>150</width>
                     <height>80</height>
                     <aligny>center</aligny>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>$INFO[ListItem.StartTime]</label>
                 </control>
                 <control type="label">
@@ -79,7 +79,7 @@
                     <width>400</width>
                     <height>80</height>
                     <aligny>center</aligny>
-                    <font>Font_Reg21</font>
+                    <font>Font_Reg35</font>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>
@@ -124,7 +124,7 @@
                     <width>150</width>
                     <height>80</height>
                     <aligny>center</aligny>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>$INFO[ListItem.StartTime]</label>
                 </control>
                 <control type="label">
@@ -132,7 +132,7 @@
                     <width>400</width>
                     <height>80</height>
                     <aligny>center</aligny>
-                    <font>Font_Reg21</font>
+                    <font>Font_Reg35</font>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                     <label>$INFO[ListItem.Label]</label>
                 </control>

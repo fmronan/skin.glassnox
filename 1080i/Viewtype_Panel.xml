@@ -86,7 +86,7 @@
                     <width>1200</width>
                     <height>164</height>
                     <label>$VAR[GlobalPlotOutlineVar]</label>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
@@ -146,7 +146,7 @@
                             <width min="50" max="800">auto</width>
                             <aligny>bottom</aligny>
                             <label>$INFO[ListItem.Tagline]</label>
-                            <font>Font_Reg18</font>
+                            <font>Font_Reg29</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -160,14 +160,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[515]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Genre]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -181,14 +181,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[20339]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Director]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -202,14 +202,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[20417]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Writer]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -223,14 +223,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[563]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Rating]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -244,14 +244,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[345]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Year]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -265,14 +265,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[2050]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -286,14 +286,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[572]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width min="50" max="720">auto</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Studio]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -307,14 +307,14 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[20074]:</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width>600</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Mpaa]</label>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <scroll>true</scroll>
                             <wrapmultiline>true</wrapmultiline>
@@ -338,7 +338,7 @@
                     <width>1200</width>
                     <height>228</height>
                     <label>$VAR[GlobalPlotVar]</label>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30w</font>
                     <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
@@ -361,7 +361,7 @@
                         <width>365</width>
                         <height>73</height>
                         <label>$VAR[FirstLabelVar]</label>
-                        <font>Font_Bold18_Caps</font>
+                        <font>Font_Bold30_Caps</font>
                     </control>
                     <control type="label">
                         <posx>20</posx>
@@ -369,7 +369,7 @@
                         <width>398</width>
                         <height>73</height>
                         <label>$VAR[SecondLabelVar]</label>
-                        <font>Font_Reg12</font>
+                        <font>Font_Reg22</font>
                     </control>
                     <control type="image">
                         <posx>386</posx>
@@ -394,7 +394,7 @@
                         <width>365</width>
                         <height>73</height>
                         <label>$VAR[FirstLabelVar]</label>
-                        <font>Font_Bold18_Caps</font>
+                        <font>Font_Bold30_Caps</font>
                     </control>
                     <control type="label">
                         <posx>20</posx>
@@ -402,7 +402,7 @@
                         <width>398</width>
                         <height>73</height>
                         <label>$VAR[SecondLabelVar]</label>
-                        <font>Font_Reg12</font>
+                        <font>Font_Reg22</font>
                     </control>
                     <control type="image">
                         <posx>386</posx>
@@ -465,7 +465,7 @@
                 <width>420</width>
                 <align>center</align>
                 <label>$VAR[SecondLabelVar]</label>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
             </control>
             <control type="label">

@@ -28,7 +28,7 @@
                 <posx>1890</posx>
                 <height>57</height>
                 <width>930</width>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <align>right</align>
                 <label fallback="31006">$INFO[ListItem.PictureResolution,[COLOR $VAR[HomeMenuTextFocusVar3]]$LOCALIZE[21805]: [/COLOR]]</label>
             </control>
@@ -37,7 +37,7 @@
                 <posy>30</posy>
                 <height>57</height>
                 <width>930</width>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <align>right</align>
                 <label fallback="31006">$INFO[ListItem.PictureDateTime,[COLOR $VAR[HomeMenuTextFocusVar3]]$LOCALIZE[21803]: [/COLOR]]</label>
             </control>
@@ -45,7 +45,7 @@
                 <posx>30</posx>
                 <height>57</height>
                 <width>930</width>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <label fallback="31006">$INFO[ListItem.Label,[COLOR $VAR[HomeMenuTextFocusVar3]]$LOCALIZE[21800]: [/COLOR]]</label>
             </control>
             <control type="label">
@@ -53,7 +53,7 @@
                 <posy>30</posy>
                 <height>57</height>
                 <width>930</width>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <label fallback="31006">$INFO[ListItem.Size,[COLOR $VAR[HomeMenuTextFocusVar3]]$LOCALIZE[21802]: [/COLOR]]</label>
             </control>
         </control>
@@ -64,7 +64,7 @@
                 <posx>30</posx>
                 <height>57</height>
                 <width>930</width>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <label fallback="31006">$INFO[ListItem.Label]</label>
             </control>
         </control>

@@ -19,7 +19,7 @@
                 <width>1344</width>
                 <height>789</height>
                 <label>-</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                 <pagecontrol>61</pagecontrol>
             </control>

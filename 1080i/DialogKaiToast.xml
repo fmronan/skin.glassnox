@@ -29,7 +29,7 @@
                 <height>32</height>
                 <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                 <align>center</align>
-                <font>Font_Bold18</font>
+                <font>Font_Bold30</font>
                 <scroll>true</scroll>
             </control>
             <control type="label" id="402">

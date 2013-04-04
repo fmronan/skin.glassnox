@@ -131,7 +131,7 @@
             <control type="button" id="12">
                 <width>234</width>
                 <height>62</height>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <label>1024</label>
                 <textoffsetx>30</textoffsetx>
                 <texturenofocus>-</texturenofocus>
@@ -141,7 +141,7 @@
             <control type="button" id="18">
                 <width>234</width>
                 <height>62</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <label>186</label>
                 <textoffsetx>30</textoffsetx>
                 <texturenofocus>-</texturenofocus>
@@ -151,7 +151,7 @@
             <control type="button" id="19">
                 <width>234</width>
                 <height>62</height>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <label>222</label>
                 <textoffsetx>30</textoffsetx>
                 <texturenofocus>-</texturenofocus>

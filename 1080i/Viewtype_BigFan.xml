@@ -22,7 +22,7 @@
                 <itemlayout height="1080" width="1920">
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                        <texture background="true" fallback="special://skin/background/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
                     </control>
                     <control type="multiimage">
                         <include>FullscreenDimensions</include>
@@ -42,7 +42,7 @@
                 <focusedlayout height="1080" width="1920">
                     <control type="image">
                         <include>FullscreenDimensions</include>
-                        <texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                        <texture background="true" fallback="special://skin/background/fallback_movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
                     </control>
                     <control type="multiimage">
                         <include>FullscreenDimensions</include>

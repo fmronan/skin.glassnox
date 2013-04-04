@@ -640,7 +640,7 @@
                             <width min="0" max="700">auto</width>
                             <height>118</height>
                             <label>$LOCALIZE[31021]</label>
-                            <font>Font_Reg38</font>
+                            <font>Font_Reg57</font>
                         </control>
                         <control type="fadelabel">
                             <width>479</width>
@@ -653,7 +653,7 @@
                             <label>$LOCALIZE[33054]...</label>
                             <label>$LOCALIZE[20343]...</label>
                             <label>$LOCALIZE[342]...</label>
-                            <font>Font_Reg38</font>
+                            <font>Font_Reg57</font>
                             <scroll>false</scroll>
                             <pauseatend>5000</pauseatend>
                         </control>
@@ -792,7 +792,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(5002).ListItem.Label2,,: ]$INFO[Container(5002).ListItem.Property(EpisodeNo),, - ]$INFO[Container(5002).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>746</posx>
@@ -867,7 +867,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(5003).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>272</posx>
@@ -999,7 +999,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(6002).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>746</posx>
@@ -1073,7 +1073,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(6003).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>272</posx>
@@ -1206,7 +1206,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(7002).ListItem.Label2,,: ]$INFO[Container(7002).ListItem.Property(EpisodeNumber),, - ]$INFO[Container(7002).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>746</posx>
@@ -1255,7 +1255,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1264,7 +1264,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1273,7 +1273,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                 </control>
@@ -1301,7 +1301,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                         <scroll>true</scroll>
                                     </control>
@@ -1311,7 +1311,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                         <scroll>true</scroll>
                                     </control>
@@ -1321,7 +1321,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Property(EpisodeNumber)]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                 </control>
@@ -1456,7 +1456,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(8002).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>402</posx>
@@ -1505,7 +1505,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1514,7 +1514,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1523,7 +1523,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Property(Year)]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                 </control>
@@ -1561,7 +1561,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1570,7 +1570,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1579,7 +1579,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Property(Year)]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                 </control>
@@ -1705,7 +1705,7 @@
                             <height>40</height>
                             <textoffsetx>15</textoffsetx>
                             <label>$INFO[Container(9002).ListItem.Label]</label>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                         </control>
                         <control type="image">
                             <posx>402</posx>
@@ -1753,7 +1753,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1762,7 +1762,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1771,7 +1771,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Property(Year)]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                 </control>
@@ -1799,7 +1799,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1808,7 +1808,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Label2]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                     <control type="label">
@@ -1817,7 +1817,7 @@
                                         <height>45</height>
                                         <textoffsetx>15</textoffsetx>
                                         <label>$INFO[ListItem.Property(Year)]</label>
-                                        <font>Font_Reg15</font>
+                                        <font>Font_Reg26</font>
                                         <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
                                     </control>
                                 </control>

@@ -45,7 +45,7 @@
                             <posy>733</posy>
                             <width>985</width>
                             <label>$INFO[ListItem.Tagline]</label>
-                            <font>Font_Reg19_Caps</font>
+                            <font>Font_Reg33_Caps</font>
                             <textcolor>FF000000</textcolor>
                             <scroll>true</scroll>
                         </control>
@@ -200,7 +200,7 @@
                         <height>60</height>
                         <align>center</align>
                         <label>$INFO[ListItem.Title]</label>
-                        <font>Font_Reg25_Caps</font>
+                        <font>Font_Reg42_Caps</font>
                         <textcolor>white3</textcolor>
                     </control>
                     <control type="label">
@@ -316,7 +316,7 @@
                         <width>405</width>
                         <height>367</height>
                         <label>$VAR[GlobalPlotVar]</label>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>white6</textcolor>
                         <pagecontrol>7002</pagecontrol>
                         <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -444,7 +444,7 @@
                             <width>633</width>
                             <height>237</height>
                             <label>$VAR[GlobalPlotVar]</label>
-                            <font>Font_Reg32</font>
+                            <font>Font_Reg30</font>
                             <textcolor>white6</textcolor>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <visible>Skin.HasSetting(nohighlist)</visible>
@@ -455,7 +455,7 @@
                             <width>633</width>
                             <height>196</height>
                             <label>$VAR[GlobalPlotVar]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <textcolor>white6</textcolor>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <visible>Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
@@ -466,7 +466,7 @@
                             <width>633</width>
                             <height>399</height>
                             <label>$VAR[GlobalPlotVar]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <textcolor>white6</textcolor>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                             <visible>!Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
@@ -788,7 +788,7 @@
                         <width>645</width>
                         <height>66</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Font_Bold16_Caps</font>
+                        <font>Font_Bold28_Caps</font>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="label">
@@ -797,7 +797,7 @@
                         <height>66</height>
                         <align>center</align>
                         <label>$INFO[ListItem.Rating]</label>
-                        <font>Font_Bold16</font>
+                        <font>Font_Bold28</font>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
                     </control>
                     <control type="image">
@@ -830,7 +830,7 @@
                         <width>645</width>
                         <height>33</height>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Font_Bold16_Caps</font>
+                        <font>Font_Bold28_Caps</font>
                     </control>
                     <control type="label">
                         <posx>30</posx>
@@ -846,7 +846,7 @@
                         <height>33</height>
                         <align>center</align>
                         <label>$INFO[ListItem.Year]</label>
-                        <font>Font_Bold16</font>
+                        <font>Font_Bold28</font>
                     </control>
                     <control type="label">
                         <posx>710</posx>
@@ -883,7 +883,7 @@
                             <height>146</height>
                             <align>center</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font_Bold24</font>
+                            <font>Font_Bold40</font>
                         </control>
                         <control type="image">
                             <width>798</width>
@@ -929,7 +929,7 @@
                             <height>146</height>
                             <align>center</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font_Bold24</font>
+                            <font>Font_Bold40</font>
                         </control>
                         <control type="image">
                             <width>798</width>

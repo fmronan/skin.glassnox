@@ -23,7 +23,7 @@
             <posy>27</posy>
             <width>840</width>
             <height>45</height>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
             <label>13406</label>
             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
         </control>
@@ -33,7 +33,7 @@
             <width>840</width>
             <height>45</height>
             <label>-</label>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
         </control>
         <control type="label" id="3">
             <posx>30</posx>
@@ -41,7 +41,7 @@
             <width>840</width>
             <height>45</height>
             <label>-</label>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
         </control>
         <control type="label" id="4">
             <posx>30</posx>

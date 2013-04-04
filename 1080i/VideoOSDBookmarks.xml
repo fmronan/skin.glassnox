@@ -41,7 +41,7 @@
             <posy>45</posy>
             <width>1322</width>
             <height>45</height>
-            <font>Font_Bold19</font>
+            <font>Font_Bold33</font>
             <label>$LOCALIZE[298]</label>
             <textcolor>$VAR[TitleColorVar]</textcolor>
         </control>
@@ -92,7 +92,7 @@
             <posy>658</posy>
             <width>315</width>
             <height>60</height>
-            <font>Font_Reg14</font>
+            <font>Font_Reg25</font>
             <align>right</align>
             <textcolor>grey2</textcolor>
             <aligny>bottom</aligny>

@@ -18,7 +18,7 @@
                 <posy>27</posy>
                 <width>615</width>
                 <height>45</height>
-                <font>Font_Reg18</font>
+                <font>Font_Reg29</font>
                 <label>31321</label>
                 <align>center</align>
                 <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>

@@ -102,6 +102,14 @@
                     <onclick>Skin.ToggleSetting(no_infopane_panel)</onclick>
                     <selected>Skin.HasSetting(no_infopane_panel)</selected>
                 </control>
+                <control type="radiobutton" id="1626">
+                    <label>$LOCALIZE[31287] 2</label>
+                    <include>Objects_MediaMenuButtonAround</include>
+                    <onclick>Skin.SetString(InfoPanel$INFO[Window(home).Property(Area)]$INFO[Window(home).Property(actualViewtype)],chaine)</onclick>
+                    <onclick>Skin.ToggleSetting(4thumbsChaine)</onclick>
+                    <selected>Skin.HasSetting(4thumbsChaine)</selected>
+                    <visible>StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
+                </control>
             </control>
         <control type="panel" id="451">
             <posx>305</posx>
@@ -137,7 +145,7 @@
                     <width>250</width>
                     <height>30</height>
                     <align>center</align>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>bcicon</textcolor>
                     <info>ListItem.Label</info>
                 </control>
@@ -170,7 +178,7 @@
                     <width>250</width>
                     <height>30</height>
                     <align>center</align>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
@@ -203,12 +211,6 @@
                     <thumb>views/fourthumbs_focus.png</thumb>
                     <property name="type">fourthumbs</property>
                     <onclick>Skin.SetString(InfoPanel$INFO[Window(home).Property(Area)]$INFO[Window(home).Property(actualViewtype)],fourthumbs)</onclick>
-                </item>
-                <item id="5">
-                    <label>$LOCALIZE[31287].2</label>
-                    <icon>views/fourthumbs.png</icon>
-                    <thumb>views/fourthumbs_focus.png</thumb>
-                    <onclick>Skin.SetString(InfoPanel$INFO[Window(home).Property(Area)]$INFO[Window(home).Property(actualViewtype)],chaine)</onclick>
                 </item>
             </content>
         </control>

@@ -30,15 +30,6 @@
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
                 <control type="image">
-                    <posx>-600</posx>
-                    <posy>874</posy>
-                    <width>2490</width>
-                    <height>226</height>
-                    <texture>views/showcase_spot.png</texture>
-                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                    <visible>Control.IsVisible(50)</visible>
-                </control>
-                <control type="image">
                     <posx>1040</posx>
                     <posy>874</posy>
                     <width>880</width>
@@ -115,7 +106,7 @@
                 <width>1100</width>
                 <align>center</align>
                 <label>$VAR[SecondLabelVar]</label>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <shadowcolor>floorshadow</shadowcolor>
                 <textcolor>white</textcolor>
                 <visible>![Control.HasFocus(61) | Control.IsVisible(4050)]</visible>
@@ -155,7 +146,7 @@
             <posy>1035</posy>
             <height>40</height>
             <width>975</width>
-            <visible>Control.IsVisible(509) | Control.IsVisible(500) | Control.IsVisible(508) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(57) | Control.IsVisible(510) | Control.IsVisible(503)</visible>
+            <visible>Control.IsVisible(509) | Control.IsVisible(508) | Control.IsVisible(500) | Control.IsVisible(501) | Control.IsVisible(57) | Control.IsVisible(510) | Control.IsVisible(503)</visible>
             <animation effect="fade" start="100" end="0" time="320" condition="![Control.HasFocus(61) | Control.IsVisible(4050)]">Conditional</animation>
             <onup>50</onup>
             <orientation>horizontal</orientation>
@@ -218,7 +209,7 @@
                 <height>74</height>
                 <align>center</align>
                 <label>31888</label>
-                <font>Font_Reg12</font>
+                <font>Font_Reg22</font>
                 <textcolor>grey2</textcolor>
                 <wrapmultiline>true</wrapmultiline>
             </control>
@@ -249,38 +240,36 @@
                 <effect type="slide" end="148" time="320" easing="in" tween="cubic" />
             </animation>
             <visible>[Control.IsVisible(512) + !Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + !Skin.HasSetting(wallfullscreen)] | [Control.IsVisible(518) + !Skin.HasSetting(infopanelbackground)]</visible>
+            <control type="group">
             <control type="image">
                 <posx>112</posx>
                 <posy>68</posy>
-                <width>1695</width>
+                <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="240" condition="Control.IsVisible(512)">Conditional</animation>
+                <animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>                <width>1695</width>
                 <height>1038</height>
                 <texture>wall/wall_bg_glow.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <include>PanelGlowFade</include>
-                <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="240" condition="Control.IsVisible(512)">Conditional</animation>
-                <animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>
             </control>
             <control type="image">
                 <posx>112</posx>
                 <posy>68</posy>
-                <width>1695</width>
+                        <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="240" condition="Control.IsVisible(512)">Conditional</animation>
+                <animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>        <width>1695</width>
                 <height>1038</height>
                 <texture>wall/wall_bg.png</texture>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="240" condition="Control.IsVisible(512)">Conditional</animation>
-                <animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>
             </control>
             <control type="image">
                 <posx>112</posx>
                 <posy>68</posy>
-                <width>1695</width>
+                <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="240" condition="Control.IsVisible(512)">Conditional</animation>
+                <animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>                <width>1695</width>
                 <height>1038</height>
                 <texture>wall/wall_bg_reflection.png</texture>
-                <animation effect="zoom" start="112,68,1695,1038" end="38,68,1845,1038" time="240" condition="Control.IsVisible(512)">Conditional</animation>
-                <animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>
             </control>
-            <include condition="Skin.HasSetting(effect_bg)">BG_Effect_Wall_Panel</include>
+            </control>
         </control>
     </include>
     <include name="OverlayVisibility-7">
@@ -365,7 +354,7 @@
     </include>
     <include name="ShowcaseInfoPaneMovies">
 		<control type="group" id="7550">
-            <visible>Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
+            <visible>Window.IsActive(1112) |Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
             <visible>Control.IsVisible(9900)</visible>
             <visible>StringCompare(Control.GetLabel(4420),chaine)</visible>
             <visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
@@ -745,7 +734,7 @@
                 <width>798</width>
                 <height>454</height>
                 <aspectratio align="center">scale</aspectratio>
-                <texture background="true" fallback="special://skin/backgrounds/fallback_movies.jpg">$VAR[FanartTextureVar]</texture>
+                <texture background="true" fallback="special://skin/background/fallback_movies.jpg">$VAR[FanartTextureVar]</texture>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                 <bordersize>7</bordersize>
@@ -755,13 +744,13 @@
                     <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
             </control>
-            <control type="multiimage">
+			<control type="multiimage">
                 <posx>909</posx>
                 <posy>69</posy>
                 <width>798</width>
                 <height>454</height>
                 <aspectratio align="center">scale</aspectratio>
-                <imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
+                <imagepath background="true">$INFO[Control.GetLabel(4325)]</imagepath>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                 <bordersize>7</bordersize>
@@ -770,6 +759,7 @@
                 <animation type="VisibleChange">
                     <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
+                <visible>!SubString(ListItem.Path,videodb://1/7/,left)</visible>
             </control>
             <control type="group">
                 <posx>158</posx>
@@ -916,21 +906,21 @@
                         <control type="label">
                             <width>420</width>
                             <height>22</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label>$VAR[FanartPanelDetail1Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <aligny>top</aligny>
                             <width>420</width>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <height>44</height>
                             <label fallback="31006">$VAR[FanartPanelValue1Var]</label>
                             <scroll>true</scroll>
                         </control>
                         <control type="label">
                             <width>420</width>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <height>22</height>
                             <label>$VAR[FanartPanelDetail2Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
@@ -938,7 +928,7 @@
                         <control type="label">
                             <width>420</width>
                             <height>44</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <aligny>top</aligny>
                             <label fallback="31006">$VAR[FanartPanelValue2Var]</label>
                             <scroll>true</scroll>
@@ -946,14 +936,14 @@
                         <control type="label">
                             <width>420</width>
                             <height>22</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label>$VAR[PosterPanelDetail3Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width>420</width>
                             <height>44</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <aligny>top</aligny>
                             <label fallback="31006">$VAR[PosterPanelValue3Var]</label>
                             <scroll>true</scroll>
@@ -961,14 +951,14 @@
                         <control type="label">
                             <width>420</width>
                             <height>22</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label>$VAR[FanartPanelDetail4Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="fadelabel">
                             <width>422</width>
                             <height>44</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <aligny>top</aligny>
                             <label fallback="31006">$VAR[PosterPanelValue4Var]</label>
                             <pauseatend>3000</pauseatend>
@@ -976,14 +966,14 @@
                         <control type="label">
                             <width>420</width>
                             <height>22</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label>$VAR[PosterPanelDetail5Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width>300</width>
                             <height>44</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <aligny>top</aligny>
                             <label fallback="31006">$VAR[PosterPanelValue5Var]</label>
                             <scroll>true</scroll>
@@ -991,14 +981,14 @@
                         <control type="label">
                             <width>420</width>
                             <height>22</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label>$VAR[PosterPanelDetail6Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
                         <control type="label">
                             <width>420</width>
                             <height>44</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <aligny>top</aligny>
                             <label fallback="31006">$VAR[PosterPanelValue6Var]</label>
                             <scroll>true</scroll>
@@ -1006,7 +996,7 @@
                         <control type="label">
                             <width>420</width>
                             <height>22</height>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label>$VAR[PosterPanelDetail7Var]</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -1014,7 +1004,7 @@
                             <width>420</width>
                             <height>44</height>
                             <aligny>top</aligny>
-                            <font>Font_Reg17</font>
+                            <font>Font_Reg28</font>
                             <label fallback="31452">$VAR[PosterPanelValue7Var]</label>
                             <scroll>true</scroll>
                         </control>

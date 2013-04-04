@@ -77,7 +77,7 @@
                 <width>600</width>
                 <height>60</height>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <label>31501</label>
                 <align>center</align>
             </control>
@@ -86,7 +86,7 @@
                 <posy>215</posy>
                 <width>572</width>
                 <height>60</height>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <align>center</align>
                 <textoffsety>10</textoffsety>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
@@ -249,7 +249,7 @@
                 <control type="label" id="333">
                     <width>672</width>
                     <height>60</height>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <textoffsetx>10</textoffsetx>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <label>$LOCALIZE[31176]</label>
@@ -260,7 +260,7 @@
                     <height>30</height>
                     <include>Objects_NowPlayingSettingsButton</include>
                     <label></label>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                 </control>
                 <control type="button" id="452">
                     <include>Objects_NowPlayingSettingsButton</include>

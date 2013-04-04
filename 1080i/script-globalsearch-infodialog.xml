@@ -22,7 +22,7 @@
             <posx>580</posx>
             <posy>143</posy>
             <width>1160</width>
-            <font>Font_Reg38_Caps</font>
+            <font>Font_Reg57_Caps</font>
             <label>$INFO[Container(100).ListItem.Label]</label>
         </control>
         <control type="image">

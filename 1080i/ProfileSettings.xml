@@ -67,7 +67,7 @@
                     <width>1491</width>
                     <height>30</height>
                     <align>center</align>
-                    <font>Font_Reg14</font>
+                    <font>Font_Reg25</font>
                     <haspath>yes</haspath>
                     <label>-</label>
                 </control>
@@ -91,7 +91,7 @@
                         <texturenofocus>-</texturenofocus>
                         <label>186</label>
                         <textcolor>grey</textcolor>
-                        <font>Font_Bold20_Caps</font>
+                        <font>Font_Bold34_Caps</font>
                         <textoffsety>18</textoffsety>
                         <textoffsetx>30</textoffsetx>
                     </control>
@@ -105,7 +105,7 @@
                         <texturenofocus>-</texturenofocus>
                         <textcolor>grey</textcolor>
                         <label>222</label>
-                        <font>Font_Bold20_Caps</font>
+                        <font>Font_Bold34_Caps</font>
                         <textoffsety>18</textoffsety>
                         <textoffsetx>30</textoffsetx>
                     </control>

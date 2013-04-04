@@ -59,7 +59,7 @@
                         <width>150</width>
                         <height>30</height>
                         <align>center</align>
-                        <font>Font_Reg18</font>
+                        <font>Font_Reg29</font>
                         <textcolor>grey2</textcolor>
                         <label>[B]$INFO[ListItem.Property(Description)][/B]</label>
                     </control>
@@ -86,7 +86,7 @@
                         <width>150</width>
                         <height>30</height>
                         <align>center</align>
-                        <font>Font_Reg18</font>
+                        <font>Font_Reg29</font>
                         <textcolor>white2</textcolor>
                         <label>[B]$INFO[ListItem.Property(Description)][/B]</label>
                     </control>

@@ -2,7 +2,6 @@
 <window>
     <defaultcontrol always="true">50</defaultcontrol>
     <onload condition="Skin.HasSetting(languageflag)">RunScript(script.videolanguage,backend=true)</onload>
-    <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,backend=true)</onload>
     <onload condition="System.HasAddon(script.metadata.actors) + !IsEmpty(Window(home).Property(BrowseActors))">RunScript(script.metadata.actors,backend)</onload>
     <onload condition="System.HasAddon(script.tvtunes) + IsEmpty(Window(Home).Property(DontRunTVShowScripts))">RunScript(script.tvtunes,backend=True)</onload>
     <backgroundcolor>backgroundcolor</backgroundcolor>
@@ -36,25 +35,42 @@
             <include>HiddenObject</include>
         </control>
         <control type="group">
-            <visible>!Control.IsVisible(516)</visible>
-            <include>CustomViewFanart</include>
+            <visible>!Control.IsVisible(516) + !Window.IsActive(movieinformation)</visible>
             <control type="multiimage">
-                <imagepath background="true" fallback="special://skin/backgrounds/videos/">$VAR[VideoFanartVar]</imagepath>
+                <imagepath background="true" fallback="special://skin/background/videos/">$VAR[VideoFanartVar]</imagepath>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="fade" start="100" end="50" time="640">Hidden</animation>
-                <visible>!Window.IsActive(movieinformation)</visible>
+                <visible>!Container.Content(movies) + !Control.IsVisible(4200)</visible>
+            </control>
+            <control type="multiimage">
+                <imagepath background="true" fallback="special://skin/background/movies/">$VAR[MovieFanartVar]</imagepath>
+                <fadetime>FanartCrossfadeTime</fadetime>
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+                <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="640">Hidden</animation>
+                <visible>Container.Content(movies)</visible>
+            </control>
+             <control type="multiimage" id="4200">
+                <imagepath background="true" fallback="special://skin/background/tvshows/">$VAR[TVShowFanartVar]</imagepath>
+                <fadetime>FanartCrossfadeTime</fadetime>
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+                <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
+                <animation effect="fade" start="100" end="50" time="640">Hidden</animation>
+                <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
             </control>
             <control type="multiimage">
                 <imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-                <visible>[Container.Content(musicvideos) + Skin.HasSetting(extrafanartmusicvideos)] | [Container.Content(movies) + Skin.HasSetting(extrafanartmovies)] | [Container.Content(tvshows) + Skin.HasSetting(extrafanartseries)] | [Container.Content(seasons) + Skin.HasSetting(extrafanartseasons)] | [Container.Content(episodes) + Skin.HasSetting(extrafanartepisodes)]</visible>
+                <visible>[Container.Content(musicvideos) + Skin.HasSetting(extrafanartmusicvideos)] | [Container.Content(seasons) + Skin.HasSetting(extrafanartseasons)] | [Container.Content(episodes) + Skin.HasSetting(extrafanartepisodes)]</visible>
                 <visible>!SubString(ListItem.Label,*,left) + [Substring(Container.FolderPath,videodb://,left) | Substring(Container.FolderPath,special://profile/playlist,left)]</visible>
             </control>
         </control>
+        <include condition="System.HasAddon(script.extendedinfo)">InteractiveNodeCases</include>
+        <include condition="System.HasAddon(script.extendedinfo)">NodeFadeLabels</include>
         <!-- view id = 516-->
         <include condition="!Skin.HasSetting(DisableBigFanVL)">BigFan</include>
         <include>VideoBackground</include>
@@ -494,7 +510,7 @@
                     </animation>
                 </control>
             </control>
-            <control type="group">
+         <!--   <control type="group">
                 <control type="button" id="7000">
                     <include>HiddenObject</include>
                     <onfocus condition="Control.IsVisible(501)+ Container.Content(movies)+Skin.HasSetting(usecases)+!Stringcompare(Skin.String(MovieDiscArt),none)">SetProperty(ControlOpenCase,True,Home)</onfocus>
@@ -519,7 +535,29 @@
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>
                     <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">Select</onclick>
                     <visible>Control.IsVisible(9900) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
-                </control>  
+                </control>  -->
+                <control type="group">
+                <control type="button" id="7000">
+                    <include>HiddenObject</include>
+                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) | Control.IsVisible(508)] + [Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(508)]">SetFocus(9000)</onfocus>
+                    <onfocus condition="[Stringcompare(Control.GetLabel(4421),infopanelon) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)] + [Control.IsVisible(501) | Control.IsVisible(503)]">SetFocus(9000)</onfocus>
+                    <onup>SetFocus(9000)</onup>
+                    <onleft condition="Control.IsVisible(501)">Control.Move(501,-1)</onleft>
+                    <onleft condition="Control.IsVisible(503)">Control.Move(503,-1)</onleft>
+                    <onleft condition="Control.IsVisible(508)">Control.Move(508,-1)</onleft>
+                    <onright condition="Control.IsVisible(501)">Control.Move(501,1)</onright>
+                    <onright condition="Control.IsVisible(503)">Control.Move(503,1)</onright>
+                    <onright condition="Control.IsVisible(508)">Control.Move(508,1)</onright>
+                    <onleft>50</onleft>
+                    <onright>50</onright>
+                    <ondown>50</ondown>
+                    <onback>50</onback>
+                    <onclick condition="!IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
+                    <onclick condition="IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
+                    <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>
+                    <onclick condition="Container.Content(tvshows) | Container.Content(seasons)">Select</onclick>
+                    <visible>Control.IsVisible(9900) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
+                </control>
                 <control type="button" id="7002">
                     <include>HiddenObject</include>
                     <onup>Control.Move(511,-1)</onup>

@@ -57,7 +57,7 @@
                             <posx>10</posx>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label</info>
                             <shadowcolor>black</shadowcolor>
                         </control>
@@ -66,7 +66,7 @@
                             <posy>30</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label2</info>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -76,7 +76,7 @@
                             <posy>60</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -92,7 +92,7 @@
                             <posx>10</posx>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label</info>
                             <shadowcolor>black</shadowcolor>
                         </control>
@@ -101,7 +101,7 @@
                             <posy>30</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label2</info>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -111,7 +111,7 @@
                             <posy>60</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -137,7 +137,7 @@
                         <posy>350</posy>
                         <width>607</width>
                         <height>25</height>
-                        <font>Font_Reg14_Caps</font>
+                        <font>Font_Reg38_Caps</font>
                         <textcolor>white3</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <textoffsetx>15</textoffsetx>
@@ -224,7 +224,7 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>white2</textcolor>
                         <label>$INFO[Container(5001).ListItem.Label]$INFO[Container(5001).ListItem.Label2, - ]</label>
                         <textoffsetx>15</textoffsetx>
@@ -314,7 +314,7 @@
                         <posy>300</posy>
                         <width>246</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>white2</textcolor>
                         <label>$INFO[Container(5002).ListItem.Label]</label>
                         <textoffsetx>15</textoffsetx>
@@ -334,7 +334,7 @@
                         <posy>350</posy>
                         <width>607</width>
                         <height>25</height>
-                        <font>Font_Reg14_Caps</font>
+                        <font>Font_Reg38_Caps</font>
                         <textcolor>white3</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <align>right</align>
@@ -424,7 +424,7 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>white2</textcolor>
                         <label>$INFO[Container(5003).ListItem.Label]$INFO[Container(5003).ListItem.Label2, - ]</label>
                         <textoffsetx>15</textoffsetx>
@@ -506,7 +506,7 @@
                             <posx>10</posx>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label</info>
                             <shadowcolor>black</shadowcolor>
                         </control>
@@ -515,7 +515,7 @@
                             <posy>30</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label2</info>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -525,7 +525,7 @@
                             <posy>60</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -541,7 +541,7 @@
                             <posx>10</posx>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label</info>
                             <shadowcolor>black</shadowcolor>
                         </control>
@@ -550,7 +550,7 @@
                             <posy>30</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <info>ListItem.Label2</info>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -560,7 +560,7 @@
                             <posy>60</posy>
                             <width>390</width>
                             <height>40</height>
-                            <font>Font_Reg15</font>
+                            <font>Font_Reg26</font>
                             <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                             <textcolor>grey</textcolor>
                             <shadowcolor>black</shadowcolor>
@@ -586,7 +586,7 @@
                         <posy>350</posy>
                         <width>607</width>
                         <height>25</height>
-                        <font>Font_Reg14_Caps</font>
+                        <font>Font_Reg38_Caps</font>
                         <textcolor>white3</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <textoffsetx>15</textoffsetx>
@@ -671,7 +671,7 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>white2</textcolor>
                         <label>$INFO[Container(6001).ListItem.Label]$INFO[Container(6001).ListItem.Label2, - ]</label>
                         <textoffsetx>15</textoffsetx>
@@ -759,7 +759,7 @@
                         <posy>300</posy>
                         <width>246</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>white2</textcolor>
                         <label>$INFO[Container(6002).ListItem.Label]</label>
                         <textoffsetx>15</textoffsetx>
@@ -779,7 +779,7 @@
                         <posy>350</posy>
                         <width>607</width>
                         <height>25</height>
-                        <font>Font_Reg14_Caps</font>
+                        <font>Font_Reg38_Caps</font>
                         <textcolor>white3</textcolor>
                         <shadowcolor>black</shadowcolor>
                         <align>right</align>
@@ -867,7 +867,7 @@
                         <posy>300</posy>
                         <width>466</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>white2</textcolor>
                         <label>$INFO[Container(6003).ListItem.Label]$INFO[Container(6003).ListItem.Label2, - ]</label>
                         <textoffsetx>15</textoffsetx>
@@ -935,7 +935,7 @@
                     <height>60</height>
                     <align>center</align>
                     <label>$VAR[WidgetTypeLabelVar]</label>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                     <include>Animation_HomeWidget</include>
                     <visible>!SubString(Control.GetLabel(4321),panel)</visible>
@@ -957,7 +957,7 @@
                     <width>330</width>
                     <label>$INFO[Container(8000).ListItem.Label2]$INFO[Container(8000).ListItem.Property(EpisodeNumber), • ]</label>
                     <align>center</align>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>grey</textcolor>
                     <scrollspeed>30</scrollspeed>
                     <scroll>true</scroll>
@@ -1017,7 +1017,7 @@
                     <height>30</height>
                     <align>center</align>
                     <label>$INFO[Container(8000).ListItem.Label]</label>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>grey</textcolor>
                     <scrollspeed>30</scrollspeed>
                     <scroll>true</scroll>
@@ -1377,7 +1377,7 @@
                     <height>60</height>
                     <align>center</align>
                     <label>$VAR[Widget2TypeLabelVar]</label>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                     <include>Animation_HomeWidget</include>
                     <visible>!SubString(Control.GetLabel(4325),panel)</visible>
@@ -1399,7 +1399,7 @@
                     <width>330</width>
                     <label>$INFO[Container(7000).ListItem.Label2]$INFO[Container(7000).ListItem.Property(EpisodeNumber), • ]</label>
                     <align>center</align>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>grey</textcolor>
                     <scrollspeed>30</scrollspeed>
                     <scroll>true</scroll>
@@ -1460,7 +1460,7 @@
                     <height>30</height>
                     <align>center</align>
                     <label>$INFO[Container(7000).ListItem.Label]</label>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>grey</textcolor>
                     <scrollspeed>30</scrollspeed>
                     <scroll>true</scroll>
@@ -1899,7 +1899,7 @@
                 <height>225</height>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg17_Caps</font>
+                <font>Font_Reg30_Caps</font>
             </control>
             <control type="image">
                 <posx>266</posx>
@@ -1939,7 +1939,7 @@
                 <height>225</height>
                 <align>center</align>
                 <label>[B]$INFO[ListItem.Label][/B]</label>
-                <font>Font_Reg17_Caps</font>
+                <font>Font_Reg30_Caps</font>
             </control>
             <control type="image">
                 <posx>266</posx>
@@ -1972,7 +1972,7 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey</textcolor>
             </control>
@@ -1991,7 +1991,7 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
                 <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
                 <scroll>true</scroll>
@@ -2004,7 +2004,7 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
                 <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
                 <label>$INFO[ListItem.Label]</label>
@@ -2026,7 +2026,7 @@
                 <label fallback="136">$INFO[Skin.String(VideosSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),videos)</visible>
@@ -2035,7 +2035,7 @@
                 <label fallback="31502">$INFO[Skin.String(VideosSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub2.Disable)]</property>
                 <visible>Library.HasContent(Movies)</visible>
@@ -2045,7 +2045,7 @@
                 <label fallback="31503">$INFO[Skin.String(VideosSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub3.Disable)]</property>
                 <visible>Library.HasContent(TVShows)</visible>
@@ -2055,7 +2055,7 @@
                 <label fallback="20389">$INFO[Skin.String(VideosSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub4.Disable)]</property>
                  <visible>Library.HasContent(MusicVideos)</visible>
@@ -2065,7 +2065,7 @@
                 <label fallback="744">$INFO[Skin.String(VideosSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),videos)</visible>
@@ -2074,7 +2074,7 @@
                 <label fallback="31507">$INFO[Skin.String(VideosSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,VideosSub6,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosSub6.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosSub6.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(VideosSub6.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(VideosSub6.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),videos)</visible>
@@ -2084,7 +2084,7 @@
                 <label fallback="133">$INFO[Skin.String(MusicSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub1.Disable)]</property>
                 <visible>Library.HasContent(Music)</visible>
@@ -2094,7 +2094,7 @@
                 <label fallback="132">$INFO[Skin.String(MusicSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub2.Disable)]</property>
                 <visible>Library.HasContent(Music)</visible>
@@ -2104,7 +2104,7 @@
                 <label fallback="134">$INFO[Skin.String(MusicSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub3.Disable)]</property>
                 <visible>Library.HasContent(Music)</visible>
@@ -2114,7 +2114,7 @@
                 <label fallback="744">$INFO[Skin.String(MusicSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub4.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),music)</visible>
@@ -2123,7 +2123,7 @@
                 <label fallback="14022">$INFO[Skin.String(MusicSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),music)</visible>
@@ -2132,7 +2132,7 @@
                 <label fallback="24001">$INFO[Skin.String(MusicSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub7,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub7.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub7.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub7.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub7.Disable)]</property>
                 <visible>!Library.HasContent(Music)</visible>
@@ -2142,7 +2142,7 @@
                 <label fallback="31040">$INFO[Skin.String(MusicSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub8,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub8.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub8.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub8.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub8.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),music)</visible>
@@ -2151,7 +2151,7 @@
                 <label fallback="31334">$INFO[Skin.String(MusicSub9.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub9,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub9.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub9.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub9.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub9.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),music)</visible>
@@ -2160,7 +2160,7 @@
                 <label fallback="31333">$INFO[Skin.String(MusicSub10.Label)]</label>
                 <onclick>SetProperty(MenuItem,MusicSub10,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicSub10.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicSub10.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MusicSub10.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MusicSub10.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),music)</visible>
@@ -2170,7 +2170,7 @@
                 <label fallback="31731">$INFO[Skin.String(SystemSub1.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2179,7 +2179,7 @@
                 <label fallback="7">$INFO[Skin.String(SystemSub2.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub2.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2188,7 +2188,7 @@
                 <label fallback="Skin">$INFO[Skin.String(SystemSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub7,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub7.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub7.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub7.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub7.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2197,7 +2197,7 @@
                 <label fallback="13200">$INFO[Skin.String(SystemSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub3.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2206,7 +2206,7 @@
                 <label fallback="130">$INFO[Skin.String(SystemSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub4.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2215,7 +2215,7 @@
                 <label fallback="24001">$INFO[Skin.String(SystemSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2224,7 +2224,7 @@
                 <label fallback="31732">$INFO[Skin.String(SystemSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub6,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub6.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub6.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub6.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub6.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2233,7 +2233,7 @@
                 <label fallback="Views">$INFO[Skin.String(SystemSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,SystemSub8,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SystemSub8.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SystemSub8.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(SystemSub8.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(SystemSub8.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),settings)</visible>
@@ -2244,7 +2244,7 @@
                 <label fallback="CUSTOM 46">$INFO[Skin.String(CustomSub0_1.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub10_1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/weather/">$INFO[Skin.String(CustomSub10_1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub10_1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub10_1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),custom0)</visible>
@@ -2253,7 +2253,7 @@
                 <label fallback="CUSTOM 47">$INFO[Skin.String(CustomSub0_2.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/weather/">$INFO[Skin.String(CustomSub0_2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_2.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),custom0)</visible>
@@ -2262,7 +2262,7 @@
                 <label fallback="CUSTOM 48">$INFO[Skin.String(CustomSub0_3.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/weather/">$INFO[Skin.String(CustomSub0_3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_3.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),custom0)</visible>
@@ -2271,7 +2271,7 @@
                 <label fallback="CUSTOM 49">$INFO[Skin.String(CustomSub0_4.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/weather/">$INFO[Skin.String(CustomSub0_4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_4.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),custom0)</visible>
@@ -2280,7 +2280,7 @@
                 <label fallback="CUSTOM 50">$INFO[Skin.String(CustomSub0_5.Label)]</label>
                 <onclick>SetProperty(MenuItem,CustomSub0_5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(CustomSub0_5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/weather/">$INFO[Skin.String(CustomSub0_5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(CustomSub0_5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(CustomSub0_5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),custom0)</visible>
@@ -2337,7 +2337,7 @@
                 <onclick condition="!System.HasAddon(script.cinema.experience)">Notification($LOCALIZE[42000],$LOCALIZE[42005])</onclick>
                 <onclick>SetProperty(MenuItem,MoviesSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub1.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub1.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2347,7 +2347,7 @@
                 <onclick condition="!IsEmpty(Skin.String(MoviesSub2))">Skin.SetAddon(HomeMenuSubMoviesTrailer,xbmc.addon.video)</onclick>
                 <onclick>SetProperty(MenuItem,MoviesSub2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub2.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub2.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub2.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2356,7 +2356,7 @@
                 <label fallback="31334">$INFO[Skin.String(MoviesSub3.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub3.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub3.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub3.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2365,7 +2365,7 @@
                 <label fallback="369">$INFO[Skin.String(MoviesSub4.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub4.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub4.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub4.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2374,7 +2374,7 @@
                 <label fallback="135">$INFO[Skin.String(MoviesSub5.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub5.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub5.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2383,7 +2383,7 @@
                 <label fallback="652">$INFO[Skin.String(MoviesSub6.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub6,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub6.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub6.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub6.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub6.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2392,7 +2392,7 @@
                 <label fallback="344">$INFO[Skin.String(MoviesSub7.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub7,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub7.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub7.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub7.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub7.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2401,7 +2401,7 @@
                 <label fallback="20348">$INFO[Skin.String(MoviesSub8.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub8,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub8.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub8.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub8.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub8.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2410,7 +2410,7 @@
 				<label fallback="24069">$INFO[Skin.String(MoviesSub9.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSu9,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub9.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub9.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub9.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub9.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2419,7 +2419,7 @@
                 <label fallback="31845">$INFO[Skin.String(MoviesSub11.Label)]</label>
                 <onclick>SetProperty(MenuItem,MoviesSub11,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub11.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub11.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub11.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub11.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2429,7 +2429,7 @@
                 <onclick>SetProperty(MenuItem,MoviesSub10,home)</onclick>
                 <onclick condition="!System.HasAddon(script.randommovie)">Notification($LOCALIZE[42000],$LOCALIZE[42006]</onclick>
                 <onclick>SetFocus(9007)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MoviesSub10.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MoviesSub10.MultiFanart)]</icon>
                 <property name="Widget">$INFO[Skin.String(MoviesSub10.Widget)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(MoviesSub10.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),movie)</visible>
@@ -2530,7 +2530,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub1.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2539,7 +2539,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub3.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub3.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2548,7 +2548,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub4.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub4.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2557,7 +2557,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub8,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub8.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub8.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub8.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub8.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2566,7 +2566,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub5.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2575,7 +2575,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub6,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub6.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub6.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub6.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub6.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2584,7 +2584,7 @@
                 <onclick>SetProperty(MenuItem,TVShowsSub7,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(TVShowsSub7.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowsSub7.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowsSub7.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(TVShowsSub7.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),tv)</visible>
             </item>
@@ -2594,7 +2594,7 @@
                 <onclick>SetProperty(MenuItem,ShutdownSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub1.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownSub1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),shutdown)</visible>
             </item>
@@ -2603,7 +2603,7 @@
                 <onclick>SetProperty(MenuItem,ShutdownSub2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub2.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownSub2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub2.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),shutdown)</visible>
             </item>
@@ -2612,7 +2612,7 @@
                 <onclick>SetProperty(MenuItem,ShutdownSub5,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub5.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownSub5.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub5.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),shutdown)</visible>
             </item>
@@ -2621,7 +2621,7 @@
                 <onclick>SetProperty(MenuItem,ShutdownSub6,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub6.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub6.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownSub6.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub6.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),shutdown) + [System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + System.Loggedon</visible>
             </item>
@@ -2630,7 +2630,7 @@
                 <onclick>SetProperty(MenuItem,ShutdownSub7,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub7.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub7.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownSub7.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub7.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),shutdown) + System.ShowExitButton</visible>
             </item>
@@ -2640,7 +2640,7 @@
                 <onclick>SetProperty(MenuItem,ShutdownSub8,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(ShutdownSub8.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownSub8.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownSub8.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(ShutdownSub8.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),shutdown)</visible>
             </item>
@@ -2649,7 +2649,7 @@
                 <onclick>SetProperty(MenuItem,LiveTVSub1,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub1.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVSub1.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub1.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),pvr)</visible>
             </item>    
@@ -2658,7 +2658,7 @@
                 <onclick>SetProperty(MenuItem,LiveTVSub2,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub2.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVSub2.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub2.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),pvr)</visible>
             </item> 
@@ -2667,7 +2667,7 @@
                 <onclick>SetProperty(MenuItem,LiveTVSub3,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub3.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVSub3.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub3.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),pvr)</visible>
             </item>
@@ -2676,7 +2676,7 @@
                 <onclick>SetProperty(MenuItem,LiveTVSub4,home)</onclick>
                 <onclick>SetFocus(9007)</onclick>
                 <property name="Widget">$INFO[Skin.String(LiveTVSub4.Widget)]</property>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVSub4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVSub4.MultiFanart)]</icon>
                 <property name="DisableIcon">$INFO[Skin.String(LiveTVSub4.Disable)]</property>
                 <visible>Substring(Control.GetLabel(4327),pvr)</visible>
             </item>

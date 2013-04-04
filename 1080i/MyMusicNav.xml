@@ -5,8 +5,6 @@
     <views>50,53,57,500,503,509,506,512,514,518</views>
     <backgroundcolor>backgroundcolor</backgroundcolor>
     <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
-    <onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
-    <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,backend=true)</onload>
     <controls>
         <control type="label" id="4421">
             <label>$VAR[InfoPanelVar]</label>
@@ -19,7 +17,7 @@
         <control type="group">
             <control type="group">
                 <control type="multiimage">
-                    <imagepath background="true" fallback="special://skin/backgrounds/music/">$VAR[MusicFanartVar]</imagepath>
+                    <imagepath background="true" fallback="special://skin/background/music/">$VAR[MusicFanartVar]</imagepath>
                     <fadetime>FanartCrossfadeTime</fadetime>
                     <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                     <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -422,7 +420,6 @@
                     <visible>!StringCompare(ListItem.Label,..) + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
                 </control>
                 <include>MusicMediaFlags</include>
-                <include>TriPanelMusicFlags</include>
                 <include>FloorLabels</include>
                 <include>Furniture_DarkGradient</include>
             </control>

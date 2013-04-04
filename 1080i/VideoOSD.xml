@@ -25,7 +25,7 @@
                 <width>300</width>
                 <height>125</height>
                 <label>$INFO[System.CurrentControl]</label>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <textcolor>grey</textcolor>
                 <wrapmultiline>true</wrapmultiline>
                 <visible>ControlGroup(650).HasFocus | ControlGroup(201).HasFocus</visible>
@@ -37,7 +37,7 @@
                 <height>125</height>
                 <label>$INFO[System.CurrentControl]</label>
                 <align>right</align>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <textcolor>grey</textcolor>
                 <wrapmultiline>true</wrapmultiline>
                 <visible>ControlGroup(652).HasFocus | ControlGroup(203).HasFocus</visible>

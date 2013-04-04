@@ -105,7 +105,7 @@
             <itemgap>40</itemgap>
             <orientation>horizontal</orientation>
             <control type="label">
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <label>$INFO[Control.GetLabel(3000)]</label>
@@ -113,7 +113,7 @@
                 <visible>Control.IsEnabled(3000) + Control.IsVisible(3000)</visible>
             </control>
             <control type="label">
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <label>$INFO[Control.GetLabel(3001)]</label>
@@ -167,7 +167,7 @@
                         <width>1405</width>
                         <height>38</height>
                         <scroll>true</scroll>
-                        <font>Font_Reg38</font>
+                        <font>Font_Reg57</font>
                         <label>$INFO[Listitem.Label]</label>
                         <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
                     </control>
@@ -177,7 +177,7 @@
                         <width>1405</width>
                         <height>38</height>
                         <scroll>true</scroll>
-                        <font>Font_Reg38</font>
+                        <font>Font_Reg57</font>
                         <label>$INFO[ListItem.Property(year)]$INFO[ListItem.Property(genre), • ]</label>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                         <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -188,7 +188,7 @@
                     <posy>-134</posy>
                     <width>485</width>
                     <height>312</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <pagecontrol>60</pagecontrol>
                     <autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
                     <textcolor>grey2</textcolor>
@@ -204,7 +204,7 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$ADDON[script.games.rom.collection.browser 50002]:</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -212,7 +212,7 @@
                         </control>
                         <control type="fadelabel">
                             <width>671</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label fallback="N/A">$INFO[ListItem.Property(publisher)]</label>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -228,7 +228,7 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$ADDON[script.games.rom.collection.browser 50003]:</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -236,7 +236,7 @@
                         </control>
                         <control type="fadelabel">
                             <width>671</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label fallback="N/A">$INFO[ListItem.Property(developer)]</label>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -252,7 +252,7 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$ADDON[script.games.rom.collection.browser 54004]:</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -260,7 +260,7 @@
                         </control>
                         <control type="fadelabel">
                             <width>671</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label fallback="N/A">$INFO[ListItem.Property(maxplayers)]</label>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -276,7 +276,7 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$LOCALIZE[563]:</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -284,7 +284,7 @@
                         </control>
                         <control type="fadelabel">
                             <width>671</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label fallback="N/A">$INFO[ListItem.Property(rating)]$INFO[ListItem.Property(votes), (,)]</label>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -300,7 +300,7 @@
                         <orientation>horizontal</orientation>
                         <control type="label">
                             <width min="50" max="400">auto</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$LOCALIZE[576]:</label>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>
@@ -308,7 +308,7 @@
                         </control>
                         <control type="fadelabel">
                             <width>671</width>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label fallback="13170">$INFO[ListItem.Property(playcount)]</label>
                             <textcolor>grey2</textcolor>
                             <shadowcolor>$VAR[HomeMenuTextFocusVarBlack]</shadowcolor>

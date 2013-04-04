@@ -64,7 +64,7 @@
                 <width>746</width>
                 <height>40</height>
                 <align>center</align>
-                <font>Font_Reg18_Caps</font>
+                <font>Font_Reg31_Caps</font>
                 <label>31716</label>
             </control>
             <control type="label">
@@ -73,7 +73,7 @@
                 <width>746</width>
                 <height>40</height>
                 <align>center</align>
-                <font>Font_Reg18_Caps</font>
+                <font>Font_Reg31_Caps</font>
                 <label>31717</label>
             </control>
             <control type="panel" id="4">
@@ -98,7 +98,7 @@
                         <width>450</width>
                         <height>60</height>
                         <textoffsetx>10</textoffsetx>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -117,7 +117,7 @@
                             <height>60</height>
                             <textoffsetx>10</textoffsetx>
                             <scroll>true</scroll>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>
@@ -132,7 +132,7 @@
                         <control type="label">
                             <width>450</width>
                             <textoffsetx>10</textoffsetx>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -140,7 +140,7 @@
                     <control type="label">
                         <width>450</width>
                         <textoffsetx>10</textoffsetx>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>red</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>Substring(Skin.String(ItemToEdit.Submenu),ListItem.Property(Sub))</visible>

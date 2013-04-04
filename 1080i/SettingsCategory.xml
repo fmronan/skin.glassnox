@@ -18,7 +18,7 @@
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <fadetime>600</fadetime>
-            <texture background="true">special://skin/backgrounds/system/system.jpg</texture>
+            <texture background="true">special://skin/background/system/system.jpg</texture>
             <aspectratio align="center" aligny="top">scale</aspectratio>
         </control>
             <control type="image">
@@ -91,7 +91,7 @@
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                 <texturenofocus>-</texturenofocus>
-                <font>Font_Bold20_Caps</font>
+                <font>Font_Bold34_Caps</font>
                 <textcolor>grey</textcolor>
                 <focusedcolor>$VAR[HomeMenuTextFocusVar2]</focusedcolor>
                 <textoffsety>18</textoffsety>

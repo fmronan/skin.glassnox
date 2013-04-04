@@ -28,7 +28,7 @@
                 <posy>15</posy>
                 <width>1754</width>
                 <height>45</height>
-                <font>Font_Reg38_Caps</font>
+                <font>Font_Reg57_Caps</font>
                 <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                 <label>24013</label>
                 <align>center</align>
@@ -42,7 +42,7 @@
                 <width>1754</width>
                 <height>478</height>
                 <align>center</align>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <pagecontrol>101</pagecontrol>
                 <animation effect="fade" time="800" delay="320">WindowOpen</animation>
                 <animation effect="fade" time="160">WindowClose</animation>
@@ -84,7 +84,7 @@
                         <posx>878</posx>
                         <width>1754</width>
                         <height>38</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                         <textcolor>grey</textcolor>
                         <info>ListItem.Label</info>
@@ -95,7 +95,7 @@
                         <posx>878</posx>
                         <width>1754</width>
                         <height>38</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                         <textcolor>grey</textcolor>
                         <label>$INFO[ListItem.Label]</label>
@@ -105,7 +105,7 @@
                         <posx>878</posx>
                         <width>1754</width>
                         <height>38</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                         <textcolor>grey</textcolor>
                         <label fallback="--">$INFO[ListItem.Label]</label>
@@ -121,7 +121,7 @@
                         <posx>878</posx>
                         <width>1754</width>
                         <height>38</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                         <textcolor>white</textcolor>
                         <label fallback="--">$INFO[ListItem.Label]</label>
@@ -159,7 +159,7 @@
                 <width>1754</width>
                 <height>478</height>
                 <align>center</align>
-                <font>Font_Reg38_Caps</font>
+                <font>Font_Reg57_Caps</font>
                 <label>31733</label>
                 <textcolor>white</textcolor>
                 <visible>Control.IsVisible(120) + ![Control.IsVisible(100) | Control.IsVisible(110)]</visible>
@@ -188,7 +188,7 @@
                         <posx>52</posx>
                         <width>1724</width>
                         <height>60</height>
-                        <font>Font_Reg38</font>
+                        <font>Font_Reg57</font>
                         <textcolor>white</textcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -210,7 +210,7 @@
                         <posx>52</posx>
                         <width>1724</width>
                         <height>60</height>
-                        <font>Font_Reg38</font>
+                        <font>Font_Reg57</font>
                         <textcolor>white</textcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -240,7 +240,7 @@
                 <width>600</width>
                 <height>45</height>
                 <label>[COLOR=grey]$INFO[Skin.String(LyricScript_Path)][/COLOR] - [COLOR=FFFFFFFF]$INFO[Control.GetLabel(200)][/COLOR]</label>
-                <font>Font_Bold20_Caps</font>
+                <font>Font_Bold34_Caps</font>
                 <textoffsetx>30</textoffsetx>
                 <animation effect="fade" time="800">WindowOpen</animation>
                 <animation effect="fade" time="160">WindowClose</animation>

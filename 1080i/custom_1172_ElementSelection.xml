@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog" id="1172">
+    
+    <defaultcontrol always="true">4</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+	<onunload condition="SubString(Window(1124).Property(IconTarget),element1)">Skin.SetString($INFO[Window(home).Property(MenuItem)].element1,$INFO[Skin.String(ItemToEdit.Element)])</onunload>
+	<onunload condition="SubString(Window(1124).Property(IconTarget),element2)">Skin.SetString($INFO[Window(home).Property(MenuItem)].element2,$INFO[Skin.String(ItemToEdit.Element)])</onunload>
+	<onunload condition="SubString(Window(1124).Property(IconTarget),element3)">Skin.SetString($INFO[Window(home).Property(MenuItem)].element3,$INFO[Skin.String(ItemToEdit.Element)])</onunload>
+	<onunload condition="SubString(Window(1124).Property(IconTarget),element4)">Skin.SetString($INFO[Window(home).Property(MenuItem)].element4,$INFO[Skin.String(ItemToEdit.Element)])</onunload>
+	<onunload condition="SubString(Window(1124).Property(IconTarget),element5)">Skin.SetString($INFO[Window(home).Property(MenuItem)].element5,$INFO[Skin.String(ItemToEdit.Element)])</onunload>
+    <controls>
+        <control type="group">
+            <posx>280</posx>
+            <include>Animation_OpenCloseZoom</include>
+            <control type="image">
+                <posx>30</posx>
+                <posy>100</posy>
+                <width>1344</width>
+                <height>830</height>
+                <texture border="20">osd/osd_settings_back_glow.png</texture>
+                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                <include>PanelGlowFade</include>
+            </control>
+            <control type="image">
+                <posx>30</posx>
+                <posy>100</posy>
+                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+                <width>1344</width>
+                <height>830</height>
+                <texture border="20">osd/osd_settings_back.png</texture>
+            </control>
+            <control type="panel" id="4">
+                <posx>50</posx>
+                <posy>138</posy>
+                <width>1375</width>
+                <height>767</height>
+                <aligny>center</aligny>
+                <pagecontrol>60</pagecontrol>
+                <scrolltime tween="quadratic">200</scrolltime>
+                <orientation>vertical</orientation>
+                <onright>60</onright>
+                <onleft>4</onleft>
+                <itemlayout width="145" height="150">
+                    <control type="image">
+                        <width>135</width>
+                        <posy>90</posy>
+                        <height>60</height>
+                        <posx>5</posx>
+                        <texture border="0,0,0,4">settings/listselect_nf.png</texture>
+                    </control>
+                    <control type="image">
+                        <posy>15</posy>
+                        <posx>15</posx>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio align="center">keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <colordiffuse>grey</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>75</posx>
+                        <posy>50</posy>
+                        <width>150</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <font>Font_Reg29</font>
+                        <textcolor>grey2</textcolor>
+                        <label>[B]$INFO[ListItem.Property(Description)][/B]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="145" height="150">
+                    <control type="image">
+                        <width>145</width>
+                        <height>145</height>
+                        <texture>views/tripanel/listselect_fo.png</texture>
+                        <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                        <include>PanelGlowFade</include>
+                    </control>
+                    <control type="image">
+                        <posy>15</posy>
+                        <posx>15</posx>
+                        <aspectratio align="center">keep</aspectratio>
+                        <width>120</width>
+                        <height>120</height>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <colordiffuse>white2</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>75</posx>
+                        <posy>50</posy>
+                        <width>150</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <font>Font_Reg29</font>
+                        <textcolor>white2</textcolor>
+                        <label>[B]$INFO[ListItem.Property(Description)][/B]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label>$LOCALIZE[231]</label>
+                        <property name="Description">$LOCALIZE[231]</property>
+                        <onclick>Skin.Reset(ItemToEdit.Element)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>31630</label>
+                        <thumb></thumb>
+                        <property name="Description">31630</property>
+                        <onclick>Dialog.Close(1172)</onclick>
+                        <onclick>Skin.SetImage(ItemToEdit.Element)</onclick>
+                    </item>
+                    <item>
+                        <label>ampli</label>
+                        <thumb>special://skin/extras/elements/ampli.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/ampli.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>APP Canon</label>
+                        <thumb>special://skin/extras/elements/APP Canon.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/APP Canon.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>apple tv</label>
+                        <thumb>special://skin/extras/elements/apple tv.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/apple tv.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>ballon foot</label>
+                        <thumb>special://skin/extras/elements/ballon foot.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/ballon foot.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Bobine</label>
+                        <thumb>special://skin/extras/elements/Bobine.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Bobine.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Bobine 2</label>
+                        <thumb>special://skin/extras/elements/Bobine 2.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Bobine 2.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>boite cd programmes</label>
+                        <thumb>special://skin/extras/elements/boite cd programmes.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/boite cd programmes.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>bouda</label>
+                        <thumb>special://skin/extras/elements/bouda.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/bouda.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>bulles guide TV</label>
+                        <thumb>special://skin/extras/elements/bulles guide TV.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/bulles guide TVpng)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>cam documentaires</label>
+                        <thumb>special://skin/extras/elements/cam documentaires.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/cam documentaires.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Camera</label>
+                        <thumb>special://skin/extras/elements/Camera.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Camera.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Cartoons cars</label>
+                        <thumb>special://skin/extras/elements/Cartoons cars.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Cartoons cars.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Cartoons lion+garfield</label>
+                        <thumb>special://skin/extras/elements/Cartoons lion+garfield.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Cartoons lion+garfield.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Cartoons sourie</label>
+                        <thumb>special://skin/extras/elements/Cartoons sourie.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Cartoons sourie.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Casque</label>
+                        <thumb>special://skin/extras/elements/Casque.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Casque.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>casquette</label>
+                        <thumb>special://skin/extras/elements/casquette.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/casquette.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>charmes 2 femmes</label>
+                        <thumb>special://skin/extras/elements/charmes 2 femmes.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/charmes 2 femmes.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>charmes lapin+femme</label>
+                        <thumb>special://skin/extras/elements/charmes lapin+femme.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/charmes lapin+femme.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>clap</label>
+                        <thumb>special://skin/extras/elements/clap.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/clap.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>comics batman</label>
+                        <thumb>special://skin/extras/elements/comics batman.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/comics batman.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>comics spiderman</label>
+                        <thumb>special://skin/extras/elements/comics spiderman.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/comics spiderman.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>documentaires</label>
+                        <thumb>special://skin/extras/elements/documentaires.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/documentaires.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Documentaires lion+planete</label>
+                        <thumb>special://skin/extras/elements/Documentaires lion+planete.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Documentaires lion+planete.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>planete ete</label>
+                        <thumb>special://skin/extras/elements/planete ete.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/planete ete.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>planete + nuage</label>
+                        <thumb>special://skin/extras/elements/planete + nuage.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/planete + nuage.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Printemps partie 1</label>
+                        <thumb>special://skin/extras/elements/Printemps partie 1.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Printemps partie 1.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Hivers partie 2</label>
+                        <thumb>special://skin/extras/elements/Hivers partie 2.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Hivers partie 2.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>drapeau + ballon foot</label>
+                        <thumb>special://skin/extras/elements/drapeau + ballon foot.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/drapeau + ballon foot.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>dvd</label>
+                        <thumb>special://skin/extras/elements/dvd.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/dvd.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>favoris audio</label>
+                        <thumb>special://skin/extras/elements/favoris audio.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/favoris audio.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>favoris films</label>
+                        <thumb>special://skin/extras/elements/favoris films.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/favoris films.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>favoris générique</label>
+                        <thumb>special://skin/extras/elements/favoris générique.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/favoris générique.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>favoris images</label>
+                        <thumb>special://skin/extras/elements/favoris images.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/favoris images.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>feuilles</label>
+                        <thumb>special://skin/extras/elements/feuilles.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/feuilles.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>guide TV</label>
+                        <thumb>special://skin/extras/elements/guide TV.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/guide TV.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Haut parleur</label>
+                        <thumb>special://skin/extras/elements/Haut parleur.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Haut parleur.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Inter on off</label>
+                        <thumb>special://skin/extras/elements/Inter on off.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Inter on off.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>jeux ps3</label>
+                        <thumb>special://skin/extras/elements/jeux ps3.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/jeux ps3.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>jumelle</label>
+                        <thumb>special://skin/extras/elements/jumelle.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/jumelle.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>lecteur mp3</label>
+                        <thumb>special://skin/extras/elements/lecteur mp3.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/lecteur mp3.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>manga</label>
+                        <thumb>special://skin/extras/elements/manga.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/manga.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Manga fille cheveux rouges</label>
+                        <thumb>special://skin/extras/elements/Manga fille cheveux rouges.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Manga fille cheveux rouges.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Manga goku</label>
+                        <thumb>special://skin/extras/elements/Manga goku.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Manga goku.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Manga texte</label>
+                        <thumb>special://skin/extras/elements/Manga texte.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Manga texte.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>micro</label>
+                        <thumb>special://skin/extras/elements/micro.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/micro.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>micro+HP</label>
+                        <thumb>special://skin/extras/elements/micro+HP.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/micro+HP.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>Mouse+clavier  programmes</label>
+                        <thumb>special://skin/extras/elements/Mouse+clavier  programmes.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/Mouse+clavier  programmes.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>objectif canon</label>
+                        <thumb>special://skin/extras/elements/objectif canon.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/objectif canon.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>plasma tv</label>
+                        <thumb>special://skin/extras/elements/plasma tv.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/plasma tv.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>playlist audio</label>
+                        <thumb>special://skin/extras/elements/playlist audio.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/playlist audio.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>playlist images</label>
+                        <thumb>special://skin/extras/elements/playlist images.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/playlist images.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>playlist video</label>
+                        <thumb>special://skin/extras/elements/playlist video.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/playlist video.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>pop corrn</label>
+                        <thumb>special://skin/extras/elements/pop corrn.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/pop corrn.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>psp</label>
+                        <thumb>special://skin/extras/elements/psp.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/psp.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>puzzle programmes</label>
+                        <thumb>special://skin/extras/elements/puzzle programmes.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/puzzle programmes.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>recherches bulles</label>
+                        <thumb>special://skin/extras/elements/recherches bulles.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/recherches bulles.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>serie tv</label>
+                        <thumb>special://skin/extras/elements/serie tv.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/serie tv.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>spot</label>
+                        <thumb>special://skin/extras/elements/spot.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/spot.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>suggestion</label>
+                        <thumb>special://skin/extras/elements/suggestion.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/suggestion.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>volant sport</label>
+                        <thumb>special://skin/extras/elements/volant sport.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/volant sport.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>xbox</label>
+                        <thumb>special://skin/extras/elements/xbox.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/xbox.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                    <item>
+                        <label>xbox+voiture</label>
+                        <thumb>special://skin/extras/elements/xbox+voiture.png</thumb>
+                        <onclick>Skin.SetString(ItemToEdit.Element,special://skin/extras/elements/xbox+voiture.png)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
+                    </item>
+                   
+                </content>
+            </control>
+            <control type="scrollbar" id="60">
+                <posx>1306</posx>
+                <include>Animation_VerticalScrollBar</include>
+                <posy>120</posy>
+                <width>98</width>
+                <height>800</height>
+                <onleft>4</onleft>
+                <onright>4</onright>
+                <ondown>60</ondown>
+                <onup>60</onup>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -49,7 +49,7 @@
             <posy>125</posy>
             <width>1000</width>
             <height>60</height>
-            <font>Font_Bold19</font>
+            <font>Font_Bold33</font>
             <label>$LOCALIZE[1036]</label>
             <textcolor>$VAR[TitleColorVar]</textcolor>
         </control>
@@ -61,7 +61,7 @@
             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus>-</texturenofocus>
             <textcolor>grey2</textcolor>
-            <font>Font_Bold19</font>
+            <font>Font_Bold33</font>
             <label>$LOCALIZE[31272]</label>
             <label2>[COLOR $VAR[FontColorVar]]$VAR[FavoritesListTypeVar][/COLOR]</label2>
             <onclick condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">Skin.SetString(FavoritesListType,2)</onclick>
@@ -98,7 +98,7 @@
                     <width>550</width>
                     <height>60</height>
                     <textcolor>grey</textcolor>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
@@ -119,7 +119,7 @@
                     <posx>45</posx>
                     <width>550</width>
                     <height>60</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>
@@ -136,7 +136,7 @@
                     <width>600</width>
                     <height>90</height>
                     <textcolor>grey2</textcolor>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="image">
@@ -167,7 +167,7 @@
                     <posx>150</posx>
                     <width>600</width>
                     <height>90</height>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="image">
@@ -192,7 +192,7 @@
                     <width>580</width>
                     <height>185</height>
                     <textcolor>grey2</textcolor>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="image">
@@ -223,7 +223,7 @@
                     <posx>205</posx>
                     <width>580</width>
                     <height>185</height>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <info>ListItem.Label</info>
                 </control>
                 <control type="image">
@@ -263,7 +263,7 @@
             <posy>935</posy>
             <width>315</width>
             <height>60</height>
-            <font>Font_Reg14</font>
+            <font>Font_Reg25</font>
             <align>right</align>
             <aligny>bottom</aligny>
             <textcolor>grey2</textcolor>

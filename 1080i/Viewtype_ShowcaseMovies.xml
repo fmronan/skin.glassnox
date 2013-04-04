@@ -687,9 +687,9 @@
                 <include>HiddenObject</include>
                     <texture background="true" flipy="true">DefaultActor.png</texture>
                 <visible>!Container.OnNext + !Container.OnPrevious</visible>
-                <visible>Control.IsVisible(7550) +Control.HasFocus(7000)</visible>
-                <animation effect="fade" end="100" time="120" delay="1200">Visible</animation>
-                <animation effect="fade" end="100" time="120" delay="1200">WindowOpen</animation>
+                <visible>Control.IsVisible(7550) + Control.HasFocus(7000)</visible>
+                <animation effect="fade" end="100" time="0" delay="1230">Visible</animation>
+                <animation effect="fade" end="100" time="120" delay="1230">WindowOpen</animation>
             </control>
             <control type="button" id="1973">
                 <include>HiddenObject</include>
@@ -2213,6 +2213,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
         </control>
         <control type="image">
             <posx>1140</posx>
@@ -2244,6 +2245,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
         </control>
         <control type="image">
             <posx>1140</posx>
@@ -2264,6 +2266,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
             <visible> Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
         </control>
         <control type="image">
             <posx>1140</posx>
@@ -2293,6 +2296,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
         </control>
         
         <control type="image">
@@ -2325,6 +2329,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
         </control>
         
         <control type="image">
@@ -2357,6 +2362,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
         </control>
         <control type="image">
             <posx>1140</posx>
@@ -2377,6 +2383,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
         </control>
         <control type="image">
             <posx>1140</posx>
@@ -2397,6 +2404,7 @@
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true" >$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) + SubString(ListItem.Path,videodb://1/7)</visible>
+            <visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
         </control>
         
         <control type="image">
@@ -2480,82 +2488,12 @@
 			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
 			<visible>Container.Content(movies)+Skin.HasSetting(usecases) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
 		</control>
-        <!-- Spinning disc art animation -->
-	<!--	<control type="image">
-            <posx>26</posx>
-            <posy>70</posy>
-            <width>240</width>
-            <height>240</height>
-            <animation type="Conditional" condition="Control.IsVisible(1974) + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-            <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
-            </animation>
-            <aspectratio align="right">keep</aspectratio>
-            <texture background="true" fallback="true">$VAR[cdArtVar]</texture>
-            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies)+[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
-        </control>
-        <control type="image">
-            <posx>26</posx>
-            <posy>70</posy>
-            <width>240</width>
-            <height>240</height>
-            <animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-            <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
-            </animation>
-            <aspectratio scalediffuse="false">scale</aspectratio>
-            <texture background="true" fallback="true" diffuse="common/cdart/disc_Mask.png">$VAR[cdArtVar]</texture>
-            <bordersize>2</bordersize>
-			<bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
-            <visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
-        </control>
-        <control type="image">
-			<posx>86</posx>
-			<posy>62.3</posy>
-			<width>102.85</width>
-			<height>102.85</height>
-			<aspectratio>keep</aspectratio>
-			<texture background="true">$VAR[DiscartLogo]</texture>
-			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-            <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
-            </animation>
-			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker)+ !SubString(ListItem.Path,videodb://1/7)</visible>
-		</control>
-		<control type="image">
-			<posx>34.5</posx>
-			<posy>186.5</posy>
-			<width>64.25</width>
-			<height>64.25</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.Studio,flags/studios/,.png]</texture>
-			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-            <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
-            </animation>
-			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
-		</control>
-		<control type="image">
-			<posx>120.25</posx>
-			<posy>272.2</posy>
-			<width>51.4</width>
-			<height>20.55</height>
-			<aspectratio>keep</aspectratio>
-			<texture fallback="rating0.png">$INFO[ListItem.Rating,stars/,.png]</texture>
-			<colordiffuse>white</colordiffuse>
-			<fadetime>400</fadetime>
-			<animation type="Conditional" condition="[Control.IsVisible(1980)|Control.IsVisible(1972)] + Control.IsVisible(7550)+Control.HasFocus(7000)" reversible="false">
-            <effect type="rotate" start="0" center="146,190" end="360" delay="0" time="2300" tween="cubic" easing="inout"/>
-            </animation>
-			<visible>IsEmpty(ListItem.Art(discart))+ !IsEmpty(ListItem.Art(fanart))</visible>
-			<visible>Skin.HasSetting(usecases) + Stringcompare(Skin.String(MovieDiscArt),spin)+ Container.Content(movies) + !Skin.HasSetting(lowlistmaker) + !SubString(ListItem.Path,videodb://1/7)</visible>
-		</control>-->
     </include>
     <!-- Open case -->
 	<include name="ShowcaseOpenCase">
         <animation type="conditional"  condition="Control.IsVisible(1975)   + Skin.HasSetting(usecases) + Container.Content(movies)+ [Stringcompare(Skin.String(MovieDiscArt),spin) | Stringcompare(Skin.String(MovieDiscArt),roll)]" reversible="false">
             <effect type="rotatey" center="-10" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
-            <effect type="rotatey" delay="5300" center="-10" start="0" end="-75" time="500" tween="quadratic" easing="out"/>
+			<effect type="rotatey" delay="5300" center="-10" start="0" end="-75" time="500" tween="quadratic" easing="out"/>
         </animation>
     </include>
     <include name="ShowcaseOpenCaseWatched">

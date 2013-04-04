@@ -69,7 +69,7 @@
         <posy>-5</posy>
         <width>340</width>
         <height>20</height>
-        <font>Font_Reg12</font>
+        <font>Font_Reg22</font>
         <aligny>top</aligny>
         <shadowcolor>black</shadowcolor>
     </include>
@@ -84,19 +84,19 @@
     <include name="WeatherWorldTemperatureCommonValues">
         <width min="0" max="100">auto</width>
         <height>20</height>
-        <font>Font_Reg12</font>
+        <font>Font_Reg22</font>
         <shadowcolor>black</shadowcolor>
     </include>
     <include name="WeatherWorldUnitCommonValues">
         <width min="0" max="50">auto</width>
         <height>18</height>
-        <font>Font_Reg10</font>
+        <font>Font_Reg17</font>
         <shadowcolor>black</shadowcolor>
     </include>
     <include name="WeatherWorldLocalTimeCommonValues">
         <width min="0" max="165">auto</width>
         <height>20</height>
-        <font>Font_Reg12</font>
+        <font>Font_Reg22</font>
         <textcolor>grey2</textcolor>
         <shadowcolor>black</shadowcolor>
     </include>
@@ -105,7 +105,7 @@
         <posy>40</posy>
         <width>315</width>
         <height>20</height>
-        <font>Font_Reg12</font>
+        <font>Font_Reg22</font>
         <textcolor>grey2</textcolor>
         <shadowcolor>black</shadowcolor>
     </include>
@@ -113,7 +113,7 @@
         <posy>60</posy>
         <width>360</width>
         <height>20</height>
-        <font>Font_Reg12</font>
+        <font>Font_Reg22</font>
         <aligny>top</aligny>
         <shadowcolor>black</shadowcolor>
         <visible>false</visible>

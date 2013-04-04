@@ -39,7 +39,7 @@
             <width>600</width>
             <height>60</height>
             <textcolor>$VAR[TitleColorVar]</textcolor>
-            <font>Font_Bold19</font>
+            <font>Font_Bold33</font>
             <label>$LOCALIZE[31619]</label>
         </control>
         <control type="grouplist" id="450">

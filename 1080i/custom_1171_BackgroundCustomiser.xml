@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1171" type="dialog">
+    <defaultcontrol>5400</defaultcontrol>
+    <zorder>4</zorder>
+    <coordinates>
+        <posx>0</posx>
+        <posy>0</posy>
+        <system>1</system>
+    </coordinates>
+    <include>Animation_DialogPopup</include>
+    <controls>
+        <control type="group">
+			<visible>!Window.IsActive(1172)</visible>
+            <posx>570</posx>
+            <posy>37</posy>
+            <control type="group">
+                <animation effect="zoom" end="100,130" center="960,0" time="0" condition="SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)">Conditional</animation>
+                <control type="image">
+                    <width>780</width>
+                    <height>330</height>
+                    <texture>dialogs/dialog_back_shadow.png</texture>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <visible>!Skin.HasSetting(DisableGlowbar)</visible>
+                    <include>PanelGlowFade</include>
+                </control>
+                <control type="image">
+                    <width>780</width>
+                    <height>330</height>
+                    <texture>dialogs/dialog_back.png</texture>
+                    <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+                </control>
+            </control>
+            <control type="image">
+                <posx>15</posx>
+                <width>750</width>
+                <height>60</height>
+                <texture border="1">osd/osd_settings_buttonnf.png</texture>
+            </control>
+            <control type="label" id="4">
+                <posy>88</posy>
+                <width>780</width>
+                <height>45</height>
+                <align>center</align>
+                <label>$LOCALIZE[31063]</label>
+                <textcolor>white3</textcolor>
+                <scroll>true</scroll>
+            </control>
+            <control type="grouplist" id="5400">
+                <posy>210</posy>
+                <width>740</width>
+                <height>200</height>
+                <align>center</align>
+                <onleft>5400</onleft>
+                <onright>5400</onright>
+                <ondown>5401</ondown>
+                <onup>5401</onup>
+                <orientation>horizontal</orientation>
+				<control type="button" id="11">
+                    <width>175</width>
+                    <height>45</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>Item1</label>
+                    <textcolor>grey2</textcolor>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <focusedcolor>white3</focusedcolor>
+                    <onclick>SetProperty(IconTarget,element1,1124)</onclick>
+                    <onclick>ActivateWindow(1172)</onclick>
+                </control>
+                <control type="button" id="12">
+                    <width>175</width>
+                    <height>45</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>Item2</label>
+                    <textcolor>grey2</textcolor>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <focusedcolor>white3</focusedcolor>
+                    <onclick>SetProperty(IconTarget,element2,1124)</onclick>
+                    <onclick>ActivateWindow(1172)</onclick>
+                </control>
+                <control type="button" id="13">
+                    <width>175</width>
+                    <height>45</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>Item3</label>
+                    <textcolor>grey2</textcolor>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <focusedcolor>white3</focusedcolor>
+                    <onclick>SetProperty(IconTarget,element3,1124)</onclick>
+                    <onclick>ActivateWindow(1172)</onclick>
+                </control>
+                <control type="button" id="14">
+                    <width>175</width>
+                    <height>45</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>Item4</label>
+                    <textcolor>grey2</textcolor>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <focusedcolor>white3</focusedcolor>
+                    <onclick>SetProperty(IconTarget,element4,1124)</onclick>
+                    <onclick>ActivateWindow(1172)</onclick>
+                </control>
+                <control type="button" id="15">
+                    <width>175</width>
+                    <height>45</height>
+                    <textoffsetx>15</textoffsetx>
+                    <align>center</align>
+                    <label>Item5</label>
+                    <textcolor>grey2</textcolor>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                    <focusedcolor>white3</focusedcolor>
+                    <onclick>SetProperty(IconTarget,element5,1124)</onclick>
+                    <onclick>ActivateWindow(1172)</onclick>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

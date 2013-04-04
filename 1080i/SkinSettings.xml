@@ -16,7 +16,7 @@
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <fadetime>600</fadetime>
-            <texture background="true">special://skin/backgrounds/skinsetting.jpg</texture>
+            <texture background="true">special://skin/background/skinsetting.jpg</texture>
             <aspectratio align="center" aligny="top">scale</aspectratio>
         </control>
         <include>CommonMediaPlayingBackground</include>
@@ -39,7 +39,7 @@
                         <posx>30</posx>
                         <width>306</width>
                         <height>74</height>
-                        <font>Font_Bold20_Caps</font>
+                        <font>Font_Bold34_Caps</font>
                         <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -56,7 +56,7 @@
                         <posx>30</posx>
                         <width>306</width>
                         <height>74</height>
-                        <font>Font_Bold20_Caps</font>
+                        <font>Font_Bold34_Caps</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
@@ -250,7 +250,7 @@
                         <posy>195</posy>
                         <width>734</width>
                         <height>74</height>
-                        <font>Font_Reg20_Caps</font>
+                        <font>Font_Reg34_Caps</font>
 						<onup>9009</onup>
 						<ondown>9004</ondown>
 						<onleft>9000</onleft>
@@ -270,7 +270,7 @@
 						<posy>195</posy>
                         <width>734</width>
                         <height>74</height>
-                        <font>Font_Reg20_Caps</font>
+                        <font>Font_Reg34_Caps</font>
 						<onup>9009</onup>
 						<ondown>9004</ondown>
 						<onleft>450</onleft>
@@ -647,7 +647,7 @@
 						<posy>195</posy>
                         <width>734</width>
                         <height>74</height>
-                        <font>Font_Reg20_Caps</font>
+                        <font>Font_Reg34_Caps</font>
 						<onup>9000</onup>
 						<ondown>9007</ondown>
 						<onleft>9000</onleft>
@@ -667,7 +667,7 @@
 						<posy>195</posy>
                         <width>734</width>
                         <height>74</height>
-                        <font>Font_Reg20_Caps</font>
+                        <font>Font_Reg34_Caps</font>
 						<onup>9000</onup>
 						<ondown>9007</ondown>
 						<onleft>463</onleft>
@@ -758,7 +758,7 @@
                         <label>[B]CREDITS TO:[/B]</label>
                         <width>1469</width>
                         <height>54</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <textcolor>grey2</textcolor>
                         <textoffsetx>70</textoffsetx>
                         <aligny>bottom</aligny>

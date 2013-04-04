@@ -106,7 +106,7 @@
                         <posy>840</posy>
                         <width>1860</width>
                         <height>220</height>
-                        <font>Font_Reg18</font>
+                        <font>Font_Reg29</font>
                         <align>left</align>
                         <aligny>top</aligny>
                         <autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Control.HasFocus(100)</autoscroll>

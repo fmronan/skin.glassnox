@@ -52,7 +52,7 @@
             <posy>225</posy>
             <width>600</width>
             <height>60</height>
-            <font>Font_Bold19</font>
+            <font>Font_Bold33</font>
             <label>$LOCALIZE[20012]</label>
             <textcolor>$VAR[TitleColorVar]</textcolor>
             <visible>!Stringcompare(Window(home).Property(Type),Music)</visible>
@@ -62,7 +62,7 @@
             <posy>225</posy>
             <width>600</width>
             <height>60</height>
-            <font>Font_Bold19</font>
+            <font>Font_Bold33</font>
             <label>$LOCALIZE[20011]</label>
             <textcolor>$VAR[TitleColorVar]</textcolor>
             <visible>Stringcompare(Window(home).Property(Type),Music)</visible>
@@ -89,7 +89,7 @@
                     <width>1082</width>
                     <height>60</height>
                     <textcolor>grey</textcolor>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                 </control>
             </itemlayout>
@@ -104,7 +104,7 @@
                     <posx>45</posx>
                     <width>1082</width>
                     <height>60</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>

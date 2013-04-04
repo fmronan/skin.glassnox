@@ -1152,8 +1152,16 @@
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],WeatherHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <label fallback="31510">$INFO[Skin.String(WeatherHomeItem.Label)]</label>
-                <icon fallback="special://skin/backgrounds/weather/">$INFO[Skin.String(WeatherHomeItem.MultiFanart)]</icon>
-                <property name="Color">$INFO[Skin.String(WeatherHomeItem.Color)]</property>
+                <icon fallback="special://skin/background/weather/">$INFO[Skin.String(WeatherHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/weather/</property>
+                <property name="element1">$INFO[Skin.String(WeatherHomeItem.element1)]</property>
+                <property name="element1">$INFO[Skin.String(WeatherHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(WeatherHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(WeatherHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(WeatherHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(WeatherHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(WeatherHomeItem.Widget3)]</property>
+                <property name="IconWeather">$INFO[Window(weather).Property(Current.ConditionIcon)]</property>
                 <property name="IconColor">$INFO[Skin.String(WeatherHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(WeatherHomeItem.Widget)]</property>
                 <property name="Widget2">$INFO[Skin.String(WeatherHomeItem.Widget2)]</property>
@@ -1172,17 +1180,25 @@
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],FavouritesHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <label fallback="31509">$INFO[Skin.String(FavouritesHomeItem.Label)]</label>
-                <icon fallback="special://skin/backgrounds/favourites/">$INFO[Skin.String(FavouritesHomeItem.MultiFanart)]</icon>
-                <property name="Color">$INFO[Skin.String(FavouritesHomeItem.Color)]</property>
+                <icon fallback="special://skin/background/favourites/">$INFO[Skin.String(FavouritesHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/favourites/</property>
+                <property name="element1">$INFO[Skin.String(FavouritesHomeItem.element1)]</property>
+                <property name="element1">$INFO[Skin.String(FavouritesHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(FavouritesHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(FavouritesHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(FavouritesHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(FavouritesHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(FavouritesHomeItem.Widget3)]</property>
+                <property name="IconFavourites">$INFO[Window(Favourites).Property(Current.ConditionIcon)]</property>
                 <property name="IconColor">$INFO[Skin.String(FavouritesHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(FavouritesHomeItem.Widget)]</property>
                 <property name="Widget2">$INFO[Skin.String(FavouritesHomeItem.Widget2)]</property>
                 <property name="WidgetTitle">$INFO[Skin.String(FavouritesHomeItem.WidgetTitle)]</property>
                 <property name="Widget2Title">$INFO[Skin.String(FavouritesHomeItem.Widget2Title)]</property>
                 <property name="DisableIcon">$INFO[Skin.String(FavouritesHomeItem.Disable)]</property>
-                <property name="BigIcon" fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(FavouritesHomeItem.Icon)]</property>
-                <property name="InfoLine" fallback="favourites">$INFO[Skin.String(FavouritesHomeItem.InfoLine)]</property>
-				<property name="SubMenu" fallback="none">$INFO[Skin.String(FavouritesHomeItem.SubMenu)]</property>
+                <property name="BigIcon" fallback="special://skin/extras/BigIcons/Favourites.png">$INFO[Skin.String(FavouritesHomeItem.Icon)]</property>
+                <property name="InfoLine" fallback="Favourites">$INFO[Skin.String(FavouritesHomeItem.InfoLine)]</property>
+				<property name="SubMenu" fallback="Favourites">$INFO[Skin.String(FavouritesHomeItem.SubMenu)]</property>
                 <property name="Type" fallback="custom">$INFO[Skin.String(FavouritesHomeItem.Type)]</property>
                 <property name="Path" fallback="ActivateWindow(favourites)">$INFO[Skin.String(FavouritesHomeItem.Path)]</property>
             </item>
@@ -1192,7 +1208,14 @@
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],ShutdownHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <label fallback="31508">$INFO[Skin.String(ShutdownHomeItem.Label)]</label>
-                <icon fallback="special://skin/backgrounds/shutdown/">$INFO[Skin.String(ShutdownHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/shutdown/">$INFO[Skin.String(ShutdownHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/shutdown/</property>
+                <property name="element1">$INFO[Skin.String(ShutdownHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(ShutdownHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(ShutdownHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(ShutdownHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(ShutdownHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(ShutdownHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(ShutdownHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(ShutdownHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(ShutdownHomeItem.Widget)]</property>
@@ -1212,7 +1235,14 @@
                 <label fallback="137">$INFO[Skin.String(SearchHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],SearchHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/search/">$INFO[Skin.String(SearchHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/search/">$INFO[Skin.String(SearchHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/search/</property>
+                <property name="element1">$INFO[Skin.String(SearchHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(SearchHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(SearchHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(SearchHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(SearchHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(SearchHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(SearchHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(SearchHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(SearchHomeItem.Widget)]</property>
@@ -1232,7 +1262,14 @@
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],SettingsHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <label fallback="31506">$INFO[Skin.String(SettingsHomeItem.Label)]</label>
-                <icon fallback="special://skin/backgrounds/system/">$INFO[Skin.String(SettingsHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/system/">$INFO[Skin.String(SettingsHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/system/</property>
+                <property name="element1">$INFO[Skin.String(SearchHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(SearchHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(SearchHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(SearchHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(SearchHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(SearchHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(SettingsHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(SettingsHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(SettingsHomeItem.Widget)]</property>
@@ -1252,26 +1289,14 @@
                 <label fallback="31505">$INFO[Skin.String(ProgramsHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],ProgramsHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/programs/">$INFO[Skin.String(ProgramsHomeItem.MultiFanart)]</icon>
-                <property name="Color">$INFO[Skin.String(ProgramsHomeItem.Color)]</property>
-                <property name="IconColor">$INFO[Skin.String(ProgramsHomeItem.IconColor)]</property>
-                <property name="Widget">$INFO[Skin.String(ProgramsHomeItem.Widget)]</property>
-                <property name="Widget2">$INFO[Skin.String(ProgramsHomeItem.Widget2)]</property>
-                <property name="WidgetTitle">$INFO[Skin.String(ProgramsHomeItem.WidgetTitle)]</property>
-                <property name="Widget2Title">$INFO[Skin.String(ProgramsHomeItem.Widget2Title)]</property>
-                <property name="DisableIcon">$INFO[Skin.String(ProgramsHomeItem.Disable)]</property>
-                <property name="BigIcon" fallback="special://skin/extras/BigIcons/Computer.png">$INFO[Skin.String(ProgramsHomeItem.Icon)]</property>
-                <property name="InfoLine" fallback="programs">$INFO[Skin.String(ProgramsHomeItem.InfoLine)]</property>
-				<property name="SubMenu" fallback="programs">$INFO[Skin.String(ProgramsHomeItem.SubMenu)]</property>
-                <property name="Type" fallback="custom">$INFO[Skin.String(ProgramsHomeItem.Type)]</property>
-                <property name="Path" fallback="ActivateWindow(Programs)">$INFO[Skin.String(ProgramsHomeItem.Path)]</property>
-                <visible>System.Platform.Android</visible>
-            </item>
-            <item id="1">
-                <label fallback="31505">$INFO[Skin.String(ProgramsHomeItem.Label)]</label>
-                <onclick>SetProperty($INFO[Window(home).Property(MenuName)],ProgramsHomeItem,home)</onclick>
-                <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/programs/">$INFO[Skin.String(ProgramsHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/programs/">$INFO[Skin.String(ProgramsHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/programs/</property>
+                <property name="element1">$INFO[Skin.String(ProgramsHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(ProgramsHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(ProgramsHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(ProgramsHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(ProgramsHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(ProgramsHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(ProgramsHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(ProgramsHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(ProgramsHomeItem.Widget)]</property>
@@ -1284,7 +1309,6 @@
 				<property name="SubMenu" fallback="programs">$INFO[Skin.String(ProgramsHomeItem.SubMenu)]</property>
                 <property name="Type" fallback="custom">$INFO[Skin.String(ProgramsHomeItem.Type)]</property>
                 <property name="Path" fallback="ActivateWindow(Programs,Addons,return)">$INFO[Skin.String(ProgramsHomeItem.Path)]</property>
-                <visible>!System.Platform.Android</visible>
             </item>
     </include>
     <include name="VideosMainMenu">
@@ -1292,7 +1316,14 @@
                 <label fallback="31504">$INFO[Skin.String(VideosHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],VideosHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/videos/">$INFO[Skin.String(VideosHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/videos/">$INFO[Skin.String(VideosHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/videos/</property>
+                <property name="element1">$INFO[Skin.String(VideosHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(VideosHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(VideosHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(VideosHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(VideosHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(VideosHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(VideosHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(VideosHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(VideosHomeItem.Widget)]</property>
@@ -1312,7 +1343,14 @@
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],TVGuideHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
                 <label fallback="31290">$INFO[Skin.String(TVGuideHomeItem.Label)]</label>
-                <icon fallback="special://skin/backgrounds/tvguide/">$INFO[Skin.String(TVGuideHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvguide/">$INFO[Skin.String(TVGuideHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/tvguide/</property>
+                <property name="element1">$INFO[Skin.String(TVGuideHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(TVGuideHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(TVGuideHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(TVGuideHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(TVGuideHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(TVGuideHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(TVGuideHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(TVGuideHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(TVGuideHomeItem.Widget)]</property>
@@ -1332,7 +1370,14 @@
                 <label fallback="31503">$INFO[Skin.String(TVShowHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],TVShowHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/tvshows/">$INFO[Skin.String(TVShowHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/tvshows/">$INFO[Skin.String(TVShowHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/tvshows/</property>
+                <property name="element1">$INFO[Skin.String(TVShowHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(TVShowHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(TVShowHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(TVShowHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(TVShowHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(TVShowHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(TVShowHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(TVShowHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(TVShowHomeItem.Widget)]</property>
@@ -1353,7 +1398,14 @@
                 <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],MovieHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/movies/">$INFO[Skin.String(MovieHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/movies/">$INFO[Skin.String(MovieHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/movies/</property>
+                <property name="element1">$INFO[Skin.String(MovieHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(MovieHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(MovieHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(MovieHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(MovieHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(MovieHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(MovieHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(MovieHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(MovieHomeItem.Widget)]</property>
@@ -1373,7 +1425,14 @@
                 <label fallback="31501">$INFO[Skin.String(MusicHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],MusicHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/music/">$INFO[Skin.String(MusicHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/music/">$INFO[Skin.String(MusicHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/music/</property>
+                <property name="element1">$INFO[Skin.String(MusicHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(MusicHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(MusicHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(MusicHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(MusicHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(MusicHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(MusicHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(MusicHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(MusicHomeItem.Widget)]</property>
@@ -1394,7 +1453,14 @@
                 <onclick>SetProperty(DontRunTVShowScripts,True,Home)</onclick>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],MusicVideosHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/musicvideos/">$INFO[Skin.String(MusicVideosHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/musicvideos/">$INFO[Skin.String(MusicVideosHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/musicvideos/</property>
+                <property name="element1">$INFO[Skin.String(MusicVideosHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(MusicVideosHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(MusicVideosHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(MusicVideosHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(MusicVideosHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(MusicVideosHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(MusicVideosHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(MusicVideosHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(MusicVideosHomeItem.Widget)]</property>
@@ -1414,7 +1480,14 @@
                 <label fallback="31500">$INFO[Skin.String(PicturesHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],PicturesHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/pictures/">$INFO[Skin.String(PicturesHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/pictures/">$INFO[Skin.String(PicturesHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/pictures/</property>
+                <property name="element1">$INFO[Skin.String(PicturesHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(PicturesHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(PicturesHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(PicturesHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(PicturesHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(PicturesHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(PicturesHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(PicturesHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(PicturesHomeItem.Widget)]</property>
@@ -1434,7 +1507,14 @@
                 <label fallback="31017">$INFO[Skin.String(LiveTVHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],LiveTVHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/livetv/</property>
+                <property name="element1">$INFO[Skin.String(LiveTVHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(LiveTVHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(LiveTVHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(LiveTVHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(LiveTVHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(LiveTVHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(LiveTVHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(LiveTVHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(LiveTVHomeItem.Widget)]</property>
@@ -1453,7 +1533,14 @@
                 <label fallback="31017">$INFO[Skin.String(LiveTVHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],LiveTVHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/livetv/</property>
+                <property name="element1">$INFO[Skin.String(LiveTVHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(LiveTVHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(LiveTVHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(LiveTVHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(LiveTVHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(LiveTVHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(LiveTVHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(LiveTVHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(LiveTVHomeItem.Widget)]</property>
@@ -1472,7 +1559,14 @@
                 <label fallback="31017">$INFO[Skin.String(LiveTVHomeItem.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],LiveTVHomeItem,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/livetv/">$INFO[Skin.String(LiveTVHomeItem.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/livetv/</property>
+                <property name="element1">$INFO[Skin.String(LiveTVHomeItem.element1)]</property>
+                <property name="element2">$INFO[Skin.String(LiveTVHomeItem.element2)]</property>
+                <property name="element3">$INFO[Skin.String(LiveTVHomeItem.element3)]</property>
+                <property name="element4">$INFO[Skin.String(LiveTVHomeItem.element4)]</property>
+                <property name="element5">$INFO[Skin.String(LiveTVHomeItem.element5)]</property>
+                <property name="Widget3">$INFO[Skin.String(LiveTVHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(LiveTVHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(LiveTVHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(LiveTVHomeItem.Widget)]</property>
@@ -1489,29 +1583,45 @@
             </item>
     </include>
     <include name="FeaturedMainMenu">
-        <item id="27">
-            <onclick>SetProperty($INFO[Window(home).Property(MenuName)],FeaturedHomeItem,home)</onclick>
-            <onclick>SetFocus(9006)</onclick>
-            <label fallback="31163">$INFO[Skin.String(FeaturedHomeItem.Label)]</label>
-            <icon fallback="special://skin/backgrounds/featured/">$INFO[Skin.String(FeaturedHomeItem.MultiFanart)]</icon>
-            <property name="Widget">$INFO[Skin.String(FeaturedHomeItem.Widget)]</property>
-            <property name="Widget2">$INFO[Skin.String(FeaturedHomeItem.Widget2)]</property>
-            <property name="WidgetTitle">$INFO[Skin.String(FeaturedHomeItem.WidgetTitle)]</property>
-            <property name="Widget2Title">$INFO[Skin.String(FeaturedHomeItem.Widget2Title)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(FeaturedHomeItem.Disable)]</property>
-            <property name="BigIcon" fallback="special://skin/extras/BigIcons/Home.png">$INFO[Skin.String(FeaturedHomeItem.Icon)]</property>
-            <property name="InfoLine" fallback="none">$INFO[Skin.String(FeaturedHomeItem.InfoLine)]</property>
-            <property name="SubMenu" fallback="none">$INFO[Skin.String(FeaturedHomeItem.SubMenu)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(FeaturedHomeItem.Type)]</property>
-            <property name="Path" fallback="ActivateWindow(1147)">$INFO[Skin.String(FeaturedHomeItem.Path)]</property>
-        </item>
+			<item id="27">
+				<onclick>SetProperty($INFO[Window(home).Property(MenuName)],FeaturedHomeItem,home)</onclick>
+				<onclick>SetFocus(9006)</onclick>
+				<label fallback="31163">$INFO[Skin.String(FeaturedHomeItem.Label)]</label>
+				<icon fallback="special://skin/background/featured/">$INFO[Skin.String(FeaturedHomeItem.MultiFanart)]</icon>
+				<property name="Screen">special://skin/backgrounds/featured/</property>
+				<property name="element1">$INFO[Skin.String(FeaturedHomeItem.element1)]</property>
+				<property name="element2">$INFO[Skin.String(FeaturedHomeItem.element2)]</property>
+				<property name="element3">$INFO[Skin.String(FeaturedHomeItem.element3)]</property>
+				<property name="element4">$INFO[Skin.String(FeaturedHomeItem.element4)]</property>
+				<property name="element5">$INFO[Skin.String(FeaturedHomeItem.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(FeaturedHomeItem.Widget3)]</property>
+				<property name="Color">$INFO[Skin.String(FeaturedHomeItem.Color)]</property>
+                <property name="IconColor">$INFO[Skin.String(FeaturedHomeItem.IconColor)]</property>
+				<property name="Widget">$INFO[Skin.String(FeaturedHomeItem.Widget)]</property>
+				<property name="Widget2">$INFO[Skin.String(FeaturedHomeItem.Widget2)]</property>
+				<property name="WidgetTitle">$INFO[Skin.String(FeaturedHomeItem.WidgetTitle)]</property>
+				<property name="Widget2Title">$INFO[Skin.String(FeaturedHomeItem.Widget2Title)]</property>
+				<property name="DisableIcon">$INFO[Skin.String(FeaturedHomeItem.Disable)]</property>
+				<property name="BigIcon" fallback="special://skin/extras/BigIcons/Home.png">$INFO[Skin.String(FeaturedHomeItem.Icon)]</property>
+				<property name="InfoLine" fallback="none">$INFO[Skin.String(FeaturedHomeItem.InfoLine)]</property>
+				<property name="SubMenu" fallback="none">$INFO[Skin.String(FeaturedHomeItem.SubMenu)]</property>
+				<property name="Type" fallback="custom">$INFO[Skin.String(FeaturedHomeItem.Type)]</property>
+				<property name="Path" fallback="ActivateWindow(1147)">$INFO[Skin.String(FeaturedHomeItem.Path)]</property>
+			</item>
     </include>
     <include name="CustomMainMenuItem1">
             <item id="101">
                 <label fallback="CUSTOM1">$INFO[Skin.String(CustomHomeItem1.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem1,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/playlists/">$INFO[Skin.String(CustomHomeItem1.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/playlists/">$INFO[Skin.String(CustomHomeItem1.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/videos/</property>
+                <property name="element1">$INFO[Skin.String(CustomHomeItem1.element1)]</property>
+				<property name="element2">$INFO[Skin.String(CustomHomeItem1.element2)]</property>
+				<property name="element3">$INFO[Skin.String(CustomHomeItem1.element3)]</property>
+				<property name="element4">$INFO[Skin.String(CustomHomeItem1.element4)]</property>
+				<property name="element5">$INFO[Skin.String(CustomHomeItem1.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(CustomHomeItem1.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(CustomHomeItem1.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(CustomHomeItem1.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(CustomHomeItem1.Widget)]</property>
@@ -1531,7 +1641,13 @@
                 <label fallback="CUSTOM2">$INFO[Skin.String(CustomHomeItem2.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem2,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/playlists/">$INFO[Skin.String(CustomHomeItem2.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/playlists/">$INFO[Skin.String(CustomHomeItem2.MultiFanart)]</icon>
+                <property name="element1">$INFO[Skin.String(CustomHomeItem2.element1)]</property>
+				<property name="element2">$INFO[Skin.String(CustomHomeItem2.element2)]</property>
+				<property name="element3">$INFO[Skin.String(CustomHomeItem2.element3)]</property>
+				<property name="element4">$INFO[Skin.String(CustomHomeItem2.element4)]</property>
+				<property name="element5">$INFO[Skin.String(CustomHomeItem2.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(CustomHomeItem2.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(CustomHomeItem2.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(CustomHomeItem2.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(CustomHomeItem2.Widget)]</property>
@@ -1551,7 +1667,14 @@
                 <label fallback="CUSTOM3">$INFO[Skin.String(CustomHomeItem3.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem3,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/playlists/">$INFO[Skin.String(CustomHomeItem3.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/playlists/">$INFO[Skin.String(CustomHomeItem3.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/videos/</property>
+                <property name="element1">$INFO[Skin.String(CustomHomeItem3.element1)]</property>
+				<property name="element2">$INFO[Skin.String(CustomHomeItem3.element2)]</property>
+				<property name="element3">$INFO[Skin.String(CustomHomeItem3.element3)]</property>
+				<property name="element4">$INFO[Skin.String(CustomHomeItem3.element4)]</property>
+				<property name="element5">$INFO[Skin.String(CustomHomeItem3.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(CustomHomeItem3.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(CustomHomeItem3.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(CustomHomeItem3.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(CustomHomeItem3.Widget)]</property>
@@ -1571,7 +1694,14 @@
                 <label fallback="CUSTOM4">$INFO[Skin.String(CustomHomeItem4.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem4,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/playlists/">$INFO[Skin.String(CustomHomeItem4.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/playlists/">$INFO[Skin.String(CustomHomeItem4.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/videos/</property>
+                <property name="element1">$INFO[Skin.String(CustomHomeItem4.element1)]</property>
+				<property name="element2">$INFO[Skin.String(CustomHomeItem4.element2)]</property>
+				<property name="element3">$INFO[Skin.String(CustomHomeItem4.element3)]</property>
+				<property name="element4">$INFO[Skin.String(CustomHomeItem4.element4)]</property>
+				<property name="element5">$INFO[Skin.String(CustomHomeItem4.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(CustomHomeItem4.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(CustomHomeItem4.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(CustomHomeItem4.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(CustomHomeItem4.Widget)]</property>
@@ -1591,7 +1721,14 @@
                 <label fallback="CUSTOM5">$INFO[Skin.String(CustomHomeItem5.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem5,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/playlists/">$INFO[Skin.String(CustomHomeItem5.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/playlists/">$INFO[Skin.String(CustomHomeItem5.MultiFanart)]</icon>
+                <property name="Screen">special://skin/backgrounds/videos/</property>
+                <property name="element1">$INFO[Skin.String(CustomHomeItem5.element1)]</property>
+				<property name="element2">$INFO[Skin.String(CustomHomeItem5.element2)]</property>
+				<property name="element3">$INFO[Skin.String(CustomHomeItem5.element3)]</property>
+				<property name="element4">$INFO[Skin.String(CustomHomeItem5.element4)]</property>
+				<property name="element5">$INFO[Skin.String(CustomHomeItem5.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(CustomHomeItem5.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(CustomHomeItem5.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(CustomHomeItem5.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(CustomHomeItem5.Widget)]</property>
@@ -1611,7 +1748,13 @@
                 <label fallback="CUSTOM6">$INFO[Skin.String(CustomHomeItem6.Label)]</label>
                 <onclick>SetProperty($INFO[Window(home).Property(MenuName)],CustomHomeItem6,home)</onclick>
                 <onclick>SetFocus(9006)</onclick>
-                <icon fallback="special://skin/backgrounds/playlists/">$INFO[Skin.String(CustomHomeItem6.MultiFanart)]</icon>
+                <icon fallback="special://skin/background/playlists/">$INFO[Skin.String(CustomHomeItem6.MultiFanart)]</icon>
+                <property name="element1">$INFO[Skin.String(CustomHomeItem6.element1)]</property>
+				<property name="element2">$INFO[Skin.String(CustomHomeItem6.element2)]</property>
+				<property name="element3">$INFO[Skin.String(CustomHomeItem6.element3)]</property>
+				<property name="element4">$INFO[Skin.String(CustomHomeItem6.element4)]</property>
+				<property name="element5">$INFO[Skin.String(CustomHomeItem6.element5)]</property>
+				<property name="Widget3">$INFO[Skin.String(CustomHomeItem6.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(CustomHomeItem6.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(CustomHomeItem6.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(CustomHomeItem6.Widget)]</property>
@@ -1704,7 +1847,7 @@
                 <height>225</height>
                 <align>center</align>
                 <label>$INFO[ListItem.Label]</label>
-                <font>Font_Reg17_Caps</font>
+                <font>Font_Reg30_Caps</font>
             </control>
         </itemlayout>
         <focusedlayout height="225" width="250" condition="Skin.HasSetting(mainmenuicons)">
@@ -1737,7 +1880,7 @@
                 <height>225</height>
                 <align>center</align>
                 <label>[B]$INFO[ListItem.Label][/B]</label>
-                <font>Font_Reg17_Caps</font>
+                <font>Font_Reg30_Caps</font>
             </control>
         </focusedlayout>
         <itemlayout height="225" width="519" condition="!Skin.HasSetting(biggergap) + !Skin.HasSetting(mainmenuicons)">
@@ -1792,7 +1935,7 @@
             <include condition="IsEmpty(Skin.String(SettingsHomeItem.Disable))">SettingsMainMenu</include>
             <include condition="IsEmpty(Skin.String(SearchHomeItem.Disable))">SearchMainMenu</include>
             <include condition="IsEmpty(Skin.String(ShutdownHomeItem.Disable))">ShutdownMainMenu</include>
-            <include condition="IsEmpty(Skin.String(FavouritesHomeItem.Disable))">FavoritesMainMenu</include>
+            <include condition="IsEmpty(Skin.String(special://skin/background/HomeItem.Disable))">FavoritesMainMenu</include>
             <include condition="IsEmpty(Skin.String(WeatherHomeItem.Disable))">WeatherMainMenu</include>
         </content>
     </include>
@@ -1819,7 +1962,7 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>grey2</textcolor>
             </control>
@@ -1830,7 +1973,7 @@
                 <height>50</height>
                 <width>224</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
                 <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
                 <scroll>true</scroll>
@@ -1844,7 +1987,7 @@
                 <align>center</align>
                 <animation effect="zoom" center="112,25" start="100" end="130" time="160" tween="quadratic">Focus</animation>
                 <animation effect="zoom" center="112,25" start="130" end="100" time="160" tween="quadratic">Unfocus</animation>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <scroll>true</scroll>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>$VAR[HomeMenuTextFocusVar]</textcolor>
@@ -1934,511 +2077,11 @@
                 <label>$VAR[SubMenuVar]</label>
                 <include>HiddenObject</include>
             </control>
+            <control type="label" id="4328">
+                <label>$VAR[Widget3TypeVar]</label>
+                <include>HiddenObject</include>
+            </control>
         </control>
-    </include>
-     <include name="BackgroundFadeLabels">
-    
-           <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMovie.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randommovies)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentmovies)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedMovie.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),watchlistmovies)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.2.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.3.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.4.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.5.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.6.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.8.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.9.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.10.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.11.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.12.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.13.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.14.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.15.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.16.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.17.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.18.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.19.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomEpisode.20.Art(tvshow.fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randomtv)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.3.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.4.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.5.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.6.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.7.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.8.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.9.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.10.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.11.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.12.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.13.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.14.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.15.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.16.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.17.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.18.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.19.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentEpisode.20.Art(tvshow.fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recenttv)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),watchlisttv)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecentAlbum.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentAlbum.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentalbums)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RandomArtist.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomArtist.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randomartists)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecommendedAlbum.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),watchlistalbums)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RandomMusicVideo.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RandomMusicVideo.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randommusicvideos)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(RecentMusicVideo.1.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.2.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.3.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.4.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.5.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.6.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.7.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.8.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.9.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.10.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.11.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.12.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.13.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.14.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.15.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.16.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.17.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.18.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.19.Art(fanart))]</label>
-                <label>$INFO[Window(Home).Property(RecentMusicVideo.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentmusicvideos)</visible>
-            </control>
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.1.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.2.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.3.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.4.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.5.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.6.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.7.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.8.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.9.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist1.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),1custom)</visible>
-            </control>  
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.1.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.2.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.3.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.4.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.5.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.6.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.7.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.8.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.9.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist2.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),2custom)</visible>
-            </control>  
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.1.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.2.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.3.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.4.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.5.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.6.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.7.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.8.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.9.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist3.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),3custom)</visible>
-            </control>  
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.1.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.2.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.3.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.4.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.5.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.6.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.7.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.8.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.9.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist4.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),4custom)</visible>
-            </control>  
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.1.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.2.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.3.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.4.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.5.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.6.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.7.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.8.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.9.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist5.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),5custom)</visible>
-            </control>  
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.1.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.2.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.3.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.4.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.5.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.6.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.7.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.8.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.9.Art(fanart))]</label>
-               <label>$INFO[Window(Home).Property(SmartPlaylist6.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),6custom)</visible>
-            </control>   
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.1.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.2.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.3.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.4.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.5.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.6.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.7.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.8.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.9.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBRandom.10.Path)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randompics)</visible>
-            </control>   
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.2.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.3.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.4.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.5.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.6.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.7.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.8.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.9.Path)]</label>
-               <label>$INFO[Window(Home).Property(MyPicsDBLatest.10.Path)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentpics)</visible>
-            </control> 
-            
-            
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/01/babe_01-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/02/babe_02-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/03/babe_03-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/04/babe_04-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/05/babe_05-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/06/babe_06-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/07/babe_07-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/08/babe_08-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/09/babe_09-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/10/babe_10-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/11/babe_11-$INFO[System.Date(dd)]-2012.jpg</label>
-               <label>http://dailybabenews.com/wp-content/uploads/2012/12/babe_12-$INFO[System.Date(dd)]-2012.jpg</label>
-            <visible>Stringcompare(Control.GetLabel(4322),dailybabe)</visible>
-            </control> 
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.1.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.2.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.3.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.4.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.5.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.6.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.7.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.8.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.9.Fanart)]</label>
-               <label>$INFO[Window(Home).Property(MostPlayedROM.10.Fanart)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),mostplayedroms)</visible>
-            </control> 
-            <control type="fadelabel" id="4324">
-                <pauseatend>7500</pauseatend>
-                <width>11479</width>
-                <height>118</height>
-                <font>Font_Reg38</font>
-                <textcolor>00FFFFFF</textcolor>
-               <label>$INFO[Window(home).Property(bigpictures.photo.1.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.2.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.3.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.4.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.5.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.6.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.7.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.8.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.9.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.10.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.11.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.12.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.13.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.14.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.15.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.16.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.17.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.18.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.19.pic)]</label>
-               <label>$INFO[Window(home).Property(bigpictures.photo.20.pic)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),thebigpicture)</visible>
-            </control>
     </include>
     <include name="FocusPosition4">
         <focusposition>4</focusposition>
@@ -2521,7 +2164,7 @@
                     <width min="50" max="600">auto</width>
                     <height>30</height>
                     <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>black</textcolor>
                     <scroll>false</scroll>
                     <visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>

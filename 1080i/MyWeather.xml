@@ -125,7 +125,7 @@
                         <posy>225</posy>
                         <width>412</width>
                         <height>135</height>
-                        <font>Font_Reg24</font>
+                        <font>Font_Reg40</font>
                         <label>$LOCALIZE[402] : $INFO[Window.Property(Current.FeelsLike)] $INFO[System.TemperatureUnits]</label>
                         <textcolor>grey2</textcolor>
                     </control>
@@ -136,7 +136,7 @@
                         <height>135</height>
                         <label>[LOWERCASE]$INFO[Window.Property(Current.Condition)][/LOWERCASE]</label>
                         <wrapmultiline>true</wrapmultiline>
-                        <font>Font_Reg24</font>
+                        <font>Font_Reg40</font>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="image">
@@ -154,7 +154,7 @@
                         <height>135</height>
                         <label>$INFO[Window(Weather).Property(Location)]</label>
                         <wrapmultiline>true</wrapmultiline>
-                        <font>Font_Reg24</font>
+                        <font>Font_Reg40</font>
                         <align>center</align>
                     </control>
                     <control type="group">
@@ -165,7 +165,7 @@
                             <posy>645</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[405]:</label>
                             <textcolor>grey2</textcolor>
@@ -175,7 +175,7 @@
                             <posy>690</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[406]:</label>
                             <textcolor>grey2</textcolor>
@@ -185,7 +185,7 @@
                             <posy>735</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[31940]:</label>
                             <textcolor>grey2</textcolor>
@@ -195,7 +195,7 @@
                             <posy>780</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[404]:</label>
                             <textcolor>grey2</textcolor>
@@ -205,7 +205,7 @@
                             <posy>825</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[31898]:</label>
                             <textcolor>grey2</textcolor>
@@ -215,7 +215,7 @@
                             <posy>870</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[33027]:</label>
                             <textcolor>grey2</textcolor>
@@ -225,7 +225,7 @@
                             <posy>915</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[33028]:</label>
                             <textcolor>grey2</textcolor>
@@ -235,7 +235,7 @@
                             <posy>645</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
                         </control>
                         <control type="label">
@@ -243,7 +243,7 @@
                             <posy>690</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Current.Humidity)</info>
                         </control>
                         <control type="label">
@@ -251,7 +251,7 @@
                             <posy>735</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Current.Pressure)</info>
                         </control>
                         <control type="label">
@@ -259,7 +259,7 @@
                             <posy>780</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Current.Wind)</info>
                         </control>
                         <control type="label">
@@ -267,7 +267,7 @@
                             <posy>825</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Current.Visibility)</info>
                         </control>
                         <control type="label">
@@ -275,7 +275,7 @@
                             <posy>870</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Today.Sunrise)</info>
                         </control>
                         <control type="label">
@@ -283,7 +283,7 @@
                             <posy>915</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Today.Sunset)</info>
                         </control>
                     </control>
@@ -317,7 +317,7 @@
                                     <posy>5</posy>
                                     <width>375</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                                 <control type="label">
@@ -384,7 +384,7 @@
                                         <posy>5</posy>
                                         <width>375</width>
                                         <height>34</height>
-                                        <font>Font_Reg18_Caps</font>
+                                        <font>Font_Reg31_Caps</font>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                     <control type="label">
@@ -420,7 +420,7 @@
                                         <posy>5</posy>
                                         <width>375</width>
                                         <height>34</height>
-                                        <font>Font_Reg18_Caps</font>
+                                        <font>Font_Reg31_Caps</font>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                     <control type="label">
@@ -621,7 +621,7 @@
                                     <posy>8</posy>
                                     <width>375</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                                 <control type="label">
@@ -681,7 +681,7 @@
                                     <posy>8</posy>
                                     <width>375</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                                 <control type="label">
@@ -774,7 +774,7 @@
                                     <posy>8</posy>
                                     <width>375</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                                 <control type="label">
@@ -837,7 +837,7 @@
                                     <posy>8</posy>
                                     <width>375</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                                 <control type="label">
@@ -945,7 +945,7 @@
                                     <posy>5</posy>
                                     <width>375</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
                                 <control type="label">
@@ -1007,7 +1007,7 @@
                                         <posy>5</posy>
                                         <width>375</width>
                                         <height>34</height>
-                                        <font>Font_Reg18_Caps</font>
+                                        <font>Font_Reg31_Caps</font>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                     <control type="label">
@@ -1040,7 +1040,7 @@
                                         <posy>5</posy>
                                         <width>375</width>
                                         <height>34</height>
-                                        <font>Font_Reg18_Caps</font>
+                                        <font>Font_Reg31_Caps</font>
                                         <label>$INFO[ListItem.Label]</label>
                                     </control>
                                     <control type="label">
@@ -1777,7 +1777,7 @@
                                 <posy>158</posy>
                                 <width>310</width>
                                 <height>34</height>
-                                <font>Font_Bold22</font>
+                                <font>Font_Bold37</font>
                                 <align>center</align>
                                 <label>33035</label>
                             </control>
@@ -1858,7 +1858,7 @@
                                     <posx>105</posx>
                                     <width>210</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <align>center</align>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -1884,7 +1884,7 @@
                                     <posx>105</posx>
                                     <width>210</width>
                                     <height>34</height>
-                                    <font>Font_Reg18_Caps</font>
+                                    <font>Font_Reg31_Caps</font>
                                     <align>center</align>
                                     <label>$INFO[ListItem.Label]</label>
                                 </control>
@@ -1984,7 +1984,7 @@
                     <posy>1030</posy>
                     <width>1920</width>
                     <height>20</height>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <align>right</align>
                     <textcolor>floor</textcolor>
                     <textoffsetx>0</textoffsetx>
@@ -2023,7 +2023,7 @@
                         <posy>225</posy>
                         <width>412</width>
                         <height>135</height>
-                        <font>Font_Reg24</font>
+                        <font>Font_Reg40</font>
                         <label>$LOCALIZE[402] : $INFO[Window.Property(Current.FeelsLike)] $INFO[System.TemperatureUnits]</label>
                         <textcolor>grey2</textcolor>
                     </control>
@@ -2034,7 +2034,7 @@
                         <height>135</height>
                         <label>[LOWERCASE]$INFO[Window.Property(Current.Condition)][/LOWERCASE]</label>
                         <wrapmultiline>true</wrapmultiline>
-                        <font>Font_Reg24</font>
+                        <font>Font_Reg40</font>
                         <textcolor>grey2</textcolor>
                     </control>
                     <control type="image">
@@ -2052,7 +2052,7 @@
                         <height>135</height>
                         <label>$INFO[Window(Weather).Property(Location)]</label>
                         <wrapmultiline>true</wrapmultiline>
-                        <font>Font_Reg24</font>
+                        <font>Font_Reg40</font>
                         <align>center</align>
                     </control>
                     <control type="group">
@@ -2063,7 +2063,7 @@
                             <posy>645</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[405]:</label>
                             <textcolor>grey2</textcolor>
@@ -2073,7 +2073,7 @@
                             <posy>690</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[406]:</label>
                             <textcolor>grey2</textcolor>
@@ -2083,7 +2083,7 @@
                             <posy>735</posy>
                             <width>255</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <align>right</align>
                             <label>$LOCALIZE[404]:</label>
                             <textcolor>grey2</textcolor>
@@ -2095,7 +2095,7 @@
                                 <posx>255</posx>
                                 <width>255</width>
                                 <height>52</height>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg30</font>
                                 <align>right</align>
                                 <label>$LOCALIZE[33027]:</label>
                                 <textcolor>grey2</textcolor>
@@ -2104,7 +2104,7 @@
                                 <posx>278</posx>
                                 <width>450</width>
                                 <height>52</height>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg30</font>
                                 <info>Window.Property(Current.Sunrise)</info>
                             </control>
                         </control>
@@ -2116,7 +2116,7 @@
                                 <posx>255</posx>
                                 <width>255</width>
                                 <height>52</height>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg30</font>
                                 <align>right</align>
                                 <label>$LOCALIZE[33028]:</label>
                                 <textcolor>grey2</textcolor>
@@ -2125,7 +2125,7 @@
                                 <posx>278</posx>
                                 <width>450</width>
                                 <height>52</height>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg30</font>
                                 <info>Window.Property(Current.Sunset)</info>
                             </control>
                         </control>
@@ -2136,7 +2136,7 @@
                                 <posx>255</posx>
                                 <width>255</width>
                                 <height>52</height>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg30</font>
                                 <align>right</align>
                                 <label>$LOCALIZE[31929]:</label>
                                 <textcolor>grey2</textcolor>
@@ -2145,7 +2145,7 @@
                                 <posx>278</posx>
                                 <width>450</width>
                                 <height>52</height>
-                                <font>Font_Reg20</font>
+                                <font>Font_Reg30</font>
                                 <info>Window.Property(Current.Moon.Phase)</info>
                             </control>
                         </control>
@@ -2154,7 +2154,7 @@
                             <posy>645</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
                         </control>
                         <control type="label">
@@ -2162,7 +2162,7 @@
                             <posy>690</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Current.Humidity)</info>
                         </control>
                         <control type="label">
@@ -2170,7 +2170,7 @@
                             <posy>735</posy>
                             <width>450</width>
                             <height>52</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <info>Window.Property(Current.Wind)</info>
                         </control>
                     </control>
@@ -2201,7 +2201,7 @@
                             <posy>5</posy>
                             <width>375</width>
                             <height>34</height>
-                            <font>Font_Reg18_Caps</font>
+                            <font>Font_Reg31_Caps</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="label">
@@ -2266,7 +2266,7 @@
                                 <posy>5</posy>
                                 <width>375</width>
                                 <height>34</height>
-                                <font>Font_Reg18_Caps</font>
+                                <font>Font_Reg31_Caps</font>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                             <control type="label">
@@ -2367,7 +2367,7 @@
                 <height>135</height>
                 <align>center</align>
                 <label>$LOCALIZE[31299] : $INFO[Window(Weather).Property(WeatherProvider)]</label>
-                <font>Font_Reg15</font>
+                <font>Font_Reg26w</font>
                 <textcolor>grey2</textcolor>
                 <wrapmultiline>true</wrapmultiline>
             </control>
@@ -2421,7 +2421,7 @@
                         <onleft>ActivateWindow(1121)</onleft>
                         <texturenofocus border="3">settings/listselect_nf.png</texturenofocus>
                         <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textoffsety>10</textoffsety>
                         <aligny>top</aligny>
                         <textoffsetx>0</textoffsetx>

@@ -128,20 +128,20 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>!SubString(Window(1124).Property(CustomYesNoDialog),roms) + !Substring(Window(1124).Property(CustomYesNoDialog),Icon)</visible>
                     </control>
-                    <control type="button" id="13">
+                    <control type="button" id="15">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
                         <align>center</align>
-                        <label>Shelf</label>
+                        <label>31150</label>
                         <textcolor>grey2</textcolor>
-                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <focusedcolor>white3</focusedcolor>
-                        <onfocus>SetProperty(WidgetType,classicshelf,1124)</onfocus>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <onfocus>SetProperty(WidgetType,keeparpanel,1124)</onfocus>
                         <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
                         <onclick>Dialog.Close(1137)</onclick>
-                        <onclick>ActivateWindow(1188)</onclick>
-                        <visible>!Substring(Window(1124).Property(CustomYesNoDialog),bigpicture)+Substring(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                        <visible>Substring(Window(1124).Property(CustomYesNoDialog),roms) | Substring(Window(1124).Property(CustomYesNoDialog),pics) | Substring(Window(1124).Property(CustomYesNoDialog),bigpicture)</visible>
+                        <onclick>ActivateWindow(1146)</onclick>
                     </control>
                 </control>
                 <control type="grouplist" id="5401">
@@ -151,10 +151,10 @@
                     <align>center</align>
                     <onleft>5401</onleft>
                     <onright>5401</onright>
-                    <ondown>18</ondown>
+                    <ondown>5402</ondown>
                     <onup>5400</onup>
                     <orientation>horizontal</orientation>
-                    <control type="button" id="14">
+                    <control type="button" id="15">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -170,7 +170,7 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
-                    <control type="button" id="15">
+                    <control type="button" id="16">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -186,7 +186,7 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
-                    <control type="button" id="16">
+                    <control type="button" id="17">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -202,7 +202,7 @@
                         <onclick>ActivateWindow(1146)</onclick>
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
-                    <control type="button" id="17">
+                    <control type="button" id="18">
                         <width>175</width>
                         <height>45</height>
                         <textoffsetx>15</textoffsetx>
@@ -219,6 +219,32 @@
                         <visible>SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)</visible>
                     </control>
                 </control>
+                <control type="grouplist" id="5402">
+                    <posy>275</posy>
+                    <width>250</width>
+                    <height>200</height>
+                    <align>center</align>
+                    <onleft>5402</onleft>
+                    <onright>5402</onright>
+                    <ondown>5400</ondown>
+                    <onup>5401</onup>
+                    <orientation>horizontal</orientation>
+                    <control type="button" id="19">
+                        <width>175</width>
+                        <height>45</height>
+                        <textoffsetx>15</textoffsetx>
+                        <align>center</align>
+                        <label>Shelf</label>
+                        <textcolor>grey2</textcolor>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <focusedcolor>white3</focusedcolor>
+                        <onfocus>SetProperty(WidgetType,classicshelf,1124)</onfocus>
+                        <onfocus>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],$INFO[Control.GetLabel(12112)])</onfocus>
+                        <onclick>Dialog.Close(1137)</onclick>
+                        <onclick>ActivateWindow(1188)</onclick>
+                        <visible>Substring(Window(1124).Property(WidgetSelection),Widget2) + [Substring(Window(1124).Property(CustomYesNoDialog),movie) | Substring(Window(1124).Property(CustomYesNoDialog),musicvideo) | Substring(Window(1124).Property(CustomYesNoDialog),tv)]</visible>
+                    </control>
+				</control>
             </control>
         </control>
     </controls>

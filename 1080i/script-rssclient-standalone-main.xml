@@ -6,7 +6,7 @@
        <control type="multiimage">
             <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-            <imagepath fallback="special://skin/backgrounds/info/" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
+            <imagepath fallback="special://skin/background/info/" background="true">$INFO[Skin.String(CurrentBackground)]</imagepath>
         </control>
         <control type="image">
                 <posy>-207</posy>
@@ -96,7 +96,7 @@
 				<align>left</align>
 				<label>$INFO[Container(30050).ListItem(-1).Label]</label>
 				<wrapmultiline>true</wrapmultiline>
-				<font>Font_Reg19</font>
+				<font>Font_Reg30_2</font>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			</control>
 			<control type="label">
@@ -108,7 +108,7 @@
 				<align>right</align>
 				<label>$INFO[Container(30050).ListItem(1).Label]</label>
 				<wrapmultiline>true</wrapmultiline>
-				<font>Font_Reg19</font>
+				<font>Font_Reg30_2</font>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			</control>
 			
@@ -228,7 +228,7 @@
 					<texturefocus>dialogs/shutdown_focus.png</texturefocus>
 					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<align>center</align>
-					<font>Font_Reg19</font>
+					<font>Font_Reg30_2</font>
 					<textoffsety>12</textoffsety>
 				</control>
 				
@@ -258,7 +258,7 @@
 						<texturefocus>dialogs/shutdown_focus.png</texturefocus>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<align>center</align>
-						<font>Font_Reg19</font>
+						<font>Font_Reg30_2</font>
 						<textoffsety>12</textoffsety>
 						<visible>Container(30050).ListItem(0).Property(slideshowable)</visible>
 					</control>
@@ -276,7 +276,7 @@
 						<texturefocus>dialogs/shutdown_focus.png</texturefocus>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<align>center</align>
-						<font>Font_Reg19</font>
+						<font>Font_Reg30_2</font>
 						<textoffsety>12</textoffsety>
 						<visible>!StringCompare(Container(30050).ListItem(0).Property(video),)</visible>
 					</control>
@@ -344,7 +344,7 @@
 					<posy>0</posy>
 					<width>1245</width>
 					<height>60</height>
-					<font>Font_Reg19</font>
+					<font>Font_Reg30_2</font>
                     <textcolor>context</textcolor>
 					<focusedcolor>FFdfdfdf</focusedcolor>
                     <align>left</align>
@@ -385,7 +385,7 @@
 					<posy>0</posy>
 					<width>1245</width>
 					<height>60</height>
-					<font>Font_Reg19</font>
+					<font>Font_Reg30_2</font>
                     <textcolor>context</textcolor>
                 <focusedcolor>FFdfdfdf</focusedcolor>
                     <align>left</align>
@@ -430,7 +430,7 @@
 					<posy>0</posy>
 					<width>390</width>
 					<height>60</height>
-					<font>Font_Reg19</font>
+					<font>Font_Reg30_2</font>
                     <textcolor>context</textcolor>
 					<focusedcolor>FFdfdfdf</focusedcolor>
                     <align>left</align>
@@ -462,7 +462,7 @@
 					<posy>0</posy>
 					<width>390</width>
 					<height>60</height>
-					<font>Font_Reg19</font>
+					<font>Font_Reg30_2</font>
                     <textcolor>context</textcolor>
 					<focusedcolor>FFdfdfdf</focusedcolor>
                     <align>left</align>

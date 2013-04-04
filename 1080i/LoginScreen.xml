@@ -10,7 +10,7 @@
     </coordinates>
     <controls>
         <control type="multiimage">
-            <imagepath background="true" fallback="special://skin/backgrounds/appearance.jpg">$INFO[Skin.String(LoginBackdrop)]</imagepath>
+            <imagepath background="true" fallback="special://skin/background/appearance.jpg">$INFO[Skin.String(LoginBackdrop)]</imagepath>
         </control>
         <include>CommonMediaPlayingBackground</include>
         <!-- Furniture -->
@@ -128,7 +128,7 @@
                 <posy>1005</posy>
                 <width>1920</width>
                 <align>center</align>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <textcolor>floor</textcolor>
                 <shadowcolor>floorshadow</shadowcolor>
                 <info>ListItem.Label2</info>
@@ -174,7 +174,7 @@
                     <control type="label">
                         <height>38</height>
                         <width min="15" max="1920">auto</width>
-                        <font>Font_Reg17_Caps</font>
+                        <font>Font_Reg30_Caps</font>
                         <textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
                         <shadowcolor>bcshadow</shadowcolor>
                         <scroll>false</scroll>

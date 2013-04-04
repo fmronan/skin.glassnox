@@ -75,7 +75,7 @@
                 <width>1010</width>
                 <height>42</height>
                 <align>center</align>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <label>1021</label>
                 <animation effect="fade" start="100" end="60" time="240" condition="!Control.HasFocus(10)">Conditional</animation>
             </control>
@@ -85,7 +85,7 @@
                 <width>1010</width>
                 <height>42</height>
                 <align>center</align>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <label>1022</label>
                 <animation effect="fade" start="100" end="60" time="240" condition="!Control.HasFocus(12)">Conditional</animation>
             </control>
@@ -94,7 +94,7 @@
                 <posy>386</posy>
                 <width>980</width>
                 <height>66</height>
-                <font>Font_Reg20</font>
+                <font>Font_Reg30</font>
                 <align>center</align>
                 <texturefocus>-</texturefocus>
                 <texturenofocus>-</texturenofocus>
@@ -122,7 +122,7 @@
                 <control type="button" id="11">
                     <width>230</width>
                     <height>62</height>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>1024</label>
                     <textoffsetx>30</textoffsetx>
                     <onleft>10</onleft>
@@ -137,7 +137,7 @@
                     <posy>62</posy>
                     <width>230</width>
                     <height>62</height>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>15019</label>
                     <textoffsetx>30</textoffsetx>
                     <onleft>10</onleft>
@@ -152,7 +152,7 @@
                     <posy>123</posy>
                     <width>230</width>
                     <height>62</height>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>1210</label>
                     <textoffsetx>30</textoffsetx>
                     <onleft>10</onleft>
@@ -167,7 +167,7 @@
                     <posy>184</posy>
                     <width>230</width>
                     <height>62</height>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>222</label>
                     <textoffsetx>30</textoffsetx>
                     <onleft>12</onleft>
@@ -182,7 +182,7 @@
                     <posy>246</posy>
                     <width>230</width>
                     <height>62</height>
-                    <font>Font_Reg20</font>
+                    <font>Font_Reg30</font>
                     <label>186</label>
                     <textoffsetx>30</textoffsetx>
                     <onleft>12</onleft>

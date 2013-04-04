@@ -77,8 +77,10 @@
                 <texture background="true">$VAR[TVShowLogoVar]</texture>
                 <fadetime>400</fadetime>
                 <visible>![Skin.HasSetting(episodelogo) + Container.Content(tvshows)]</visible>
-                <animation effect="zoom" end="130" center="auto" time="320" tween="cubic" easing="inout" condition="Window.IsActive(musiclibrary)">Conditional</animation>
-                <animation effect="slide" end="0,635" time="6000" condition="Window.IsActive(musiclibrary)">Conditional</animation>
+                <animation type="Conditional" condition="Window.IsActive(musiclibrary)">
+                    <effect type="zoom" end="130" center="auto" time="320" tween="cubic" easing="inout" />
+                    <effect type="slide" end="0,35" time="6000" />
+                </animation>
             </control>
             <control type="group">
                 <visible>Window.IsActive(videos)</visible>
@@ -120,7 +122,7 @@
                 <align>right</align>
                 <aligny>bottom</aligny>
                 <label>$INFO[ListItem.TrackNumber]</label>
-                <font>Font_Reg22_Caps</font>
+                <font>Font_Reg37_Caps</font>
                 <visible>Container.Content(songs)</visible>
             </control>
             <control type="label">
@@ -130,7 +132,7 @@
                 <align>right</align>
                 <aligny>bottom</aligny>
                 <label>$VAR[EpisodeTitleVar]</label>
-                <font>Font_Reg25_Caps</font>
+                <font>Font_Reg42_Caps</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="label">
@@ -141,7 +143,7 @@
                 <align>right</align>
                 <aligny>bottom</aligny>
                 <label>$VAR[InfoWallBottomLabel1Var]$INFO[ListItem.Rating, • ]</label>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <textcolor>grey</textcolor>
             </control>
         </itemlayout>
@@ -168,7 +170,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$INFO[ListItem.TrackNumber]</label>
-                    <font>Font_Reg22_Caps</font>
+                    <font>Font_Reg37_Caps</font>
                     <visible>Container.Content(songs)</visible>
                 </control>
                 <control type="label">
@@ -178,7 +180,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$INFO[ListItem.Label]</label>
-                    <font>Font_Reg25_Caps</font>
+                    <font>Font_Reg42_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <scrollspeed>40</scrollspeed>
                     <visible>!Container.Content(songs)</visible>
@@ -190,7 +192,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$INFO[ListItem.Title]</label>
-                    <font>Font_Reg25_Caps</font>
+                    <font>Font_Reg42_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <scrollspeed>40</scrollspeed>
                     <visible>Container.Content(songs)</visible>
@@ -203,7 +205,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$VAR[InfoWallBottomLabel1Var]$INFO[ListItem.Genre, • ]</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey</textcolor>
                 </control>
                 <control type="textbox">
@@ -213,7 +215,7 @@
                     <height>194</height>
                     <align>right</align>
                     <label>$VAR[InfoWallTextboxVar]</label>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
@@ -228,7 +230,7 @@
                 <align>right</align>
                 <aligny>bottom</aligny>
                 <label>$VAR[EpisodeTitleVar]</label>
-                <font>Font_Reg25_Caps</font>
+                <font>Font_Reg42_Caps</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="label">
@@ -239,7 +241,7 @@
                 <align>right</align>
                 <aligny>bottom</aligny>
                 <label>$VAR[EpisodeSubTitleVar]</label>
-                <font>Font_Reg17</font>
+                <font>Font_Reg28</font>
                 <textcolor>grey</textcolor>
             </control>
             <control type="image">
@@ -298,7 +300,7 @@
                     <height>105</height>
                     <align>center</align>
                     <label>$INFO[ListItem.Label]</label>
-                    <font>Font_Bold24</font>
+                    <font>Font_Bold40</font>
                     <shadowcolor>black</shadowcolor>
                     <visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
                 </control>
@@ -345,7 +347,7 @@
                 <width>870</width>
                 <align>right</align>
                 <label>$VAR[SecondLabelVar]</label>
-                <font>Font_Info_Caps</font>
+                <font>Font_Reg28_Caps</font>
                 <shadowcolor>floorshadow</shadowcolor>
                 <textcolor>$VAR[HomeMenuTextFocusVar2]</textcolor>
             </control>
@@ -415,7 +417,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$INFO[ListItem.Title]</label>
-                    <font>Font_Reg25_Caps</font>
+                    <font>Font_Reg42_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <scrollspeed>40</scrollspeed>
                     <visible>!IsEmpty(ListItem.Title)</visible>
@@ -428,7 +430,7 @@
                     <align>right</align>
                     <aligny>top</aligny>
                     <label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey</textcolor>
                     <visible>!IsEmpty(ListItem.Title)</visible>
                 </control>
@@ -439,7 +441,7 @@
                     <height>130</height>
                     <align>right</align>
                     <label>$VAR[GlobalPlotVar]</label>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>
             </control>
@@ -487,7 +489,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$INFO[ListItem.Title]</label>
-                    <font>Font_Reg25_Caps</font>
+                    <font>Font_Reg42_Caps</font>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                     <scrollspeed>40</scrollspeed>
                     <visible>!IsEmpty(ListItem.Title)</visible>
@@ -500,7 +502,7 @@
                     <align>right</align>
                     <aligny>bottom</aligny>
                     <label>$INFO[ListItem.Date]$INFO[ListItem.Rating, • ]</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey</textcolor>
                     <visible>!IsEmpty(ListItem.Title)</visible>
                 </control>
@@ -510,7 +512,7 @@
                     <width>640</width>
                     <height>122</height>
                     <align>right</align>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Plot</info>
                     <autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
                 </control>

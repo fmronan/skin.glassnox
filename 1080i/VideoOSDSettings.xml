@@ -40,7 +40,7 @@
                 <width>1080</width>
                 <height>60</height>
                 <label>$LOCALIZE[13396]</label>
-                <font>Font_Bold19</font>
+                <font>Font_Bold33</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
                 <visible>Window.IsActive(OSDAudioSettings)</visible>
             </control>
@@ -50,7 +50,7 @@
                 <width>1080</width>
                 <height>60</height>
                 <label>$LOCALIZE[13395]</label>
-                <font>Font_Bold19</font>
+                <font>Font_Bold33</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
                 <visible>Window.IsActive(OSDVideoSettings)</visible>
             </control>
@@ -60,7 +60,7 @@
                 <width>1080</width>
                 <height>60</height>
                 <label>$LOCALIZE[13390]</label>
-                <font>Font_Bold19</font>
+                <font>Font_Bold33</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="grouplist" id="5">
@@ -90,7 +90,7 @@
         <control type="sliderex" id="10">
             <width>1272</width>
             <textoffsetx>45</textoffsetx>
-            <font>Font_Reg20</font>
+            <font>Font_Reg30</font>
             <textcolor>grey2</textcolor>
         </control>
         <control type="button" id="7">
@@ -99,7 +99,7 @@
             <textoffsetx>45</textoffsetx>
             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
-            <font>Font_Reg20</font>
+            <font>Font_Reg30</font>
             <textcolor>grey2</textcolor>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
         </control>
@@ -109,7 +109,7 @@
             <textoffsetx>45</textoffsetx>
             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
-            <font>Font_Reg20</font>
+            <font>Font_Reg30</font>
             <textcolor>grey2</textcolor>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <radioposx>934</radioposx>
@@ -119,7 +119,7 @@
             <textoffsetx>45</textoffsetx>
             <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
             <texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
-            <font>Font_Reg20</font>
+            <font>Font_Reg30</font>
             <textcolor>grey2</textcolor>
             <spinposx>13</spinposx>
         </control>

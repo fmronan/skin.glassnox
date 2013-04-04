@@ -13,7 +13,7 @@
         <control type="multiimage" id="75">
             <include>FullscreenDimensions</include>
             <fadetime>600</fadetime>
-            <imagepath background="true" fallback="special://skin/backgrounds/programs/">$INFO[ListItem.Property(background)]</imagepath>
+            <imagepath background="true" fallback="special://skin/background/programs/">$INFO[ListItem.Property(background)]</imagepath>
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
         </control>
@@ -74,7 +74,7 @@
                     <width>1620</width>
                     <height>42</height>
                     <scroll>true</scroll>
-                    <font>Font_Reg15</font>
+                    <font>Font_Reg26</font>
                     <align>center</align>
                     <label>$INFO[ListItem.Tagline]</label>
                     <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
@@ -91,7 +91,7 @@
                         <height>454</height>
                         <aspectratio align="center">keep</aspectratio>
                         <fadetime>FanartCrossfadeTime</fadetime>
-                        <texture background="true" fallback="special://skin/backgrounds/programs/programs.jpg">$INFO[ListItem.property(background)]</texture>
+                        <texture background="true" fallback="special://skin/background/programs/programs.jpg">$INFO[ListItem.property(background)]</texture>
                         <bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
                         <bordersize>7</bordersize>
                     </control>
@@ -1202,7 +1202,7 @@
                         <posy>154</posy>
                         <height>20</height>
                         <width>570</width>
-                        <font>Font_Bold25_Caps</font>
+                        <font>Font_Bold42_Caps</font>
                         <scroll>true</scroll>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -1229,7 +1229,7 @@
                                 <posy>1015</posy>
                                 <height>20</height>
                                 <width>690</width>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <align>right</align>
                                 <textcolor>$VAR[FlagDiffuseVar]</textcolor>
                                 <scroll>true</scroll>
@@ -1240,7 +1240,7 @@
                                 <posy>1060</posy>
                                 <height>20</height>
                                 <width>690</width>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <align>right</align>
                                 <textcolor>$VAR[FlagDiffuseVar]</textcolor>
                                 <label>$INFO[ListItem.Property(publisher)]</label>
@@ -1251,7 +1251,7 @@
                             <posy>254</posy>
                             <width>570</width>
                             <height>350</height>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label fallback="31006">$INFO[ListItem.Property(plot)]</label>
                             <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
@@ -1275,7 +1275,7 @@
                             <height>322</height>
                             <fadetime>IconCrossfadeTime</fadetime>
                             <aspectratio align="center">keep</aspectratio>
-                            <texture background="true" fallback="special://skin/backgrounds/programs/programs.jpg">$INFO[ListItem.Property(gameinfobig)]</texture>
+                            <texture background="true" fallback="special://skin/background/programs/programs.jpg">$INFO[ListItem.Property(gameinfobig)]</texture>
                             <visible>!Player.Hasvideo</visible>
                             <include>Animation_VisibleChange200</include>
                         </control>
@@ -2133,7 +2133,7 @@
                         <posx>195</posx>
                         <posy>1005</posy>
                         <width>1245</width>
-                        <font>Font_Info_Caps</font>
+                        <font>Font_Reg28_Caps</font>
                         <textcolor>floor</textcolor>
                         <shadowcolor>floorshadow</shadowcolor>
                         <label>$INFO[ListItem.Property(genre)]</label>
@@ -2205,7 +2205,7 @@
                                 <posy>1</posy>
                                 <width>800</width>
                                 <height>48</height>
-                                <font>Font_Reg22</font>
+                                <font>Font_Reg38</font>
                                 <textcolor>grey2</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
@@ -2258,7 +2258,7 @@
                                 <posy>1</posy>
                                 <width>800</width>
                                 <height>48</height>
-                                <font>Font_Reg22</font>
+                                <font>Font_Reg38</font>
                                 <label>$INFO[ListItem.Label]</label>
                             </control>
                             <control type="label">
@@ -2297,7 +2297,7 @@
                                 <posx>68</posx>
                                 <width>810</width>
                                 <height>60</height>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <textcolor>grey2</textcolor>
                                 <info>ListItem.Label</info>
                             </control>
@@ -2305,7 +2305,7 @@
                                 <posx>1029</posx>
                                 <width>123</width>
                                 <height>60</height>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <align>center</align>
                                 <textcolor>grey2</textcolor>
                                 <label>$INFO[ListItem.Property(year)]</label>
@@ -2337,14 +2337,14 @@
                                 <posx>68</posx>
                                 <width>810</width>
                                 <height>60</height>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
                                 <posx>1029</posx>
                                 <width>123</width>
                                 <height>60</height>
-                                <font>Font_Reg19</font>
+                                <font>Font_Reg30_2</font>
                                 <align>center</align>
                                 <label>$INFO[ListItem.Property(year)]</label>
                             </control>
@@ -2416,7 +2416,7 @@
                     <posy>1005</posy>
                     <width>900</width>
                     <align>center</align>
-                    <font>Font_Info_Caps</font>
+                    <font>Font_Reg28_Caps</font>
                     <textcolor>floor</textcolor>
                     <shadowcolor>floorshadow</shadowcolor>
                     <label>$INFO[ListItem.Property(genre)]</label>
@@ -2546,7 +2546,7 @@
                         <posy>75</posy>
                         <width>300</width>
                         <height>45</height>
-                        <font>Font_Reg18</font>
+                        <font>Font_Reg29</font>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                         <label>$ADDON[script.games.rom.collection.browser 50004]</label>
                         <textcolor>white2</textcolor>
@@ -2644,7 +2644,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2676,7 +2676,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2721,7 +2721,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2753,7 +2753,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2798,7 +2798,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2830,7 +2830,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2875,7 +2875,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2907,7 +2907,7 @@
                                     <posy>0</posy>
                                     <width>285</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2952,7 +2952,7 @@
                                     <posy>0</posy>
                                     <width>75</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
@@ -2984,7 +2984,7 @@
                                     <posy>0</posy>
                                     <width>75</width>
                                     <height>45</height>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <aligny>center</aligny>
                                     <textcolor>white2</textcolor>
                                     <selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>

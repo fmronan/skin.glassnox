@@ -22,7 +22,6 @@
                 <posx>570</posx>
                 <posy>375</posy>
                 <control type="group">
-                    <animation effect="zoom" end="100,130" center="960,0" time="0" condition="SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)">Conditional</animation>
                     <control type="image">
                         <width>780</width>
                         <height>330</height>
@@ -56,10 +55,11 @@
                 <control type="grouplist" id="5400">
                     <onleft>5400</onleft>
                     <onright>5400</onright>
+                    <posx>140</posx>
                     <posy>180</posy>
                     <ondown>5401</ondown>
                     <onup>5401</onup>
-                    <width>740</width>
+                    <width>555</width>
                     <height>200</height>
                     <align>center</align>
                     <orientation>horizontal</orientation>

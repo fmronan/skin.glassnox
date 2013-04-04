@@ -4,7 +4,7 @@
     <onload condition="!Player.HasAudio + System.HasAddon(script.artistslideshow)">SetProperty(CURRENTARTIST,$ESCINFO[ListItem.Artist])</onload>
     <onload condition="!Player.HasAudio + System.HasAddon(script.artistslideshow)">SetProperty(ArtistSlideshow.ExternalCall,True)</onload>
     <onload condition="!Player.HasAudio + System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow,windowid=12001&amp;artistfield=CURRENTARTIST)</onload>
-    <onload>RunScript(script.extendedinfo,info=artistevents,artistname=$ESCINFO[ListItem.Artist])</onload>
+    <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=artistevents,artistname=$ESCINFO[ListItem.Artist])</onload>
     <onunload condition="System.HasAddon(script.artistslideshow)">clearProperty(ArtistSlideshow.ExternalCall)</onunload>
     <animation type="WindowOpen" reversible="false">
         <effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />
@@ -17,7 +17,7 @@
     <controls>
         <control type="image">
             <aspectratio>scale</aspectratio>
-            <texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+            <texture background="true" fallback="special://skin/background/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
             <include>FullscreenDimensions</include>
         </control>
         <control type="multiimage">
@@ -164,7 +164,7 @@
                         <width>1405</width>
                         <height>38</height>
                         <label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Album][/COLOR]$INFO[ListItem.Year, [,] ]</label>
-                        <font>Font_Reg38</font>
+                        <font>Font_Reg57</font>
                         <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         <scroll>true</scroll>
@@ -187,7 +187,7 @@
                     <posy>-80</posy>
                     <width>778</width>
                     <height>270</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <shadowcolor>black</shadowcolor>
                     <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                     <pagecontrol>60</pagecontrol>
@@ -219,7 +219,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[515]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -227,7 +227,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Genre]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -243,7 +243,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21899]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -251,7 +251,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Album_Label)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -266,7 +266,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[31008]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -274,7 +274,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Album_Type)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -290,7 +290,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[176]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -298,7 +298,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Album_Style)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -314,7 +314,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[175]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -322,7 +322,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Album_Mood)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -342,7 +342,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21898]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -350,7 +350,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Artist_YearsActive)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -366,7 +366,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21892]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -374,7 +374,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Artist_Instrument)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -389,7 +389,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[176]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -397,7 +397,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Artist_Style)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -413,7 +413,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[175]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -421,7 +421,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Artist_Mood)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -438,7 +438,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21893]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -446,7 +446,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label>$INFO[ListItem.Property(Artist_Born)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -463,7 +463,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21894]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -471,7 +471,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label>$INFO[ListItem.Property(Artist_Formed)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -488,7 +488,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21897]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -496,7 +496,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label>$INFO[ListItem.Property(Artist_Died)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -513,7 +513,7 @@
                             <width min="50" max="400">auto</width>
                             <aligny>bottom</aligny>
                             <label>$LOCALIZE[21896]:</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
                         </control>
@@ -521,7 +521,7 @@
                             <width>671</width>
                             <aligny>bottom</aligny>
                             <label fallback="N/A">$INFO[ListItem.Property(Artist_Disbanded)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <shadowcolor>black</shadowcolor>
                             <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                             <pauseatend>1000</pauseatend>
@@ -539,7 +539,7 @@
             <orientation>horizontal</orientation>
             <control type="label">
                 <label>$INFO[Control.GetLabel(20)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(20)">Conditional</animation>
@@ -547,7 +547,7 @@
             </control>
             <control type="label">
                 <label>$INFO[Control.GetLabel(24)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(24)">Conditional</animation>
@@ -555,7 +555,7 @@
             </control>
             <control type="label">
                 <label>$INFO[Control.GetLabel(13)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(13)">Conditional</animation>
@@ -563,7 +563,7 @@
             </control>
             <control type="label">
                 <label>$INFO[Control.GetLabel(14)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(14)">Conditional</animation>
@@ -571,7 +571,7 @@
             </control>
             <control type="label">
                 <label>$INFO[Control.GetLabel(15)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(15)">Conditional</animation>
@@ -579,7 +579,7 @@
             </control>
             <control type="label">
                 <label>$INFO[Control.GetLabel(22)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(22)">Conditional</animation>
@@ -587,7 +587,7 @@
             </control>
             <control type="label">
                 <label>$INFO[Control.GetLabel(25)]</label>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <shadowcolor>black</shadowcolor>
                 <include>BreadcrumbsLabel</include>
                 <animation effect="fade" start="100" end="50" time="160" tween="cubic" easing="inout" condition="!Control.HasFocus(25)">Conditional</animation>
@@ -685,7 +685,7 @@
                     <height>40</height>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[ListItem.TrackNumber]: [COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[ListItem.Label][/COLOR]</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <shadowcolor>black</shadowcolor>
                     <textcolor>$VAR[TitleColorVar]</textcolor>
                 </control>
@@ -696,7 +696,7 @@
                     <textoffsetx>15</textoffsetx>
                     <align>right</align>
                     <label>$INFO[ListItem.Duration]</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <shadowcolor>black</shadowcolor>
                     <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                 </control>
@@ -716,7 +716,7 @@
                         <height>40</height>
                         <textoffsetx>15</textoffsetx>
                         <label>$INFO[ListItem.TrackNumber]: [COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[ListItem.Label][/COLOR]</label>
-                        <font>Font_Reg17</font>
+                        <font>Font_Reg28</font>
                         <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[TitleColorVar]</textcolor>
                     </control>
@@ -727,7 +727,7 @@
                         <textoffsetx>15</textoffsetx>
                         <align>right</align>
                         <label>$INFO[ListItem.Duration]</label>
-                        <font>Font_Reg17</font>
+                        <font>Font_Reg28</font>
                         <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                     </control>
@@ -746,7 +746,7 @@
                         <height>40</height>
                         <textoffsetx>15</textoffsetx>
                         <label>$INFO[ListItem.TrackNumber]: [COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Label][/COLOR]</label>
-                        <font>Font_Reg17</font>
+                        <font>Font_Reg28</font>
                         <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[TitleColorVar]</textcolor>
                     </control>
@@ -757,7 +757,7 @@
                         <textoffsetx>15</textoffsetx>
                         <align>right</align>
                         <label>$INFO[ListItem.Duration]</label>
-                        <font>Font_Reg17</font>
+                        <font>Font_Reg28</font>
                         <shadowcolor>black</shadowcolor>
                     </control>
                 </control>
@@ -775,7 +775,7 @@
                     <height>40</height>
                     <textoffsetx>15</textoffsetx>
                     <label>$INFO[ListItem.Label]</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <shadowcolor>black</shadowcolor>
                     <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                 </control>
@@ -795,7 +795,7 @@
                         <height>40</height>
                         <textoffsetx>15</textoffsetx>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Font_Reg17</font>
+                        <font>Font_Reg28</font>
                         <shadowcolor>black</shadowcolor>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                     </control>
@@ -814,7 +814,7 @@
                         <height>40</height>
                         <textoffsetx>15</textoffsetx>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Font_Reg17</font>
+                        <font>Font_Reg28</font>
                         <shadowcolor>black</shadowcolor>
                     </control>
                 </control>
@@ -869,7 +869,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[31635]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1100,7 +1100,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[21888]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1577,7 +1577,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[21887]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1618,7 +1618,7 @@
                             <width>724</width>
                             <height>474</height>
                             <label>$INFO[Window.Property(ArtistSlideshow.ArtistBiography)]</label>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <pagecontrol>7010</pagecontrol>
                             <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
                         </control>
@@ -1682,7 +1682,7 @@
                             <height>34</height>
                             <align>center</align>
                             <label>$LOCALIZE[31270]</label>
-                            <font>Font_Reg22_Caps</font>
+                            <font>Font_Reg37_Caps</font>
                             <textcolor>$VAR[TitleColorVar]</textcolor>
                         </control>
                         <control type="group">
@@ -1745,7 +1745,7 @@
                                     <height>48</height>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Label2]</label>
-                                    <font>Font_Reg15</font>
+                                    <font>Font_Reg26</font>
                                     <textcolor>$VAR[TitleColorVar]</textcolor>
                                 </control>
                                 <control type="label">
@@ -1755,7 +1755,7 @@
                                     <height>48</height>
                                     <align>left</align>
                                     <label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(City)]: [/COLOR]$INFO[ListItem.Property(Name)]</label>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <textcolor>grey2</textcolor>
                                 </control>
                                 <!--                 <control type="label">
@@ -1766,7 +1766,7 @@
                     <textcolor>grey2</textcolor>
                     <align>right</align>
                     <number>yes</number>
-                    <font>Font_Reg18</font>
+                    <font>Font_Reg29</font>
                     <label>$INFO[ListItem.Property(Number)]</label>
                 </control> -->
                             </itemlayout>
@@ -1792,7 +1792,7 @@
                                     <height>48</height>
                                     <align>right</align>
                                     <label>$INFO[ListItem.Label2]</label>
-                                    <font>Font_Reg15</font>
+                                    <font>Font_Reg26</font>
                                     <textcolor>$VAR[TitleColorVar]</textcolor>
                                 </control>
                                 <control type="label">
@@ -1802,7 +1802,7 @@
                                     <height>48</height>
                                     <align>left</align>
                                     <label>[COLOR $VAR[HomeMenuTextFocusVar2]]$INFO[ListItem.Property(City)]: [/COLOR]$INFO[ListItem.Property(Name)]</label>
-                                    <font>Font_Reg18</font>
+                                    <font>Font_Reg29</font>
                                     <textcolor>grey2</textcolor>
                                 </control>
                             </focusedlayout>
@@ -1966,7 +1966,7 @@
                             <width>1230</width>
                             <height>506</height>
                             <aspectratio aligny="top">scale</aspectratio>
-                            <texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                            <texture background="true" fallback="special://skin/background/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
                             <visible>!SubString(Control.getLabel(8870),extrafanart)</visible>
                         </control>
                         <control type="multiimage" id="8870">
@@ -1998,7 +1998,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21893]: [COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(ListItem.Property(Artist_Born))</visible>
@@ -2007,7 +2007,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21894]: [COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(ListItem.Property(Artist_Formed))</visible>
@@ -2016,7 +2016,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21897]: [COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[ListItem.Property(Artist_Died)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(ListItem.Property(Artist_Died))</visible>
@@ -2025,7 +2025,7 @@
                                 <width min="50" max="800">auto</width>
                                 <aligny>bottom</aligny>
                                 <label>$LOCALIZE[21896]: [COLOR $VAR[HomeMenuTextFocusVar3]]$INFO[ListItem.Property(Artist_Disbanded)][/COLOR]</label>
-                                <font>Font_Reg18</font>
+                                <font>Font_Reg29</font>
                                 <shadowcolor>black</shadowcolor>
                                 <textcolor>$VAR[SubTitleColorVar]</textcolor>
                                 <visible>!IsEmpty(ListItem.Property(Artist_Disbanded))</visible>

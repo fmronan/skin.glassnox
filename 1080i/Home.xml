@@ -291,7 +291,7 @@
             <control type="multiimage">
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <imagepath background="true">$VAR[HomeMainFanartVar]</imagepath>
-            <!--    <colordiffuse>$VAR[ColorDiffuseBackgroundVar]</colordiffuse>-->
+				<colordiffuse>$VAR[ColorDiffuseBackgroundVar]</colordiffuse>
                 <fadetime>600</fadetime>
                 <animation effect="fade" time="480">Visible</animation>
                 <animation effect="fade" time="480">Hidden</animation>
@@ -299,9 +299,36 @@
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
                 <visible>!Substring(Control.GetLabel(4322),case)</visible>
             </control>
+            <control type="multiimage">
+                <aspectratio align="center" aligny="top">keep</aspectratio>
+                <imagepath background="true">$VAR[SmallHomeMainFanartVar]</imagepath>
+				<colordiffuse>$VAR[ColorDiffuseBackgroundVar]</colordiffuse>
+                <fadetime>600</fadetime>
+                <include>SmallscreenDimensions</include>
+                <include>Animation_WindowFade250</include>
+                <animation effect="fade" time="400">Visible</animation>
+                <animation effect="fade" time="400">Hidden</animation>
+                <visible>!Substring(Control.GetLabel(4322),case)</visible>
+                <visible>!Substring(Control.GetLabel(4322),recent,left) + !Substring(Control.GetLabel(4322),random,left) + !Substring(Control.GetLabel(4322),mostplayed,left) + !Substring(Control.GetLabel(4322),watchlist,left) + !Substring(Control.GetLabel(4322),inprogress,left) + !StringCompare(Control.GetLabel(4322),widgetfanart) + !Substring(Control.GetLabel(4322),dailybabe) + !Substring(Control.GetLabel(4322),thebigpicture) + !Substring(Control.GetLabel(4322),custom,right) + !Substring(Control.GetLabel(4322),pics)</visible>
+            </control>
+			<control type="image">
+				<posx>382</posx>
+				<posy>60</posy>
+				<width>120</width>
+				<height>120</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[Container(9000).ListItem.Property(IconWeather)]</texture>
+				<fadetime>600</fadetime>
+                <animation effect="fade" time="480">Visible</animation>
+                <animation effect="fade" time="480">Hidden</animation>
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+                <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+               <!-- <visible>Substring(Control.GetLabel(4328),weather)</visible>-->
+			</control>
+			<include>BackgroundsItem</include>
             <control type="image">
                 <aspectratio align="center" aligny="top">scale</aspectratio>
-                <texture background="true" fallback="special://skin/backgrounds/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
+                <texture background="true" fallback="special://skin/background/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
                 <colordiffuse>$VAR[ColorDiffuseBackgroundVar]</colordiffuse>
                 <fadetime>600</fadetime>
                 <include>FullscreenDimensions</include>
@@ -350,6 +377,7 @@
                 <visible> [Control.HasFocus(7000) | Control.HasFocus(7020) | ControlGroup(6000).HasFocus | ControlGroup(6020).HasFocus | ControlGroup(6030).HasFocus] + [!IsEmpty(Container(6010).ListItem.Property(Extra)) | !IsEmpty(Container(7000).ListItem.Property(Extra))]</visible>
             </control>
             <!-- Music ExtraFanart -->
+            <include condition="Player.HasAudio">ShelfPlayerBackground</include>
             <include condition="!IsEmpty(Skin.String(ArtistsLogosPath))">MusicExtraFanartHome</include>
             <include condition="Skin.HasSetting(artistslideshowhome)">MusicArtistSlideshowHome</include>
             <include>CommonMediaPlayingBackground</include>
@@ -662,12 +690,11 @@
                 <include>Animation_VisibleChange400</include>
             </control>
             <control type="image">
-                <aspectratio align="center" aligny="top">keep</aspectratio>
+                <aspectratio>keep</aspectratio>
                 <texture background="true">$VAR[HomeFSImageVar]</texture>
                 <fadetime>600</fadetime>
                 <include>FullscreenDimensions</include>
-                <animation effect="fade" time="400">Visible</animation>
-                <animation effect="fade" time="400">Hidden</animation>
+                <animation effect="fade" time="320">VisibleChange</animation>
                 <visible>Control.HasFocus(22222)</visible>
             </control>
             <control type="group">

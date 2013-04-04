@@ -44,7 +44,7 @@
                         <width>300</width>
                         <height>60</height>
                         <textoffsetx>10</textoffsetx>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>grey2</textcolor>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -63,7 +63,7 @@
                             <height>60</height>
                             <textoffsetx>10</textoffsetx>
                             <scroll>true</scroll>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
                     </control>
@@ -78,7 +78,7 @@
                         <control type="label">
                             <width>300</width>
                             <textoffsetx>10</textoffsetx>
-                            <font>Font_Reg19</font>
+                            <font>Font_Reg30_2w</font>
                             <textcolor>grey2</textcolor>
                             <label>$INFO[ListItem.Label]</label>
                         </control>

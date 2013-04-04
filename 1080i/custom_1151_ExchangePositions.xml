@@ -52,7 +52,7 @@
                         <textoffsetx>10</textoffsetx>
                         <align>center</align>
                         <label>$INFO[ListItem.Label]</label>
-                        <font>Font_Reg15_Caps</font>
+                        <font>Font_Reg26_Caps</font>
                     </control>
                 </itemlayout>
                 <focusedlayout height="40" width="300">
@@ -60,7 +60,7 @@
                         <control type="image">
                             <width>300</width>
                             <height>40</height>
-                            <texture>views/tripanel/listselect_fo.png</texture>
+                            <texture border="8">views/tripanel/listselect_fo.png</texture>
                             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         </control>
                         <control type="label">
@@ -70,7 +70,7 @@
                             <textoffsetx>10</textoffsetx>
                             <align>center</align>
                             <label>$INFO[ListItem.Label]</label>
-                            <font>Font_Reg15_Caps</font>
+                            <font>Font_Reg26_Caps</font>
                             <scroll>true</scroll>
                         </control>
                     </control>
@@ -84,10 +84,16 @@
                 <onfocus>SetProperty(TempItemToEdit.Label,$ESCINFO[Container(4).ListItem.Label],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.MultiFanart,$ESCINFO[Container(4).ListItem.Icon],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.Icon,$ESCINFO[Container(4).ListItem.Property(BigIcon)],home)</onfocus>
-                <onfocus>SetProperty(TempItemToEdit.IconColor,$INFO[Container(4).ListItem.Property(IconColor)],home)</onfocus>
-                <onfocus>SetProperty(TempItemToEdit.Color,$INFO[Container(4).ListItem.Property(Color)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.Color,$ESCINFO[Container(4).ListItem.Property(Color)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.IconColor,$ESCINFO[Container(4).ListItem.Property(IconColor)],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.Widget,$INFO[Container(4).ListItem.Property(Widget)],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.Widget2,$INFO[Container(4).ListItem.Property(Widget2)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.Widget3,$INFO[Container(4).ListItem.Property(Widget3)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.element1,$INFO[Container(4).ListItem.Property(element1)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.element2,$INFO[Container(4).ListItem.Property(element2)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.element3,$INFO[Container(4).ListItem.Property(element3)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.element4,$INFO[Container(4).ListItem.Property(element4)],home)</onfocus>
+                <onfocus>SetProperty(TempItemToEdit.element5,$INFO[Container(4).ListItem.Property(element5)],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.WidgetTitle,$ESCINFO[Container(4).ListItem.Property(WidgetTitle)],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.Widget2Title,$ESCINFO[Container(4).ListItem.Property(Widget2Title)],home)</onfocus>
                 <onfocus>SetProperty(TempItemToEdit.InfoLine,$INFO[Container(4).ListItem.Property(InfoLine)],home)</onfocus>
@@ -102,12 +108,18 @@
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Path,$ESCINFO[Skin.String(ItemToEdit.Path)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Widget,$INFO[Skin.String(ItemToEdit.Widget)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Widget2,$INFO[Skin.String(ItemToEdit.Widget2)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Widget3,$INFO[Skin.String(ItemToEdit.Widget3)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].element1,$INFO[Skin.String(ItemToEdit.element1)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].element2,$INFO[Skin.String(ItemToEdit.element2)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].element3,$INFO[Skin.String(ItemToEdit.element3)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].element4,$INFO[Skin.String(ItemToEdit.element4)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].element5,$INFO[Skin.String(ItemToEdit.element5)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].WidgetTitle,$ESCINFO[Skin.String(ItemToEdit.WidgetTitle)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Widget2Title,$ESCINFO[Skin.String(ItemToEdit.Widget2Title)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Disable,$INFO[Skin.String(ItemToEdit.Disable)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Icon,$ESCINFO[Skin.String(ItemToEdit.Icon)])</onfocus>
-                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].Color,$INFO[Skin.String(ItemToEdit.Color)])</onfocus>
+                <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].InfoLine,$INFO[Skin.String(ItemToEdit.InfoLine)])</onfocus>
                 <onfocus>Skin.SetString($INFO[Window(home).Property(Exchange)].SubMenu,$INFO[Skin.String(ItemToEdit.SubMenu)])</onfocus>
                 <!-- copy temp to origin  -->
@@ -117,12 +129,18 @@
                 <onfocus>Skin.SetString(ItemToEdit.Path,$ESCINFO[Window(home).Property(TempItemToEdit.Path)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.Widget,$INFO[Window(home).Property(TempItemToEdit.Widget)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.Widget2,$INFO[Window(home).Property(TempItemToEdit.Widget2)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.Widget3,$INFO[Window(home).Property(TempItemToEdit.Widget3)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.element1,$INFO[Window(home).Property(TempItemToEdit.element1)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.element2,$INFO[Window(home).Property(TempItemToEdit.element2)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.element3,$INFO[Window(home).Property(TempItemToEdit.element3)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.element4,$INFO[Window(home).Property(TempItemToEdit.element4)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.element5,$INFO[Window(home).Property(TempItemToEdit.element5)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.WidgetTitle,$ESCINFO[Window(home).Property(TempItemToEdit.WidgetTitle)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.Widget2Title,$ESCINFO[Window(home).Property(TempItemToEdit.Widget2Title)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.Disable,$INFO[Window(home).Property(TempItemToEdit.Disable)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.Icon,$ESCINFO[Window(home).Property(TempItemToEdit.Icon)])</onfocus>
-                <onfocus>Skin.SetString(ItemToEdit.IconColor,$INFO[Window(home).Property(TempItemToEdit.IconColor)])</onfocus>
-                <onfocus>Skin.SetString(ItemToEdit.Color,$INFO[Window(home).Property(TempItemToEdit.Color)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.Color,$ESCINFO[Window(home).Property(TempItemToEdit.Color)])</onfocus>
+                <onfocus>Skin.SetString(ItemToEdit.IconColor,$ESCINFO[Window(home).Property(TempItemToEdit.IconColor)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.InfoLine,$INFO[Window(home).Property(TempItemToEdit.InfoLine)])</onfocus>
                 <onfocus>Skin.SetString(ItemToEdit.SubMenu,$INFO[Window(home).Property(TempItemToEdit.SubMenu)])</onfocus>
                 <onfocus>Dialog.Close(1151)</onfocus>
@@ -130,7 +148,7 @@
             </control>
             <control type="button" id="9006">
                 <include>HiddenObject</include>
-                <onfocus>Skin.SetString(CustomFocusOffset,$INFO[Container(4).ListItem.Label])</onfocus>
+                <onfocus>Skin.SetString(CustomFocusOffset,$ESCINFO[Container(4).ListItem.Label])</onfocus>
                 <onfocus>Dialog.Close(1151)</onfocus>
                 <visible>!IsEmpty(Window(home).Property(StartupFocus))</visible>
             </control>

@@ -60,7 +60,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -74,7 +74,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -88,7 +88,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -102,7 +102,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -116,7 +116,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -130,7 +130,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -144,7 +144,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -158,7 +158,7 @@
                         <textoffsetx>20</textoffsetx>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -184,7 +184,7 @@
                             <align>center</align>
                             <width>936</width>
                             <height>49</height>
-                            <font>Font_Reg20</font>
+                            <font>Font_Reg30</font>
                             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                             <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                             <textcolor>grey2</textcolor>
@@ -200,7 +200,7 @@
                         <posy>49</posy>
                         <width>448</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                     </control>
                     <control type="label" id="151">
@@ -208,7 +208,7 @@
                         <posy>49</posy>
                         <width>448</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                     </control>
                     <control type="label" id="152">
@@ -216,7 +216,7 @@
                         <posy>147</posy>
                         <width>448</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                     </control>
                     <control type="label" id="153">
@@ -224,7 +224,7 @@
                         <posy>147</posy>
                         <width>448</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <align>center</align>
                     </control>
                     <control type="button" id="160">
@@ -234,10 +234,9 @@
                         <textoffsetx>20</textoffsetx>
                         <align>center</align>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -255,10 +254,9 @@
                         <height>49</height>
                         <align>center</align>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -276,10 +274,9 @@
                         <height>49</height>
                         <align>center</align>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>
@@ -297,10 +294,9 @@
                         <height>49</height>
                         <align>center</align>
                         <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-                        <texturenofocus>settings/settings_radiobuttonoff3.png</texturenofocus>
                         <width>936</width>
                         <height>49</height>
-                        <font>Font_Reg20</font>
+                        <font>Font_Reg30</font>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                         <texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
                         <textcolor>grey2</textcolor>

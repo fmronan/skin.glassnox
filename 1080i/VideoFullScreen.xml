@@ -24,7 +24,7 @@
                     <width>1770</width>
                     <height>30</height>
                     <label>-</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                 </control>
                 <control type="label" id="11">
                     <posx>75</posx>
@@ -32,7 +32,7 @@
                     <width>1770</width>
                     <height>30</height>
                     <label>-</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                 </control>
                 <control type="label" id="12">
                     <posx>75</posx>
@@ -40,7 +40,7 @@
                     <width>1770</width>
                     <height>60</height>
                     <label>-</label>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                 </control>
             </control>
             <control type="group">
@@ -56,7 +56,7 @@
                     <label>$LOCALIZE[19005]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                 </control>
                 <control type="label">
@@ -68,7 +68,7 @@
                     <label>$LOCALIZE[19012]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="label">
@@ -80,7 +80,7 @@
                     <label>$INFO[PVR.ActStreamClient]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -92,7 +92,7 @@
                     <label>$LOCALIZE[19006]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="label">
@@ -104,7 +104,7 @@
                     <label>$INFO[PVR.ActStreamDevice]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -116,7 +116,7 @@
                     <label>$LOCALIZE[19007]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="label">
@@ -128,7 +128,7 @@
                     <label>$INFO[PVR.ActStreamStatus]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -140,7 +140,7 @@
                     <label>$LOCALIZE[19008]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="progress">
@@ -163,7 +163,7 @@
                     <label>$INFO[PVR.ActStreamSignal]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -175,7 +175,7 @@
                     <label>$LOCALIZE[19009]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="progress">
@@ -199,7 +199,7 @@
                     <label>$INFO[PVR.ActStreamSNR]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -211,7 +211,7 @@
                     <label>$LOCALIZE[19010]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="label">
@@ -223,7 +223,7 @@
                     <label>$INFO[PVR.ActStreamBER]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -235,7 +235,7 @@
                     <label>$LOCALIZE[19011]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="label">
@@ -247,7 +247,7 @@
                     <label>$INFO[PVR.ActStreamUNC]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
                 <control type="label">
@@ -259,7 +259,7 @@
                     <label>$LOCALIZE[19015]:</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>grey2</textcolor>
                 </control>
                 <control type="label">
@@ -271,7 +271,7 @@
                     <label>$INFO[PVR.ActStreamEncryptionName]</label>
                     <align>left</align>
                     <aligny>center</aligny>
-                    <font>Font_Reg17</font>
+                    <font>Font_Reg28</font>
                     <textcolor>white</textcolor>
                 </control>
             </control>
@@ -308,7 +308,7 @@
                 <width>420</width>
                 <height>42</height>
                 <align>center</align>
-                <font>Font_Reg19_Caps</font>
+                <font>Font_Reg33_Caps</font>
                 <textcolor>FF363636</textcolor>
                 <shadowcolor>88e5e5e5</shadowcolor>
                 <label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>

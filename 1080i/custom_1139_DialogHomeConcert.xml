@@ -45,7 +45,7 @@
                         <posx>10</posx>
                         <width>320</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <info>ListItem.Label</info>
                         <shadowcolor>black</shadowcolor>
                     </control>
@@ -54,7 +54,7 @@
                         <posy>30</posy>
                         <width>320</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <info>ListItem.Label2</info>
                         <textcolor>grey</textcolor>
                         <shadowcolor>black</shadowcolor>
@@ -64,7 +64,7 @@
                         <posy>60</posy>
                         <width>320</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                         <textcolor>grey</textcolor>
                         <shadowcolor>black</shadowcolor>
@@ -88,7 +88,7 @@
                         <posx>10</posx>
                         <width>320</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <info>ListItem.Label</info>
                         <shadowcolor>black</shadowcolor>
                     </control>
@@ -97,7 +97,7 @@
                         <posy>30</posy>
                         <width>320</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <info>ListItem.Label2</info>
                         <textcolor>grey</textcolor>
                         <shadowcolor>black</shadowcolor>
@@ -107,7 +107,7 @@
                         <posy>60</posy>
                         <width>320</width>
                         <height>40</height>
-                        <font>Font_Reg15</font>
+                        <font>Font_Reg26</font>
                         <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                         <textcolor>grey</textcolor>
                         <shadowcolor>black</shadowcolor>

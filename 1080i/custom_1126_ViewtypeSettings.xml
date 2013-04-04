@@ -88,7 +88,8 @@
                     <onclick condition="Stringcompare(Control.GetLabel(4421),infopanelonauto)">Skin.SetString(InfoPanel$INFO[Window(home).Property(Area)],infopanelon)</onclick>
                     <visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) + !Skin.HasSetting(showcasezoom)] | [Stringcompare(Window(home).Property(actualViewtype),ShowcaseSquare) + !Skin.HasSetting(showcasesquarezoom)] | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),Landscape) | Stringcompare(Window(home).Property(actualViewtype),Banners)</visible>
                     <visible>![Stringcompare(Window(home).Property(actualViewtype),Shift) + !Skin.HasSetting(smallshiftview) + Window.IsActive(videos)]</visible>
-                    <visible>!Container.Content(sets) + !Container.Content(songs)</visible>
+                    <visible>!Container.Content(songs)</visible>
+                    <visible>!Container.Content(sets) | System.HasAddon(script.extendedinfo)</visible>
                 </control>
                 <control type="button" id="1614">
                     <label>$LOCALIZE[31876]</label>
@@ -729,7 +730,7 @@
                     <onclick>Skin.ToggleSetting(languageflag)</onclick>
                     <onclick>RunScript(script.videolanguage,backend=true)</onclick>
                     <visible>Container.Content(episodes) | Container.Content(movies)</visible>
-                    <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Wall) | Stringcompare(Window(home).Property(actualViewtype),BigFan) | Stringcompare(Window(home).Property(actualViewtype),Panel) | Stringcompare(Window(home).Property(actualViewtype),Banners) | [Stringcompare(Window(home).Property(actualViewtype),Landscape) + !Skin.HasSetting(landscapeonelogo)] | Stringcompare(Window(home).Property(actualViewtype),AddonWall)]</visible>
+                    <visible>Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Wall) | Stringcompare(Window(home).Property(actualViewtype),BigFan) | Stringcompare(Window(home).Property(actualViewtype),Panel) | Stringcompare(Window(home).Property(actualViewtype),Banners) | [Stringcompare(Window(home).Property(actualViewtype),Landscape) + !Skin.HasSetting(landscapeonelogo)] | Stringcompare(Window(home).Property(actualViewtype),AddonWall)</visible>
                 </control>
                 <control type="radiobutton" id="287">
                     <label>31034</label>

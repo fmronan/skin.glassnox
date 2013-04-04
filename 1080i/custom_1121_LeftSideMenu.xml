@@ -70,7 +70,7 @@
                     <posx>15</posx>
                     <width>219</width>
                     <height>60</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <textcolor>grey2</textcolor>
                     <info>ListItem.Label</info>
                     <visible>!StringCompare(ListItem.Label,Container.Viewmode)</visible>
@@ -79,7 +79,7 @@
                     <posx>15</posx>
                     <width>219</width>
                     <height>60</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                     <visible>StringCompare(ListItem.Label,Container.Viewmode)</visible>
                 </control>
@@ -110,7 +110,7 @@
                     <posx>15</posx>
                     <width>219</width>
                     <height>60</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                     <textcolor>grey2</textcolor>
                     <visible>!Control.HasFocus(9011)</visible>
@@ -119,7 +119,7 @@
                     <posx>15</posx>
                     <width>219</width>
                     <height>60</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <info>ListItem.Label</info>
                     <visible>Control.HasFocus(9011)</visible>
                 </control>
@@ -412,7 +412,7 @@
                     <width>219</width>
                     <height>60</height>
                     <align>center</align>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                     <info>ListItem.Label</info>
                 </control>
@@ -446,7 +446,7 @@
                     <width>219</width>
                     <height>60</height>
                     <align>center</align>
-                    <font>Font_Reg15_Caps</font>
+                    <font>Font_Reg26_Caps</font>
                     <info>ListItem.Label</info>
                 </control>
             </focusedlayout>

@@ -37,7 +37,7 @@
         </control>
         <control type="button" id="7">
             <height>50</height>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
             <textcolor>grey2</textcolor>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -45,7 +45,7 @@
         </control>
         <control type="radiobutton" id="8">
             <height>50</height>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <textcolor>grey2</textcolor>
             <texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -53,7 +53,7 @@
         </control>
         <control type="spincontrolex" id="9">
             <height>50</height>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
             <textcolor>grey2</textcolor>
             <texturenofocus border="5">button-nofocus.png</texturenofocus>
             <texturefocus border="5">views/tripanel/listselect_fo.png</texturefocus>
@@ -61,7 +61,7 @@
         </control>
         <control type="sliderex" id="10">
             <height>50</height>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
             <textoffsetx>10</textoffsetx>
             <textcolor>grey2</textcolor>
             <texturenofocus border="5">button-nofocus.png</texturenofocus>
@@ -70,7 +70,7 @@
         </control>
         <control type="edit" id="12">
             <height>50</height>
-            <font>Font_Reg18</font>
+            <font>Font_Reg29</font>
             <textcolor>grey2</textcolor>
             <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
             <texturenofocus border="5">button-nofocus.png</texturenofocus>

@@ -67,7 +67,7 @@
 							<posy>0</posy>
 							<width>780</width>
 							<height>60</height>
-							<font>Font_Reg22</font>
+							<font>Font_Reg38</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>grey2</textcolor>
@@ -111,7 +111,7 @@
 							<posy>0</posy>
 							<width>780</width>
 							<height>60</height>
-							<font>Font_Reg22</font>
+							<font>Font_Reg38</font>
 							<align>left</align>
                             <align>center</align>
                             <textcolor>white2</textcolor>
@@ -155,7 +155,7 @@
 						<label>$INFO[Container(550).ListItem.Label]</label>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>Font_Bold35</font>
+						<font>Font_Bold56</font>
 						<textcolor>grey2</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 					</control>
@@ -274,7 +274,7 @@
 							<posy>70</posy>
 							<width>735</width>
 							<height>270</height>
-							<font>Font_Reg22</font>
+							<font>Font_Reg38</font>
 							<align>justify</align>
 							<label>$INFO[Container(550).ListItem.Label2]</label>
 							<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>

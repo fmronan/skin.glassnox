@@ -51,13 +51,13 @@
                     <posy>810</posy>
                     <width>579</width>
                     <align>center</align>
-                    <font>Font_Reg15</font>
+                    <font>Font_Reg26</font>
                 </control>
                 <control type="label" id="411">
                     <posx>1226</posx>
                     <posy>900</posy>
                     <width>579</width>
-                    <font>Font_Bold28</font>
+                    <font>Font_Bold46</font>
                     <align>center</align>
                     <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                 </control>
@@ -96,7 +96,7 @@
                         <posx>68</posx>
                         <width>810</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>bcicon</textcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -104,7 +104,7 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <textcolor>bcicon</textcolor>
                         <info>ListItem.Label2</info>
@@ -135,7 +135,7 @@
                         <posx>68</posx>
                         <width>810</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -143,7 +143,7 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                         <info>ListItem.Label2</info>
@@ -179,7 +179,7 @@
                         <posx>68</posx>
                         <width>810</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>bcicon</textcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -187,7 +187,7 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <textcolor>bcicon</textcolor>
                         <info>ListItem.Label2</info>
@@ -218,7 +218,7 @@
                         <posx>68</posx>
                         <width>810</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                         <info>ListItem.Label</info>
                     </control>
@@ -226,7 +226,7 @@
                         <posx>1041</posx>
                         <width>795</width>
                         <height>60</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
                         <info>ListItem.Label2</info>
@@ -257,7 +257,7 @@
                     <height>80</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <label>186</label>
                     <align>center</align>
                     <aligny>top</aligny>
@@ -268,7 +268,7 @@
                     <height>80</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <label>222</label>
                     <align>center</align>
                     <aligny>top</aligny>
@@ -279,7 +279,7 @@
                     <height>80</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <label>119</label>
                     <align>center</align>
                     <aligny>top</aligny>
@@ -290,7 +290,7 @@
                     <height>80</height>
                     <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                     <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                    <font>Font_Reg22</font>
+                    <font>Font_Reg38</font>
                     <label>749</label>
                     <align>center</align>
                     <aligny>top</aligny>

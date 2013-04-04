@@ -29,7 +29,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>$VAR[ContextMenuLabel2001]</label>
                 <onclick>RunScript(script.metadata.actors,$ESCINFO[ListItem.Label])</onclick>
@@ -44,7 +44,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <texturenofocus>dialogs/context_nofocus.png</texturenofocus>
                 <label>31030</label>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textcolor>context</textcolor>
                 <focusedcolor>white2</focusedcolor>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
@@ -61,7 +61,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>$LOCALIZE[31096]</label>
                 <visible>Container.Content(artists) | Container.Content(actors) | Container.Content(directors)</visible>
@@ -76,7 +76,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>$LOCALIZE[31096]</label>
                 <visible>Container.Content(albums) | Container.Content(songs)</visible>
@@ -91,7 +91,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>31033</label>
                 <visible>Container.Content(albums) | Container.Content(songs) | Substring(ListItem.FolderPath,.xsp,right) | Substring(ListItem.FolderPath,.m3u,right)</visible>
@@ -109,7 +109,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>31620</label>
                 <onclick>SetProperty(SetPanelItem,1,home)</onclick>
@@ -131,7 +131,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>$VAR[ContextMenuTrailerButtonLabelVar]</label>
                 <visible>Container.Content(movies) | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)]</visible>
@@ -149,7 +149,7 @@
                 <texturefocus>dialogs/context_highlight.png</texturefocus>
                 <colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
                 <align>center</align>
-                <font>Font_Reg19</font>
+                <font>Font_Reg30_2</font>
                 <textoffsety>12</textoffsety>
                 <label>518</label>
                 <visible>Window.IsActive(addonbrowser) + [Substring(ListItem.Property(Addon.ID),script.,left) | Substring(ListItem.Property(Addon.ID),plugin.,left)]</visible>
@@ -181,7 +181,7 @@
             <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             <align>center</align>
             <aligny>top</aligny>
-            <font>Font_Reg19</font>
+            <font>Font_Reg30_2</font>
             <textoffsety>8</textoffsety>
         </control>
     </controls>

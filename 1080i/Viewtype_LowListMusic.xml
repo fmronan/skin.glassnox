@@ -135,7 +135,7 @@
                         <height>360</height>
                         <aspectratio>scale</aspectratio>
                         <fadetime>400</fadetime>
-                        <texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
+                        <texture background="true" fallback="special://skin/background/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
                         <bordersize>7</bordersize>
                     </control>
                     <control type="multiimage">
@@ -159,7 +159,7 @@
                         <posy>540</posy>
                         <height>60</height>
                         <width>1440</width>
-                        <font>Font_Bold28_Caps</font>
+                        <font>Font_Bold46_Caps</font>
                         <align>center</align>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                         <label>$INFO[ListItem.Album]</label>
@@ -170,7 +170,7 @@
                         <posy>540</posy>
                         <height>60</height>
                         <width>1440</width>
-                        <font>Font_Bold28_Caps</font>
+                        <font>Font_Bold46_Caps</font>
                         <align>center</align>
                         <textcolor>$VAR[HomeMenuTextFocusVar3]</textcolor>
                         <label>$INFO[ListItem.Artist]</label>
@@ -550,7 +550,7 @@
                         <height>66</height>
                         <align>center</align>
                         <textcolor>grey2</textcolor>
-                        <font>Font_Bold24</font>
+                        <font>Font_Bold40</font>
                         <label>$INFO[ListItem.TrackNumber]</label>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -559,7 +559,7 @@
                         <width>700</width>
                         <height>66</height>
                         <textcolor>grey2</textcolor>
-                        <font>Font_Bold16_Caps</font>
+                        <font>Font_Bold28_Caps</font>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>!Container.Content(songs)</visible>
                     </control>
@@ -568,7 +568,7 @@
                         <width>650</width>
                         <height>66</height>
                         <textcolor>grey2</textcolor>
-                        <font>Font_Bold16_Caps</font>
+                        <font>Font_Bold28_Caps</font>
                         <label>$INFO[ListItem.Title]</label>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -580,7 +580,7 @@
                             <height>66</height>
                             <align>right</align>
                             <textcolor>grey2</textcolor>
-                            <font>Font_Bold16_Caps</font>
+                            <font>Font_Bold28_Caps</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -591,7 +591,7 @@
                             <height>33</height>
                             <align>center</align>
                             <textcolor>grey2</textcolor>
-                            <font>Font_Bold16_Caps</font>
+                            <font>Font_Bold28_Caps</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <visible>!Container.Content(albums)</visible>
                         </control>
@@ -601,7 +601,7 @@
                             <height>33</height>
                             <align>center</align>
                             <textcolor>grey2</textcolor>
-                            <font>Font_Bold16</font>
+                            <font>Font_Bold28</font>
                             <label>$INFO[ListItem.Year]</label>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -611,7 +611,7 @@
                             <height>66</height>
                             <align>center</align>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                            <font>Font_Bold16</font>
+                            <font>Font_Bold28</font>
                             <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
                             <visible>Container.Content(artists)</visible>
                         </control>
@@ -671,7 +671,7 @@
                         <width>75</width>
                         <height>66</height>
                         <align>center</align>
-                        <font>Font_Bold24</font>
+                        <font>Font_Bold40</font>
                         <label>$INFO[ListItem.TrackNumber]</label>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -679,7 +679,7 @@
                         <posx>30</posx>
                         <width>650</width>
                         <height>33</height>
-                        <font>Font_Bold16_Caps</font>
+                        <font>Font_Bold28_Caps</font>
                         <label>$INFO[ListItem.Label]</label>
                         <visible>!Container.Content(songs)</visible>
                     </control>
@@ -687,7 +687,7 @@
                         <posx>105</posx>
                         <width>650</width>
                         <height>33</height>
-                        <font>Font_Bold16_Caps</font>
+                        <font>Font_Bold28_Caps</font>
                         <label>$INFO[ListItem.Title]</label>
                         <visible>Container.Content(songs)</visible>
                     </control>
@@ -734,7 +734,7 @@
                             <width>650</width>
                             <height>33</height>
                             <align>right</align>
-                            <font>Font_Bold16_Caps</font>
+                            <font>Font_Bold28_Caps</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -743,7 +743,7 @@
                             <width>146</width>
                             <height>33</height>
                             <align>center</align>
-                            <font>Font_Bold16</font>
+                            <font>Font_Bold28</font>
                             <label>$INFO[ListItem.Year]</label>
                             <visible>Container.Content(albums)</visible>
                         </control>
@@ -753,7 +753,7 @@
                             <width>146</width>
                             <height>33</height>
                             <align>center</align>
-                            <font>Font_Bold16_Caps</font>
+                            <font>Font_Bold28_Caps</font>
                             <label>$INFO[ListItem.Label2]</label>
                             <visible>!Container.Content(albums)</visible>
                         </control>
@@ -783,7 +783,7 @@
                             <height>66</height>
                             <align>center</align>
                             <textcolor>$VAR[SubTitleColorVar]</textcolor>
-                            <font>Font_Bold16</font>
+                            <font>Font_Bold28</font>
                             <label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
                             <visible>Container.Content(artists)</visible>
                         </control>

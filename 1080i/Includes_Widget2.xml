@@ -6160,7 +6160,7 @@
                         <posy>225</posy>
                         <height>30</height>
                         <width>284</width>
-                        <font>Font_Bold35</font>
+                        <font>Font_Bold56</font>
                         <align>center</align>
                         <textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Current.Temperature))</visible>
@@ -6204,7 +6204,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
                         <textcolor>grey2</textcolor>
@@ -6214,7 +6214,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day0.HighTemp))</visible>
                         <label>$INFO[Window(weather).Property(Day0.HighTemp)] $INFO[System.TemperatureUnits]</label>
@@ -6224,7 +6224,7 @@
                         <posy>255</posy>
                         <height>52</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
                         <textcolor>grey2</textcolor>
@@ -6235,7 +6235,7 @@
                         <height>52</height>
                         <width>142</width>
                         <label>$INFO[Window(weather).Property(Day0.LowTemp)] $INFO[System.TemperatureUnits]</label>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>blue</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day0.LowTemp))</visible>
                     </control>
@@ -6277,7 +6277,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
                         <textcolor>grey2</textcolor>
@@ -6287,7 +6287,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day1.HighTemp))</visible>
                         <label>$INFO[Window(weather).Property(Day1.HighTemp)] $INFO[System.TemperatureUnits]</label>
@@ -6297,7 +6297,7 @@
                         <posy>255</posy>
                         <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
                         <textcolor>grey2</textcolor>
@@ -6308,7 +6308,7 @@
                         <height>45</height>
                         <width>142</width>
                         <label>$INFO[Window(weather).Property(Day1.LowTemp)] $INFO[System.TemperatureUnits]</label>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>blue</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day1.LowTemp))</visible>
                     </control>
@@ -6350,7 +6350,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
                         <textcolor>grey2</textcolor>
@@ -6360,7 +6360,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day2.HighTemp))</visible>
                         <label>$INFO[Window(weather).Property(Day2.HighTemp)] $INFO[System.TemperatureUnits]</label>
@@ -6370,7 +6370,7 @@
                         <posy>255</posy>
                         <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
                         <textcolor>grey2</textcolor>
@@ -6381,7 +6381,7 @@
                         <height>45</height>
                         <width>142</width>
                         <label>$INFO[Window(weather).Property(Day2.LowTemp)] $INFO[System.TemperatureUnits]</label>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>blue</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day2.LowTemp))</visible>
                     </control>
@@ -6423,7 +6423,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[419] :</label>
                         <textcolor>grey2</textcolor>
@@ -6433,7 +6433,7 @@
                         <posy>221</posy>
                         <height>30</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>red</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day3.HighTemp))</visible>
                         <label>$INFO[Window(weather).Property(Day3.HighTemp)] $INFO[System.TemperatureUnits]</label>
@@ -6443,7 +6443,7 @@
                         <posy>255</posy>
                         <height>45</height>
                         <width>142</width>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <align>right</align>
                         <label>$LOCALIZE[418] :</label>
                         <textcolor>grey2</textcolor>
@@ -6454,7 +6454,7 @@
                         <height>45</height>
                         <width>142</width>
                         <label>$INFO[Window(weather).Property(Day3.LowTemp)] $INFO[System.TemperatureUnits]</label>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>blue</textcolor>
                         <visible>!IsEmpty(Window(weather).Property(Day3.LowTemp))</visible>
                     </control>

@@ -53,7 +53,7 @@
                     <width>420</width>
                     <height>42</height>
                     <align>center</align>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>FF363636</textcolor>
                     <shadowcolor>88e5e5e5</shadowcolor>
                     <label>$VAR[VideoPlayerSeekVar]</label>
@@ -111,7 +111,7 @@
                     <posy>45</posy>
                     <width>300</width>
                     <height>42</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <textcolor>osdseek</textcolor>
                     <label>$INFO[Player.Time]</label>
                     <align>right</align>
@@ -121,7 +121,7 @@
                     <posy>45</posy>
                     <width>300</width>
                     <height>42</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <textcolor>osdseek</textcolor>
                     <label>$INFO[Player.Duration]</label>
                     <visible>!Skin.HasSetting(PreferRemaining)</visible>
@@ -131,7 +131,7 @@
                     <posy>45</posy>
                     <width>300</width>
                     <height>42</height>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <textcolor>osdseek</textcolor>
                     <label>$INFO[Player.TimeRemaining,- ]</label>
                     <visible>Skin.HasSetting(PreferRemaining)</visible>
@@ -194,7 +194,7 @@
                     <width>748</width>
                     <height>42</height>
                     <align>right</align>
-                    <font>Font_Reg19_Caps</font>
+                    <font>Font_Reg33_Caps</font>
                     <textcolor>FF363636</textcolor>
                     <shadowcolor>88e5e5e5</shadowcolor>
                     <label>$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
@@ -252,7 +252,7 @@
                         <posy>45</posy>
                         <width>300</width>
                         <height>42</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>osdseek</textcolor>
                         <label>$INFO[Player.Time]</label>
                         <align>right</align>
@@ -262,7 +262,7 @@
                         <posy>45</posy>
                         <width>300</width>
                         <height>42</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>osdseek</textcolor>
                         <label>$INFO[Player.Duration]</label>
                         <visible>!Skin.HasSetting(PreferRemaining)</visible>
@@ -272,7 +272,7 @@
                         <posy>45</posy>
                         <width>300</width>
                         <height>42</height>
-                        <font>Font_Reg19</font>
+                        <font>Font_Reg30_2</font>
                         <textcolor>osdseek</textcolor>
                         <label>$INFO[Player.TimeRemaining,- ]</label>
                         <visible>Skin.HasSetting(PreferRemaining)</visible>
@@ -335,7 +335,7 @@
                         <width>748</width>
                         <height>42</height>
                         <align>right</align>
-                        <font>Font_Reg19_Caps</font>
+                        <font>Font_Reg33_Caps</font>
                         <textcolor>FF363636</textcolor>
                         <shadowcolor>88e5e5e5</shadowcolor>
                         <label>$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
@@ -375,7 +375,7 @@
                         <width>420</width>
                         <height>42</height>
                         <align>center</align>
-                        <font>Font_Reg19_Caps</font>
+                        <font>Font_Reg33_Caps</font>
                         <textcolor>FF363636</textcolor>
                         <shadowcolor>88e5e5e5</shadowcolor>
                         <label>$VAR[VideoPlayerSeekVar]</label>
@@ -416,7 +416,7 @@
                         <width>420</width>
                         <height>42</height>
                         <align>center</align>
-                        <font>Font_Reg19_Caps</font>
+                        <font>Font_Reg33_Caps</font>
                         <textcolor>FF363636</textcolor>
                         <shadowcolor>88e5e5e5</shadowcolor>
                         <label>$VAR[VideoPlayerSeekVar]</label>
@@ -450,7 +450,7 @@
                     <height>68</height>
                     <align>center</align>
                     <aligny>top</aligny>
-                    <font>Font_Reg19</font>
+                    <font>Font_Reg30_2</font>
                     <textcolor>$VAR[SubTitleColorVar]</textcolor>
                     <label>$VAR[VideoPlayerSubTitleVar]</label>
                     <scroll>true</scroll>
@@ -481,9 +481,8 @@
                         <height>70</height>
                         <align>center</align>
                         <label>$INFO[VideoPlayer.Studio]</label>
-                        <font>Font_Reg14_Caps</font>
+                        <font>Font_Reg38_Caps</font>
                         <textcolor>grey</textcolor>
-                        <textcolor>BBa4a4a4</textcolor>
                         <wrapmultiline>true</wrapmultiline>
 					<visible>IsEmpty(Control.GetLabel(76))</visible>                           
 				</control>

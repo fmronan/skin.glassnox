@@ -48,7 +48,7 @@
                 <posy>225</posy>
                 <width>600</width>
                 <height>60</height>
-                <font>Font_Bold19</font>
+                <font>Font_Bold33</font>
                 <label>$LOCALIZE[31687]</label>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
