@@ -1716,6 +1716,20 @@
     </include>
     <include name="RecentWidget">
         <control type="group" id="8998">
+			<animation type="Conditional" condition="Control.HasFocus(8000) + Skin.HasSetting(ShelfWidgetMode) + Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="0,-385" time="500" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="Conditional" condition="Control.HasFocus(8000) + Skin.HasSetting(ShelfWidgetMode) + !Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="0,-660" time="500" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="Conditional" condition="[Control.HasFocus(6010) | Control.HasFocus(7000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="245,-180" time="500" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="500"/>
+			</animation>
+			<animation type="Conditional" condition="[Control.HasFocus(6010) | Control.HasFocus(7000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="245,245" time="500" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="500"/>
+			</animation>
             <posx>1542</posx>
             <posy>678</posy>
             <visible>IsEmpty(Window(home).Property(DisableWidgets))</visible>
@@ -2691,6 +2705,20 @@
     </include>
     <include name="HomePanelWidget">
         <control type="group" id="5000">
+			<animation type="Conditional" condition="Control.HasFocus(5010) + Skin.HasSetting(ShelfWidgetMode) + Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="0,-345" time="500" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="Conditional" condition="Control.HasFocus(5010) + Skin.HasSetting(ShelfWidgetMode) + !Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="0,-620" time="500" tween="cubic" easing="inout" />
+			</animation>
+			<animation type="Conditional" condition="[Control.HasFocus(6010) | Control.HasFocus(7000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="-145,-180" time="500" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="500"/>
+			</animation>
+			<animation type="Conditional" condition="[Control.HasFocus(6010) | Control.HasFocus(7000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="-145,245" time="500" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="500"/>
+			</animation>
             <posx>135</posx>
             <posy>674</posy>
             <width>1920</width>
@@ -2754,24 +2782,38 @@
                         <preloaditems>2</preloaditems>
                         <scrolltime>200</scrolltime>
                         <include>NavigationWidget1</include>
-                        <itemlayout height="116" width="399">
+                        <itemlayout height="174" width="399">
                             <control type="image">
                                 <width>399</width>
-                                <height>116</height>
+                                <height>174</height>
+                                <texture border="6">common/bgcolor.png</texture>
+                                <aspectratio>scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
+                                <texture border="6">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio aligny="top">scale</aspectratio>
+                                <colordiffuse>77FFFFFF</colordiffuse>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
                                 <texture border="6">button-nofocus.png</texture>
                             </control>
-                            <control type="label">
-                                <posx>10</posx>
-                                <width>390</width>
-                                <height>40</height>
-                                <font>Font_Reg26</font>
+                            <control type="textbox">
+                                <posx>12</posx>
+                                <width>375</width>
+                                <height>66</height>
+                                <align>left</align>
+                                <font>Font_Reg30</font>
                                 <shadowcolor>black</shadowcolor>
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>30</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>80</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <font>Font_Reg26</font>
                                 <shadowcolor>black</shadowcolor>
@@ -2779,9 +2821,9 @@
                                 <info>ListItem.Label2</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>60</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>110</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                                 <font>Font_Reg26</font>
@@ -2789,32 +2831,46 @@
                                 <textcolor>grey</textcolor>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="116" width="399">
+                        <focusedlayout height="174" width="399">
                             <control type="image">
                                 <width>399</width>
-                                <height>116</height>
+                                <height>174</height>
+                                <texture border="6">common/bgcolor.png</texture>
+                                <aspectratio>scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
+                                <texture border="6">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio aligny="top">scale</aspectratio>
+                                <colordiffuse>77FFFFFF</colordiffuse>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
                                 <texture border="3">button-nofocus.png</texture>
                                 <visible>!Control.HasFocus(5051)</visible>
                             </control>
                             <control type="image">
                                 <width>399</width>
-                                <height>116</height>
+                                <height>174</height>
                                 <texture border="8">views/tripanel/listselect_fo.png</texture>
                                 <visible>Control.HasFocus(5051)</visible>
                                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             </control>
-                            <control type="label">
-                                <posx>10</posx>
-                                <width>390</width>
-                                <height>40</height>
-                                <font>Font_Reg26</font>
+                            <control type="textbox">
+                                <posx>12</posx>
+                                <width>375</width>
+                                <height>66</height>
+                                <align>left</align>
+                                <font>Font_Reg30</font>
                                 <shadowcolor>black</shadowcolor>
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>30</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>80</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <font>Font_Reg26</font>
                                 <shadowcolor>black</shadowcolor>
@@ -2822,9 +2878,9 @@
                                 <info>ListItem.Label2</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>60</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>110</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                                 <font>Font_Reg26</font>
@@ -2907,6 +2963,7 @@
                             </focusedlayout>
                             <content>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmovies)">FeaturedWidgetLeftMovies</include>
+                                <include condition="Substring(Skin.String(widgetlist),featuredcustoms1)">Custom1Widget</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredtv)">FeaturedWidgetLeftTV</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmusic)">FeaturedWidgetLeftMusic</include>
                             </content>
@@ -4069,6 +4126,7 @@
                         <onclick condition="!Substring(Window(home).Property(WidgetType),artist)">$INFO[Window(home).Property(Path)]</onclick>
                         <onclick condition="Substring(Window(home).Property(WidgetType),addons)">RunAddon($INFO[Window(home).Property(Path)])</onclick>
                         <onclick condition="Substring(Window(home).Property(WidgetType),rss)">PlayMedia($ESCINFO[Window(home).Property(Media)])</onclick>
+                        <onclick>Dialog.Close(musicinformation)</onclick>
                     </control>
                     <control type="button" id="5035">
                         <label>$LOCALIZE[31087]</label>
@@ -4110,6 +4168,14 @@
     </include>
     <include name="RecentWidget2">
         <control type="group" id="7998">
+			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="245,485" time="750" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="750"/>
+			</animation>
+			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="245,835" time="750" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="750"/>
+			</animation>
             <posx>1542</posx>
             <posy>13</posy>
             <animation effect="slide" end="0,40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
@@ -5258,6 +5324,14 @@
     </include>
     <include name="HomePanelWidget2">
         <control type="group" id="6000">
+			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="-145,485" time="750" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="750"/>
+			</animation>
+			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+				<effect type="slide" start="0,0" end="-145,835" time="750" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="30" time="750"/>
+			</animation>
             <posx>135</posx>
             <posy>-4</posy>
             <width>1920</width>
@@ -5276,7 +5350,7 @@
                 <animation type="Conditional" condition="!IsEmpty(Window(Home).Property(PanelWidget2Info))" reversible="false">
                     <include>Animation_PanelFlipUp2</include>
                 </animation>
-                <animation type="Conditional" condition="IsEmpty(Window(Home).Property(PanelWidget2Info))" reversible="false">
+                <animation type="Conditional" condition="IsEistmpty(Window(Home).Property(PanelWidget2Info))" reversible="false">
                     <include condition="!Skin.HasSetting(lowermainmenu)">Animation_PanelFlipUp1</include>
                     <include condition="Skin.HasSetting(lowermainmenu)">Animation_PanelFlipDown1</include>
                 </animation>
@@ -5318,24 +5392,38 @@
                         <include>NavigationWidget2</include>
                         <orientation>horizontal</orientation>
                         <scrolltime>200</scrolltime>
-                        <itemlayout height="116" width="399">
+                        <itemlayout height="174" width="399">
                             <control type="image">
                                 <width>399</width>
-                                <height>116</height>
-                                <texture border="5">button-nofocus.png</texture>
+                                <height>174</height>
+                                <texture border="6">common/bgcolor.png</texture>
+                                <aspectratio>scale</aspectratio>
                             </control>
-                            <control type="label">
-                                <posx>10</posx>
-                                <width>390</width>
-                                <height>40</height>
-                                <font>Font_Reg26</font>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
+                                <texture border="6">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio aligny="top">scale</aspectratio>
+                                <colordiffuse>77FFFFFF</colordiffuse>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
+                                <texture border="6">button-nofocus.png</texture>
+                            </control>
+                            <control type="textbox">
+                                <posx>12</posx>
+                                <width>375</width>
+                                <height>66</height>
+                                <align>left</align>
+                                <font>Font_Reg30</font>
                                 <shadowcolor>black</shadowcolor>
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>30</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>80</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <font>Font_Reg26</font>
                                 <shadowcolor>black</shadowcolor>
@@ -5343,9 +5431,9 @@
                                 <info>ListItem.Label2</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>60</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>110</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                                 <font>Font_Reg26</font>
@@ -5353,32 +5441,46 @@
                                 <textcolor>grey</textcolor>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="116" width="399">
+                        <focusedlayout height="174" width="399">
                             <control type="image">
                                 <width>399</width>
-                                <height>116</height>
+                                <height>174</height>
+                                <texture border="6">common/bgcolor.png</texture>
+                                <aspectratio>scale</aspectratio>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
+                                <texture border="6">$INFO[ListItem.Thumb]</texture>
+                                <aspectratio aligny="top">scale</aspectratio>
+                                <colordiffuse>77FFFFFF</colordiffuse>
+                            </control>
+                            <control type="image">
+                                <width>399</width>
+                                <height>174</height>
                                 <texture border="3">button-nofocus.png</texture>
                                 <visible>!Control.HasFocus(6051)</visible>
                             </control>
                             <control type="image">
                                 <width>399</width>
-                                <height>116</height>
+                                <height>174</height>
                                 <texture border="8">views/tripanel/listselect_fo.png</texture>
                                 <visible>Control.HasFocus(6051)</visible>
                                 <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
                             </control>
-                            <control type="label">
-                                <posx>10</posx>
-                                <width>390</width>
-                                <height>40</height>
-                                <font>Font_Reg26</font>
+                            <control type="textbox">
+                                <posx>12</posx>
+                                <width>375</width>
+                                <height>66</height>
+                                <align>left</align>
+                                <font>Font_Reg30</font>
                                 <shadowcolor>black</shadowcolor>
                                 <info>ListItem.Label</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>30</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>80</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <font>Font_Reg26</font>
                                 <shadowcolor>black</shadowcolor>
@@ -5386,9 +5488,9 @@
                                 <info>ListItem.Label2</info>
                             </control>
                             <control type="label">
-                                <posx>10</posx>
-                                <posy>60</posy>
-                                <width>390</width>
+                                <posx>12</posx>
+                                <posy>110</posy>
+                                <width>375</width>
                                 <height>40</height>
                                 <label>$INFO[ListItem.Property(City)] - $INFO[ListItem.Property(Name)]</label>
                                 <font>Font_Reg26</font>
@@ -6175,20 +6277,20 @@
                     <include condition="[Window.IsActive(1124) | Substring(Skin.String(widgetlist),thebigpicture)] + System.HasAddon(service.skin.widgets_bigpictures)">TheBigPictureContent</include>
                     <include condition="Library.HasContent(tvshows) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),nextairedtvpanel)]">NextAiredWidgetContent1124</include>
                     <include condition="Library.HasContent(tvshows) + Substring(Skin.String(widgetlist),nextairedtvpanel) + !Window.IsActive(1124)">NextAiredWidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss1panel)]">RSS1WidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss1panel) + !Window.IsActive(1124)">RSS1WidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss2panel)]">RSS2WidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss2panel) + !Window.IsActive(1124)">RSS2WidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss3panel)]">RSS3WidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss3panel) + !Window.IsActive(1124)">RSS3WidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss4panel)]">RSS4WidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss5panel) + !Window.IsActive(1124)">RSS4WidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss2panel)]">RSS5WidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss5panel) + !Window.IsActive(1124)">RSS5WidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss6panel)]">RSS6WidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rss6panel) + !Window.IsActive(1124)">RSS6WidgetContent</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rssnewspanel)]">NewsWidgetContent1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widgetlist),rssnewspanel) + !Window.IsActive(1124)">NewsWidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss1panel)]">RSS1WidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rss1panel) + !Window.IsActive(1124)">RSS1WidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss2panel)]">RSS2WidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rss2panel) + !Window.IsActive(1124)">RSS2WidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss3panel)]">RSS3WidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rss3panel) + !Window.IsActive(1124)">RSS3WidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss4panel)]">RSS4WidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rss5panel) + !Window.IsActive(1124)">RSS4WidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss2panel)]">RSS5WidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rss5panel) + !Window.IsActive(1124)">RSS5WidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rss6panel)]">RSS6WidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rss6panel) + !Window.IsActive(1124)">RSS6WidgetContent</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),rssnewspanel)]">NewsWidgetContent1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widgetlist),rssnewspanel) + !Window.IsActive(1124)">NewsWidgetContent</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon1panel)">IconPanel1Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon2panel)">IconPanel2Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),favouriteIconpanel)">FavouritesItems</include>
@@ -6617,20 +6719,20 @@
                     <include condition="[Window.IsActive(1124) | Substring(Skin.String(widget2list),thebigpicture)] + System.HasAddon(service.skin.widgets_bigpictures)">TheBigPictureContent2</include>
                     <include condition="Library.HasContent(tvshows) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),nextairedtvpanel)]">NextAiredWidget2Content1124</include>
                     <include condition="Library.HasContent(tvshows) + Substring(Skin.String(widget2list),nextairedtvpanel) + !Window.IsActive(1124)">NextAiredWidget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss1panel)]">RSS1Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss1panel)+ !Window.IsActive(1124)">RSS1Widget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss2panel)]">RSS2Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss2panel)+ !Window.IsActive(1124)">RSS2Widget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss3panel)]">RSS3Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss3panel)+ !Window.IsActive(1124)">RSS3Widget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss4panel)]">RSS4Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss4panel)+ !Window.IsActive(1124)">RSS4Widget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss5panel)]">RSS5Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss5panel)+ !Window.IsActive(1124)">RSS5Widget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss6panel)]">RSS6Widget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rss6panel)+ !Window.IsActive(1124)">RSS6Widget2Content</include>
-                    <include condition="System.HasAddon(script.rssclient) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rssnewspanel)]">NewsWidget2Content1124</include>
-                    <include condition="System.HasAddon(script.rssclient) + Substring(Skin.String(widget2list),rssnewspanel)">NewsWidget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss1panel)]">RSS1Widget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rss1panel)+ !Window.IsActive(1124)">RSS1Widget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss2panel)]">RSS2Widget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rss2panel)+ !Window.IsActive(1124)">RSS2Widget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss3panel)]">RSS3Widget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rss3panel)+ !Window.IsActive(1124)">RSS3Widget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss4panel)]">RSS4Widget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rss4panel)+ !Window.IsActive(1124)">RSS4Widget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss5panel)]">RSS5Widget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rss5panel)+ !Window.IsActive(1124)">RSS5Widget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rss6panel)]">RSS6Widget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rss6panel)+ !Window.IsActive(1124)">RSS6Widget2Content</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),rssnewspanel)]">NewsWidget2Content1124</include>
+                    <include condition="System.HasAddon(script.extendedinfo) + Substring(Skin.String(widget2list),rssnewspanel)">NewsWidget2Content</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),Icon1panel)">IconPanel1Items2</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),Icon2panel)">IconPanel2Items2</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),favouriteIconpanel)">FavouritesItems2</include>
@@ -6650,111 +6752,123 @@
         </control>
     </include>
     <include name="ConcertsPanelContent1124">
-        <item id="1">
+                <item id="1">
             <label>$INFO[Window(Home).Property(NearEvents.1.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.1.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.1.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.1.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.1.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.1.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.1.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),0)</visible>
         </item>
         <item id="2">
             <label>$INFO[Window(Home).Property(NearEvents.2.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.2.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.2.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.2.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.2.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.2.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.2.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),1)</visible>
         </item>
         <item id="3">
             <label>$INFO[Window(Home).Property(NearEvents.3.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.3.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.3.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.3.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.3.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.3.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.3.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),2)</visible>
         </item>
         <item id="4">
             <label>$INFO[Window(Home).Property(NearEvents.4.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.4.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.4.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.4.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.4.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.4.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.4.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),3)</visible>
         </item>
         <item id="5">
             <label>$INFO[Window(Home).Property(NearEvents.5.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.5.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.5.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.5.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.5.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.5.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.5.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),4)</visible>
         </item>
         <item id="6">
             <label>$INFO[Window(Home).Property(NearEvents.6.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.6.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.6.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.6.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.6.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.6.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.6.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),5)</visible>
         </item>
         <item id="7">
             <label>$INFO[Window(Home).Property(NearEvents.7.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.7.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.7.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.7.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.7.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.7.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.7.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),6)</visible>
         </item>
         <item id="8">
             <label>$INFO[Window(Home).Property(NearEvents.8.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.8.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.8.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.8.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.8.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.8.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.8.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),7)</visible>
         </item>
         <item id="9">
             <label>$INFO[Window(Home).Property(NearEvents.9.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.9.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.9.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.9.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.9.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.9.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.9.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),8)</visible>
         </item>
         <item id="10">
             <label>$INFO[Window(Home).Property(NearEvents.10.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.10.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.10.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.10.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.10.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.10.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.10.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),9)</visible>
         </item>
         <item id="11">
             <label>$INFO[Window(Home).Property(NearEvents.11.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.11.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.11.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.11.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.11.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.11.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.11.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),10)</visible>
         </item>
         <item id="12">
             <label>$INFO[Window(Home).Property(NearEvents.12.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.12.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.12.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.12.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.12.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.12.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.12.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),11)</visible>
         </item>
@@ -6763,342 +6877,380 @@
         <item id="13">
             <label>$INFO[Window(Home).Property(NearEvents.13.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.13.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.13.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.13.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.13.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.13.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.13.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),12)</visible>
         </item>
         <item id="14">
             <label>$INFO[Window(Home).Property(NearEvents.14.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.14.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.14.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.14.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.14.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.14.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.14.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),13)</visible>
         </item>
         <item id="15">
             <label>$INFO[Window(Home).Property(NearEvents.15.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.15.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.15.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.15.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.15.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.15.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.15.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),14)</visible>
         </item>
         <item id="16">
             <label>$INFO[Window(Home).Property(NearEvents.16.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.16.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.16.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.16.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.16.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.16.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.16.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),15)</visible>
         </item>
         <item id="17">
             <label>$INFO[Window(Home).Property(NearEvents.17.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.17.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.17.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.17.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.17.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.17.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.17.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),16)</visible>
         </item>
         <item id="18">
             <label>$INFO[Window(Home).Property(NearEvents.18.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.18.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.18.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.18.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.18.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.18.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.18.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),17)</visible>
         </item>
         <item id="19">
             <label>$INFO[Window(Home).Property(NearEvents.19.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.19.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.19.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.19.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.19.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.19.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.19.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),18)</visible>
         </item>
         <item id="20">
             <label>$INFO[Window(Home).Property(NearEvents.20.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.20.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.20.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.20.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.20.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.20.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.20.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),19)</visible>
         </item>
         <item id="21">
             <label>$INFO[Window(Home).Property(NearEvents.21.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.21.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.21.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.21.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.21.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.21.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.21.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),20)</visible>
         </item>
         <item id="22">
             <label>$INFO[Window(Home).Property(NearEvents.22.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.22.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.22.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.22.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.22.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.22.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.22.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),21)</visible>
         </item>
         <item id="23">
             <label>$INFO[Window(Home).Property(NearEvents.23.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.23.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.23.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.23.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.23.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.23.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.23.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),22)</visible>
         </item>
         <item id="24">
             <label>$INFO[Window(Home).Property(NearEvents.24.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.24.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.24.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.24.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.24.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.24.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.24.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),23)</visible>
         </item>
         <item id="25">
             <label>$INFO[Window(Home).Property(NearEvents.25.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.25.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.25.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.25.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.25.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.25.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.25.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),24)</visible>
         </item>
         <item id="26">
             <label>$INFO[Window(Home).Property(NearEvents.26.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.26.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.26.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.26.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.26.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.26.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.26.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),25)</visible>
         </item>
         <item id="27">
             <label>$INFO[Window(Home).Property(NearEvents.27.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.27.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.27.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.27.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.27.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.27.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.27.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),26)</visible>
         </item>
         <item id="28">
             <label>$INFO[Window(Home).Property(NearEvents.28.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.28.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.28.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.28.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.28.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.28.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.28.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),27)</visible>
         </item>
         <item id="29">
             <label>$INFO[Window(Home).Property(NearEvents.29.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.29.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.29.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.29.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.29.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.29.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.29.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),28)</visible>
         </item>
         <item id="30">
             <label>$INFO[Window(Home).Property(NearEvents.30.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.30.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.30.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.30.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.30.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.30.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.30.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),29)</visible>
         </item>
         <item id="31">
             <label>$INFO[Window(Home).Property(NearEvents.31.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.31.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.31.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.31.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.31.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.31.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.31.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),30)</visible>
         </item>
         <item id="32">
             <label>$INFO[Window(Home).Property(NearEvents.32.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.32.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.32.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.32.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.32.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.32.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.32.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),31)</visible>
         </item>
         <item id="33">
             <label>$INFO[Window(Home).Property(NearEvents.33.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.33.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.33.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.33.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.33.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.33.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.33.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),32)</visible>
         </item>
         <item id="34">
             <label>$INFO[Window(Home).Property(NearEvents.34.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.34.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.34.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.34.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.34.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.34.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.34.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),33)</visible>
         </item>
         <item id="35">
             <label>$INFO[Window(Home).Property(NearEvents.35.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.35.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.35.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.35.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.35.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.35.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.35.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),34)</visible>
         </item>
         <item id="36">
             <label>$INFO[Window(Home).Property(NearEvents.36.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.36.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.36.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.36.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.36.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.36.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.36.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),35)</visible>
         </item>
         <item id="37">
             <label>$INFO[Window(Home).Property(NearEvents.37.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.37.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.37.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.37.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.37.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.37.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.37.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),36)</visible>
         </item>
         <item id="38">
             <label>$INFO[Window(Home).Property(NearEvents.38.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.38.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.38.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.38.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.38.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.38.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.38.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),37)</visible>
         </item>
         <item id="39">
             <label>$INFO[Window(Home).Property(NearEvents.39.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.39.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.39.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.39.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.39.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.39.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.39.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),38)</visible>
         </item>
         <item id="40">
             <label>$INFO[Window(Home).Property(NearEvents.40.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.40.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.40.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.40.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.40.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.40.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.40.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),39)</visible>
         </item>
         <item id="41">
             <label>$INFO[Window(Home).Property(NearEvents.41.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.41.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.41.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.41.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.41.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.41.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.41.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),40)</visible>
         </item>
         <item id="42">
             <label>$INFO[Window(Home).Property(NearEvents.42.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.42.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.42.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.42.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.42.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.42.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.42.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),41)</visible>
         </item>
         <item id="43">
             <label>$INFO[Window(Home).Property(NearEvents.43.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.43.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.43.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.43.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.43.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.43.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.43.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),42)</visible>
         </item>
         <item id="44">
             <label>$INFO[Window(Home).Property(NearEvents.44.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.44.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.44.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.44.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.44.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.44.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.44.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),43)</visible>
         </item>
         <item id="45">
             <label>$INFO[Window(Home).Property(NearEvents.45.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.45.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.45.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.45.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.45.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.45.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.45.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),44)</visible>
         </item>
         <item id="46">
             <label>$INFO[Window(Home).Property(NearEvents.46.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.46.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.46.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.46.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.46.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.46.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.46.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),45)</visible>
         </item>
         <item id="47">
             <label>$INFO[Window(Home).Property(NearEvents.47.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.47.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.47.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.47.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.47.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.47.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.47.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),46)</visible>
         </item>
         <item id="48">
             <label>$INFO[Window(Home).Property(NearEvents.48.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.48.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.48.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.48.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.48.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.48.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.48.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),47)</visible>
         </item>
         <item id="49">
             <label>$INFO[Window(Home).Property(NearEvents.49.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.49.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.49.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.49.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.49.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.49.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.49.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),48)</visible>
         </item>
         <item id="50">
             <label>$INFO[Window(Home).Property(NearEvents.50.Artists)]</label>
             <label2>$INFO[Window(Home).Property(NearEvents.50.Date)]</label2>
+            <thumb>$INFO[Window(Home).Property(NearEvents.50.Artist_Image)]</thumb>
             <property name="City">$INFO[Window(Home).Property(NearEvents.50.City)]</property>
             <property name="Name">$INFO[Window(Home).Property(NearEvents.50.Name)]</property>
-            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[Window(Home).Property(NearEvents.50.Artists)],return)</onclick>
+            <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[Window(Home).Property(NearEvents.50.Headliner)],return)</onclick>
             <onclick>Dialog.Close(1139)</onclick>
             <visible>IntegerGreaterThan(Window(Home).Property(NearEvents.Count),49)</visible>
         </item>

@@ -102,6 +102,41 @@
                 <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
                 <animation effect="rotate" end="-360" center="39,385" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
             </control>
+            <control type="group">
+                <visible>skin.hassetting(backendmode)</visible>
+                    <visible>Skin.HasSetting(listcdart) + [Container.Content(sets) | SubString(ListItem.Path,videodb://1/7/)] + !Control.HasFocus(5001)</visible>
+                    <animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
+                <control type="image">
+                    <posx>-211</posx>
+                    <posy>15</posy>
+                    <width>500</width>
+                    <height>500</height>
+                    <aspectratio align="right">keep</aspectratio>
+                    <texture background="true">$INFO[Window(home).Property(Set.Movie.1.Art(Discart))]</texture>
+                    <animation effect="rotate" end="-360" center="auto" time="6400" delay="1200" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                    <bordersize>7</bordersize>
+                </control>
+                <control type="image">
+                    <posx>-211</posx>
+                    <posy>135</posy>
+                    <width>500</width>
+                    <height>500</height>
+                    <aspectratio align="right">keep</aspectratio>
+                    <texture background="true">$INFO[Window(home).Property(Set.Movie.2.Art(Discart))]</texture>
+                    <animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                    <bordersize>7</bordersize>
+                </control>
+                <control type="image">
+                    <posx>-211</posx>
+                    <posy>255</posy>
+                    <width>500</width>
+                    <height>500</height>
+                    <aspectratio align="right">keep</aspectratio>
+                    <texture background="true">$INFO[Window(home).Property(Set.Movie.3.Art(Discart))]</texture>
+                    <animation effect="rotate" end="-360" center="auto" time="6400" delay="2000" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
+                    <bordersize>7</bordersize>
+                </control>
+            </control>
             <control type="image">
                 <posx>-39</posx>
                 <posy>-53</posy>
@@ -213,7 +248,7 @@
                 <width>520</width>
                 <height>220</height>
                 <aspectratio aligny="top">keep</aspectratio>
-                <texture background="true">$VAR[TVShowLogoVar]</texture>
+                <texture background="true">$VAR[LogoVar]</texture>
             </control>
             <control type="grouplist">
                 <posx>-46</posx>
@@ -223,8 +258,8 @@
                 <control type="label">
                     <width min="0" max="1000">auto</width>
                     <height>40</height>
-                    <label>$INFO[ListItem.RatingAndVotes,$LOCALIZE[31095]: [COLOR $VAR[HomeMenuTextFocusVar4]],[/COLOR]]$INFO[ListItem.Top250,$LOCALIZE[13409][COLOR $VAR[HomeMenuTextFocusVar4]],[/COLOR] # ]</label>
-                    <font>Font_Reg30</font>
+                    <label>$INFO[ListItem.RatingAndVotes,$LOCALIZE[31095]: [COLOR white4],[/COLOR]]$INFO[ListItem.Top250,$LOCALIZE[13409][COLOR white4],[/COLOR] # ]</label>
+                    <font>Font_Reg32</font>
                     <textcolor>$VAR[FontColorVar]</textcolor>
                 </control>
             </control>
@@ -237,8 +272,8 @@
                     <width min="0" max="1000">auto</width>
                     <height>40</height>
                     <label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
-                    <font>Font_Reg30</font>
-                    <textcolor>$VAR[HomeMenuTextFocusVar4]</textcolor>
+                    <font>Font_Reg32</font>
+                    <textcolor>white4</textcolor>
                 </control>
             </control>
             <control type="textbox">
@@ -248,7 +283,7 @@
                 <height>396</height>
                 <label fallback="31006">$VAR[InfoWallTextboxVar]</label>
                 <font>Font_Reg29</font>
-                <textcolor>$VAR[HomeMenuTextFocusVar6]</textcolor>
+                <textcolor>white6</textcolor>
                 <autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
             </control>
         </control>
@@ -684,6 +719,17 @@
                         <height>90</height>
                         <texture>$VAR[SmallListIconVar,defaulticons/]</texture>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <visible>!Window.IsActive(pictures)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>49</posx>
+                        <posy>5</posy>
+                        <width>90</width>
+                        <height>90</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[CameraFlagsVarList]</texture>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <visible>Window.IsActive(pictures)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="100" condition="!Skin.HasSetting(slimlist)">
@@ -743,6 +789,17 @@
                         <height>90</height>
                         <texture>$VAR[SmallListIconVar,defaulticons/]</texture>
                         <colordiffuse>white2</colordiffuse>
+                        <visible>!Window.IsActive(pictures)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>49</posx>
+                        <posy>5</posy>
+                        <width>90</width>
+                        <height>90</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[CameraFlagsVarList]</texture>
+                        <colordiffuse>white2</colordiffuse>
+                        <visible>Window.IsActive(pictures)</visible>
                     </control>
                 </focusedlayout>
                 <itemlayout height="61.5" condition="Skin.HasSetting(slimlist)">
@@ -796,7 +853,17 @@
                         <height>55</height>
                         <texture>$VAR[SmallListIconVar,defaulticons/]</texture>
                         <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-                        <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
+                        <visible>![Window.IsActive(pictures) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>60</posx>
+                        <posy>3</posy>
+                        <width>55</width>
+                        <height>55</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[CameraFlagsVarList]</texture>
+                        <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                        <visible>Window.IsActive(pictures)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout height="61.5" condition="Skin.HasSetting(slimlist)">
@@ -856,7 +923,17 @@
                         <height>55</height>
                         <texture>$VAR[SmallListIconVar,defaulticons/]</texture>
                         <colordiffuse>white2</colordiffuse>
-                        <visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
+                        <visible>![Window.IsActive(pictures) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
+                    </control>
+                    <control type="image">
+                        <posx>60</posx>
+                        <posy>3</posy>
+                        <width>55</width>
+                        <height>55</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[CameraFlagsVarList]</texture>
+                        <colordiffuse>white2</colordiffuse>
+                        <visible>Window.IsActive(pictures)</visible>
                     </control>
                 </focusedlayout>
             </control>

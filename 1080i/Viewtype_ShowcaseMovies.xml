@@ -406,6 +406,11 @@
                     <visible>![[Skin.HasSetting(noflow) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Skin.HasSetting(noflowtv) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]]</visible>
                     <animation effect="fade" start="100" end="0" time="640">Hidden</animation>
                 </control>
+                <control type="button" id="961">
+                    <texturefocus>-</texturefocus>
+                    <texturenofocus>-</texturenofocus>
+                    <visible>[Skin.HasSetting(noflow) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Skin.HasSetting(noflowtv) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
+				</control>
                 <!-- MikeBZH44 start : hidden button to catch UP or DOWN arrow to open/close case -->
                 <control type="button" id="961">
                     <onup>50</onup>

@@ -732,8 +732,12 @@
         </control>
     </include>
     <include name="AutoConfig">
+		<onload>Skin.ResetSettings</onload>
+		<onload>Skin.ToggleSetting(movenowplayingwidget)</onload>
+	<!--	<onload>Skin.ToggleSetting(ShelfMode)</onload>-->
 		<onload>Skin.ToggleSetting(TopBarToolTip)</onload>
 		<onload>Skin.SetBool(glasshome)</onload>
+		<onload>Skin.SetBool(nowplayingpanel)</onload>
 		<onload>Skin.SetString(panel_programs,7d000000)</onload>
         <onload>Skin.SetString(panel_music,7d000000)</onload>
         <onload>Skin.SetString(panel_videolibrary,7d000000)</onload>
@@ -800,9 +804,9 @@
         <onload>Skin.SetBool(infopanellauncher)</onload>
         <onload>Skin.SetBool(MoreFullscreenInfo)</onload>
         <onload>Skin.SetBool(lowlist)</onload>
-        <onload>Skin.SetBool(lowermainmenu)</onload>
         <onload>Skin.SetBool(altbreadcrumbstexture)</onload>
         <onload>Skin.SetString(InfopanelDelay,1)</onload>
+        <onload>Skin.SetString(TriPanelPosition,1)</onload>
         <onload>Skin.SetBool(GlobalNowPlaying)</onload>
         <onload>Skin.SetBool(altoverlayinfowall)</onload>
         <onload condition="!Library.HasContent(MusicVideos)">Skin.SetString(MusicVideosHomeItem.Disable,1)</onload>

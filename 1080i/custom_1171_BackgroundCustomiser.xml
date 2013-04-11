@@ -11,12 +11,11 @@
     <controls>
         <control type="group">
 			<visible>!Window.IsActive(1172)</visible>
-            <posx>570</posx>
-            <posy>37</posy>
+            <posx>490</posx>
+            <posy>737</posy>
             <control type="group">
-                <animation effect="zoom" end="100,130" center="960,0" time="0" condition="SubString(Window(1124).Property(CustomYesNoDialog),movie) | SubString(Window(1124).Property(CustomYesNoDialog),tv)">Conditional</animation>
                 <control type="image">
-                    <width>780</width>
+                    <width>940</width>
                     <height>330</height>
                     <texture>dialogs/dialog_back_shadow.png</texture>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
@@ -24,7 +23,7 @@
                     <include>PanelGlowFade</include>
                 </control>
                 <control type="image">
-                    <width>780</width>
+                    <width>940</width>
                     <height>330</height>
                     <texture>dialogs/dialog_back.png</texture>
                     <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
@@ -38,16 +37,16 @@
             </control>
             <control type="label" id="4">
                 <posy>88</posy>
-                <width>780</width>
+                <width>900</width>
                 <height>45</height>
                 <align>center</align>
-                <label>$LOCALIZE[31063]</label>
+                <label>$LOCALIZE[31807]</label>
                 <textcolor>white3</textcolor>
                 <scroll>true</scroll>
             </control>
             <control type="grouplist" id="5400">
                 <posy>210</posy>
-                <width>740</width>
+                <width>925</width>
                 <height>200</height>
                 <align>center</align>
                 <onleft>5400</onleft>

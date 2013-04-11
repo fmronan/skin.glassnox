@@ -12,12 +12,47 @@
     <include condition="!Skin.HasSetting(ViewCustom_IsInstall)">LoadViews</include>
     <include condition="Skin.HasSetting(ViewCustom_IsInstall)">LoadCustomViews</include>
     <controls>
+		<control type="fadelabel" id="4325">
+            <posy>-10000</posy>
+            <pauseatend>7500</pauseatend>
+            <width>11479</width>
+            <height>118</height>
+            <font>Font_Reg57</font>
+            <textcolor>black</textcolor>
+            <label>$INFO[ListItem.Art(extrafanart1)]</label>
+            <label>$INFO[ListItem.Art(extrafanart2)]</label>
+            <label>$INFO[ListItem.Art(extrafanart3)]</label>
+            <label>$INFO[ListItem.Art(extrafanart4)]</label>
+            <label>$INFO[ListItem.Art(extrafanart5)]</label>
+            <label>$INFO[ListItem.Art(extrafanart6)]</label>
+            <label>$INFO[ListItem.Art(extrafanart7)]</label>
+            <label>$INFO[ListItem.Art(extrafanart8)]</label>
+            <label>$INFO[ListItem.Art(extrafanart9)]</label>
+            <label>$INFO[ListItem.Art(extrafanart10)]</label>
+        </control>
+        <control type="fadelabel" id="4211">
+            <pauseatend>7500</pauseatend>
+            <width>11479</width>
+            <height>118</height>
+            <font>Font_Reg57</font>
+            <textcolor>black</textcolor>
+            <label>$INFO[Window(home).Property(Set.Movie.1.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.2.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.3.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.4.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.5.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.6.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.7.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.8.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.9.Art(clearlogo))]</label>
+            <label>$INFO[Window(home).Property(Set.Movie.10.Art(clearlogo))]</label>
+        </control>
         <control type="button" id="9900">
             <!-- no info-->
             <include>HiddenObject</include>
             <visible>!Container.Content()</visible>
 <!--             <visible>!SubString(ListItem.Path,videodb://1/7/,left)</visible>
- -->            <visible>!SubString(ListItem.Path,videodb://1/7/,left) | System.HasAddon(script.extendedinfo)</visible>
+ -->            <visible>!SubString(ListItem.Path,videodb://1/7/,left) | skin.hassetting(backendmode)</visible>
 
             <!--             <visible>!SubString(Container.FolderPath,library://,left)</visible> -->
             <visible>!Stringcompare(ListItem.Label,..)</visible>
@@ -42,15 +77,15 @@
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="fade" start="100" end="50" time="640">Hidden</animation>
-                <visible>!Container.Content(movies) + !Control.IsVisible(4200)</visible>
+                <visible>!Control.IsVisible(4200) + !Control.IsVisible(4201)</visible>
             </control>
-            <control type="multiimage">
+            <control type="multiimage" id="4201">
                 <imagepath background="true" fallback="special://skin/background/movies/">$VAR[MovieFanartVar]</imagepath>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="fade" start="100" end="50" time="640">Hidden</animation>
-                <visible>Container.Content(movies)</visible>
+                <visible>Container.Content(movies) | Container.Content(sets)</visible>
             </control>
              <control type="multiimage" id="4200">
                 <imagepath background="true" fallback="special://skin/background/tvshows/">$VAR[TVShowFanartVar]</imagepath>
@@ -60,17 +95,17 @@
                 <animation effect="fade" start="100" end="50" time="640">Hidden</animation>
                 <visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
             </control>
-            <control type="multiimage">
+          <!--  <control type="multiimage">
                 <imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
                 <fadetime>FanartCrossfadeTime</fadetime>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
                 <visible>[Container.Content(musicvideos) + Skin.HasSetting(extrafanartmusicvideos)] | [Container.Content(seasons) + Skin.HasSetting(extrafanartseasons)] | [Container.Content(episodes) + Skin.HasSetting(extrafanartepisodes)]</visible>
                 <visible>!SubString(ListItem.Label,*,left) + [Substring(Container.FolderPath,videodb://,left) | Substring(Container.FolderPath,special://profile/playlist,left)]</visible>
-            </control>
+            </control>-->
         </control>
-        <include condition="System.HasAddon(script.extendedinfo)">InteractiveNodeCases</include>
-        <include condition="System.HasAddon(script.extendedinfo)">NodeFadeLabels</include>
+        <include condition="skin.hassetting(backendmode)">InteractiveNodeCases</include>
+        <include condition="skin.hassetting(backendmode)">NodeFadeLabels</include>
         <!-- view id = 516-->
         <include condition="!Skin.HasSetting(DisableBigFanVL)">BigFan</include>
         <include>VideoBackground</include>

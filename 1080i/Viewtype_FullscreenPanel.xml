@@ -468,7 +468,7 @@
                             <height>500</height>
                             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
                             <aspectratio aligny="bottom">keep</aspectratio>
-                            <texture background="true">$VAR[TVShowLogoVar]</texture>
+                            <texture background="true">$VAR[LogoVarList]</texture>
                             <visible>StringCompare(Container.FolderPath,videodb://5/) | Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
@@ -579,7 +579,7 @@
                             <height>500</height>
                             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
                             <aspectratio aligny="bottom">keep</aspectratio>
-                            <texture background="true">$VAR[TVShowLogoVar]</texture>
+                            <texture background="true">$VAR[LogoVarList]</texture>
                             <visible>StringCompare(Container.FolderPath,videodb://5/) | Container.Content(tvshows)</visible>
                         </control>
                         <control type="image">
@@ -1138,7 +1138,7 @@
             <height>500</height>
             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
             <aspectratio aligny="bottom">keep</aspectratio>
-            <texture background="true">$VAR[TVShowLogoVar]</texture>
+            <texture background="true">$VAR[LogoVarList]</texture>
             <visible>StringCompare(Container.FolderPath,videodb://5/) | Container.Content(tvshows)</visible>
         </control>
         <control type="image">
@@ -1213,7 +1213,7 @@
             <height>500</height>
             <animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
             <aspectratio aligny="bottom">keep</aspectratio>
-            <texture background="true">$VAR[TVShowLogoVar]</texture>
+            <texture background="true">$VAR[LogoVarList]</texture>
             <visible>StringCompare(Container.FolderPath,videodb://5/) | Container.Content(tvshows)</visible>
         </control>
         <control type="image">

@@ -41,15 +41,24 @@
                 <align>right</align>
                 <label fallback="31006">$INFO[ListItem.PictureDateTime,[COLOR $VAR[HomeMenuTextFocusVar3]]$LOCALIZE[21803]: [/COLOR]]</label>
             </control>
+            <control type="image">
+				<posx>855</posx>
+				<posy>-65</posy>
+				<width>202</width>
+				<height>202</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$VAR[CameraFlagsVar]</texture>
+				<colordiffuse>white2</colordiffuse>
+			</control>
             <control type="label">
-                <posx>30</posx>
+                <posx>-140</posx>
                 <height>57</height>
                 <width>930</width>
                 <font>Font_Reg28</font>
                 <label fallback="31006">$INFO[ListItem.Label,[COLOR $VAR[HomeMenuTextFocusVar3]]$LOCALIZE[21800]: [/COLOR]]</label>
             </control>
             <control type="label">
-                <posx>30</posx>
+                <posx>-140</posx>
                 <posy>30</posy>
                 <height>57</height>
                 <width>930</width>

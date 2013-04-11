@@ -498,6 +498,76 @@
                             <label>$VAR[InfoWallSubTitleVar]</label>
                         </control>
                         <control type="image">
+							<posx>1600</posx>
+							<posy>100</posy>
+							<width>202</width>
+							<height>202</height>
+							<aspectratio>keep</aspectratio>
+							<texture>$VAR[CameraFlagsVar]</texture>
+							<colordiffuse>white2</colordiffuse>
+							<visible>Window.IsActive(pictures)</visible>
+						</control>
+						<control type="label">
+                            <posx>1260</posx>
+                            <posy>254</posy>
+                            <height>20</height>
+                            <aligny>top</aligny>
+                            <width>570</width>
+                            <font>Font_Info</font>
+                            <scroll>true</scroll>
+                            <label>$INFO[ListItem.PictureCamModel]</label>
+                            <animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
+                            <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                        </control>
+                        <control type="label">
+                            <posx>1260</posx>
+                            <posy>304</posy>
+                            <height>20</height>
+                            <aligny>top</aligny>
+                            <width>570</width>
+                            <font>Font_Info</font>
+                            <scroll>true</scroll>
+                            <label>$INFO[ListItem.PictureAperture] $INFO[ListItem.PictureFocalLen]</label>
+                            <animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
+                            <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                        </control>
+						<control type="label">
+                            <posx>1260</posx>
+                            <posy>354</posy>
+                            <height>20</height>
+                            <aligny>top</aligny>
+                            <width>570</width>
+                            <font>Font_Info</font>
+                            <scroll>true</scroll>
+                            <label>$INFO[ListItem.PictureDesc]</label>
+                            <animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
+                            <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                        </control>
+                        <control type="label">
+                            <posx>1260</posx>
+                            <posy>404</posy>
+                            <height>20</height>
+                            <aligny>top</aligny>
+                            <width>570</width>
+                            <font>Font_Info</font>
+                            <scroll>true</scroll>
+                            <label>$INFO[ListItem.PictureComment]</label>
+                            <animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
+                            <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                        </control>
+                        <control type="label">
+                            <posx>1260</posx>
+                            <posy>454</posy>
+                            <height>20</height>
+                            <aligny>top</aligny>
+                            <width>570</width>
+                            <font>Font_Info</font>
+                            <scroll>true</scroll>
+                            <label>$INFO[ListItem.PictureKeywords]</label>
+                            <animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
+                            <animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
+                        </control>
+                        <control type="image">
                             <posx>1245</posx>
                             <posy>190</posy>
                             <height>60</height>

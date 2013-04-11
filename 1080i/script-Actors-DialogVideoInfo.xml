@@ -102,14 +102,15 @@
                 </control>
                 <control type="button" id="18">
                     <label>DpStream</label>
-					<onclick>ActivateWindow(videos,plugin://plugin.video.dpstream/?url=http%3A%2F%2Fwww.dpstream.net%2F%3Faction%3Dfilm%26p%3D7----1&amp;mode=16&amp;data=$INFO[Listitem.Title],return)</onclick>
-                    <onclick>Dialog.Close(all,true)</onclick>
+					<onclick condition="!Window.IsVisible(Home)">Container.Update(plugin://plugin.video.dpstream/?mode=16&amp;name=Rechercher%20un%20film&amp;url=http%3A%2F%2Fwww.dpstream.net%2F%3faction%3drfilm%26recherche%3d&amp;data=$ESCINFO[Listitem.Title])</onclick>
+					<onclick condition="Window.IsVisible(Home)">ActivateWindow(videos,plugin://plugin.video.dpstream/?mode=16&amp;name=Rechercher%20un%20film&amp;url=http%3A%2F%2Fwww.dpstream.net%2F%3faction%3drfilm%26recherche%3d&amp;data=$ESCINFO[Listitem.Title],return)</onclick>
+					<onclick>Dialog.Close(all,true)</onclick>
                     <include>DialogVideoInfoButton</include>
                     <visible>System.HasAddon(plugin.video.dpstream)</visible>
                 </control>
                <control type="button" id="22">
                     <label>$LOCALIZE[31096]</label>
-                    <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$INFO[ListItem.Title],return)</onclick>
+                    <onclick>ActivateWindow(videos,plugin://plugin.video.youtube/?path=/root/search&amp;feed=search&amp;search=$ESCINFO[ListItem.Title],return)</onclick>
                     <onclick>Dialog.Close(all,true)</onclick>
                     <include>DialogVideoInfoButton</include>
                 </control>

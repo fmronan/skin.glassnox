@@ -281,7 +281,7 @@
         <control type="button" id="9011">
             <include>HiddenObject</include>
             <onfocus>SetFocus(9000)</onfocus>
-            <onfocus>ActivateWindow(1159)</onfocus>
+            <onfocus condition="IsEmpty(Container(9010).ListItem.Property(Widget))">ActivateWindow(1159)</onfocus>
         </control>
         <include>MainMenuCommonContent</include>
         <!-- Fanart -->
@@ -289,7 +289,7 @@
             <!--              <visible>![[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + !Skin.HasSetting(ShowBackgroundVis)]]</visible>
  -->
             <control type="multiimage">
-                <aspectratio align="center" aligny="top">scale</aspectratio>
+                <aspectratio align="center" aligny="top">keep</aspectratio>
                 <imagepath background="true">$VAR[HomeMainFanartVar]</imagepath>
 				<colordiffuse>$VAR[ColorDiffuseBackgroundVar]</colordiffuse>
                 <fadetime>600</fadetime>
@@ -297,19 +297,19 @@
                 <animation effect="fade" time="480">Hidden</animation>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <visible>!Substring(Control.GetLabel(4322),case)</visible>
+				<visible>!Substring(Control.GetLabel(4322),case) + Skin.HasSetting(ShelfMode)</visible>
             </control>
             <control type="multiimage">
                 <aspectratio align="center" aligny="top">keep</aspectratio>
                 <imagepath background="true">$VAR[SmallHomeMainFanartVar]</imagepath>
 				<colordiffuse>$VAR[ColorDiffuseBackgroundVar]</colordiffuse>
                 <fadetime>600</fadetime>
-                <include>SmallscreenDimensions</include>
+                <include condition="!Skin.HasSetting(ShelfMode)">FullscreenDimensions</include>
+                <include condition="Skin.HasSetting(ShelfMode)">SmallscreenDimensions</include>
                 <include>Animation_WindowFade250</include>
                 <animation effect="fade" time="400">Visible</animation>
                 <animation effect="fade" time="400">Hidden</animation>
                 <visible>!Substring(Control.GetLabel(4322),case)</visible>
-                <visible>!Substring(Control.GetLabel(4322),recent,left) + !Substring(Control.GetLabel(4322),random,left) + !Substring(Control.GetLabel(4322),mostplayed,left) + !Substring(Control.GetLabel(4322),watchlist,left) + !Substring(Control.GetLabel(4322),inprogress,left) + !StringCompare(Control.GetLabel(4322),widgetfanart) + !Substring(Control.GetLabel(4322),dailybabe) + !Substring(Control.GetLabel(4322),thebigpicture) + !Substring(Control.GetLabel(4322),custom,right) + !Substring(Control.GetLabel(4322),pics)</visible>
             </control>
 			<control type="image">
 				<posx>382</posx>
@@ -346,7 +346,8 @@
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <texture background="true">$VAR[HomeWidgetFanartVar]</texture>
                 <fadetime>600</fadetime>
-                <include>FullscreenDimensions</include>
+                <include condition="!Skin.HasSetting(ShelfWidgetMode)">FullscreenDimensions</include>
+                <include condition="Skin.HasSetting(ShelfWidgetMode)">SmallscreenDimensions</include>
                 <visible>[Control.HasFocus(8000) | Control.HasFocus(8020) | Control.HasFocus(7000) | Control.HasFocus(7020) | ControlGroup(5000).HasFocus | ControlGroup(5020).HasFocus | ControlGroup(5030).HasFocus | ControlGroup(6000).HasFocus | ControlGroup(6020).HasFocus] | ControlGroup(6030).HasFocus]  | [Player.HasAudio + Skin.HasSetting(musicfanarthome)]</visible>
                 <animation effect="fade" time="480">Visible</animation>
                 <animation effect="fade" time="480">Hidden</animation>
@@ -356,7 +357,8 @@
             
             <control type="multiimage">
                 <fadetime>600</fadetime>
-                <include>FullscreenDimensions</include>
+                <include condition="!Skin.HasSetting(ShelfWidgetMode)">FullscreenDimensions</include>
+                <include condition="Skin.HasSetting(ShelfWidgetMode)">SmallscreenDimensions</include>
                 <imagepath background="true">$VAR[HomeWidgetExtraFanartVar]</imagepath>
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <animation effect="fade" time="600">Visible</animation>
@@ -367,7 +369,8 @@
             </control>
             <control type="multiimage">
                 <fadetime>600</fadetime>
-                <include>FullscreenDimensions</include>
+				<include condition="!Skin.HasSetting(ShelfWidgetMode)">FullscreenDimensions</include>
+                <include condition="Skin.HasSetting(ShelfWidgetMode)">SmallscreenDimensions</include>
                 <imagepath background="true">$VAR[HomeWidgetExtraFanartVar1]</imagepath>
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <animation effect="fade" time="600">Visible</animation>
@@ -377,7 +380,6 @@
                 <visible> [Control.HasFocus(7000) | Control.HasFocus(7020) | ControlGroup(6000).HasFocus | ControlGroup(6020).HasFocus | ControlGroup(6030).HasFocus] + [!IsEmpty(Container(6010).ListItem.Property(Extra)) | !IsEmpty(Container(7000).ListItem.Property(Extra))]</visible>
             </control>
             <!-- Music ExtraFanart -->
-            <include condition="Player.HasAudio">ShelfPlayerBackground</include>
             <include condition="!IsEmpty(Skin.String(ArtistsLogosPath))">MusicExtraFanartHome</include>
             <include condition="Skin.HasSetting(artistslideshowhome)">MusicArtistSlideshowHome</include>
             <include>CommonMediaPlayingBackground</include>
@@ -461,7 +463,7 @@
                         <height>25</height>
                         <texture>arrowdown.png</texture>
                         <colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
-						<visible>Control.HasFocus(9000) + !Skin.HasSetting(showsubmenu) + IntegerGreaterThan(Container(9010).NumItems,0)</visible>
+						<visible>!IsEmpty(Container(9010).ListItem.Property(Widget)) | [Control.HasFocus(9000) + !Skin.HasSetting(showsubmenu) + IntegerGreaterThan(Container(9010).NumItems,0)]</visible>
                         <animation effect="zoom" start="100,0" end="100,100" time="400" delay="160" tween="cubic" center="0,613" easing="inout">VisibleChange</animation>
                     </control>
                     <control type="group" id="9001">
@@ -538,11 +540,13 @@
                         <include>HiddenObject</include>
                         <onfocus>AlarmClock(WidgetMove,Control.Move(8000,1),00:07,silent,loop)</onfocus>
                         <onfocus>ClearProperty(PanelWidgetInfo,Home)</onfocus>
+                        <onfocus>ClearProperty(FocusOnSubmenu,home)</onfocus>
                         <onfocus>SetFocus(9000)</onfocus>
                     </control>
                     <control type="button" id="7993">
                         <include>HiddenObject</include>
                         <onfocus>AlarmClock(Widget2Move,Control.Move(7000,1),00:07,silent,loop)</onfocus>
+                        <onfocus>ClearProperty(FocusOnSubmenu,home)</onfocus>
                         <onfocus>SetFocus(9000)</onfocus>
                     </control>
                     <!--focus first widget-->

@@ -2,12 +2,13 @@
 <window type="dialog" id="1134">
     <defaultcontrol always="true">4</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Shooted'&amp;limit=10)</onload>
-    <onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onload>
+    <onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Shooted'&amp;limit=50)</onload>
+    <onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=50)</onload>
     <onload condition="!IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.SetString(ItemToEdit.MultiFanart,$ESCINFO[Skin.String(MusicViz.MultiFanart)])</onload>
     <onunload condition="!IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.SetString(MusicViz.MultiFanart,$ESCINFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
     <onunload condition="!IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.Reset(ItemToEdit.MultiFanart)</onunload>
     <onunload>ClearProperty(MusicVizBG,visualisation)</onunload>
+    <onunload>ClearProperty(BackgroundSelection)</onunload>
     <controls>
         <control type="group">
 			<visible>!Window.IsActive(1171)</visible>
@@ -92,19 +93,28 @@
                     </control>
                 </focusedlayout>
                 <content>
+					<item>
+                        <label>$LOCALIZE[231]</label>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,nothing)</onclick>
+                        <onclick>Dialog.Close(1134)</onclick>
+                        <visible>SubString(Window(1124).Property(BackgroundSelection),Screen)</visible>
+                    </item>
                     <item>
                         <label>$LOCALIZE[31113]</label>
-                        <onclick>Skin.SetImage(ItemToEdit.MultiFanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetImage(ItemToEdit.MultiFanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetImage(ItemToEdit.Screen)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31114]</label>
-                        <onclick>Skin.SetPath(ItemToEdit.MultiFanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetPath(ItemToEdit.MultiFanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetPath(ItemToEdit.Screen)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>31701</label>
-                        <onclick>Skin.SetPath(ItemToEdit.MultiFanart,special://skin/background/)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetPath(ItemToEdit.MultiFanart,special://skin/background/)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetPath(ItemToEdit.Screen,special://skin/backgrounds/)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
@@ -127,89 +137,104 @@
                     </item>
                     <item>
                         <label>$LOCALIZE[31817]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,randomartists)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,randomartists)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,randomartists)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>31820</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,dailybabe)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,dailybabe)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,dailybabe)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$INFO[Window(home).Property(bigpictures.scraper.title)]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,thebigpicture)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,thebigpicture)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,thebigpicture)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                         <visible>System.HasAddon(service.skin.widgets_bigpictures)</visible>
                     </item>
                     <item>
                         <label>Flickr</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,randomflickr)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,randomflickr)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,randomflickr)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                         <visible>System.HasAddon(script.extendedinfo)</visible>
                     </item>
                     <item>
                         <label>$LOCALIZE[31323]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,recentmovies)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,recentmovies)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,recentmovies)</onclick>
+                  <!--      <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31222]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,randommovies)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randommovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,randommovies)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,randommovies)</onclick>
+                     <!--   <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randommovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31324]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,recenttv)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recenttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,recenttv)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,recenttv)</onclick>
+                   <!--     <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recenttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31220]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,randomtv)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randomtv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,randomtv)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,randomtv)</onclick>
+                   <!--     <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randomtv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item id="111">
                         <label>$LOCALIZE[31335]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,watchlistmovies)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlistmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,watchlistmovies)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,watchlistmovies)</onclick>
+                     <!--   <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlistmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item id="112">
                         <label>$LOCALIZE[31335] TV</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,watchlisttv)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlisttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,watchlisttv)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,watchlisttv)</onclick>
+                      <!--  <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlisttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31326]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,watchlistalbums)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlistalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,watchlistalbums)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,watchlistalbums)</onclick>
+                       <!-- <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlistalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31359]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,recentalbums)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,recentalbums)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,recentalbums)</onclick>
+                <!--        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31081]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,recentmusicvideos)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentmusicvideos)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,recentmusicvideos)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,recentmusicvideos)</onclick>
+                <!--        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentmusicvideos)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>31091</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,randommusicvideos)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randommusicvideos)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,randommusicvideos)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,randommusicvideos)</onclick>
+                     <!--   <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randommusicvideos)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
                         <label>$LOCALIZE[31035] [LOWERCASE]$LOCALIZE[20445][/LOWERCASE]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,weather)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,weather)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,weather)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                         <visible>!IsEmpty(Skin.String(WeatherFanartDir))</visible>
                     </item>
@@ -221,7 +246,8 @@
                     </item>
                     <item>
                         <label>$LOCALIZE[31094]</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,widgetfanart)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                     <item>
@@ -238,28 +264,32 @@
                     </item>
                     <item>
                         <label>31815</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,recentpics)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentpics)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,recentpics)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,recentpics)</onclick>
+                      <!--  <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentpics)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                         <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
                     </item>
                     <item>
                         <label>31816</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,randompics)</onclick>
-                        <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randompics)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,randompics)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,randompics)</onclick>
+                       <!-- <onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randompics)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>-->
                         <onclick>Dialog.Close(1134)</onclick>
                         <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
                     </item>
                     <item>
                         <label>31823</label>
                         <onclick>RunScript(script.widget.weatherworld,time=10&amp;limit=9&amp;mapsize=1920x1080&amp;tilesize=360x60&amp;window=10000&amp;condition=StringCompare(Control.GetLabel(4322),weatherworldbackground))</onclick>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,weatherworldbackground)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,weatherworldbackground)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,weatherworldbackground)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
-                        <visible>System.HasAddon(script.widget.weatherworld) + System.HasAddon(script.widget.weatherworld)</visible>
+                        <visible>System.HasAddon(script.widget.weatherworld)</visible>
                     </item>
                     <item>
                         <label>31673</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,mostplayedroms)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Background)">Skin.SetString(ItemToEdit.MultiFanart,mostplayedroms)</onclick>
+                        <onclick condition="SubString(Window(1124).Property(BackgroundSelection),Screen)">Skin.SetString(ItemToEdit.Screen,mostplayedroms)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                         <visible>System.HasAddon(script.games.rom.collection.browser)</visible>
                     </item>
@@ -324,6 +354,7 @@
                     <item>
                         <label>$LOCALIZE[571]</label>
                         <onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
+                        <onclick>Skin.Reset(ItemToEdit.Screen)</onclick>
                         <onclick>Dialog.Close(1134)</onclick>
                     </item>
                 </content>

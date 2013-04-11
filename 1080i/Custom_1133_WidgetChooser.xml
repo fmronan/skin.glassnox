@@ -325,7 +325,7 @@
                             <label>$LOCALIZE[20304]</label>
                             <onclick>Dialog.Close(1133)</onclick>
                             <onclick>ActivateWindow(1162)</onclick>
-                            <visible>System.HasAddon(script.rssclient)</visible>
+                            <visible>System.HasAddon(script.extendedinfo)</visible>
                         </item>
                         <item>
                             <label>31327</label>
@@ -343,6 +343,13 @@
                             <visible>!IsEmpty(Skin.String(SmartPlaylist1.Path))</visible>
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                             <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
+                        <item>
+                            <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist1.Label)] ($INFO[Skin.String(SmartPlaylist1.Type)])</label>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie)">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredcustoms1moviedefault)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <visible>!IsEmpty(Skin.String(SmartPlaylist1.Path))</visible>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>

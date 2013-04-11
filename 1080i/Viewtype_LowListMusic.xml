@@ -429,7 +429,7 @@
                         <width>390</width>
                         <height>150</height>
                         <fadetime>IconCrossfadeTime2</fadetime>
-                        <texture background="true">$VAR[TVShowLogoVar]</texture>
+                        <texture background="true">$VAR[LogoVar]</texture>
                         <visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
                     </control>
                 </control>

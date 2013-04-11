@@ -30,34 +30,6 @@
             <visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://1/7/,left)]</visible>
             <visible>!Stringcompare(ListItem.Label,..)</visible>
         </control>
-        <control type="fadelabel" id="4325">
-            <pauseatend>7500</pauseatend>
-            <width>11479</width>
-            <height>118</height>
-            <font>Font_Reg57</font>
-            <textcolor>00FFFFFF</textcolor>
-            <label>$INFO[ListItem.Art(extrafanart0)]</label>
-            <label>$INFO[ListItem.Art(extrafanart1)]</label>
-            <label>$INFO[ListItem.Art(extrafanart2)]</label>
-            <label>$INFO[ListItem.Art(extrafanart3)]</label>
-            <label>$INFO[ListItem.Art(extrafanart4)]</label>
-            <label>$INFO[ListItem.Art(extrafanart5)]</label>
-            <label>$INFO[ListItem.Art(extrafanart6)]</label>
-            <label>$INFO[ListItem.Art(extrafanart7)]</label>
-            <label>$INFO[ListItem.Art(extrafanart8)]</label>
-            <label>$INFO[ListItem.Art(extrafanart9)]</label>
-            <label>$INFO[ListItem.Art(extrafanart10)]</label>
-            <label>$INFO[ListItem.Art(extrafanart11)]</label>
-            <label>$INFO[ListItem.Art(extrafanart12)]</label>
-            <label>$INFO[ListItem.Art(extrafanart13)]</label>
-            <label>$INFO[ListItem.Art(extrafanart14)]</label>
-            <label>$INFO[ListItem.Art(extrafanart15)]</label>
-            <label>$INFO[ListItem.Art(extrafanart16)]</label>
-            <label>$INFO[ListItem.Art(extrafanart17)]</label>
-            <label>$INFO[ListItem.Art(extrafanart0)]</label>
-        </control>
-        
-        
         </include>
         <include name="InteractiveNodeCases">
 
@@ -361,7 +333,7 @@
             <label>$INFO[Window(Home).Property(RandomMovie.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomMovie.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomMovie.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randommovies)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),randommovies) | Stringcompare(Control.GetLabel(4329),randommovies)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -390,7 +362,7 @@
             <label>$INFO[Window(Home).Property(RecentMovie.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentMovie.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentMovie.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentmovies)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),recentmovies) | Stringcompare(Control.GetLabel(4329),recentmovies)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -408,7 +380,7 @@
             <label>$INFO[Window(Home).Property(RecommendedMovie.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecommendedMovie.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecommendedMovie.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),watchlistmovies)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),watchlistmovies) | Stringcompare(Control.GetLabel(4329),watchlistmovies)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -436,7 +408,7 @@
             <label>$INFO[Window(Home).Property(RandomEpisode.18.Art(tvshow.fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomEpisode.19.Art(tvshow.fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomEpisode.20.Art(tvshow.fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randomtv)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),randomtv) | Stringcompare(Control.GetLabel(4329),randomtv)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -464,7 +436,7 @@
             <label>$INFO[Window(Home).Property(RecentEpisode.18.Art(tvshow.fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentEpisode.19.Art(tvshow.fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentEpisode.20.Art(tvshow.fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recenttv)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),recenttv) | Stringcompare(Control.GetLabel(4329),recenttv)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -482,7 +454,7 @@
             <label>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</label>
             <label>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</label>
             <label>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),watchlisttv)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),watchlisttv) | Stringcompare(Control.GetLabel(4329),watchlisttv)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -510,7 +482,7 @@
             <label>$INFO[Window(Home).Property(RecentAlbum.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentAlbum.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentAlbum.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentalbums)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),recentalbums) | Stringcompare(Control.GetLabel(4329),recentalbums)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -538,7 +510,7 @@
             <label>$INFO[Window(Home).Property(RandomArtist.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomArtist.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomArtist.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randomartists)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),randomartists) | Stringcompare(Control.GetLabel(4329),randomartists)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -566,7 +538,7 @@
             <label>$INFO[Window(Home).Property(RecommendedAlbum.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecommendedAlbum.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecommendedAlbum.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),watchlistalbums)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),watchlistalbums) | Stringcompare(Control.GetLabel(4329),watchlistalbums)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -594,7 +566,7 @@
             <label>$INFO[Window(Home).Property(RandomMusicVideo.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomMusicVideo.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RandomMusicVideo.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randommusicvideos)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),randommusicvideos) | Stringcompare(Control.GetLabel(4329),randommusicvideos)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -622,7 +594,7 @@
             <label>$INFO[Window(Home).Property(RecentMusicVideo.18.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentMusicVideo.19.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(RecentMusicVideo.20.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentmusicvideos)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),recentmusicvideos) | Stringcompare(Control.GetLabel(4329),recentmusicvideos)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -640,7 +612,7 @@
             <label>$INFO[Window(Home).Property(SmartPlaylist1.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist1.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist1.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),1custom)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),1custom) | Stringcompare(Control.GetLabel(4329),1custom)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -658,7 +630,7 @@
             <label>$INFO[Window(Home).Property(SmartPlaylist2.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist2.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist2.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),2custom)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),2custom) | Stringcompare(Control.GetLabel(4329),2custom)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -676,7 +648,7 @@
             <label>$INFO[Window(Home).Property(SmartPlaylist3.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist3.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist3.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),3custom)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),3custom) | Stringcompare(Control.GetLabel(4329),3custom)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -694,7 +666,7 @@
             <label>$INFO[Window(Home).Property(SmartPlaylist4.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist4.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist4.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),4custom)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),4custom)  | Stringcompare(Control.GetLabel(4329),4custom)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -712,7 +684,7 @@
             <label>$INFO[Window(Home).Property(SmartPlaylist5.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist5.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist5.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),5custom)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),5custom) | Stringcompare(Control.GetLabel(4329),5custom)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -730,7 +702,7 @@
             <label>$INFO[Window(Home).Property(SmartPlaylist6.8.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist6.9.Art(fanart))]</label>
             <label>$INFO[Window(Home).Property(SmartPlaylist6.10.Art(fanart))]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),6custom)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),6custom) | Stringcompare(Control.GetLabel(4329),6custom)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -748,7 +720,7 @@
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.8.Path)]</label>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.9.Path)]</label>
             <label>$INFO[Window(Home).Property(MyPicsDBRandom.10.Path)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randompics)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),randompics) | Stringcompare(Control.GetLabel(4329),randompics)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -766,7 +738,7 @@
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.8.Path)]</label>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.9.Path)]</label>
             <label>$INFO[Window(Home).Property(MyPicsDBLatest.10.Path)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),recentpics)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),recentpics) | Stringcompare(Control.GetLabel(4329),recentpics)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -786,7 +758,7 @@
             <label>http://dailybabenews.com/wp-content/uploads/2012/10/babe_10-$INFO[System.Date(dd)]-2012.jpg</label>
             <label>http://dailybabenews.com/wp-content/uploads/2012/11/babe_11-$INFO[System.Date(dd)]-2012.jpg</label>
             <label>http://dailybabenews.com/wp-content/uploads/2012/12/babe_12-$INFO[System.Date(dd)]-2012.jpg</label>
-            <visible>Stringcompare(Control.GetLabel(4322),dailybabe)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),dailybabe) | Stringcompare(Control.GetLabel(4329),dailybabe)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -804,7 +776,7 @@
             <label>$INFO[Window(Home).Property(MostPlayedROM.8.Fanart)]</label>
             <label>$INFO[Window(Home).Property(MostPlayedROM.9.Fanart)]</label>
             <label>$INFO[Window(Home).Property(MostPlayedROM.10.Fanart)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),mostplayedroms)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),mostplayedroms) | Stringcompare(Control.GetLabel(4329),mostplayedroms)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -832,7 +804,7 @@
             <label>$INFO[Window(home).Property(bigpictures.photo.18.pic)]</label>
             <label>$INFO[Window(home).Property(bigpictures.photo.19.pic)]</label>
             <label>$INFO[Window(home).Property(bigpictures.photo.20.pic)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),thebigpicture)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),thebigpicture) | Stringcompare(Control.GetLabel(4329),thebigpicture)</visible>
         </control>
         <control type="fadelabel" id="4324">
             <pauseatend>7500</pauseatend>
@@ -860,7 +832,7 @@
             <label>$INFO[Window(home).Property(Flickr.18.Background)]</label>
             <label>$INFO[Window(home).Property(Flickr.19.Background)]</label>
             <label>$INFO[Window(home).Property(Flickr.20.Background)]</label>
-            <visible>Stringcompare(Control.GetLabel(4322),randomflickr)</visible>
+            <visible>Stringcompare(Control.GetLabel(4322),randomflickr) | Stringcompare(Control.GetLabel(4329),randomflickr)</visible>
         </control>
     </include>
     <include name="InteractiveCasesBackground">
@@ -1612,6 +1584,7 @@
     </include>
     <include name="BackgroundsItem">
 		<control type="group">
+			<visible>!Player.HasAudio + !Player.HasMedia</visible>
 			<animation effect="fade" time="100">WindowOpen</animation>
                 <animation effect="fade" time="100">WindowClose</animation>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
@@ -1644,17 +1617,9 @@
 				<posx>1536</posx>
 				<height>600</height>
 				<width>384</width>
-				<texture>$INFO[Container(9000).ListItem.Property(element5)]</texture>
+				<texture>$INFO[Container(9000).ListItem.Property(element5)]</texture>			
 			</control>
 		</control>
-    </include>
-    <include name="ShelfPlayerBackground">
-        <control type="image">
-            <aspectratio align="center" aligny="top">scale</aspectratio>
-            <texture background="true">special://skin/background/empty.jpg</texture>
-            <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-            <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-        </control>
     </include>
     
 </includes>

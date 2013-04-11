@@ -155,12 +155,94 @@
                         <onclick>Skin.ToggleSetting(effect_bg)</onclick>
                         <selected>Skin.HasSetting(effect_bg)</selected>
                     </control>
-                    <control type="radiobutton" id="286">
-                        <label>31638</label>
+                    <control type="radiobutton" id="263">
+                        <label>31268</label>
                         <include>Default_SettingRadioButton</include>
-                        <onclick>Skin.ToggleSetting(NextAiredInfo)</onclick>
-                        <selected>!Skin.HasSetting(NextAiredInfo)</selected>
+                        <onclick>Skin.ToggleSetting(backendmode)</onclick>
+                        <onclick>RunScript(script.extendedinfo,backend=true)</onclick>
+                        <selected>Skin.HasSetting(backendmode)</selected>
+                        <visible>System.HasAddon(script.extendedinfo)</visible>
                     </control>
+                    <control type="radiobutton" id="264">
+                        <label>Show Projection</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(ShelfMode)</onclick>
+                        <onclick>Skin.SetString(PicturesHomeItem.Multifanart,$ESCINFO[Skin.String(PicturesHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(MusicHomeItem.Multifanart,$ESCINFO[Skin.String(MusicHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(MovieHomeItem.Multifanart,$ESCINFO[Skin.String(MovieHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(MusicVideosHomeItem.Multifanart,$ESCINFO[Skin.String(MusicVideosHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(TVShowHomeItem.Multifanart,$ESCINFO[Skin.String(TVShowHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(LiveTVHomeItem.Multifanart,$ESCINFO[Skin.String(LiveTVHomeItem.Screen)])</onclick>
+						<onclick>Skin.SetString(TVGuideHomeItem.Multifanart,$ESCINFO[Skin.String(TVGuideHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(FeaturedHomeItem.Multifanart,$ESCINFO[Skin.String(FeaturedHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem1.Multifanart,$ESCINFO[Skin.String(CustomHomeItem1.Screen)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem2.Multifanart,$ESCINFO[Skin.String(CustomHomeItem2.Screen)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem3.Multifanart,$ESCINFO[Skin.String(CustomHomeItem3.Screen)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem4.Multifanart,$ESCINFO[Skin.String(CustomHomeItem4.Screen)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem5.Multifanart,$ESCINFO[Skin.String(CustomHomeItem5.Screen)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem6.Multifanart,$ESCINFO[Skin.String(CustomHomeItem6.Screen)])</onclick>
+                        <onclick>Skin.SetString(VideosHomeItem.Multifanart,$ESCINFO[Skin.String(VideosHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(ProgramsHomeItem.Multifanart,$ESCINFO[Skin.String(ProgramsHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(SettingsHomeItem.Multifanart,$ESCINFO[Skin.String(SettingsHomeItem.Screen)])</onclick>
+						<onclick>Skin.SetString(SearchHomeItem.Multifanart,$ESCINFO[Skin.String(SearchHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(ShutdownHomeItem.Multifanart,$ESCINFO[Skin.String(ShutdownHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(FavouritesHomeItem.Multifanart,$ESCINFO[Skin.String(FavouritesHomeItem.Screen)])</onclick>
+                        <onclick>Skin.SetString(PicturesHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(MusicHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(MovieHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(MusicVideosHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(TVShowHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(LiveTVHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(TVGuideHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(FeaturedHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem1.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem2.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem3.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem4.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem5.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem6.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(VideosHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(ProgramsHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(SettingsHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(SearchHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(ShutdownHomeItem.Screen,nothing)</onclick>
+                        <onclick>Skin.SetString(FavouritesHomeItem.Screen,nothing)</onclick>
+                        <selected>Skin.HasSetting(ShelfMode)</selected>
+                        <visible>!Skin.HasSetting(ShelfMode)</visible>
+                    </control>
+                    <control type="radiobutton" id="265">
+                        <label>Show Projection</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(ShelfMode)</onclick>
+                        <onclick>Skin.SetString(PicturesHomeItem.Screen,$ESCINFO[Skin.String(PicturesHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(MusicHomeItem.Screen,$ESCINFO[Skin.String(MusicHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(MovieHomeItem.Screen,$ESCINFO[Skin.String(MovieHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(MusicVideosHomeItem.Screen,$ESCINFO[Skin.String(MusicVideosHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(TVShowHomeItem.Screen,$ESCINFO[Skin.String(TVShowHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(LiveTVHomeItem.Screen,$ESCINFO[Skin.String(LiveTVHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(TVGuideHomeItem.Screen,$ESCINFO[Skin.String(TVGuideHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(FeaturedHomeItem.Screen,$ESCINFO[Skin.String(FeaturedHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem1.Screen,$ESCINFO[Skin.String(CustomHomeItem1.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem2.Screen,$ESCINFO[Skin.String(CustomHomeItem2.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem3.Screen,$ESCINFO[Skin.String(CustomHomeItem3.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem4.Screen,$ESCINFO[Skin.String(CustomHomeItem4.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem5.Screen,$ESCINFO[Skin.String(CustomHomeItem5.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(CustomHomeItem6.Screen,$ESCINFO[Skin.String(CustomHomeItem6.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(VideosHomeItem.Screen,$ESCINFO[Skin.String(VideosHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(ProgramsHomeItem.Screen,$ESCINFO[Skin.String(ProgramsHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(SettingsHomeItem.Screen,$ESCINFO[Skin.String(SettingsHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(SearchHomeItem.Screen,$ESCINFO[Skin.String(SearchHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(ShutdownHomeItem.Screen,$ESCINFO[Skin.String(ShutdownHomeItem.Multifanart)])</onclick>
+                        <onclick>Skin.SetString(FavouritesHomeItem.Screen,$ESCINFO[Skin.String(FavouritesHomeItem.Multifanart)])</onclick>
+                        <selected>Skin.HasSetting(ShelfMode)</selected>
+                        <visible>Skin.HasSetting(ShelfMode)</visible>
+                    </control>
+                    <control type="radiobutton" id="266">
+                        <label>Widget Projection</label>
+                        <include>Default_SettingRadioButton</include>
+                        <onclick>Skin.ToggleSetting(ShelfWidgetMode)</onclick>
+                        <selected>Skin.HasSetting(ShelfWidgetMode)</selected>
+					</control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>
@@ -470,21 +552,7 @@
                         <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.tv.show.next.aired,http://passion-xbmc.org/developpement-python/(script)-betaseries-next-aired/)</onclick>
                         <visible>StringCompare(System.Language,French)+System.HasAddon(script.tv.show.next.aired)</visible>
                     </control>
-                    <control type="button" id="1639">
-                        <label>script.rss</label>
-                        <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://passion-xbmc.org/addons/Download.php,script.rssclient,http://passion-xbmc.org/addons/Download.php,script.rssfeeds)</onclick>
-                        <visible>!System.HasAddon(script.rssclient)+!System.HasAddon(script.rssfeeds)</visible>
-                    </control>
-                    <control type="button" id="1640">
-                        <label>script.rssclient</label>
-                        <label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
-                        <include>Default_SettingRadioButtonShort</include>
-                        <onclick>Addon.OpenSettings(script.rssclient)</onclick>
-                        <visible>System.HasAddon(script.rssclient)</visible>
-                    </control>
-                    
+                   
                  </control>
                <control type="grouplist" id="9009">
                     <visible>Container(9000).Hasfocus(8)</visible>
@@ -605,7 +673,7 @@
                     </control>
                     <control type="button" id="1671">
                         <label>help extendedinfo</label>
-                        <label2>Frost</label2>
+                        <label2>Phil65</label2>
                         <include>Default_SettingRadioButtonShort</include>
                         <onclick>RunScript(special://skin/scripts/xbmcwebbrowser.py,script.extendedinfo,http://forum.xbmc.org/showthread.php?tid=89163)</onclick>
                         <visible>System.HasAddon(script.extendedinfo)</visible>

@@ -905,6 +905,7 @@
                             <include>Objects_CustomizerSettingsButton</include>
                             <label>$LOCALIZE[31027]</label>
                             <onclick>Skin.Reset(ItemToEdit.Label)</onclick>
+                            <onclick>Skin.Reset(ItemToEdit.Color)</onclick>
                             <onclick>Skin.Reset(ItemToEdit.Path)</onclick>
                             <onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
                             <onclick>Skin.Reset(ItemToEdit.Type)</onclick>

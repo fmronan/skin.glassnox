@@ -52,12 +52,14 @@
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].MultiFanart,$ESCINFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Screen,$ESCINFO[Skin.String(ItemToEdit.Screen)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Label,$ESCINFO[Skin.String(ItemToEdit.Label)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Path,$ESCINFO[Skin.String(ItemToEdit.Path)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget,$INFO[Skin.String(ItemToEdit.Widget)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget2,$INFO[Skin.String(ItemToEdit.Widget2)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].WidgetTitle,$ESCINFO[Skin.String(ItemToEdit.WidgetTitle)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget2Title,$ESCINFO[Skin.String(ItemToEdit.Widget2Title)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Widget3,$INFO[Skin.String(ItemToEdit.Widget3)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Disable,$INFO[Skin.String(ItemToEdit.Disable)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Icon,$ESCINFO[Skin.String(ItemToEdit.Icon)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].InfoLine,$INFO[Skin.String(ItemToEdit.InfoLine)])</onunload>
@@ -218,58 +220,81 @@
                     <control type="button" id="26">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>$LOCALIZE[31680]</label>
+                        <onclick>Setproperty(BackgroundSelection,Background,1124)</onclick>
                         <onclick>ActivateWindow(1134)</onclick>
+                        <visible>Skin.HasSetting(ShelfMode)</visible>
                     </control>
                     <control type="button" id="27">
+                        <include>Objects_CustomizerSettingsButton</include>
+                        <label>$LOCALIZE[31680]</label>
+                        <onclick>Setproperty(BackgroundSelection,Screen,1124)</onclick>
+                        <onclick>ActivateWindow(1134)</onclick>
+                        <visible>!Skin.HasSetting(ShelfMode)</visible>
+                    </control>
+                    <control type="button" id="28">
 						<include>Objects_CustomizerSettingsButton</include>
 						<label>53015</label>
 						<onclick>SetProperty(colordialog,ItemToEdit.Color,1124)</onclick>
 						<onclick>ActivateWindow(1138)</onclick>
 					</control>
-                    <control type="button" id="28">
+					<control type="button" id="29">
+                        <include>Objects_CustomizerSettingsButton</include>
+                        <label>Screen</label>
+                        <onclick>Setproperty(BackgroundSelection,Screen,1124)</onclick>
+                        <onclick>ActivateWindow(1134)</onclick>
+                        <visible>Skin.HasSetting(ShelfMode)</visible>
+                    </control>
+                    <control type="button" id="30">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31703</label>
                         <onclick>ActivateWindow(1161)</onclick>
                     </control>
-                    <control type="button" id="280">
+                    <control type="button" id="300">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31704</label>
                         <onclick>ActivateWindow(1150)</onclick>
                     </control>                    
-                    <control type="button" id="29">
+                    <control type="button" id="31">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31807</label>
                         <onclick>SetProperty(IconTarget,Icon,1124)</onclick>
                         <onclick>ActivateWindow(1145)</onclick>
                     </control>
-                    <control type="button" id="30">
+                    <control type="button" id="32">
 						<include>Objects_CustomizerSettingsButton</include>
 						<label>53016</label>
 						<onclick>SetProperty(colordialog,ItemToEdit.IconColor,1124)</onclick>
 						<onclick>ActivateWindow(1138)</onclick>
 					</control>
-                    <control type="button" id="31">
+                    <control type="button" id="33">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31808</label>
                         <onclick>ActivateWindow(1151)</onclick>
                     </control>
-                    <control type="button" id="32">
+                    <control type="button" id="34">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>$LOCALIZE[31027]</label>
                         <onclick>Skin.Reset(ItemToEdit.Type)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Label)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.MultiFanart)</onclick>
+                        <onclick>Skin.Reset(ItemToEdit.Screen)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Path)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Widget)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.WidgetTitle)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Widget2)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Widget2Title)</onclick>
+                        <onclick>Skin.Reset(ItemToEdit.Widget3)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Icon)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Color)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.IconColor)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.Disable)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.InfoLine)</onclick>
                         <onclick>Skin.Reset(ItemToEdit.SubMenu)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(MenuItem)].element1)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(MenuItem)].element2)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(MenuItem)].element3)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(MenuItem)].element4)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(MenuItem)].element5)</onclick>
                         <onclick>SetProperty(ResetItem,true,1124)</onclick>
                         <onclick>Dialog.Close(1122)</onclick>
                     </control>

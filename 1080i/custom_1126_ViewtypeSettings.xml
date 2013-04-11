@@ -89,7 +89,7 @@
                     <visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) + !Skin.HasSetting(showcasezoom)] | [Stringcompare(Window(home).Property(actualViewtype),ShowcaseSquare) + !Skin.HasSetting(showcasesquarezoom)] | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),Landscape) | Stringcompare(Window(home).Property(actualViewtype),Banners)</visible>
                     <visible>![Stringcompare(Window(home).Property(actualViewtype),Shift) + !Skin.HasSetting(smallshiftview) + Window.IsActive(videos)]</visible>
                     <visible>!Container.Content(songs)</visible>
-                    <visible>!Container.Content(sets) | System.HasAddon(script.extendedinfo)</visible>
+                    <visible>!Container.Content(sets) | skin.hassetting(backendmode)</visible>
                 </control>
                 <control type="button" id="1614">
                     <label>$LOCALIZE[31876]</label>
@@ -596,7 +596,7 @@
                     <label>$LOCALIZE[31231]:</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[WallVerticalSettingsVar][/COLOR]</label2>
                     <onclick>Skin.ToggleSetting(WallVertical)</onclick>
-                    <include>ReloadWindowOnClick</include>
+                 <!--   <include>ReloadWindowOnClick</include>-->
                     <visible>Stringcompare(Window(home).Property(actualViewtype),Wall)</visible>
                 </control>
                 <control type="radiobutton" id="1653">
