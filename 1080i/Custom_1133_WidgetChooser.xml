@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1133">
     <onload>ClearProperty(NoStyleSelect)</onload>
-    <defaultcontrol always="true">4</defaultcontrol>
+    <onload>ClearProperty(ZoomItem,1124)</onload>
+    <defaultcontrol always="true">8</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
         <control type="group">
@@ -10,7 +11,7 @@
                 <posx>326</posx>
                 <posy>100</posy>
                 <width>1240</width>
-                <height>810</height>
+                <height>820</height>
                 <texture border="20">osd/osd_settings_back_glow.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
@@ -21,12 +22,30 @@
                 <posy>100</posy>
                 <width>1240</width>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
-                <height>810</height>
+                <height>820</height>
                 <texture border="20">osd/osd_settings_back.png</texture>
             </control>
             <include>Animation_OpenCloseZoom</include>
+            <control type="radiobutton" id="8">
+                <posx>347</posx>
+                <posy>120</posy>
+                <width>1200</width>
+                <height>60</height>
+                <font>Font_Reg30_2</font>
+                <textcolor>grey2</textcolor>
+                <focusedcolor>$VAR[HomeMenuTextFocusVar2]</focusedcolor>
+                <label>Etagére</label>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                <onup>4</onup>
+                <ondown>4</ondown>
+                <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(ZoomItem,true,1124)</onclick>
+                <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">ClearProperty(ZoomItem,1124)</onclick>
+                <selected>!IsEmpty(Window(1124).Property(ZoomItem))</selected>
+            </control>
             <control type="group">
-                <posy>-100</posy>
+                <posy>-60</posy>
                 <control type="panel" id="4">
                     <posx>347</posx>
                     <posy>240</posy>
@@ -34,7 +53,7 @@
                     <height>720</height>
                     <aligny>center</aligny>
                     <scrolltime>0</scrolltime>
-                    <onup>4</onup>
+                    <onup>8</onup>
                     <ondown>4</ondown>
                     <orientation>vertical</orientation>
                     <itemlayout height="60" width="400">
@@ -97,28 +116,32 @@
                         </item>
                         <item>
                             <label>$LOCALIZE[31323]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,recentmovies,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,recentmovies,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrecentmovies,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31323])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(movies)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31222]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randommovies,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randommovies,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrandommovies,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31222])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(movies)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31872]</label>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmoviesdefault)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmoviesdefault)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmoviesdefaultshelf)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
                             <visible>Library.HasContent(movies)</visible>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31335]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,watchlistmovies,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,watchlistmovies,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfwatchlistmovies,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31335])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(movies)</visible>
@@ -126,49 +149,56 @@
                         <item>
                             <label>$LOCALIZE[31093]</label>
                             <onclick>RunScript(script.metadata.actors,borntoday,10,random)</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,actors,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,actors,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfactors,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31336])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>System.HasAddon(script.metadata.actors)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31324]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,recenttv,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,recenttv,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrecenttv,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31324])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(tvshows)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31220]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randomtv,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randomtv,1124)</onclick>
+                            <onclick condition="!shelfIsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randomtv,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31220])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(tvshows)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31464]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,watchlisttv,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,watchlisttv,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfwatchlisttv,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31464])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(tvshows)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31873]</label>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredtvdefault)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredtvdefault)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredtvdefaultshelf)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31873])</onclick>
                             <visible>Library.HasContent(tvshows)</visible>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31359]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,recentalbums,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,recentalbums,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrecentalbums,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31359])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(music)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31068]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randomalbums,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randomalbums,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrandomalbums,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31068])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(music)</visible>
@@ -176,35 +206,40 @@
                         <item>
                             <label>$LOCALIZE[31874]</label>
                             <visible>Library.HasContent(music)</visible>
-                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmusicdefault)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmusicdefault)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredmusicdefaultshelf)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31068])</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31326]</label>
                             <visible>Library.HasContent(music)</visible>
-                            <onclick>SetProperty(CustomYesNoDialog,watchlistalbums,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,watchlistalbums,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfwatchlistalbums,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31326])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31081]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,recentmusicvideos,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,recentmusicvideos,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrecentmusicvideos,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31081])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(MusicVideos)</visible>
                         </item>
                         <item>
                             <label>$LOCALIZE[31091]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randommusicvideos,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randommusicvideos,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrandommusicvideos,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31091])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(MusicVideos)</visible>
                         </item>
                         <item>
                             <label>31712</label>
-                            <onclick>SetProperty(CustomYesNoDialog,watchlistmusicvideos,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,watchlistmusicvideos,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfwatchlistmusicvideos,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31712])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(MusicVideos)</visible>
@@ -212,31 +247,36 @@
                         <item>
                             <label>1036</label>
                             <onclick>RunScript(script.favourites)</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,favouriteIcon,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,favouriteIcon,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelffavouriteIcon,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[1036])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31069] 1</label>
-                            <onclick>SetProperty(CustomYesNoDialog,Icon1,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,Icon1,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfIcon1,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Icon Panel 1)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31069] 2</label>
-                            <onclick>SetProperty(CustomYesNoDialog,Icon2,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,Icon2,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfIcon2,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Icon Panel 2)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31070]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randomaddons,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randomaddons,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrandomaddons,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31070])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>$LOCALIZE[31071]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,weather,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,weather,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfweather,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31071])</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
                             <visible>!IsEmpty(Weather.Plugin)</visible>
@@ -256,7 +296,8 @@
                         <item>
                             <label>31815</label>
                             <onclick>RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Latest'&amp;sort='Shooted'&amp;limit=10)</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,recentpics,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,recentpics,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrecentpics,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31815])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
@@ -264,7 +305,8 @@
                         <item>
                             <label>31816</label>
                             <onclick>RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,randompics,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randompics,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrandompics,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31816])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>System.HasAddon(plugin.image.mypicsdb)</visible>
@@ -272,19 +314,22 @@
                         <item>
                             <label>Featured addon</label>
                             <onclick>RunScript(special://skin/scripts/RandomFeaturedAddons.py)</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,recommendedaddons,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,recommendedaddons,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrecommendedaddons,1124)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>31817</label>
-                            <onclick>SetProperty(CustomYesNoDialog,randomartists,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,randomartists,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrandomartists,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31817])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>31818</label>
                             <onclick>RunScript(script.extendedinfo,info=NearEvents)</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,concertspanel,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,concertspanel,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfconcertspanel,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31818])</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
                             <visible>System.HasAddon(script.extendedinfo)</visible>
@@ -292,31 +337,37 @@
                         <item>
                             <label>31819</label>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31819])</onclick>
-                            <onclick>SetProperty(CustomYesNoDialog,nextairedtv,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,nextairedtv,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfnextairedtv,1124)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>Library.HasContent(tvshows)</visible>
                         </item>
                         <item>
                             <label>31820</label>
-                            <onclick>SetProperty(CustomYesNoDialog,babespanelcoversquare,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,babespanelcoversquare,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfbabespanelcoversquare,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31820])</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
                         </item>
                         <item>
                             <label>$INFO[Window(home).Property(bigpictures.scraper.title)]</label>
-                            <onclick>SetProperty(CustomYesNoDialog,thebigpicture,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,thebigpicture,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfthebigpicture,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,The Big Picture)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
+                            <visible>System.HasAddon(service.skin.widgets_bigpictures)</visible>
                         </item>
                         <item>
                             <label>31199</label>
-                            <onclick>SetProperty(CustomYesNoDialog,rssnews,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,rssnews,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfrssnews,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,News)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                         </item>
                         <item>
                             <label>31183</label>
-                            <onclick>SetProperty(CustomYesNoDialog,wundergroundpanel,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,wundergroundpanel,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfwundergroundpanel,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Weather Wunderground)</onclick>
                             <onclick>ActivateWindow(1146)</onclick>
                             <visible>SubString(Weather.Plugin,weather.wunderground)</visible>
@@ -328,8 +379,17 @@
                             <visible>System.HasAddon(script.extendedinfo)</visible>
                         </item>
                         <item>
+                            <label>DpStream</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies1,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies1,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <visible>!IsEmpty(Skin.String(DpstreamList1.Call))</visible>
+                        </item>
+                        <item>
                             <label>31327</label>
-                            <onclick>SetProperty(CustomYesNoDialog,mostplayedroms,1124)</onclick>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,mostplayedroms,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmostplayedroms,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,Most Played ROMs)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <visible>System.HasAddon(script.games.rom.collection.browser)</visible>
@@ -337,9 +397,12 @@
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist1.Label)] ($INFO[Skin.String(SmartPlaylist1.Type)])</label>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist1.Label)])</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie)">SetProperty(CustomYesNoDialog,movies1custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Episode)">SetProperty(CustomYesNoDialog,tv1custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Music)">SetProperty(CustomYesNoDialog,albums1custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies1custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv1custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums1custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies1custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv1custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums1custom,1124)</onclick>
                             <visible>!IsEmpty(Skin.String(SmartPlaylist1.Path))</visible>
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                             <onclick>ActivateWindow(1137)</onclick>
@@ -347,16 +410,30 @@
                         </item>
                         <item>
                             <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist1.Label)] ($INFO[Skin.String(SmartPlaylist1.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie)">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featuredcustoms1moviedefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured1customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured1customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured1customsTVdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured1customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured1customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist1.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured1customsTVdefault)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <onclick>SetProperty(PlaylistSlot,SmartPlaylist13,home)</onclick>
+                            <onclick>SetProperty(Type,$INFO[Skin.String(SmartPlaylist1.Feature)],home)</onclick>
+                            <onclick>SetProperty(Method,Last,home)</onclick>
+							<onclick>SetProperty(Resume,True,home)</onclick>
+							<onclick>SetProperty(Unwatched,False,home)</onclick>
                             <visible>!IsEmpty(Skin.String(SmartPlaylist1.Path))</visible>
+                            <onclick>ActivateWindow(1125)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist2.Label)] ($INFO[Skin.String(SmartPlaylist2.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Movie)">SetProperty(CustomYesNoDialog,movies2custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Episode)">SetProperty(CustomYesNoDialog,tv2custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Music)">SetProperty(CustomYesNoDialog,albums2custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies2custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv2custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums2custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies2custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Episode) +! IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv2custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums2custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist2.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -364,10 +441,31 @@
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                         </item>
                         <item>
+                            <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist2.Label)] ($INFO[Skin.String(SmartPlaylist2.Type)])</label>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured2customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured2customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured2customsTVdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured2customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured2customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist2.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured2customsTVdefault)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <onclick>SetProperty(PlaylistSlot,SmartPlaylist14,home)</onclick>
+                            <onclick>SetProperty(Type,$INFO[Skin.String(SmartPlaylist2.Feature)],home)</onclick>
+                            <onclick>SetProperty(Method,Last,home)</onclick>
+							<onclick>SetProperty(Resume,True,home)</onclick>
+							<onclick>SetProperty(Unwatched,False,home)</onclick>
+                            <visible>!IsEmpty(Skin.String(SmartPlaylist2.Path))</visible>
+                            <onclick>ActivateWindow(1125)</onclick>
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
+                        <item>
                             <label>$INFO[Skin.String(SmartPlaylist3.Label)] ($INFO[Skin.String(SmartPlaylist3.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Movie)">SetProperty(CustomYesNoDialog,movies3custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Episode)">SetProperty(CustomYesNoDialog,tv3custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Music)">SetProperty(CustomYesNoDialog,albums3custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem)) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies3custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem)) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv3custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem)) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums3custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem)) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies3custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem)) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv3custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem)) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums3custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist3.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -375,10 +473,31 @@
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                         </item>
                         <item>
+                            <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist3.Label)] ($INFO[Skin.String(SmartPlaylist3.Type)])</label>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured3customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured3customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured3customsTVdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured3customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured3customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist3.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured3customsTVdefault)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <onclick>SetProperty(PlaylistSlot,SmartPlaylist15,home)</onclick>
+                            <onclick>SetProperty(Type,$INFO[Skin.String(SmartPlaylist3.Feature)],home)</onclick>
+                            <onclick>SetProperty(Method,Last,home)</onclick>
+							<onclick>SetProperty(Resume,True,home)</onclick>
+							<onclick>SetProperty(Unwatched,False,home)</onclick>
+                            <visible>!IsEmpty(Skin.String(SmartPlaylist3.Path))</visible>
+                            <onclick>ActivateWindow(1125)</onclick>
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
+                        <item>
                             <label>$INFO[Skin.String(SmartPlaylist4.Label)] ($INFO[Skin.String(SmartPlaylist4.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Movie)">SetProperty(CustomYesNoDialog,movies4custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Episode)">SetProperty(CustomYesNoDialog,tv4custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Music)">SetProperty(CustomYesNoDialog,albums4custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies4custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv4custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums4custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies4custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv4custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums4custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist4.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -386,10 +505,31 @@
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                         </item>
                         <item>
+                            <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist4.Label)] ($INFO[Skin.String(SmartPlaylist4.Type)])</label>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured4customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured4customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured4customsTVdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured4customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured4customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist4.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured4customsTVdefault)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <onclick>SetProperty(PlaylistSlot,SmartPlaylist16,home)</onclick>
+                            <onclick>SetProperty(Type,$INFO[Skin.String(SmartPlaylist4.Feature)],home)</onclick>
+                            <onclick>SetProperty(Method,Last,home)</onclick>
+							<onclick>SetProperty(Resume,True,home)</onclick>
+							<onclick>SetProperty(Unwatched,False,home)</onclick>
+                            <visible>!IsEmpty(Skin.String(SmartPlaylist4.Path))</visible>
+                            <onclick>ActivateWindow(1125)</onclick>
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
+                        <item>
                             <label>$INFO[Skin.String(SmartPlaylist5.Label)] ($INFO[Skin.String(SmartPlaylist5.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Movie)">SetProperty(CustomYesNoDialog,movies5custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Episode)">SetProperty(CustomYesNoDialog,tv5custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Music)">SetProperty(CustomYesNoDialog,albums5custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies5custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv5custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums5custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies5custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv5custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums5custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist5.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -397,10 +537,31 @@
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                         </item>
                         <item>
+                            <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist5.Label)] ($INFO[Skin.String(SmartPlaylist5.Type)])</label>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured5customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured5customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured5customsTVdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured5customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured5customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist5.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured5customsTVdefault)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <onclick>SetProperty(PlaylistSlot,SmartPlaylist17,home)</onclick>
+                            <onclick>SetProperty(Type,$INFO[Skin.String(SmartPlaylist5.Feature)],home)</onclick>
+                            <onclick>SetProperty(Method,Last,home)</onclick>
+							<onclick>SetProperty(Resume,True,home)</onclick>
+							<onclick>SetProperty(Unwatched,False,home)</onclick>
+                            <visible>!IsEmpty(Skin.String(SmartPlaylist5.Path))</visible>
+                            <onclick>ActivateWindow(1125)</onclick>
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
+                        <item>
                             <label>$INFO[Skin.String(SmartPlaylist6.Label)] ($INFO[Skin.String(SmartPlaylist6.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Movie)">SetProperty(CustomYesNoDialog,movies6custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Episode)">SetProperty(CustomYesNoDialog,tv6custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Music)">SetProperty(CustomYesNoDialog,albums6custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies6custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv6custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums6custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies6custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv6custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums6custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist6.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -408,11 +569,32 @@
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                         </item>
                         <item>
+                            <label>$LOCALIZE[31872] $INFO[Skin.String(SmartPlaylist6.Label)] ($INFO[Skin.String(SmartPlaylist6.Type)])</label>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured6customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured6customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],featured6customsTVdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured6customsmoviesdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured6customsalbumsdefault)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist6.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelffeatured6customsTVdefault)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$LOCALIZE[31872])</onclick>
+                            <onclick>SetProperty(PlaylistSlot,SmartPlaylist18,home)</onclick>
+                            <onclick>SetProperty(Type,$INFO[Skin.String(SmartPlaylist6.Feature)],home)</onclick>
+                            <onclick>SetProperty(Method,Last,home)</onclick>
+							<onclick>SetProperty(Resume,True,home)</onclick>
+							<onclick>SetProperty(Unwatched,False,home)</onclick>
+                            <visible>!IsEmpty(Skin.String(SmartPlaylist6.Path))</visible>
+                            <onclick>ActivateWindow(1125)</onclick>
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
+                        <item>
                             <label>$INFO[Skin.String(SmartPlaylist7.Label)] ($INFO[Skin.String(SmartPlaylist7.Type)])</label>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist7.Label)])</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Movie)">SetProperty(CustomYesNoDialog,movies7custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Episode)">SetProperty(CustomYesNoDialog,tv7custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Music)">SetProperty(CustomYesNoDialog,albums7custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies7custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv7custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums7custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies7custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv7custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist7.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums7custom,1124)</onclick>
                             <visible>!IsEmpty(Skin.String(SmartPlaylist7.Path))</visible>
                             <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
                             <onclick>ActivateWindow(1137)</onclick>
@@ -420,9 +602,12 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist8.Label)] ($INFO[Skin.String(SmartPlaylist8.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Movie)">SetProperty(CustomYesNoDialog,movies8custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Episode)">SetProperty(CustomYesNoDialog,tv8custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Music)">SetProperty(CustomYesNoDialog,albums8custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies8custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv8custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums8custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies8custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv8custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist8.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums8custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist8.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -431,9 +616,12 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist9.Label)] ($INFO[Skin.String(SmartPlaylist9.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Movie)">SetProperty(CustomYesNoDialog,movies9custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Episode)">SetProperty(CustomYesNoDialog,tv9custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Music)">SetProperty(CustomYesNoDialog,albums9custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies9custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv9custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums9custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies9custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv9custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist9.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums9custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist9.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -442,9 +630,12 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist10.Label)] ($INFO[Skin.String(SmartPlaylist10.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Movie)">SetProperty(CustomYesNoDialog,movies10custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Episode)">SetProperty(CustomYesNoDialog,tv10custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Music)">SetProperty(CustomYesNoDialog,albums10custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies10custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv10custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums10custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies10custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv10custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist10.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums10custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist10.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -453,9 +644,12 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist11.Label)] ($INFO[Skin.String(SmartPlaylist11.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Movie)">SetProperty(CustomYesNoDialog,movies11custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Episode)">SetProperty(CustomYesNoDialog,tv11custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Music)">SetProperty(CustomYesNoDialog,albums11custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies11custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv11custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums11custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies11custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv11custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist11.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums11custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist11.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
@@ -464,9 +658,12 @@
                         </item>
                         <item>
                             <label>$INFO[Skin.String(SmartPlaylist12.Label)] ($INFO[Skin.String(SmartPlaylist12.Type)])</label>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Movie)">SetProperty(CustomYesNoDialog,movies12custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Episode)">SetProperty(CustomYesNoDialog,tv12custom,1124)</onclick>
-                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Music)">SetProperty(CustomYesNoDialog,albums12custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Movie) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,movies12custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Episode) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,tv12custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Music) + IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,albums12custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Movie) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfmovies12custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Episode) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelftv12custom,1124)</onclick>
+                            <onclick condition="Substring(Skin.String(SmartPlaylist12.Type),Music) + !IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfalbums12custom,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,$ESCINFO[Skin.String(SmartPlaylist12.Label)])</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>

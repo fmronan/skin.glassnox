@@ -13,6 +13,7 @@
     <onload>AlarmClock(HomeTile2Mid,Control.Move(6002,1),00:15,silent,loop)</onload>
     <onload>SetProperty(MenuName,MenuItem,home)</onload>
     <onload>ClearProperty(FocusOnSubmenu,home)</onload>
+    <onunload>ClearProperty(ZoomItem,1124)</onunload>
     <onunload>CancelAlarm(HomeTileLeft,true)</onunload>
     <onunload>CancelAlarm(HomeTileRight,true)</onunload>
     <onunload>CancelAlarm(HomeTileMid,true)</onunload>
@@ -99,7 +100,7 @@
             <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
             <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
         </control>-->
-        <include>BackgroundsItem</include>
+        <include>BackgroundsItemFirst</include>
         <include condition="!IsEmpty(Skin.String(CDWall_Folder_Path))">cdwall-musicvisualisation</include>
         <include condition="!IsEmpty(Skin.String(MovieWall_Folder_Path))">MovieWall</include>
         <control type="image">
@@ -288,6 +289,7 @@
                 <include>Furniture_ClassicHomeGradient</include>
                 <include>Neon_Home</include>
             </control>
+            <include>BackgroundsItem</include>
         </control>
     </controls>
 </window>

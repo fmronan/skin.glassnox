@@ -4,6 +4,7 @@
     <allowoverlay>no</allowoverlay>
     <include>Animation_DialogPopup</include>
     <onunload>ClearProperty(SetPanelItem,home)</onunload>
+    <onunload>ClearProperty(Featured,home)</onunload>
     <controls>
         <!--         <control type="button" id="9004">
             <include>HiddenObject</include>
@@ -354,6 +355,24 @@
                 </control>
             </focusedlayout>
             <content>
+				<include condition="Substring(Window(home).Property(Featured),left1customs)">Custom1Widget</include>
+                <include condition="Substring(Window(home).Property(Featured),left2customs)">Custom2Widget</include>
+                <include condition="Substring(Window(home).Property(Featured),left3customs)">Custom3Widget</include>
+                <include condition="Substring(Window(home).Property(Featured),left4customs)">Custom4Widget</include>
+                <include condition="Substring(Window(home).Property(Featured),left5customs)">Custom5Widget</include>
+                <include condition="Substring(Window(home).Property(Featured),left6customs)">Custom6Widget</include>
+                <include condition="Substring(Window(home).Property(Featured),middle1customs)">Custom1Widget3</include>
+                <include condition="Substring(Window(home).Property(Featured),middle2customs)">Custom2Widget3</include>
+                <include condition="Substring(Window(home).Property(Featured),middle3customs)">Custom3Widget3</include>
+                <include condition="Substring(Window(home).Property(Featured),middle4customs)">Custom4Widget3</include>
+                <include condition="Substring(Window(home).Property(Featured),middle5customs)">Custom5Widget3</include>
+                <include condition="Substring(Window(home).Property(Featured),middle6customs)">Custom6Widget3</include>
+                <include condition="Substring(Window(home).Property(Featured),right1customs)">Custom1Widget2</include>
+                <include condition="Substring(Window(home).Property(Featured),right2customs)">Custom2Widget2</include>
+                <include condition="Substring(Window(home).Property(Featured),right3customs)">Custom3Widget2</include>
+                <include condition="Substring(Window(home).Property(Featured),right4customs)">Custom4Widget2</include>
+                <include condition="Substring(Window(home).Property(Featured),right5customs)">Custom5Widget2</include>
+                <include condition="Substring(Window(home).Property(Featured),right6customs)">Custom6Widget2</include>
                 <include condition="Stringcompare(Window(home).Property(Featured),randommovies)">RandomMoviesItems</include>
                 <include condition="Stringcompare(Window(home).Property(Featured),recentmovies)">LatestMoviesItems</include>
                 <include condition="Stringcompare(Window(home).Property(Featured),watchlistalbums)">WatchlistMusicItems</include>
@@ -371,9 +390,16 @@
                 <include condition="Stringcompare(Window(home).Property(Featured),randomtv)">RandomEpisodesItemsHome</include>
                 <include condition="Stringcompare(Window(home).Property(Featured),rssnews)">NewsWidgetContent1124</include>
                 <include condition="Stringcompare(Window(home).Property(Featured),rssnews)">NewsWidgetContent</include>
+                
             </content>
         </control>
         <control type="button" id="5014">
+            <include>HiddenObject</include>
+            <onfocus condition="Substring(Control.GetLabel(4321),movie)">SetFocus(8020)</onfocus>
+            <onfocus condition="!Substring(Control.GetLabel(4321),movie)">$INFO[Container(8001).ListItem.Property(Path)]</onfocus>
+            <onfocus condition="!Substring(Control.GetLabel(4321),movie)">Action(Close)</onfocus>
+        </control>
+        <control type="button" id="6014">
             <include>HiddenObject</include>
             <onfocus condition="Substring(Control.GetLabel(4321),movie)">SetFocus(8020)</onfocus>
             <onfocus condition="!Substring(Control.GetLabel(4321),movie)">$INFO[Container(8001).ListItem.Property(Path)]</onfocus>

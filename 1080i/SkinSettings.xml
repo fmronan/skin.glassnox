@@ -237,12 +237,6 @@
                         <selected>Skin.HasSetting(ShelfMode)</selected>
                         <visible>Skin.HasSetting(ShelfMode)</visible>
                     </control>
-                    <control type="radiobutton" id="266">
-                        <label>Widget Projection</label>
-                        <include>Default_SettingRadioButton</include>
-                        <onclick>Skin.ToggleSetting(ShelfWidgetMode)</onclick>
-                        <selected>Skin.HasSetting(ShelfWidgetMode)</selected>
-					</control>
                     <control type="radiobutton" id="107">
                         <label>21398</label>
                         <include>Default_SettingRadioButton</include>
@@ -633,7 +627,7 @@
                         <label>script.randomandlastitems</label>
                         <label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
                         <include>Default_SettingRadioButtonShort</include>
-                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://passion-xbmc.org/addons/addons.php/11.0,http://mirrors.xbmc.org/addons/frodo,script.randomandlastitems,http://mirrors.xbmc.org/addons/frodo,script.playlists)</onclick>
+                        <onclick>RunScript(special://skin/scripts/dependencies.py,http://mirrors.xbmc.org/addons/frodo/addons.xml,http://mirrors.xbmc.org/addons/frodo,script.randomandlastitems),http://mirrors.xbmc.org/addons/frodo,script.playlists)</onclick>
                         <visible>!System.HasAddon(script.randomandlastitems)+!System.HasAddon(script.playlists)</visible>
                     </control>
                     <control type="button" id="1666">

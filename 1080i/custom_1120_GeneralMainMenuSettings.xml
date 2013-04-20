@@ -13,7 +13,7 @@
     <controls>
 	<control type="group">
 		<include>Animation_DialogPopup</include>
-		<visible>!Window.IsActive(1132)+!Window.IsActive(1151)+!Window.IsActive(1148)+!Window.IsVisible(DialogAddonSettings.xml)</visible>
+		<visible>!Window.IsActive(1132)+!Window.IsActive(1151)+!Window.IsActive(1148)+!Window.IsVisible(DialogAddonSettings.xml)+!Window.IsActive(1190)</visible>
         <control type="image">
             <posx>356</posx>
             <posy>180</posy>
@@ -109,6 +109,12 @@
                 <include>Objects_CommonSettingsButton</include>
                 <label>$LOCALIZE[31479]: $LOCALIZE[1045]</label>
                 <onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
+            </control>
+            <control type="button" id="320">
+                <include>Objects_CommonSettingsButton</include>
+                <label>Dpstream manager</label>
+                <onclick>ActivateWindow(1190)</onclick>
+                <visible>System.HasAddon(plugin.video.dpstream)</visible>
             </control>
         </control>
        </control>

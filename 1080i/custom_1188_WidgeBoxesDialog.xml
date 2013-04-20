@@ -186,7 +186,7 @@
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidgetCase,clear)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
-                        <onclick>ActivateWindow(1146)</onclick>
+                        <onclick>ActivateWindow(1189)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+!SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
                     <control type="button" id="19">
@@ -200,7 +200,8 @@
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidget2Case,movies)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
-                        <onclick>ActivateWindow(1146)</onclick>
+                        <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">ActivateWindow(1146)</onclick>
+                        <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">ActivateWindow(1189)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
                     <control type="button" id="20">
@@ -214,7 +215,8 @@
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidget2Case,tvshows)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
-                        <onclick>ActivateWindow(1146)</onclick>
+                        <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">ActivateWindow(1146)</onclick>
+                        <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">ActivateWindow(1189)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
                     <control type="button" id="21">
@@ -228,7 +230,8 @@
                         <textoffsetx>15</textoffsetx>
                         <onclick>Skin.SetString(LiveBGWidget2Case,clear)</onclick>
                         <onclick>Dialog.Close(1188)</onclick>
-                        <onclick>ActivateWindow(1146)</onclick>
+                        <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">ActivateWindow(1146)</onclick>
+                        <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">ActivateWindow(1189)</onclick>
                         <visible>Substring(Window(1124).Property(CustomYesNoDialog),movies)+SubString(Window(1124).Property(WidgetSelection),widget2)</visible>
                     </control>
                     <control type="grouplist" id="5401">

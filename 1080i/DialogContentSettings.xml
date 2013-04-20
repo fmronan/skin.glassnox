@@ -8,6 +8,7 @@
     </coordinates>
     <include>Animation_DialogPopup</include>
     <controls>
+		<include>DialogBackFade</include>
         <control type="group">
             <animation effect="fade" start="100" end="0" time="160" condition="Window.IsActive(AddonSettings)">Conditional</animation>
             <posx>384</posx>

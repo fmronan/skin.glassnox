@@ -488,6 +488,10 @@
     </include>
     <include name="HomePanelWidget2_1124">
         <control type="group" id="6000">
+			<animation type="Conditional" condition="Substring(Control.GetLabel(4325),shelf)" reversible="false">
+				<effect type="slide" start="0,0" end="122,-30" time="0" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="85" time="0"/>
+			</animation>
             <posx>135</posx>
             <posy>-7</posy>
             <animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>

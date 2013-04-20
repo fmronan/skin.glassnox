@@ -33,6 +33,7 @@
     <include file="Includes_MainMenu.xml" />
     <include file="Includes_PVR.xml" />
     <include file="Includes_Widget2.xml" />
+    <include file="Includes_Widget3.xml" />
     <include file="Includes_CustomizerWindow.xml" />
     <include file="Viewtype_FullscreenPanel.xml" />
     <include file="Includes_NextAired.xml" />
@@ -645,6 +646,24 @@
     </include>
     <include name="Default_PlaylistDialogButton">
         <width>335</width>
+        <height>60</height>
+        <aligny>top</aligny>
+        <textoffsetx>20</textoffsetx>
+        <textoffsety>8</textoffsety>
+        <font>Font_Reg28</font>
+        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+    </include>
+    <include name="Default_DpstreamDialogButton">
+        <width>310</width>
+        <height>60</height>
+        <aligny>top</aligny>
+        <textoffsetx>20</textoffsetx>
+        <textoffsety>8</textoffsety>
+        <font>Font_Reg28</font>
+        <textcolor>$VAR[SubTitleColorVar]</textcolor>
+    </include>
+    <include name="Default_DpstreamDialogButton2">
+        <width>200</width>
         <height>60</height>
         <aligny>top</aligny>
         <textoffsetx>20</textoffsetx>

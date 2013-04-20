@@ -2595,6 +2595,7 @@
                         <include condition="Substring(Skin.String(widgetlist),Icon1classic)">IconPanel1Items</include>
                         <include condition="Substring(Skin.String(widgetlist),Icon2classic)">IconPanel2Items</include>
                         <include condition="Substring(Skin.String(widgetlist),favouriteIconclassic)">FavouritesItems</include>
+                        <include condition="Substring(Skin.String(widgetlist),dpstreammovies1classic)">DpStream1</include>
                     </content>
                 </control>
                 
@@ -2705,17 +2706,17 @@
     </include>
     <include name="HomePanelWidget">
         <control type="group" id="5000">
-			<animation type="Conditional" condition="Control.HasFocus(5010) + Skin.HasSetting(ShelfWidgetMode) + Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="ControlGroup(5000).HasFocus +  Skin.HasSetting(lowermainmenu)" reversible="true">
 				<effect type="slide" start="0,0" end="0,-345" time="500" tween="cubic" easing="inout" />
 			</animation>
-			<animation type="Conditional" condition="Control.HasFocus(5010) + Skin.HasSetting(ShelfWidgetMode) + !Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="ControlGroup(5000).HasFocus +  !Skin.HasSetting(lowermainmenu)" reversible="true">
 				<effect type="slide" start="0,0" end="0,-620" time="500" tween="cubic" easing="inout" />
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(6010) | Control.HasFocus(7000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="[ControlGroup(6000).HasFocus | Control.HasFocus(7000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
 				<effect type="slide" start="0,0" end="-145,-180" time="500" tween="cubic" easing="inout" />
 				<effect type="zoom" start="100" end="30" time="500"/>
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(6010) | Control.HasFocus(7000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="[ControlGroup(6000).HasFocus| Control.HasFocus(7000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
 				<effect type="slide" start="0,0" end="-145,245" time="500" tween="cubic" easing="inout" />
 				<effect type="zoom" start="100" end="30" time="500"/>
 			</animation>
@@ -2941,6 +2942,24 @@
                             <onclick condition="Substring(Control.GetLabel(4321),movies)">SetProperty(Featured,randommovies,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),tv)">SetProperty(Featured,watchlisttv,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),music)">SetProperty(Featured,randomalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsmovies)">SetProperty(Featured,left1customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsalbums)">SetProperty(Featured,left1customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsTV)">SetProperty(Featured,left1customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsmovies)">SetProperty(Featured,left2customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsalbums)">SetProperty(Featured,left2customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsTV)">SetProperty(Featured,left2customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsmovies)">SetProperty(Featured,left3customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsalbums)">SetProperty(Featured,left3customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsTV)">SetProperty(Featured,left3customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsmovies)">SetProperty(Featured,left4customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsalbums)">SetProperty(Featured,left4customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsTV)">SetProperty(Featured,left4customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsmovies)">SetProperty(Featured,left5customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsalbums)">SetProperty(Featured,left5customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsTV)">SetProperty(Featured,left5customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsmovies)">SetProperty(Featured,left6customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsalbums)">SetProperty(Featured,left6customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsTV)">SetProperty(Featured,left6customsTV,home)</onclick>
                             <onclick>SetProperty(FocusedItem,$ESCINFO[Container(5001).ListItem.Label],home)</onclick>
                             <onclick>ActivateWindow(1140)</onclick>
                         </control>
@@ -2963,7 +2982,12 @@
                             </focusedlayout>
                             <content>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmovies)">FeaturedWidgetLeftMovies</include>
-                                <include condition="Substring(Skin.String(widgetlist),featuredcustoms1)">Custom1Widget</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured1customs)">Custom1Widget</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured2customs)">Custom2Widget</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured3customs)">Custom3Widget</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured4customs)">Custom4Widget</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured5customs)">Custom5Widget</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured6customs)">Custom6Widget</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredtv)">FeaturedWidgetLeftTV</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmusic)">FeaturedWidgetLeftMusic</include>
                             </content>
@@ -3023,6 +3047,24 @@
                             <onclick condition="Substring(Control.GetLabel(4321),tv)">SetProperty(Featured,randomtv,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),movies)">SetProperty(Featured,watchlistmovies,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),music)">SetProperty(Featured,watchlistalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsmovie)">SetProperty(Featured,middle1customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsalbums)">SetProperty(Featured,middle1customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsTV)">SetProperty(Featured,middle1customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsmovie)">SetProperty(Featured,middle2customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsalbums)">SetProperty(Featured,middle2customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsTV)">SetProperty(Featured,middle2customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsmovie)">SetProperty(Featured,middle3customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsalbums)">SetProperty(Featured,middle3customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsTV)">SetProperty(Featured,middle3customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsmovie)">SetProperty(Featured,middle4customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsalbums)">SetProperty(Featured,middle4customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsTV)">SetProperty(Featured,middle4customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsmovie)">SetProperty(Featured,middle5customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsalbums)">SetProperty(Featured,middle5customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsTV)">SetProperty(Featured,middle5customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsmovie)">SetProperty(Featured,middle6customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsalbums)">SetProperty(Featured,middle6customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsTV)">SetProperty(Featured,middle6customsTV,home)</onclick>
                             <onclick>SetProperty(FocusedItem,$ESCINFO[Container(5002).ListItem.Label],home)</onclick>
                             <onclick>ActivateWindow(1140)</onclick>
                         </control>
@@ -3036,7 +3078,6 @@
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
                             <scrolltime tween="cubic" easing="inout">1200</scrolltime>
-                            <preloaditems>2</preloaditems>
                             <itemlayout width="340" height="340">
                                 <include>FeaturedWidgetSquareLayout</include>
                             </itemlayout>
@@ -3044,9 +3085,15 @@
                                 <include>FeaturedWidgetSquareLayout</include>
                             </focusedlayout>
                             <content>
-                                <include condition="Substring(Skin.String(widgetlist),featuredmovies)">FeaturedWidgetMiddleMovies</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured1customs)">Custom1Widget3</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured2customs)">Custom2Widget3</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured3customs)">Custom3Widget3</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured4customs)">Custom4Widget3</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured5customs)">Custom5Widget3</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured6customs)">Custom6Widget3</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredtv)">FeaturedWidgetMiddleTV</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmusic)">FeaturedWidgetMiddleMusic</include>
+                                <include condition="Substring(Skin.String(widgetlist),featuredmovies)">FeaturedWidgetMiddleMovies</include>
                             </content>
                         </control>
                         <control type="label">
@@ -3116,6 +3163,24 @@
                             <onclick condition="Substring(Control.GetLabel(4321),movies)">SetProperty(Featured,recentmovies,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),tv)">SetProperty(Featured,recenttv,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4321),music)">SetProperty(Featured,recentalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsmovie)">SetProperty(Featured,right1customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsalbums)">SetProperty(Featured,right1customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),1customsTV)">SetProperty(Featured,right1customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsmovie)">SetProperty(Featured,right2customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsalbums)">SetProperty(Featured,right2customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),2customsTV)">SetProperty(Featured,right2customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsmovie)">SetProperty(Featured,right3customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsalbums)">SetProperty(Featured,right3customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),3customsTV)">SetProperty(Featured,right3customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsmovie)">SetProperty(Featured,right4customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsalbums)">SetProperty(Featured,right4customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),4customsTV)">SetProperty(Featured,right4customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsmovie)">SetProperty(Featured,right5customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsalbums)">SetProperty(Featured,right5customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),5customsTV)">SetProperty(Featured,right5customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsmovie)">SetProperty(Featured,right6customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsalbums)">SetProperty(Featured,right6customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4321),6customsTV)">SetProperty(Featured,right6customsTV,home)</onclick>
                             <onclick>SetProperty(FocusedItem,$ESCINFO[Container(5003).ListItem.Label],home)</onclick>
                             <onclick>ActivateWindow(1140)</onclick>
                         </control>
@@ -3138,6 +3203,12 @@
                             </focusedlayout>
                             <content>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmovies)">FeaturedWidgetRightMovies</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured1customs)">Custom1Widget2</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured2customs)">Custom2Widget2</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured3customs)">Custom3Widget2</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured4customs)">Custom4Widget2</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured5customs)">Custom5Widget2</include>
+                                <include condition="Substring(Skin.String(widgetlist),featured6customs)">Custom6Widget2</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredtv)">FeaturedWidgetRightTV</include>
                                 <include condition="Substring(Skin.String(widgetlist),featuredmusic)">FeaturedWidgetRightMusic</include>
                             </content>
@@ -3319,7 +3390,7 @@
                             <effect type="zoom" start="104" center="1610,80" end="100" delay="2520" time="140" tween="quadratic" easing="out" />
                         </animation>
                         <texture background="true" diffuse="common/cdart/disc_Mask.png">$INFO[Window(home).Property(Fanart)]</texture>
-                        <bordersize>2,2,2,2</bordersize>
+                        <bordersize>2</bordersize>
                          <bordertexture diffuse="common/cdart/disc_Mask.png">common/white.png</bordertexture>
                         <visible>IsEmpty(Window(home).Property(Discart))+!IsEmpty(Window(home).Property(Fanart)) +!Substring(Control.GetLabel(4321),tv</visible>
                     </control>
@@ -3421,7 +3492,8 @@
                         <include>WidgetMenuLabel</include>
 						<onclick condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))">SetFocus(5010)</onclick>
 						<onclick condition="!IsEmpty(Window(home).Property(PanelWidget2Info))">SetFocus(6010)</onclick>
-						<onclick condition="Substring(Window(home).Property(WidgetType),movies)">Runscript(service.skin.widgets,movieid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
+						<onclick condition="Substring(Window(home).Property(WidgetType),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/','-1','?url=$INFO[Window(home).Property(Trailer)]&amp;mode=13&amp;id=$INFO[Window(home).Property(Path)],return)</onclick>
+						<onclick condition="Substring(Window(home).Property(WidgetType),movies) + !Substring(Window(home).Property(WidgetType),dpstream)">Runscript(service.skin.widgets,movieid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),tv)">Runscript(service.skin.widgets,episodeid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),musicvideo)">Runscript(service.skin.widgets,musicvideoid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),roms)">RunScript(script.games.rom.collection.browser,launchid=$INFO[Window(home).Property(Id)])</onclick>
@@ -4168,11 +4240,11 @@
     </include>
     <include name="RecentWidget2">
         <control type="group" id="7998">
-			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(5011) | Control.HasFocus(5012) | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
 				<effect type="slide" start="0,0" end="245,485" time="750" tween="cubic" easing="inout" />
 				<effect type="zoom" start="100" end="30" time="750"/>
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(5011) | Control.HasFocus(5012) | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
 				<effect type="slide" start="0,0" end="245,835" time="750" tween="cubic" easing="inout" />
 				<effect type="zoom" start="100" end="30" time="750"/>
 			</animation>
@@ -4241,6 +4313,8 @@
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
+                    <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                 </control>
                 <control type="image">
@@ -4254,6 +4328,8 @@
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
+                    <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                 </control>
                 <control type="image" id="90018">
@@ -4265,7 +4341,9 @@
                     <texture background="true">$INFO[Container(7000).ListItem.Property(Logo)]</texture>
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
+                    <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Logo))+IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <include>Animation_HomeWidget</include>
                 </control>
                 <control type="image">
@@ -4279,6 +4357,8 @@
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
+                    <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Logo))+IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                 </control>
                 <control type="image">
@@ -4291,6 +4371,8 @@
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
+                    <visible>Substring(Control.GetLabel(4325),Logoart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!Control.IsVisible(90018)</visible>
                 </control>
                 <control type="image">
@@ -4303,6 +4385,8 @@
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
+                    <visible>Substring(Control.GetLabel(4325),Logoart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!Control.IsVisible(90018)</visible>
                 </control>
                
@@ -4332,6 +4416,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,209" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1943</posx>
@@ -4348,6 +4434,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,489" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1943</posx>
@@ -4365,6 +4453,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,209" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1873</posx>
@@ -4380,6 +4470,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,209" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1933</posx>
@@ -4395,6 +4487,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,209" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1833</posx>
@@ -4410,6 +4504,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,209" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1943</posx>
@@ -4428,6 +4524,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,489" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                 <control type="image">
                     <posx>-1833</posx>
@@ -4446,6 +4544,8 @@
                         <effect type="slide" start="0,0" end="800,0"  time="1120" tween="quadratic" easing="out" />
 						<effect type="rotate" start="0" center="-1803,209" end="-360" time="1120" tween="quadratic" easing="out" />
                     </animation>
+                    <visible>Substring(Control.GetLabel(4325),Discart)</visible>
+                    <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                 </control>
                </control> 
                 <control type="image">
@@ -5235,6 +5335,7 @@
                         <include condition="Substring(Skin.String(widget2list),watchlistalbumsclassic)">WatchlistMusicItems2Home</include>
                         <include condition="Substring(Skin.String(widget2list),actorsclassic)">BornActorsItems2</include>
                         <include condition="Substring(Skin.String(widget2list),randomaddonsclassic)">RandomAddonsItems2</include>
+                        <include condition="Substring(Skin.String(widget2list),randomaddonsclassic)">RecommendedAddons2</include>
                         <include condition="Substring(Skin.String(widget2list),recenttvclassic)">LatestEpisodesItems2</include>
                         <include condition="Substring(Skin.String(widget2list),recenttvclassic)">LatestEpisodesItems2Home</include>
                         <include condition="Substring(Skin.String(widget2list),randomtvclassic)">RandomEpisodesItems2</include>
@@ -5265,6 +5366,7 @@
                         <include condition="Substring(Skin.String(widget2list),Icon1classic)">IconPanel1Items2</include>
                         <include condition="Substring(Skin.String(widget2list),Icon2classic)">IconPanel2Items2</include>
                         <include condition="Substring(Skin.String(widget2list),favouriteIconclassic)">FavouritesItems2</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies2classic)">DpStream2</include>
                     </content>
                 </control>
                 <control type="list" id="7020">
@@ -5324,11 +5426,23 @@
     </include>
     <include name="HomePanelWidget2">
         <control type="group" id="6000">
-			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="Substring(Control.GetLabel(4325),shelf)" reversible="false">
+				<effect type="slide" start="0,0" end="122,-30" time="0" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="85" time="0"/>
+			</animation>
+			<animation type="Conditional" condition="[ControlGroup(5000).HasFocus  | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu) + Substring(Control.GetLabel(4325),shelf)" reversible="true">
+				<effect type="slide" start="0,0" end="-310,605" time="750" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="35" time="750"/>
+			</animation>
+			<animation type="Conditional" condition="[ControlGroup(5000).HasFocus  | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu) + Substring(Control.GetLabel(4325),shelf)" reversible="true">
+				<effect type="slide" start="0,0" end="-310,1015" time="750" tween="cubic" easing="inout" />
+				<effect type="zoom" start="100" end="35" time="750"/>
+			</animation>
+			<animation type="Conditional" condition="[ControlGroup(5000).HasFocus  | Control.HasFocus(8000)] + !Skin.HasSetting(lowermainmenu) + !Substring(Control.GetLabel(4325),shelf)" reversible="true">
 				<effect type="slide" start="0,0" end="-145,485" time="750" tween="cubic" easing="inout" />
 				<effect type="zoom" start="100" end="30" time="750"/>
 			</animation>
-			<animation type="Conditional" condition="[Control.HasFocus(5010) | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu)" reversible="true">
+			<animation type="Conditional" condition="[ControlGroup(5000).HasFocus | Control.HasFocus(8000)] + Skin.HasSetting(lowermainmenu) + !Substring(Control.GetLabel(4325),shelf)" reversible="true">
 				<effect type="slide" start="0,0" end="-145,835" time="750" tween="cubic" easing="inout" />
 				<effect type="zoom" start="100" end="30" time="750"/>
 			</animation>
@@ -5551,6 +5665,24 @@
                             <onclick condition="Substring(Control.GetLabel(4325),movies)">SetProperty(Featured,randommovies,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4325),tv)">SetProperty(Featured,watchlisttv,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4325),music)">SetProperty(Featured,randomalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsmovies)">SetProperty(Featured,left1customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsalbums)">SetProperty(Featured,left1customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsTV)">SetProperty(Featured,left1customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsmovies)">SetProperty(Featured,left2customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsalbums)">SetProperty(Featured,left2customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsTV)">SetProperty(Featured,left2customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsmovies)">SetProperty(Featured,left3customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsalbums)">SetProperty(Featured,left3customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsTV)">SetProperty(Featured,left3customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsmovies)">SetProperty(Featured,left4customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsalbums)">SetProperty(Featured,left4customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsTV)">SetProperty(Featured,left4customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsmovies)">SetProperty(Featured,left5customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsalbums)">SetProperty(Featured,left5customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsTV)">SetProperty(Featured,left5customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsmovies)">SetProperty(Featured,left6customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsalbums)">SetProperty(Featured,left6customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsTV)">SetProperty(Featured,left6customsTV,home)</onclick>
                             <onclick>SetProperty(FocusedItem,$ESCINFO[Container(6001).ListItem.Label],home)</onclick>
                             <onclick>ActivateWindow(1140)</onclick>
                             <visible>SubString(Control.GetLabel(4325),featured)</visible>
@@ -5573,6 +5705,12 @@
                                 <include>FeaturedWidgetLandscapeLayout</include>
                             </focusedlayout>
                             <content>
+								<include condition="Substring(Skin.String(widget2list),featured1customs)">Custom1Widget</include>
+                                <include condition="Substring(Skin.String(widget2list),featured2customs)">Custom2Widget</include>
+                                <include condition="Substring(Skin.String(widget2list),featured3customs)">Custom3Widget</include>
+                                <include condition="Substring(Skin.String(widget2list),featured4customs)">Custom4Widget</include>
+                                <include condition="Substring(Skin.String(widget2list),featured5customs)">Custom5Widget</include>
+                                <include condition="Substring(Skin.String(widget2list),featured6customs)">Custom6Widget</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredmovies)">FeaturedWidget2LeftMovies</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredtv)">FeaturedWidget2LeftTV</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredmusic)">FeaturedWidget2LeftMusic</include>
@@ -5633,6 +5771,22 @@
                             <onclick condition="Substring(Control.GetLabel(4325),tv)">SetProperty(Featured,randomtv,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4325),movies)">SetProperty(Featured,watchlistmovies,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4325),music)">SetProperty(Featured,watchlistalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsmovie)">SetProperty(Featured,middle1customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsalbums)">SetProperty(Featured,middle1customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsTV)">SetProperty(Featured,middle1customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsmovie)">SetProperty(Featured,middle2customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsalbums)">SetProperty(Featured,middle2customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsTV)">SetProperty(Featured,middle2customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsmovie)">SetProperty(Featured,middle3customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsalbums)">SetProperty(Featured,middle3customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsTV)">SetProperty(Featured,middle3customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsmovie)">SetProperty(Featured,middle4customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsalbums)">SetProperty(Featured,middle4customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsTV)">SetProperty(Featured,middle4customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsmovie)">SetProperty(Featured,middle5customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsalbums)">SetProperty(Featured,middle5customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsTV)">SetProperty(Featured,middle5customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsmovie)">SetProperty(Featured,middle6customsmovies,home)</onclick>
                             <onclick>SetProperty(FocusedItem,$ESCINFO[Container(6002).ListItem.Label],home)</onclick>
                             <onclick>ActivateWindow(1140)</onclick>
                         </control>
@@ -5646,7 +5800,6 @@
                             <pagecontrol>60</pagecontrol>
                             <focusposition>0</focusposition>
                             <scrolltime tween="cubic" easing="inout">1200</scrolltime>
-                            <preloaditems>2</preloaditems>
                             <itemlayout width="340" height="340">
                                 <include>FeaturedWidgetSquareLayout</include>
                             </itemlayout>
@@ -5654,6 +5807,12 @@
                                 <include>FeaturedWidgetSquareLayout</include>
                             </focusedlayout>
                             <content>
+								<include condition="Substring(Skin.String(widget2list),featured1customs)">Custom1Widget3</include>
+                                <include condition="Substring(Skin.String(widget2list),featured2customs)">Custom2Widget3</include>
+                                <include condition="Substring(Skin.String(widget2list),featured3customs)">Custom3Widget3</include>
+                                <include condition="Substring(Skin.String(widget2list),featured4customs)">Custom4Widget3</include>
+                                <include condition="Substring(Skin.String(widget2list),featured5customs)">Custom5Widget3</include>
+                                <include condition="Substring(Skin.String(widget2list),featured6customs)">Custom6Widget3</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredmovies)">FeaturedWidget2MiddleMovies</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredtv)">FeaturedWidget2MiddleTV</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredmusic)">FeaturedWidget2MiddleMusic</include>
@@ -5723,9 +5882,27 @@
                             <onleft>6011</onleft>
                             <onright>6010</onright>
                             <include>NavigationWidget2</include>
-                            <onclick condition="Substring(Control.GetLabel(4325),movies)">SetProperty(Featured,recentmovies,home)</onclick>
+							<onclick condition="Substring(Control.GetLabel(4325),movies)">SetProperty(Featured,recentmovies,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4325),tv)">SetProperty(Featured,recenttv,home)</onclick>
                             <onclick condition="Substring(Control.GetLabel(4325),music)">SetProperty(Featured,recentalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsmovie)">SetProperty(Featured,right1customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsalbums)">SetProperty(Featured,right1customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),1customsTV)">SetProperty(Featured,right1customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsmovie)">SetProperty(Featured,right2customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsalbums)">SetProperty(Featured,right2customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),2customsTV)">SetProperty(Featured,right2customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsmovie)">SetProperty(Featured,right3customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsalbums)">SetProperty(Featured,right3customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),3customsTV)">SetProperty(Featured,right3customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsmovie)">SetProperty(Featured,right4customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsalbums)">SetProperty(Featured,right4customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),4customsTV)">SetProperty(Featured,right4customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsmovie)">SetProperty(Featured,right5customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsalbums)">SetProperty(Featured,right5customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),5customsTV)">SetProperty(Featured,right5customsTV,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsmovie)">SetProperty(Featured,right6customsmovies,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsalbums)">SetProperty(Featured,right6customsalbums,home)</onclick>
+                            <onclick condition="Substring(Control.GetLabel(4325),6customsTV)">SetProperty(Featured,right6customsTV,home)</onclick>
                             <onclick>SetProperty(FocusedItem,$ESCINFO[Container(6003).ListItem.Label],home)</onclick>
                             <onclick>ActivateWindow(1140)</onclick>
                         </control>
@@ -5747,6 +5924,12 @@
                                 <include>FeaturedWidgetLandscapeLayout</include>
                             </focusedlayout>
                             <content>
+								<include condition="Substring(Skin.String(widget2list),featured1customs)">Custom1Widget2</include>
+                                <include condition="Substring(Skin.String(widget2list),featured2customs)">Custom2Widget2</include>
+                                <include condition="Substring(Skin.String(widget2list),featured3customs)">Custom3Widget2</include>
+                                <include condition="Substring(Skin.String(widget2list),featured4customs)">Custom4Widget2</include>
+                                <include condition="Substring(Skin.String(widget2list),featured5customs)">Custom5Widget2</include>
+                                <include condition="Substring(Skin.String(widget2list),featured6customs)">Custom6Widget2</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredmovies)">FeaturedWidget2RightMovies</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredtv)">FeaturedWidget2RightTV</include>
                                 <include condition="Substring(Skin.String(widget2list),featuredmusic)">FeaturedWidget2RightMusic</include>
@@ -6238,6 +6421,7 @@
                     </control>
                 </focusedlayout>
                 <content>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies1panel)">DpStream1</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),recentmoviespanel)]">LatestMoviesItems</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),randommoviespanel)]">RandomMoviesItems</include>
                     <include condition="Library.HasContent(musicvideos) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),watchlistmusicvideospanel)]">WatchListMusicVideosItems</include>
@@ -6254,7 +6438,7 @@
                     <include condition="Library.HasContent(music) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),watchlistalbumspanel)">WatchlistMusicItemsHome</include>
                     <include condition="System.HasAddon(script.metadata.actors) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),actorspanel)]">BornActorsItems</include>
                     <include>RandomAddonsItems</include>
-                    <include condition="Substring(Skin.String(widgetlist),recommendedaddons)">RecommendedAddons</include>
+                    <include>RecommendedAddons</include>
                     <include condition="!Window.IsActive(1124) + Substring(Skin.String(widgetlist),randomaddonspanel)">RandomAddonsItemsHome</include>
                     <include condition="Library.HasContent(tvshows)">LatestEpisodesItems</include>
                     <include condition="Library.HasContent(tvshows) + !Window.IsActive(1124) + Substring(Skin.String(widgetlist),recenttvpanel)">LatestEpisodesItemsHome</include>
@@ -6294,6 +6478,7 @@
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon1panel)">IconPanel1Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),Icon2panel)">IconPanel2Items</include>
                     <include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),favouriteIconpanel)">FavouritesItems</include>
+                    
                     <!--                     <item>
                         <label>Show all</label>
                         <onclick condition="Substring(Control.GetLabel(4321),watchlisttv)">ActivateWindow(Videos,library://video/inprogressshows.xml,return)</onclick>
@@ -6680,6 +6865,7 @@
                     </control>
                 </focusedlayout>
                 <content>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies2panel)">DpStream2</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),recentmoviespanel)]">LatestMoviesItems2</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),randommoviespanel)]">RandomMoviesItems2</include>
                     <include condition="Library.HasContent(musicvideos) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),watchlistmusicvideospanel)]">WatchListMusicVideosItems2</include>

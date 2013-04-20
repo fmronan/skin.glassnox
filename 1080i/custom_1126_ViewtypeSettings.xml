@@ -204,14 +204,14 @@
                 <!--BigFan Options-->
                 <control type="radiobutton" id="1689">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42310</label>
+                    <label>31710</label>
                     <onclick>Skin.ToggleSetting(bigfanextrafanart)</onclick>
                     <selected>Skin.HasSetting(bigfanextrafanart)</selected>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),BigFan) + [Container.Content(tvshows) | Container.Content(movies)]</visible>
                 </control>
                 <control type="button" id="1707">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>$LOCALIZE[41159]:</label>
+                    <label>$LOCALIZE[31959]:</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[BigFanIconLabelVar][/COLOR]</label2>
                     <onclick condition="!Skin.HasSetting(bigfanclearart) + !Skin.HasSetting(bigfanlandscape) + !Skin.HasSetting(bigfanlogo)">Skin.SetBool(bigfanclearart)</onclick>
                     <onclick condition="Skin.HasSetting(bigfanclearart)">Skin.SetBool(bigfanlogo)</onclick>
@@ -231,7 +231,7 @@
                 </control>
                 <control type="button" id="1633">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>$LOCALIZE[41159]:</label>
+                    <label>$LOCALIZE[31959]:</label>
                     <label2>[COLOR $VAR[FontColorVar]]$VAR[LandscapeTypeLabelVar][/COLOR]</label2>
                     <onclick condition="!Skin.HasSetting(landscapelogo) + !Skin.HasSetting(landscapeonelogo) + !Skin.HasSetting(landscapeclearart)">Skin.SetBool(landscapeonelogo)</onclick>
                     <onclick condition="Skin.HasSetting(landscapeonelogo)">Skin.SetBool(landscapelogo)</onclick>
@@ -251,7 +251,7 @@
                 </control>
                 <control type="radiobutton" id="1636">
                     <include>Objects_MediaMenuButtonAlt2</include>
-                    <label>42211</label>
+                    <label>31811</label>
                     <onclick>Skin.ToggleSetting(altfloor)</onclick>
                     <selected>Skin.HasSetting(altfloor)</selected>
                     <visible>Stringcompare(Window(home).Property(actualViewtype),Landscape) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)] + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]</visible>

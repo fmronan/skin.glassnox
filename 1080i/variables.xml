@@ -367,7 +367,7 @@
     <variable name="DialogColorVar">
 		<value condition="Skin.HasSetting(randomcolor)">$VAR[DayTimeColorVar2]</value>
         <value condition="Skin.HasSetting(colordialogs)+Substring(Skin.CurrentTheme,whit)">$VAR[WhitePanelAreaColorVar]</value>
-        <value condition="Skin.HasSetting(colordialogs)">$VAR[PanelAreaColorVar]</value>
+        <value condition="Skin.HasSetting(colordialogs)">$VAR[ColorDiffuseVar]</value>
         <value>FFFFFFFF</value>
     </variable>
     <variable name="ColorDiffuseBackgroundVar">
@@ -1321,7 +1321,6 @@
         <value>$LOCALIZE[20360]</value>
     </variable>
     <variable name="HomeWidgetFanartVar">
-		<value condition="[ControlGroup(5020).HasFocus | ControlGroup(6020).HasFocus | ControlGroup(5030).HasFocus | ControlGroup(6030).HasFocus]+ !IsEmpty(Window(home).Property(Fanart))">$INFO[Window(home).Property(Fanart)]</value>
         <value condition="[Control.HasFocus(8000) | Control.HasFocus(8020)] + !IsEmpty(Container(8000).ListItem.Property(Fanart))">$INFO[Container(8000).ListItem.Property(Fanart)]</value>
         <value condition="[Control.HasFocus(7000) | Control.HasFocus(7020)] + !IsEmpty(Container(7000).ListItem.Property(Fanart))">$INFO[Container(7000).ListItem.Property(Fanart)]</value>
         <value condition="[Control.HasFocus(5010) | ControlGroup(5014).HasFocus | ControlGroup(5020).HasFocus | ControlGroup(5030).HasFocus] + !IsEmpty(Container(5010).ListItem.Property(Fanart))">$INFO[Container(5010).ListItem.Property(Fanart)]</value>
@@ -1332,7 +1331,6 @@
         <value condition="Control.HasFocus(6010) + Substring(Container(9000).ListItem.Property(Widget2),featured) + !IsEmpty(Container(6001).ListItem.Property(Fanart))">$INFO[Container(6001).ListItem.Property(Fanart)]</value>
         <value condition="Control.HasFocus(6012) + !IsEmpty(Container(6003).ListItem.Property(Fanart))">$INFO[Container(6003).ListItem.Property(Fanart)]</value>
         <value condition="Control.HasFocus(6011) + !IsEmpty(Container(6002).ListItem.Property(Fanart))">$INFO[Container(6002).ListItem.Property(Fanart)]</value>
-      <!--  <value condition="Control.HasFocus(5051) + !IsEmpty(Container(5051).ListItem.Thumb)">$INFO[Container(5051).ListItem.Thumb]</value>-->
         <value condition="Player.HasAudio + Skin.HasSetting(musicfanarthome) + Window.IsActive(home) + !IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
     </variable>
     <variable name="HomeWidgetExtraFanartVar">
@@ -1340,14 +1338,14 @@
         <value condition="Control.HasFocus(8000) + !IsEmpty(Container(8000).ListItem.Property(Extra))">$INFO[Container(8000).ListItem.Property(Extra)]</value>
         <value condition="[Control.HasFocus(5010) | ControlGroup(5014).HasFocus | ControlGroup(5020).HasFocus | ControlGroup(5021).HasFocus | ControlGroup(5030).HasFocus] + !IsEmpty(Container(5010).ListItem.Property(Extra))">$INFO[Container(5010).ListItem.Property(Extra)]</value>
         <value condition="Control.HasFocus(5010) + Substring(Container(9000).ListItem.Property(Widget),featured) + !IsEmpty(Container(5001).ListItem.Property(Extra))">$INFO[Container(5001).ListItem.Property(Extra)]</value>
-        <value condition="Control.HasFocus(5012) + !IsEmpty(Container(5003).ListItem.Property(Extra))">$INFO[Container(5003).LListItem.Property(Extra)]</value>
+        <value condition="Control.HasFocus(5012) + !IsEmpty(Container(5003).ListItem.Property(Extra))">$INFO[Container(5003).ListItem.Property(Extra)]</value>
         <value condition="Control.HasFocus(5011) + !IsEmpty(Container(5002).ListItem.Property(Extra))">$INFO[Container(5002).ListItem.Property(Extra)]</value>
     </variable>
     <variable name="HomeWidgetExtraFanartVar1">
 		<value condition="[ControlGroup(6020).HasFocus | ControlGroup(6030).HasFocus] + !IsEmpty(Window(home).Property(Extra))">$INFO[Window(home).Property(Extra)]</value>
-		<value condition="Control.HasFocus(7000) + !IsEmpty(Container(7000).ListItem.Property(Extra))">$INFO[Container(7000).ListItem.Property(Extra)]</value>
+        <value condition="Control.HasFocus(7000) + !IsEmpty(Container(7000).ListItem.Property(Extra))">$INFO[Container(7000).ListItem.Property(Extra)]</value>
         <value condition="[Control.HasFocus(6010) | ControlGroup(6014).HasFocus | ControlGroup(6020).HasFocus | ControlGroup(6021).HasFocus | ControlGroup(6030).HasFocus] + !IsEmpty(Container(6010).ListItem.Property(Extra))">$INFO[Container(6010).ListItem.Property(Extra)]</value>
-        <value condition="Control.HasFocus(6010) + Substring(Container(9000).ListItem.Property(Widget2),featured) + !IsEmpty(Container(6001).ListItem.Property(Extra))">$INFO[Container(6001).ListItem.Property(Extra)]</value>
+        <value condition="Control.HasFocus(6010) + Substring(Container(9000).ListItem.Property(Widget),featured) + !IsEmpty(Container(6001).ListItem.Property(Extra))">$INFO[Container(6001).ListItem.Property(Extra)]</value>
         <value condition="Control.HasFocus(6012) + !IsEmpty(Container(6003).ListItem.Property(Extra))">$INFO[Container(6003).ListItem.Property(Extra)]</value>
         <value condition="Control.HasFocus(6011) + !IsEmpty(Container(6002).ListItem.Property(Extra))">$INFO[Container(6002).ListItem.Property(Extra)]</value>
     </variable>

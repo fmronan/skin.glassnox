@@ -1585,8 +1585,59 @@
     <include name="BackgroundsItem">
 		<control type="group">
 			<visible>!Player.HasAudio + !Player.HasMedia</visible>
+			<visible>Substring(Control.GetLabel(4325),shelf)</visible>
+			<visible>!ControlGroup(5000).HasFocus + !ControlGroup(5020).HasFocus</visible>
+			<visible>![!Substring(Control.GetLabel(4321),shelf) + ControlGroup(5000).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8020) ]</visible>
+			<visible>![!Substring(Control.GetLabel(4325),shelf) + ControlGroup(6000).HasFocus | Control.HasFocus(7000) | Control.HasFocus(7020) ]</visible>
 			<animation effect="fade" time="100">WindowOpen</animation>
                 <animation effect="fade" time="100">WindowClose</animation>
+                <animation effect="fade" time="400">Visible</animation>
+                <animation effect="fade" time="0">Hidden</animation>
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+                <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<height>600</height>
+				<width>384</width>
+				<texture>$INFO[Container(9000).ListItem.Property(element1)]</texture>
+			</control>
+			<control type="image">
+				<posx>384</posx>
+				<height>600</height>
+				<width>384</width>
+				<texture>$INFO[Container(9000).ListItem.Property(element2)]</texture>
+			</control>
+			<control type="image">
+				<posx>768</posx>
+				<height>600</height>
+				<width>384</width>
+				<texture>$INFO[Container(9000).ListItem.Property(element3)]</texture>
+			</control>
+			<control type="image">
+				<posx>1152</posx>
+				<height>600</height>
+				<width>384</width>
+				<texture>$INFO[Container(9000).ListItem.Property(element4)]</texture>
+			</control>
+			<control type="image">
+				<posx>1536</posx>
+				<height>600</height>
+				<width>384</width>
+				<texture>$INFO[Container(9000).ListItem.Property(element5)]</texture>			
+			</control>
+		</control>
+    </include>
+    <include name="BackgroundsItemFirst">
+		<control type="group">
+			<visible>!Player.HasAudio + !Player.HasMedia</visible>
+			<visible>!Substring(Control.GetLabel(4325),shelf)</visible>
+			<visible>!ControlGroup(5000).HasFocus + !ControlGroup(5020).HasFocus</visible>
+			<visible>![!Substring(Control.GetLabel(4321),shelf) + ControlGroup(5000).HasFocus | Control.HasFocus(8000) | Control.HasFocus(8020) ]</visible>
+			<visible>![!Substring(Control.GetLabel(4325),shelf) + ControlGroup(6000).HasFocus | Control.HasFocus(7000) | Control.HasFocus(7020) ]</visible>
+			<animation effect="fade" time="100">WindowOpen</animation>
+                <animation effect="fade" time="100">WindowClose</animation>
+                <animation effect="fade" time="400">Visible</animation>
+                <animation effect="fade" time="0">Hidden</animation>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
 			<control type="image">
