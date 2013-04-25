@@ -379,12 +379,124 @@
                             <visible>System.HasAddon(script.extendedinfo)</visible>
                         </item>
                         <item>
-                            <label>DpStream</label>
+                            <label>DpStream1</label>
                             <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies1,1124)</onclick>
                             <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies1,1124)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
                             <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList1.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
                             <visible>!IsEmpty(Skin.String(DpstreamList1.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream2</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies2,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies2,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList2.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList2.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream3</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies3,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies3,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList3.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList3.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream4</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies4,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies4,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList4.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList4.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream5</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies5,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies5,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList5.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList5.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream6</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies6,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies6,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList6.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList6.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream1</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies7,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies7,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList7.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList7.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream2</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies8,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies8,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList8.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList8.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream3</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies9,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies9,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList9.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList9.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream4</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies10,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies10,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList10.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList10.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream5</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies11,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies11,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList11.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList11.Call))</visible>
+                        </item>
+                        <item>
+                            <label>DpStream6</label>
+                            <onclick condition="IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,dpstreammovies12,1124)</onclick>
+                            <onclick condition="!IsEmpty(Window(1124).Property(ZoomItem))">SetProperty(CustomYesNoDialog,shelfdpstreammovies12,1124)</onclick>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)]Title,DpStream)</onclick>
+                            <onclick>ActivateWindow(1137)</onclick>
+                            <onclick>$INFO[Skin.String(DpstreamList12.Call)]</onclick>
+                            <visible>Stringcompare(Window(1124).Property(WidgetSelection),Widget2)</visible>
+                            <visible>!IsEmpty(Skin.String(DpstreamList12.Call))</visible>
                         </item>
                         <item>
                             <label>31327</label>

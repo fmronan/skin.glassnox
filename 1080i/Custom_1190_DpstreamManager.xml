@@ -11,7 +11,7 @@
                 <posx>160</posx>
                 <posy>100</posy>
                 <width>1600</width>
-                <height>550</height>
+                <height>1000</height>
                 <texture>osd/osd_settings_back_glow.png</texture>
                 <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
@@ -21,7 +21,7 @@
                 <posx>160</posx>
                 <posy>100</posy>
                 <width>1600</width>
-                <height>550</height>
+                <height>1000</height>
                 <texture>osd/osd_settings_back.png</texture>
                 <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             </control>
@@ -34,6 +34,17 @@
                 <align>center</align>
                 <label>DpStream Manager</label>
                 <font>Font_Bold20</font>
+                <textcolor>$VAR[TitleColorVar]</textcolor>
+            </control>
+            <control type="label">
+                <posx>630</posx>
+                <posy>600</posy>
+                <width>572</width>
+                <height>60</height>
+                <textoffsety>10</textoffsety>
+                <align>center</align>
+                <label>DpStream Manager pour le widget2</label>
+                <font>Font_Bold17</font>
                 <textcolor>$VAR[TitleColorVar]</textcolor>
             </control>
             <control type="grouplist" id="4">
@@ -82,6 +93,47 @@
                     <onclick>SetProperty(PlaylistSlot,DpstreamList6,home)</onclick>
                     <onclick>ActivateWindow(1191)</onclick>
                 </control>
+                <control type="label" id="134">
+                    <label></label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                </control>
+                <control type="button" id="13">
+                    <label>$LOCALIZE[31623] 1</label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                    <onclick>SetProperty(PlaylistSlot,DpstreamList7,home)</onclick>
+                    <onclick>ActivateWindow(1191)</onclick>
+                </control>
+                <control type="button" id="14">
+                    <label>$LOCALIZE[31623] 2</label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                    <onclick>SetProperty(PlaylistSlot,DpstreamList8,home)</onclick>
+                    <onclick>ActivateWindow(1191)</onclick>
+                </control>
+                <control type="button" id="15">
+                    <label>$LOCALIZE[31623] 3</label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                    <onclick>SetProperty(PlaylistSlot,DpstreamList9,home)</onclick>
+                    <onclick>ActivateWindow(1191)</onclick>
+                </control>
+                <control type="button" id="16">
+                    <label>$LOCALIZE[31623] 4</label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                    <onclick>SetProperty(PlaylistSlot,DpstreamList4,home)</onclick>
+                    <onclick>ActivateWindow(11,DpstreamList10,home)</onclick>
+                    <onclick>ActivateWindow(1191)</onclick>
+                </control>
+                <control type="button" id="17">
+                    <label>$LOCALIZE[31623] 5</label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                    <onclick>SetProperty(PlaylistSlot,DpstreamList11,home)</onclick>
+                    <onclick>ActivateWindow(1191)</onclick>
+                </control>
+                <control type="button" id="18">
+                    <label>$LOCALIZE[31623] 6</label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                    <onclick>SetProperty(PlaylistSlot,DpstreamList12,home)</onclick>
+                    <onclick>ActivateWindow(1191)</onclick>
+                </control>
             </control>
             <control type="grouplist" id="20">
                 <posx>457</posx>
@@ -128,7 +180,46 @@
                     <include>Default_DpstreamDialogButton</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
-                
+                <control type="label" id="135">
+                    <label></label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                </control>
+                <control type="button" id="27">
+                    <label>Genre:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList7.Genre)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="28">
+                    <label>Genre:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList8.Genre)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="29">
+                    <label>Genre:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList9.Genre)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="30">
+                    <label>Genre:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList10.Genre)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="31">
+                    <label>Genre:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList11.Genre)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="32">
+                    <label>Genre:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList12.Genre)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
             </control>
             <control type="grouplist" id="220">
                 <posx>792</posx>
@@ -172,6 +263,46 @@
                 <control type="button" id="46">
                     <label>Hébergeur:</label>
                     <label2>[COLOR white]$INFO[Skin.String(DpstreamList6.Host)][/COLOR]</label2>
+                    <include>Default_PlaylistDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="label" id="135">
+                    <label></label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                </control>
+                <control type="button" id="47">
+                    <label>Hébergeur:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList7.Host)][/COLOR]</label2>
+                    <include>Default_PlaylistDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="48">
+                    <label>Hébergeur:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList8.Host)][/COLOR]</label2>
+                    <include>Default_PlaylistDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="49">
+                    <label>Hébergeur:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList9.Host)][/COLOR]</label2>
+                    <include>Default_PlaylistDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="50">
+                    <label>Hébergeur:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList10.Host)][/COLOR]</label2>
+                    <include>Default_PlaylistDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="51">
+                    <label>Hébergeur:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList11.Host)][/COLOR]</label2>
+                    <include>Default_PlaylistDialogButton</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="52">
+                    <label>Hébergeur:</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList12.Host)][/COLOR]</label2>
                     <include>Default_PlaylistDialogButton</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
@@ -221,6 +352,46 @@
                     <include>Default_DpstreamDialogButton2</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>
+                <control type="label" id="135">
+                    <label></label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                </control>
+                <control type="button" id="727">
+                    <label>Qualite</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList7.Qualite)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="728">
+                    <label>Qualite</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList8.Qualite)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="729">
+                    <label>Qualite</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList9.Qualite)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="730">
+                    <label>Qualite</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList10.Qualite)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="731">
+                    <label>Qualite</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList11.Qualite)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="732">
+                    <label>Qualite</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList12.Qualite)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
             </control>
              <control type="grouplist" id="820">
                 <posx>1327</posx>
@@ -264,6 +435,46 @@
                 <control type="button" id="826">
                     <label>Trié par</label>
                     <label2>[COLOR white]$INFO[Skin.String(DpstreamList6.Class)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="label" id="135">
+                    <label></label>
+                    <include>Objects_CustomizerSettingsButton</include>
+                </control>
+                <control type="button" id="827">
+                    <label>Trié par</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList7.Class)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="828">
+                    <label>Trié par</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList8.Class)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="829">
+                    <label>Trié par</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList9.Class)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="830">
+                    <label>Trié par</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList10.Class)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="831">
+                    <label>Trié par</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList11.Class)][/COLOR]</label2>
+                    <include>Default_DpstreamDialogButton2</include>
+                    <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                </control>
+                <control type="button" id="832">
+                    <label>Trié par</label>
+                    <label2>[COLOR white]$INFO[Skin.String(DpstreamList12.Class)][/COLOR]</label2>
                     <include>Default_DpstreamDialogButton2</include>
                     <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
                 </control>

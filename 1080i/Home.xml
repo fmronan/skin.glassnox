@@ -311,7 +311,7 @@
                 <animation effect="fade" time="400">Hidden</animation>
                 <visible>!Substring(Control.GetLabel(4322),case)</visible>
             </control>
-			<control type="image">
+		<!--	<control type="image">
 				<posx>382</posx>
 				<posy>60</posy>
 				<width>120</width>
@@ -323,9 +323,8 @@
                 <animation effect="fade" time="480">Hidden</animation>
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-               <!-- <visible>Substring(Control.GetLabel(4328),weather)</visible>-->
 			</control>
-			
+			-->
             <control type="image">
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <texture background="true" fallback="special://skin/background/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>

@@ -97,6 +97,16 @@
                     </control>
                 </focusedlayout>
                 <content>
+					<item>
+						<label>Aucun</label>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(PlaylistSlot)].Call)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(PlaylistSlot)].Genre)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(PlaylistSlot)].Qualite)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(PlaylistSlot)].Host)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(PlaylistSlot)].Class)</onclick>
+                        <onclick>Skin.Reset($INFO[Window(home).Property(PlaylistSlot)].Langue)</onclick>
+                        <onclick>Dialog.Close(1191)</onclick>
+					</item>
                     <item>
                         <label>Tous</label>
                         <onclick>SetProperty(Genre,Tous,home)</onclick>

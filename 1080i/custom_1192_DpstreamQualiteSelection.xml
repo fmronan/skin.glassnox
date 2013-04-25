@@ -2,13 +2,13 @@
 <window type="dialog" id="1192">
     <defaultcontrol always="true">4</defaultcontrol>
     <allowoverlay>no</allowoverlay>
-    <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Call,RunScript(special://skin/scripts/dpstreammovieslist.py,-n8,-g=$INFO[Window(home).Property(Genre)],-q=$INFO[Window(home).Property(Qualite)],-h=$INFO[Window(home).Property(Host)],-c=$INFO[Window(home).Property(Class)],-l=$INFO[Window(home).Property(Langue)],-b=$INFO[Window(home).Property(PlaylistSlot)]))</onunload>
+    <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Call,RunScript(special://skin/scripts/dpstreammovieslist.py,-n10,-g=$INFO[Window(home).Property(Genre)],-q=$INFO[Window(home).Property(Qualite)],-h=$INFO[Window(home).Property(Host)],-c=$INFO[Window(home).Property(Class)],-l=$INFO[Window(home).Property(Langue)],-b=$INFO[Window(home).Property(PlaylistSlot)]))</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Genre,$INFO[Window(home).Property(Genre)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Qualite,$INFO[Window(home).Property(Qualite)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Host,$INFO[Window(home).Property(Host)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Class,$INFO[Window(home).Property(Class)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(PlaylistSlot))">Skin.SetString($INFO[Window(home).Property(PlaylistSlot)].Langue,$INFO[Window(home).Property(Langue)])</onunload>
-    <onunload>RunScript(special://skin/scripts/dpstreammovieslist.py,-n8,-g=$INFO[Window(home).Property(Genre)],-q=$INFO[Window(home).Property(Qualite)],-h=$INFO[Window(home).Property(Host)],-c=$INFO[Window(home).Property(Class)],-l=$INFO[Window(home).Property(Langue)],-b=$INFO[Window(home).Property(PlaylistSlot)])</onunload>
+    <onunload>RunScript(special://skin/scripts/dpstreammovieslist.py,-n10,-g=$INFO[Window(home).Property(Genre)],-q=$INFO[Window(home).Property(Qualite)],-h=$INFO[Window(home).Property(Host)],-c=$INFO[Window(home).Property(Class)],-l=$INFO[Window(home).Property(Langue)],-b=$INFO[Window(home).Property(PlaylistSlot)])</onunload>
     <onunload>ClearProperty(Genre,home)</onunload>
     <onunload>ClearProperty(PlaylistSlot,home)</onunload>
     <onunload>ClearProperty(Qualite,home)</onunload>

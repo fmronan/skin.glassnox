@@ -249,6 +249,7 @@
             <include condition="!IsEmpty(Weather.Plugin)">Weather_Widget</include>
             <include condition="!IsEmpty(Weather.Plugin)">Weather_Widget2</include>
         </control>
+        <include>BackgroundsItem</include>
         <!--Main Menu-->
         <control type="group">
             <include>FullscreenDimensions</include>
@@ -289,7 +290,6 @@
                 <include>Furniture_ClassicHomeGradient</include>
                 <include>Neon_Home</include>
             </control>
-            <include>BackgroundsItem</include>
         </control>
     </controls>
 </window>

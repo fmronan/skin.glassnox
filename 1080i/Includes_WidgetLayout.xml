@@ -2596,6 +2596,11 @@
                         <include condition="Substring(Skin.String(widgetlist),Icon2classic)">IconPanel2Items</include>
                         <include condition="Substring(Skin.String(widgetlist),favouriteIconclassic)">FavouritesItems</include>
                         <include condition="Substring(Skin.String(widgetlist),dpstreammovies1classic)">DpStream1</include>
+                        <include condition="Substring(Skin.String(widgetlist),dpstreammovies2classic)">DpStream2</include>
+                        <include condition="Substring(Skin.String(widgetlist),dpstreammovies3classic)">DpStream3</include>
+                        <include condition="Substring(Skin.String(widgetlist),dpstreammovies4classic)">DpStream4</include>
+                        <include condition="Substring(Skin.String(widgetlist),dpstreammovies5classic)">DpStream5</include>
+                        <include condition="Substring(Skin.String(widgetlist),dpstreammovies6classic)">DpStream6</include>
                     </content>
                 </control>
                 
@@ -3492,7 +3497,7 @@
                         <include>WidgetMenuLabel</include>
 						<onclick condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))">SetFocus(5010)</onclick>
 						<onclick condition="!IsEmpty(Window(home).Property(PanelWidget2Info))">SetFocus(6010)</onclick>
-						<onclick condition="Substring(Window(home).Property(WidgetType),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/','-1','?url=$INFO[Window(home).Property(Trailer)]&amp;mode=13&amp;id=$INFO[Window(home).Property(Path)],return)</onclick>
+						<onclick condition="Substring(Window(home).Property(WidgetType),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/?url=$INFO[Window(home).Property(Id)]&amp;mode=13&amp;id=$INFO[Window(home).Property(Path)],return)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),movies) + !Substring(Window(home).Property(WidgetType),dpstream)">Runscript(service.skin.widgets,movieid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),tv)">Runscript(service.skin.widgets,episodeid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),musicvideo)">Runscript(service.skin.widgets,musicvideoid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
@@ -5366,7 +5371,12 @@
                         <include condition="Substring(Skin.String(widget2list),Icon1classic)">IconPanel1Items2</include>
                         <include condition="Substring(Skin.String(widget2list),Icon2classic)">IconPanel2Items2</include>
                         <include condition="Substring(Skin.String(widget2list),favouriteIconclassic)">FavouritesItems2</include>
-                        <include condition="Substring(Skin.String(widget2list),dpstreammovies2classic)">DpStream2</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies7classic)">DpStream7</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies8classic)">DpStream8</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies9classic)">DpStream9</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies10classic)">DpStream10</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies11classic)">DpStream11</include>
+                        <include condition="Substring(Skin.String(widget2list),dpstreammovies12classic)">DpStream12</include>
                     </content>
                 </control>
                 <control type="list" id="7020">
@@ -6422,6 +6432,11 @@
                 </focusedlayout>
                 <content>
 					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies1panel)">DpStream1</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies2panel)">DpStream2</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies3panel)">DpStream3</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies4panel)">DpStream4</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies5panel)">DpStream5</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widgetlist),dpstreammovies6panel)">DpStream6</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),recentmoviespanel)]">LatestMoviesItems</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),randommoviespanel)]">RandomMoviesItems</include>
                     <include condition="Library.HasContent(musicvideos) + [Window.IsActive(1124) | Substring(Skin.String(widgetlist),watchlistmusicvideospanel)]">WatchListMusicVideosItems</include>
@@ -6865,7 +6880,12 @@
                     </control>
                 </focusedlayout>
                 <content>
-					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies2panel)">DpStream2</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies7panel)">DpStream7</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies8panel)">DpStream8</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies9panel)">DpStream9</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies10panel)">DpStream10</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies11panel)">DpStream11</include>
+					<include condition="Window.IsActive(1124) | Substring(Skin.String(widget2list),dpstreammovies12panel)">DpStream12</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),recentmoviespanel)]">LatestMoviesItems2</include>
                     <include condition="Library.HasContent(movies) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),randommoviespanel)]">RandomMoviesItems2</include>
                     <include condition="Library.HasContent(musicvideos) + [Window.IsActive(1124) | Substring(Skin.String(widget2list),watchlistmusicvideospanel)]">WatchListMusicVideosItems2</include>
