@@ -107,9 +107,27 @@
                 <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
                 <onup>7</onup>
                 <visible>Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
-                <ondown>4</ondown>
+                <ondown>9</ondown>
                 <onclick>Skin.ToggleSetting(LiveBGCDCase)</onclick>
                 <selected>Skin.HasSetting(LiveBGCDCase)</selected>
+            </control>
+            <control type="radiobutton" id="9">
+                <posx>347</posx>
+                <posy>360</posy>
+                <width>1200</width>
+                <height>60</height>
+                <font>Font_Reg30_2</font>
+                <textcolor>grey2</textcolor>
+                <focusedcolor>$VAR[HomeMenuTextFocusVar2]</focusedcolor>
+                <label>Polaroïd</label>
+                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+                <texturenofocus>button-nofocus.png</texturenofocus>
+                <texturefocus>views/tripanel/listselect_fo.png</texturefocus>
+                <onup>8</onup>
+                <visible>Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+                <ondown>4</ondown>
+                <onclick>Skin.ToggleSetting(PolaroidCase)</onclick>
+                <selected>Skin.HasSetting(PolaroidCase)</selected>
             </control>
             <control type="button">
                 <posx>347</posx>

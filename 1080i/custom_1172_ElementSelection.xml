@@ -108,8 +108,8 @@
                         <label>31630</label>
                         <thumb></thumb>
                         <property name="Description">31630</property>
-                        <onclick>Dialog.Close(1172)</onclick>
                         <onclick>Skin.SetImage(ItemToEdit.Element)</onclick>
+                        <onclick>Dialog.Close(1172)</onclick>
                     </item>
                     <item>
                         <label>ampli</label>

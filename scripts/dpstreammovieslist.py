@@ -10,7 +10,7 @@ import cPickle as pickle
 from traceback import print_exc 
 #---------------------------------------------------------------------
 #Web variables
-URL_PREFIX   = 'http://www.dpstream.net/'
+URL_PREFIX   = 'http://dpstream.net/'
 URL_SYNOPSIS = URL_PREFIX+'histoire.php?url='
 URL_LIST     = URL_PREFIX+'fichiers/includes/inc_liste_film/fonction_liste_film.php?p='
 USERAGENT    = "Mozilla/5.0 (Windows; U; Windows NT 5.1; fr; rv:1.9.2.12) Gecko/20101031 Firefox/3.6.12 (.NET CLR 3.5.30729)"

@@ -88,8 +88,7 @@
 					<item id="11">
 						<label>Reset Skin</label>
 						<label2>and Reload</label2>
-						<onclick>Skin.ResetSettings</onclick>
-						<onclick>ReloadSkin()</onclick>
+						<onclick>ActivateWindow(1193)</onclick>
 					</item>
                 </content>
             </control>
@@ -104,6 +103,50 @@
                 <visible>!Container(9000).Hasfocus(5)</visible>
             </control>
             <control type="group" id="9010">
+				<control type="grouplist">
+					<visible>Container(9000).Hasfocus(11)</visible>
+                    <posx>387</posx>
+                    <posy>195</posy>
+                    <width>1469</width>
+                    <height>732</height>
+                    <itemgap>-1</itemgap>
+                    <onleft>9000</onleft>
+                    <onright>60</onright>
+                    <onup>9111</onup>
+                    <ondown>9111</ondown>
+                <control type="button" id="1150">
+					<label>Export Settings</label>
+					<include>Default_SettingButton</include>
+					<onclick>RunScript(script.extendedinfo,exportsettings=true)</onclick>
+					<visible>System.HasAddon(script.extendedinfo)</visible>
+					</control>
+					<control type="button" id="1151">
+					<label>Import Settings</label>
+					<include>Default_SettingButton</include>
+					<onclick>RunScript(script.extendedinfo,importsettings=true)</onclick>
+					<visible>System.HasAddon(script.extendedinfo)</visible>
+				</control>
+			</control>	
+                <control type="image">
+                    <posx>770</posx>
+                    <posy>220</posy>
+                    <width>375</width>
+                    <heigth>326</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>danger.png</texture>
+                    <visible>!Player.HasAudio</visible>
+                    <visible>Container(9000).Hasfocus(11)</visible>
+                </control>
+                <control type="image">
+                    <posx>770</posx>
+                    <posy>220</posy>
+                    <width>375</width>
+                    <heigth>326</heigth>
+                    <aspectratio>keep</aspectratio>
+                    <texture>barberouge.png</texture>
+                    <visible>Player.HasAudio</visible>
+                    <visible>Container(9000).Hasfocus(11)</visible>
+                </control>
                 <control type="grouplist" id="9001">
                     <visible>Container(9000).Hasfocus(1)</visible>
                     <posx>387</posx>
@@ -933,31 +976,10 @@
                     <aspectratio>keep</aspectratio>
                     <texture>xbmc.png</texture>
                 </control>
-            </control>
+            </control>      
         </control>
-        <control type="group">
-                <visible>Container(9000).Hasfocus(11)</visible>
-                <posx>700</posx>
-                <posy>200</posy>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>30</posy>
-                    <width>750</width>
-                    <heigth>652</heigth>
-                    <aspectratio>keep</aspectratio>
-                    <texture>danger.png</texture>
-                    <visible>!Player.HasAudio</visible>
-                </control>
-                <control type="image">
-                    <posx>0</posx>
-                    <posy>30</posy>
-                    <width>750</width>
-                    <heigth>652</heigth>
-                    <aspectratio>keep</aspectratio>
-                    <texture>barberouge.png</texture>
-                    <visible>Player.HasAudio</visible>
-                </control>       
-            </control>
+			
+               
         <control type="image">
             <include>FullscreenDimensions</include>
             <texture>common/bgcolor.png</texture>

@@ -2121,3 +2121,7 @@ msgstr "Vues"
 msgctxt "#53019"
 msgid "Add new view"
 msgstr "Installer une nouvelle vue"
+
+msgctxt "#53020"
+msgid "This will reset your setting! [CR]Are you sure?"
+msgstr "Cela va supprimer vos réglages! [CR]Êtes-vous sûr ?"

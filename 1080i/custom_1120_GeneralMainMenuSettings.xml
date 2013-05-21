@@ -18,7 +18,7 @@
             <posx>356</posx>
             <posy>180</posy>
             <width>1210</width>
-            <height>700</height>
+            <height>750</height>
             <texture>osd/osd_settings_back_glow.png</texture>
             <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
             <visible>!Skin.HasSetting(DisableGlowbar)</visible>
@@ -29,7 +29,7 @@
             <posx>356</posx>
             <posy>180</posy>
             <width>1210</width>
-            <height>700</height>
+            <height>750</height>
             <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
             <texture>osd/osd_settings_back.png</texture>
         </control>
@@ -55,7 +55,7 @@
             <posx>375</posx>
             <posy>292</posy>
             <width>1172</width>
-            <height>540</height>
+            <height>590</height>
             <aligny>center</aligny>
             <scrolltime>0</scrolltime>
             <onleft>450</onleft>
@@ -87,30 +87,36 @@
                 <onclick>Skin.ToggleSetting(bottommenu)</onclick>
                 <selected>Skin.HasSetting(bottommenu)</selected>
             </control>
-            <control type="button" id="314">
+            <control type="radiobutton" id="318">
+                <include>Objects_CommonSettingsButton</include>
+                <label>Extrafanarts widgets</label>
+                <onclick>Skin.ToggleSetting(HomeExtrafanartWidget)</onclick>
+                <selected>!Skin.HasSetting(HomeExtrafanartWidget)</selected>
+            </control>
+            <control type="button" id="319">
                 <label>$LOCALIZE[31613]</label>
                 <label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(CustomFocusOffset)][/COLOR]</label2>
                 <include>Objects_CommonSettingsButton</include>
                 <onclick>SetProperty(StartupFocus,1,home)</onclick>
                 <onclick>ActivateWindow(1151)</onclick>
             </control>
-            <control type="button" id="315">
+            <control type="button" id="320">
                 <label>31644</label>
                 <include>Objects_CommonSettingsButton</include>
                 <onclick>ActivateWindow(1132)</onclick>
             </control>
-            <control type="button" id="318">
+            <control type="button" id="321">
                 <include>Objects_CommonSettingsButton</include>
                 <label>31715</label>
                 <onclick>ActivateWindow(1148)</onclick>
                 <visible>System.HasAddon(script.randomandlastitems)</visible>
             </control>
-            <control type="button" id="319">
+            <control type="button" id="322">
                 <include>Objects_CommonSettingsButton</include>
                 <label>$LOCALIZE[31479]: $LOCALIZE[1045]</label>
                 <onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
             </control>
-            <control type="button" id="320">
+            <control type="button" id="323">
                 <include>Objects_CommonSettingsButton</include>
                 <label>Dpstream manager</label>
                 <onclick>ActivateWindow(1190)</onclick>

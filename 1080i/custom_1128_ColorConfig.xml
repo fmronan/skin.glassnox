@@ -177,9 +177,9 @@
 				</control>-->
                 <control type="button" id="15">
                     <include>ColorChooserButton</include>
-                    <label>$LOCALIZE[31178]</label>
+                    <label>$LOCALIZE[53015]</label>
                     <onclick>SetProperty(colordialog,panel_color,1124)</onclick>
-                    <onclick>ActivateWindow(1138)</onclick>
+                    <onclick>ActivateWindow(1178)</onclick>
                     <enable>!Skin.HasSetting(randomcolor)</enable>
                 </control>
                 <control type="button" id="16">

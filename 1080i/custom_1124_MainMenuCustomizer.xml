@@ -24,6 +24,7 @@
     <onunload>CancelAlarm(Widget2Move,true)</onunload>
     <onunload>Skin.SetString(widgetlist,$INFO[Control.GetLabel(11111)] $INFO[Control.GetLabel(21111)] $INFO[Control.GetLabel(31111)])</onunload>
     <onunload>Skin.SetString(widget2list,$INFO[Control.GetLabel(11112)])</onunload>
+    <onunload>Skin.SetString(widget3list,$INFO[Control.GetLabel(11115)])</onunload>
     <onunload>Skin.SetString(backgroundlist,$INFO[Control.GetLabel(11113)] $INFO[Control.GetLabel(21113)] $INFO[Control.GetLabel(31113)])</onunload>
     <onunload>Skin.SetString(submenulist,$INFO[Control.GetLabel(11114)])</onunload>
     <coordinates>
@@ -43,6 +44,12 @@
             <onfocus>Skin.Setstring(ItemToEdit.Icon,$ESCINFO[Container(9000).ListItem.Property(BigIcon)])</onfocus>
             <onfocus>Skin.Setstring(ItemToEdit.Widget,$INFO[Container(9000).ListItem.Property(Widget)])</onfocus>
             <onfocus>Skin.Setstring(ItemToEdit.Widget2,$INFO[Container(9000).ListItem.Property(Widget2)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.Widget3,$INFO[Container(9000).ListItem.Property(Widget3)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.element1,$INFO[Container(9000).ListItem.Property(element1)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.element2,$INFO[Container(9000).ListItem.Property(element2)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.element3,$INFO[Container(9000).ListItem.Property(element3)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.element4,$INFO[Container(9000).ListItem.Property(element4)])</onfocus>
+            <onfocus>Skin.Setstring(ItemToEdit.element5,$INFO[Container(9000).ListItem.Property(element5)])</onfocus>
             <onfocus>Skin.Setstring(ItemToEdit.WidgetTitle,$ESCINFO[Container(9000).ListItem.Property(WidgetTitle)])</onfocus>
             <onfocus>Skin.Setstring(ItemToEdit.Widget2Title,$ESCINFO[Container(9000).ListItem.Property(Widget2Title)])</onfocus>
             <onfocus>Skin.Setstring(ItemToEdit.InfoLine,$INFO[Container(9000).ListItem.Property(InfoLine)])</onfocus>

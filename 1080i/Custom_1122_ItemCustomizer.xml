@@ -47,7 +47,8 @@
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(FavouritesHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(WeatherHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
     <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(MusicVideosHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
-    <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(PlayDiscHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>    
+    <onunload condition="!IsEmpty(Window(home).Property(colorallicon))">Skin.SetString(PlayDiscHomeItem.IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
+    <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].element2,$INFO[Skin.String(ItemToEdit.element2)])</onunload>    
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Type,$INFO[Skin.String(ItemToEdit.Type)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].Color,$INFO[Skin.String(ItemToEdit.Color)])</onunload>
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].IconColor,$INFO[Skin.String(ItemToEdit.IconColor)])</onunload>
@@ -66,6 +67,8 @@
     <onunload>Skin.SetString($INFO[Window(home).Property(MenuItem)].SubMenu,$INFO[Skin.String(ItemToEdit.SubMenu)])</onunload>
     <onunload>ClearProperty(colorallicon,home)</onunload>
     <onunload>ClearProperty(colorallitem,home)</onunload>
+    <onunload>Skin.Reset(ItemToEdit.element2)</onunload>
+    <onunload>Skin.Reset(ItemToEdit.Widget3)</onunload>
     <onunload>Skin.Reset(ItemToEdit.IconColor)</onunload>
     <onunload>Skin.Reset(ItemToEdit.Color)</onunload>
     <onunload condition="IsEmpty(Window(1124).Property(ResetItem))">ClearProperty(MenuItem,home)</onunload>
@@ -238,40 +241,46 @@
 						<onclick>ActivateWindow(1138)</onclick>
 					</control>
 					<control type="button" id="29">
+                        <label>Extended Backgrounds</label>
+                        <include>Objects_CustomizerSettingsButton</include>
+                        <onclick>Setproperty(WidgetSelection,Widget3,1124)</onclick>
+                        <onclick>ActivateWindow(1133)</onclick>
+                    </control>
+					<control type="button" id="30">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>Screen</label>
                         <onclick>Setproperty(BackgroundSelection,Screen,1124)</onclick>
                         <onclick>ActivateWindow(1134)</onclick>
                         <visible>Skin.HasSetting(ShelfMode)</visible>
                     </control>
-                    <control type="button" id="30">
+                    <control type="button" id="31">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31703</label>
                         <onclick>ActivateWindow(1161)</onclick>
                     </control>
-                    <control type="button" id="300">
+                    <control type="button" id="310">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31704</label>
                         <onclick>ActivateWindow(1150)</onclick>
                     </control>                    
-                    <control type="button" id="31">
+                    <control type="button" id="32">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31807</label>
                         <onclick>SetProperty(IconTarget,Icon,1124)</onclick>
                         <onclick>ActivateWindow(1145)</onclick>
                     </control>
-                    <control type="button" id="32">
+                    <control type="button" id="33">
 						<include>Objects_CustomizerSettingsButton</include>
 						<label>53016</label>
 						<onclick>SetProperty(colordialog,ItemToEdit.IconColor,1124)</onclick>
 						<onclick>ActivateWindow(1138)</onclick>
 					</control>
-                    <control type="button" id="33">
+                    <control type="button" id="34">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>31808</label>
                         <onclick>ActivateWindow(1151)</onclick>
                     </control>
-                    <control type="button" id="34">
+                    <control type="button" id="35">
                         <include>Objects_CustomizerSettingsButton</include>
                         <label>$LOCALIZE[31027]</label>
                         <onclick>Skin.Reset(ItemToEdit.Type)</onclick>

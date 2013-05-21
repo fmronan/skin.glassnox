@@ -39,7 +39,7 @@
             <property name="NavItem">item1.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.1.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.1.Title))</visible>
         </item>
         <item>
@@ -80,7 +80,7 @@
             <property name="NavItem">item2.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.2.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.2.Title))</visible>
         </item>
         <item>
@@ -121,7 +121,7 @@
             <property name="NavItem">item3.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.3.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.3.Title))</visible>
         </item>
         <item>
@@ -162,7 +162,7 @@
             <property name="NavItem">item4.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.4.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.4.Title))</visible>
         </item>
         <item>
@@ -203,7 +203,7 @@
             <property name="NavItem">item5.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.5.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.5.Title))</visible>
         </item>
         <item>
@@ -244,7 +244,7 @@
             <property name="NavItem">item6.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.6.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.6.Title))</visible>
         </item>
         <item>
@@ -285,7 +285,7 @@
             <property name="NavItem">item7.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.7.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.7.Title))</visible>
         </item>
         <item>
@@ -326,7 +326,7 @@
             <property name="NavItem">item8.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist7.8.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4325),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),7custom) | Substring(Control.GetLabel(4321),1custom) |  Substring(Control.GetLabel(4325),1custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist7.8.Title))</visible>
         </item>
     </include>
@@ -369,7 +369,7 @@
             <property name="NavItem">item1.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.1.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.1.Title))</visible>
         </item>
         <item>
@@ -410,7 +410,7 @@
             <property name="NavItem">item2.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.2.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.2.Title))</visible>
         </item>
         <item>
@@ -451,7 +451,7 @@
             <property name="NavItem">item3.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.3.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.3.Title))</visible>
         </item>
         <item>
@@ -492,7 +492,7 @@
             <property name="NavItem">item4.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.4.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.4.Title))</visible>
         </item>
         <item>
@@ -533,7 +533,7 @@
             <property name="NavItem">item5.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.5.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.5.Title))</visible>
         </item>
         <item>
@@ -574,7 +574,7 @@
             <property name="NavItem">item6.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.6.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.6.Title))</visible>
         </item>
         <item>
@@ -615,7 +615,7 @@
             <property name="NavItem">item7.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.7.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.7.Title))</visible>
         </item>
         <item>
@@ -656,7 +656,7 @@
             <property name="NavItem">item8.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist8.8.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4325),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),8custom) | Substring(Control.GetLabel(4321),2custom) |  Substring(Control.GetLabel(4325),2custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist8.8.Title))</visible>
         </item>
     </include>
@@ -699,7 +699,7 @@
             <property name="NavItem">item1.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.1.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.1.Title))</visible>
         </item>
         <item>
@@ -740,7 +740,7 @@
             <property name="NavItem">item2.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.2.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.2.Title))</visible>
         </item>
         <item>
@@ -781,7 +781,7 @@
             <property name="NavItem">item3.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.3.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.3.Title))</visible>
         </item>
         <item>
@@ -822,7 +822,7 @@
             <property name="NavItem">item4.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.4.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.4.Title))</visible>
         </item>
         <item>
@@ -863,7 +863,7 @@
             <property name="NavItem">item5.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.5.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.5.Title))</visible>
         </item>
         <item>
@@ -904,7 +904,7 @@
             <property name="NavItem">item6.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.6.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.6.Title))</visible>
         </item>
         <item>
@@ -945,7 +945,7 @@
             <property name="NavItem">item7.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.7.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.7.Title))</visible>
         </item>
         <item>
@@ -986,7 +986,7 @@
             <property name="NavItem">item8.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist9.8.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4325),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),9custom) | Substring(Control.GetLabel(4321),3custom) |  Substring(Control.GetLabel(4325),3custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist9.8.Title))</visible>
         </item>
     </include>
@@ -1029,7 +1029,7 @@
             <property name="NavItem">item1.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.1.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.1.Title))</visible>
         </item>
         <item>
@@ -1070,7 +1070,7 @@
             <property name="NavItem">item2.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.2.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.2.Title))</visible>
         </item>
         <item>
@@ -1111,7 +1111,7 @@
             <property name="NavItem">item3.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.3.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.3.Title))</visible>
         </item>
         <item>
@@ -1152,7 +1152,7 @@
             <property name="NavItem">item4.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.4.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.4.Title))</visible>
         </item>
         <item>
@@ -1193,7 +1193,7 @@
             <property name="NavItem">item5.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.5.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.5.Title))</visible>
         </item>
         <item>
@@ -1234,7 +1234,7 @@
             <property name="NavItem">item6.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.6.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.6.Title))</visible>
         </item>
         <item>
@@ -1275,7 +1275,7 @@
             <property name="NavItem">item7.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.7.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.7.Title))</visible>
         </item>
         <item>
@@ -1316,7 +1316,7 @@
             <property name="NavItem">item8.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist10.8.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4325),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),10custom) | Substring(Control.GetLabel(4321),4custom) |  Substring(Control.GetLabel(4325),4custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist10.8.Title))</visible>
         </item>
     </include>
@@ -1359,7 +1359,7 @@
             <property name="NavItem">item1.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.1.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.1.Title))</visible>
         </item>
         <item>
@@ -1400,7 +1400,7 @@
             <property name="NavItem">item2.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.2.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.2.Title))</visible>
         </item>
         <item>
@@ -1441,7 +1441,7 @@
             <property name="NavItem">item3.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.3.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.3.Title))</visible>
         </item>
         <item>
@@ -1482,7 +1482,7 @@
             <property name="NavItem">item4.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.4.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.4.Title))</visible>
         </item>
         <item>
@@ -1523,7 +1523,7 @@
             <property name="NavItem">item5.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.5.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.5.Title))</visible>
         </item>
         <item>
@@ -1564,7 +1564,7 @@
             <property name="NavItem">item6.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.6.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.6.Title))</visible>
         </item>
         <item>
@@ -1605,7 +1605,7 @@
             <property name="NavItem">item7.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.7.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.7.Title))</visible>
         </item>
         <item>
@@ -1646,7 +1646,7 @@
             <property name="NavItem">item8.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist11.8.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4325),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),11custom) | Substring(Control.GetLabel(4321),5custom) |  Substring(Control.GetLabel(4325),5custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist11.8.Title))</visible>
         </item>
     </include>
@@ -1689,7 +1689,7 @@
             <property name="NavItem">item1.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.1.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.1.Title))</visible>
         </item>
         <item>
@@ -1730,7 +1730,7 @@
             <property name="NavItem">item2.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.2.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.2.Title))</visible>
         </item>
         <item>
@@ -1771,7 +1771,7 @@
             <property name="NavItem">item3.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.3.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.3.Title))</visible>
         </item>
         <item>
@@ -1812,7 +1812,7 @@
             <property name="NavItem">item4.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.4.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.4.Title))</visible>
         </item>
         <item>
@@ -1853,7 +1853,7 @@
             <property name="NavItem">item5.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.5.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.5.Title))</visible>
         </item>
         <item>
@@ -1894,7 +1894,7 @@
             <property name="NavItem">item6.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.6.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.6.Title))</visible>
         </item>
         <item>
@@ -1935,7 +1935,7 @@
             <property name="NavItem">item7.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.7.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.7.Title))</visible>
         </item>
         <item>
@@ -1976,7 +1976,7 @@
             <property name="NavItem">item8.png</property>
             <thumb>$INFO[Window(Home).Property(SmartPlaylist12.8.Art(thumb))]</thumb>
             <onclick>SetFocus(6014)</onclick>
-            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4325),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
+            <visible>Substring(Control.GetLabel(4325),12custom) | Substring(Control.GetLabel(4321),6custom) |  Substring(Control.GetLabel(4325),6custom)</visible>
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist12.8.Title))</visible>
         </item>
     </include>

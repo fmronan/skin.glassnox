@@ -350,7 +350,66 @@
                     <onclick condition="!IsEmpty(Skin.String(DisableShowcaseVL)) + !StringCompare(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableShowcaseVL)</onclick>
                     <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
                 </item>
-             
+				<item>
+                    <label>$INFO[Skin.String(ViewCustom1001_Name)]</label>
+                    <onclick>Container.SetViewMode(1001)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1001_IsEnable)">VisibleCondition1001_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1001_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1002_Name)]</label>
+                    <onclick>Container.SetViewMode(1002)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1002_IsEnable)">VisibleCondition1002_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1002_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1003_Name)]</label>
+                    <onclick>Container.SetViewMode(1003)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1003_IsEnable)">VisibleCondition1003_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1003_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1004_Name)]</label>
+                    <onclick>Container.SetViewMode(1004)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1004_IsEnable)">VisibleCondition1004_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1004_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1005_Name)]</label>
+                    <onclick>Container.SetViewMode(1005)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1005_IsEnable)">VisibleCondition1005_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1005_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1006_Name)]</label>
+                    <onclick>Container.SetViewMode(1006)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1006_IsEnable)">VisibleCondition1006_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1006_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1007_Name)]</label>
+                    <onclick>Container.SetViewMode(1007)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1007_IsEnable)">VisibleCondition1007_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1007_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1008_Name)]</label>
+                    <onclick>Container.SetViewMode(1008)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1008_IsEnable)">VisibleCondition1008_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1008_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1009_Name)]</label>
+                    <onclick>Container.SetViewMode(1009)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1009_IsEnable)">VisibleCondition1009_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1009_IsEnable)</visible>
+                </item>
+                <item>
+                    <label>$INFO[Skin.String(ViewCustom1010_Name)]</label>
+                    <onclick>Container.SetViewMode(1010)</onclick>
+                    <include condition="Skin.HasSetting(ViewCustom1010_IsEnable)">VisibleCondition1010_Custom</include>
+                    <visible>Skin.HasSetting(ViewCustom1010_IsEnable)</visible>
+                </item>
                 
                 
                 

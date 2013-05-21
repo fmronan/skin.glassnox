@@ -1161,7 +1161,6 @@
                 <property name="element4">$INFO[Skin.String(WeatherHomeItem.element4)]</property>
                 <property name="element5">$INFO[Skin.String(WeatherHomeItem.element5)]</property>
                 <property name="Widget3">$INFO[Skin.String(WeatherHomeItem.Widget3)]</property>
-                <property name="IconWeather">$INFO[Window(weather).Property(Current.ConditionIcon)]</property>
                 <property name="IconColor">$INFO[Skin.String(WeatherHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(WeatherHomeItem.Widget)]</property>
                 <property name="Widget2">$INFO[Skin.String(WeatherHomeItem.Widget2)]</property>
@@ -1269,7 +1268,7 @@
                 <property name="element3">$INFO[Skin.String(SettingsHomeItem.element3)]</property>
                 <property name="element4">$INFO[Skin.String(SettingsHomeItem.element4)]</property>
                 <property name="element5">$INFO[Skin.String(SettingsHomeItem.element5)]</property>
-                <property name="Widget3">$INFO[Skin.String(SearchHomeItem.Widget3)]</property>
+                <property name="Widget3">$INFO[Skin.String(SettingsHomeItem.Widget3)]</property>
                 <property name="Color">$INFO[Skin.String(SettingsHomeItem.Color)]</property>
                 <property name="IconColor">$INFO[Skin.String(SettingsHomeItem.IconColor)]</property>
                 <property name="Widget">$INFO[Skin.String(SettingsHomeItem.Widget)]</property>

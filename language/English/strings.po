@@ -631,7 +631,7 @@ msgctxt "#31192"
 msgid "Choose font color"
 msgstr ""
 
-msgctxt "#31192"
+msgctxt "#31193"
 msgid "Infopanel Delay"
 msgstr ""
 
@@ -2322,3 +2322,6 @@ msgctxt "#53019"
 msgid "Add new view"
 msgstr ""
 
+msgctxt "#53020"
+msgid "This will reset your setting! [CR]Are you sure?"
+msgstr ""

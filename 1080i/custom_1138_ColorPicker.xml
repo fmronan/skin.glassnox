@@ -2,12 +2,12 @@
 <window type="dialog" id="1138">
     <defaultcontrol always="true">10</defaultcontrol>
     <zorder>2</zorder>
-    <onload condition="!Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
-    <onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
-    <onload condition="!Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
-    <onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,white_font_,home)</onload>
-    <onload condition="!Substring(Skin.CurrentTheme,whit) + StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorTarget,panel_,home)</onload>
-    <onload condition="Substring(Skin.CurrentTheme,whit)+ StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorTarget,panel_white_,home)</onload>
+    <onload condition="!Substring(Skin.CurrentTheme,white)+ StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
+    <onload condition="Substring(Skin.CurrentTheme,white) + StringCompare(Window(1124).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
+    <onload condition="!Substring(Skin.CurrentTheme,white)+ StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
+    <onload condition="Substring(Skin.CurrentTheme,white) + StringCompare(Window(1124).Property(colordialog),font_color)">SetProperty(ColorTarget,white_font_,home)</onload>
+    <onload condition="!Substring(Skin.CurrentTheme,white) + StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorTarget,panel_,home)</onload>
+    <onload condition="Substring(Skin.CurrentTheme,white)+ StringCompare(Window(1124).Property(colordialog),panel_color)">SetProperty(ColorTarget,panel_white_,home)</onload>
     <onload condition="StringCompare(Window(1124).Property(colordialog),default_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,default_,home)</onload>
     <onload condition="StringCompare(Window(1124).Property(colordialog),default_case)+Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,Cleardefault_,home)</onload>
 	<onload condition="StringCompare(Window(1124).Property(colordialog),480_case)+!Skin.HasSetting(ClearBdOption)">SetProperty(ColorTarget,480_,home)</onload>

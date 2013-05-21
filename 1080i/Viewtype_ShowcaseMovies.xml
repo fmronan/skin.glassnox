@@ -712,7 +712,7 @@
             <control type="button" id="1981">
                 <include>HiddenObject</include>
                 <visible>!Window.IsActive(DialogVideoInfo.xml) + SubString(ListItem.Path,videodb://1/7) + !Control.HasFocus(7000)</visible>
-                <visible>!Container.OnNext + !Container.OnPrevious   </visible>
+                <visible>!Container.OnNext + !Container.OnPrevious</visible>
                 <animation effect="fade" end="100" time="120" delay="1600">Visible</animation>
                 <animation effect="fade" end="100" time="120" delay="1600">WindowOpen</animation>
             </control>
@@ -2189,6 +2189,7 @@
             </animation>
             <aspectratio align="right">keep</aspectratio>
             <texture background="true" fallback="true">$VAR[cdArtVar]</texture>
+            <visible>!SubString(ListItem.Path,videodb://1/7)</visible>
             <visible>Container.Content(movies)+Skin.HasSetting(usecases) +[!IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(lowlistmaker)]</visible>
         </control>
         <control type="image">

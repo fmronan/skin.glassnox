@@ -4,6 +4,8 @@
     <backgroundcolor>backgroundcolor</backgroundcolor>
     <allowoverlay>no</allowoverlay>
     <include condition="!Skin.HasSetting(GlassRun.2.1)">AutoConfig</include>
+    <include condition="Skin.HasSetting(ExtraBackgrounds_IsInstall)">ReplaceFiles</include>
+    <onload condition="Skin.HasSetting(ExtraBackgrounds_IsInstall)+!IsEmpty(Skin.String(ReplaceFiles))">RunScript(script.glassnox.extras.downloader,reinstall=True)</onload>
     <include condition="Skin.HasSetting(ViewCustom_IsInstall)">ControlViews</include>
 	<onload condition="Skin.HasSetting(ViewCustom_IsInstall)+!IsEmpty(Skin.String(ReinstallCustomView))">RunScript(special://skin/scripts/reloadall.py)</onload>
     <onload>RunScript(script.favourites)</onload>
@@ -42,6 +44,7 @@
     <onload condition="!IsEmpty(Skin.String(SmartPlaylist16.Call))">$INFO[Skin.String(SmartPlaylist16.Call)]</onload>
     <onload condition="!IsEmpty(Skin.String(SmartPlaylist17.Call))">$INFO[Skin.String(SmartPlaylist17.Call)]</onload>
     <onload condition="!IsEmpty(Skin.String(SmartPlaylist18.Call))">$INFO[Skin.String(SmartPlaylist18.Call)]</onload>
+    <onload>RunScript(special://skin/scripts/dpstreammovieslist.py,-n10,-g=Tous,-q=HD,-h=Toutes,-c=Chronologique,-l=FR,-b=DpstreamList13)</onload>
     <onload condition="!IsEmpty(Skin.String(DpstreamList1.Call))">$INFO[Skin.String(DpstreamList1.Call)]</onload>
     <onload condition="!IsEmpty(Skin.String(DpstreamList2.Call))">$INFO[Skin.String(DpstreamList2.Call)]</onload>
     <onload condition="!IsEmpty(Skin.String(DpstreamList3.Call))">$INFO[Skin.String(DpstreamList3.Call)]</onload>
@@ -57,6 +60,7 @@
     <onload condition="System.HasAddon(script.xbmc.intro.movie)">RunScript(script.xbmc.intro.movie)</onload>
     <onunload>Skin.SetString(widgetlist,$INFO[Control.GetLabel(11111)] $INFO[Control.GetLabel(21111)] $INFO[Control.GetLabel(31111)])</onunload>
     <onunload>Skin.SetString(widget2list,$INFO[Control.GetLabel(11112)])</onunload>
+    <onunload>Skin.SetString(widget3list,$INFO[Control.GetLabel(11115)])</onunload>
     <onunload>Skin.SetString(backgroundlist,$INFO[Control.GetLabel(11113)] $INFO[Control.GetLabel(21113)] $INFO[Control.GetLabel(31113)])</onunload>
     <onunload>Skin.SetString(submenulist,$INFO[Control.GetLabel(11114)])</onunload>
     <animation type="WindowClose" reversible="false">

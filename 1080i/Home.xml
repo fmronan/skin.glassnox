@@ -311,20 +311,18 @@
                 <animation effect="fade" time="400">Hidden</animation>
                 <visible>!Substring(Control.GetLabel(4322),case)</visible>
             </control>
-		<!--	<control type="image">
-				<posx>382</posx>
-				<posy>60</posy>
-				<width>120</width>
-				<height>120</height>
-				<aspectratio align="center">keep</aspectratio>
-				<texture>$INFO[Container(9000).ListItem.Property(IconWeather)]</texture>
-				<fadetime>600</fadetime>
-                <animation effect="fade" time="480">Visible</animation>
-                <animation effect="fade" time="480">Hidden</animation>
-                <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-			</control>
-			-->
+            <include condition="SubString(Skin.String(widget3list),info)">ExtendedBackgrounds</include>
+		<!-- for dev--><!--
+			<control type="label">
+                <posx>397</posx>
+                <posy>120</posy>
+                <width>1000</width>
+                <textcolor>$VAR[HomeMenuTextFocusVar4]</textcolor>
+                <height>225</height>
+                <align>center</align>
+                <label>$INFO[Window(Home).Property(RecommendedMovie.1.File)]</label>
+                <font>Font_Reg30_Caps</font>
+            </control>-->
             <control type="image">
                 <aspectratio align="center" aligny="top">scale</aspectratio>
                 <texture background="true" fallback="special://skin/background/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
@@ -360,37 +358,7 @@
                 <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
                 <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
             </control>
-            
-            <control type="multiimage">
-                <fadetime>600</fadetime>
-                <animation type="Conditional" condition="Substring(Control.GetLabel(4321),shelf)" reversible="true">
-					<effect type="slide" start="0,0" end="190,430" time="0" tween="cubic" easing="inout" />
-					<effect type="zoom" start="100" end="80" time="0"/>
-				</animation>
-                <include>FullscreenDimensions</include>
-                <imagepath background="true">$VAR[HomeWidgetExtraFanartVar]</imagepath>
-                <aspectratio align="center" aligny="top">scale</aspectratio>
-                <animation effect="fade" time="600">Visible</animation>
-                <animation effect="fade" time="600">Hidden</animation>
-                <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <visible>[Control.HasFocus(8000) | Control.HasFocus(8020) | ControlGroup(5000).HasFocus ] + [!IsEmpty(Container(5003).ListItem.Property(Extra)) |!IsEmpty(Container(5002).ListItem.Property(Extra)) |!IsEmpty(Container(5001).ListItem.Property(Extra))|!IsEmpty(Container(5010).ListItem.Property(Extra)) | !IsEmpty(Container(8000).ListItem.Property(Extra))]</visible>
-            </control>
-            <control type="multiimage">
-                <fadetime>600</fadetime>
-				<animation type="Conditional" condition="Substring(Control.GetLabel(4325),shelf)" reversible="true">
-					<effect type="slide" start="0,0" end="190,430" time="0" tween="cubic" easing="inout" />
-					<effect type="zoom" start="100" end="80" time="0"/>
-				</animation>
-				<include>FullscreenDimensions</include>
-                <imagepath background="true">$VAR[HomeWidgetExtraFanartVar1]</imagepath>
-                <aspectratio align="center" aligny="top">scale</aspectratio>
-                <animation effect="fade" time="600">Visible</animation>
-                <animation effect="fade" time="600">Hidden</animation>
-                <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="linear" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-                <visible>[Control.HasFocus(7000) | Control.HasFocus(7020) | ControlGroup(6000).HasFocus ] + [!IsEmpty(Container(6003).ListItem.Property(Extra)) |!IsEmpty(Container(6002).ListItem.Property(Extra)) |!IsEmpty(Container(6001).ListItem.Property(Extra))|!IsEmpty(Container(6010).ListItem.Property(Extra)) | !IsEmpty(Container(7000).ListItem.Property(Extra))]</visible>
-            </control>
+            <include condition="!Skin.HasSetting(HomeExtrafanartWidget)">ExtrafanartsWidgets</include>
             <include>BackgroundsItemFirst</include>
             <!-- Music ExtraFanart -->
             <include condition="!IsEmpty(Skin.String(ArtistsLogosPath))">MusicExtraFanartHome</include>
@@ -751,6 +719,21 @@
                 </control>
             </control>
             <include>BackgroundsItem</include>
+            <control type="image">
+				<include>FullscreenDimensions</include>
+				<animation effect="slide" start="0,-900" end="0,0" time="5000" delay="2000">WindowOpen</animation>
+				<animation effect="slide" start="0,-900" end="0,0" time="5000" delay="200">Visible</animation>
+				<texture>special://skin/extras/elements/vitre.png</texture>
+				<visible>Substring(Control.GetLabel(4328),shelf)</visible>
+				<include>Animation_VisibleChange400</include>
+			</control>
+            <control type="image">
+				<include>FullscreenDimensions</include>
+				<texture>common/bgcolor.png</texture>
+				<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
+				<visible>Window.IsActive(1140)</visible>
+				<include>Animation_VisibleChange400</include>
+			</control>
             <control type="button" id="22222">
                 <include>HiddenObject</include>
                 <onleft condition="Stringcompare(Window(home).Property(WidgetPosition),Widget1)">Control.Move(5010,-1)</onleft>

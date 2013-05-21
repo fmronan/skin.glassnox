@@ -1,5 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<include name="DpStream13">
+        <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.1)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.1)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.1)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.1)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.1)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.1)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.1)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.1)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.1)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.1)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.1)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.1)]</property>
+            <onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.1))</visible>
+        </item>
+         <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.2)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.2)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.2)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.2)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.2)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.2)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.2)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.2)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.2)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.2)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.2)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.2)]</property>
+            <onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.2))</visible>
+        </item>
+        <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.3)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.3)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.3)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.3)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.3)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.3)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.3)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.3)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.3)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.3)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.3)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.3)]</property>
+            <onclick>SetFocus(5014)</onclick> 
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.3))</visible>
+        </item>
+        <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.4)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.4)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.4)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.4)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.4)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.4)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.4)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.4)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.4)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.4)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.4)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.4)]</property>
+            <onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.4))</visible>
+        </item>
+		<item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.5)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.5)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.5)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.5)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.5)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.5)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.5)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.5)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.5)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.5)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.5)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.5)]</property>
+            <onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.5))</visible>
+        </item>
+         <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.6)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.6)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.6)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.6)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.6)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.6)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.6)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.6)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.6)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.6)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.6)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.6)]</property>
+            <onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.6))</visible>
+        </item>
+        <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.7)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.7)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.7)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.7)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.7)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.7)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.7)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.7)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.7)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.7)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.7)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.7)]</property>
+			<onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.7))</visible>
+        </item>
+        <item>
+            <label>$INFO[Window(Home).Property(DpstreamList13.Title.8)]</label>
+            <property name="Genre">$INFO[Window(Home).Property(DpstreamList13.Genre.8)]</property>
+            <property name="Director">$INFO[Window(Home).Property(DpstreamList13.Director.8)]</property>
+            <property name="RunningTime">$INFO[Window(Home).Property(DpstreamList13.Duration.8)]</property>
+            <property name="Id">$INFO[Window(Home).Property(DpstreamList13.Url.1)]</property>
+            <property name="Path">$INFO[Window(Home).Property(DpstreamList13.Id.8)]</property>
+            <property name="OriginalTitle">$INFO[Window(Home).Property(DpstreamList13.OriginalTitle.8)]</property>
+            <property name="Rating">$INFO[Window(Home).Property(DpstreamList13.Rating.8)]</property>
+            <property name="Plot">$INFO[Window(Home).Property(DpstreamList13.Plot.8)]</property>
+            <property name="Poster">$INFO[Window(Home).Property(DpstreamList13.Thumb.8)]</property>
+            <property name="Country">$INFO[Window(Home).Property(DpstreamList13.Country.8)]</property>
+            <property name="Year">$INFO[Window(Home).Property(DpstreamList13.Year.8)]</property>
+            <onclick>SetFocus(5014)</onclick>
+           <visible>!IsEmpty(Window(Home).Property(DpstreamList13.Title.8))</visible>
+        </item>
+    </include>
 	<include name="DpStream1">
         <item>
             <label>$INFO[Window(Home).Property(DpstreamList1.Title.1)]</label>
@@ -3541,4 +3671,193 @@
             <visible>!IsEmpty(Window(Home).Property(SmartPlaylist18.8.Title))</visible>
         </item>
     </include>
+    <include name="ExtendedBackgrounds">
+		<control type="image">
+				<posx>382</posx>
+				<posy>60</posy>
+				<width>120</width>
+				<height>120</height>
+				<aspectratio align="center">keep</aspectratio>
+				<texture>$INFO[Window(weather).Property(Current.ConditionIcon)]</texture>
+				<fadetime>600</fadetime>
+				<include>Animation_OpenCloseZoom</include>
+                <animation effect="fade" time="480">Visible</animation>
+                <animation effect="fade" time="480">Hidden</animation>
+                <animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+                <animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
+                <visible>Substring(Control.GetLabel(4328),weather)</visible>
+			</control>
+			<control type="group">
+				<include>Animation_OpenCloseZoom</include>
+				<visible>Substring(Control.GetLabel(4328),system) + !Window.IsActive(1128)</visible>
+				<control type="label">
+                    <posx>335</posx>
+                    <posy>45</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.BuildVersion]</label>
+                    <font>Font_Reg17</font>
+                    <color>grey</color>
+                    <shadowcolor>black</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>335</posx>
+                    <posy>75</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.BuildDate]</label>
+                    <font>Font_Reg17</font>
+                    <color>grey</color>
+                    <shadowcolor>black</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>335</posx>
+                    <posy>105</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.FriendlyName]</label>
+                    <font>Font_Reg17</font>
+                    <color>grey</color>
+                    <shadowcolor>black</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>1510</posx>
+                    <posy>284</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[Network.IPAddress]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>1575</posx>
+                    <posy>130</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.Uptime]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+				 <control type="label">
+                    <posx>552</posx>
+                    <posy>242</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[system.BatteryLevel]</label>
+                    <font>Font_Reg38_Caps</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="image">
+                    <posx>478</posx>
+                    <posy>178</posy>
+                    <width>170</width>
+                    <height>170</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>dialogs/circle/$INFO[system.BatteryLevel].png</texture>
+                    <colordiffuse>FFF55B1B</colordiffuse>
+                </control>
+                 <control type="label">
+                    <posx>767</posx>
+                    <posy>362</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[system.memory(used)]</label>
+                    <font>Font_Reg38_Caps</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="progress">
+                    <posx>680</posx>
+                    <posy>264</posy>
+                    <width>360</width>
+                    <height>21</height>
+                    <info>System.CPUUsage</info>
+                </control>
+                <control type="label">
+                    <posx>367</posx>
+                    <posy>242</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[system.memory(used.percent)]</label>
+                    <font>Font_Reg38_Caps</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="image">
+                    <posx>308</posx>
+                    <posy>178</posy>
+                    <width>170</width>
+                    <height>170</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>dialogs/circle/$INFO[system.memory(used.percent)].png</texture>
+                    <colordiffuse>FFF55B1B</colordiffuse>
+                </control>
+                <control type="label">
+                    <posx>320</posx>
+                    <posy>162</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$LOCALIZE[31309]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>500</posx>
+                    <posy>162</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>12395</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>1155</posx>
+                    <posy>252</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.CPUUsage]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>1155</posx>
+                    <posy>152</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.CPUTemperature]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+                <control type="label">
+                    <posx>1155</posx>
+                    <posy>352</posy>
+                    <width>310</width>
+                    <height>34</height>
+                    <label>$INFO[System.CpuFrequency]</label>
+                    <font>Font_Reg17</font>
+                    <textcolor>black</textcolor>
+                    <shadowcolor>grey2</shadowcolor>
+                    <scroll>true</scroll>
+                </control>
+             </control>
+		</include>
 </includes>
