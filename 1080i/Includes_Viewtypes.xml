@@ -744,7 +744,8 @@
                     <effect type="fade" end="100" delay="320" time="160" />
                 </animation>
             </control>
-			<control type="multiimage">
+
+		<control type="multiimage">
                 <posx>909</posx>
                 <posy>69</posy>
                 <width>798</width>

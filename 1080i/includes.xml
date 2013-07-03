@@ -990,8 +990,8 @@
         <onload>Skin.SetString(Clearavi_colorcase,FF484848)</onload>
         <onload>Skin.SetString(iso_colorcase,FF484848)</onload>
         <onload>Skin.SetString(Cleariso_colorcase,FF484848)</onload>
-        <onload>Skin.SetString(VideosHomeItem.MultiFanart,special://skin/backgrounds/empty.jpg)</onload>
-        <onload>Skin.SetString(VideosHomeItem.Screen,special://skin/backgrounds/empty.jpg)</onload>
+        <onload>Skin.SetString(VideosHomeItem.MultiFanart,special://skin/background/empty.jpg)</onload>
+        <onload>Skin.SetString(VideosHomeItem.Screen,special://skin/background/empty.jpg)</onload>
         <onload>Skin.SetString(VideosHomeItem.element1,special://skin/extras/elements/Bobine 2.png)</onload>
         <onload>Skin.SetString(VideosHomeItem.Widget2,shelfrecentmoviesclassicDiscartClearartdefault)</onload>
         <onload>Skin.SetString(WeatherHomeItem.Widget3,infoweather)</onload>
@@ -2424,7 +2424,7 @@
                         <label>31352</label>
                         <font>-</font>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <texturefocus>special://skin/extras/BigIcons/ButtonFFW.png</texturefocus>
+                        <texturefocus>special://skin/extras/BigIcons/ButtonFRW.png</texturefocus>
                         <texturenofocus>-</texturenofocus>
                         <enable>Player.SeekEnabled</enable>
                         <onclick>PlayerControl(Rewind)</onclick>
@@ -2459,7 +2459,7 @@
                         <label>31352</label>
                         <font>-</font>
                         <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                        <texturefocus>special://skin/extras/BigIcons/ButtonFRW.png</texturefocus>
+                        <texturefocus>special://skin/extras/BigIcons/ButtonFFW.png</texturefocus>
                         <texturenofocus>-</texturenofocus>
                         <enable>Player.SeekEnabled</enable>
                         <onclick>PlayerControl(Forward)</onclick>

@@ -33,7 +33,8 @@
         <value condition="Substring(System.Time(mm),3,left)">FFF3F781</value>
         <value condition="Substring(System.Time(mm),4,left)">FF69f5ee</value>
         <value condition="Substring(System.Time(mm),5,left)">FFF3F781</value>
-    </variable>    <variable name="NewsFeedVar">
+    </variable>    
+    <variable name="NewsFeedVar">
         <value condition="Stringcompare(System.Language,German)">http://pipes.yahoo.com/pipes/pipe.run?_id=5cc10db1ae3a763e4919c6de8fb58551&amp;_render=json&amp;youtubeid=tagesschau</value>
         <value condition="Stringcompare(System.Language,French)">http://pipes.yahoo.com/pipes/pipe.run?_id=5cc10db1ae3a763e4919c6de8fb58551&amp;_render=json&amp;youtubeid=BFMTV</value>
         <value condition="Stringcompare(System.Language,Australia)">http://pipes.yahoo.com/pipes/pipe.run?_id=5cc10db1ae3a763e4919c6de8fb58551&amp;_render=json&amp;youtubeid=7NEWS</value>
@@ -1817,6 +1818,31 @@
         <value condition="SubString(Container(501).ListItem(9).Filename,.bluray.)">1080p.png</value>
         <value condition="SubString(Container(501).ListItem(9).Filename,.dvd.)">576p.png</value>
         <value>$INFO[Container(501).ListItem(9).VideoResolution]p.png</value>
+    </variable>
+    <variable name="GlobalClearLogoVar">
+		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Skin.String(TVserieClear_codeccase)]</value>
+		<value condition="SubString(ListItem.Filename,.hddvd.)">$INFO[Skin.String(hddvdClear_codeccase)]</value>
+        <value condition="SubString(ListItem.Filename,.3D.)">$INFO[Skin.String(3dClear_codeccase)]</value>
+        <value condition="SubString(ListItem.Filename,.bluray.)">$INFO[Skin.String(blurayClear_codeccase)]</value>
+        <value condition="SubString(ListItem.Filename,.dvd.)">$INFO[Skin.String(dvdClear_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,480)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(480Clear_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,540)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(540Clear_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,576)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(576Clear_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,720)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(720Clear_codeccase)]</value>
+        <value condition="SubString(ListItem.VideoResolution,1080)+!IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(1080Clear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,dvd)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvdClear_codeccase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,dv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(dvClear_codeccase)]</value>
+        <value condition="StringCompare(ListItem.FileExtension,h264)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(h264Clear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mkv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mkvClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mov)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(movClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mp4)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mp4Clear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,avi)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(aviClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,mpeg)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(mpegClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,qt)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(QTClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,iso)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(isoClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,wmv)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(wmvClear_codeccase)]</value>
+		<value condition="StringCompare(ListItem.FileExtension,xvid)+IsEmpty(Skin.String(DvdResolutionCase))">$INFO[Skin.String(xvidClear_codeccase)]</value>
+        <value>$INFO[Skin.String(defaultClear_codeccase)]</value>
     </variable>
     <variable name="GlobalLogoVar">
 		<value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[Skin.String(TVserie_codeccase)]</value>

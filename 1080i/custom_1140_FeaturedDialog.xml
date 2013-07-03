@@ -468,7 +468,7 @@
         </control>
         <control type="button" id="5014">
             <include>HiddenObject</include>
-            <onfocus condition="Substring(Control.GetLabel(4321),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/?url=$INFO[Container(8001).ListItem.Property(Id)]&amp;mode=13&amp;id=$INFO[Container(8001).ListItem.Property(Path)],return)</onfocus>
+            <onfocus condition="Substring(Control.GetLabel(4321),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/?url=$INFO[Container(8001).ListItem.Property(Id)]&amp;mode=13&amp;id=$INFO[Container(8001).ListItem.Property(Path)]&amp;addlibrary=False,return)</onfocus>
             <onfocus condition="Substring(Control.GetLabel(4321),movie)">SetFocus(8020)</onfocus>
             <onfocus condition="!Substring(Control.GetLabel(4321),movie)">$INFO[Container(8001).ListItem.Property(Path)]</onfocus>
             <onfocus condition="!Substring(Control.GetLabel(4321),movie)">Action(Close)</onfocus>

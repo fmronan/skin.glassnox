@@ -3197,7 +3197,7 @@
                         <include>WidgetMenuLabel</include>
 						<onclick condition="!IsEmpty(Window(home).Property(PanelWidgetInfo))">SetFocus(5010)</onclick>
 						<onclick condition="!IsEmpty(Window(home).Property(PanelWidget2Info))">SetFocus(6010)</onclick>
-						<onclick condition="Substring(Window(home).Property(WidgetType),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/?url=$INFO[Window(home).Property(Id)]&amp;mode=13&amp;id=$INFO[Window(home).Property(Path)],return)</onclick>
+						<onclick condition="Substring(Window(home).Property(WidgetType),dpstream)">ActivateWindow(videos,plugin://plugin.video.dpstream/?url=$INFO[Window(home).Property(Id)]&amp;mode=13&amp;id=$INFO[Window(home).Property(Path)]&amp;addlibrary=False,return)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),movies) + !Substring(Window(home).Property(WidgetType),dpstream)">Runscript(service.skin.widgets,movieid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),tv)">Runscript(service.skin.widgets,episodeid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
 						<onclick condition="Substring(Window(home).Property(WidgetType),musicvideo)">Runscript(service.skin.widgets,musicvideoid=$INFO[Window(home).Property(DBID)],resume=false)</onclick>
@@ -4019,6 +4019,7 @@
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
                     <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Player.HasAudio + !Player.HasMedia</visible>
                     <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                 </control>
@@ -4034,6 +4035,7 @@
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
                     <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Player.HasAudio + !Player.HasMedia</visible>
                     <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                 </control>
@@ -4047,6 +4049,7 @@
                     <animation effect="slide" end="0,-40" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Player.HasAudio + !Player.HasMedia</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Logo))+IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                     <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <include>Animation_HomeWidget</include>
@@ -4063,6 +4066,7 @@
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
                     <visible>Substring(Control.GetLabel(4325),Clearart)</visible>
+                    <visible>!Player.HasAudio + !Player.HasMedia</visible>
                     <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!IsEmpty(Container(7000).ListItem.Property(Logo))+IsEmpty(Container(7000).ListItem.Property(Clearart))</visible>
                 </control>
@@ -4077,6 +4081,7 @@
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
                     <visible>Substring(Control.GetLabel(4325),Logoart)</visible>
+                    <visible>!Player.HasAudio + !Player.HasMedia</visible>
                     <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!Control.IsVisible(90018)</visible>
                 </control>
@@ -4091,6 +4096,7 @@
                     <animation effect="slide" end="0,-25" time="320" tween="cubic" easing="inout" condition="[[Skin.HasSetting(totalshomehigh) + !Skin.HasSetting(DisableLibraryStats)] | [Skin.HasSetting(timehomehigh) + !Skin.HasSetting(DisableTimePanel)]]">Conditional</animation>
                     <include>Animation_HomeWidget</include>
                     <visible>Substring(Control.GetLabel(4325),Logoart)</visible>
+                    <visible>!Player.HasAudio + !Player.HasMedia</visible>
                     <visible>!Control.HasFocus(5010) + !Control.HasFocus(5011) + !Control.HasFocus(5012) + !Control.HasFocus(8000)</visible>
                     <visible>!Control.IsVisible(90018)</visible>
                 </control>
@@ -4098,12 +4104,14 @@
                 
                 <control type="button" id="1970">
                 <include>HiddenObject</include>
+                <visible>!Player.HasAudio + !Player.HasMedia</visible>
                 <visible>!Container(7000).OnNext + !IsEmpty(Container(7000).ListItem.Property(Discart))</visible>
                 <animation effect="fade" end="100" time="120" delay="1200">Visible</animation>
                 <animation effect="fade" end="100" time="120" delay="1200">WindowOpen</animation>
             </control>
             <control type="button" id="1977">
                 <include>HiddenObject</include>
+                <visible>!Player.HasAudio + !Player.HasMedia</visible>
                 <visible>!Container(7000).OnNext + IsEmpty(Container(7000).ListItem.Property(Discart)) + !IsEmpty(Container(7000).ListItem.Property(Fanart))</visible>
                 <animation effect="fade" end="100" time="120" delay="1200">Visible</animation>
                 <animation effect="fade" end="100" time="120" delay="1200">WindowOpen</animation>

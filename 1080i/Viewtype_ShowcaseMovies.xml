@@ -632,7 +632,18 @@
 								<width>94</width>
 								<height>46</height>
 								<texture>$VAR[GlobalLogoVar]</texture>
-								<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+								<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
+								<include>Animation_VisibleChange200</include>
+								<include>ShowcaseOpenCase</include>
+								<fadetime>50</fadetime>
+							</control>
+							<control type="image">
+								<posx>-20</posx>
+								<posy>120</posy>
+								<width>30</width>
+								<height>150</height>
+								<texture>$VAR[GlobalClearLogoVar]</texture>
+								<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(clearcases)</visible>
 								<include>Animation_VisibleChange200</include>
 								<include>ShowcaseOpenCase</include>
 								<fadetime>50</fadetime>
@@ -1217,7 +1228,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-7]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1283,7 +1294,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-6]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1349,7 +1360,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-5]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1415,7 +1426,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-4]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1481,7 +1492,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-3]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1547,7 +1558,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-2]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1613,7 +1624,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar-1]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1677,7 +1688,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1743,7 +1754,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar1]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1809,7 +1820,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar2]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1875,7 +1886,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar3]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -1941,7 +1952,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar4]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -2007,7 +2018,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar5]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -2073,7 +2084,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar6]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">
@@ -2139,7 +2150,7 @@
         <control type="image">
 			<include>MovieShowcaseDVDLogoVars</include>
 			<texture>$VAR[GlobalLogoVar7]</texture>
-			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases)</visible>
+			<visible>Container.Content(movies) + Skin.HasSetting(UseCustomCases) + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)</visible>
 			<fadetime>50</fadetime>
 		</control>
         <control type="image">

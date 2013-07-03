@@ -883,14 +883,19 @@
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
                         <item>
-                            <label>In fo system</label>
+                            <label>Info system</label>
                             <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],infosystem)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.MultiFanart,special://skin/background/full/system v3.jpg)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.Screen,special://skin/background/full/system v3.jpg)</onclick>
                             <onclick>Skin.SetString(ItemToEdit.element2,special://skin/extras/elements/processor.png)</onclick>
                             <onclick>Dialog.Close(1133)</onclick>
                         </item>
-                        
+                        <item>
+                            <label>Glass</label>
+                            <onclick>Skin.SetString(ItemToEdit.$INFO[Window(1124).Property(WidgetSelection)],shelf)</onclick>
+                            
+                            <onclick>Dialog.Close(1133)</onclick>
+                        </item>
                     </content>
                 </control>
         </control>
